@@ -11,5 +11,5 @@
     "resolveJsonModule": true,
     "noEmit": true
   },
-  "include": ["**/*.ts", "../src/lib/validator.ts", "../src/types/config.ts"]
+  "include": ["**/*.ts"]
 }
