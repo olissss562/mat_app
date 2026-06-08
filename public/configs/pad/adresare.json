@@ -1,5 +1,5 @@
 {
-  "subject": "soubory-a-adresare",
+  "subject": "adresare",
   "name": "Práce se soubory a adresáři",
   "topics": [
     { "id": "io-operace", "name": "Čtení a zápis souborů" },

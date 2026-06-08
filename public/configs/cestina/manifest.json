@@ -1,14 +1,14 @@
 {
   "subjects": [
-    { "id": "fahrenheit-451", "name": "451 stupňů Fahrenheita", "file": "451 fahrenheita.json", "icon": "🔥" },
+    { "id": "451-stupnu-fahrenheita", "name": "451 stupňů Fahrenheita", "file": "451 fahrenheita.json", "icon": "🔥" },
     { "id": "audience", "name": "Audience", "file": "audience.json", "icon": "🎭" },
     { "id": "bila-nemoc", "name": "Bílá nemoc", "file": "bila nemoc.json", "icon": "😷" },
-    { "id": "blues-pro-blaznivou", "name": "Blues pro bláznivou holku", "file": "blues pro blaznivou holku.json", "icon": "🎷" },
+    { "id": "blues-pro-blaznivou-holku", "name": "Blues pro bláznivou holku", "file": "blues pro blaznivou holku.json", "icon": "🎷" },
     { "id": "duna", "name": "Duna", "file": "duna.json", "icon": "🏜️" },
     { "id": "farma-zvirat", "name": "Farma zvířat", "file": "farma zvirat.json", "icon": "🐷" },
     { "id": "hospoda-na-mytince", "name": "Hospoda na mýtince", "file": "hospda na mytince.json", "icon": "🍺" },
     { "id": "kral-lavra", "name": "Král Lávra", "file": "kral lavra.json", "icon": "👑" },
-    { "id": "kulicka", "name": "Kulička", "file": "kulicka.json", "icon": "⚪" },
+    { "id": "maupassant-kulicka", "name": "Kulička", "file": "kulicka.json", "icon": "⚪" },
     { "id": "lakomec", "name": "Lakomec", "file": "lakomec.json", "icon": "💰" },
     { "id": "noc-na-karlstejne", "name": "Noc na Karlštejně", "file": "noc na karlstejne.json", "icon": "🏰" },
     { "id": "o-mysich-a-lidech", "name": "O myších a lidech", "file": "o mysich a lidech.json", "icon": "🐭" },
