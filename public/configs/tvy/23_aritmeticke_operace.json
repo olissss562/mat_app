@@ -1,0 +1,519 @@
+{
+  "subject": "aritmeticke-operace",
+  "name": "23. Aritmetické operace v počítači",
+  "topics": [
+    { "id": "alu-obecne", "name": "Aritmeticko logická jednotka a základní operace" },
+    { "id": "cela-cisla", "name": "Operace s celými čísly" },
+    { "id": "fp-aritmetika", "name": "Racionální čísla a IEEE 754" },
+    { "id": "fp-algoritmy", "name": "Algoritmy pro FP operace" }
+  ],
+  "questions": [
+    {
+      "id": "arit-001",
+      "type": "single",
+      "topic": "alu-obecne",
+      "difficulty": 1,
+      "question": "Která část procesoru (CPU) se stará o provádění aritmetických operací?",
+      "options": [
+        { "text": "Řídicí jednotka", "correct": false },
+        { "text": "Aritmeticko logická jednotka (ALU)", "correct": true },
+        { "text": "Registr instrukcí", "correct": false },
+        { "text": "Vyrovnávací paměť (Cache)", "correct": false }
+      ],
+      "explanation": "O provádění početních operací se stará aritmeticko logická jednotka (ALU)[cite: 405]."
+    },
+    {
+      "id": "arit-002",
+      "type": "single",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "question": "Kdy dochází k přenosu jedničky do vyššího řádu při binárním sčítání dvou čísel?",
+      "options": [
+        { "text": "Je-li výsledek 1", "correct": false },
+        { "text": "Je-li výsledek 2 (1+1)", "correct": true },
+        { "text": "Je-li výsledek 0", "correct": false },
+        { "text": "Vždy, nezávisle na výsledku", "correct": false }
+      ],
+      "explanation": "K přenosu do vyššího řádu dojde, je-li výsledkem součtu 2 (binárně 1+1)[cite: 411]."
+    },
+    {
+      "id": "arit-003",
+      "type": "single",
+      "topic": "cela-cisla",
+      "difficulty": 3,
+      "question": "Jak se v počítačích obvykle provádí odečítání čísel?",
+      "options": [
+        { "text": "Odečítáním po jednotlivých bitech s výpůjčkou", "correct": false },
+        { "text": "Převedením menšitele na dvojkový doplněk a následným sečtením", "correct": true },
+        { "text": "Speciální instrukcí pro odečítání v ALU", "correct": false },
+        { "text": "Násobením zápornou jedničkou", "correct": false }
+      ],
+      "explanation": "Odečítání se v počítačích provádí sečtením menšence a dvojkového doplňku menšitele[cite: 415, 416]."
+    },
+    {
+      "id": "arit-004",
+      "type": "single",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "question": "Jak je definován 'bias' (posunutí) u IEEE 754 (single)?",
+      "options": [
+        { "text": "127", "correct": true },
+        { "text": "64", "correct": false },
+        { "text": "255", "correct": false },
+        { "text": "0", "correct": false }
+      ],
+      "explanation": "Podle schématu IEEE 754 je bias pro exponent 127[cite: 442]."
+    },
+    {
+      "id": "arit-005",
+      "type": "single",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "question": "V normě IEEE 754 pro single formát, co reprezentuje X (první bit)?",
+      "options": [
+        { "text": "Znaménkový bit", "correct": true },
+        { "text": "Exponent", "correct": false },
+        { "text": "Mantisu", "correct": false },
+        { "text": "Bias", "correct": false }
+      ],
+      "explanation": "X je znaménkový bit (1 znamená záporné číslo)[cite: 436, 442]."
+    },
+    {
+      "id": "arit-006",
+      "type": "multiple",
+      "topic": "alu-obecne",
+      "difficulty": 1,
+      "question": "Mezi základní aritmetické operace patří:",
+      "options": [
+        { "text": "Sčítání", "correct": true },
+        { "text": "Odčítání", "correct": true },
+        { "text": "Logická negace", "correct": false },
+        { "text": "Dělení", "correct": true }
+      ],
+      "explanation": "ALU se stará o sčítání, odčítání, násobení a dělení; logické operace jsou oddělené[cite: 406, 407]."
+    },
+    {
+      "id": "arit-007",
+      "type": "multiple",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "K jakým stavům může dojít při operacích s čísly FP v IEEE 754?",
+      "options": [
+        { "text": "Přetečení (exponent dosáhne max)", "correct": true },
+        { "text": "Podtečení (exponent dosáhne min)", "correct": true },
+        { "text": "Logické zacyklení", "correct": false },
+        { "text": "Ztráta paměti", "correct": false }
+      ],
+      "explanation": "Algoritmy počítají s přetečením (nekonečno) a podtečením (nula/výjimka)[cite: 452, 455, 473, 476]."
+    },
+    {
+      "id": "arit-008",
+      "type": "truefalse",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "statement": "Dvojkový doplněk se vytvoří inverzí bitů a přičtením jedničky.",
+      "answer": true,
+      "explanation": "Doplněk je definován jako inverze + přičtení 1[cite: 416]."
+    },
+    {
+      "id": "arit-009",
+      "type": "truefalse",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "statement": "Při součinu mantis v IEEE 754 se exponenty sčítají.",
+      "answer": true,
+      "explanation": "Při násobení čísel v pohyblivé řádové čárce se exponenty sčítají (e = e1 + e2)[cite: 470]."
+    },
+    {
+      "id": "arit-010",
+      "type": "truefalse",
+      "topic": "alu-obecne",
+      "difficulty": 1,
+      "statement": "ALU jednotka provádí výhradně aritmetické operace (sčítání, násobení).",
+      "answer": false,
+      "explanation": "ALU provádí i logické operace (součin, součet, negace)[cite: 407]."
+    },
+    {
+      "id": "arit-011",
+      "type": "matching",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "question": "Přiřaďte části IEEE 754 (32bit) k jejich délce/významu.",
+      "pairs": [
+        { "left": "Znaménko", "right": "1 bit" },
+        { "left": "Exponent", "right": "8 bitů" },
+        { "left": "Mantisa", "right": "23 bitů" }
+      ],
+      "explanation": "Single formát (32b) má 1 bit znaménko, 8 bitů exponent a 23 bitů mantisu[cite: 441, 442]."
+    },
+    {
+      "id": "arit-012",
+      "type": "matching",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "question": "Přiřaďte pojem k definici.",
+      "pairs": [
+        { "left": "Binární sčítání", "right": "Sčítání s přenosem" },
+        { "left": "Dvojkový doplněk", "right": "Záporné číslo" },
+        { "left": "Výpůjčka", "right": "Operace při odčítání" }
+      ],
+      "explanation": "Základní binární aritmetika používá přenosy a výpůjčky[cite: 411, 414]."
+    },
+    {
+      "id": "arit-013",
+      "type": "matching",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Přiřaďte výsledek k chybovému stavu (přetečení/podtečení).",
+      "pairs": [
+        { "left": "Max exponent", "right": "Nekonečno" },
+        { "left": "Min exponent", "right": "Nula" }
+      ],
+      "explanation": "Přetečení vede k nekonečnu, podtečení k nule[cite: 454, 457, 475, 477]."
+    },
+    {
+      "id": "arit-014",
+      "type": "ordering",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Seřaďte kroky algoritmu sčítání pro IEEE 754.",
+      "items": [
+        "Hledání většího exponentu",
+        "Výpočet rozdílu exponentů",
+        "Posunutí mantisy menšího čísla",
+        "Součet/rozdíl mantis"
+      ],
+      "explanation": "Nejprve srovnáme exponenty, pak posuneme mantisu a následně sečteme [cite: 445-448]."
+    },
+    {
+      "id": "arit-015",
+      "type": "numeric",
+      "topic": "fp-aritmetika",
+      "difficulty": 1,
+      "question": "Kolik bitů má celkem single formát dle IEEE 754?",
+      "answer": 32,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Single formát je definován jako 32bitový[cite: 441]."
+    },
+    {
+      "id": "arit-016",
+      "type": "numeric",
+      "topic": "cela-cisla",
+      "difficulty": 1,
+      "question": "Binární součet 1 + 1 je?",
+      "answer": 10,
+      "tolerance": 0,
+      "unit": "binárně",
+      "explanation": "1+1 je 2, což je binárně 10[cite: 411]."
+    },
+    {
+      "id": "arit-017",
+      "type": "gap",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "text": "Čísla, která lze vyjádřit jako zlomek, nazýváme {{0}} čísla.",
+      "blanks": [
+        { "accept": ["racionální", "racionalni"] }
+      ],
+      "explanation": "Racionální čísla lze vyjádřit jako zlomek[cite: 432, 433]."
+    },
+    {
+      "id": "arit-018",
+      "type": "gap",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "text": "Dvojkový doplněk vznikne inverzí bitů a přičtením {{0}}.",
+      "blanks": [
+        { "accept": ["1", "jedničky"] }
+      ],
+      "explanation": "Doplněk = inverze + 1[cite: 416]."
+    },
+    {
+      "id": "arit-019",
+      "type": "categorize",
+      "topic": "alu-obecne",
+      "difficulty": 2,
+      "question": "Rozřaďte operace na aritmetické a logické.",
+      "categories": [
+        "Aritmetické",
+        "Logické"
+      ],
+      "items": [
+        { "text": "Sčítání", "category": "Aritmetické" },
+        { "text": "Odčítání", "category": "Aritmetické" },
+        { "text": "Logický součin", "category": "Logické" },
+        { "text": "Logická negace", "category": "Logické" }
+      ],
+      "explanation": "ALU vykonává aritmetické (počty) i logické (součin, negace) operace[cite: 406, 407]."
+    },
+    {
+      "id": "arit-020",
+      "type": "passage",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "passage": "Při binárním odečítání si v případě 0-1 vypůjčíme 1. Počítáme tedy 10-1 = 1, které zapíšeme do výsledku. V dalším řádu odečítáme vypůjčenou 1.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Při 0-1 se vypůjčí 1 a výsledek je 1.",
+          "answer": true,
+          "explanation": "10 - 1 = 1[cite: 414]."
+        }
+      ]
+    },
+    {
+      "id": "arit-021",
+      "type": "single",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Co se děje při přetečení mantisy při násobení (FP)?",
+      "options": [
+        { "text": "Mantisa se posune doprava a exponent se zvětší", "correct": true },
+        { "text": "Mantisa se vynuluje", "correct": false },
+        { "text": "Exponent se zmenší", "correct": false },
+        { "text": "Operace se ukončí chybou", "correct": false }
+      ],
+      "explanation": "Při přetečení se mantisa posune o N bitů doprava a exponent se zvětší o N[cite: 464, 465]."
+    },
+    {
+      "id": "arit-022",
+      "type": "single",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "question": "Jak se binárně sčítají čísla?",
+      "options": [
+        { "text": "Stejně jako desítková čísla", "correct": true },
+        { "text": "Pouze pomocí logické negace", "correct": false },
+        { "text": "Převedením na hexadecimální soustavu", "correct": false },
+        { "text": "Vždy se výsledek posouvá doleva", "correct": false }
+      ],
+      "explanation": "Binární čísla sčítáme stejně jako desítková[cite: 410]."
+    },
+    {
+      "id": "arit-023",
+      "type": "single",
+      "topic": "fp-algoritmy",
+      "difficulty": 2,
+      "question": "Jaké jsou způsoby dělení v aritmetice FP?",
+      "options": [
+        { "text": "Hardwarová dělička, postupné odečítání, převrácená hodnota", "correct": true },
+        { "text": "Pouze sčítání", "correct": false },
+        { "text": "Násobení nulou", "correct": false },
+        { "text": "Pouze pomocí bitového posunu", "correct": false }
+      ],
+      "explanation": "Dělení lze provádět hardwarově, odečítáním nebo převrácenou hodnotou [cite: 481-484]."
+    },
+    {
+      "id": "arit-024",
+      "type": "multiple",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "question": "Číslo v pohyblivé řádové čárce (IEEE 754) se skládá z:",
+      "options": [
+        { "text": "Znaménkového bitu", "correct": true },
+        { "text": "Exponentu", "correct": true },
+        { "text": "Mantisy", "correct": true },
+        { "text": "Bitu pro kontrolu parity", "correct": false }
+      ],
+      "explanation": "Číslo obsahuje znaménko, exponent a mantisu [cite: 436-438]."
+    },
+    {
+      "id": "arit-025",
+      "type": "multiple",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Při součinu mantis (FP) může dojít k:",
+      "options": [
+        { "text": "Přetečení mantisy", "correct": true },
+        { "text": "Podtečení mantisy", "correct": true },
+        { "text": "Změně znaménka", "correct": false },
+        { "text": "Přetečení exponentu", "correct": true }
+      ],
+      "explanation": "Při násobení FP čísel může dojít k přetečení/podtečení mantisy i exponentu[cite: 462, 472]."
+    },
+    {
+      "id": "arit-026",
+      "type": "truefalse",
+      "topic": "fp-algoritmy",
+      "difficulty": 2,
+      "statement": "Algoritmus součinu pro FP zahrnuje odečtení posunu bias.",
+      "answer": true,
+      "explanation": "Ano, po součtu exponentů je nutné odečíst bias[cite: 471]."
+    },
+    {
+      "id": "arit-027",
+      "type": "truefalse",
+      "topic": "fp-aritmetika",
+      "difficulty": 1,
+      "statement": "Znaménkový bit 1 znamená u IEEE 754 záporné číslo.",
+      "answer": true,
+      "explanation": "X=1 znamená znamení záporné[cite: 436]."
+    },
+    {
+      "id": "arit-028",
+      "type": "truefalse",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "statement": "Při binárním dělení se vždy bere taková část dělence, která je menší než dělitel.",
+      "answer": false,
+      "explanation": "Bere se část větší nebo rovna děliteli, ale menší než jeho dvojnásobek[cite: 423]."
+    },
+    {
+      "id": "arit-029",
+      "type": "matching",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Přiřaďte operaci k algoritmu FP.",
+      "pairs": [
+        { "left": "Sčítání", "right": "Srovnání exponentů" },
+        { "left": "Násobení", "right": "Součet exponentů" },
+        { "left": "Dělení", "right": "Hardwarová dělička" }
+      ],
+      "explanation": "Sčítání vyžaduje srovnání, násobení součet exponentů, dělení specifické děličky[cite: 445, 470, 482]."
+    },
+    {
+      "id": "arit-030",
+      "type": "ordering",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "question": "Jak vytvořit dvojkový doplněk?",
+      "items": [
+        "Původní číslo",
+        "Inverze všech bitů",
+        "Přičtení jedničky"
+      ],
+      "explanation": "Původní -> Inverze -> +1 = doplněk[cite: 416]."
+    },
+    {
+      "id": "arit-031",
+      "type": "numeric",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "question": "Kolik bitů má exponent v 32-bitovém IEEE 754?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Exponent má 8 bitů[cite: 437, 441]."
+    },
+    {
+      "id": "arit-032",
+      "type": "gap",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "text": "Pro realizaci binárního sčítání lze v PC použít hradlo {{0}} nebo poskládané NANDy.",
+      "blanks": [
+        { "accept": ["OR"] }
+      ],
+      "explanation": "Sčítání využívá hradla OR nebo NAND[cite: 410]."
+    },
+    {
+      "id": "arit-033",
+      "type": "categorize",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Rozřaďte algoritmy podle operace.",
+      "categories": [
+        "Sčítání",
+        "Součin"
+      ],
+      "items": [
+        { "text": "Posun mantisy menšího čísla", "category": "Sčítání" },
+        { "text": "Součet exponentů", "category": "Součin" },
+        { "text": "Hledání většího exponentu", "category": "Sčítání" },
+        { "text": "Součin mantis", "category": "Součin" }
+      ],
+      "explanation": "Sčítání pracuje s rozdílem exponentů, součin s jejich součtem[cite: 446, 461, 470]."
+    },
+    {
+      "id": "arit-034",
+      "type": "single",
+      "topic": "cela-cisla",
+      "difficulty": 3,
+      "question": "Co uděláme, pokud při dělení vyjde zbytek nenulový?",
+      "options": [
+        { "text": "Připíšeme desetinnou čárku a další cifru", "correct": true },
+        { "text": "Operaci ukončíme", "correct": false },
+        { "text": "Vynásobíme zbytek dvěma", "correct": false },
+        { "text": "Převedeme zbytek na záporné číslo", "correct": false }
+      ],
+      "explanation": "Můžeme pokračovat v dělení standardním způsobem s desetinnou čárkou[cite: 431]."
+    },
+    {
+      "id": "arit-035",
+      "type": "truefalse",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "statement": "Při součinu FP čísel se exponenty odečítají.",
+      "answer": false,
+      "explanation": "Exponenty se sčítají a odečítá se bias[cite: 470, 471]."
+    },
+    {
+      "id": "arit-036",
+      "type": "single",
+      "topic": "alu-obecne",
+      "difficulty": 1,
+      "question": "Kde přesně se nachází ALU?",
+      "options": [
+        { "text": "V procesoru (CPU)", "correct": true },
+        { "text": "Na pevném disku", "correct": false },
+        { "text": "V RAM", "correct": false },
+        { "text": "V napájecím zdroji", "correct": false }
+      ],
+      "explanation": "ALU je součástí CPU[cite: 405]."
+    },
+    {
+      "id": "arit-037",
+      "type": "multiple",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "question": "Které logické operace ALU také provádí?",
+      "options": [
+        { "text": "Logický součin (AND)", "correct": true },
+        { "text": "Logický součet (OR)", "correct": true },
+        { "text": "Logická negace (NOT)", "correct": true },
+        { "text": "Dynamická komprese", "correct": false }
+      ],
+      "explanation": "ALU se stará i o logické operace jako součin, součet a negace[cite: 407]."
+    },
+    {
+      "id": "arit-038",
+      "type": "gap",
+      "topic": "fp-aritmetika",
+      "difficulty": 2,
+      "text": "IEEE 754 specifikuje formáty uložení numerických hodnot v systému {{0}} řádové čárky.",
+      "blanks": [
+        { "accept": ["pohyblivé", "pohyblive"] }
+      ],
+      "explanation": "Jde o systém pohyblivé řádové čárky (FP)[cite: 439]."
+    },
+    {
+      "id": "arit-039",
+      "type": "single",
+      "topic": "cela-cisla",
+      "difficulty": 2,
+      "question": "Co je to menšenec?",
+      "options": [
+        { "text": "Číslo, od kterého odečítáme", "correct": true },
+        { "text": "Číslo, které odečítáme", "correct": false },
+        { "text": "Výsledek odečítání", "correct": false },
+        { "text": "Znaménkový bit", "correct": false }
+      ],
+      "explanation": "Menšenec je číslo, od kterého odečítáme[cite: 416]."
+    },
+    {
+      "id": "arit-040",
+      "type": "single",
+      "topic": "fp-algoritmy",
+      "difficulty": 3,
+      "question": "Co se děje při podtečení mantisy při součinu?",
+      "options": [
+        { "text": "Mantisa se posune doleva a exponent se zmenší", "correct": true },
+        { "text": "Mantisa se posune doprava", "correct": false },
+        { "text": "Exponent se zvětší", "correct": false },
+        { "text": "Výsledek je nekonečno", "correct": false }
+      ],
+      "explanation": "Při podtečení mantisy dochází k posunu doleva a zmenšení exponentu[cite: 467, 468]."
+    }
+  ]
+}

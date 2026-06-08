@@ -1,0 +1,459 @@
+{
+  "subject": "optika",
+  "name": "11. Optická záznamová zariadenia",
+  "topics": [
+    { "id": "principy", "name": "Principy a vrstvy" },
+    { "id": "typy-medii", "name": "Typy médií (CD, DVD, BD)" },
+    { "id": "mechanika-cteni", "name": "Mechanika čítania a zápisu" }
+  ],
+  "questions": [
+    {
+      "id": "opt-001",
+      "type": "single",
+      "topic": "principy",
+      "question": "Čo používa optický disk na záznam dát?",
+      "options": [
+        { "text": "Svetelný lúč (laser)", "correct": true },
+        { "text": "Magnetické pole", "correct": false },
+        { "text": "Elektrický náboj" }
+      ],
+      "explanation": "Optický disk používa svetelný lúč (laser) na záznam alebo adresáciu."
+    },
+    {
+      "id": "opt-002",
+      "type": "truefalse",
+      "topic": "principy",
+      "statement": "Pity (0) a landy (1) sú základné prvky binárneho záznamu na optickom disku.",
+      "answer": true,
+      "explanation": "Áno, dáta sa zaznamenávajú pomocou pitov a landov."
+    },
+    {
+      "id": "opt-003",
+      "type": "multiple",
+      "topic": "principy",
+      "question": "Aké sú hlavné výhody optických diskov?",
+      "options": [
+        { "text": "Jednoduchá prenosnosť", "correct": true },
+        { "text": "Nízka cena", "correct": true },
+        { "text": "Vysoká životnosť dát", "correct": true },
+        { "text": "Nulová hlučnosť mechaniky", "correct": false }
+      ],
+      "explanation": "Výhodami sú prenosnosť, cena a životnosť, nevýhodou je hlučnosť mechaniky."
+    },
+    {
+      "id": "opt-004",
+      "type": "gap",
+      "topic": "principy",
+      "text": "Optické médium sa skladá z troch hlavných vrstiev: substrát, {{0}} vrstva a {{1}} vrstva.",
+      "blanks": [
+        { "accept": ["záznamová"] },
+        { "accept": ["odrazivá", "odraziva"] }
+      ],
+      "explanation": "Skladá sa z polykarbonátového substrátu, záznamovej vrstvy a odrazivej vrstvy."
+    },
+    {
+      "id": "opt-005",
+      "type": "numeric",
+      "topic": "typy-medii",
+      "question": "Aká je vlnová dĺžka laseru u diskov CD?",
+      "answer": 780,
+      "tolerance": 5,
+      "unit": "nm",
+      "explanation": "CD používajú vlnovú dĺžku 780 nm."
+    },
+    {
+      "id": "opt-006",
+      "type": "categorize",
+      "topic": "typy-medii",
+      "question": "Priraďte médium k vlnovej dĺžke laseru.",
+      "categories": ["CD", "DVD", "BD"],
+      "items": [
+        { "text": "780 nm", "category": "CD" },
+        { "text": "650 nm", "category": "DVD" },
+        { "text": "405 nm", "category": "BD" }
+      ],
+      "explanation": "Každý typ média používa inú vlnovú dĺžku laseru."
+    },
+    {
+      "id": "opt-007",
+      "type": "single",
+      "topic": "mechanika-cteni",
+      "question": "Čo prevádza svetlo odrazené od disku na elektrický impulz?",
+      "options": [
+        { "text": "Fotodetektor", "correct": true },
+        { "text": "Laser", "correct": false },
+        { "text": "Motor" }
+      ],
+      "explanation": "Fotodetektor prevádza odrazené svetlo na elektrický signál."
+    },
+    {
+      "id": "opt-008",
+      "type": "truefalse",
+      "topic": "mechanika-cteni",
+      "statement": "Pri čítaní sa zrkadlo pohybuje pomocou servomotora.",
+      "answer": true,
+      "explanation": "Áno, servomotor posúva zrkadlo pod stopu, ktorá sa sníma."
+    },
+    {
+      "id": "opt-009",
+      "type": "multiple",
+      "topic": "principy",
+      "question": "Čo je potrebné riadiť u optickej mechaniky z dôvodu rozdielnej hustoty záznamu?",
+      "options": [
+        { "text": "Rýchlosť otáčania disku", "correct": true },
+        { "text": "Rýchlosť pohybu laseru", "correct": true }
+      ],
+      "explanation": "Pretože pri strede je menej informácií na otáčku než na okraji, treba meniť otáčky."
+    },
+    {
+      "id": "opt-010",
+      "type": "single",
+      "topic": "principy",
+      "difficulty": 2,
+      "question": "Ako sa vytvára záznam na jednorazovo zapisovateľnom disku (napr. CD-R)?",
+      "options": [
+        { "text": "Vypálením jamky (pitu) do záznamovej vrstvy.", "correct": true },
+        { "text": "Magnetizáciou plochy.", "correct": false },
+        { "text": "Nalepením samolepky." }
+      ],
+      "explanation": "Zápis prebieha vypálením jamky (pitu) do záznamovej vrstvy."
+    },
+    {
+      "id": "opt-011",
+      "type": "truefalse",
+      "topic": "typy-medii",
+      "statement": "Blu-ray disky (BD) využívajú modrý laser.",
+      "answer": true,
+      "explanation": "BD využívajú modrý laser s dĺžkou 405 nm."
+    },
+    {
+      "id": "opt-012",
+      "type": "gap",
+      "topic": "principy",
+      "text": "U prepisovateľných diskov materiál mení štruktúru z {{0}} na {{1}} a späť.",
+      "blanks": [
+        { "accept": ["kryštalickej", "krystalickej"] },
+        { "accept": ["amorfnej"] }
+      ],
+      "explanation": "Materiál sa ohrevom mení medzi kryštalickou a amorfnou štruktúrou."
+    },
+    {
+      "id": "opt-013",
+      "type": "numeric",
+      "topic": "typy-medii",
+      "question": "Koľko vrstiev má podľa dokumentu optické médium?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "vrstvy",
+      "explanation": "Optické médium sa skladá z troch hlavných vrstiev."
+    },
+    {
+      "id": "opt-014",
+      "type": "single",
+      "topic": "principy",
+      "question": "Čo je úlohou polykarbonátového substrátu?",
+      "options": [
+        { "text": "Dáva médiu tloušťku a chrání ho", "correct": true },
+        { "text": "Uchováva samotná dáta", "correct": false },
+        { "text": "Zabezpečuje elektrický prúd" }
+      ],
+      "explanation": "Substrát dáva médiu tloušťku a chráni ho pred poškodením."
+    },
+    {
+      "id": "opt-015",
+      "type": "truefalse",
+      "topic": "mechanika-cteni",
+      "statement": "Čím je polykarbonátová vrstva tenšia, tým je presnejší záznam laseru.",
+      "answer": true,
+      "explanation": "Áno, tenšia vrstva umožňuje presnejšie usmernenie laseru."
+    },
+    {
+      "id": "opt-016",
+      "type": "multiple",
+      "topic": "principy",
+      "difficulty": 2,
+      "question": "Nevýhody optických médií:",
+      "options": [
+        { "text": "Nízká přenosová rychlost", "correct": true },
+        { "text": "Náchylnost k opotřebení", "correct": true },
+        { "text": "Nutnost optické mechaniky", "correct": true },
+        { "text": "Vysoká odolnost vůči otřesům", "correct": false }
+      ],
+      "explanation": "Nevýhodami jsou rychlost, náchylnost na opotřebení a nutnost mechaniky."
+    },
+    {
+      "id": "opt-017",
+      "type": "single",
+      "topic": "principy",
+      "question": "Co se děje s daty po průchodu fotodetektorem?",
+      "options": [
+        { "text": "Jsou převedeny na elektrický impuls", "correct": true },
+        { "text": "Jsou okamžitě smazány", "correct": false },
+        { "text": "Jsou zapsány na disk" }
+      ],
+      "explanation": "Fotodetektor převádí světlo na elektrický impuls."
+    },
+    {
+      "id": "opt-018",
+      "type": "truefalse",
+      "topic": "typy-medii",
+      "statement": "DVD používá stejný laser jako CD.",
+      "answer": false,
+      "explanation": "DVD má kratší vlnovou délku laseru než CD."
+    },
+    {
+      "id": "opt-019",
+      "type": "numeric",
+      "topic": "typy-medii",
+      "question": "Vlnová dĺžka DVD laseru v nm?",
+      "answer": 650,
+      "tolerance": 5,
+      "unit": "nm",
+      "explanation": "DVD používá 650 nm."
+    },
+    {
+      "id": "opt-020",
+      "type": "passage",
+      "topic": "principy",
+      "passage": "Optický disk je paměťové médium diskového tvaru. Na povrchu disku jsou fyzicky vytvořeny jamky (pity) a plochy (landy). Binární data jsou interpretována podle toho, zda se světlo od povrchu odrazí nebo rozptýlí.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Co představuje 0 v binárním záznamu?",
+          "options": [
+            { "text": "Jamka (pit)", "correct": true },
+            { "text": "Plocha (land)" }
+          ],
+          "explanation": "Jamky (pity) znázorňují 0, plochy (landy) 1."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Laser na disku vždy svítí stále stejně.",
+          "answer": false,
+          "explanation": "Intenzita odrazu závisí na tom, zda dopadá na jamku nebo plochu."
+        }
+      ]
+    },
+    {
+      "id": "opt-021",
+      "type": "gap",
+      "topic": "mechanika-cteni",
+      "text": "Soustava {{0}} a zrcadla zajišťuje vedení světla na disk.",
+      "blanks": [{ "accept": ["čočka", "cocka"] }],
+      "explanation": "Soustava hranolů a čočky vede paprsek."
+    },
+    {
+      "id": "opt-022",
+      "type": "truefalse",
+      "topic": "principy",
+      "statement": "Při lisování disků se nevypalují jamky, ale jsou vytvořeny lisováním.",
+      "answer": true,
+      "explanation": "Ano, lisování je metoda pro masovou produkci."
+    },
+    {
+      "id": "opt-023",
+      "type": "multiple",
+      "topic": "principy",
+      "difficulty": 2,
+      "question": "Jaké stavy odrazu rozlišuje optická mechanika?",
+      "options": [
+        { "text": "Vysoký odraz", "correct": true },
+        { "text": "Nízký odraz", "correct": true },
+        { "text": "Žádný odraz", "correct": false }
+      ],
+      "explanation": "Mechanika rozlišuje dva stavy odrazu (více/méně), což reprezentuje 0 a 1."
+    },
+    {
+      "id": "opt-024",
+      "type": "single",
+      "topic": "typy-medii",
+      "difficulty": 2,
+      "question": "Jaký laser má nejkratší vlnovou délku?",
+      "options": [
+        { "text": "Blu-ray (BD)", "correct": true },
+        { "text": "DVD", "correct": false },
+        { "text": "CD" }
+      ],
+      "explanation": "BD (405 nm) má nejkratší délku, což umožňuje vyšší hustotu."
+    },
+    {
+      "id": "opt-025",
+      "type": "multiple",
+      "topic": "typy-medii",
+      "question": "Proč je BD disk schopen uložit více dat než DVD?",
+      "options": [
+        { "text": "Kratší vlnová délka laseru.", "correct": true },
+        { "text": "Lepší optika.", "correct": true },
+        { "text": "Větší hustota zápisu.", "correct": true }
+      ],
+      "explanation": "Díky modrému laseru je stopa mnohem užší a hustota vyšší."
+    },
+    {
+      "id": "opt-026",
+      "type": "truefalse",
+      "topic": "mechanika-cteni",
+      "statement": "Otáčky u optických disků jsou konstantní po celou dobu čtení.",
+      "answer": false,
+      "explanation": "U středu je jiná hustota dat než u okraje, proto se otáčky mění."
+    },
+    {
+      "id": "opt-027",
+      "type": "single",
+      "topic": "principy",
+      "difficulty": 2,
+      "question": "Co dělá procesor s elektrickými impulsy z fotodetektoru?",
+      "options": [
+        { "text": "Převede je na digitální data", "correct": true },
+        { "text": "Zvýší jejich napětí", "correct": false },
+        { "text": "Smaže je" }
+      ],
+      "explanation": "Impulsy se pomocí mikroprocesoru převedou na čitelná data."
+    },
+    {
+      "id": "opt-028",
+      "type": "numeric",
+      "topic": "typy-medii",
+      "question": "Vlnová dĺžka BD (modrý laser) v nm?",
+      "answer": 405,
+      "tolerance": 5,
+      "unit": "nm",
+      "explanation": "BD využívá 405 nm."
+    },
+    {
+      "id": "opt-029",
+      "type": "truefalse",
+      "topic": "principy",
+      "statement": "Kovová vrstva disku slouží k odrazu laseru.",
+      "answer": true,
+      "explanation": "Ano, tato vrstva je reflexní."
+    },
+    {
+      "id": "opt-030",
+      "type": "multiple",
+      "topic": "typy-medii",
+      "question": "Co řadíme mezi optická média?",
+      "options": [
+        { "text": "CD", "correct": true },
+        { "text": "DVD", "correct": true },
+        { "text": "Blu-ray", "correct": true },
+        { "text": "SSD", "correct": false }
+      ],
+      "explanation": "CD, DVD, BD jsou optická média, SSD je polovodičové."
+    },
+    {
+      "id": "opt-031",
+      "type": "single",
+      "topic": "principy",
+      "question": "Co chrání disk před mechanickým poškozením?",
+      "options": [
+        { "text": "Polykarbonátový substrát", "correct": true },
+        { "text": "Záznamová vrstva", "correct": false },
+        { "text": "Odrazivá vrstva" }
+      ],
+      "explanation": "Vrstva substrátu chrání médium před poškozením."
+    },
+    {
+      "id": "opt-032",
+      "type": "truefalse",
+      "topic": "mechanika-cteni",
+      "statement": "Fotodetektor je součástka, která vyzařuje laser.",
+      "answer": false,
+      "explanation": "Fotodetektor světlo přijímá a mění na signál, laser světlo vyzařuje."
+    },
+    {
+      "id": "opt-033",
+      "type": "numeric",
+      "topic": "principy",
+      "question": "Kolik vrstev má optické médium společných pro všechny typy?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Jsou to 3 hlavní vrstvy."
+    },
+    {
+      "id": "opt-034",
+      "type": "multiple",
+      "topic": "principy",
+      "question": "Co se děje po dopadu laseru na povrch disku?",
+      "options": [
+        { "text": "Část světla se odrazí", "correct": true },
+        { "text": "Část světla se rozptýlí", "correct": true },
+        { "text": "Část světla projde skrz", "correct": false }
+      ],
+      "explanation": "Povrch disku funguje jako zrcadlo nebo rozptylka."
+    },
+    {
+      "id": "opt-035",
+      "type": "passage",
+      "topic": "principy",
+      "passage": "Čtení probíhá tak, že laser vyzařuje paprsek, který se odráží od disku přes čočku a hranoly na fotodetektor. Ten převede světlo na elektrický impuls.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Jaká součástka vede paprsek na disk?",
+          "options": [
+            { "text": "Soustava hranolů a čočka", "correct": true },
+            { "text": "Procesor" }
+          ],
+          "explanation": "Čočka a hranoly vedou paprsek."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Fotodetektor převádí světlo na data přímo.",
+          "answer": false,
+          "explanation": "Převede světlo na elektrický signál, data tvoří až mikroprocesor."
+        }
+      ]
+    },
+    {
+      "id": "opt-036",
+      "type": "gap",
+      "topic": "principy",
+      "text": "Data jsou uložena jako {{0}} a {{1}}.",
+      "blanks": [
+        { "accept": ["pity"] },
+        { "accept": ["landy"] }
+      ],
+      "explanation": "Pity a landy představují základ binárního zápisu."
+    },
+    {
+      "id": "opt-037",
+      "type": "truefalse",
+      "topic": "mechanika-cteni",
+      "statement": "Optická mechanika je naprosto tichá.",
+      "answer": false,
+      "explanation": "Optické mechaniky jsou známé svou hlučností."
+    },
+    {
+      "id": "opt-038",
+      "type": "single",
+      "topic": "typy-medii",
+      "difficulty": 2,
+      "question": "Které medium je nejstarší z uvedených?",
+      "options": [
+        { "text": "CD", "correct": true },
+        { "text": "DVD", "correct": false },
+        { "text": "BD" }
+      ],
+      "explanation": "CD bylo první z těchto technologií."
+    },
+    {
+      "id": "opt-039",
+      "type": "numeric",
+      "topic": "typy-medii",
+      "question": "Kolik vrstev má CD podle dokumentu (substrát)?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "strana",
+      "explanation": "CD má tuto vrstvu na jedné straně."
+    },
+    {
+      "id": "opt-040",
+      "type": "truefalse",
+      "topic": "typy-medii",
+      "statement": "DVD má vyšší kapacitu než CD.",
+      "answer": true,
+      "explanation": "DVD má výrazně vyšší kapacitu díky hustšímu zápisu."
+    }
+  ]
+}

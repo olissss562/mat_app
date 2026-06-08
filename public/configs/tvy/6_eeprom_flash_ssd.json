@@ -1,0 +1,471 @@
+{
+  "subject": "eeprom",
+  "name": "6. EEPROM, Flash a SSD",
+  "topics": [
+    { "id": "eeprom-principy", "name": "EEPROM a princip tunelování" },
+    { "id": "flash-pameti", "name": "Flash paměti" },
+    { "id": "ssd-technologie", "name": "SSD disky a 3D NAND" }
+  ],
+  "questions": [
+    {
+      "id": "mem-001",
+      "type": "single",
+      "topic": "eeprom-principy",
+      "difficulty": 1,
+      "question": "V čem je hlavní výhoda EEPROM oproti starší EPROM?",
+      "options": [
+        { "text": "Mazání probíhá elektricky, nikoliv UV zářením.", "correct": true },
+        { "text": "Je rychlejší než RAM.", "correct": false },
+        { "text": "Nevyžaduje napájení.", "correct": false }
+      ],
+      "explanation": "EEPROM umožňuje mazání elektricky, čímž odpadá manipulace s UV lampou."
+    },
+    {
+      "id": "mem-002",
+      "type": "truefalse",
+      "topic": "eeprom-principy",
+      "statement": "EEPROM využívá technologii MNOS.",
+      "answer": true,
+      "explanation": "Při výrobě EEPROM se používají tranzistory MNOS (Metal Nitrid Oxide Semiconductor)."
+    },
+    {
+      "id": "mem-003",
+      "type": "gap",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "text": "Buňka paměti EEPROM pracuje na principu {{0}}, tedy vkládání náboje skrze tenkou vrstvu oxidu.",
+      "blanks": [{ "accept": ["tunelování", "tunelovani"] }],
+      "explanation": "Fyzikální princip vkládání náboje se nazývá tunelování."
+    },
+    {
+      "id": "mem-004",
+      "type": "numeric",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Jaká je typická životnost EEPROM paměti?",
+      "answer": 200000,
+      "tolerance": 10000,
+      "unit": "zápisů",
+      "explanation": "Typická životnost EEPROM je kolem 200 000 zápisů."
+    },
+    {
+      "id": "mem-005",
+      "type": "single",
+      "topic": "flash-pameti",
+      "difficulty": 1,
+      "question": "Jaký je hlavní rozdíl mezi Flash ROM a EEPROM?",
+      "options": [
+        { "text": "Flash ROM je mazatelná po blocích a rychlejší.", "correct": true },
+        { "text": "Flash ROM je pomalejší a maže se po bajtech.", "correct": false },
+        { "text": "Flash ROM vyžaduje UV záření." }
+      ],
+      "explanation": "Flash ROM je rychlejší a umožňuje mazání po blocích, což je efektivnější."
+    },
+    {
+      "id": "mem-006",
+      "type": "multiple",
+      "topic": "flash-pameti",
+      "difficulty": 2,
+      "question": "Typické využití Flash ROM:",
+      "options": [
+        { "text": "Flash disky", "correct": true },
+        { "text": "Paměťové karty", "correct": true },
+        { "text": "SSD disky", "correct": true },
+        { "text": "Operační paměť RAM", "correct": false }
+      ],
+      "explanation": "Flash je základem pro úložiště jako disky a karty, RAM je odlišná technologie."
+    },
+    {
+      "id": "mem-007",
+      "type": "truefalse",
+      "topic": "ssd-technologie",
+      "statement": "SSD disky obsahují pohyblivé mechanické části.",
+      "answer": false,
+      "explanation": "SSD disky jsou čistě polovodičové a nemají žádné mechanické části."
+    },
+    {
+      "id": "mem-008",
+      "type": "single",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Jak se nazývá technologie skládání buněk nad sebe pro vyšší kapacitu?",
+      "options": [
+        { "text": "3D NAND", "correct": true },
+        { "text": "SATA", "correct": false },
+        { "text": "PCI-E" }
+      ],
+      "explanation": "3D NAND zvyšuje hustotu paměti skládáním buněk nad sebe."
+    },
+    {
+      "id": "mem-009",
+      "type": "numeric",
+      "topic": "flash-pameti",
+      "difficulty": 2,
+      "question": "Jaká je limitovaná životnost Flash pamětí v počtu zápisů?",
+      "answer": 100000,
+      "tolerance": 5000,
+      "unit": "zápisů",
+      "explanation": "Životnost je cca 100 000 zápisů/výmazů."
+    },
+    {
+      "id": "mem-010",
+      "type": "categorize",
+      "topic": "ssd-technologie",
+      "difficulty": 3,
+      "question": "Rozřaďte typy buněk podle výdrže a hustoty.",
+      "categories": ["SLC (více výdrže)", "MLC/TLC (vyšší kapacita)"],
+      "items": [
+        { "text": "Více vrstev, menší výdrž", "category": "MLC/TLC (vyšší kapacita)" },
+        { "text": "1 vrstva, vyšší výdrž", "category": "SLC (více výdrže)" },
+        { "text": "Větší hustota dat", "category": "MLC/TLC (vyšší kapacita)" },
+        { "text": "Vyšší rychlost", "category": "SLC (více výdrže)" }
+      ],
+      "explanation": "Více vrstev zvyšuje hustotu, ale snižuje výdrž."
+    },
+    {
+      "id": "mem-011",
+      "type": "single",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Které rozhraní se používá u SSD?",
+      "options": [
+        { "text": "SATA, M.2, PCI-Express", "correct": true },
+        { "text": "VGA, HDMI", "correct": false },
+        { "text": "LPT" }
+      ],
+      "explanation": "SSD se připojují přes SATA, M.2 nebo PCI-E."
+    },
+    {
+      "id": "mem-012",
+      "type": "truefalse",
+      "topic": "eeprom-principy",
+      "statement": "EEPROM paměť je volatilní (po odpojení proudu ztrácí data).",
+      "answer": false,
+      "explanation": "EEPROM je energeticky nezávislá (nevolatilní)."
+    },
+    {
+      "id": "mem-013",
+      "type": "multiple",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Jaké jsou výhody SSD?",
+      "options": [
+        { "text": "Odolnost vůči otřesům", "correct": true },
+        { "text": "Menší spotřeba energie", "correct": true },
+        { "text": "Rychlejší přístup než u HDD", "correct": true }
+      ],
+      "explanation": "SSD jsou díky absenci pohyblivých částí odolné, úsporné a rychlé."
+    },
+    {
+      "id": "mem-014",
+      "type": "single",
+      "topic": "flash-pameti",
+      "difficulty": 2,
+      "question": "Je Flash ROM programovatelná přímo z PC?",
+      "options": [
+        { "text": "Ano", "correct": true },
+        { "text": "Ne" }
+      ],
+      "explanation": "Flash ROM umožňuje programování přímo z uživatelského prostředí PC."
+    },
+    {
+      "id": "mem-015",
+      "type": "numeric",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Doba mazání EEPROM je v řádu:",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "milisekund",
+      "explanation": "Mazání EEPROM trvá milisekundy."
+    },
+    {
+      "id": "mem-016",
+      "type": "multiple",
+      "topic": "ssd-technologie",
+      "difficulty": 3,
+      "question": "Jaké je srovnání mezi vícevrstvými (více vrstev) a méněvrstvými 3D NAND moduly?",
+      "options": [
+        { "text": "Méně vrstev = větší výdrž.", "correct": true },
+        { "text": "Více vrstev = menší cena.", "correct": true },
+        { "text": "Více vrstev = větší paměťová hustota.", "correct": true }
+      ],
+      "explanation": "Více vrstev znamená hustotu a cenu, méně vrstev znamená výdrž a rychlost."
+    },
+    {
+      "id": "mem-017",
+      "type": "single",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Proč není EEPROM tak rychlá jako Flash ROM?",
+      "options": [
+        { "text": "Kvůli jiné vnitřní architektuře.", "correct": true },
+        { "text": "Protože používá starší typ křemíku.", "correct": false }
+      ],
+      "explanation": "Flash ROM je optimalizovaná na mazání po blocích, což ji zrychluje."
+    },
+    {
+      "id": "mem-018",
+      "type": "truefalse",
+      "topic": "ssd-technologie",
+      "statement": "SSD disky jsou díky své konstrukci náchylnější na otřesy než HDD.",
+      "answer": false,
+      "explanation": "Naopak, SSD jsou díky absenci mechaniky velmi odolné."
+    },
+    {
+      "id": "mem-019",
+      "type": "multiple",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Technologie MNOS se skládá z:",
+      "options": [
+        { "text": "Nitrid křemíku", "correct": true },
+        { "text": "Oxid křemičitý", "correct": true },
+        { "text": "Kov", "correct": true }
+      ],
+      "explanation": "Metal Nitrid Oxide Semiconductor."
+    },
+    {
+      "id": "mem-020",
+      "type": "passage",
+      "topic": "ssd-technologie",
+      "passage": "SSD (Solid-state drive) nahrazují magnetické disky. Nemají pohyblivé části, což zvyšuje jejich odolnost. Využívají Flash ROM. 3D NAND je technologie zvyšující hustotu, ale má dopad na výdrž.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "SSD obsahují pohyblivé hlavy.",
+          "answer": false,
+          "explanation": "SSD nemají pohyblivé části."
+        },
+        {
+          "type": "single",
+          "question": "Jaký dopad má více vrstev v 3D NAND na výdrž?",
+          "options": [
+            { "text": "Snižuje ji.", "correct": true },
+            { "text": "Zvyšuje ji.", "correct": false }
+          ],
+          "explanation": "Více vrstev znamená menší výdrž disku."
+        }
+      ]
+    },
+    {
+      "id": "mem-021",
+      "type": "gap",
+      "topic": "ssd-technologie",
+      "text": "SSD disk je zkratka pro {{0}}.",
+      "blanks": [{ "accept": ["Solid-state drive"] }],
+      "explanation": "Solid-state drive je správný název."
+    },
+    {
+      "id": "mem-022",
+      "type": "truefalse",
+      "topic": "flash-pameti",
+      "statement": "Flash paměť lze mazat i po jednotlivých bitech.",
+      "answer": false,
+      "explanation": "Flash se maže po blocích."
+    },
+    {
+      "id": "mem-023",
+      "type": "single",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Která technologie je nejlevnější z pohledu paměťové hustoty?",
+      "options": [
+        { "text": "3D NAND s více vrstvami", "correct": true },
+        { "text": "SLC NAND" }
+      ],
+      "explanation": "Více vrstev v 3D NAND zvyšuje hustotu a snižuje cenu."
+    },
+    {
+      "id": "mem-024",
+      "type": "numeric",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Jakou životnost mají průměrné moderní SSD disky v cyklech?",
+      "answer": 100000,
+      "tolerance": 0,
+      "unit": "cyklů",
+      "explanation": "Životnost je cca 100 000 zápisů."
+    },
+    {
+      "id": "mem-025",
+      "type": "multiple",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Co využívá tunelování?",
+      "options": [
+        { "text": "EEPROM", "correct": true },
+        { "text": "Flash ROM", "correct": true },
+        { "text": "RAM" }
+      ],
+      "explanation": "Tunelování je princip vkládání náboje u nevolatilních pamětí."
+    },
+    {
+      "id": "mem-026",
+      "type": "truefalse",
+      "topic": "ssd-technologie",
+      "statement": "SSD jsou obecně dražší než HDD.",
+      "answer": true,
+      "explanation": "Ano, cena za gigabajt je u SSD vyšší."
+    },
+    {
+      "id": "mem-027",
+      "type": "single",
+      "topic": "flash-pameti",
+      "difficulty": 2,
+      "question": "Co znamená SLC?",
+      "options": [
+        { "text": "Single Level Cells", "correct": true },
+        { "text": "Small Level Cells", "correct": false }
+      ],
+      "explanation": "SLC znamená Single Level Cells."
+    },
+    {
+      "id": "mem-028",
+      "type": "truefalse",
+      "topic": "ssd-technologie",
+      "statement": "SSD jsou v případě výpadku proudu zcela bezpečné proti ztrátě dat.",
+      "answer": true,
+      "explanation": "SSD jsou nevolatilní, data při výpadku nezmizí."
+    },
+    {
+      "id": "mem-029",
+      "type": "numeric",
+      "topic": "flash-pameti",
+      "difficulty": 1,
+      "question": "O kolik cyklů jde přibližně u Flash pamětí?",
+      "answer": 100000,
+      "tolerance": 0,
+      "unit": "cyklů",
+      "explanation": "Životnost je cca 100 000 cyklů."
+    },
+    {
+      "id": "mem-030",
+      "type": "passage",
+      "topic": "eeprom-principy",
+      "passage": "Princip činnosti EEPROM je založen na elektrickém mazání. Používají se speciální tranzistory MNOS, kde je nanesena vrstva nitridu a oxidu. Zápis probíhá vytvořením náboje na přechodu těchto vrstev.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Jak se maže EEPROM?",
+          "options": [
+            { "text": "Elektricky", "correct": true },
+            { "text": "UV zářením" }
+          ],
+          "explanation": "EEPROM se maže elektricky."
+        },
+        {
+          "type": "truefalse",
+          "statement": "EEPROM se používá technologie MNOS.",
+          "answer": true,
+          "explanation": "Ano, MNOS je technologie tranzistorů."
+        }
+      ]
+    },
+    {
+      "id": "mem-031",
+      "type": "multiple",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Jaké technologie zvyšují hustotu paměti SSD?",
+      "options": [
+        { "text": "Skládání buněk (3D NAND)", "correct": true },
+        { "text": "MLC", "correct": true },
+        { "text": "TLC", "correct": true }
+      ],
+      "explanation": "Skládání buněk a více bitů na buňku (MLC/TLC) zvyšuje hustotu."
+    },
+    {
+      "id": "mem-032",
+      "type": "truefalse",
+      "topic": "ssd-technologie",
+      "statement": "SSD disky jsou pomalejší než HDD.",
+      "answer": false,
+      "explanation": "SSD jsou mnohem rychlejší."
+    },
+    {
+      "id": "mem-033",
+      "type": "single",
+      "topic": "flash-pameti",
+      "difficulty": 2,
+      "question": "Jaký typ paměti je možné programovat přímo z PC?",
+      "options": [
+        { "text": "Flash ROM", "correct": true },
+        { "text": "EPROM" }
+      ],
+      "explanation": "Flash ROM je snadno programovatelná."
+    },
+    {
+      "id": "mem-034",
+      "type": "numeric",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Kolik milisekund trvá mazání EEPROM?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "ms",
+      "explanation": "Mazání je otázka milisekund."
+    },
+    {
+      "id": "mem-035",
+      "type": "multiple",
+      "topic": "ssd-technologie",
+      "difficulty": 2,
+      "question": "Jaké jsou nevýhody SSD?",
+      "options": [
+        { "text": "Vyšší cena", "correct": true },
+        { "text": "Omezená životnost", "correct": true },
+        { "text": "Náchylnost na otřesy", "correct": false }
+      ],
+      "explanation": "Nevýhodou je cena a omezená životnost, otřesy naopak nevadí."
+    },
+    {
+      "id": "mem-036",
+      "type": "truefalse",
+      "topic": "eeprom-principy",
+      "statement": "EPROM je mazatelná elektricky.",
+      "answer": false,
+      "explanation": "EPROM se maže UV zářením."
+    },
+    {
+      "id": "mem-037",
+      "type": "single",
+      "topic": "ssd-technologie",
+      "difficulty": 1,
+      "question": "Co obsahuje SSD disk?",
+      "options": [
+        { "text": "Flash paměť", "correct": true },
+        { "text": "Pohyblivé plotny", "correct": false },
+        { "text": "Optickou čočku" }
+      ],
+      "explanation": "SSD je postaveno na technologii Flash."
+    },
+    {
+      "id": "mem-038",
+      "type": "truefalse",
+      "topic": "flash-pameti",
+      "statement": "Flash paměť je volatilní.",
+      "answer": false,
+      "explanation": "Flash je nevolatilní."
+    },
+    {
+      "id": "mem-039",
+      "type": "numeric",
+      "topic": "eeprom-principy",
+      "difficulty": 2,
+      "question": "Kolik zápisů vydrží EEPROM?",
+      "answer": 200000,
+      "tolerance": 0,
+      "unit": "zápisů",
+      "explanation": "Životnost je 200 000 zápisů."
+    },
+    {
+      "id": "mem-040",
+      "type": "truefalse",
+      "topic": "ssd-technologie",
+      "statement": "3D NAND zvyšuje paměťovou hustotu.",
+      "answer": true,
+      "explanation": "Ano, skládání buněk nad sebe zvyšuje hustotu."
+    }
+  ]
+}

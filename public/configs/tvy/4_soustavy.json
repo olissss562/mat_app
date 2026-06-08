@@ -1,0 +1,485 @@
+{
+  "subject": "soustavy",
+  "name": "4. Číselné soustavy",
+  "topics": [
+    { "id": "zaklady-soustav", "name": "Základy a převody" },
+    { "id": "reprezentace", "name": "Reprezentace čísel (Pevná/Pohyblivá čárka)" },
+    { "id": "ieee-754", "name": "Norma IEEE 754" }
+  ],
+  "questions": [
+    {
+      "id": "soust-001",
+      "type": "single",
+      "topic": "zaklady-soustav",
+      "difficulty": 1,
+      "question": "V jaké soustavě pracuje počítač na nejnižší úrovni?",
+      "options": [
+        { "text": "Binární (dvojková)", "correct": true },
+        { "text": "Desítková (dekadická)", "correct": false },
+        { "text": "Šestnáctková (hexadecimální)", "correct": false }
+      ],
+      "explanation": "Počítač pracuje v binární soustavě reprezentované stavy 0 a 1."
+    },
+    {
+      "id": "soust-002",
+      "type": "multiple",
+      "topic": "zaklady-soustav",
+      "difficulty": 1,
+      "question": "Které číslice obsahuje osmičková (oktálová) soustava?",
+      "options": [
+        { "text": "0, 1, 2, 3, 4, 5, 6, 7", "correct": true },
+        { "text": "0, 1, 2, 3, 4, 5, 6, 7, 8", "correct": false },
+        { "text": "0-9", "correct": false }
+      ],
+      "explanation": "Osmičková soustava obsahuje cifry 0 až 7."
+    },
+    {
+      "id": "soust-003",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Převod mezi číselnými soustavami se nejčastěji provádí přímo, bez využití desítkové soustavy.",
+      "answer": false,
+      "explanation": "Nejčastěji se převádí přes desítkovou soustavu jako mezikrok."
+    },
+    {
+      "id": "soust-004",
+      "type": "gap",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "text": "V binární soustavě hodnota 1 znamená, že {{0}} protéká, zatímco 0 znamená, že {{1}} neprotéká.",
+      "blanks": [
+        { "accept": ["proud"] },
+        { "accept": ["proud"] }
+      ],
+      "explanation": "1 znázorňuje průchod proudu, 0 jeho absenci."
+    },
+    {
+      "id": "soust-005",
+      "type": "numeric",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Převeďte binární číslo 1010 na desítkovou soustavu.",
+      "answer": 10,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "1*8 + 0*4 + 1*2 + 0*1 = 10."
+    },
+    {
+      "id": "soust-006",
+      "type": "categorize",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Roztřiďte soustavy podle jejich základu.",
+      "categories": ["Binární", "Oktálová", "Hexadecimální"],
+      "items": [
+        { "text": "Základ 2", "category": "Binární" },
+        { "text": "Základ 8", "category": "Oktálová" },
+        { "text": "Základ 16", "category": "Hexadecimální" }
+      ],
+      "explanation": "Základem soustavy je počet číslic, které využívá."
+    },
+    {
+      "id": "soust-007",
+      "type": "single",
+      "topic": "reprezentace",
+      "difficulty": 2,
+      "question": "Proč vznikla reprezentace čísel v pohyblivé řádové čárce?",
+      "options": [
+        { "text": "Pro vyjádření velmi malých nebo velkých čísel.", "correct": true },
+        { "text": "Aby počítač počítal rychleji.", "correct": false },
+        { "text": "Pro zjednodušení práce s celými čísly." }
+      ],
+      "explanation": "Pohyblivá (plovoucí) čárka umožňuje vyjádřit čísla, která by byla pro pevnou řádovou čárku příliš velká nebo malá."
+    },
+    {
+      "id": "soust-008",
+      "type": "multiple",
+      "topic": "reprezentace",
+      "difficulty": 3,
+      "question": "Z čeho se skládá číslo v pohyblivé řádové čárce (dle IEEE 754)?",
+      "options": [
+        { "text": "Znaménko", "correct": true },
+        { "text": "Mantisa", "correct": true },
+        { "text": "Exponent", "correct": true },
+        { "text": "Bit parity", "correct": false }
+      ],
+      "explanation": "Číslo se ukládá pomocí znaménka, mantisy a exponentu."
+    },
+    {
+      "id": "soust-009",
+      "type": "truefalse",
+      "topic": "reprezentace",
+      "statement": "Norma IEEE 754 specifikuje vlastní formáty uložení hodnot v pohyblivé čárce.",
+      "answer": true,
+      "explanation": "Ano, tato norma definuje přesná pravidla implementace."
+    },
+    {
+      "id": "soust-010",
+      "type": "single",
+      "topic": "ieee-754",
+      "difficulty": 3,
+      "question": "Kolik bitů má formát Single Precision dle IEEE 754?",
+      "options": [
+        { "text": "32", "correct": true },
+        { "text": "64", "correct": false },
+        { "text": "16", "correct": false }
+      ],
+      "explanation": "Single Precision používá 32 bitů."
+    },
+    {
+      "id": "soust-011",
+      "type": "truefalse",
+      "topic": "reprezentace",
+      "statement": "Název 'pohyblivá čárka' vznikl z toho, že se desetinná čárka může v zápisu posouvat.",
+      "answer": true,
+      "explanation": "Ano, řádová čárka není fixní, ale pohybuje se podle exponentu."
+    },
+    {
+      "id": "soust-012",
+      "type": "numeric",
+      "topic": "reprezentace",
+      "difficulty": 2,
+      "question": "Kolik bitů má v Single Precision exponent?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Single precision (32b) má 8 bitů pro exponent."
+    },
+    {
+      "id": "soust-013",
+      "type": "multiple",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Které soustavy využívají počítače pro lidsky čitelné zápisy adres?",
+      "options": [
+        { "text": "Šestnáctková", "correct": true },
+        { "text": "Osmičková", "correct": true },
+        { "text": "Binární", "correct": false }
+      ],
+      "explanation": "Šestnáctková a osmičková jsou používanější pro přehlednější zápis dat."
+    },
+    {
+      "id": "soust-014",
+      "type": "single",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "V čem je hlavní výhoda šestnáctkové soustavy?",
+      "options": [
+        { "text": "Kompaktní zápis binárních dat", "correct": true },
+        { "text": "Snadné počítání z hlavy", "correct": false },
+        { "text": "Je přirozená pro člověka" }
+      ],
+      "explanation": "Šestnáctková soustava je kompaktnější a snadno převoditelná na binární."
+    },
+    {
+      "id": "soust-015",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Desítková soustava je pro počítač nejefektivnější.",
+      "answer": false,
+      "explanation": "Binární je pro počítač nejefektivnější."
+    },
+    {
+      "id": "soust-016",
+      "type": "numeric",
+      "topic": "zaklady-soustav",
+      "difficulty": 1,
+      "question": "Kolik symbolů (cifer) má šestnáctková soustava?",
+      "answer": 16,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Obsahuje 16 symbolů (0-9 a A-F)."
+    },
+    {
+      "id": "soust-017",
+      "type": "matching",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Přiřaďte cifru k její hodnotě v šestnáctkové soustavě.",
+      "pairs": [
+        { "left": "A", "right": "10" },
+        { "left": "B", "right": "11" },
+        { "left": "C", "right": "12" },
+        { "left": "F", "right": "15" }
+      ],
+      "explanation": "Hexadecimální soustava používá písmena A-F pro hodnoty 10-15."
+    },
+    {
+      "id": "soust-018",
+      "type": "ordering",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Seřaďte soustavy podle základu vzestupně.",
+      "items": [
+        "Binární (2)",
+        "Osmičková (8)",
+        "Desítková (10)",
+        "Šestnáctková (16)"
+      ],
+      "explanation": "Základ soustavy udává počet symbolů."
+    },
+    {
+      "id": "soust-019",
+      "type": "single",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Jakou soustavu používá Linux pro nastavování práv?",
+      "options": [
+        { "text": "Osmičkovou", "correct": true },
+        { "text": "Binární", "correct": false },
+        { "text": "Desítkovou" }
+      ],
+      "explanation": "Linux využívá osmičkovou soustavu pro zápis přístupových práv (např. 777)."
+    },
+    {
+      "id": "soust-020",
+      "type": "passage",
+      "topic": "reprezentace",
+      "passage": "Reprezentace s pohyblivou řádovou čárkou (plovoucí) je nezbytná pro vědecké výpočty. Umožňuje reprezentovat velmi malá či velká čísla díky rozdělení na mantisu a exponent. Norma IEEE 754 sjednocuje způsob, jakým hardware s těmito čísly pracuje, aby byl výpočet na různých platformách shodný.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Reprezentace s pohyblivou čárkou je nevhodná pro velká čísla.",
+          "answer": false,
+          "explanation": "Právě naopak, je ideální pro velká i malá čísla."
+        },
+        {
+          "type": "single",
+          "question": "Co sjednocuje norma IEEE 754?",
+          "options": [
+            { "text": "Způsob práce hardwaru s čísly v pohyblivé čárce.", "correct": true },
+            { "text": "Rychlost procesoru.", "correct": false },
+            { "text": "Počet bitů v paměti RAM." }
+          ],
+          "explanation": "Norma IEEE 754 definuje formáty pro pohyblivou čárku."
+        }
+      ]
+    },
+    {
+      "id": "soust-021",
+      "type": "gap",
+      "topic": "reprezentace",
+      "text": "Čísla s pohyblivou čárkou se skládají z mantisy, {{0}} a {{1}}.",
+      "blanks": [
+        { "accept": ["exponentu"] },
+        { "accept": ["znaménka"] }
+      ],
+      "explanation": "Struktura je znaménko, mantisa, exponent."
+    },
+    {
+      "id": "soust-022",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Binární soustava znázorňuje stavy logických obvodů.",
+      "answer": true,
+      "explanation": "Ano, 1 znamená protékající proud, 0 znamená, že neprotéká."
+    },
+    {
+      "id": "soust-023",
+      "type": "numeric",
+      "topic": "reprezentace",
+      "difficulty": 2,
+      "question": "Kolik bitů má znaménko v Single Precision formátu?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "bit",
+      "explanation": "Znaménko zabírá vždy 1 bit."
+    },
+    {
+      "id": "soust-024",
+      "type": "multiple",
+      "topic": "reprezentace",
+      "difficulty": 2,
+      "question": "Jaké jsou výhody pohyblivé řádové čárky oproti pevné?",
+      "options": [
+        { "text": "Širší oblast hodnot.", "correct": true },
+        { "text": "Podpora HW koprocesorem.", "correct": true },
+        { "text": "Větší přesnost (v rámci možností).", "correct": true }
+      ],
+      "explanation": "Hlavní výhody jsou širší rozsah a HW podpora."
+    },
+    {
+      "id": "soust-025",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Hexadecimální soustava využívá písmena A-F.",
+      "answer": true,
+      "explanation": "A=10, B=11, C=12, D=13, E=14, F=15."
+    },
+    {
+      "id": "soust-026",
+      "type": "numeric",
+      "topic": "zaklady-soustav",
+      "difficulty": 1,
+      "question": "Hodnota cifry 'C' v šestnáctkové soustavě je:",
+      "answer": 12,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "A=10, B=11, C=12."
+    },
+    {
+      "id": "soust-027",
+      "type": "single",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Jaká je hodnota 10 v šestnáctkové soustavě?",
+      "options": [
+        { "text": "A", "correct": true },
+        { "text": "9", "correct": false },
+        { "text": "10" }
+      ],
+      "explanation": "Hodnota 10 je reprezentována jako A."
+    },
+    {
+      "id": "soust-028",
+      "type": "multiple",
+      "topic": "reprezentace",
+      "difficulty": 3,
+      "question": "Norma IEEE 754 specifikuje co?",
+      "options": [
+        { "text": "Vlastní formáty uložení hodnot.", "correct": true },
+        { "text": "Pravidla implementace.", "correct": true },
+        { "text": "Standardy pro pohyblivou čárku.", "correct": true }
+      ],
+      "explanation": "Specifikuje formáty i pravidla implementace pro pohyblivou čárku."
+    },
+    {
+      "id": "soust-029",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Převod mezi soustavami se nejčastěji dělá přímo.",
+      "answer": false,
+      "explanation": "Nejčastěji se převádí přes desítkovou soustavu jako mezikrok."
+    },
+    {
+      "id": "soust-030",
+      "type": "numeric",
+      "topic": "zaklady-soustav",
+      "difficulty": 1,
+      "question": "Kolik číslic má binární soustava?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Binární používá pouze 0 a 1, tedy dvě číslice."
+    },
+    {
+      "id": "soust-031",
+      "type": "multiple",
+      "topic": "reprezentace",
+      "difficulty": 3,
+      "question": "Co určuje exponent u pohyblivé čárky?",
+      "options": [
+        { "text": "Posunutí řádu.", "correct": true },
+        { "text": "Velikost čísla.", "correct": true },
+        { "text": "Pozici desetinné čárky.", "correct": true }
+      ],
+      "explanation": "Exponent určuje posunutí řádu, což ovlivňuje pozici čárky a velikost čísla."
+    },
+    {
+      "id": "soust-032",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Osmičková soustava obsahuje číslici 9.",
+      "answer": false,
+      "explanation": "Osmičková soustava obsahuje cifry 0 až 7."
+    },
+    {
+      "id": "soust-033",
+      "type": "single",
+      "topic": "reprezentace",
+      "difficulty": 2,
+      "question": "Mantisa u čísel v pohyblivé řádové čárce je:",
+      "options": [
+        { "text": "Normované číslo", "correct": true },
+        { "text": "Posunutí řádu", "correct": false },
+        { "text": "Znaménko" }
+      ],
+      "explanation": "Mantisa je normované číslo."
+    },
+    {
+      "id": "soust-034",
+      "type": "numeric",
+      "topic": "zaklady-soustav",
+      "difficulty": 1,
+      "question": "Základ desítkové soustavy je:",
+      "answer": 10,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Soustava se základem 10."
+    },
+    {
+      "id": "soust-035",
+      "type": "passage",
+      "topic": "reprezentace",
+      "passage": "Pohyblivá řádová čárka je způsob reprezentace čísel, která by byla pro pevnou řádovou čárku příliš malá či velká. Název je odvozen od toho, že se čárka 'pohybuje'. Při ukládání se využívá znaménka, mantisy (normované číslo) a exponentu (posunutí řádu).",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Pohyblivá čárka je vhodná pro vyjádření velkých čísel.",
+          "answer": true,
+          "explanation": "Umožňuje vyjádření velmi malých nebo velkých čísel."
+        },
+        {
+          "type": "single",
+          "question": "Co určuje exponent?",
+          "options": [
+            { "text": "Posunutí řádu", "correct": true },
+            { "text": "Znaménko", "correct": false }
+          ],
+          "explanation": "Exponent je posunutí řádu."
+        }
+      ]
+    },
+    {
+      "id": "soust-036",
+      "type": "gap",
+      "topic": "zaklady-soustav",
+      "text": "Počítač pracuje v {{0}} soustavě, kde 1 znázorňuje, že {{1}} protéká.",
+      "blanks": [
+        { "accept": ["binární", "dvojkové"] },
+        { "accept": ["proud"] }
+      ],
+      "explanation": "Binární soustava znázorňuje stavy logických obvodů."
+    },
+    {
+      "id": "soust-037",
+      "type": "truefalse",
+      "topic": "zaklady-soustav",
+      "statement": "Desítková soustava obsahuje cifru 10.",
+      "answer": false,
+      "explanation": "Desítková soustava obsahuje cifry 0 až 9."
+    },
+    {
+      "id": "soust-038",
+      "type": "single",
+      "topic": "zaklady-soustav",
+      "difficulty": 2,
+      "question": "Jaká je hodnota cifry 'F' v hexadecimální soustavě?",
+      "options": [
+        { "text": "15", "correct": true },
+        { "text": "14", "correct": false },
+        { "text": "16" }
+      ],
+      "explanation": "F má hodnotu 15."
+    },
+    {
+      "id": "soust-039",
+      "type": "numeric",
+      "topic": "reprezentace",
+      "difficulty": 2,
+      "question": "Kolik bitů má exponent v Single Precision formátu?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Single Precision používá 8 bitů pro exponent."
+    },
+    {
+      "id": "soust-040",
+      "type": "truefalse",
+      "topic": "reprezentace",
+      "statement": "Mantisa je normované číslo.",
+      "answer": true,
+      "explanation": "Mantisa je normované číslo."
+    }
+  ]
+}

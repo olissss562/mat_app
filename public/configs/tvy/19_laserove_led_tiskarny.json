@@ -1,0 +1,521 @@
+{
+  "subject": "laserove-led-tiskarny",
+  "name": "19. Laserové a LED tiskárny (Komplexní)",
+  "topics": [
+    { "id": "tiskarny-obecne", "name": "Tiskárny obecně a parametry" },
+    { "id": "technologie-tisku", "name": "Impaktní vs. Neimpaktní tisk" },
+    { "id": "laser-princip", "name": "Princip laserové tiskárny" },
+    { "id": "led-a-sw", "name": "LED tiskárny a softwarové vybavení" }
+  ],
+  "questions": [
+    {
+      "id": "tisk-001",
+      "type": "single",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "question": "Jakou funkci má tiskárna v počítačovém systému?",
+      "options": [
+        { "text": "Jde o periferní výstupní zařízení pro přenos dat na papír či jiné médium", "correct": true },
+        { "text": "Slouží jako primární procesorová jednotka pro výpočty", "correct": false },
+        { "text": "Ukládá dlouhodobá data do elektronické podoby", "correct": false },
+        { "text": "Zajišťuje napájení celého počítače", "correct": false }
+      ],
+      "explanation": "Tiskárna je periferní výstupní zařízení sloužící k přenosu dat na médium[cite: 227]."
+    },
+    {
+      "id": "tisk-002",
+      "type": "single",
+      "topic": "technologie-tisku",
+      "difficulty": 2,
+      "question": "Jak pracují impaktní tiskárny?",
+      "options": [
+        { "text": "Pracují na principu psacího stroje (přílep raznice na barvící pásku)", "correct": true },
+        { "text": "Využívají tepelnou hlavu a teplo", "correct": false },
+        { "text": "Využívají světelný válec a toner", "correct": false },
+        { "text": "Stříkají drobné kapičky inkoustu na papír", "correct": false }
+      ],
+      "explanation": "Impaktní tiskárny vyžadují mechanický kontakt raznice s barvící páskou a papírem[cite: 242, 244]."
+    },
+    {
+      "id": "tisk-003",
+      "type": "single",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "question": "Co se stane se světelným válcem laserové tiskárny, pokud je osvětlen?",
+      "options": [
+        { "text": "Stane se elektricky vodivým", "correct": true },
+        { "text": "Začne se zahřívat a tavit toner", "correct": false },
+        { "text": "Stane se izolantem", "correct": false },
+        { "text": "Ztratí magnetické vlastnosti", "correct": false }
+      ],
+      "explanation": "Osvětlená vrstva polovodiče na válci se stává elektricky vodivou[cite: 263]."
+    },
+    {
+      "id": "tisk-004",
+      "type": "single",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "question": "Při jaké přibližné teplotě dochází v fixační jednotce k roztavení a spojení toneru s papírem?",
+      "options": [
+        { "text": "180 °C", "correct": true },
+        { "text": "80 °C", "correct": false },
+        { "text": "300 °C", "correct": false },
+        { "text": "25 °C", "correct": false }
+      ],
+      "explanation": "Fixační jednotka využívá teplotu asi 180 °C k zapečení toneru[cite: 272]."
+    },
+    {
+      "id": "tisk-005",
+      "type": "single",
+      "topic": "led-a-sw",
+      "difficulty": 2,
+      "question": "V čem je hlavní rozdíl mezi konstrukcí laserové a LED tiskárny?",
+      "options": [
+        { "text": "Laser používá paprsek a zrcadlo, LED používá matici diod nad válcem", "correct": true },
+        { "text": "Laserová tiskárna nepoužívá toner", "correct": false },
+        { "text": "LED tiskárna nevyužívá světelný válec", "correct": false },
+        { "text": "LED tiskárna je mnohem větší než laserová", "correct": false }
+      ],
+      "explanation": "LED tiskárny nahrazují laserový paprsek maticí LED diod umístěnou nad válcem[cite: 284]."
+    },
+    {
+      "id": "tisk-006",
+      "type": "multiple",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "question": "Jaké základní parametry tiskáren uvádí dokument?",
+      "options": [
+        { "text": "Barevnost", "correct": true },
+        { "text": "Rychlost", "correct": true },
+        { "text": "Kvalita", "correct": true },
+        { "text": "Typ procesoru v počítači", "correct": false }
+      ],
+      "explanation": "Mezi parametry patří barevnost, rychlost, kvalita a cena tisku [cite: 234-240]."
+    },
+    {
+      "id": "tisk-007",
+      "type": "multiple",
+      "topic": "tiskarny-obecne",
+      "difficulty": 2,
+      "question": "Co zahrnuje model CMYK?",
+      "options": [
+        { "text": "C - Cyan (Azurová)", "correct": true },
+        { "text": "M - Magenta (Purpurová)", "correct": true },
+        { "text": "Y - Yellow (Žlutá)", "correct": true },
+        { "text": "K - Black (Černá)", "correct": true }
+      ],
+      "explanation": "CMYK je standardní barevný model pro tisk [cite: 250-254]."
+    },
+    {
+      "id": "tisk-008",
+      "type": "multiple",
+      "topic": "led-a-sw",
+      "difficulty": 2,
+      "question": "Jakými způsoby mohou tiskárny komunikovat s PC?",
+      "options": [
+        { "text": "Pomocí jazyka PDL (Page Description Language)", "correct": true },
+        { "text": "Pomocí rozhraní GDI (Graphics Device Interface)", "correct": true },
+        { "text": "Přímým zápisem do BIOSu", "correct": false },
+        { "text": "Využitím výhradně analogového signálu", "correct": false }
+      ],
+      "explanation": "Komunikace probíhá přes PDL nebo GDI [cite: 291-292]."
+    },
+    {
+      "id": "tisk-009",
+      "type": "multiple",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "question": "Jaké nevýhody mají laserové tiskárny?",
+      "options": [
+        { "text": "Vyšší pořizovací cena", "correct": true },
+        { "text": "Dražší provoz (tonery)", "correct": true },
+        { "text": "Vzniká při nich ozon", "correct": true },
+        { "text": "Příliš pomalý tisk", "correct": false }
+      ],
+      "explanation": "Nevýhodou je cena, provoz a produkce ozonu[cite: 281]."
+    },
+    {
+      "id": "tisk-010",
+      "type": "multiple",
+      "topic": "technologie-tisku",
+      "difficulty": 2,
+      "question": "Které tiskárny patří mezi neimpaktní?",
+      "options": [
+        { "text": "Inkoustové", "correct": true },
+        { "text": "Laserové", "correct": true },
+        { "text": "LED", "correct": true },
+        { "text": "Jehličkové", "correct": false }
+      ],
+      "explanation": "Jehličkové jsou impaktní, ostatní jmenované jsou neimpaktní [cite: 242-249]."
+    },
+    {
+      "id": "tisk-011",
+      "type": "truefalse",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "statement": "Laserová tiskárna vytváří před tiskem celé stránky v paměti bitovou mapu.",
+      "answer": true,
+      "explanation": "Laserová tiskárna je stránková, vytváří bitovou mapu celé stránky [cite: 257-258]."
+    },
+    {
+      "id": "tisk-012",
+      "type": "truefalse",
+      "topic": "led-a-sw",
+      "difficulty": 3,
+      "statement": "U tiskáren s GDI rozhraním provádí přípravu stránky přímo tiskárna nezávisle na PC.",
+      "answer": false,
+      "explanation": "Při GDI přípravu stránky provádí hostitelské PC[cite: 292]."
+    },
+    {
+      "id": "tisk-013",
+      "type": "truefalse",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "statement": "Toner se na světelný válec zachytí v místech, která nebyla osvětlena laserem.",
+      "answer": false,
+      "explanation": "Toner se zachytí na osvětlených místech, kde došlo k vybití náboje[cite: 265, 268]."
+    },
+    {
+      "id": "tisk-014",
+      "type": "truefalse",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "statement": "Impaktní tiskárny pracují podobně jako psací stroj.",
+      "answer": true,
+      "explanation": "Ano, vyžadují úder raznice na barvící pásku[cite: 243, 244]."
+    },
+    {
+      "id": "tisk-015",
+      "type": "truefalse",
+      "topic": "led-a-sw",
+      "difficulty": 2,
+      "statement": "LED tiskárny mají obvykle více mechanických součástí než laserové tiskárny.",
+      "answer": false,
+      "explanation": "LED tiskárny mají naopak méně mechanických součástí[cite: 288]."
+    },
+    {
+      "id": "tisk-016",
+      "type": "matching",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "question": "Přiřaďte krok procesu laserového tisku k jeho popisu.",
+      "pairs": [
+        { "left": "Nabíjení", "right": "Válec se nabije záporně" },
+        { "left": "Osvit", "right": "Laser vybije náboj na válci" },
+        { "left": "Fixace", "right": "Roztavení toneru teplem" },
+        { "left": "Čištění", "right": "Odstranění zbylého toneru stěrkou" }
+      ],
+      "explanation": "Postup: Nabití -> Osvit -> Přenos -> Fixace -> Vyčištění [cite: 274-279]."
+    },
+    {
+      "id": "tisk-017",
+      "type": "matching",
+      "topic": "technologie-tisku",
+      "difficulty": 2,
+      "question": "Přiřaďte typ tiskárny k její kategorii.",
+      "pairs": [
+        { "left": "Jehličková", "right": "Impaktní" },
+        { "left": "Laserová", "right": "Neimpaktní" },
+        { "left": "LED", "right": "Neimpaktní" },
+        { "left": "Inkoustová", "right": "Neimpaktní" }
+      ],
+      "explanation": "Jehličkové tiskárny potřebují úder (impaktní), ostatní ne [cite: 242-249]."
+    },
+    {
+      "id": "tisk-018",
+      "type": "matching",
+      "topic": "led-a-sw",
+      "difficulty": 3,
+      "question": "Přiřaďte komunikační technologii k popisu.",
+      "pairs": [
+        { "left": "PDL", "right": "Jazyk pro popis stránky" },
+        { "left": "GDI", "right": "Příprava stránky probíhá v PC" },
+        { "left": "Bitová mapa", "right": "Síť bodů k tisku" }
+      ],
+      "explanation": "PDL a GDI jsou způsoby komunikace tiskáren [cite: 291-292]."
+    },
+    {
+      "id": "tisk-019",
+      "type": "matching",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "question": "Přiřaďte zkratku CMYK k barvě.",
+      "pairs": [
+        { "left": "C", "right": "Cyan" },
+        { "left": "M", "right": "Magenta" },
+        { "left": "Y", "right": "Yellow" },
+        { "left": "K", "right": "Black" }
+      ],
+      "explanation": "CMYK standardně reprezentuje tyto čtyři barvy [cite: 251-254]."
+    },
+    {
+      "id": "tisk-020",
+      "type": "ordering",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "question": "Seřaďte kroky tisku laserové tiskárny podle pořadí.",
+      "items": [
+        "Nabíjení světelného válce",
+        "Osvícení válce laserem",
+        "Nanesení toneru na válec",
+        "Fixace toneru na papír teplem"
+      ],
+      "explanation": "Standardní proces laserového tisku probíhá v tomto pořadí [cite: 274-279]."
+    },
+    {
+      "id": "tisk-021",
+      "type": "ordering",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "question": "Seřaďte komponenty laserové tiskárny, jak se s nimi papír/toner setkává.",
+      "items": [
+        "Zásobník toneru",
+        "Světelný válec",
+        "Přenosová jednotka",
+        "Tepelný válec (fixační)"
+      ],
+      "explanation": "Toner jde do válce, tam se přenese na papír a nakonec zafixuje teplem [cite: 267-272]."
+    },
+    {
+      "id": "tisk-022",
+      "type": "numeric",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "question": "Kolik diod je potřeba pro rozlišení 300 DPI přes celou délku válce?",
+      "answer": 2500,
+      "tolerance": 0,
+      "unit": "diod",
+      "explanation": "Pro 300 DPI je potřeba cca 2500 diod[cite: 287]."
+    },
+    {
+      "id": "tisk-023",
+      "type": "numeric",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "question": "Jaká je přibližná teplota (ve °C) ve fixační jednotce?",
+      "answer": 180,
+      "tolerance": 10,
+      "unit": "°C",
+      "explanation": "Toner se taví při teplotě asi 180 °C[cite: 272]."
+    },
+    {
+      "id": "tisk-024",
+      "type": "categorize",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "question": "Roztřiďte pojmy podle toho, zda jde o parametr tiskárny nebo technologii.",
+      "categories": [
+        "Parametr",
+        "Technologie"
+      ],
+      "items": [
+        { "text": "Rychlost tisku", "category": "Parametr" },
+        { "text": "Kvalita tisku", "category": "Parametr" },
+        { "text": "Impaktní tisk", "category": "Technologie" },
+        { "text": "Laserový tisk", "category": "Technologie" }
+      ],
+      "explanation": "Parametry hodnotí výkon, technologie určuje princip [cite: 234-249]."
+    },
+    {
+      "id": "tisk-025",
+      "type": "gap",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "text": "Velikost jednotlivých bodů v bitové mapě je definována jako {{0}}.",
+      "blanks": [
+        { "accept": ["DPI"] }
+      ],
+      "explanation": "Velikost bodů (hustota) je určena DPI[cite: 259]."
+    },
+    {
+      "id": "tisk-026",
+      "type": "gap",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "text": "Pro nabíjení světelného válce se používá tzv. {{0}} (koróna), což je drát napnutý nad válcem s vysokým napětím.",
+      "blanks": [
+        { "accept": ["nabíjecí jednotka", "nabijeci jednotka"] }
+      ],
+      "explanation": "Nabíjecí jednotka (koróna) zajišťuje rovnoměrný záporný náboj[cite: 264]."
+    },
+    {
+      "id": "tisk-027",
+      "type": "single",
+      "topic": "tiskarny-obecne",
+      "difficulty": 2,
+      "question": "Proč se u laserových tiskáren v dokumentu zmiňuje vznik ozonu?",
+      "options": [
+        { "text": "Jde o vedlejší negativní jev provozu", "correct": true },
+        { "text": "Je to nezbytné pro fixaci toneru", "correct": false },
+        { "text": "Ozon pomáhá ochlazovat válec", "correct": false },
+        { "text": "Je to základní složka toneru", "correct": false }
+      ],
+      "explanation": "Vznik ozonu je uváděn jako jedna z nevýhod laserových tiskáren[cite: 281]."
+    },
+    {
+      "id": "tisk-028",
+      "type": "single",
+      "topic": "led-a-sw",
+      "difficulty": 2,
+      "question": "Jaká je hlavní výhoda LED tiskáren oproti laserovým z hlediska konstrukce?",
+      "options": [
+        { "text": "Jsou kompaktnější a mají méně mechanických součástí", "correct": true },
+        { "text": "Tisknou barevně pomocí inkoustu", "correct": false },
+        { "text": "Nepotřebují žádný toner", "correct": false },
+        { "text": "Jsou mnohem pomalejší", "correct": false }
+      ],
+      "explanation": "LED tiskárny jsou kompaktnější a méně poruchové díky menšímu počtu součástek[cite: 288]."
+    },
+    {
+      "id": "tisk-029",
+      "type": "truefalse",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "statement": "Světelný válec je ve tmě elektricky vodivý.",
+      "answer": false,
+      "explanation": "Ve tmě se válec chová jako izolant, vodivým se stává až při osvětlení [cite: 262-263]."
+    },
+    {
+      "id": "tisk-030",
+      "type": "single",
+      "topic": "technologie-tisku",
+      "difficulty": 2,
+      "question": "Co je společné pro laserové a LED tiskárny?",
+      "options": [
+        { "text": "Obě jsou neimpaktní a stránkové", "correct": true },
+        { "text": "Obě používají jehličky pro tisk", "correct": false },
+        { "text": "Obě jsou impaktní", "correct": false },
+        { "text": "Obě tisknou pouze řádkově", "correct": false }
+      ],
+      "explanation": "Laserové i LED tiskárny jsou neimpaktní a stránkové[cite: 256, 283]."
+    },
+    {
+      "id": "tisk-031",
+      "type": "passage",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "passage": "Po předání toneru na papír je světelný válec osvícen, čímž dojde k eliminaci veškerého náboje na jeho povrchu. Zbylý toner, který nebyl přenesen na papír, je mechanicky odstraněn pomocí gumové stěrky. Tento krok je nezbytný pro přípravu válce na další tiskový cyklus.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Odstranění zbylého toneru provádí laserový paprsek.",
+          "answer": false,
+          "explanation": "Zbylý toner se stírá gumovou stěrkou[cite: 273]."
+        },
+        {
+          "type": "single",
+          "question": "Proč se válec osvítí po předání toneru?",
+          "options": [
+            { "text": "Aby se eliminoval veškerý náboj", "correct": true },
+            { "text": "Aby se zahřál pro další vrstvu", "correct": false },
+            { "text": "Aby se ztvrdil povrch válce", "correct": false }
+          ],
+          "explanation": "Osvícení eliminuje náboj pro přípravu na další cyklus[cite: 273]."
+        }
+      ]
+    },
+    {
+      "id": "tisk-032",
+      "type": "gap",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "text": "Laserový paprsek se na válec vychyluje pomocí rychle se rotujícího {{0}}.",
+      "blanks": [
+        { "accept": ["zrcadla"] }
+      ],
+      "explanation": "Paprsek se vychyluje prostřednictvím rotujícího zrcadla[cite: 266]."
+    },
+    {
+      "id": "tisk-033",
+      "type": "single",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "question": "Co je to bitová mapa v kontextu laserového tisku?",
+      "options": [
+        { "text": "Síť bodů představující obraz, který se bude tisknout", "correct": true },
+        { "text": "Mapa umístění tiskárny v kanceláři", "correct": false },
+        { "text": "Seznam všech dostupných fontů v tiskárně", "correct": false }
+      ],
+      "explanation": "Bitová mapa je síť bodů, které se budou tisknout[cite: 258]."
+    },
+    {
+      "id": "tisk-034",
+      "type": "truefalse",
+      "topic": "tiskarny-obecne",
+      "difficulty": 2,
+      "statement": "U barevného tisku probíhá proces přenosu toneru na papír pouze jednou.",
+      "answer": false,
+      "explanation": "Proces se může opakovat víckrát pro jednotlivé barvy[cite: 271]."
+    },
+    {
+      "id": "tisk-035",
+      "type": "single",
+      "topic": "laser-princip",
+      "difficulty": 3,
+      "question": "Proč se používají Schottkyho diody v usměrňovači laserové tiskárny?",
+      "options": [
+        { "text": "Mají nízký úbytek napětí a vysokou rychlost spínání", "correct": true },
+        { "text": "Jsou nejdražší komponentou tiskárny", "correct": false },
+        { "text": "Svítí jako LED diody", "correct": false }
+      ],
+      "explanation": "Schottkyho diody se volí kvůli rychlosti a nízkému úbytku napětí[cite: 75]."
+    },
+    {
+      "id": "tisk-036",
+      "type": "ordering",
+      "topic": "laser-princip",
+      "difficulty": 2,
+      "question": "Jaké je pořadí nabití u válce a papíru?",
+      "items": [
+        "Válec se nabíjí záporně",
+        "Toner se nabíjí záporně",
+        "Papír se nabíjí kladně"
+      ],
+      "explanation": "Válec je záporný, toner také, ale papír je kladný, aby toner přitáhl[cite: 264, 267, 269, 270]."
+    },
+    {
+      "id": "tisk-037",
+      "type": "single",
+      "topic": "tiskarny-obecne",
+      "difficulty": 2,
+      "question": "Co charakterizuje stránkové tiskárny?",
+      "options": [
+        { "text": "Nejprve vytvoří obsah celé stránky a poté ji vytisknou", "correct": true },
+        { "text": "Tisknou po řádcích jako psací stroj", "correct": false },
+        { "text": "Tisknou neustálý proud dat bez mezer", "correct": false }
+      ],
+      "explanation": "Stránkové tiskárny připraví celou stránku v paměti a až pak tisknou[cite: 257]."
+    },
+    {
+      "id": "tisk-038",
+      "type": "numeric",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "question": "Kolik barev obsahuje model CMYK?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "barvy",
+      "explanation": "C, M, Y, K - čtyři základní barvy [cite: 251-254]."
+    },
+    {
+      "id": "tisk-039",
+      "type": "gap",
+      "topic": "tiskarny-obecne",
+      "difficulty": 2,
+      "text": "Při barevném tisku se používá {{0}}, což je kombinace azurové, purpurové, žluté a černé.",
+      "blanks": [
+        { "accept": ["CMYK"] }
+      ],
+      "explanation": "Barevný model se nazývá CMYK[cite: 250]."
+    },
+    {
+      "id": "tisk-040",
+      "type": "truefalse",
+      "topic": "tiskarny-obecne",
+      "difficulty": 1,
+      "statement": "Tiskárna je periferní zařízení.",
+      "answer": true,
+      "explanation": "Tiskárna je klasifikována jako periferní výstupní zařízení[cite: 227]."
+    }
+  ]
+}

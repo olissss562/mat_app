@@ -1,0 +1,533 @@
+{
+  "subject": "ipv4-subnetting",
+  "name": "12. IPv4 adresace a podsítě",
+  "topics": [
+    { "id": "ipv4-teorie", "name": "Základy a třídy IPv4" },
+    { "id": "masky-prefixy", "name": "Masky a prefixy" },
+    { "id": "subnetting-vypocty", "name": "Výpočty podsítí (FLSM/VLSM)" },
+    { "id": "speciální-adresy", "name": "Speciální adresy" }
+  ],
+  "questions": [
+    {
+      "id": "ipv4-001",
+      "type": "single",
+      "topic": "ipv4-teorie",
+      "difficulty": 1,
+      "question": "Z kolika bitů se skládá IPv4 adresa?",
+      "options": [
+        { "text": "32", "correct": true },
+        { "text": "64", "correct": false },
+        { "text": "128", "correct": false },
+        { "text": "16", "correct": false }
+      ],
+      "explanation": "IPv4 adresa je 32bitové číslo."
+    },
+    {
+      "id": "ipv4-002",
+      "type": "truefalse",
+      "topic": "ipv4-teorie",
+      "statement": "IPv4 adresy jsou z důvodu jejich omezeného množství postupně nahrazovány protokolem IPv6.",
+      "answer": true,
+      "explanation": "Počet IPv4 adres je omezený (cca 4 miliardy) a došlo k jejich vyčerpání."
+    },
+    {
+      "id": "ipv4-003",
+      "type": "multiple",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Které třídy adres byly definovány v původním třídním adresování?",
+      "options": [
+        { "text": "Třída A", "correct": true },
+        { "text": "Třída B", "correct": true },
+        { "text": "Třída C", "correct": true },
+        { "text": "Třída Z", "correct": false }
+      ],
+      "explanation": "Původní systém definoval 5 tříd (A-E), přičemž A, B a C jsou určeny pro hostitele."
+    },
+    {
+      "id": "ipv4-004",
+      "type": "gap",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "text": "IPv4 adresa se skládá ze {{0}} oktetů, přičemž každý oktet obsahuje {{1}} bitů.",
+      "blanks": [
+        { "accept": ["4"] },
+        { "accept": ["8"] }
+      ],
+      "explanation": "Adresa je 32bitová, rozdělena do 4 oktetů po 8 bitech."
+    },
+    {
+      "id": "ipv4-005",
+      "type": "numeric",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Kolik maximálních hodnot (kombinací) může nabývat jeden oktet IPv4 adresy?",
+      "answer": 256,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Jeden oktet má 8 bitů, tedy 2^8 = 256 možných hodnot (0-255)."
+    },
+    {
+      "id": "ipv4-006",
+      "type": "matching",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Přiřaďte třídu adresy k jejímu rozsahu prvního bajtu.",
+      "pairs": [
+        { "left": "Třída A", "right": "0-127" },
+        { "left": "Třída B", "right": "128-191" },
+        { "left": "Třída C", "right": "192-223" },
+        { "left": "Třída D", "right": "224-239" }
+      ],
+      "explanation": "Dle tabulky tříd."
+    },
+    {
+      "id": "ipv4-007",
+      "type": "categorize",
+      "topic": "speciální-adresy",
+      "difficulty": 2,
+      "question": "Roztřiďte IP adresy podle jejich účelu.",
+      "categories": [
+        "Neveřejné (privátní)",
+        "Speciální"
+      ],
+      "items": [
+        { "text": "10.0.0.0/8", "category": "Neveřejné (privátní)" },
+        { "text": "172.16.0.0/12", "category": "Neveřejné (privátní)" },
+        { "text": "127.0.0.1 (Loopback)", "category": "Speciální" },
+        { "text": "255.255.255.255 (Broadcast)", "category": "Speciální" }
+      ],
+      "explanation": "Neveřejné adresy routery nepropustí do internetu, loopback slouží k testování a broadcast oslovuje všechny."
+    },
+    {
+      "id": "ipv4-008",
+      "type": "single",
+      "topic": "masky-prefixy",
+      "difficulty": 1,
+      "question": "Co určuje maska sítě v IPv4?",
+      "options": [
+        { "text": "Kolik bitů určuje síť a kolik stanice", "correct": true },
+        { "text": "Pouze rychlost síťové karty", "correct": false },
+        { "text": "Maximální počet routerů v cestě", "correct": false }
+      ],
+      "explanation": "Maska určuje hranici mezi adresou sítě a adresou hostitele."
+    },
+    {
+      "id": "ipv4-009",
+      "type": "truefalse",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "statement": "Prefix /24 odpovídá masce 255.255.255.0.",
+      "answer": true,
+      "explanation": "24 bitů = 3 oktety plných jedniček = 255.255.255.0."
+    },
+    {
+      "id": "ipv4-010",
+      "type": "single",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "question": "Máme síť 192.168.1.0/26. Kolik použitelných adres pro koncová zařízení tato podsíť má?",
+      "options": [
+        { "text": "62", "correct": true },
+        { "text": "64", "correct": false },
+        { "text": "126", "correct": false },
+        { "text": "30", "correct": false }
+      ],
+      "explanation": "26 bitů síť, 6 bitů pro hosty. 2^6 = 64 adres celkem. 64 - 2 (síť a broadcast) = 62 použitelných."
+    },
+    {
+      "id": "ipv4-011",
+      "type": "passage",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "passage": "Subnetting je proces dělení jedné sítě na více podsítí za účelem efektivnějšího využití adres. Tradiční metoda FLSM (Fixed-Length Subnet Mask) dělí síť na stejně velké bloky. Naproti tomu VLSM (Variable-Length Subnet Mask) umožňuje vytvářet podsítě různé velikosti, což výrazně šetří adresní prostor, protože pro malý spoj mezi routery nemusíme plýtvat celým blokem pro 60 zařízení.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Při použití FLSM je nutné, aby všechny podsítě měly stejnou velikost (stejnou masku).",
+          "answer": true,
+          "explanation": "FLSM (Fixed-Length) znamená, že maska je fixní pro všechny podsítě."
+        },
+        {
+          "type": "single",
+          "question": "Jaká je hlavní nevýhoda metody FLSM?",
+          "options": [
+            { "text": "Plýtvání adresami u malých podsítí.", "correct": true },
+            { "text": "Příliš vysoká složitost výpočtů.", "correct": false },
+            { "text": "Nefunguje na moderních switchích.", "correct": false }
+          ],
+          "explanation": "FLSM nutí přidělit stejně velký blok všem, i když potřebujeme jen pár adres."
+        }
+      ]
+    },
+    {
+      "id": "ipv4-012",
+      "type": "multiple",
+      "topic": "speciální-adresy",
+      "difficulty": 2,
+      "question": "Které adresy v rámci podsítě nelze přidělit síťovému rozhraní (PC/routeru)?",
+      "options": [
+        { "text": "Adresa sítě (první adresa)", "correct": true },
+        { "text": "Broadcast adresa (poslední adresa)", "correct": true },
+        { "text": "První použitelná adresa", "correct": false },
+        { "text": "Poslední použitelná adresa", "correct": false }
+      ],
+      "explanation": "Síťová adresa a broadcast jsou rezervované a nelze je použít pro stanice."
+    },
+    {
+      "id": "ipv4-013",
+      "type": "gap",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "text": "Maska {{0}} odpovídá prefixu {{1}}, což znamená, že síťová část má 26 bitů a pro hosty zbývá {{2}} bitů.",
+      "blanks": [
+        { "accept": ["255.255.255.192"] },
+        { "accept": ["/26"] },
+        { "accept": ["6"] }
+      ],
+      "explanation": "Prefix /26 znamená 26 jedniček, zbytek do 32 je 6."
+    },
+    {
+      "id": "ipv4-014",
+      "type": "single",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Kolik stanic maximálně obslouží síť třídy C (maska 255.255.255.0)?",
+      "options": [
+        { "text": "254", "correct": true },
+        { "text": "256", "correct": false },
+        { "text": "255", "correct": false },
+        { "text": "128", "correct": false }
+      ],
+      "explanation": "2^8 = 256 adres celkem, minus 2 vyhrazené adresy = 254 použitelných."
+    },
+    {
+      "id": "ipv4-015",
+      "type": "ordering",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "question": "Seřaďte podsítě sítě 192.168.1.0/26 podle velikosti adresy sítě (od nejnižší).",
+      "items": [
+        "192.168.1.0/26",
+        "192.168.1.64/26",
+        "192.168.1.128/26",
+        "192.168.1.192/26"
+      ],
+      "explanation": "Sítě jdou po 64 adresách."
+    },
+    {
+      "id": "ipv4-016",
+      "type": "matching",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "question": "Přiřaďte prefix k počtu IP adres v podsíti.",
+      "pairs": [
+        { "left": "/30", "right": "4" },
+        { "left": "/29", "right": "8" },
+        { "left": "/28", "right": "16" },
+        { "left": "/27", "right": "32" }
+      ],
+      "explanation": "2^(32-prefix) = počet adres."
+    },
+    {
+      "id": "ipv4-017",
+      "type": "truefalse",
+      "topic": "speciální-adresy",
+      "difficulty": 1,
+      "statement": "Adresa 127.0.0.1 je veřejná adresa dostupná z celého internetu.",
+      "answer": false,
+      "explanation": "Jedná se o loopback (lokální smyčku) používanou pro testování síťového rozhraní v daném PC."
+    },
+    {
+      "id": "ipv4-018",
+      "type": "single",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Co je to broadcastová adresa?",
+      "options": [
+        { "text": "Adresa pro všesměrové vysílání v dané podsíti", "correct": true },
+        { "text": "Adresa pro přímou komunikaci dvou zařízení", "correct": false },
+        { "text": "Adresa vyhrazená pro DNS servery", "correct": false }
+      ],
+      "explanation": "Broadcast adresa (poslední v podsíti) slouží jako adresa pro všesměrové vysílání."
+    },
+    {
+      "id": "ipv4-019",
+      "type": "multiple",
+      "topic": "speciální-adresy",
+      "difficulty": 2,
+      "question": "Které z následujících adres jsou v internetu považovány za neveřejné (privátní)?",
+      "options": [
+        { "text": "10.0.0.0/8", "correct": true },
+        { "text": "172.16.0.0/12", "correct": true },
+        { "text": "192.168.0.0/16", "correct": true },
+        { "text": "8.8.8.8", "correct": false }
+      ],
+      "explanation": "Privátní adresy jsou určeny pro LAN a routery je do internetu nepropustí."
+    },
+    {
+      "id": "ipv4-020",
+      "type": "single",
+      "topic": "masky-prefixy",
+      "difficulty": 3,
+      "question": "Jakou masku má podsíť, pokud chceme vytvořit podsítě o 32 adresách (včetně síťové a broadcast)?",
+      "options": [
+        { "text": "255.255.255.224", "correct": true },
+        { "text": "255.255.255.0", "correct": false },
+        { "text": "255.255.255.128", "correct": false },
+        { "text": "255.255.255.240", "correct": false }
+      ],
+      "explanation": "32 adres = 2^5, tedy 5 bitů pro hosty. Maska musí mít 27 jedniček (32-5=27), což je 255.255.255.224."
+    },
+    {
+      "id": "ipv4-021",
+      "type": "truefalse",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "statement": "Třídní adresování (Classfull) je dnes modernější a efektivnější než beztřídní (Classless).",
+      "answer": false,
+      "explanation": "Třídní adresování bylo neefektivní a zastaralé, proto bylo nahrazeno beztřídním adresováním (CIDR)."
+    },
+    {
+      "id": "ipv4-022",
+      "type": "multiple",
+      "topic": "ipv4-teorie",
+      "difficulty": 1,
+      "question": "Na jaká zařízení se v síti aplikuje IP adresa?",
+      "options": [
+        { "text": "Síťová karta (NIC)", "correct": true },
+        { "text": "Port routeru", "correct": true },
+        { "text": "Virtuální zařízení (Loopback)", "correct": true },
+        { "text": "Operační paměť", "correct": false }
+      ],
+      "explanation": "IP adresa se aplikuje na síťové rozhraní – kartu, port nebo virtuální zařízení."
+    },
+    {
+      "id": "ipv4-023",
+      "type": "single",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "question": "Při VLSM rozdělení potřebujeme podsíť pro 110 zařízení. Jaký prefix zvolíte?",
+      "options": [
+        { "text": "/25", "correct": true },
+        { "text": "/26", "correct": false },
+        { "text": "/24", "correct": false },
+        { "text": "/27", "correct": false }
+      ],
+      "explanation": "110 PC potřebuje více než 64 adres, /25 dává 128 adres (126 použitelných)."
+    },
+    {
+      "id": "ipv4-024",
+      "type": "numeric",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "question": "Kolik bitů má maska 255.255.255.240 v prefixovém vyjádření?",
+      "answer": 28,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "240 je 11110000, což přidává 4 bity k /24 -> /28."
+    },
+    {
+      "id": "ipv4-025",
+      "type": "truefalse",
+      "topic": "subnetting-vypocty",
+      "difficulty": 2,
+      "statement": "Při výpočtu podsítí pomocí VLSM musíme vždy začít od nejmenších požadavků na adresy.",
+      "answer": false,
+      "explanation": "Naopak, adresní prostory se řadí od největších požadavků po nejmenší, aby síť byla dělitelná bez zbytku."
+    },
+    {
+      "id": "ipv4-026",
+      "type": "single",
+      "topic": "ipv4-teorie",
+      "difficulty": 1,
+      "question": "Co se stane, pokud se vyčerpají všechny adresy verze IPv4?",
+      "options": [
+        { "text": "Internet bude muset kompletně přejít na IPv6.", "correct": true },
+        { "text": "Počet IP adres se automaticky navýší v routerech.", "correct": false },
+        { "text": "Internet přestane úplně fungovat a nikdo se nepřipojí.", "correct": false }
+      ],
+      "explanation": "Kvůli vyčerpání IPv4 adres se postupně přechází na IPv6."
+    },
+    {
+      "id": "ipv4-027",
+      "type": "matching",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "question": "Přiřaďte masku k odpovídajícímu prefixu.",
+      "pairs": [
+        { "left": "/24", "right": "255.255.255.0" },
+        { "left": "/25", "right": "255.255.255.128" },
+        { "left": "/26", "right": "255.255.255.192" },
+        { "left": "/27", "right": "255.255.255.224" }
+      ],
+      "explanation": "Standardní mapování prefixů na masky."
+    },
+    {
+      "id": "ipv4-028",
+      "type": "single",
+      "topic": "speciální-adresy",
+      "difficulty": 2,
+      "question": "Jak se nazývá adresa 255.255.255.255?",
+      "options": [
+        { "text": "Všeobecný broadcast", "correct": true },
+        { "text": "Loopback", "correct": false },
+        { "text": "Default Gateway", "correct": false }
+      ],
+      "explanation": "Tato adresa je všeobecný oběžník (broadcast)."
+    },
+    {
+      "id": "ipv4-029",
+      "type": "truefalse",
+      "topic": "ipv4-teorie",
+      "difficulty": 1,
+      "statement": "IPv4 adresa se skládá ze 4 oktetů.",
+      "answer": true,
+      "explanation": "Ano, IPv4 je 32bitové číslo rozdělené po 8 bitech do 4 oktetů."
+    },
+    {
+      "id": "ipv4-030",
+      "type": "multiple",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Proč je počet IPv4 adres omezený?",
+      "options": [
+        { "text": "Kvůli omezení na 32 bitů.", "correct": true },
+        { "text": "Některé adresy jsou rezervovány pro jiné potřeby.", "correct": true },
+        { "text": "Kvůli sdružování adres do podsítí.", "correct": true }
+      ],
+      "explanation": "Počet je omezen 2^32, rezervačními pravidly a plýtváním při sdružování."
+    },
+    {
+      "id": "ipv4-031",
+      "type": "single",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "question": "Při rozdělení sítě 192.168.1.0/24 na dvě stejné podsítě, jaká bude maska těchto podsítí?",
+      "options": [
+        { "text": "/25", "correct": true },
+        { "text": "/24", "correct": false },
+        { "text": "/26", "correct": false }
+      ],
+      "explanation": "Rozdělením na 2 podsítě spotřebujeme 1 bit navíc (z 24 na 25)."
+    },
+    {
+      "id": "ipv4-032",
+      "type": "truefalse",
+      "topic": "subnetting-vypocty",
+      "statement": "Adresu sítě (např. 192.168.1.0) lze přiřadit k rozhraní počítače v dané síti.",
+      "answer": false,
+      "explanation": "Adresa sítě (první adresa) a broadcast (poslední adresa) jsou nepoužitelné k přiřazení na zařízení."
+    },
+    {
+      "id": "ipv4-033",
+      "type": "multiple",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "question": "Jaké jsou výhody používání prefixů (např. /24) místo celých masek (např. 255.255.255.0)?",
+      "options": [
+        { "text": "Zápis je mnohem kratší a přehlednější.", "correct": true },
+        { "text": "Je to standardní způsob v moderních konfiguracích routerů.", "correct": true },
+        { "text": "Prefixy se automaticky přepočítávají na binární soustavu.", "correct": false }
+      ],
+      "explanation": "Prefixy (např. /24) zjednodušují zápis, který je v moderních konfiguracích standardem."
+    },
+    {
+      "id": "ipv4-034",
+      "type": "gap",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "text": "Pokud máme síť 192.168.1.0/24 a potřebujeme ji rozdělit na 4 podsítě, každá bude mít masku {{0}} a v každé bude dostupných {{1}} přiřaditelných IP adres.",
+      "blanks": [
+        { "accept": ["/26"] },
+        { "accept": ["62"] }
+      ],
+      "explanation": "4 podsítě = 2 bity navíc (/26), maska /26 = 64 adres celkem, 64-2=62 použitelných."
+    },
+    {
+      "id": "ipv4-035",
+      "type": "single",
+      "topic": "ipv4-teorie",
+      "difficulty": 1,
+      "question": "Pro jaké účely se využívá IPv4 Loopback adresa (127.x.x.x)?",
+      "options": [
+        { "text": "Testování TCP/IP stacku v počítači.", "correct": true },
+        { "text": "Komunikaci se serverem v jiné zemi.", "correct": false },
+        { "text": "Zabezpečení přenosu e-mailů.", "correct": false }
+      ],
+      "explanation": "Loopback (127.x.x.x) umožňuje posílat pakety sám sobě, používá se pro účely testování."
+    },
+    {
+      "id": "ipv4-036",
+      "type": "truefalse",
+      "topic": "masky-prefixy",
+      "statement": "Maska sítě má vždy stejný tvar i velikost jako IPv4 adresa (32 bitů).",
+      "answer": true,
+      "explanation": "Maska má stejný tvar i velikost jako IP adresa."
+    },
+    {
+      "id": "ipv4-037",
+      "type": "multiple",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "question": "Proč je VLSM (Variable-Length Subnet Mask) považováno za efektivnější techniku než FLSM?",
+      "options": [
+        { "text": "Umožňuje přidělovat podsítě s různou velikostí.", "correct": true },
+        { "text": "Minimalizuje plýtvání adresami.", "correct": true },
+        { "text": "Je vhodnější pro různorodé potřeby podsítí (např. linky mezi routery vs. LAN).", "correct": true },
+        { "text": "Je vždy jednodušší na manuální výpočet.", "correct": false }
+      ],
+      "explanation": "VLSM umožňuje různou velikost podsítí, čímž maximalizuje efektivitu využití IP adres."
+    },
+    {
+      "id": "ipv4-038",
+      "type": "numeric",
+      "topic": "speciální-adresy",
+      "difficulty": 2,
+      "question": "Kolik adresních tříd je v classfull adresování rezervováno pro multicast a budoucí rezervu (třídy D a E)?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "třídy",
+      "explanation": "Třída D (multicast) a E (rezerva)."
+    },
+    {
+      "id": "ipv4-039",
+      "type": "passage",
+      "topic": "subnetting-vypocty",
+      "difficulty": 3,
+      "passage": "Při vytváření podsítí podle VLSM je nutné seřadit požadavky na počet IP adres od největších po nejmenší. Tento postup zajistí, že adresní prostor bude dělitelný beze zbytku a nedojde ke zmatkům přiřazení. Pokud firma vyžaduje podsítě pro 110, 50, 26 a 5 zařízení, musíme tyto hodnoty zaokrouhlit na nejbližší mocniny dvou. Například pro 5 zařízení potřebujeme 8 adres (včetně sítě a broadcastu), což odpovídá prefixu /29.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Proč musíme při VLSM řadit podsítě od největší po nejmenší?",
+          "options": [
+            { "text": "Aby byla adresa sítě dělitelná počtem adres beze zbytku.", "correct": true },
+            { "text": "Aby se podsítě snadněji pamatovaly.", "correct": false },
+            { "text": "Aby router pracoval rychleji.", "correct": false }
+          ],
+          "explanation": "Adresní prostory si seřadíme podle velikosti, jelikož adresa sítě musí být dělitelná počtem adres beze zbytku."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Podsíť pro 5 zařízení bude mít velikost bloku 8 IP adres.",
+          "answer": true,
+          "explanation": "5 zařízení + 2 rezervované (síť/broadcast) = 7, nejbližší mocnina 2 je 8."
+        }
+      ]
+    },
+    {
+      "id": "ipv4-040",
+      "type": "single",
+      "topic": "ipv4-teorie",
+      "difficulty": 2,
+      "question": "Jaký binární tvar má první oktet masky 255.0.0.0?",
+      "options": [
+        { "text": "11111111", "correct": true },
+        { "text": "00000000", "correct": false },
+        { "text": "11110000", "correct": false },
+        { "text": "10101010", "correct": false }
+      ],
+      "explanation": "255 je v binární soustavě 11111111."
+    }
+  ]
+}

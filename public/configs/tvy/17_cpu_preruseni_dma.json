@@ -1,0 +1,517 @@
+{
+  "subject": "cpu-preruseni-dma",
+  "name": "17. Činnost CPU při zpracování přerušení, DMA",
+  "topics": [
+    { "id": "typy-preruseni", "name": "Typy přerušení" },
+    { "id": "prubeh-preruseni", "name": "Průběh přerušení" },
+    { "id": "dma-prenos", "name": "DMA (Direct Memory Access)" },
+    { "id": "podprogramy-registry", "name": "Podprogramy a řízení" }
+  ],
+  "questions": [
+    {
+      "id": "int-001",
+      "type": "single",
+      "topic": "typy-preruseni",
+      "difficulty": 1,
+      "question": "Jak lze definovat přerušení (interrupt) v kontextu procesoru?",
+      "options": [
+        { "text": "Schopnost procesoru přerušit činnost a začít vykonávat jiný úkon", "correct": true },
+        { "text": "Trvalé zastavení procesoru", "correct": false },
+        { "text": "Příkaz pro zvýšení taktu procesoru", "correct": false },
+        { "text": "Způsob chlazení procesoru", "correct": false }
+      ],
+      "explanation": "Přerušení je schopnost procesoru přerušit právě vykonávanou činnost a začít vykonávat jiný úkon[cite: 167]."
+    },
+    {
+      "id": "int-002",
+      "type": "single",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "question": "Jaký typ přerušení je vyvolán speciální strojovou instrukcí pro služby operačního systému?",
+      "options": [
+        { "text": "Vnější hardwarové", "correct": false },
+        { "text": "Vnitřní", "correct": false },
+        { "text": "Softwarové", "correct": true },
+        { "text": "Fatální systémové", "correct": false }
+      ],
+      "explanation": "Softwarové přerušení využívá speciální strojovou instrukci pro volání služeb OS[cite: 180, 181]."
+    },
+    {
+      "id": "int-003",
+      "type": "single",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "question": "Který z uvedených příkladů patří mezi vnitřní přerušení?",
+      "options": [
+        { "text": "Stisk klávesy", "correct": false },
+        { "text": "Dělení nulou", "correct": true },
+        { "text": "Signál z tiskárny", "correct": false },
+        { "text": "Volání systémové služby", "correct": false }
+      ],
+      "explanation": "Dělení nulou je příkladem vnitřního přerušení vyvolaného procesorem[cite: 178]."
+    },
+    {
+      "id": "int-004",
+      "type": "single",
+      "topic": "prubeh-preruseni",
+      "difficulty": 2,
+      "question": "Co se stane po provedení obslužného programu přerušení?",
+      "options": [
+        { "text": "Procesor se restartuje", "correct": false },
+        { "text": "Procesor obnoví stavové informace a pokračuje v přerušeném programu", "correct": true },
+        { "text": "Smaže se obsah paměti RAM", "correct": false },
+        { "text": "Požadavek na přerušení se pošle znovu", "correct": false }
+      ],
+      "explanation": "Po provedení obsluhy se obnoví stavové informace ze zásobníku a program pokračuje[cite: 195]."
+    },
+    {
+      "id": "int-005",
+      "type": "single",
+      "topic": "dma-prenos",
+      "difficulty": 1,
+      "question": "Co znamená zkratka DMA?",
+      "options": [
+        { "text": "Direct Memory Access", "correct": true },
+        { "text": "Digital Memory Allocation", "correct": false },
+        { "text": "Direct Machine Address", "correct": false },
+        { "text": "Data Management Algorithm", "correct": false }
+      ],
+      "explanation": "DMA znamená Direct Memory Access neboli přímý přístup do paměti[cite: 203, 204]."
+    },
+    {
+      "id": "int-006",
+      "type": "single",
+      "topic": "dma-prenos",
+      "difficulty": 2,
+      "question": "Proč je DMA výhodné pro výkon počítače?",
+      "options": [
+        { "text": "Umožňuje procesoru zpracovávat jiné instrukce během přenosu dat", "correct": true },
+        { "text": "Zrychluje takt procesoru", "correct": false },
+        { "text": "Automaticky zvyšuje kapacitu RAM", "correct": false },
+        { "text": "Nahrazuje grafickou kartu", "correct": false }
+      ],
+      "explanation": "Během datového přenosu přes DMA může procesor zpracovávat jiné instrukce[cite: 206]."
+    },
+    {
+      "id": "int-007",
+      "type": "single",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "question": "Jaký signál vyšle řadič přerušení, aby upozornil procesor na požadavek?",
+      "options": [
+        { "text": "INTR", "correct": true },
+        { "text": "DRQ", "correct": false },
+        { "text": "BREQ", "correct": false },
+        { "text": "IRQ", "correct": false }
+      ],
+      "explanation": "Řadič vygeneruje signál INTR (Interrupt request), že někdo žádá o přerušení[cite: 187]."
+    },
+    {
+      "id": "int-008",
+      "type": "multiple",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "question": "Které události jsou příkladem vnitřního přerušení?",
+      "options": [
+        { "text": "Dělení nulou", "correct": true },
+        { "text": "Porušení ochrany paměti", "correct": true },
+        { "text": "Stisk myši", "correct": false },
+        { "text": "Výpadek stránky", "correct": true }
+      ],
+      "explanation": "Vnitřní přerušení procesor signalizuje při problémech, jako je dělení nulou, porušení paměti či výpadek stránky[cite: 178]."
+    },
+    {
+      "id": "int-009",
+      "type": "multiple",
+      "topic": "typy-preruseni",
+      "difficulty": 1,
+      "question": "Jak dělíme přerušení podle zdroje?",
+      "options": [
+        { "text": "Vnější", "correct": true },
+        { "text": "Vnitřní", "correct": true },
+        { "text": "Softwarové", "correct": true },
+        { "text": "Kognitivní", "correct": false }
+      ],
+      "explanation": "Přerušení dělíme na vnější (hardwarové), vnitřní a softwarové[cite: 170, 175, 180]."
+    },
+    {
+      "id": "int-010",
+      "type": "multiple",
+      "topic": "dma-prenos",
+      "difficulty": 2,
+      "question": "Pro která zařízení se typicky používá DMA?",
+      "options": [
+        { "text": "Řadiče pevných disků", "correct": true },
+        { "text": "Grafické karty", "correct": true },
+        { "text": "Klávesnice", "correct": false },
+        { "text": "Zvukové karty", "correct": true }
+      ],
+      "explanation": "DMA se používá pro přenosy většího objemu dat, např. disky, grafické a zvukové karty[cite: 207]."
+    },
+    {
+      "id": "int-011",
+      "type": "truefalse",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "statement": "Vnější (hardwarové) přerušení je synchronní (plánované).",
+      "answer": false,
+      "explanation": "Vnější přerušení je asynchronní (nečekané, neplánované)[cite: 174]."
+    },
+    {
+      "id": "int-012",
+      "type": "truefalse",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "statement": "Nemaskovatelné přerušení lze procesorem odložit.",
+      "answer": false,
+      "explanation": "Nemaskovatelné přerušení se musí provést okamžitě a nelze ho zamaskovat[cite: 190]."
+    },
+    {
+      "id": "int-013",
+      "type": "truefalse",
+      "topic": "dma-prenos",
+      "difficulty": 1,
+      "statement": "Dvě různá zařízení smějí používat stejný DMA kanál.",
+      "answer": false,
+      "explanation": "Dvě zařízení nesmějí používat stejný DMA kanál[cite: 209]."
+    },
+    {
+      "id": "int-014",
+      "type": "truefalse",
+      "topic": "podprogramy-registry",
+      "difficulty": 2,
+      "statement": "Obslužný podprogram přerušení je část programu, kterou lze opakovaně použít.",
+      "answer": true,
+      "explanation": "Podprogram je část programu, kterou je možné opakovaně použít[cite: 220, 221]."
+    },
+    {
+      "id": "int-015",
+      "type": "matching",
+      "topic": "prubeh-preruseni",
+      "difficulty": 2,
+      "question": "Přiřaďte signály k jejich účelu.",
+      "pairs": [
+        { "left": "IRQ", "right": "Požadavek na řadič přerušení" },
+        { "left": "INTR", "right": "Signalizace žádosti procesoru" },
+        { "left": "INTA", "right": "Potvrzení a dotaz na typ zařízení" }
+      ],
+      "explanation": "IRQ je požadavek, INTR upozorní procesor a INTA slouží k identifikaci[cite: 186, 187, 188]."
+    },
+    {
+      "id": "int-016",
+      "type": "matching",
+      "topic": "typy-preruseni",
+      "difficulty": 1,
+      "question": "Přiřaďte typ přerušení k jeho charakteristice.",
+      "pairs": [
+        { "left": "Vnější", "right": "Asynchronní, z I/O zařízení" },
+        { "left": "Vnitřní", "right": "Asynchronní, vyvolá procesor" },
+        { "left": "Softwarové", "right": "Synchronní, volání OS" }
+      ],
+      "explanation": "Vnější a vnitřní jsou asynchronní, softwarové je záměrné (synchronní)[cite: 174, 179, 183]."
+    },
+    {
+      "id": "int-017",
+      "type": "matching",
+      "topic": "dma-prenos",
+      "difficulty": 3,
+      "question": "Přiřaďte signály DMA k jejich funkci.",
+      "pairs": [
+        { "left": "DRQ", "right": "Žádost periferie o přenos" },
+        { "left": "BREQ", "right": "Žádost DMA o sběrnici u CPU" },
+        { "left": "Hold ACK", "right": "Potvrzení uvolnění sběrnice" }
+      ],
+      "explanation": "DRQ je žádost periferie, BREQ je žádost o sběrnici[cite: 211, 214]."
+    },
+    {
+      "id": "int-018",
+      "type": "ordering",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "question": "Seřaďte kroky hardwarového přerušení.",
+      "items": [
+        "Vnější zařízení vyvolá IRQ",
+        "Procesor uloží stav do zásobníku",
+        "Nalezení adresy podprogramu ve vektoru",
+        "Vykonání obslužného podprogramu"
+      ],
+      "explanation": "IRQ -> uložení stavu -> vektor přerušení -> vykonání[cite: 185, 192, 193, 194]."
+    },
+    {
+      "id": "int-019",
+      "type": "ordering",
+      "topic": "dma-prenos",
+      "difficulty": 3,
+      "question": "Seřaďte postup DMA přenosu do paměti.",
+      "items": [
+        "Periferie pošle DRQ",
+        "DMA vyšle BREQ pro procesor",
+        "Procesor uvolní sběrnici",
+        "DMA zapíše data do paměti"
+      ],
+      "explanation": "Periferie chce přenos -> DMA žádá o sběrnici -> CPU uvolní -> DMA zapisuje[cite: 211, 214, 215, 216]."
+    },
+    {
+      "id": "int-020",
+      "type": "numeric",
+      "topic": "dma-prenos",
+      "difficulty": 2,
+      "question": "Kolik DMA kanálů se typicky využívá?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "kanálů",
+      "explanation": "K přenosu dat jsou využívány DMA kanály, kterých je 8[cite: 208]."
+    },
+    {
+      "id": "int-021",
+      "type": "categorize",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "question": "Rozřaďte příklady do kategorií přerušení.",
+      "categories": [
+        "Vnější",
+        "Vnitřní"
+      ],
+      "items": [
+        { "text": "Stisk klávesy", "category": "Vnější" },
+        { "text": "Dělení nulou", "category": "Vnitřní" },
+        { "text": "Tlačítko myši", "category": "Vnější" },
+        { "text": "Výpadek stránky", "category": "Vnitřní" }
+      ],
+      "explanation": "Vnější přerušení přichází ze vstupních zařízení, vnitřní vyvolá procesor[cite: 172, 176]."
+    },
+    {
+      "id": "int-022",
+      "type": "gap",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "text": "Softwarové přerušení je {{0}}, protože jde o očekávanou a záměrnou operaci vyvolanou programem.",
+      "blanks": [
+        { "accept": ["synchronní", "synchronni"] }
+      ],
+      "explanation": "Softwarové přerušení je synchronní, na rozdíl od asynchronních hardwarových[cite: 183]."
+    },
+    {
+      "id": "int-023",
+      "type": "gap",
+      "topic": "dma-prenos",
+      "difficulty": 2,
+      "text": "Přímý přístup do paměti zajišťuje řadič {{0}}.",
+      "blanks": [
+        { "accept": ["DMA"] }
+      ],
+      "explanation": "DMA (Direct Memory Access) umožňuje přenos dat bez procesoru[cite: 203, 205]."
+    },
+    {
+      "id": "int-024",
+      "type": "single",
+      "topic": "prubeh-preruseni",
+      "difficulty": 2,
+      "question": "Co znamená, že je přerušení maskovatelné?",
+      "options": [
+        { "text": "Lze ho procesorem odložit", "correct": true },
+        { "text": "Je to fatální chyba", "correct": false },
+        { "text": "Není potřeba jej obsloužit", "correct": false },
+        { "text": "Musí se provést okamžitě", "correct": false }
+      ],
+      "explanation": "Maskovatelná přerušení lze odložit, na rozdíl od nemaskovatelných[cite: 189, 190]."
+    },
+    {
+      "id": "int-025",
+      "type": "single",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "question": "Kde procesor nalezne adresu obslužného podprogramu při přerušení?",
+      "options": [
+        { "text": "Ve vektoru přerušení", "correct": true },
+        { "text": "V registrech DMA", "correct": false },
+        { "text": "V adresním registru periferie", "correct": false },
+        { "text": "Přímo v signálu IRQ", "correct": false }
+      ],
+      "explanation": "Procesor nalezne ve vektoru přerušení adresu příslušného podprogramu[cite: 193]."
+    },
+    {
+      "id": "int-026",
+      "type": "single",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "question": "Co charakterizuje asynchronní přerušení?",
+      "options": [
+        { "text": "Je neplánované a neočekávané", "correct": true },
+        { "text": "Je vyvoláno programem záměrně", "correct": false },
+        { "text": "Procesor ho vyvolá v přesně daný čas", "correct": false },
+        { "text": "Má vždy stejný průběh", "correct": false }
+      ],
+      "explanation": "Vnější i vnitřní přerušení jsou asynchronní, tedy nečekaná[cite: 174, 179]."
+    },
+    {
+      "id": "int-027",
+      "type": "multiple",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "question": "Jaké informace se musí uložit do zásobníku při obsluze přerušení?",
+      "options": [
+        { "text": "Stavové informace o přerušeném programu", "correct": true },
+        { "text": "Stav registrů procesoru", "correct": true },
+        { "text": "Obsah DMA registrů", "correct": false },
+        { "text": "Adresa návratu", "correct": true }
+      ],
+      "explanation": "Procesor uloží stavové informace, aby mohl po obsluze pokračovat[cite: 192, 197]."
+    },
+    {
+      "id": "int-028",
+      "type": "truefalse",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "statement": "Systémové přerušení (fatální chyba) je obvykle nemaskovatelné.",
+      "answer": true,
+      "explanation": "Nemaskovatelné přerušení je systémové a musí se provést okamžitě[cite: 190]."
+    },
+    {
+      "id": "int-029",
+      "type": "truefalse",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "statement": "Při obsluze přerušení se nikdy neukládá stav do zásobníku.",
+      "answer": false,
+      "explanation": "Stavové informace o právě zpracovávaném programu se ukládají do zásobníku[cite: 192, 197]."
+    },
+    {
+      "id": "int-030",
+      "type": "matching",
+      "topic": "podprogramy-registry",
+      "difficulty": 2,
+      "question": "Přiřaďte DMA registry k jejich funkci.",
+      "pairs": [
+        { "left": "Adresní registr", "right": "Určuje kam v paměti zapsat" },
+        { "left": "Datový registr", "right": "Obsahuje přenášená data" },
+        { "left": "Registr délky", "right": "Určuje objem přenášených dat" }
+      ],
+      "explanation": "Adresní, datový a registr délky definují průběh DMA přenosu[cite: 213]."
+    },
+    {
+      "id": "int-031",
+      "type": "single",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "question": "Co se stane se signály po dokončení DMA přenosu?",
+      "options": [
+        { "text": "Ruší se", "correct": true },
+        { "text": "Zůstávají aktivní", "correct": false },
+        { "text": "Změní polaritu", "correct": false },
+        { "text": "Pošlou se do CPU jako chyba", "correct": false }
+      ],
+      "explanation": "Po zapsání se signály ruší a přenos je dokončen[cite: 219]."
+    },
+    {
+      "id": "int-032",
+      "type": "single",
+      "topic": "typy-preruseni",
+      "difficulty": 2,
+      "question": "Jaké je hlavní využití vnitřního přerušení?",
+      "options": [
+        { "text": "Umožňuje OS zareagovat na problémy při zpracování instrukcí", "correct": true },
+        { "text": "Přenáší data mezi disky", "correct": false },
+        { "text": "Slouží pro vstup od klávesnice", "correct": false },
+        { "text": "Zrychluje chod grafické karty", "correct": false }
+      ],
+      "explanation": "Vnitřní přerušení signalizuje problém a umožňuje OS vhodně zareagovat[cite: 177]."
+    },
+    {
+      "id": "int-033",
+      "type": "truefalse",
+      "topic": "dma-prenos",
+      "difficulty": 3,
+      "statement": "Při DMA přenosu procesor aktivně čte každou adresu paměti.",
+      "answer": false,
+      "explanation": "Během DMA přenosu se procesor do přenosu nezapojuje[cite: 205]."
+    },
+    {
+      "id": "int-034",
+      "type": "single",
+      "topic": "podprogramy-registry",
+      "difficulty": 2,
+      "question": "Kde procesor vyhledá podprogram pro obsluhu přerušení?",
+      "options": [
+        { "text": "V tabulce (vektoru) přerušení", "correct": true },
+        { "text": "V registru periferie", "correct": false },
+        { "text": "V DMA kontroléru", "correct": false },
+        { "text": "Přímo v BIOSu", "correct": false }
+      ],
+      "explanation": "Procesor si v tabulce (vektoru) přerušení tento podprogram vyhledá[cite: 223]."
+    },
+    {
+      "id": "int-035",
+      "type": "multiple",
+      "topic": "typy-preruseni",
+      "difficulty": 3,
+      "question": "Jaké jsou typické příklady vnitřního přerušení?",
+      "options": [
+        { "text": "Nepřítomnost matematického koprocesoru", "correct": true },
+        { "text": "Dělení nulou", "correct": true },
+        { "text": "Stisk myši", "correct": false },
+        { "text": "Výpadek stránky", "correct": true }
+      ],
+      "explanation": "Vnitřní přerušení jsou dělení nulou, porušení paměti, výpadek stránky či chybějící koprocesor[cite: 178]."
+    },
+    {
+      "id": "int-036",
+      "type": "ordering",
+      "topic": "prubeh-preruseni",
+      "difficulty": 2,
+      "question": "Jaký je průběh softwarového přerušení?",
+      "items": [
+        "Uložení stavu do zásobníku",
+        "Zakázání dalšího přerušení",
+        "Nalezení a vykonání podprogramu",
+        "Obnovení stavových informací"
+      ],
+      "explanation": "Softwarové přerušení: stav -> zákaz přerušení -> podprogram -> návrat [cite: 197-201]."
+    },
+    {
+      "id": "int-037",
+      "type": "numeric",
+      "topic": "prubeh-preruseni",
+      "difficulty": 3,
+      "question": "Kolikrát je v textu zmíněno uložení stavu do zásobníku v kontextu přerušení?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "krát",
+      "explanation": "Je to popsáno u hardwarového i softwarového přerušení[cite: 192, 197]."
+    },
+    {
+      "id": "int-038",
+      "type": "gap",
+      "topic": "dma-prenos",
+      "difficulty": 2,
+      "text": "Aby DMA mohl zapsat do paměti, musí získat právo na sběrnici, k čemuž vyšle signál {{0}} do procesoru.",
+      "blanks": [
+        { "accept": ["BREQ"] }
+      ],
+      "explanation": "DMA vyšle signál BREQ (Bus Request) a procesor sběrnici uvolní[cite: 214, 215]."
+    },
+    {
+      "id": "int-039",
+      "type": "truefalse",
+      "topic": "dma-prenos",
+      "difficulty": 2,
+      "statement": "DMA umožňuje přenos dat pouze mezi pamětí a procesorem.",
+      "answer": false,
+      "explanation": "DMA je přenos mezi operační pamětí a I/O zařízeními[cite: 205]."
+    },
+    {
+      "id": "int-040",
+      "type": "single",
+      "topic": "podprogramy-registry",
+      "difficulty": 1,
+      "question": "Co se děje po vykonání podprogramu pro obsluhu přerušení?",
+      "options": [
+        { "text": "Obnoví se stavové informace a program pokračuje", "correct": true },
+        { "text": "Procesor se vypne", "correct": false },
+        { "text": "DMA začne nový přenos", "correct": false },
+        { "text": "Smaže se vektor přerušení", "correct": false }
+      ],
+      "explanation": "Po návratu z podprogramu se obnoví informace a přerušený program pokračuje dál[cite: 201]."
+    }
+  ]
+}

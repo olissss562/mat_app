@@ -1,0 +1,459 @@
+{
+  "subject": "iso-osi",
+  "name": "1. ISO/OSI a TCP/IP (Komplexní)",
+  "topics": [
+    { "id": "fyzicka-linkova", "name": "Fyzická a Linková vrstva (L1, L2)" },
+    { "id": "sitova-transportni", "name": "Síťová a Transportní vrstva (L3, L4)" },
+    { "id": "vyssi-vrstvy", "name": "Vyšší vrstvy OSI (L5, L6, L7)" },
+    { "id": "tcp-ip-model", "name": "Protokolový model TCP/IP a srovnání" },
+        { "id": "iso-osi-zaklady", "name": "Protokolový model TCP/IP a srovnání" }
+  ],
+  "questions": [
+    {
+      "id": "iso-001",
+      "type": "single",
+      "topic": "fyzicka-linkova",
+      "difficulty": 1,
+      "question": "Jak se nazývá datový celek (PDU), do kterého uspořádává data Linková vrstva?",
+      "options": [
+        { "text": "Rámec", "correct": true },
+        { "text": "Paket", "correct": false },
+        { "text": "Segment", "correct": false },
+        { "text": "Datagram", "correct": false }
+      ],
+      "explanation": "Linková vrstva uspořádává data z fyzické vrstvy do celků, kterým se říká rámce."
+    },
+    {
+      "id": "iso-002",
+      "type": "single",
+      "topic": "vyssi-vrstvy",
+      "difficulty": 2,
+      "question": "Která vrstva modelu ISO/OSI je zodpovědná za šifrování, kódování a komprimaci dat?",
+      "options": [
+        { "text": "Prezentační vrstva", "correct": true },
+        { "text": "Relační vrstva", "correct": false },
+        { "text": "Aplikační vrstva", "correct": false },
+        { "text": "Transportní vrstva", "correct": false }
+      ],
+      "explanation": "Prezentační vrstva transformuje data do tvaru, který používají aplikace. Zabývá se strukturou dat (šifrování, komprimace), nikoli jejich významem."
+    },
+    {
+      "id": "iso-003",
+      "type": "single",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "question": "Které z následujících zařízení typicky pracuje na Síťové vrstvě (L3) a využívá směrovací tabulku?",
+      "options": [
+        { "text": "Router (Směrovač)", "correct": true },
+        { "text": "Switch (Přepínač)", "correct": false },
+        { "text": "Hub (Rozbočovač)", "correct": false },
+        { "text": "Repeater (Opakovač)", "correct": false }
+      ],
+      "explanation": "Routery pracují na síťové vrstvě. Zodpovídají za přenos od zdroje k cíli na základě IP adresy a informací ze směrovací tabulky."
+    },
+    {
+      "id": "iso-004",
+      "type": "single",
+      "topic": "tcp-ip-model",
+      "difficulty": 1,
+      "question": "V čem spočívá největší strukturální rozdíl mezi modelem ISO/OSI a modelem TCP/IP?",
+      "options": [
+        { "text": "ISO/OSI má 7 vrstev, zatímco TCP/IP jich má pouze 4.", "correct": true },
+        { "text": "TCP/IP nepoužívá aplikační vrstvu, nahrazuje ji relační vrstvou.", "correct": false },
+        { "text": "ISO/OSI je otevřený standard, zatímco TCP/IP je uzavřený licencovaný produkt.", "correct": false },
+        { "text": "TCP/IP pracuje výhradně s MAC adresami, ISO/OSI s IP adresami.", "correct": false }
+      ],
+      "explanation": "Nejpodstatnějším rozdílem je počet vrstev. RM ISO/OSI jich má 7 a TCP/IP má jen 4. TCP/IP některé vrstvy ISO/OSI spojuje do jedné."
+    },
+    {
+      "id": "iso-005",
+      "type": "single",
+      "topic": "fyzicka-linkova",
+      "difficulty": 2,
+      "question": "Jaká specifická adresa je přidávána k datům na Linkové vrstvě?",
+      "options": [
+        { "text": "Fyzická (MAC) adresa", "correct": true },
+        { "text": "Logická (IP) adresa", "correct": false },
+        { "text": "Číslo portu", "correct": false },
+        { "text": "URL adresa", "correct": false }
+      ],
+      "explanation": "Linková vrstva přidává fyzickou neboli MAC adresu a stará se o nastavení parametrů přenosu mezi sousedními systémy."
+    },
+    {
+      "id": "iso-006",
+      "type": "multiple",
+      "topic": "fyzicka-linkova",
+      "difficulty": 1,
+      "question": "Které vlastnosti a technologie definuje Fyzická vrstva?",
+      "options": [
+        { "text": "Rozložení pinů a napěťové úrovně", "correct": true },
+        { "text": "Způsob přenosu dat po médiu (světlo, elektrický signál)", "correct": true },
+        { "text": "Směrování paketů mezi sítěmi", "correct": false },
+        { "text": "Vlastnosti kabelů a bezdrátového prostředí (vzduch)", "correct": true }
+      ],
+      "explanation": "Fyzická vrstva je zodpovědná za samotný fyzický přenos dat. Definuje vlastnosti kabelů, napětí, piny a typy přenosových médií."
+    },
+    {
+      "id": "iso-007",
+      "type": "multiple",
+      "topic": "vyssi-vrstvy",
+      "difficulty": 2,
+      "question": "Které z následujících protokolů patří do Aplikační vrstvy?",
+      "options": [
+        { "text": "HTTP", "correct": true },
+        { "text": "FTP", "correct": true },
+        { "text": "DHCP", "correct": true },
+        { "text": "TCP", "correct": false }
+      ],
+      "explanation": "HTTP, FTP, TFTP, DHCP, Telnet a SSH jsou protokoly Aplikační vrstvy. TCP patří do Transportní vrstvy."
+    },
+    {
+      "id": "iso-008",
+      "type": "multiple",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "question": "Jakými vlastnostmi se vyznačuje přenos pomocí protokolu TCP (oproti UDP)?",
+      "options": [
+        { "text": "Je spojovaný (nejprve naváže spojení, pak přenáší data).", "correct": true },
+        { "text": "Je spolehlivý (příjemce kontroluje doručení a případně si vyžádá data znovu).", "correct": true },
+        { "text": "Je nespojovaný (přenáší rovnou datagramy bez předchozí komunikace).", "correct": false },
+        { "text": "Je nespolehlivý (nedoručená data se zahodí a neopakují).", "correct": false }
+      ],
+      "explanation": "TCP zajišťuje spojovaný a spolehlivý přenos. Naváže spojení, provede přenos s možností vyžádání ztracených dat a relaci ukončí."
+    },
+    {
+      "id": "iso-009",
+      "type": "multiple",
+      "topic": "tcp-ip-model",
+      "difficulty": 2,
+      "question": "Které protokoly běží na Síťové vrstvě (vrstvě Internetu) v rámci modelu TCP/IP?",
+      "options": [
+        { "text": "IP", "correct": true },
+        { "text": "ICMP", "correct": true },
+        { "text": "ARP a RARP", "correct": true },
+        { "text": "Telnet", "correct": false }
+      ],
+      "explanation": "IP, ARP, RARP a ICMP jsou hlavními protokoly síťové vrstvy. Zajišťují adresaci, směrování a předávání datagramů."
+    },
+    {
+      "id": "iso-010",
+      "type": "truefalse",
+      "topic": "fyzicka-linkova",
+      "difficulty": 1,
+      "statement": "Switch (přepínač) je zařízení pracující typicky na fyzické vrstvě.",
+      "answer": false,
+      "explanation": "Switch pracuje primárně na Linkové vrstvě (L2). Na fyzické vrstvě (L1) pracují huby, repeatery a síťové adaptéry."
+    },
+    {
+      "id": "iso-011",
+      "type": "truefalse",
+      "topic": "vyssi-vrstvy",
+      "difficulty": 2,
+      "statement": "Relační vrstva řídí zahájení, udržení a ukončení relace (komunikace) v síti a oznamuje výjimečné stavy.",
+      "answer": true,
+      "explanation": "Ano, řízení relací je hlavním úkolem Relační vrstvy. Stará se o to, aby výměna dat proběhla v pořádku a udržovala kontext spojení."
+    },
+    {
+      "id": "iso-012",
+      "type": "truefalse",
+      "topic": "sitova-transportni",
+      "difficulty": 1,
+      "statement": "Transportní vrstva formuje data do segmentů a přidává hlavičku s číslem zdrojového a cílového portu.",
+      "answer": true,
+      "explanation": "Je to přesně tak. Transportní vrstva rozděluje data do segmentů a zajišťuje identifikaci aplikací pomocí portů."
+    },
+    {
+      "id": "iso-013",
+      "type": "truefalse",
+      "topic": "tcp-ip-model",
+      "difficulty": 1,
+      "statement": "Model ISO/OSI je uzavřený licencovaný systém, zatímco TCP/IP je teoretický model, který se v praxi neuchytil.",
+      "answer": false,
+      "explanation": "Právě naopak. ISO/OSI je teoretický referenční model pro standardizaci, zatímco TCP/IP (což je otevřený standard) je protokolový model reálně používaný v dnešním Internetu."
+    },
+    {
+      "id": "iso-014",
+      "type": "matching",
+      "topic": "iso-osi-zaklady",
+      "difficulty": 1,
+      "question": "Přiřaďte číslo vrstvy ISO/OSI (číslováno zdola) k jejímu názvu.",
+      "pairs": [
+        { "left": "1. vrstva", "right": "Fyzická vrstva" },
+        { "left": "2. vrstva", "right": "Linková vrstva" },
+        { "left": "3. vrstva", "right": "Síťová vrstva" },
+        { "left": "4. vrstva", "right": "Transportní vrstva" }
+      ],
+      "explanation": "Vrstvy jsou číslovány ze spodní hrany. Od fyzické (médium) směrem k uživateli."
+    },
+    {
+      "id": "iso-015",
+      "type": "matching",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "question": "Přiřaďte typ datového bloku (PDU) ke správné vrstvě ISO/OSI.",
+      "pairs": [
+        { "left": "Rámec", "right": "Linková vrstva" },
+        { "left": "Paket", "right": "Síťová vrstva" },
+        { "left": "Segment", "right": "Transportní vrstva" },
+        { "left": "Bit", "right": "Fyzická vrstva" }
+      ],
+      "explanation": "Na linkové vrstvě se datům říká rámce, na síťové pakety a na transportní segmenty. Fyzická přenáší čisté bity."
+    },
+    {
+      "id": "iso-016",
+      "type": "matching",
+      "topic": "tcp-ip-model",
+      "difficulty": 3,
+      "question": "Přiřaďte vrstvy modelu TCP/IP k vrstvám ISO/OSI, které logicky pokrývají.",
+      "pairs": [
+        { "left": "Vrstva síťového rozhraní (TCP/IP)", "right": "Linková a Fyzická vrstva (ISO/OSI)" },
+        { "left": "Síťová vrstva (TCP/IP)", "right": "Síťová vrstva (ISO/OSI)" },
+        { "left": "Transportní vrstva (TCP/IP)", "right": "Transportní vrstva (ISO/OSI)" },
+        { "left": "Aplikační vrstva (TCP/IP)", "right": "Aplikační, Prezentační a Relační vrstva (ISO/OSI)" }
+      ],
+      "explanation": "TCP/IP zjednodušuje strukturu. Slučuje dvě nejnižší vrstvy do jedné a tři nejvyšší aplikační vrstvy také do jedné."
+    },
+    {
+      "id": "iso-017",
+      "type": "ordering",
+      "topic": "iso-osi-zaklady",
+      "difficulty": 1,
+      "question": "Seřaďte první 4 vrstvy modelu ISO/OSI správně od nejnižší (1.) po nejvyšší (4.).",
+      "items": [
+        "Fyzická vrstva",
+        "Linková vrstva",
+        "Síťová vrstva",
+        "Transportní vrstva"
+      ],
+      "explanation": "Základní posloupnost od kabelu nahoru: 1. Fyzická, 2. Linková, 3. Síťová, 4. Transportní."
+    },
+    {
+      "id": "iso-018",
+      "type": "ordering",
+      "topic": "vyssi-vrstvy",
+      "difficulty": 2,
+      "question": "Seřaďte nejvyšší vrstvy modelu ISO/OSI od nejnižší (5.) po úplně nejvyšší (7.).",
+      "items": [
+        "Relační vrstva",
+        "Prezentační vrstva",
+        "Aplikační vrstva"
+      ],
+      "explanation": "Horní patra modelu OSI tvoří Relační (5), Prezentační (6) a konečně Aplikační vrstva (7) přímo komunikující s programem."
+    },
+    {
+      "id": "iso-019",
+      "type": "ordering",
+      "topic": "tcp-ip-model",
+      "difficulty": 2,
+      "question": "Seřaďte všechny 4 vrstvy modelu TCP/IP od nejnižší po nejvyšší.",
+      "items": [
+        "Vrstva síťového rozhraní",
+        "Síťová (IP) vrstva",
+        "Transportní vrstva",
+        "Aplikační vrstva"
+      ],
+      "explanation": "Model TCP/IP postupuje od hardwaru po aplikace přesně v tomto čtyřvrstvém uspořádání."
+    },
+    {
+      "id": "iso-020",
+      "type": "numeric",
+      "topic": "iso-osi-zaklady",
+      "difficulty": 1,
+      "question": "Kolik vrstev má referenční model ISO/OSI?",
+      "answer": 7,
+      "tolerance": 0,
+      "unit": "vrstev",
+      "explanation": "Model ISO/OSI je rozdělen do přesně 7 nezávislých vrstev."
+    },
+    {
+      "id": "iso-021",
+      "type": "numeric",
+      "topic": "tcp-ip-model",
+      "difficulty": 1,
+      "question": "Kolik vrstev má protokolový model TCP/IP?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "vrstvy",
+      "explanation": "Model TCP/IP má oproti OSI pouze 4 vrstvy."
+    },
+    {
+      "id": "iso-022",
+      "type": "numeric",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "question": "Jaké číslo nese Transportní vrstva v modelu ISO/OSI (číslováno odspodu)?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Transportní vrstva leží přesně uprostřed sedmivrstvého modelu ISO/OSI a má číslo 4."
+    },
+    {
+      "id": "iso-023",
+      "type": "numeric",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "question": "Jaké číslo nese Síťová vrstva v modelu ISO/OSI?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Síťová vrstva je hned nad vrstvou Linkovou a nese číslo 3."
+    },
+    {
+      "id": "iso-024",
+      "type": "categorize",
+      "topic": "tcp-ip-model",
+      "difficulty": 3,
+      "question": "Rozřaďte uvedené protokoly do správné vrstvy podle modelu TCP/IP.",
+      "categories": [
+        "Síťová vrstva",
+        "Transportní vrstva",
+        "Aplikační vrstva"
+      ],
+      "items": [
+        { "text": "IP", "category": "Síťová vrstva" },
+        { "text": "ICMP", "category": "Síťová vrstva" },
+        { "text": "TCP", "category": "Transportní vrstva" },
+        { "text": "UDP", "category": "Transportní vrstva" },
+        { "text": "HTTP", "category": "Aplikační vrstva" },
+        { "text": "DNS", "category": "Aplikační vrstva" }
+      ],
+      "explanation": "IP a ICMP routují (síťová), TCP/UDP zajišťují přesun port-to-port (transportní) a HTTP/DNS slouží konkrétní aplikaci."
+    },
+    {
+      "id": "iso-025",
+      "type": "categorize",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "question": "Zařaďte vlastnosti přenosu k odpovídajícímu transportnímu protokolu.",
+      "categories": [
+        "TCP",
+        "UDP"
+      ],
+      "items": [
+        { "text": "Spojovaný přenos", "category": "TCP" },
+        { "text": "Spolehlivý přenos", "category": "TCP" },
+        { "text": "Nespojovaný přenos (datagramy)", "category": "UDP" },
+        { "text": "Nespolehlivý přenos", "category": "UDP" }
+      ],
+      "explanation": "TCP zaručuje, že data dorazí v pořádku, za cenu navazování spojení. UDP prostě střílí datagramy naslepo pro dosažení vyšší rychlosti."
+    },
+    {
+      "id": "iso-026",
+      "type": "categorize",
+      "topic": "iso-osi-zaklady",
+      "difficulty": 1,
+      "question": "Přiřaďte zařízení k vrstvě, na které typicky figurují a pracují s daty.",
+      "categories": [
+        "Fyzická vrstva (L1)",
+        "Linková vrstva (L2)",
+        "Síťová vrstva (L3)"
+      ],
+      "items": [
+        { "text": "Kabely (média)", "category": "Fyzická vrstva (L1)" },
+        { "text": "Repeater (Opakovač)", "category": "Fyzická vrstva (L1)" },
+        { "text": "Switch (Přepínač)", "category": "Linková vrstva (L2)" },
+        { "text": "Router (Směrovač)", "category": "Síťová vrstva (L3)" }
+      ],
+      "explanation": "Repeater jen přeposílá elektřinu. Switch si hlídá MAC adresy. Router si čte IP pakety a provádí chytré směrování."
+    },
+    {
+      "id": "iso-027",
+      "type": "gap",
+      "topic": "sitova-transportni",
+      "difficulty": 2,
+      "text": "Každá vrstva modifikuje data, která přijme od vrstvy nad ní. Transportní vrstva rozdělí proud dat na {{0}}, ke kterým přidá mimo jiné čísla portů. Na Síťové vrstvě se k těmto blokům přidá hlavička s IP adresami a vytvoří se tak {{1}}. Na Linkové vrstvě se celek obalí hlavičkou s MAC adresou a kontrolním součtem a stane se z něj {{2}}.",
+      "blanks": [
+        { "accept": ["segmenty", "segment"] },
+        { "accept": ["pakety", "paket"] },
+        { "accept": ["rámec", "ramec"] }
+      ],
+      "explanation": "Proces zapouzdřování (encapsulation): Segment (L4) -> Paket (L3) -> Rámec (L2)."
+    },
+    {
+      "id": "iso-028",
+      "type": "gap",
+      "topic": "tcp-ip-model",
+      "difficulty": 3,
+      "text": "Model ISO/OSI je teoretický a {{0}} model sloužící jako standard pro počítačové sítě. Oproti tomu TCP/IP je {{1}} model a otevřený standard používaný reálně v dnešním Internetu. Zatímco ISO/OSI používá vrstev 7, TCP/IP má pouze {{2}} vrstvy, přičemž vrchní ISO/OSI vrstvy sdružuje do své vrstvy {{3}}.",
+      "blanks": [
+        { "accept": ["referenční", "referencni"] },
+        { "accept": ["protokolový", "protokolovy"] },
+        { "accept": ["4", "čtyři", "ctyri"] },
+        { "accept": ["aplikační", "aplikacni"] }
+      ],
+      "explanation": "ISO/OSI slouží pro teoretické srovnání, TCP/IP je praktická implementace, která redukuje počet vrstev na 4."
+    },
+    {
+      "id": "iso-029",
+      "type": "passage",
+      "topic": "iso-osi-zaklady",
+      "difficulty": 2,
+      "passage": "Referenční model ISO/OSI je teoretický model vytvořený za účelem standardizace počítačových sítí. Uvádí všeobecné principy a popisuje vrstvy, jejich funkce a služby. Každá vrstva plní svoji práci a poskytuje své služby vrstvě vyšší, přičemž ta úplně nejvyšší poskytuje služby přímo aplikacím uživatele. Model rozděluje síťovou komunikaci do 7 vrstev, od fyzického signálu na kabelech přes směrování paketů až po složité aplikační protokoly.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Model ISO/OSI poskytuje služby z vyšší vrstvy směrem k vrstvám nižším.",
+          "answer": false,
+          "explanation": "Je to přesně naopak. Každá vrstva poskytuje služby vrstvě VYŠŠÍ (např. fyzická poskytuje službu linkové)."
+        },
+        {
+          "type": "single",
+          "question": "Hlavním důvodem vzniku modelu ISO/OSI byla:",
+          "options": [
+            { "text": "Snaha o standardizaci počítačových sítí", "correct": true },
+            { "text": "Nutnost vyvinout nový komerční software", "correct": false },
+            { "text": "Požadavek zrychlit bezdrátové WiFi sítě", "correct": false },
+            { "text": "Snížení počtu IP adres v internetu", "correct": false }
+          ],
+          "explanation": "Poskytuje společné reference pro udržování spojitosti a slouží jako teoretický standard."
+        },
+        {
+          "type": "multiple",
+          "question": "Která slova nejlépe vystihují podstatu modelu ISO/OSI?",
+          "options": [
+            { "text": "Teoretický model", "correct": true },
+            { "text": "Referenční model", "correct": true },
+            { "text": "Striktní fyzický software pro routery", "correct": false },
+            { "text": "Standardizovaný pohled na procesy v síti", "correct": true }
+          ],
+          "explanation": "ISO/OSI není software, ale referenční rámec pro snadnější pochopení funkcí sítí."
+        }
+      ]
+    },
+    {
+      "id": "iso-030",
+      "type": "passage",
+      "topic": "sitova-transportni",
+      "difficulty": 3,
+      "passage": "Transportní vrstva zajišťuje přenos dat mezi uzly. Snaží se zajistit spolehlivost přenosu a řídí rychlost a tok dat. Data jsou zde rozdělena do menších částí – segmentů. Každý segment má vlastní hlavičku, která obsahuje číslo zdrojového a cílového portu, čímž se rozlišuje, jaké konkrétní aplikaci data patří. Přenosy můžeme dělit z hlediska spolehlivosti (zda si příjemce vyžádá nedoručené části dat) a spojovanosti (zda se navazuje relace před samotným posíláním).",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Co transportní vrstva přidává k datům (do hlavičky segmentu), aby byla doručena správné aplikaci v počítači?",
+          "options": [
+            { "text": "Číslo zdrojového a cílového portu", "correct": true },
+            { "text": "Zdrojovou a cílovou MAC adresu", "correct": false },
+            { "text": "Zdrojovou a cílovou IP adresu", "correct": false },
+            { "text": "Kontrolní součet FCS", "correct": false }
+          ],
+          "explanation": "Transportní vrstva pracuje s porty (např. port 80 pro HTTP, 443 pro HTTPS). IP a MAC adresy se řeší v nižších vrstvách."
+        },
+        {
+          "type": "gap",
+          "text": "Pokud je přenos spolehlivý, tak jakmile příjemce zjistí, že mu nějaká část dat chybí, zašle žádost o jejich {{0}}. Pokud je přenos nespolehlivý a nedaří se zajistit bezchybný přenos, nedoručená přijatá část dat se jednoduše {{1}}.",
+          "blanks": [
+            { "accept": ["znovuzaslání", "opakování", "znovuposlání", "opakovane"] },
+            { "accept": ["zahodí", "smaže", "zahodi"] }
+          ],
+          "explanation": "Spolehlivý přenos (TCP) zajišťuje integritu re-transmisí, nespolehlivý (UDP) vadná či chybějící data zahazuje a jde dál."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Nespojovaný přenos znamená, že komunikace probíhá plně bez navazování počátečního spojení (odesílají se samostatné datagramy).",
+          "answer": true,
+          "explanation": "Přesně tak. U nespojovaného přenosu není žádný 'handshake' na začátku. Systém rovnou zasílá data naslepo."
+        }
+      ]
+    }
+  ]
+}

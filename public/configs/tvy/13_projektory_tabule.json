@@ -1,0 +1,505 @@
+{
+  "subject": "projektory-tabule",
+  "name": "13. Projektory a interaktivní tabule (Komplexní)",
+  "topics": [
+    { "id": "projektory-typy", "name": "Typy projektorů a princip činnosti" },
+    { "id": "projektory-parametry", "name": "Parametry projektorů" },
+    { "id": "interaktivni-tabule", "name": "Interaktivní tabule a technologie" }
+  ],
+  "questions": [
+    {
+      "id": "proj-001",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 1,
+      "question": "Jaký je hlavní princip fungování LCD projektorů?",
+      "options": [
+        { "text": "Využívají panely s tekutými krystaly propouštějící/blokující světlo", "correct": true },
+        { "text": "Využívají mikrozrcadla na čipu DMD", "correct": false },
+        { "text": "Promítají obraz přímo laserovým paprskem", "correct": false },
+        { "text": "Využívají rotující RGB filtr před čočkou", "correct": false }
+      ],
+      "explanation": "LCD projektory využívají panely s tekutými krystaly, které modulují světlo z lampy[cite: 8, 9]."
+    },
+    {
+      "id": "proj-002",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Která technologie používá čip DMD (Digital Micromirror Device)?",
+      "options": [
+        { "text": "LCD", "correct": false },
+        { "text": "DLP", "correct": true },
+        { "text": "LCoS", "correct": false },
+        { "text": "LED", "correct": false }
+      ],
+      "explanation": "DLP projektory využívají mikrozrcadla na čipu DMD, která rychlým naklápěním odrážejí světlo[cite: 13]."
+    },
+    {
+      "id": "proj-003",
+      "type": "single",
+      "topic": "projektory-parametry",
+      "difficulty": 1,
+      "question": "V jakých jednotkách se standardně měří svítivost projektoru?",
+      "options": [
+        { "text": "Watt (W)", "correct": false },
+        { "text": "Lumen (lm)", "correct": true },
+        { "text": "Hertz (Hz)", "correct": false },
+        { "text": "Decibel (dB)", "correct": false }
+      ],
+      "explanation": "Svítivost projektoru se udává v lumenech (lm)[cite: 31]."
+    },
+    {
+      "id": "proj-004",
+      "type": "multiple",
+      "topic": "projektory-parametry",
+      "difficulty": 1,
+      "question": "Která z následujících rozhraní se běžně používají pro připojení zdroje signálu k projektoru?",
+      "options": [
+        { "text": "HDMI", "correct": true },
+        { "text": "VGA", "correct": true },
+        { "text": "Display Port", "correct": true },
+        { "text": "RJ-11", "correct": false }
+      ],
+      "explanation": "Běžná rozhraní projektorů zahrnují HDMI, VGA, DVI a Display Port[cite: 36]."
+    },
+    {
+      "id": "proj-005",
+      "type": "truefalse",
+      "topic": "interaktivni-tabule",
+      "difficulty": 1,
+      "statement": "Interaktivní tabule propojené s projektorem a počítačem umožňují přímou interakci s promítaným obrazem.",
+      "answer": true,
+      "explanation": "Uživatelé mohou na tabuli psát, kreslit nebo přetahovat objekty[cite: 39, 40]."
+    },
+    {
+      "id": "proj-006",
+      "type": "numeric",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Jaká je přibližná deklarovaná životnost laserového projektoru v hodinách?",
+      "answer": 20000,
+      "tolerance": 0,
+      "unit": "hodin",
+      "explanation": "Laserové projektory nabízejí dlouhou životnost až 20 000 hodin[cite: 18]."
+    },
+    {
+      "id": "proj-007",
+      "type": "categorize",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Zařaďte projektory podle jejich hlavního zdroje světla.",
+      "categories": ["Výbojka", "Laser", "LED"],
+      "items": [
+        { "text": "Tradiční lampa", "category": "Výbojka" },
+        { "text": "RGB Laser", "category": "Laser" },
+        { "text": "Energeticky úsporné diody", "category": "LED" }
+      ],
+      "explanation": "Projektory se liší použitou technologií zdroje světla[cite: 30]."
+    },
+    {
+      "id": "proj-008",
+      "type": "gap",
+      "topic": "projektory-typy",
+      "difficulty": 3,
+      "text": "LCD projektory mohou trpět tzv. {{0}} efektem, kdy jsou při bližším pohledu viditelné jednotlivé pixely.",
+      "blanks": [
+        { "accept": ["screen door", "screen-door"] }
+      ],
+      "explanation": "Jde o efekt zviditelnění mřížky mezi pixely[cite: 11]."
+    },
+    {
+      "id": "proj-009",
+      "type": "single",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "question": "Jaký princip využívají optické interaktivní tabule k detekci dotyku?",
+      "options": [
+        { "text": "Tlakový odporový senzor", "correct": false },
+        { "text": "Infračervené senzory nebo kamery", "correct": true },
+        { "text": "Ultrazvukové echo", "correct": false },
+        { "text": "Elektromagnetická indukce", "correct": false }
+      ],
+      "explanation": "Optické tabule používají infračervené senzory nebo kamery pro detekci polohy[cite: 46]."
+    },
+    {
+      "id": "proj-010",
+      "type": "multiple",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "question": "Které faktory jsou důležité při výběru interaktivní tabule?",
+      "options": [
+        { "text": "Typ technologie", "correct": true },
+        { "text": "Velikost úhlopříčky", "correct": true },
+        { "text": "Počet dotykových bodů", "correct": true },
+        { "text": "Barva rámu tabule", "correct": false }
+      ],
+      "explanation": "Výběr závisí na technologii, velikosti a schopnosti vícetouchového ovládání[cite: 52, 53, 54]."
+    },
+    {
+      "id": "proj-011",
+      "type": "truefalse",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "statement": "DLP projektory jsou nevhodné pro dynamické prezentace a videa kvůli nízké rychlosti.",
+      "answer": false,
+      "explanation": "Naopak, díky rychlé odezvě jsou pro tyto účely ideální[cite: 14]."
+    },
+    {
+      "id": "proj-012",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 3,
+      "question": "Jakou technologii kombinuje LCoS (Liquid Crystal on Silicon)?",
+      "options": [
+        { "text": "LCD a LED", "correct": false },
+        { "text": "LCD a DLP", "correct": true },
+        { "text": "Laser a DLP", "correct": false },
+        { "text": "LED a LCD", "correct": false }
+      ],
+      "explanation": "LCoS kombinuje vlastnosti LCD a DLP technologií[cite: 25]."
+    },
+    {
+      "id": "proj-013",
+      "type": "numeric",
+      "topic": "interaktivni-tabule",
+      "difficulty": 1,
+      "question": "Jaká je obvyklá velikost interaktivní tabule v palcích?",
+      "answer": 75,
+      "tolerance": 10,
+      "unit": "palců",
+      "explanation": "Tabule se obvykle pohybují v rozmezí 65–85 palců[cite: 53]."
+    },
+    {
+      "id": "proj-014",
+      "type": "matching",
+      "topic": "projektory-parametry",
+      "difficulty": 2,
+      "question": "Přiřaďte parametr projektoru k jeho definici.",
+      "pairs": [
+        { "left": "Kontrast", "right": "Poměr světlého a tmavého bodu" },
+        { "left": "Rozlišení", "right": "Počet bodů (např. 4K)" },
+        { "left": "Hlučnost", "right": "Intenzita hluku v dB" }
+      ],
+      "explanation": "Tyto parametry definují kvalitu obrazu a provozní vlastnosti[cite: 33, 34, 35]."
+    },
+    {
+      "id": "proj-015",
+      "type": "gap",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "text": "LED projektory využívají jako zdroj světla {{0}} diody, které jsou energeticky úsporné.",
+      "blanks": [
+        { "accept": ["LED"] }
+      ],
+      "explanation": "LED diody zajišťují kompaktnost a dlouhou životnost[cite: 21, 22]."
+    },
+    {
+      "id": "proj-016",
+      "type": "single",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "question": "Proč jsou optické tabule často voleny pro školní prostředí?",
+      "options": [
+        { "text": "Jsou nejrychlejší na trhu", "correct": false },
+        { "text": "Jsou cenově dostupné a snadné na údržbu", "correct": true },
+        { "text": "Nabízejí nejvyšší barevnou věrnost", "correct": false },
+        { "text": "Nepotřebují žádné připojení k PC", "correct": false }
+      ],
+      "explanation": "Optické tabule jsou cenově dostupné a snadno udržovatelné[cite: 47]."
+    },
+    {
+      "id": "proj-017",
+      "type": "multiple",
+      "topic": "interaktivni-tabule",
+      "difficulty": 3,
+      "question": "Co umožňují vícetouchové interaktivní tabule?",
+      "options": [
+        { "text": "Současnou práci více uživatelů", "correct": true },
+        { "text": "Efektivnější týmové projekty", "correct": true },
+        { "text": "Rychlejší kreslení", "correct": true },
+        { "text": "Automatickou výměnu projektoru", "correct": false }
+      ],
+      "explanation": "Více dotykových bodů umožňuje současnou práci více uživatelů[cite: 54]."
+    },
+    {
+      "id": "proj-018",
+      "type": "truefalse",
+      "topic": "projektory-typy",
+      "difficulty": 1,
+      "statement": "Laserové projektory jsou vhodné primárně pro velmi malé místnosti kvůli nízkému jasu.",
+      "answer": false,
+      "explanation": "Laserové projektory nabízejí vysoký jas a jsou vhodné spíše pro větší prostory[cite: 17, 19]."
+    },
+    {
+      "id": "proj-019",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 3,
+      "question": "Hlavní výhoda LCoS projektorů oproti ostatním?",
+      "options": [
+        { "text": "Nejnižší pořizovací cena", "correct": false },
+        { "text": "Výjimečná kvalita obrazu a barevná přesnost", "correct": true },
+        { "text": "Nejmenší rozměry", "correct": false },
+        { "text": "Vysoká hlučnost ventilátoru", "correct": false }
+      ],
+      "explanation": "LCoS nabízí vynikající kvalitu obrazu, ideální pro profesionální aplikace[cite: 26]."
+    },
+    {
+      "id": "proj-020",
+      "type": "multiple",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Jaké nevýhody mohou mít DLP projektory?",
+      "options": [
+        { "text": "Možný vznik tzv. duhového efektu", "correct": true },
+        { "text": "Nutnost rotujícího barevného filtru", "correct": true },
+        { "text": "Vysoká hlučnost", "correct": false },
+        { "text": "Pomalá odezva obrazu", "correct": false }
+      ],
+      "explanation": "U některých uživatelů se může objevit duhový efekt[cite: 15]."
+    },
+    {
+      "id": "proj-021",
+      "type": "numeric",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Jaká je udávaná životnost LED projektorů v hodinách?",
+      "answer": 30000,
+      "tolerance": 0,
+      "unit": "hodin",
+      "explanation": "LED projektory mají dlouhou životnost až 30 000 hodin[cite: 22]."
+    },
+    {
+      "id": "proj-022",
+      "type": "matching",
+      "topic": "projektory-typy",
+      "difficulty": 3,
+      "question": "Přiřaďte technologii k jejímu klíčovému prvku.",
+      "pairs": [
+        { "left": "DLP", "right": "Mikrozrcadla" },
+        { "left": "LCD", "right": "Panely s tekutými krystaly" },
+        { "left": "Laser", "right": "Laserový zdroj světla" }
+      ],
+      "explanation": "Každá technologie je definována svým fyzickým principem[cite: 8, 13, 17]."
+    },
+    {
+      "id": "proj-023",
+      "type": "gap",
+      "topic": "projektory-parametry",
+      "difficulty": 1,
+      "text": "Hlučnost projektoru, která vzniká chlazením lampy, se udává v {{0}}.",
+      "blanks": [
+        { "accept": ["dB", "decibelech"] }
+      ],
+      "explanation": "Hlučnost je důležitý parametr pro klidné prezentace[cite: 35]."
+    },
+    {
+      "id": "proj-024",
+      "type": "single",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "question": "Které tabule pracují na principu podobném dotykovým displejům (mobilům)?",
+      "options": [
+        { "text": "Kapacitní", "correct": true },
+        { "text": "Optické", "correct": false },
+        { "text": "Ultrazvukové", "correct": false },
+        { "text": "Žádné", "correct": false }
+      ],
+      "explanation": "Kapacitní tabule reagují na dotyk prstu nebo stylusu jako běžné dotykové displeje[cite: 43]."
+    },
+    {
+      "id": "proj-025",
+      "type": "multiple",
+      "topic": "projektory-parametry",
+      "difficulty": 2,
+      "question": "Co může být součástí 'Ostatních' parametrů projektoru?",
+      "options": [
+        { "text": "Dálkové ovládání", "correct": true },
+        { "text": "Integrované reproduktory", "correct": true },
+        { "text": "Design šasi", "correct": false },
+        { "text": "Hmotnost v kg", "correct": false }
+      ],
+      "explanation": "Dálkové ovládání a reproduktory jsou standardní doplňkovou výbavou[cite: 37]."
+    },
+    {
+      "id": "proj-026",
+      "type": "truefalse",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "statement": "LED projektory mají obvykle vyšší světelný jas než výkonné laserové projektory.",
+      "answer": false,
+      "explanation": "LED projektory mají nižší jas, proto jsou vhodné spíše do tmavších místností[cite: 23]."
+    },
+    {
+      "id": "proj-027",
+      "type": "single",
+      "topic": "interaktivni-tabule",
+      "difficulty": 3,
+      "question": "Hlavní výhoda kapacitních tabulí oproti optickým?",
+      "options": [
+        { "text": "Výrazně nižší cena", "correct": false },
+        { "text": "Rychlejší a přesnější reakce na dotyk", "correct": true },
+        { "text": "Snazší instalace", "correct": false },
+        { "text": "Nízká hmotnost", "correct": false }
+      ],
+      "explanation": "Kapacitní tabule nabízejí přesnější a rychlejší ovládání[cite: 52]."
+    },
+    {
+      "id": "proj-028",
+      "type": "gap",
+      "topic": "projektory-parametry",
+      "difficulty": 2,
+      "text": "Mezi standardní rozlišení projektorů patří FullHD, QuadHD a {{0}}.",
+      "blanks": [
+        { "accept": ["4K"] }
+      ],
+      "explanation": "Rozlišení určuje jemnost promítaného obrazu[cite: 33]."
+    },
+    {
+      "id": "proj-029",
+      "type": "multiple",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "question": "Které technologie snímání využívají interaktivní tabule?",
+      "options": [
+        { "text": "Kapacitní", "correct": true },
+        { "text": "Optické (infračervené)", "correct": true },
+        { "text": "Ultrazvukové", "correct": true },
+        { "text": "Mechanické", "correct": false }
+      ],
+      "explanation": "Hlavní typy jsou kapacitní, optické a ultrazvukové/infračervené[cite: 42, 45, 48]."
+    },
+    {
+      "id": "proj-030",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Proč jsou DLP projektory ideální pro dynamické prezentace?",
+      "options": [
+        { "text": "Mají velmi vysoké rozlišení", "correct": false },
+        { "text": "Díky rychlé odezvě mikrozrcadel", "correct": true },
+        { "text": "Mají nízkou spotřebu", "correct": false },
+        { "text": "Jsou nejlevnější na údržbu", "correct": false }
+      ],
+      "explanation": "DLP projektory vynikají ostrostí a rychlou odezvou[cite: 14]."
+    },
+    {
+      "id": "proj-031",
+      "type": "truefalse",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "statement": "Software tabule je nepodstatný doplněk, který nemá vliv na interaktivitu.",
+      "answer": false,
+      "explanation": "Software pro kreslení a spolupráci usnadňuje interaktivní práci[cite: 56]."
+    },
+    {
+      "id": "proj-032",
+      "type": "numeric",
+      "topic": "projektory-typy",
+      "difficulty": 3,
+      "question": "Kolik LCD panelů se typicky používá v LCD projektoru pro vytvoření barev?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "panely",
+      "explanation": "Standardní LCD projektor využívá 3x LCD panel (RGB)[cite: 10]."
+    },
+    {
+      "id": "proj-033",
+      "type": "gap",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "text": "Interaktivní tabule se k počítači nejčastěji připojují pomocí USB nebo {{0}} rozhraní.",
+      "blanks": [
+        { "accept": ["HDMI", "VGA"] }
+      ],
+      "explanation": "Konektivita je klíčová pro přenos obrazu a dotykových dat[cite: 55]."
+    },
+    {
+      "id": "proj-034",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Které projektory jsou kvůli své ceně a rozměrům méně rozšířené v běžných kancelářích?",
+      "options": [
+        { "text": "LCD", "correct": false },
+        { "text": "DLP", "correct": false },
+        { "text": "LCoS", "correct": true },
+        { "text": "LED", "correct": false }
+      ],
+      "explanation": "LCoS projektory jsou dražší a rozměrnější, proto méně časté[cite: 27]."
+    },
+    {
+      "id": "proj-035",
+      "type": "multiple",
+      "topic": "projektory-typy",
+      "difficulty": 1,
+      "question": "Výhody LED technologie u projektorů?",
+      "options": [
+        { "text": "Nižší spotřeba energie", "correct": true },
+        { "text": "Dlouhá životnost (až 30 000 hodin)", "correct": true },
+        { "text": "Kompaktní rozměry", "correct": true },
+        { "text": "Vysoký jas pro venkovní použití", "correct": false }
+      ],
+      "explanation": "LED projektory jsou úsporné a kompaktní[cite: 21, 22]."
+    },
+    {
+      "id": "proj-036",
+      "type": "truefalse",
+      "topic": "projektory-parametry",
+      "difficulty": 1,
+      "statement": "Dálkové ovládání je nezbytnou součástí každého základního projektoru.",
+      "answer": false,
+      "explanation": "Dálkové ovládání patří mezi 'Ostatní' parametry, není vždy nutné[cite: 37]."
+    },
+    {
+      "id": "proj-037",
+      "type": "matching",
+      "topic": "interaktivni-tabule",
+      "difficulty": 2,
+      "question": "Přiřaďte technologii tabule k jejímu typickému využití.",
+      "pairs": [
+        { "left": "Kapacitní", "right": "Dynamické prezentace" },
+        { "left": "Optické", "right": "Vícebodové ovládání" },
+        { "left": "Ultrazvukové", "right": "Detailní ovládání" }
+      ],
+      "explanation": "Technologie se volí podle typu práce a požadavků[cite: 44, 47, 50]."
+    },
+    {
+      "id": "proj-038",
+      "type": "single",
+      "topic": "projektory-typy",
+      "difficulty": 2,
+      "question": "Pro jaké prostředí jsou LED projektory nejvhodnější?",
+      "options": [
+        { "text": "Velmi světlé zasedací místnosti", "correct": false },
+        { "text": "Tmavší místnosti", "correct": true },
+        { "text": "Velká kina", "correct": false },
+        { "text": "Žádné z uvedených", "correct": false }
+      ],
+      "explanation": "Kvůli nižšímu jasu jsou vhodné do tmavších místností[cite: 23]."
+    },
+    {
+      "id": "proj-039",
+      "type": "numeric",
+      "topic": "projektory-parametry",
+      "difficulty": 2,
+      "question": "Kolik hlavních technologií projektorů bylo uvedeno v dokumentu?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "technologie",
+      "explanation": "Dokument uvádí LCD, DLP, Laserové a LED projektory (plus LCoS)[cite: 5]."
+    },
+    {
+      "id": "proj-040",
+      "type": "gap",
+      "topic": "interaktivni-tabule",
+      "difficulty": 3,
+      "text": "Kombinace tabule, {{0}} a počítače tvoří kompletní systém pro interaktivní výuku.",
+      "blanks": [
+        { "accept": ["projektoru"] }
+      ],
+      "explanation": "Interaktivní tabule jsou propojeny s projektorem a PC[cite: 39]."
+    }
+  ]
+}

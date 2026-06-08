@@ -1,0 +1,520 @@
+{
+  "subject": "vstupni-zarizeni",
+  "name": "25. Vstupní zařízení (Komplexní)",
+  "topics": [
+    { "id": "obecne-vstupy", "name": "Vstupní zařízení obecně" },
+    { "id": "klavesnice", "name": "Klávesnice a SCAN kódy" },
+    { "id": "tablety-pera", "name": "Tablety a světelná pera" },
+    { "id": "mysi", "name": "Myši a jejich principy" }
+  ],
+  "questions": [
+    {
+      "id": "vst-001",
+      "type": "single",
+      "topic": "obecne-vstupy",
+      "difficulty": 1,
+      "question": "Jaká je základní funkce vstupních zařízení?",
+      "options": [
+        { "text": "Hardware pro ovládání PC a zápis dat", "correct": true },
+        { "text": "Zobrazení dat na monitoru", "correct": false },
+        { "text": "Ukládání dat na disk", "correct": false },
+        { "text": "Zajištění napájení komponent", "correct": false }
+      ],
+      "explanation": "Vstupní zařízení slouží k ovládání a zápisu dat do počítače[cite: 488]."
+    },
+    {
+      "id": "vst-002",
+      "type": "single",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Co je to SCAN kód u klávesnice?",
+      "options": [
+        { "text": "Kód, kterým klávesnice vysílá informaci o stisku", "correct": true },
+        { "text": "Kód pro šifrování dat", "correct": false },
+        { "text": "Identifikátor výrobce klávesnice", "correct": false },
+        { "text": "Adresa v paměti RAM", "correct": false }
+      ],
+      "explanation": "Klávesnice vysílá informace o stisknutých klávesách pomocí SCAN kódu[cite: 492]."
+    },
+    {
+      "id": "vst-003",
+      "type": "single",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Jak je organizována klávesnice z hlediska kontaktů?",
+      "options": [
+        { "text": "Jako matice spínačů", "correct": true },
+        { "text": "Jako jedna velká cívka", "correct": false },
+        { "text": "Jako série sériových portů", "correct": false },
+        { "text": "Jako logická hradla NAND", "correct": false }
+      ],
+      "explanation": "Klávesnice je organizovaná jako pole spínačů zapojených do matice[cite: 494]."
+    },
+    {
+      "id": "vst-004",
+      "type": "single",
+      "topic": "tablety-pera",
+      "difficulty": 3,
+      "question": "Jaká je nejčastější metoda napájení u stylusu pro tablety?",
+      "options": [
+        { "text": "Elektromagnetická rezonance", "correct": true },
+        { "text": "Přímé připojení k síti 230V", "correct": false },
+        { "text": "Solární článek", "correct": false },
+        { "text": "Indukce z procesoru", "correct": false }
+      ],
+      "explanation": "Nejčastější je elektromagnetická rezonance, kde stylus nabíjí tablet[cite: 522]."
+    },
+    {
+      "id": "vst-005",
+      "type": "single",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Jaký kód využívá kuličková myš pro rozpoznání směru otáčení hřídelek?",
+      "options": [
+        { "text": "Grayův kód", "correct": true },
+        { "text": "ASCII kód", "correct": false },
+        { "text": "BCD kód", "correct": false },
+        { "text": "Morseův kód", "correct": false }
+      ],
+      "explanation": "Kuličková myš rozpoznává směr otáčení pomocí Grayova kódu[cite: 546]."
+    },
+    {
+      "id": "vst-006",
+      "type": "multiple",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Které typy klávesnic jsou popsány v dokumentu?",
+      "options": [
+        { "text": "Membránové", "correct": true },
+        { "text": "Mechanické", "correct": true },
+        { "text": "Optické", "correct": false },
+        { "text": "Pneumatické", "correct": false }
+      ],
+      "explanation": "Dokument rozlišuje membránové a mechanické klávesnice[cite: 496, 501]."
+    },
+    {
+      "id": "vst-007",
+      "type": "multiple",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Jaké technologie snímání myši známe?",
+      "options": [
+        { "text": "Kuličková", "correct": true },
+        { "text": "Optická", "correct": true },
+        { "text": "Laserová", "correct": true },
+        { "text": "Inerciální", "correct": false }
+      ],
+      "explanation": "Snímače jsou kuličkové, optické nebo laserové[cite: 541, 550, 557]."
+    },
+    {
+      "id": "vst-008",
+      "type": "multiple",
+      "topic": "tablety-pera",
+      "difficulty": 3,
+      "question": "Jakými způsoby může být napájeno pero pro tablety?",
+      "options": [
+        { "text": "Vyměnitelnými bateriemi", "correct": true },
+        { "text": "Dobíjecím akumulátorem", "correct": true },
+        { "text": "Elektromagnetickou rezonancí", "correct": true },
+        { "text": "Napojením na USB 3.0", "correct": false }
+      ],
+      "explanation": "Pero může být napájeno bateriemi, akumulátorem nebo elektromagnetickou rezonancí [cite: 519-522]."
+    },
+    {
+      "id": "vst-009",
+      "type": "multiple",
+      "topic": "obecne-vstupy",
+      "difficulty": 2,
+      "question": "Jaké jsou běžné způsoby propojení klávesnice s PC?",
+      "options": [
+        { "text": "PS/2", "correct": true },
+        { "text": "USB", "correct": true },
+        { "text": "Bluetooth", "correct": true },
+        { "text": "HDMI", "correct": false }
+      ],
+      "explanation": "Klávesnice využívá PS/2, USB, Bluetooth nebo IrDA [cite: 515-516]."
+    },
+    {
+      "id": "vst-010",
+      "type": "multiple",
+      "topic": "mysi",
+      "difficulty": 3,
+      "question": "Co vyhodnocuje mikroprocesor u optické myši?",
+      "options": [
+        { "text": "Posunutí obrazu podkladu", "correct": true },
+        { "text": "Porovnávání obrazů povrchu", "correct": true },
+        { "text": "Rychlost stisknutí tlačítka", "correct": false },
+        { "text": "Intenzitu odraženého světla", "correct": false }
+      ],
+      "explanation": "Mikroprocesor v myši vyhodnocuje posunutí a porovnává obrazy povrchu[cite: 554]."
+    },
+    {
+      "id": "vst-011",
+      "type": "truefalse",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "statement": "U membránových klávesnic zajišťuje návrat klávesy do původní polohy pružina.",
+      "answer": false,
+      "explanation": "U membránových klávesnic zajišťuje návrat gumová báň[cite: 499]."
+    },
+    {
+      "id": "vst-012",
+      "type": "truefalse",
+      "topic": "mysi",
+      "difficulty": 2,
+      "statement": "Laserová myš používá pro osvětlení červenou LED diodu.",
+      "answer": false,
+      "explanation": "Laserová myš používá pro osvětlení laser[cite: 560]."
+    },
+    {
+      "id": "vst-013",
+      "type": "truefalse",
+      "topic": "tablety-pera",
+      "difficulty": 2,
+      "statement": "Pracovní plocha tabletu může být zároveň obrazovkou.",
+      "answer": true,
+      "explanation": "Plocha tabletu může být buď čistá, nebo obrazovka, která ukazuje kreslené tahy[cite: 523]."
+    },
+    {
+      "id": "vst-014",
+      "type": "truefalse",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "statement": "Při uvolnění klávesy se kód vyslaný klávesnicí zmenší o 128.",
+      "answer": false,
+      "explanation": "Při uvolnění je kód zvětšen o 128[cite: 508]."
+    },
+    {
+      "id": "vst-015",
+      "type": "truefalse",
+      "topic": "tablety-pera",
+      "difficulty": 3,
+      "statement": "Světelné pero pracuje na principu snímání pozice pomocí infračerveného záření z tabletu.",
+      "answer": false,
+      "explanation": "Světelné pero spolupracuje s grafickým adaptérem a reaguje na elektronový svazek monitoru[cite: 531, 533]."
+    },
+    {
+      "id": "vst-016",
+      "type": "matching",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Přiřaďte typ myši k principu.",
+      "pairs": [
+        { "left": "Kuličková", "right": "Rotační clonky" },
+        { "left": "Optická", "right": "Kamera s nízkým rozlišením" },
+        { "left": "Laserová", "right": "Laserový paprsek" }
+      ],
+      "explanation": "Kuličková využívá optoelektronické čidlo a clonky, optická kameru a LED, laserová laser[cite: 541, 550, 557]."
+    },
+    {
+      "id": "vst-017",
+      "type": "matching",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Přiřaďte typ klávesnice k její součásti.",
+      "pairs": [
+        { "left": "Membránová", "right": "Gumová báň" },
+        { "left": "Mechanická", "right": "Pružina a svorka" }
+      ],
+      "explanation": "Membránové využívají pružné gumové báně, mechanické pružinový mechanismus[cite: 499, 504]."
+    },
+    {
+      "id": "vst-018",
+      "type": "matching",
+      "topic": "tablety-pera",
+      "difficulty": 3,
+      "question": "Přiřaďte komponentu světelného pera k popisu.",
+      "pairs": [
+        { "left": "Fotočlánek", "right": "Reaguje na svazek elektronů" },
+        { "left": "Vyhodnocovací jednotka", "right": "Součást grafického adaptéru" }
+      ],
+      "explanation": "Fotočlánek detekuje světlo, vyhodnocovací jednotka určuje polohu [cite: 533-535]."
+    },
+    {
+      "id": "vst-019",
+      "type": "ordering",
+      "topic": "klavesnice",
+      "difficulty": 3,
+      "question": "Seřaďte postup zpracování stisku klávesy.",
+      "items": [
+        "Mikroprocesor kontroluje stav",
+        "Vyslání kódu do základní desky",
+        "Zápis na port",
+        "BIOS přečte kód"
+      ],
+      "explanation": "Kontrola -> Vyslání -> Zápis -> Přečtení [cite: 507-509]."
+    },
+    {
+      "id": "vst-020",
+      "type": "ordering",
+      "topic": "mysi",
+      "difficulty": 3,
+      "question": "Seřaďte kroky kuličkové myši při přenosu pohybu.",
+      "items": [
+        "Pohyb kuličky",
+        "Roztočení hřídelek",
+        "Roztočení clonky",
+        "Detekce přerušovaného světla"
+      ],
+      "explanation": "Kulička -> hřídelky -> clonka -> čidlo [cite: 542-545]."
+    },
+    {
+      "id": "vst-021",
+      "type": "numeric",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Jaká je rychlost snímání optické myši (horní hranice v obrazech za sekundu)?",
+      "answer": 6000,
+      "tolerance": 500,
+      "unit": "obrazů/s",
+      "explanation": "Rychlost je 1000 až 6000 snímků za sekundu[cite: 555]."
+    },
+    {
+      "id": "vst-022",
+      "type": "numeric",
+      "topic": "klavesnice",
+      "difficulty": 3,
+      "question": "Jaká je hodnota přičtená ke kódu klávesy při jejím uvolnění?",
+      "answer": 128,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Při uvolnění je kód zvětšen o 128[cite: 508]."
+    },
+    {
+      "id": "vst-023",
+      "type": "gap",
+      "topic": "mysi",
+      "difficulty": 2,
+      "text": "Kuličková myš rozpoznává směr pomocí {{0}} kódu.",
+      "blanks": [
+        { "accept": ["Grayova", "Grayova", "Gray"] }
+      ],
+      "explanation": "Grayův kód zajišťuje správnou detekci pohybu[cite: 546]."
+    },
+    {
+      "id": "vst-024",
+      "type": "gap",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "text": "Řídící obvod klávesnice vysílá kód stlačených kláves ve formátu {{0}} kódu.",
+      "blanks": [
+        { "accept": ["SCAN"] }
+      ],
+      "explanation": "Informace se vysílají ve SCAN kódu[cite: 492]."
+    },
+    {
+      "id": "vst-025",
+      "type": "gap",
+      "topic": "tablety-pera",
+      "difficulty": 3,
+      "text": "Snímače na podložce tabletu zjišťují polohu hrotu pera pomocí {{0}} rezonance.",
+      "blanks": [
+        { "accept": ["elektromagnetické", "elektromagneticke"] }
+      ],
+      "explanation": "Využívá se elektromagnetická rezonance[cite: 522, 527]."
+    },
+    {
+      "id": "vst-026",
+      "type": "categorize",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Rozřaďte vlastnosti podle typu klávesnice.",
+      "categories": [
+        "Membránová",
+        "Mechanická"
+      ],
+      "items": [
+        { "text": "Gumová báň", "category": "Membránová" },
+        { "text": "Pružina a svorka", "category": "Mechanická" },
+        { "text": "Nízká cena", "category": "Membránová" },
+        { "text": "Dlouhá životnost", "category": "Mechanická" }
+      ],
+      "explanation": "Membránové jsou levné a využívají báně, mechanické jsou odolné a využívají pružiny [cite: 499-505]."
+    },
+    {
+      "id": "vst-027",
+      "type": "single",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Proč má laserová myš vyšší přesnost než optická?",
+      "options": [
+        { "text": "Používá laserový senzor místo LED", "correct": true },
+        { "text": "Má větší kuličku", "correct": false },
+        { "text": "Připojuje se pouze k USB", "correct": false },
+        { "text": "Má mechanické spínače", "correct": false }
+      ],
+      "explanation": "Laserový paprsek má lepší vlastnosti pro snímání povrchu[cite: 558, 561]."
+    },
+    {
+      "id": "vst-028",
+      "type": "single",
+      "topic": "tablety-pera",
+      "difficulty": 2,
+      "question": "Co definuje světelné pero?",
+      "options": [
+        { "text": "Fotočlánek reagující na obrazovku", "correct": true },
+        { "text": "Bezdrátový přenos rádiových vln", "correct": false },
+        { "text": "Kuličkový mechanismus", "correct": false },
+        { "text": "Dotykový displej", "correct": false }
+      ],
+      "explanation": "Světelné pero používá fotočlánek pro snímání polohy na monitoru[cite: 533]."
+    },
+    {
+      "id": "vst-029",
+      "type": "truefalse",
+      "topic": "mysi",
+      "difficulty": 2,
+      "statement": "Optická myš může mít problém na lesklém povrchu.",
+      "answer": true,
+      "explanation": "Lesklý povrch neodráží světlo z LED ideálně, což ztěžuje snímání[cite: 556]."
+    },
+    {
+      "id": "vst-030",
+      "type": "single",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Na jakých adresách jsou ukládány speciální funkce (NumLock atd.)?",
+      "options": [
+        { "text": "0417H a 0418H", "correct": true },
+        { "text": "FF00H a FF01H", "correct": false },
+        { "text": "0000H a 0001H", "correct": false },
+        { "text": "Nejsou ukládány", "correct": false }
+      ],
+      "explanation": "Speciální funkce se zapisují na adresy 0417H a 0418H[cite: 512]."
+    },
+    {
+      "id": "vst-031",
+      "type": "passage",
+      "topic": "mysi",
+      "difficulty": 3,
+      "passage": "Optická myš pracuje na principu snímání povrchu pod myší. V myši je umístěn optický snímač, který detekuje pohyb pomocí světla odraženého od povrchu, po kterém se myš pohybuje. Pro osvětlení podkladu se využívá červená LED, osvětlený povrch je snímán kamerou s nízkým rozlišením. Mikroprocesor v myši vyhodnocuje posunutí obrazu a výslednou informaci předává do PC.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Optická myš snímá povrch pomocí kamery s vysokým rozlišením.",
+          "answer": false,
+          "explanation": "Používá se kamera s nízkým rozlišením[cite: 553]."
+        },
+        {
+          "type": "single",
+          "question": "Jaký světelný zdroj využívá optická myš pro osvětlení podkladu?",
+          "options": [
+            { "text": "Červená LED", "correct": true },
+            { "text": "Zelený laser", "correct": false },
+            { "text": "Bílá zářivka", "correct": false }
+          ],
+          "explanation": "Využívá se červená LED[cite: 553]."
+        }
+      ]
+    },
+    {
+      "id": "vst-032",
+      "type": "numeric",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Jaký kód má klávesa ESC?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "číslo",
+      "explanation": "ESC má číslo 1[cite: 493]."
+    },
+    {
+      "id": "vst-033",
+      "type": "single",
+      "topic": "klavesnice",
+      "difficulty": 2,
+      "question": "Co se děje, když řadič klávesnice detekuje delší stisk?",
+      "options": [
+        { "text": "Automaticky generuje signály stlačené klávesy", "correct": true },
+        { "text": "Okamžitě vypne klávesnici", "correct": false },
+        { "text": "Pošle kód pro výmaz", "correct": false },
+        { "text": "Ignoruje stisk", "correct": false }
+      ],
+      "explanation": "Při delším stisku řadič automaticky opakuje signál[cite: 510]."
+    },
+    {
+      "id": "vst-034",
+      "type": "truefalse",
+      "topic": "mysi",
+      "difficulty": 1,
+      "statement": "Myš slouží k ovládání GUI (grafického uživatelského rozhraní).",
+      "answer": true,
+      "explanation": "Ano, myš zjednodušuje ovládání GUI[cite: 537]."
+    },
+    {
+      "id": "vst-035",
+      "type": "single",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Jak se v minulosti myš k počítači připojovala?",
+      "options": [
+        { "text": "Sériovým portem (RS-232)", "correct": true },
+        { "text": "Bezdrátově pomocí satelitu", "correct": false },
+        { "text": "Přímo k základní desce přes slot PCI", "correct": false },
+        { "text": "Optickým kabelem", "correct": false }
+      ],
+      "explanation": "Zpočátku se používal sériový port RS-232[cite: 563]."
+    },
+    {
+      "id": "vst-036",
+      "type": "multiple",
+      "topic": "tablety-pera",
+      "difficulty": 2,
+      "question": "K čemu se používají tablety?",
+      "options": [
+        { "text": "Grafika", "correct": true },
+        { "text": "Kreslení", "correct": true },
+        { "text": "Digitální podpis", "correct": true },
+        { "text": "Tisk dokumentů", "correct": false }
+      ],
+      "explanation": "Hlavní využití je grafika a kreslení[cite: 529]."
+    },
+    {
+      "id": "vst-037",
+      "type": "matching",
+      "topic": "mysi",
+      "difficulty": 2,
+      "question": "Přiřaďte části kuličkové myši k popisu.",
+      "pairs": [
+        { "left": "Kulička", "right": "Roztáčí se pohybem" },
+        { "left": "Hřídelky", "right": "Snímají pohyb kuličky" },
+        { "left": "Optoelektronické čidlo", "right": "Mění paprsek na impulzy" }
+      ],
+      "explanation": "Mechanika přenosu pohybu je popsaná v [cite: 542-545]."
+    },
+    {
+      "id": "vst-038",
+      "type": "gap",
+      "topic": "klavesnice",
+      "difficulty": 3,
+      "text": "Mechanické klávesnice se vyznačují charakteristickým {{0}} při stisku.",
+      "blanks": [
+        { "accept": ["klapnutím"] }
+      ],
+      "explanation": "Charakteristické klapnutí je dáno mechanismem klávesy[cite: 503]."
+    },
+    {
+      "id": "vst-039",
+      "type": "truefalse",
+      "topic": "tablety-pera",
+      "difficulty": 3,
+      "statement": "Hrot pera u tabletu vytváří své vlastní magnetické pole.",
+      "answer": true,
+      "explanation": "Ano, pero vytváří magnetické pole, které interaguje se snímači podložky[cite: 526]."
+    },
+    {
+      "id": "vst-040",
+      "type": "single",
+      "topic": "obecne-vstupy",
+      "difficulty": 1,
+      "question": "Které z následujících je vstupní zařízení?",
+      "options": [
+        { "text": "Skener", "correct": true },
+        { "text": "Monitor", "correct": false },
+        { "text": "Tiskárna", "correct": false },
+        { "text": "Reproduktor", "correct": false }
+      ],
+      "explanation": "Skener je vstupní zařízení pro záznam dat do PC[cite: 488]."
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "subject": "subnetting",
+  "name": "14. Vytváření podsítí v IPv4",
+  "topics": [
+    { "id": "teorie-subnettingu", "name": "Princip a masky" },
+    { "id": "vypocty-flsm", "name": "FLSM (Fixní masky)" },
+    { "id": "vypocty-vlsm", "name": "VLSM (Variabilní masky)" },
+    { "id": "masky-prefixy", "name": "Masky a prefix" }
+
+  ],
+  "questions": [
+    {
+      "id": "sub-001",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 1,
+      "question": "Co je hlavním účelem subnettingu?",
+      "options": [
+        { "text": "Lepší využití přidělených adresních prostorů", "correct": true },
+        { "text": "Zrychlení procesoru routeru", "correct": false },
+        { "text": "Zvětšení celkového počtu IPv4 adres v internetu", "correct": false }
+      ],
+      "explanation": "Subnetting slouží k dělení sítě na menší podsítě pro efektivnější využití adres."
+    },
+    {
+      "id": "sub-002",
+      "type": "truefalse",
+      "topic": "teorie-subnettingu",
+      "statement": "Maska sítě má vždy jiný tvar a velikost než IP adresa.",
+      "answer": false,
+      "explanation": "Maska má stejný tvar i velikost jako IP adresa (32 bitů)."
+    },
+    {
+      "id": "sub-003",
+      "type": "categorize",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Roztřiďte pojmy podle toho, zda se týkají adresování sítě nebo stanice.",
+      "categories": ["Adresa sítě", "Adresa stanice"],
+      "items": [
+        { "text": "Označuje celou podsíť", "category": "Adresa sítě" },
+        { "text": "Nelze přidělit síťovému rozhraní", "category": "Adresa sítě" },
+        { "text": "Lze přidělit síťové kartě", "category": "Adresa stanice" },
+        { "text": "Broadcast adresa (všesměrová)", "category": "Adresa sítě" }
+      ],
+      "explanation": "Síťová adresa a broadcast jsou rezervované a nelze je přidělit stanicím."
+    },
+    {
+      "id": "sub-004",
+      "type": "gap",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "text": "Adresa 192.168.1.13 s maskou 255.255.255.0 má prefix {{0}}, což znamená, že prvních {{1}} bitů je neproměnných.",
+      "blanks": [
+        { "accept": ["/24"] },
+        { "accept": ["24"] }
+      ],
+      "explanation": "255.255.255.0 odpovídá 24 jedničkám, tedy prefixu /24."
+    },
+    {
+      "id": "sub-005",
+      "type": "multiple",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Jaké jsou hlavní charakteristiky metody FLSM?",
+      "options": [
+        { "text": "Všechny podsítě mají stejnou velikost.", "correct": true },
+        { "text": "Adresní prostor je rozdělen na stejně velké bloky.", "correct": true },
+        { "text": "Je jednodušší na návrh než VLSM.", "correct": true },
+        { "text": "Nedochází k žádnému plýtvání adresami.", "correct": false }
+      ],
+      "explanation": "FLSM je tradiční a jednoduchá metoda, ale způsobuje plýtvání u menších podsítí."
+    },
+    {
+      "id": "sub-006",
+      "type": "numeric",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Kolik použitelných adres získáme v podsíti s maskou /26?",
+      "answer": 62,
+      "tolerance": 0,
+      "unit": "adres",
+      "explanation": "26 bitů síť -> 6 bitů pro hosty. 2^6=64, minus 2 (síť a broadcast) = 62."
+    },
+    {
+      "id": "sub-007",
+      "type": "ordering",
+      "topic": "vypocty-vlsm",
+      "difficulty": 3,
+      "question": "Seřaďte postup při návrhu VLSM (od nejdůležitějšího kroku).",
+      "items": [
+        "Určení požadavků na počet PC v každé podsíti.",
+        "Zaokrouhlení počtů na nejbližší mocninu dvou.",
+        "Seřazení požadavků od největšího po nejmenší.",
+        "Přidělení adresních bloků z této posloupnosti."
+      ],
+      "explanation": "Požadavky se řadí od největších po nejmenší, aby síť byla dělitelná bez zbytku."
+    },
+    {
+      "id": "sub-008",
+      "type": "passage",
+      "topic": "vypocty-vlsm",
+      "difficulty": 3,
+      "passage": "Při VLSM dělíme síť 192.168.1.0/24 na různé velikosti. Pokud potřebujeme podsítě pro 110, 50, 26 a 5 PC, musíme nejprve zaokrouhlit požadavky. Pro 5 PC potřebujeme 8 adres (prefix /29), pro 26 PC potřebujeme 32 adres (prefix /27), pro 50 PC potřebujeme 64 adres (prefix /26) a pro 110 PC potřebujeme 128 adres (prefix /25).",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Proč pro 5 PC nestačí blok o 4 adresách?",
+          "options": [
+            { "text": "Protože 2 adresy jsou rezervované pro síť a broadcast.", "correct": true },
+            { "text": "Protože je to příliš málo pro DHCP.", "correct": false },
+            { "text": "Protože 4 adresy nejsou mocnina dvou.", "correct": false }
+          ],
+          "explanation": "Počet adres musí zahrnovat i síťovou a broadcast adresu, 5+2=7 -> nejbližší mocnina 2 je 8."
+        },
+        {
+          "type": "truefalse",
+          "statement": "VLSM je efektivnější než FLSM, protože minimalizuje plýtvání adresami.",
+          "answer": true,
+          "explanation": "VLSM umožňuje využít masky různých velikostí a zamezuje plýtvání."
+        }
+      ]
+    },
+    {
+      "id": "sub-009",
+      "type": "matching",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Přiřaďte prefix k počtu adres v podsíti.",
+      "pairs": [
+        { "left": "/30", "right": "4" },
+        { "left": "/29", "right": "8" },
+        { "left": "/28", "right": "16" },
+        { "left": "/27", "right": "32" }
+      ],
+      "explanation": "2^(32-prefix) = počet adres."
+    },
+    {
+      "id": "sub-010",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Co označuje první adresa v podsíti?",
+      "options": [
+        { "text": "Adresu sítě", "correct": true },
+        { "text": "Broadcast adresu", "correct": false },
+        { "text": "Adresu prvního routeru", "correct": false }
+      ],
+      "explanation": "Nejnižší adresa je síťová adresa, označuje celou podsíť."
+    },
+    {
+      "id": "sub-011",
+      "type": "multiple",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Proč jsou adresy sítě a broadcast nepoužitelné pro stanice?",
+      "options": [
+        { "text": "Slouží k identifikaci sítě jako celku.", "correct": true },
+        { "text": "Broadcast slouží k oslovení všech stanic v podsíti.", "correct": true },
+        { "text": "Jsou to technické adresy nutné pro správu směrování.", "correct": true }
+      ],
+      "explanation": "Síťová adresa a broadcast jsou rezervované a nelze je použít pro stanice."
+    },
+    {
+      "id": "sub-012",
+      "type": "truefalse",
+      "topic": "vypocty-flsm",
+      "statement": "Při rozdělení sítě na 4 podsítě pomocí FLSM bude mít každá podsíť jinou masku.",
+      "answer": false,
+      "explanation": "Metoda FLSM (Fixed-Length) zajišťuje, že všechny podsítě mají stejnou masku."
+    },
+    {
+      "id": "sub-013",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 1,
+      "question": "Co je to maska sítě?",
+      "options": [
+        { "text": "32bitové číslo určující hranici sítě a hostitele", "correct": true },
+        { "text": "Identifikátor výrobce síťové karty", "correct": false },
+        { "text": "Nastavení jména počítače v síti", "correct": false }
+      ],
+      "explanation": "Maska má stejný tvar jako IP adresa a určuje počet bitů pro síť a hostitele."
+    },
+    {
+      "id": "sub-014",
+      "type": "numeric",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Kolik bitů pro hostitele zůstane u masky /28?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "32 - 28 = 4 bity pro hostitele."
+    },
+    {
+      "id": "sub-015",
+      "type": "multiple",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Jaké jsou základní výhody používání masek sítě?",
+      "options": [
+        { "text": "Možnost rozdělit síť na podsítě.", "correct": true },
+        { "text": "Určení rozsahu IP adres v dané podsíti.", "correct": true },
+        { "text": "Efektivnější správa adresního prostoru.", "correct": true }
+      ],
+      "explanation": "Masky umožňují subnetting, určování rozsahů a efektivní správu adres."
+    },
+    {
+      "id": "sub-016",
+      "type": "truefalse",
+      "topic": "teorie-subnettingu",
+      "statement": "Subnetting se používá hlavně proto, aby firma mohla plýtvat přidělenými adresami.",
+      "answer": false,
+      "explanation": "Subnetting se používá zejména kvůli lepšímu využití přidělených adresních prostor."
+    },
+    {
+      "id": "sub-017",
+      "type": "single",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Co se stane se dvěma adresami (síťová a broadcast) při každém rozdělení sítě na podsítě?",
+      "options": [
+        { "text": "Musíme je vždy odečíst od celkového počtu adres pro stanice.", "correct": true },
+        { "text": "Můžeme je bez problémů použít pro koncové PC.", "correct": false },
+        { "text": "Ignorujeme je a použijeme je jako adresy pro routery.", "correct": false }
+      ],
+      "explanation": "Při vytváření podsítí musíme vždy 2 adresy (síťovou a broadcast) odečíst."
+    },
+    {
+      "id": "sub-018",
+      "type": "numeric",
+      "topic": "vypocty-vlsm",
+      "difficulty": 3,
+      "question": "Kolik adres potřebujeme pro 26 PC v podsíti (včetně síťové a broadcast)?",
+      "answer": 32,
+      "tolerance": 0,
+      "unit": "adres",
+      "explanation": "26 + 2 = 28 -> nejbližší mocnina 2 je 32."
+    },
+    {
+      "id": "sub-019",
+      "type": "multiple",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Co vše můžeme určit pomocí masky?",
+      "options": [
+        { "text": "Adresu sítě.", "correct": true },
+        { "text": "Adresu broadcastu.", "correct": true },
+        { "text": "Rozsah použitelných adres.", "correct": true }
+      ],
+      "explanation": "Maska určuje síťovou část, broadcast i rozsah adres."
+    },
+    {
+      "id": "sub-020",
+      "type": "truefalse",
+      "topic": "vypocty-flsm",
+      "statement": "Metoda FLSM je vhodná tam, kde potřebujeme maximální úsporu adres v různých podsítích.",
+      "answer": false,
+      "explanation": "Pro maximální úsporu a efektivitu je určena metoda VLSM, FLSM naopak plýtvá."
+    },
+    {
+      "id": "sub-021",
+      "type": "gap",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "text": "Pokud máme síť 192.168.1.0/24 a potřebujeme 2 podsítě po 128 adresách, použijeme masku {{0}}, přičemž první podsíť bude 192.168.1.0/25 a druhá {{1}}.",
+      "blanks": [
+        { "accept": ["255.255.255.128", "/25"] },
+        { "accept": ["192.168.1.128/25"] }
+      ],
+      "explanation": "Rozdělením na 2 podsítě zvýšíme prefix z 24 na 25."
+    },
+    {
+      "id": "sub-022",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 1,
+      "question": "Jaký je formát masky sítě?",
+      "options": [
+        { "text": "Stejný jako IPv4 adresa (32 bitů)", "correct": true },
+        { "text": "Jako MAC adresa", "correct": false },
+        { "text": "Pouze 8bitové číslo", "correct": false }
+      ],
+      "explanation": "Maska má stejný tvar i velikost jako IPv4 adresa."
+    },
+    {
+      "id": "sub-023",
+      "type": "truefalse",
+      "topic": "teorie-subnettingu",
+      "statement": "Adresa 192.168.1.0/25 je broadcastovou adresou pro podsíť 192.168.1.0/26.",
+      "answer": false,
+      "explanation": "Adresa 192.168.1.0/25 je síťová adresa, nikoliv broadcast."
+    },
+    {
+      "id": "sub-024",
+      "type": "numeric",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Kolik podsítí o 64 adresách vznikne z jedné sítě /24?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "podsítí",
+      "explanation": "256 / 64 = 4."
+    },
+    {
+      "id": "sub-025",
+      "type": "multiple",
+      "topic": "vypocty-vlsm",
+      "difficulty": 3,
+      "question": "Jaké jsou výhody VLSM?",
+      "options": [
+        { "text": "Maximální efektivita využití adres.", "correct": true },
+        { "text": "Možnost přizpůsobit velikost podsítě počtu PC.", "correct": true },
+        { "text": "Snížení plýtvání adresami.", "correct": true }
+      ],
+      "explanation": "VLSM umožňuje různou velikost podsítí a šetří adresní prostor."
+    },
+    {
+      "id": "sub-026",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Co se děje při rozdělení sítě na podsítě s adresami?",
+      "options": [
+        { "text": "Vždy vznikne jedna síťová adresa a jeden broadcast.", "correct": true },
+        { "text": "Počet adres pro zařízení zůstává stejný.", "correct": false },
+        { "text": "Počet adres pro zařízení se zvýší.", "correct": false }
+      ],
+      "explanation": "Při každém subnettingu vzniknou rezervované adresy (síť a broadcast), které nelze použít pro stanice."
+    },
+    {
+      "id": "sub-027",
+      "type": "matching",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "question": "Přiřaďte prefix k počtu bitů sítě.",
+      "pairs": [
+        { "left": "/24", "right": "24" },
+        { "left": "/25", "right": "25" },
+        { "left": "/26", "right": "26" },
+        { "left": "/27", "right": "27" }
+      ],
+      "explanation": "Prefix přímo udává počet jedničkových bitů v masce."
+    },
+    {
+      "id": "sub-028",
+      "type": "truefalse",
+      "topic": "vypocty-flsm",
+      "statement": "U metody FLSM neřešíme pořadí podsítí podle velikosti.",
+      "answer": true,
+      "explanation": "Protože jsou všechny podsítě stejně velké, pořadí není důležité."
+    },
+    {
+      "id": "sub-029",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 1,
+      "question": "Co určuje maska sítě v binárním tvaru?",
+      "options": [
+        { "text": "Počet neproměnných jedniček určujících síť", "correct": true },
+        { "text": "Počet nul určujících síť", "correct": false },
+        { "text": "Počet všech bitů v adrese", "correct": false }
+      ],
+      "explanation": "Maska určuje počet jedniček (neproměnných bitů), které tvoří adresu sítě."
+    },
+    {
+      "id": "sub-030",
+      "type": "numeric",
+      "topic": "vypocty-flsm",
+      "difficulty": 3,
+      "question": "Kolik adres potřebujeme pro 110 zařízení v podsíti (včetně sítě a broadcastu)?",
+      "answer": 128,
+      "tolerance": 0,
+      "unit": "adres",
+      "explanation": "110+2=112, nejbližší mocnina 2 je 128."
+    },
+    {
+      "id": "sub-031",
+      "type": "multiple",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Které parametry jsou typické pro síťové podsítě?",
+      "options": [
+        { "text": "Mají svou síťovou adresu.", "correct": true },
+        { "text": "Mají vlastní broadcast adresu.", "correct": true },
+        { "text": "Mohou mít odlišnou masku.", "correct": true }
+      ],
+      "explanation": "Podsíť je autonomní celek s vlastní adresou sítě, broadcastem a maskou."
+    },
+    {
+      "id": "sub-032",
+      "type": "truefalse",
+      "topic": "vypocty-vlsm",
+      "statement": "VLSM umožňuje v rámci jedné velké sítě definovat podsítě o různých velikostech.",
+      "answer": true,
+      "explanation": "To je hlavní výhoda VLSM oproti FLSM."
+    },
+    {
+      "id": "sub-033",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Proč je maska sítě nutná pro správné fungování routeru?",
+      "options": [
+        { "text": "Router podle ní pozná, zda je cíl v lokální nebo vzdálené síti.", "correct": true },
+        { "text": "Maska zrychluje přenos dat mezi routery.", "correct": false },
+        { "text": "Maska slouží pouze pro zobrazení v CLI.", "correct": false }
+      ],
+      "explanation": "Maska je klíčová pro rozhodování routeru, kam paket poslat."
+    },
+    {
+      "id": "sub-034",
+      "type": "numeric",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Pokud máme masku 255.255.255.252, kolik použitelných adres pro stanice získáme?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "adres",
+      "explanation": "Maska /30, 2 bity pro hosty. 2^2=4, minus 2 = 2 použitelné."
+    },
+    {
+      "id": "sub-035",
+      "type": "passage",
+      "topic": "vypocty-vlsm",
+      "difficulty": 3,
+      "passage": "Při VLSM dělíme síť 192.168.1.0/24 na různé velikosti. Pokud potřebujeme podsítě pro 110, 50, 26 a 5 PC, musíme nejprve zaokrouhlit požadavky. Pro 5 PC potřebujeme 8 adres (prefix /29), pro 26 PC potřebujeme 32 adres (prefix /27), pro 50 PC potřebujeme 64 adres (prefix /26) a pro 110 PC potřebujeme 128 adres (prefix /25).",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Proč musíme při VLSM řadit podsítě od největší po nejmenší?",
+          "options": [
+            { "text": "Aby byla adresa sítě dělitelná počtem adres beze zbytku.", "correct": true },
+            { "text": "Aby se podsítě snadněji pamatovaly.", "correct": false },
+            { "text": "Aby router pracoval rychleji.", "correct": false }
+          ],
+          "explanation": "Adresní prostory se řadí podle velikosti, jelikož adresa sítě musí být dělitelná počtem adres beze zbytku."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Podsíť pro 5 zařízení bude mít velikost bloku 8 IP adres.",
+          "answer": true,
+          "explanation": "5 zařízení + 2 rezervované (síť/broadcast) = 7, nejbližší mocnina 2 je 8."
+        }
+      ]
+    },
+    {
+      "id": "sub-036",
+      "type": "gap",
+      "topic": "masky-prefixy",
+      "difficulty": 2,
+      "text": "Maska {{0}} (v binárním vyjádření {{1}}) je základní maskou pro sítě třídy C.",
+      "blanks": [
+        { "accept": ["255.255.255.0"] },
+        { "accept": ["11111111.11111111.11111111.00000000"] }
+      ],
+      "explanation": "255.255.255.0 je 24 jedniček a 8 nul."
+    },
+    {
+      "id": "sub-037",
+      "type": "single",
+      "topic": "teorie-subnettingu",
+      "difficulty": 2,
+      "question": "Co znamená zápis prefixu /32?",
+      "options": [
+        { "text": "Maska sítě pro jedno konkrétní zařízení (hosta)", "correct": true },
+        { "text": "Celá síť typu A", "correct": false },
+        { "text": "Broadcast sítě", "correct": false }
+      ],
+      "explanation": "/32 znamená, že celá adresa je síťová, tedy se jedná o jedno konkrétní zařízení."
+    },
+    {
+      "id": "sub-038",
+      "type": "multiple",
+      "topic": "teorie-subnettingu",
+      "difficulty": 1,
+      "question": "Proč je subnetting důležitý?",
+      "options": [
+        { "text": "Optimalizace využití IP adres.", "correct": true },
+        { "text": "Logické rozdělení sítě.", "correct": true },
+        { "text": "Zvýšení bezpečnosti.", "correct": true }
+      ],
+      "explanation": "Subnetting pomáhá optimalizovat adresy, logicky dělit síť a zvýšit bezpečnost."
+    },
+    {
+      "id": "sub-039",
+      "type": "numeric",
+      "topic": "vypocty-flsm",
+      "difficulty": 2,
+      "question": "Kolik podsítí o 128 adresách vznikne z jedné sítě /24?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "podsítí",
+      "explanation": "256 / 128 = 2 podsítě."
+    },
+    {
+      "id": "sub-040",
+      "type": "truefalse",
+      "topic": "masky-prefixy",
+      "statement": "Zápis pomocí prefixu (např. /24) je mnohem přehlednější než zápis celé masky (např. 255.255.255.0).",
+      "answer": true,
+      "explanation": "Prefixy jsou standardizovaný a zjednodušený způsob zápisu masek."
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "subject": "vystupni-zobrazovaci-zarizeni",
+  "name": "21. Výstupní zobrazovací zařízení (Komplexní)",
+  "topics": [
+    { "id": "obecne-parametry", "name": "Obecné parametry a vlastnosti" },
+    { "id": "crt-plasma", "name": "CRT a Plazmové monitory" },
+    { "id": "lcd-oled", "name": "LCD a OLED technologie" },
+    { "id": "projektory-principy", "name": "Projektory (DLP, LED, LCD)" }
+  ],
+  "questions": [
+    {
+      "id": "disp-001",
+      "type": "single",
+      "topic": "obecne-parametry",
+      "difficulty": 1,
+      "question": "Jak se definuje úhlopříčka monitoru?",
+      "options": [
+        { "text": "Vzdálenost dvou protilehlých bodů", "correct": true },
+        { "text": "Poměr stran šířky k výšce", "correct": false },
+        { "text": "Fyzická šířka rámu monitoru", "correct": false },
+        { "text": "Vzdálenost od pozorovatele", "correct": false }
+      ],
+      "explanation": "Úhlopříčka je vzdálenost dvou protilehlých bodů obrazovky[cite: 299]."
+    },
+    {
+      "id": "disp-002",
+      "type": "single",
+      "topic": "obecne-parametry",
+      "difficulty": 2,
+      "question": "Co znamená parametr 'rozteč bodů' u LCD monitorů?",
+      "options": [
+        { "text": "Vzdálenost mezi jednotlivými body (pixely)", "correct": true },
+        { "text": "Doba odezvy pixelu na změnu barvy", "correct": false },
+        { "text": "Maximální jas monitoru", "correct": false },
+        { "text": "Šířka rámečku kolem displeje", "correct": false }
+      ],
+      "explanation": "Rozteč bodů určuje vzdálenost mezi jednotlivými pixely[cite: 304]."
+    },
+    {
+      "id": "disp-003",
+      "type": "single",
+      "topic": "crt-plasma",
+      "difficulty": 2,
+      "question": "Z čeho se skládá obrazovka CRT monitoru?",
+      "options": [
+        { "text": "Z vakuové baňky", "correct": true },
+        { "text": "Z vrstvy organických látek", "correct": false },
+        { "text": "Z tekutých krystalů", "correct": false },
+        { "text": "Z plazmových buněk", "correct": false }
+      ],
+      "explanation": "CRT monitory využívají vakuovou baňku[cite: 313]."
+    },
+    {
+      "id": "disp-004",
+      "type": "single",
+      "topic": "crt-plasma",
+      "difficulty": 3,
+      "question": "Jaké typy uspořádání masky se rozlišují u CRT monitorů?",
+      "options": [
+        { "text": "Delta, In-line, Trinitron", "correct": true },
+        { "text": "Aktivní, Pasivní, Hybridní", "correct": false },
+        { "text": "OLED, AMOLED, PMOLED", "correct": false },
+        { "text": "VGA, DVI, HDMI", "correct": false }
+      ],
+      "explanation": "CRT využívá masky typu delta, in-line nebo trinitron [cite: 320-323]."
+    },
+    {
+      "id": "disp-005",
+      "type": "single",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "question": "Na jakém fyzikálním principu pracuje LCD displej?",
+      "options": [
+        { "text": "Propouštění a blokování světla pomocí tekutých krystalů", "correct": true },
+        { "text": "Vlastní emise světla organickými látkami", "correct": false },
+        { "text": "Srážky elektronů v plynu", "correct": false },
+        { "text": "Odrážením světla mikrozrcadly", "correct": false }
+      ],
+      "explanation": "LCD využívá tekuté krystaly k regulaci průchodu světla z podsvícení[cite: 337, 343]."
+    },
+    {
+      "id": "disp-006",
+      "type": "single",
+      "topic": "lcd-oled",
+      "difficulty": 3,
+      "question": "V čem spočívá hlavní rozdíl OLED technologie oproti LCD?",
+      "options": [
+        { "text": "OLED nepotřebuje podsvícení, organické látky emitují světlo samy", "correct": true },
+        { "text": "OLED využívá pouze kapalné krystaly", "correct": false },
+        { "text": "OLED je vždy pasivní matice", "correct": false },
+        { "text": "OLED je výrazně těžší než LCD", "correct": false }
+      ],
+      "explanation": "OLED je samosvítivá technologie bez nutnosti podsvícení[cite: 361]."
+    },
+    {
+      "id": "disp-007",
+      "type": "single",
+      "topic": "projektory-principy",
+      "difficulty": 2,
+      "question": "Co tvoří srdce DLP projektoru?",
+      "options": [
+        { "text": "Čip s mikrozrcadly (DMD)", "correct": true },
+        { "text": "Dichroická zrcadla a LCD panely", "correct": false },
+        { "text": "Vrstva plazmy", "correct": false },
+        { "text": "Organické diody", "correct": false }
+      ],
+      "explanation": "DLP projektory pracují na principu čipu s tisíci mikrozrcadly [cite: 375-376]."
+    },
+    {
+      "id": "disp-008",
+      "type": "single",
+      "topic": "projektory-principy",
+      "difficulty": 3,
+      "question": "Jaký je hlavní rozdíl v konstrukci LCD projektoru oproti DLP?",
+      "options": [
+        { "text": "Využívá dichroická zrcadla a LCD panely", "correct": true },
+        { "text": "Využívá rotující barevný kotouč", "correct": false },
+        { "text": "Využívá statická zrcátka", "correct": false },
+        { "text": "Jeho srdcem je pouze jedna LED dioda", "correct": false }
+      ],
+      "explanation": "LCD projektory pracují s dichroickými zrcadly a samostatnými LCD panely pro barvy[cite: 387]."
+    },
+    {
+      "id": "disp-009",
+      "type": "multiple",
+      "topic": "obecne-parametry",
+      "difficulty": 1,
+      "question": "Které parametry jsou důležité pro monitory?",
+      "options": [
+        { "text": "Úhlopříčka", "correct": true },
+        { "text": "Rozlišení", "correct": true },
+        { "text": "Obnovovací frekvence", "correct": true },
+        { "text": "Počet paměťových slotů", "correct": false }
+      ],
+      "explanation": "Úhlopříčka, rozlišení a frekvence patří mezi základní parametry [cite: 299-301]."
+    },
+    {
+      "id": "disp-010",
+      "type": "multiple",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "question": "Jaké jsou nevýhody LCD monitorů?",
+      "options": [
+        { "text": "Omezené pozorovací úhly", "correct": true },
+        { "text": "Možnost výskytu mrtvých pixelů", "correct": true },
+        { "text": "Malý kontrastní poměr", "correct": true },
+        { "text": "Vysoká hmotnost", "correct": false }
+      ],
+      "explanation": "LCD trpí omezenými úhly, mrtvými pixely a nižším kontrastem[cite: 354]."
+    },
+    {
+      "id": "disp-011",
+      "type": "multiple",
+      "topic": "projektory-principy",
+      "difficulty": 2,
+      "question": "Jaké vstupy mohou mít projektory?",
+      "options": [
+        { "text": "VGA", "correct": true },
+        { "text": "HDMI", "correct": true },
+        { "text": "DisplayPort", "correct": true },
+        { "text": "USB-C", "correct": true }
+      ],
+      "explanation": "Projektory využívají běžná rozhraní jako VGA, HDMI, DP a USB-C[cite: 371]."
+    },
+    {
+      "id": "disp-012",
+      "type": "multiple",
+      "topic": "crt-plasma",
+      "difficulty": 2,
+      "question": "Jaké jsou výhody plazmových monitorů?",
+      "options": [
+        { "text": "Vysoký kontrastní poměr", "correct": true },
+        { "text": "Vynikající pozorovací úhly", "correct": true },
+        { "text": "Dobré zobrazení černé barvy", "correct": true },
+        { "text": "Nízká spotřeba energie", "correct": false }
+      ],
+      "explanation": "Plazmy mají skvělý kontrast a barvy, ale vysokou spotřebu [cite: 333-334]."
+    },
+    {
+      "id": "disp-013",
+      "type": "truefalse",
+      "topic": "crt-plasma",
+      "difficulty": 2,
+      "statement": "CRT monitory jsou stále nejpoužívanější technologií pro přenosné notebooky.",
+      "answer": false,
+      "explanation": "CRT jsou stará technologie, jsou objemné a těžké[cite: 312, 325]."
+    },
+    {
+      "id": "disp-014",
+      "type": "truefalse",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "statement": "OLED monitory vyžadují podsvícení, aby mohly zobrazit barvy.",
+      "answer": false,
+      "explanation": "OLED jsou samosvítivé, podsvícení nepotřebují[cite: 361]."
+    },
+    {
+      "id": "disp-015",
+      "type": "truefalse",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "statement": "Aktivní matice LCD využívá tenkovrstvé tranzistory (TFT) k ovládání jasu.",
+      "answer": true,
+      "explanation": "Ano, aktivní matice pomocí tranzistorů umožňuje přesnou kontrolu napětí a jasu [cite: 349-352]."
+    },
+    {
+      "id": "disp-016",
+      "type": "truefalse",
+      "topic": "projektory-principy",
+      "difficulty": 3,
+      "statement": "LED projektory používají stejný čip jako DLP projektory, pouze mají jiný zdroj světla.",
+      "answer": true,
+      "explanation": "Ano, LED projektory jsou v podstatě DLP projektory s LED lampou[cite: 382]."
+    },
+    {
+      "id": "disp-017",
+      "type": "matching",
+      "topic": "obecne-parametry",
+      "difficulty": 1,
+      "question": "Přiřaďte parametr k jeho popisu.",
+      "pairs": [
+        { "left": "Úhlopříčka", "right": "Vzdálenost protilehlých bodů" },
+        { "left": "Doba odezvy", "right": "Čas změny barvy pixelu" },
+        { "left": "Rozlišení", "right": "Počet bodů šířka x výška" }
+      ],
+      "explanation": "Toto jsou základní parametry zobrazovačů [cite: 299-302]."
+    },
+    {
+      "id": "disp-018",
+      "type": "matching",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "question": "Přiřaďte typ LCD matice k popisu.",
+      "pairs": [
+        { "left": "Pasivní", "right": "Jednodušší, skleněné substráty" },
+        { "left": "Aktivní", "right": "Složitější, tenkovrstvé tranzistory" }
+      ],
+      "explanation": "Pasivní je jednodušší, aktivní používá tranzistory [cite: 345-352]."
+    },
+    {
+      "id": "disp-019",
+      "type": "matching",
+      "topic": "projektory-principy",
+      "difficulty": 2,
+      "question": "Přiřaďte typ projektoru k jeho klíčové technologii.",
+      "pairs": [
+        { "left": "DLP", "right": "DMD čip se zrcátky" },
+        { "left": "LCD", "right": "Dichroická zrcadla" },
+        { "left": "LED", "right": "LED diody místo lampy" }
+      ],
+      "explanation": "DLP používá zrcátka, LCD zrcadla pro dělení světla, LED diody[cite: 375, 382, 387]."
+    },
+    {
+      "id": "disp-020",
+      "type": "matching",
+      "topic": "crt-plasma",
+      "difficulty": 3,
+      "question": "Přiřaďte plyn používaný v plazmových buňkách.",
+      "pairs": [
+        { "left": "Neon", "right": "Vzácný plyn" },
+        { "left": "Xenon", "right": "Vzácný plyn" },
+        { "left": "Argon", "right": "Vzácný plyn" }
+      ],
+      "explanation": "Všechny tyto plyny se mohou používat v plazmových buňkách[cite: 332]."
+    },
+    {
+      "id": "disp-021",
+      "type": "ordering",
+      "topic": "projektory-principy",
+      "difficulty": 3,
+      "question": "Seřaďte cestu světla v DLP projektoru.",
+      "items": [
+        "Lampa vyrobí světlo",
+        "Průchod barevným kotoučem",
+        "Dopad na DMD čip",
+        "Pootočení zrcátek"
+      ],
+      "explanation": "Lampa -> Filtr -> Čočka -> Čip -> Zrcátka [cite: 377-380]."
+    },
+    {
+      "id": "disp-022",
+      "type": "ordering",
+      "topic": "crt-plasma",
+      "difficulty": 3,
+      "question": "Seřaďte kroky v plazmové buňce vedoucí ke světlu.",
+      "items": [
+        "Přivedení proudu na elektrody",
+        "Zahřátí plynu",
+        "Srážky elektronů",
+        "Uvolnění fotonu"
+      ],
+      "explanation": "Proud -> Teplo -> Srážky -> Foton [cite: 329-330]."
+    },
+    {
+      "id": "disp-023",
+      "type": "numeric",
+      "topic": "obecne-parametry",
+      "difficulty": 2,
+      "question": "Jaká je průměrná doba odezvy u LCD monitorů v milisekundách?",
+      "answer": 8,
+      "tolerance": 4,
+      "unit": "ms",
+      "explanation": "Typické hodnoty jsou např. 8 ms[cite: 303]."
+    },
+    {
+      "id": "disp-024",
+      "type": "numeric",
+      "topic": "obecne-parametry",
+      "difficulty": 2,
+      "question": "Jaká je minimální frekvence pro CRT monitory v Hz?",
+      "answer": 80,
+      "tolerance": 0,
+      "unit": "Hz",
+      "explanation": "CRT monitory vyžadují minimum 80 Hz[cite: 301]."
+    },
+    {
+      "id": "disp-025",
+      "type": "categorize",
+      "topic": "projektory-principy",
+      "difficulty": 2,
+      "question": "Rozřaďte projektory podle jejich srdce/technologie.",
+      "categories": [
+        "DLP",
+        "LCD"
+      ],
+      "items": [
+        { "text": "DMD čip", "category": "DLP" },
+        { "text": "Dichroická zrcadla", "category": "LCD" },
+        { "text": "Mikrozrcátka", "category": "DLP" },
+        { "text": "Tekuté krystaly", "category": "LCD" }
+      ],
+      "explanation": "DLP využívá zrcátka na čipu, LCD využívá zrcadla a krystaly[cite: 376, 387]."
+    },
+    {
+      "id": "disp-026",
+      "type": "gap",
+      "topic": "lcd-oled",
+      "difficulty": 3,
+      "text": "U OLED displejů se využívá {{0}} vrstva, ve které se spojují náboje a produkují světelné záření.",
+      "blanks": [
+        { "accept": ["vyzařovací", "vyzarovaci"] }
+      ],
+      "explanation": "Vyzařovací vrstva je klíčová pro produkci světla [cite: 364-365]."
+    },
+    {
+      "id": "disp-027",
+      "type": "single",
+      "topic": "obecne-parametry",
+      "difficulty": 2,
+      "question": "Co je to DVI vstup?",
+      "options": [
+        { "text": "Hybridní vstup (analogový i digitální)", "correct": true },
+        { "text": "Pouze analogový vstup", "correct": false },
+        { "text": "Pouze digitální pro zvuk", "correct": false },
+        { "text": "Vstup pro plazmové monitory", "correct": false }
+      ],
+      "explanation": "DVI je hybridní rozhraní kombinující analog a digitál[cite: 308]."
+    },
+    {
+      "id": "disp-028",
+      "type": "single",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "question": "Co tvoří pixel u barevných LCD?",
+      "options": [
+        { "text": "Tři subpixely (RGB)", "correct": true },
+        { "text": "Jedna bílá dioda", "correct": false },
+        { "text": "Čtyři barvy (CMYK)", "correct": false },
+        { "text": "Jedno zrcátko", "correct": false }
+      ],
+      "explanation": "Barevný pixel se skládá ze tří subpixelů RGB[cite: 356]."
+    },
+    {
+      "id": "disp-029",
+      "type": "truefalse",
+      "topic": "lcd-oled",
+      "difficulty": 3,
+      "statement": "U barevných LCD lze svítivost subpixelů kontrolovat nezávisle.",
+      "answer": true,
+      "explanation": "Ano, nezávislá kontrola subpixelů umožňuje tvorbu barev[cite: 357]."
+    },
+    {
+      "id": "disp-030",
+      "type": "single",
+      "topic": "projektory-principy",
+      "difficulty": 2,
+      "question": "Jaká je výhoda LED projektorů?",
+      "options": [
+        { "text": "Nižší spotřeba energie", "correct": true },
+        { "text": "Vyšší světelnost než u klasických lamp", "correct": false },
+        { "text": "Nejsou to DLP projektory", "correct": false },
+        { "text": "Větší rozměry", "correct": false }
+      ],
+      "explanation": "LED projektory mají nižší spotřebu oproti klasickým lampám[cite: 383]."
+    },
+    {
+      "id": "disp-031",
+      "type": "passage",
+      "topic": "lcd-oled",
+      "difficulty": 2,
+      "passage": "LCD (Liquid Crystal Display) pracuje na principu propouštění a blokování světla. Světlo je polarizováno svisle. Pokud není polarizační rovina krystaly otočena, světlo nemůže projít druhým filtrem. Při přivedení napětí se krystaly uspořádají a umožní stočení polarizační roviny a tím průchod světla.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Krystaly v LCD monitoru fungují jako ventily pro světlo.",
+          "answer": true,
+          "explanation": "Ano, jejich natočením se reguluje průchod světla [cite: 341-343]."
+        },
+        {
+          "type": "single",
+          "question": "Co se stane s polarizační rovinou při přivedení napětí?",
+          "options": [
+            { "text": "Stočí se", "correct": true },
+            { "text": "Zruší se", "correct": false },
+            { "text": "Zůstane nezměněna", "correct": false }
+          ],
+          "explanation": "Při napětí se krystaly uspořádají a stočí polarizační rovinu[cite: 342]."
+        }
+      ]
+    },
+    {
+      "id": "disp-032",
+      "type": "gap",
+      "topic": "obecne-parametry",
+      "difficulty": 2,
+      "text": "Digitální vstup {{0}} umožňuje přenos obrazu ve vysokém rozlišení a je zpětně kompatibilní s DVI.",
+      "blanks": [
+        { "accept": ["HDMI"] }
+      ],
+      "explanation": "HDMI je standardní digitální rozhraní[cite: 307]."
+    },
+    {
+      "id": "disp-033",
+      "type": "single",
+      "topic": "crt-plasma",
+      "difficulty": 3,
+      "question": "Který plyn NENÍ v textu uveden jako příklad plynu v plazmových buňkách?",
+      "options": [
+        { "text": "Kyslík", "correct": true },
+        { "text": "Neon", "correct": false },
+        { "text": "Xenon", "correct": false },
+        { "text": "Radon", "correct": false }
+      ],
+      "explanation": "Text uvádí neon, xenon, radon a argon[cite: 332]."
+    },
+    {
+      "id": "disp-034",
+      "type": "truefalse",
+      "topic": "lcd-oled",
+      "difficulty": 3,
+      "statement": "Technologie OLED je odnoží LED monitorů.",
+      "answer": true,
+      "explanation": "OLED (Organic Light-Emitting Diode) je typ LED monitoru[cite: 360]."
+    },
+    {
+      "id": "disp-035",
+      "type": "single",
+      "topic": "crt-plasma",
+      "difficulty": 2,
+      "question": "Co je to luminofor?",
+      "options": [
+        { "text": "Vrstva měnící elektrickou energii na světlo", "correct": true },
+        { "text": "Typ elektronového děla", "correct": false },
+        { "text": "Typ skla obrazovky", "correct": false },
+        { "text": "Plynová náplň plazmy", "correct": false }
+      ],
+      "explanation": "Luminofor mění el. energii na viditelné světlo [cite: 316-317]."
+    },
+    {
+      "id": "disp-036",
+      "type": "ordering",
+      "topic": "lcd-oled",
+      "difficulty": 3,
+      "question": "Jakou funkci má pasivní vs aktivní matice?",
+      "items": [
+        "Pasivní: jednoduché spojení řad a sloupců",
+        "Aktivní: použití tranzistorů pro každý bod"
+      ],
+      "explanation": "Pasivní je starší/jednodušší, aktivní s tranzistory (TFT) je pokročilejší [cite: 345-352]."
+    },
+    {
+      "id": "disp-037",
+      "type": "numeric",
+      "topic": "crt-plasma",
+      "difficulty": 2,
+      "question": "Kolik typů uspořádání masky CRT monitory mají?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "typy",
+      "explanation": "Delta, in-line, trinitron [cite: 320-323]."
+    },
+    {
+      "id": "disp-038",
+      "type": "gap",
+      "topic": "projektory-principy",
+      "difficulty": 3,
+      "text": "DLP projektor vytváří obraz pomocí tisíců {{0}} na čipu.",
+      "blanks": [
+        { "accept": ["zrcátek", "zrcatek"] }
+      ],
+      "explanation": "Zrcátko = pixel[cite: 376]."
+    },
+    {
+      "id": "disp-039",
+      "type": "truefalse",
+      "topic": "obecne-parametry",
+      "difficulty": 1,
+      "statement": "Rozlišení obrazovky je počet bodů šířka x výška.",
+      "answer": true,
+      "explanation": "Ano, je to standardní definice[cite: 300]."
+    },
+    {
+      "id": "disp-040",
+      "type": "single",
+      "topic": "projektory-principy",
+      "difficulty": 2,
+      "question": "Jakou nevýhodu mají LCD projektory?",
+      "options": [
+        { "text": "Stárnutí a vypalování krystalů", "correct": true },
+        { "text": "Používají pouze jednu barvu", "correct": false },
+        { "text": "Nemají možnost připojení PC", "correct": false },
+        { "text": "Jsou příliš malé", "correct": false }
+      ],
+      "explanation": "LCD panely stárnou a kvalita klesá[cite: 393]."
+    }
+  ]
+}

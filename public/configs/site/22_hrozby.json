@@ -1,0 +1,492 @@
+{
+  "subject": "hrozby",
+  "name": "22. Hrozby na síti",
+  "topics": [
+    { "id": "zaklady", "name": "Základní pojmy a kategorizace" },
+    { "id": "malware", "name": "Malware (Viry, Červi, Ransomware)" },
+    { "id": "utoky-pasivni", "name": "Pasivní útoky" },
+    { "id": "utoky-aktivni", "name": "Aktivní útoky" }
+  ],
+  "questions": [
+    {
+      "id": "hroz-001",
+      "type": "single",
+      "topic": "zaklady",
+      "difficulty": 1,
+      "question": "Jaký je rozdíl mezi hrozbou a rizikem v kontextu bezpečnosti?",
+      "options": [
+        { "text": "Hrozba je působení, riziko je pravděpodobnost realizace hrozby.", "correct": true },
+        { "text": "Hrozba a riziko jsou totéž.", "correct": false },
+        { "text": "Riziko je vždy útok, hrozba je jen chyba.", "correct": false }
+      ],
+      "explanation": "Hrozba je činnost působící na slabinu, riziko je pravděpodobnost jejího úspěšného uskutečnění."
+    },
+    {
+      "id": "hroz-002",
+      "type": "truefalse",
+      "topic": "zaklady",
+      "statement": "Hrozba na síti musí být vždy hackerský útok.",
+      "answer": false,
+      "explanation": "Hrozbou může být i přírodní katastrofa, technické selhání či neúmyslná chyba uživatele."
+    },
+    {
+      "id": "hroz-003",
+      "type": "categorize",
+      "topic": "zaklady",
+      "difficulty": 2,
+      "question": "Roztřiďte hrozby do kategorií podle zdroje.",
+      "categories": ["Objektivní", "Subjektivní"],
+      "items": [
+        { "text": "Požár", "category": "Objektivní" },
+        { "text": "Elektromagnetické pole", "category": "Objektivní" },
+        { "text": "Neproškolený uživatel", "category": "Subjektivní" },
+        { "text": "Hackerský útok", "category": "Subjektivní" }
+      ],
+      "explanation": "Objektivní jsou přírodní a technické příčiny, subjektivní plynou z lidské činnosti."
+    },
+    {
+      "id": "hroz-004",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 1,
+      "question": "Co je to malware?",
+      "options": [
+        { "text": "Škodlivý software provádějící nežádoucí činnost.", "correct": true },
+        { "text": "Oficiální aktualizace operačního systému.", "correct": false },
+        { "text": "Nástroj pro zrychlení počítače.", "correct": false }
+      ],
+      "explanation": "Malware (malicious software) je označení pro škodlivé programy, se kterými uživatel nesouhlasí."
+    },
+    {
+      "id": "hroz-005",
+      "type": "multiple",
+      "topic": "malware",
+      "difficulty": 2,
+      "question": "Jaké jsou typické vlastnosti počítačových červů?",
+      "options": [
+        { "text": "Schopnost automatického rozesílání kopií sama sebe.", "correct": true },
+        { "text": "Využívání síťové komunikace ke šíření.", "correct": true },
+        { "text": "Možnost znepřístupnění PC nebo šifrování dat.", "correct": true },
+        { "text": "Vyžadují akci uživatele pro šíření.", "correct": false }
+      ],
+      "explanation": "Červi se šíří sami pomocí síťových prostředků a mohou vykonávat škodlivou činnost."
+    },
+    {
+      "id": "hroz-006",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 2,
+      "question": "Jaký malware vyžaduje akci uživatele (např. spuštění souboru) pro infikování systému?",
+      "options": [
+        { "text": "Virus", "correct": true },
+        { "text": "Červ", "correct": false },
+        { "text": "Samoopravný skript", "correct": false }
+      ],
+      "explanation": "Viry se musí vložit do jiných souborů a vyžadují aktivní akci uživatele, aby se šířily."
+    },
+    {
+      "id": "hroz-007",
+      "type": "truefalse",
+      "topic": "malware",
+      "statement": "Trojský kůň je schopen sám se šířit na další počítače.",
+      "answer": false,
+      "explanation": "Trojský kůň se tváří užitečně, ale nedokáže sám infikovat další počítače kopií."
+    },
+    {
+      "id": "hroz-008",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 2,
+      "question": "Který malware šifruje data a požaduje výkupné?",
+      "options": [
+        { "text": "Ransomware", "correct": true },
+        { "text": "Spyware", "correct": false },
+        { "text": "Keylogger", "correct": false }
+      ],
+      "explanation": "Ransomware blokuje systém nebo šifruje data a požaduje výkupné (např. WannaCry)."
+    },
+    {
+      "id": "hroz-009",
+      "type": "gap",
+      "topic": "malware",
+      "difficulty": 2,
+      "text": "Program, který sleduje stisk kláves za účelem odcizení hesel, se nazývá {{0}}.",
+      "blanks": [{ "accept": ["keylogger", "keystroke logger"] }],
+      "explanation": "Keyloggery sledují stisky kláves pro získání citlivých údajů."
+    },
+    {
+      "id": "hroz-010",
+      "type": "numeric",
+      "topic": "malware",
+      "difficulty": 3,
+      "question": "V jakém roce způsobil ransomware WannaCry miliardové škody?",
+      "answer": 2017,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Virus WannaCry se šířil v roce 2017."
+    },
+    {
+      "id": "hroz-011",
+      "type": "single",
+      "topic": "utoky-pasivni",
+      "difficulty": 1,
+      "question": "Co je cílem pasivních útoků?",
+      "options": [
+        { "text": "Získání informací ze systému.", "correct": true },
+        { "text": "Změna dat v systému.", "correct": false },
+        { "text": "Zničení hardwaru.", "correct": false }
+      ],
+      "explanation": "Pasivní útoky monitorují provoz a ohrožují důvěrnost, ale nemění systém."
+    },
+    {
+      "id": "hroz-012",
+      "type": "multiple",
+      "topic": "utoky-pasivni",
+      "difficulty": 2,
+      "question": "Jaké jsou příklady pasivních útoků?",
+      "options": [
+        { "text": "Odposlouchávání", "correct": true },
+        { "text": "Analýza provozu", "correct": true },
+        { "text": "Pozměnění zpráv", "correct": false }
+      ],
+      "explanation": "Odposlouchávání a analýza provozu jsou pasivní útoky."
+    },
+    {
+      "id": "hroz-013",
+      "type": "truefalse",
+      "topic": "utoky-pasivni",
+      "statement": "Proti odposlechu (pasivnímu útoku) se lze bránit šifrováním dat.",
+      "answer": true,
+      "explanation": "Silná šifrovací služba brání útočníkovi číst přenášená data."
+    },
+    {
+      "id": "hroz-014",
+      "type": "single",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Co je typické pro aktivní útoky?",
+      "options": [
+        { "text": "Pokoušejí se měnit systémové prostředky.", "correct": true },
+        { "text": "Pouze pasivně monitorují provoz.", "correct": false },
+        { "text": "Nezanechávají žádné stopy.", "correct": false }
+      ],
+      "explanation": "Aktivní útoky mění data nebo ovlivňují funkčnost systému."
+    },
+    {
+      "id": "hroz-015",
+      "type": "multiple",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Které z těchto technik patří mezi aktivní útoky?",
+      "options": [
+        { "text": "Spoofing", "correct": true },
+        { "text": "Man in the middle", "correct": true },
+        { "text": "Přehrání zprávy", "correct": true },
+        { "text": "Analýza provozu", "correct": false }
+      ],
+      "explanation": "Spoofing, MitM a přehrání zprávy jsou aktivní útoky."
+    },
+    {
+      "id": "hroz-016",
+      "type": "single",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Co je to DoS (Denial of Service)?",
+      "options": [
+        { "text": "Zahlcení služby velkým množstvím požadavků.", "correct": true },
+        { "text": "Odcizení hesla uživatele.", "correct": false },
+        { "text": "Šifrování dat v počítači.", "correct": false }
+      ],
+      "explanation": "DoS je incident, při kterém uživatel přijde o službu, protože je zdroj zahlcen požadavky."
+    },
+    {
+      "id": "hroz-017",
+      "type": "numeric",
+      "topic": "utoky-aktivni",
+      "difficulty": 3,
+      "question": "V čem se DDoS liší od klasického DoS?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "rozdíl v počtu zdrojů",
+      "explanation": "DDoS využívá velké množství počítačů z různých lokalit, zatímco DoS je typicky z jednoho zdroje."
+    },
+    {
+      "id": "hroz-018",
+      "type": "single",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Jak se nazývá útok 'hrubou silou'?",
+      "options": [
+        { "text": "Brute force", "correct": true },
+        { "text": "Spoofing", "correct": false },
+        { "text": "Malware", "correct": false }
+      ],
+      "explanation": "Brute force je snaha o prolomení zabezpečení náhodným zkoušením (např. hesel)."
+    },
+    {
+      "id": "hroz-019",
+      "type": "gap",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "text": "Útok, při kterém útočník odposlouchává komunikaci mezi dvěma stranami, se nazývá {{0}}.",
+      "blanks": [{ "accept": ["Man in the middle", "MitM"] }],
+      "explanation": "Man in the middle je situace, kdy útočník stojí mezi dvěma komunikujícími stranami."
+    },
+    {
+      "id": "hroz-020",
+      "type": "ordering",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Seřaďte charakteristiky DDoS útoku.",
+      "items": [
+        "Využití velkého množství PC",
+        "Zasažení cílové služby",
+        "Zahlcení požadavky",
+        "Nedostupnost pro ostatní"
+      ],
+      "explanation": "DDoS využívá mnoho strojů k zahlcení a následné nedostupnosti služby."
+    },
+    {
+      "id": "hroz-021",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 1,
+      "question": "Jak nejlépe chránit PC před malwarem?",
+      "options": [
+        { "text": "Antivirovým programem a aktualizacemi OS", "correct": true },
+        { "text": "Smazáním všech souborů v systému", "correct": false },
+        { "text": "Vypnutím internetu", "correct": false }
+      ],
+      "explanation": "Základem je antivirus, aktualizace a opatrnost."
+    },
+    {
+      "id": "hroz-022",
+      "type": "truefalse",
+      "topic": "utoky-pasivni",
+      "statement": "Pasivní útoky mění data v systému.",
+      "answer": false,
+      "explanation": "Pasivní útoky pouze monitorují a neovlivňují systém."
+    },
+    {
+      "id": "hroz-023",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 2,
+      "question": "Co dělá spyware?",
+      "options": [
+        { "text": "Odesílá data z počítače bez vědomí uživatele", "correct": true },
+        { "text": "Zrychluje počítač", "correct": false },
+        { "text": "Šifruje dokumenty pro zabezpečení" }
+      ],
+      "explanation": "Spyware odesílá data, jako jsou hesla či osobní informace, bez souhlasu uživatele."
+    },
+    {
+      "id": "hroz-024",
+      "type": "multiple",
+      "topic": "zaklady",
+      "difficulty": 2,
+      "question": "Co může být slabinou (zranitelným místem) systému?",
+      "options": [
+        { "text": "Chyba v analýze návrhu", "correct": true },
+        { "text": "Chyba v implementaci systému", "correct": true },
+        { "text": "Proškolený a zodpovědný uživatel", "correct": false }
+      ],
+      "explanation": "Zranitelnosti pramení z chyb v návrhu nebo implementaci systému."
+    },
+    {
+      "id": "hroz-025",
+      "type": "single",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Co znamená pojem 'Spoofing'?",
+      "options": [
+        { "text": "Předstírání oprávněného uživatele", "correct": true },
+        { "text": "Mazání souborů", "correct": false },
+        { "text": "Šifrování disku" }
+      ],
+      "explanation": "Spoofing je předstírání identity za účelem neoprávněného přístupu."
+    },
+    {
+      "id": "hroz-026",
+      "type": "passage",
+      "topic": "malware",
+      "difficulty": 2,
+      "passage": "Malware představuje širokou škálu škodlivého softwaru. Patří sem viry, které se šíří napadením spustitelných souborů, a červi, kteří se šíří automaticky po síti. Ransomware zase cílí na blokování systému nebo šifrování dat, za což následně požaduje výkupné. Typickým příkladem ransomware byl WannaCry v roce 2017.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Jaký je hlavní rozdíl mezi virem a červem?",
+          "options": [
+            { "text": "Virus vyžaduje akci uživatele, červ se šíří automaticky.", "correct": true },
+            { "text": "Červ je neškodný.", "correct": false }
+          ],
+          "explanation": "Viry se musí vložit do souborů (akce uživatele), zatímco červi se šíří automaticky."
+        },
+        {
+          "type": "truefalse",
+          "statement": "WannaCry šifroval soubory a požadoval výkupné.",
+          "answer": true,
+          "explanation": "Ano, WannaCry byl ransomware požadující platbu v USD."
+        }
+      ]
+    },
+    {
+      "id": "hroz-027",
+      "type": "single",
+      "topic": "zaklady",
+      "difficulty": 2,
+      "question": "Co je 'riziko'?",
+      "options": [
+        { "text": "Pravděpodobnost zničení aktiva hrozbou", "correct": true },
+        { "text": "Samotná hrozba", "correct": false },
+        { "text": "Oprava systému" }
+      ],
+      "explanation": "Riziko je pravděpodobnost zničení hodnoty působením hrozby."
+    },
+    {
+      "id": "hroz-028",
+      "type": "gap",
+      "topic": "utoky-aktivni",
+      "difficulty": 3,
+      "text": "Útok, při kterém je původní zpráva opakována nebo zpožděna, se nazývá {{0}}.",
+      "blanks": [{ "accept": ["přehrání zprávy", "replay attack"] }],
+      "explanation": "Při útoku přehráním je původní zpráva znovu odvysílána."
+    },
+    {
+      "id": "hroz-029",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 2,
+      "question": "Jak se často šíří keyloggery na stránky s obsahem pro dospělé?",
+      "options": [
+        { "text": "Automaticky přes JavaScript", "correct": true },
+        { "text": "Poštou", "correct": false },
+        { "text": "USB flash diskem" }
+      ],
+      "explanation": "Keyloggery se na takových stránkách často stáhnou automaticky přes JavaScript."
+    },
+    {
+      "id": "hroz-030",
+      "type": "numeric",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Kolik hlavních kategorií útoků na síť uvádí dokument?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Dokument rozděluje útoky na pasivní a aktivní."
+    },
+    {
+      "id": "hroz-031",
+      "type": "multiple",
+      "topic": "malware",
+      "difficulty": 3,
+      "question": "Jaké činnosti obvykle vykonává červ po infikování systému?",
+      "options": [
+        { "text": "Zneprovoznění PC", "correct": true },
+        { "text": "Odstraňování souborů", "correct": true },
+        { "text": "Šifrování souborů", "correct": true },
+        { "text": "Zrychlení PC", "correct": false }
+      ],
+      "explanation": "Červi po infikování často zneprovozní PC, mažou soubory nebo šifrují data."
+    },
+    {
+      "id": "hroz-032",
+      "type": "truefalse",
+      "topic": "zaklady",
+      "statement": "Subjektivní hrozby mohou být náhodné i úmyslné.",
+      "answer": true,
+      "explanation": "Subjektivní hrozby zahrnují neúmyslné (chyba uživatele) i úmyslné (hacker) hrozby."
+    },
+    {
+      "id": "hroz-033",
+      "type": "single",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Jaký útok ohrožuje integritu dat?",
+      "options": [
+        { "text": "Aktivní", "correct": true },
+        { "text": "Pasivní", "correct": false }
+      ],
+      "explanation": "Aktivní útoky ohrožují integritu, autentizaci i důvěrnost."
+    },
+    {
+      "id": "hroz-034",
+      "type": "truefalse",
+      "topic": "malware",
+      "statement": "Antivirové programy jsou jedinou možnou obranou proti malwaru.",
+      "answer": false,
+      "explanation": "Je potřeba také aktualizovat OS, stahovat z důvěryhodných zdrojů a používat selský rozum."
+    },
+    {
+      "id": "hroz-035",
+      "type": "multiple",
+      "topic": "utoky-pasivni",
+      "difficulty": 3,
+      "question": "Čím se vyznačují pasivní útoky?",
+      "options": [
+        { "text": "Cílem je získat informace.", "correct": true },
+        { "text": "Nemají vliv na systémové prostředky.", "correct": true },
+        { "text": "Útočník pouze monitoruje komunikační kanál.", "correct": true }
+      ],
+      "explanation": "Pasivní útoky jsou zaměřeny na získání informací bez ovlivnění systémových zdrojů."
+    },
+    {
+      "id": "hroz-036",
+      "type": "single",
+      "topic": "utoky-aktivni",
+      "difficulty": 2,
+      "question": "Co se děje při útoku 'Pozměnění zpráv'?",
+      "options": [
+        { "text": "Útočník zprávu odstraní, změní ji a pošle dál.", "correct": true },
+        { "text": "Útočník zprávu pouze přečte.", "correct": false }
+      ],
+      "explanation": "Útočník zprávu ze síťového toku odstraní, pozmění a znovu do sítě vyšle."
+    },
+    {
+      "id": "hroz-037",
+      "type": "truefalse",
+      "topic": "zaklady",
+      "statement": "Hrozba vždy musí být úmyslná činnost.",
+      "answer": false,
+      "explanation": "Hrozba může být i náhodná (např. přírodní katastrofa)."
+    },
+    {
+      "id": "hroz-038",
+      "type": "numeric",
+      "topic": "utoky-pasivni",
+      "difficulty": 3,
+      "question": "Jak se obecně říká pravidlu, že čím více zpráv útočník sleduje, tím více poznatků získá?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "princip",
+      "explanation": "Obecně platí, že čím větší množství sledovaných zpráv, tím více poznatků útočník vyvodí."
+    },
+    {
+      "id": "hroz-039",
+      "type": "single",
+      "topic": "malware",
+      "difficulty": 2,
+      "question": "Co může spyware odesílat z počítače?",
+      "options": [
+        { "text": "Osobní informace a hesla.", "correct": true },
+        { "text": "Seznam nainstalovaných ovladačů.", "correct": false },
+        { "text": "Své vlastní aktualizace." }
+      ],
+      "explanation": "Spyware odesílá osobní data, hesla, údaje o kreditních kartách."
+    },
+    {
+      "id": "hroz-040",
+      "type": "multiple",
+      "topic": "zaklady",
+      "difficulty": 2,
+      "question": "Které z těchto aspektů patří pod pojem bezpečnost?",
+      "options": [
+        { "text": "Ochrana proti škodám.", "correct": true },
+        { "text": "Ochrana proti hrozbám.", "correct": true },
+        { "text": "Stupeň ochrany objektu.", "correct": true }
+      ],
+      "explanation": "Bezpečnost je vlastnost objektu určující míru ochrany proti škodám a hrozbám."
+    }
+  ]
+}

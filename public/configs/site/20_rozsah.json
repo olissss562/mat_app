@@ -1,0 +1,634 @@
+{
+  "subject": "rozsah",
+  "name": "20. Rozdělení sítí podle rozsahu",
+  "topics": [
+    { "id": "kategorie-rozsahu", "name": "Kategorie sítí (PAN, LAN, MAN, WAN)" },
+    { "id": "topologie-fyzicka", "name": "Fyzické topologie" },
+    { "id": "topologie-logicka", "name": "Logické topologie a prvky" }
+  ],
+  "questions": [
+    {
+      "id": "rozsah-001",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Která síť má nejmenší rozlehlost a dosah obvykle jen několik metrů?",
+      "options": [
+        { "text": "PAN", "correct": true },
+        { "text": "LAN", "correct": false },
+        { "text": "MAN", "correct": false },
+        { "text": "WAN", "correct": false }
+      ],
+      "explanation": "PAN (Personal Area Network) je síť s nejmenší rozlehlostí."
+    },
+    {
+      "id": "rozsah-002",
+      "type": "multiple",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Jaké technologie se běžně používají pro realizaci PAN?",
+      "options": [
+        { "text": "Bluetooth", "correct": true },
+        { "text": "Wi-Fi", "correct": true },
+        { "text": "IrDA", "correct": true },
+        { "text": "ATM", "correct": false }
+      ],
+      "explanation": "PAN může být realizována pomocí Bluetooth, Wi-Fi nebo IrDA."
+    },
+    {
+      "id": "rozsah-003",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Která síť pokrývá malé geografické území jako domácnost či firmu?",
+      "options": [
+        { "text": "LAN", "correct": true },
+        { "text": "MAN", "correct": false },
+        { "text": "WAN", "correct": false }
+      ],
+      "explanation": "LAN (Local Area Network) pokrývá malé území."
+    },
+    {
+      "id": "rozsah-004",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Jaká je typická přenosová rychlost v moderních LAN sítích?",
+      "options": [
+        { "text": "Řádově Gb/s", "correct": true },
+        { "text": "Řádově kb/s", "correct": false },
+        { "text": "Řádově bit/s", "correct": false }
+      ],
+      "explanation": "Přenosové rychlosti v LAN sítích bývají vysoké, řádově Gb/s."
+    },
+    {
+      "id": "rozsah-005",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Která síť je zasazená do městské zástavby a propojuje jednotlivé LAN?",
+      "options": [
+        { "text": "MAN", "correct": true },
+        { "text": "WAN", "correct": false },
+        { "text": "PAN", "correct": false }
+      ],
+      "explanation": "MAN (Metropolitan Area Network) je obvykle zasazená do městské zástavby."
+    },
+    {
+      "id": "rozsah-006",
+      "type": "truefalse",
+      "topic": "kategorie-rozsahu",
+      "statement": "WAN sítě pokrývají území překračující hranice měst, regionů, států či kontinentů.",
+      "answer": true,
+      "explanation": "WAN (Wide Area Network) pokrývá rozlehlé geografické území."
+    },
+    {
+      "id": "rozsah-007",
+      "type": "multiple",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Jaké jsou příklady protokolů používaných v sítích WAN?",
+      "options": [
+        { "text": "ATM", "correct": true },
+        { "text": "FrameRelay", "correct": true },
+        { "text": "PPP", "correct": true },
+        { "text": "Bluetooth", "correct": false }
+      ],
+      "explanation": "Nejčastější protokoly pro WAN jsou ATM, FrameRelay, HDLC a PPP."
+    },
+    {
+      "id": "rozsah-008",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Největším a nejznámějším příkladem WAN sítě je:",
+      "options": [
+        { "text": "Internet", "correct": true },
+        { "text": "Lokální firemní switch", "correct": false },
+        { "text": "Bluetooth připojení telefonu", "correct": false }
+      ],
+      "explanation": "Největším příkladem WAN je Internet."
+    },
+    {
+      "id": "rozsah-009",
+      "type": "categorize",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Roztřiďte prvky LAN sítě na aktivní a pasivní.",
+      "categories": ["Aktivní prvky", "Pasivní prvky"],
+      "items": [
+        { "text": "Switch", "category": "Aktivní prvky" },
+        { "text": "Router", "category": "Aktivní prvky" },
+        { "text": "Síťová karta", "category": "Aktivní prvky" },
+        { "text": "Propojovací kabel", "category": "Pasivní prvky" },
+        { "text": "Konektory", "category": "Pasivní prvky" }
+      ],
+      "explanation": "Aktivní prvky potřebují napájení a podílejí se na komunikaci, pasivní nikoliv."
+    },
+    {
+      "id": "rozsah-010",
+      "type": "numeric",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Kolik základních skupin sítí rozlišujeme z hlediska velikosti a účelu?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Počítačovou síť můžeme rozdělit na 4 základní skupiny: PAN, LAN, MAN a WAN."
+    },
+    {
+      "id": "top-001",
+      "type": "single",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Při jaké topologii způsobí poškození páteřního kabelu výpadek komunikace v celé síti?",
+      "options": [
+        { "text": "Sběrnicová (BUS)", "correct": true },
+        { "text": "Hvězdicová", "correct": false },
+        { "text": "Kruhová", "correct": false }
+      ],
+      "explanation": "U sběrnicové topologie poškození páteřního kabelu znamená výpadek celé sítě."
+    },
+    {
+      "id": "top-002",
+      "type": "truefalse",
+      "topic": "topologie-fyzicka",
+      "statement": "Sběrnicová topologie (BUS) vyžaduje na obou koncích terminátor.",
+      "answer": true,
+      "explanation": "Terminátor zabraňuje zpětnému odrazu signálu na vedení."
+    },
+    {
+      "id": "top-003",
+      "type": "single",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Která topologie je v současnosti nejpoužívanější pro LAN?",
+      "options": [
+        { "text": "Hvězdicová", "correct": true },
+        { "text": "Kruhová", "correct": false },
+        { "text": "Sběrnicová", "correct": false }
+      ],
+      "explanation": "Hvězdicová topologie je nejpoužívanější způsob propojování zařízení."
+    },
+    {
+      "id": "top-004",
+      "type": "multiple",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Jaké jsou nevýhody hvězdicové topologie?",
+      "options": [
+        { "text": "Nutnost aktivního prvku (switch/hub)", "correct": true },
+        { "text": "Větší spotřeba kabeláže", "correct": true },
+        { "text": "Porucha centrálního switche způsobí výpadek sítě", "correct": true }
+      ],
+      "explanation": "Nevýhodou je aktivní prvek, více kabelů a zranitelnost centrálního prvku."
+    },
+    {
+      "id": "top-005",
+      "type": "ordering",
+      "topic": "topologie-fyzicka",
+      "difficulty": 3,
+      "question": "Seřaďte vlastnosti kruhové topologie podle dokumentu.",
+      "items": [
+        "Stanice propojeny do kruhu",
+        "Data procházejí jedním směrem",
+        "Nevznikají kolize",
+        "Obtížné hledání závad"
+      ],
+      "explanation": "Data proudí jedním směrem a absence kolizí jsou hlavní znaky kruhu."
+    },
+    {
+      "id": "top-006",
+      "type": "single",
+      "topic": "topologie-logicka",
+      "difficulty": 2,
+      "question": "Co popisuje logická topologie?",
+      "options": [
+        { "text": "Jak data v síti protékají", "correct": true },
+        { "text": "Kudy vedou fyzické kabely", "correct": false },
+        { "text": "Umístění uzlů v budově", "correct": false }
+      ],
+      "explanation": "Logická topologie se vztahuje k tomu, jak data v síti protékají."
+    },
+    {
+      "id": "top-007",
+      "type": "truefalse",
+      "topic": "topologie-fyzicka",
+      "statement": "Fyzická topologie popisuje pouze způsob, jakým data proudí, nikoliv fyzické umístění kabelů.",
+      "answer": false,
+      "explanation": "Fyzická topologie popisuje reálnou konstrukci, umístění kabelů a přípojek."
+    },
+    {
+      "id": "top-008",
+      "type": "multiple",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Které faktory jsou ovlivněny volbou topologie?",
+      "options": [
+        { "text": "Přenosová rychlost", "correct": true },
+        { "text": "Přístupová metoda ke kanálu", "correct": true },
+        { "text": "Spolehlivost komunikace", "correct": true }
+      ],
+      "explanation": "Topologie ovlivňuje rychlost, přístup a spolehlivost."
+    },
+    {
+      "id": "top-009",
+      "type": "numeric",
+      "topic": "topologie-fyzicka",
+      "difficulty": 3,
+      "question": "V hvězdicové topologii: Pokud vypadne jedna stanice, co se stane s ostatními?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": "výpadků",
+      "explanation": "Selhání jedné stanice nezpůsobí výpadek celé sítě."
+    },
+    {
+      "id": "top-010",
+      "type": "gap",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "text": "Stromová topologie je tvořena propojením několika {{0}} topologií pomocí aktivních prvků jako jsou {{1}}.",
+      "blanks": [
+        { "accept": ["hvězdicových"] },
+        { "accept": ["switchů", "HUBů", "switche", "huby"] }
+      ],
+      "explanation": "Stromová topologie kombinuje více hvězdic."
+    },
+    {
+      "id": "top-011",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "V čem je výhoda PAN sítí oproti LAN?",
+      "options": [
+        { "text": "Nižší spotřeba energie", "correct": true },
+        { "text": "Vyšší přenosové rychlosti", "correct": false },
+        { "text": "Větší dosah", "correct": false }
+      ],
+      "explanation": "PAN se zaměřuje na nízkou spotřebu energie a odolnost proti rušení."
+    },
+    {
+      "id": "top-012",
+      "type": "truefalse",
+      "topic": "topologie-fyzicka",
+      "statement": "Sběrnicová topologie (BUS) umožňuje snadné hledání závad.",
+      "answer": false,
+      "explanation": "Naopak, u BUS topologie je hledání závad obtížné, jelikož porucha jednoho bodu ovlivní vše."
+    },
+    {
+      "id": "top-013",
+      "type": "multiple",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Jaké jsou výhody sběrnicové (BUS) topologie?",
+      "options": [
+        { "text": "Jednoduchá realizace", "correct": true },
+        { "text": "Malé náklady", "correct": true },
+        { "text": "Není nutný aktivní prvek", "correct": true }
+      ],
+      "explanation": "Výhodami jsou jednoduchost, nízká cena a absence aktivních prvků."
+    },
+    {
+      "id": "top-014",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Kdo obvykle buduje a provozuje WAN sítě pro připojení do Internetu?",
+      "options": [
+        { "text": "Poskytovatelé připojení (ISP)", "correct": true },
+        { "text": "Jednotliví uživatelé doma", "correct": false },
+        { "text": "Výrobci síťových karet", "correct": false }
+      ],
+      "explanation": "WAN pro internet budují poskytovatelé (ISP) a služby jsou zpoplatněny."
+    },
+    {
+      "id": "top-015",
+      "type": "numeric",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Kolik dalších stanic je přímo propojeno s jednou stanicí v kruhové topologii?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Každá stanice je vždy propojena se dvěma dalšími."
+    },
+    {
+      "id": "top-016",
+      "type": "passage",
+      "topic": "kategorie-rozsahu",
+      "passage": "Počítačová síť LAN (Local Area Network) pokrývá malé geografické území jako je domácnost nebo firma. Uživatelé si ji budují na vlastní náklady. Přenosové rychlosti v dnešních sítích LAN dosahují běžně Gb/s. Pro propojení se využívá zejména Ethernet a Wi-Fi. Pokud propojíme více takových sítí LAN v rámci města, hovoříme o síti MAN.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Co se stane, pokud propojíme více LAN sítí v rámci města?",
+          "options": [
+            { "text": "Vznikne MAN.", "correct": true },
+            { "text": "Vznikne WAN.", "correct": false },
+            { "text": "Zruší se LAN.", "correct": false }
+          ],
+          "explanation": "Propojení LAN v rámci města tvoří síť MAN."
+        },
+        {
+          "type": "truefalse",
+          "statement": "LAN sítě jsou budovány výhradně na náklady poskytovatelů internetu.",
+          "answer": false,
+          "explanation": "LAN sítě si uživatelé vytvářejí sami na své vlastní náklady."
+        }
+      ]
+    },
+    {
+      "id": "top-017",
+      "type": "single",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Proč v kruhové topologii nevznikají kolize?",
+      "options": [
+        { "text": "Data procházejí pouze jedním směrem v rámci kruhu.", "correct": true },
+        { "text": "Je tam aktivní switch, který řídí kolize.", "correct": false },
+        { "text": "Stanice jsou velmi daleko od sebe.", "correct": false }
+      ],
+      "explanation": "Data v kruhu procházejí pouze jedním směrem, což zabraňuje kolizím."
+    },
+    {
+      "id": "top-018",
+      "type": "gap",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "text": "Sítě {{0}} pokrývají rozlehlé geografické území, zatímco sítě {{1}} jsou omezeny pouze na rozsah jedné budovy či kanceláře.",
+      "blanks": [
+        { "accept": ["WAN"] },
+        { "accept": ["LAN"] }
+      ],
+      "explanation": "WAN jsou rozlehlé, LAN lokální."
+    },
+    {
+      "id": "top-019",
+      "type": "multiple",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Co ovlivňuje topologie sítě?",
+      "options": [
+        { "text": "Přenosovou rychlost", "correct": true },
+        { "text": "Spolehlivost", "correct": true },
+        { "text": "Přístupovou metodu", "correct": true }
+      ],
+      "explanation": "Topologie určuje vlastnosti sítě včetně rychlosti, přístupu a spolehlivosti."
+    },
+    {
+      "id": "top-020",
+      "type": "single",
+      "topic": "topologie-logicka",
+      "difficulty": 3,
+      "question": "Jaký je hlavní rozdíl mezi fyzickou a logickou topologií?",
+      "options": [
+        { "text": "Fyzická je reálná konstrukce, logická je způsob toku dat.", "correct": true },
+        { "text": "Logická je reálná, fyzická je jen teoretická.", "correct": false },
+        { "text": "Mezi nimi není žádný rozdíl.", "correct": false }
+      ],
+      "explanation": "Fyzická je reálná konstrukce, logická popisuje, jak data protékají."
+    },
+    {
+      "id": "top-021",
+      "type": "truefalse",
+      "topic": "kategorie-rozsahu",
+      "statement": "WAN sítě běží na linkové a fyzické vrstvě ISO/OSI.",
+      "answer": true,
+      "explanation": "WAN sítě jsou provozovány jen na fyzické a linkové vrstvě ISO/OSI."
+    },
+    {
+      "id": "top-022",
+      "type": "numeric",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Jaká je základní vrstva (číslem), na které se provozuje WAN?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "WAN běží na fyzické (1.) a linkové (2.) vrstvě."
+    },
+    {
+      "id": "top-023",
+      "type": "multiple",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Co se podílí na komunikaci v LAN síti (aktivní prvky)?",
+      "options": [
+        { "text": "Switch", "correct": true },
+        { "text": "Router", "correct": true },
+        { "text": "Síťová karta", "correct": true }
+      ],
+      "explanation": "Aktivní prvky jsou ty, co se podílejí na komunikaci."
+    },
+    {
+      "id": "top-024",
+      "type": "ordering",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Seřaďte typy sítí od nejmenšího dosahu.",
+      "items": [
+        "PAN",
+        "LAN",
+        "MAN",
+        "WAN"
+      ],
+      "explanation": "PAN (metry) < LAN (budova) < MAN (město) < WAN (svět)."
+    },
+    {
+      "id": "top-025",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Proč jsou MAN sítě realizovány často bezdrátově nebo optikou?",
+      "options": [
+        { "text": "Je to efektivní pro propojení objektů ve městě.", "correct": true },
+        { "text": "Kabely nejsou v městech povoleny.", "correct": false },
+        { "text": "Bezdrát je levnější než vzduch.", "correct": false }
+      ],
+      "explanation": "MAN sítě jsou realizovány bezdrátově nebo optikou pro propojení objektů v rámci města."
+    },
+    {
+      "id": "top-026",
+      "type": "gap",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "text": "Sběrnicová topologie využívá {{0}} kabel, ke kterému jsou připojeny ostatní prvky, a konce musí být opatřeny {{1}}.",
+      "blanks": [
+        { "accept": ["páteřní", "pateřní"] },
+        { "accept": ["terminátorem", "terminatorem"] }
+      ],
+      "explanation": "Páteřní kabel a terminátory jsou základem BUS topologie."
+    },
+    {
+      "id": "top-027",
+      "type": "truefalse",
+      "topic": "topologie-fyzicka",
+      "statement": "Hvězdicová topologie je velmi drahá z hlediska spotřeby kabeláže.",
+      "answer": true,
+      "explanation": "Ano, hvězdicová topologie vyžaduje pro každé PC vlastní kabel ke switchi."
+    },
+    {
+      "id": "top-028",
+      "type": "multiple",
+      "topic": "topologie-fyzicka",
+      "difficulty": 3,
+      "question": "Jaké jsou nevýhody kruhové topologie?",
+      "options": [
+        { "text": "Data musí projít přes všechny stanice.", "correct": true },
+        { "text": "Při poškození vypadne komunikace v celé síti.", "correct": true },
+        { "text": "Obtížné hledání závad.", "correct": true }
+      ],
+      "explanation": "Kruh má nevýhodu v průchodu dat všemi stanicemi, zranitelnosti a obtížné údržbě."
+    },
+    {
+      "id": "top-029",
+      "type": "single",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 1,
+      "question": "Sítě budované pro jednotlivé společnosti, které jsou soukromé, jsou:",
+      "options": [
+        { "text": "WAN", "correct": true },
+        { "text": "PAN", "correct": false },
+        { "text": "LAN", "correct": false }
+      ],
+      "explanation": "Spousta WAN je budována pro firmy jako soukromé sítě."
+    },
+    {
+      "id": "top-030",
+      "type": "numeric",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Kolik typů topologií z hlediska konstrukce (fyzické vs logické) dokument zmiňuje?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Topologie datových sítí chápeme ze dvou hledisek: Fyzická a Logická."
+    },
+    {
+      "id": "top-031",
+      "type": "truefalse",
+      "topic": "kategorie-rozsahu",
+      "statement": "Bluetooth je technologie používaná pro LAN sítě.",
+      "answer": false,
+      "explanation": "Bluetooth se primárně používá pro PAN (osobní síť)."
+    },
+    {
+      "id": "top-032",
+      "type": "multiple",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "question": "Proč je u PAN důležitá nízká spotřeba?",
+      "options": [
+        { "text": "Zařízení jsou často na baterie (mobil, hodinky).", "correct": true },
+        { "text": "Aby se šetřilo životní prostředí.", "correct": true },
+        { "text": "Aby bylo možné snadno měnit baterie.", "correct": false }
+      ],
+      "explanation": "PAN zařízení (mobil, laptop) potřebují dlouhou výdrž."
+    },
+    {
+      "id": "top-033",
+      "type": "single",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Jak se jmenuje aktivní prvek, který u hvězdicové topologie posílá data všem stanicím?",
+      "options": [
+        { "text": "Hub", "correct": true },
+        { "text": "Switch", "correct": false },
+        { "text": "Bridge", "correct": false }
+      ],
+      "explanation": "Hub zasílá data všem, zatímco switch je nasměruje ke konkrétnímu příjemci."
+    },
+    {
+      "id": "top-034",
+      "type": "numeric",
+      "topic": "topologie-fyzicka",
+      "difficulty": 3,
+      "question": "Pokud v BUS topologii chybí terminátor, co se stane se signálem?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "odraz",
+      "explanation": "Dochází k odrazu signálu, což způsobí útlum a zarušení."
+    },
+    {
+      "id": "top-035",
+      "type": "passage",
+      "topic": "kategorie-rozsahu",
+      "passage": "Sítě WAN pokrývají rozlehlé území. Většina firemních WAN je soukromá. WAN sítě pracují na první a druhé vrstvě ISO/OSI modelu. Mezi typické protokoly pro zapouzdření dat v rámci WAN patří FrameRelay, ATM, HDLC či PPP.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Na jakých vrstvách ISO/OSI modelu pracují WAN sítě?",
+          "options": [
+            { "text": "1. a 2.", "correct": true },
+            { "text": "3. a 4.", "correct": false },
+            { "text": "Všechny", "correct": false }
+          ],
+          "explanation": "WAN sítě jsou provozované jen na fyzické a linkové vrstvě ISO/OSI."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Protokoly FrameRelay a PPP jsou protokoly pro WAN.",
+          "answer": true,
+          "explanation": "Ano, FrameRelay a PPP patří mezi protokoly používané v sítích WAN."
+        }
+      ]
+    },
+    {
+      "id": "top-036",
+      "type": "gap",
+      "topic": "kategorie-rozsahu",
+      "difficulty": 2,
+      "text": "Sítě {{0}} jsou realizovány pomocí {{1}} nebo {{2}}.",
+      "blanks": [
+        { "accept": ["MAN"] },
+        { "accept": ["bezdrátově"] },
+        { "accept": ["optikou"] }
+      ],
+      "explanation": "MAN sítě jsou realizovány bezdrátově nebo optikou."
+    },
+    {
+      "id": "top-037",
+      "type": "truefalse",
+      "topic": "topologie-logicka",
+      "statement": "Logická topologie musí vždy přesně kopírovat fyzické zapojení kabelů.",
+      "answer": false,
+      "explanation": "Logická topologie nemusí nutně kopírovat fyzické schéma sítě."
+    },
+    {
+      "id": "top-038",
+      "type": "single",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Co se děje v kruhové topologii, pokud vypadne jedna stanice?",
+      "options": [
+        { "text": "Vypadne komunikace v celé síti", "correct": true },
+        { "text": "Síť se automaticky přeorganizuje", "correct": false },
+        { "text": "Ostatní stanice fungují dál", "correct": false }
+      ],
+      "explanation": "Při poškození vypadne komunikace v celé síti."
+    },
+    {
+      "id": "top-039",
+      "type": "numeric",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Kolik směrů toku dat je v kruhové topologii?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "směr",
+      "explanation": "Data v této topologii procházejí pouze jedním směrem."
+    },
+    {
+      "id": "top-040",
+      "type": "multiple",
+      "topic": "topologie-fyzicka",
+      "difficulty": 2,
+      "question": "Proč je v kruhové topologii obtížné hledání závad?",
+      "options": [
+        { "text": "Protože data musí projít přes všechny stanice.", "correct": true },
+        { "text": "Protože výpadek ovlivní celou síť.", "correct": true },
+        { "text": "Protože neexistuje žádný centrální prvek pro diagnostiku.", "correct": true }
+      ],
+      "explanation": "Kruh je zranitelný a diagnostika je v něm obtížná."
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "subject": "zdroje-pc",
+  "name": "15. Zdroje pro PC a záložní zdroje (UPS)",
+  "topics": [
+    { "id": "princip-zdroje", "name": "Princip činnosti zdroje PC" },
+    { "id": "parametry-zdroje", "name": "Parametry napájecích zdrojů" },
+    { "id": "ups-principy", "name": "Záložní zdroje (UPS) a jejich typy" },
+    { "id": "ups-parametry", "name": "Parametry a vlastnosti UPS" }
+  ],
+  "questions": [
+    {
+      "id": "zdroj-001",
+      "type": "single",
+      "topic": "princip-zdroje",
+      "difficulty": 1,
+      "question": "Jaká je primární funkce napájecího zdroje v počítači?",
+      "options": [
+        { "text": "Převádí střídavý proud (AC) na stejnosměrný (DC) a mění napětí [cite: 59]", "correct": true },
+        { "text": "Zajišťuje komunikaci mezi základní deskou a procesorem [cite: 59]", "correct": false },
+        { "text": "Zvyšuje taktovací frekvenci procesoru [cite: 59]", "correct": false },
+        { "text": "Slouží jako primární úložiště dat [cite: 59]", "correct": false }
+      ],
+      "explanation": "Zdroje primárně převádějí napětí a napájejí všechny komponenty[cite: 59, 60]."
+    },
+    {
+      "id": "zdroj-002",
+      "type": "single",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "question": "Která součást zdroje má za úkol odstraňovat vysokofrekvenční interferenci a šum ze sítě?",
+      "options": [
+        { "text": "Usměrňovač [cite: 63]", "correct": false },
+        { "text": "Širokopásmový filtr [cite: 63]", "correct": true },
+        { "text": "Výstupní filtr [cite: 63]", "correct": false },
+        { "text": "Schottkyho dioda [cite: 63]", "correct": false }
+      ],
+      "explanation": "Širokopásmový filtr na vstupu zajišťuje čistší napájecí napětí[cite: 64]."
+    },
+    {
+      "id": "zdroj-003",
+      "type": "single",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "question": "Proč je v moderních PC zdrojích použit vysokofrekvenční transformátor?",
+      "options": [
+        { "text": "Protože je levnější než 50Hz transformátor [cite: 72]", "correct": false },
+        { "text": "Je menší a efektivnější než transformátory na 50 Hz [cite: 72]", "correct": true },
+        { "text": "Protože pracuje pouze s čistým sinusovým průběhem [cite: 72]", "correct": false },
+        { "text": "Aby se zabránilo přehřátí usměrňovače [cite: 72]", "correct": false }
+      ],
+      "explanation": "Díky vysoké spínací frekvenci může být transformátor menší a efektivnější[cite: 72]."
+    },
+    {
+      "id": "zdroj-004",
+      "type": "single",
+      "topic": "ups-principy",
+      "difficulty": 2,
+      "question": "Který typ UPS obsahuje automatický regulátor napětí (AVR) pro vyrovnávání malých výkyvů bez použití baterie?",
+      "options": [
+        { "text": "Off-line [cite: 123]", "correct": false },
+        { "text": "On-Line [cite: 123]", "correct": false },
+        { "text": "Line-Interactive [cite: 123]", "correct": true },
+        { "text": "Pasivní záloha [cite: 123]", "correct": false }
+      ],
+      "explanation": "Line-Interactive UPS díky AVR dokáže vyrovnávat podpětí a přepětí[cite: 123, 150]."
+    },
+    {
+      "id": "zdroj-005",
+      "type": "single",
+      "topic": "ups-parametry",
+      "difficulty": 3,
+      "question": "Jaký typ výstupního signálu je ideální pro zdravotnickou techniku a servery?",
+      "options": [
+        { "text": "Obdélníkový průběh [cite: 134]", "correct": false },
+        { "text": "Simulovaná sinusová vlna [cite: 134]", "correct": false },
+        { "text": "Čistá sinusová vlna [cite: 134]", "correct": true },
+        { "text": "Pulzní šířková modulace [cite: 134]", "correct": false }
+      ],
+      "explanation": "Čistá sinusová vlna je nezbytná pro citlivá zařízení[cite: 134]."
+    },
+    {
+      "id": "zdroj-006",
+      "type": "multiple",
+      "topic": "parametry-zdroje",
+      "difficulty": 1,
+      "question": "Které parametry jsou klíčové pro specifikaci napájecího zdroje?",
+      "options": [
+        { "text": "Výstupní napětí (V) [cite: 91]", "correct": true },
+        { "text": "Maximální výstupní proud (A) [cite: 93]", "correct": true },
+        { "text": "Účinnost (%) [cite: 97]", "correct": true },
+        { "text": "Barva ventilátoru [cite: 97]", "correct": false }
+      ],
+      "explanation": "Napětí, proud a účinnost definují výkon zdroje[cite: 91, 93, 97]."
+    },
+    {
+      "id": "zdroj-007",
+      "type": "multiple",
+      "topic": "ups-principy",
+      "difficulty": 2,
+      "question": "Jaké stavy elektrické sítě UPS typicky řeší?",
+      "options": [
+        { "text": "Úplný výpadek napájení [cite: 113]", "correct": true },
+        { "text": "Pokles napětí (podpětí) [cite: 116]", "correct": true },
+        { "text": "Přepětí [cite: 116]", "correct": true },
+        { "text": "Změna frekvence procesoru [cite: 116]", "correct": false }
+      ],
+      "explanation": "UPS chrání před výpadkem i nestabilitou napětí[cite: 113, 116]."
+    },
+    {
+      "id": "zdroj-008",
+      "type": "multiple",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "question": "Jaké ochranné funkce by měl obsahovat kvalitní PC zdroj?",
+      "options": [
+        { "text": "Ochrana proti zkratu [cite: 105]", "correct": true },
+        { "text": "Ochrana proti přetížení [cite: 105]", "correct": true },
+        { "text": "Ochrana proti přehřátí [cite: 105]", "correct": true },
+        { "text": "Automatické přetaktování [cite: 105]", "correct": false }
+      ],
+      "explanation": "Zdroje musí chránit komponenty před elektrickými poruchami[cite: 105]."
+    },
+    {
+      "id": "zdroj-009",
+      "type": "multiple",
+      "topic": "ups-parametry",
+      "difficulty": 3,
+      "question": "Co ovlivňuje celkovou dobu zálohování (runtime) UPS?",
+      "options": [
+        { "text": "Kapacita baterie [cite: 131]", "correct": true },
+        { "text": "Spotřeba připojených zařízení [cite: 131]", "correct": true },
+        { "text": "Aktuální zatížení v procentech [cite: 132]", "correct": true },
+        { "text": "Datum výroby UPS [cite: 132]", "correct": false }
+      ],
+      "explanation": "Doba běhu závisí na kapacitě baterie a aktuálním odběru zátěže[cite: 131, 132]."
+    },
+    {
+      "id": "zdroj-010",
+      "type": "multiple",
+      "topic": "parametry-zdroje",
+      "difficulty": 2,
+      "question": "Které parametry jsou definovány pro UPS v oblasti výkonu?",
+      "options": [
+        { "text": "VA (voltampéry) jako celková kapacita [cite: 126]", "correct": true },
+        { "text": "W (watty) jako reálný dostupný výkon [cite: 127]", "correct": true },
+        { "text": "Frekvence ventilátoru [cite: 127]", "correct": false },
+        { "text": "Počet portů na zadní straně [cite: 127]", "correct": false }
+      ],
+      "explanation": "Klíčové je rozlišovat mezi zdánlivým výkonem (VA) a činným výkonem (W)[cite: 126, 127]."
+    },
+    {
+      "id": "zdroj-011",
+      "type": "truefalse",
+      "topic": "princip-zdroje",
+      "difficulty": 1,
+      "statement": "Zdroj v PC převádí stejnosměrné napětí (DC) na střídavé (AC).",
+      "answer": false,
+      "explanation": "Zdroje převádějí střídavé napětí ze sítě (AC) na stejnosměrné (DC)[cite: 59, 66]."
+    },
+    {
+      "id": "zdroj-012",
+      "type": "truefalse",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "statement": "Schottkyho diody se v usměrňovači používají díky své vysoké spínací rychlosti a nízkému úbytku napětí.",
+      "answer": true,
+      "explanation": "To je správně, proto jsou ideální pro vysokofrekvenční usměrňovače[cite: 75]."
+    },
+    {
+      "id": "zdroj-013",
+      "type": "truefalse",
+      "topic": "ups-principy",
+      "difficulty": 2,
+      "statement": "On-Line UPS nabízí prakticky nulovou dobu přepnutí při výpadku proudu (0 ms).",
+      "answer": true,
+      "explanation": "On-Line UPS neustále převádí AC na DC a zpět, takže není co přepínat[cite: 121, 145]."
+    },
+    {
+      "id": "zdroj-014",
+      "type": "truefalse",
+      "topic": "parametry-zdroje",
+      "difficulty": 1,
+      "statement": "Vstupní napětí 100–240V AC označuje zdroj, který lze použít univerzálně ve většině zemí světa.",
+      "answer": true,
+      "explanation": "Tento rozsah pokrývá standardní napětí elektrických sítí po celém světě[cite: 107]."
+    },
+    {
+      "id": "zdroj-015",
+      "type": "truefalse",
+      "topic": "ups-parametry",
+      "difficulty": 3,
+      "statement": "Vyšší kapacita baterie v Ah (ampérhodinách) vždy znamená menší fyzické rozměry UPS.",
+      "answer": false,
+      "explanation": "Vyšší kapacita obvykle znamená větší velikost a hmotnost UPS[cite: 140]."
+    },
+    {
+      "id": "zdroj-016",
+      "type": "matching",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "question": "Přiřaďte součást zdroje k její funkci.",
+      "pairs": [
+        { "left": "Usměrňovač", "right": "Převod AC na DC pomocí diod [cite: 66]" },
+        { "left": "Filtr", "right": "Vyhlazení pulzujícího napětí kondenzátory [cite: 68]" },
+        { "left": "Výstupní filtr", "right": "Odstranění zbytkového šumu [cite: 77]" },
+        { "left": "Výkonový spínač", "right": "Přerušování napětí vysokou frekvencí [cite: 70]" }
+      ],
+      "explanation": "Každý blok ve schématu zdroje má specifickou úlohu při stabilizaci napájení[cite: 62]."
+    },
+    {
+      "id": "zdroj-017",
+      "type": "matching",
+      "topic": "ups-principy",
+      "difficulty": 2,
+      "question": "Přiřaďte typ UPS k jeho charakteristice.",
+      "pairs": [
+        { "left": "Off-line", "right": "Zapne se až při výpadku [cite: 120]" },
+        { "left": "On-Line", "right": "Neustálá konverze AC-DC-AC [cite: 121]" },
+        { "left": "Line-Interactive", "right": "Obsahuje AVR regulátor napětí [cite: 123]" }
+      ],
+      "explanation": "Topologie UPS se liší způsobem, jakým chrání zařízení[cite: 119]."
+    },
+    {
+      "id": "zdroj-018",
+      "type": "matching",
+      "topic": "ups-parametry",
+      "difficulty": 3,
+      "question": "Přiřaďte průběh výstupního napětí k vhodnosti použití.",
+      "pairs": [
+        { "left": "Čistá sinusová vlna", "right": "Servery a zdravotnická technika [cite: 135]" },
+        { "left": "Simulovaná sinusová vlna", "right": "Běžná PC a periferie [cite: 136]" },
+        { "left": "Obdélníkový průběh", "right": "Méně vhodné pro většinu zařízení [cite: 137]" }
+      ],
+      "explanation": "Výběr průběhu závisí na citlivosti připojeného zařízení[cite: 133]."
+    },
+    {
+      "id": "zdroj-019",
+      "type": "matching",
+      "topic": "parametry-zdroje",
+      "difficulty": 2,
+      "question": "Přiřaďte parametr k jeho popisu.",
+      "pairs": [
+        { "left": "Účinnost", "right": "Poměr příkonu a výkonu [cite: 97]" },
+        { "left": "Regulace napětí", "right": "Stabilita výstupu při zátěži [cite: 100]" },
+        { "left": "Zvlnění", "right": "Míra nestabilit a šumu [cite: 102]" }
+      ],
+      "explanation": "Tyto parametry určují kvalitu napájecího zdroje[cite: 89]."
+    },
+    {
+      "id": "zdroj-020",
+      "type": "matching",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Přiřaďte dobu přepnutí (Transfer Time) k typu UPS.",
+      "pairs": [
+        { "left": "Offline", "right": "2–10 ms [cite: 143]" },
+        { "left": "Online", "right": "0 ms [cite: 145]" },
+        { "left": "Line-Interactive", "right": "Podobně jako Offline [cite: 144]" }
+      ],
+      "explanation": "Doba přepnutí je klíčová pro kontinuitu napájení[cite: 141]."
+    },
+    {
+      "id": "zdroj-021",
+      "type": "ordering",
+      "topic": "princip-zdroje",
+      "difficulty": 3,
+      "question": "Seřaďte bloky zdroje tak, jak jimi prochází proud od vstupu 230V ke spotřebiči.",
+      "items": [
+        "Širokopásmový filtr",
+        "Usměrňovač",
+        "Výkonový spínač",
+        "Vysokofrekvenční transformátor",
+        "Výstupní filtr"
+      ],
+      "explanation": "Signál jde přes filtr, usměrnění, spínání, transformaci a nakonec výstupní filtr[cite: 62]."
+    },
+    {
+      "id": "zdroj-022",
+      "type": "ordering",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Seřaďte typy výstupních signálů UPS od nejvhodnějšího pro citlivá zařízení po nejméně vhodný.",
+      "items": [
+        "Čistá sinusová vlna",
+        "Simulovaná sinusová vlna",
+        "Obdélníkový (čtvercový) průběh"
+      ],
+      "explanation": "Čistá sinusoida je standard, obdélníkový průběh je nejhorší[cite: 134, 136, 137]."
+    },
+    {
+      "id": "zdroj-023",
+      "type": "numeric",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Kolik ms trvá přepnutí u Offline UPS?",
+      "answer": 6,
+      "tolerance": 4,
+      "unit": "ms",
+      "explanation": "Rozmezí je obvykle 2 až 10 ms[cite: 143]."
+    },
+    {
+      "id": "zdroj-024",
+      "type": "numeric",
+      "topic": "princip-zdroje",
+      "difficulty": 1,
+      "question": "Jaké je standardní frekvence elektrické sítě v ČR (v Hz), na kterou je navržen vstup zdroje?",
+      "answer": 50,
+      "tolerance": 0,
+      "unit": "Hz",
+      "explanation": "Standardní frekvence v ČR je 50 Hz[cite: 62]."
+    },
+    {
+      "id": "zdroj-025",
+      "type": "numeric",
+      "topic": "ups-parametry",
+      "difficulty": 3,
+      "question": "Jaký bývá typický účiník (W/VA) u běžných UPS?",
+      "answer": 75,
+      "tolerance": 15,
+      "unit": "%",
+      "explanation": "Obvykle se pohybuje mezi 60 % až 90 %[cite: 128]."
+    },
+    {
+      "id": "zdroj-026",
+      "type": "categorize",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Rozřaďte vlastnosti UPS do kategorií.",
+      "categories": [
+        "Elektrické parametry",
+        "Fyzické vlastnosti"
+      ],
+      "items": [
+        { "text": "Výkon ve VA", "category": "Elektrické parametry" },
+        { "text": "Hmotnost", "category": "Fyzické vlastnosti" },
+        { "text": "Hlučnost ventilátoru", "category": "Fyzické vlastnosti" },
+        { "text": "Typ výstupního signálu", "category": "Elektrické parametry" }
+      ],
+      "explanation": "Parametry se dělí na elektrické (výkon, signál) a fyzické (rozměry, hluk)[cite: 125, 133, 161]."
+    },
+    {
+      "id": "zdroj-027",
+      "type": "categorize",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "question": "Zařaďte funkci k bloku ve zdroji.",
+      "categories": [
+        "Vstupní část",
+        "Regulační část",
+        "Výstupní část"
+      ],
+      "items": [
+        { "text": "Širokopásmový filtr", "category": "Vstupní část" },
+        { "text": "Zesilovač odchylky", "category": "Regulační část" },
+        { "text": "Výstupní filtr", "category": "Výstupní část" },
+        { "text": "Snímač výstupního napětí", "category": "Regulační část" }
+      ],
+      "explanation": "Bloky se dělí dle umístění v procesu přeměny napětí[cite: 62]."
+    },
+    {
+      "id": "zdroj-028",
+      "type": "gap",
+      "topic": "princip-zdroje",
+      "difficulty": 2,
+      "text": "Výkon zdroje se počítá jako součin napětí a proudu, jednotkou je {{0}}.",
+      "blanks": [
+        { "accept": ["Watt", "W"] }
+      ],
+      "explanation": "Výkon (W) = V × A[cite: 95]."
+    },
+    {
+      "id": "zdroj-029",
+      "type": "gap",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "text": "Pokud je účinnost zdroje vysoká, dochází k menším ztrátám ve formě {{0}}.",
+      "blanks": [
+        { "accept": ["tepla"] }
+      ],
+      "explanation": "Větší účinnost znamená méně tepla[cite: 98, 110]."
+    },
+    {
+      "id": "zdroj-030",
+      "type": "gap",
+      "topic": "ups-principy",
+      "difficulty": 3,
+      "text": "U Line-Interactive UPS dokáže {{0}} vyrovnávat podpětí a přepětí bez nutnosti čerpat energii z baterie.",
+      "blanks": [
+        { "accept": ["AVR", "regulátor napětí"] }
+      ],
+      "explanation": "AVR (Automatic Voltage Regulator) je klíčovou součástí Line-Interactive UPS[cite: 123, 150]."
+    },
+    {
+      "id": "zdroj-031",
+      "type": "passage",
+      "topic": "ups-principy",
+      "difficulty": 2,
+      "passage": "UPS, neboli záložní napájecí zdroj, zajišťuje nepřerušované napájení v případě výpadku elektrické energie. Chrání citlivá zařízení před ztrátou dat. V režimu napájení z baterie se aktivuje přepínač a výstupní část je napájena z baterie, přičemž měnič (DC/AC) převádí stejnosměrný proud na střídavý.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Měnič (DC/AC) je v UPS nepotřebný, protože zařízení běží na stejnosměrný proud.",
+          "answer": false,
+          "explanation": "Naopak, měnič je nezbytný pro převod DC z baterie na AC pro zařízení[cite: 118]."
+        },
+        {
+          "type": "single",
+          "question": "Kdy se aktivuje přepínač v režimu napájení z baterie?",
+          "options": [
+            { "text": "Při výpadku sítě nebo poklesu kvality napětí [cite: 117]", "correct": true },
+            { "text": "Vždy, když je počítač zapnutý [cite: 117]", "correct": false },
+            { "text": "Při zaplnění kapacity disku [cite: 117]", "correct": false }
+          ],
+          "explanation": "Přepínač reaguje na výpadek nebo nekvalitní síť[cite: 117]."
+        }
+      ]
+    },
+    {
+      "id": "zdroj-032",
+      "type": "passage",
+      "topic": "princip-zdroje",
+      "difficulty": 3,
+      "passage": "Zesilovač odchylky v PC zdroji porovnává změřené výstupní napětí se stabilním referenčním napětím. Pokud se odchylují, zesilovač poskytne korekční signál, který řídí práci výkonového spínače přes obvody řízeného spínače. Tím je zajištěno, že výstupní napětí zůstane stabilní i při změnách zátěže.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Co slouží jako srovnávací základna pro regulaci?",
+          "options": [
+            { "text": "Zdroj referenčního napětí [cite: 83]", "correct": true },
+            { "text": "Zesilovač odchylky [cite: 83]", "correct": false },
+            { "text": "Vstupní filtr [cite: 83]", "correct": false }
+          ],
+          "explanation": "Referenční napětí je srovnávací základna[cite: 83]."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Výkonový spínač je řízen přímo zesilovačem odchylky bez dalších obvodů.",
+          "answer": false,
+          "explanation": "Je řízen přes obvody řízeného spínače na základě signálu ze zesilovače[cite: 86]."
+        }
+      ]
+    },
+    {
+      "id": "zdroj-033",
+      "type": "single",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Který z typů průběhu výstupního napětí UPS je nejjednodušší a nejlevnější, ale nejméně vhodný pro většinu zařízení?",
+      "options": [
+        { "text": "Čistá sinusová vlna [cite: 137]", "correct": false },
+        { "text": "Simulovaná sinusová vlna [cite: 137]", "correct": false },
+        { "text": "Obdélníkový průběh [cite: 137]", "correct": true },
+        { "text": "Pila [cite: 137]", "correct": false }
+      ],
+      "explanation": "Obdélníkový průběh je nejjednodušší, ale pro citlivější elektroniku nevhodný[cite: 137]."
+    },
+    {
+      "id": "zdroj-034",
+      "type": "single",
+      "topic": "parametry-zdroje",
+      "difficulty": 2,
+      "question": "Co znamená 'Regulace napětí' u zdroje?",
+      "options": [
+        { "text": "Schopnost udržet stabilní napětí při změnách zátěže [cite: 100]", "correct": true },
+        { "text": "Nastavení jasu monitoru [cite: 100]", "correct": false },
+        { "text": "Počet ventilátorů [cite: 100]", "correct": false },
+        { "text": "Maximální hmotnost [cite: 100]", "correct": false }
+      ],
+      "explanation": "Regulace je kritická pro stabilitu napájení komponent[cite: 100]."
+    },
+    {
+      "id": "zdroj-035",
+      "type": "multiple",
+      "topic": "ups-principy",
+      "difficulty": 3,
+      "question": "Proč je On-Line UPS vhodná pro kritická zařízení?",
+      "options": [
+        { "text": "Poskytuje dokonalou ochranu před šumem [cite: 122]", "correct": true },
+        { "text": "Eliminuje přepětí a výkyvy [cite: 122]", "correct": true },
+        { "text": "Má nulovou dobu přepnutí [cite: 145]", "correct": true },
+        { "text": "Je nejlevnější na trhu [cite: 122]", "correct": false }
+      ],
+      "explanation": "On-Line UPS funguje jako dokonalý filtr, i když je dražší[cite: 122]."
+    },
+    {
+      "id": "zdroj-036",
+      "type": "truefalse",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "statement": "Offline UPS se aktivuje až v momentě, kdy dojde k výpadku proudu.",
+      "answer": true,
+      "explanation": "To je hlavní vlastnost offline topologie[cite: 120]."
+    },
+    {
+      "id": "zdroj-037",
+      "type": "matching",
+      "topic": "princip-zdroje",
+      "difficulty": 3,
+      "question": "Přiřaďte odborný termín k jeho významu.",
+      "pairs": [
+        { "left": "Zvlnění", "right": "Nestabilita výstupního napětí [cite: 102]" },
+        { "left": "Tepelný výkon", "right": "Produkce odpadního tepla [cite: 110]" },
+        { "left": "Účinnost", "right": "Efektivita přeměny energie [cite: 97]" }
+      ],
+      "explanation": "Tyto parametry přímo ovlivňují provozní náklady a životnost zdroje[cite: 97, 102, 110]."
+    },
+    {
+      "id": "zdroj-038",
+      "type": "numeric",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Kolik typů regulace napětí UPS dokument zmiňuje?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "typy",
+      "explanation": "Bez regulace, AVR (Line-Interactive) a Plná konverze (Online)[cite: 147, 148, 149, 151]."
+    },
+    {
+      "id": "zdroj-039",
+      "type": "single",
+      "topic": "princip-zdroje",
+      "difficulty": 3,
+      "question": "Co reprezentuje zátěž (Rz) ve schématu zdroje?",
+      "options": [
+        { "text": "Zařízení, které je napájeno zdrojem [cite: 88]", "correct": true },
+        { "text": "Rezistor pro topení [cite: 88]", "correct": false },
+        { "text": "Jistič v rozvaděči [cite: 88]", "correct": false }
+      ],
+      "explanation": "Rz představuje odebíraný výkon napájeného zařízení[cite: 88]."
+    },
+    {
+      "id": "zdroj-040",
+      "type": "multiple",
+      "topic": "ups-parametry",
+      "difficulty": 2,
+      "question": "Jaké ochrany by měla mít správná UPS?",
+      "options": [
+        { "text": "Proti přepětí [cite: 157]", "correct": true },
+        { "text": "Proti přetížení [cite: 158]", "correct": true },
+        { "text": "Tepelnou ochranu [cite: 160]", "correct": true },
+        { "text": "Ochranu proti prachu [cite: 160]", "correct": false }
+      ],
+      "explanation": "Ochrany jako přepětí, přetížení a přehřátí jsou standardem pro bezpečnost[cite: 157, 158, 160]."
+    }
+  ]
+}

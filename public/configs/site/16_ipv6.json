@@ -1,0 +1,502 @@
+{
+  "subject": "ipv6",
+  "name": "16. IPv6 adresace",
+  "topics": [
+    { "id": "ipv6-obecne", "name": "Princip a struktura IPv6" },
+    { "id": "zapis-ipv6", "name": "Zápis a pravidla" },
+    { "id": "kategorie-ipv6", "name": "Kategorie adres (Unicast, Multicast, Anycast)" },
+    { "id": "prechod", "name": "Mechanismy přechodu (IPv4 -> IPv6)" }
+  ],
+  "questions": [
+    {
+      "id": "ipv6-001",
+      "type": "single",
+      "topic": "ipv6-obecne",
+      "difficulty": 1,
+      "question": "Jaká je celková velikost adresy v protokolu IPv6?",
+      "options": [
+        { "text": "128 bitů", "correct": true },
+        { "text": "32 bitů", "correct": false },
+        { "text": "64 bitů", "correct": false },
+        { "text": "256 bitů", "correct": false }
+      ],
+      "explanation": "IPv6 má velikost adresy 128 bitů, což dramaticky rozšiřuje adresní prostor."
+    },
+    {
+      "id": "ipv6-002",
+      "type": "truefalse",
+      "topic": "ipv6-obecne",
+      "statement": "IPv6 adresa se skládá ze dvou 64bitových částí: jedna pro síť a jedna pro zařízení.",
+      "answer": true,
+      "explanation": "Prvních 64 bitů je pro identifikaci sítě a druhých 64 bitů pro identifikaci zařízení."
+    },
+    {
+      "id": "ipv6-003",
+      "type": "multiple",
+      "topic": "ipv6-obecne",
+      "difficulty": 2,
+      "question": "Jaké jsou hlavní cíle zavedení protokolu IPv6?",
+      "options": [
+        { "text": "Masivní rozšíření adresního prostoru.", "correct": true },
+        { "text": "Minimalizace zátěže směrovačů.", "correct": true },
+        { "text": "Umožnění přenosu multimediálních dat.", "correct": true },
+        { "text": "Zvýšení počtu IPv4 adres.", "correct": false }
+      ],
+      "explanation": "IPv6 řeší vyčerpání adres, zátěž routerů a multimediální přenosy."
+    },
+    {
+      "id": "ipv6-004",
+      "type": "gap",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "text": "Adresa IPv6 se zapisuje pomocí {{0}} číslic rozdělených do {{1}} hextetů, které jsou odděleny {{2}}.",
+      "blanks": [
+        { "accept": ["hexadecimálních", "hexadecimalnich"] },
+        { "accept": ["8"] },
+        { "accept": ["dvojtečkami", "dvojtečkou"] }
+      ],
+      "explanation": "Používají se hexadecimální číslice v 8 hextetech oddělených dvojtečkami."
+    },
+    {
+      "id": "ipv6-005",
+      "type": "single",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "question": "Pokud adresa obsahuje několik po sobě jdoucích nulových skupin, jakým symbolem je lze v zápisu nahradit?",
+      "options": [
+        { "text": "Dvojitou dvojtečkou (::)", "correct": true },
+        { "text": "Pomlčkou (-)", "correct": false },
+        { "text": "Tečkou (.)", "correct": false },
+        { "text": "Hvězdičkou (*)", "correct": false }
+      ],
+      "explanation": "Sekvenci nulových hextetů lze zkrátit pomocí symbolu ::."
+    },
+    {
+      "id": "ipv6-006",
+      "type": "truefalse",
+      "topic": "zapis-ipv6",
+      "difficulty": 1,
+      "statement": "V IPv6 adrese lze zkrácení pomocí symbolu :: použít v jedné adrese vícekrát.",
+      "answer": false,
+      "explanation": "Zkrácení :: lze v jedné adrese použít pouze jednou, aby zápis zůstal jednoznačný."
+    },
+    {
+      "id": "ipv6-007",
+      "type": "categorize",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Rozřaďte typ adresy IPv6 k jejímu základnímu účelu.",
+      "categories": ["Unicast", "Multicast", "Anycast"],
+      "items": [
+        { "text": "Doručení dat konkrétnímu PC", "category": "Unicast" },
+        { "text": "Doručení skupině rozhraní (nahrazuje broadcast)", "category": "Multicast" },
+        { "text": "Doručení nejbližšímu rozhraní ze skupiny", "category": "Anycast" },
+        { "text": "Prefix FF::/8", "category": "Multicast" }
+      ],
+      "explanation": "Unicast je 1:1, Multicast 1:skupina, Anycast 1:nejbližší ze skupiny."
+    },
+    {
+      "id": "ipv6-008",
+      "type": "multiple",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Které z těchto rozlišení spadají pod Unicast adresy?",
+      "options": [
+        { "text": "Global Unicast", "correct": true },
+        { "text": "Link Local Unicast", "correct": true },
+        { "text": "Unique Local Unicast", "correct": true },
+        { "text": "FF::/8 Multicast", "correct": false }
+      ],
+      "explanation": "Unicast se dělí na Global, Link Local a Unique Local."
+    },
+    {
+      "id": "ipv6-009",
+      "type": "single",
+      "topic": "prechod",
+      "difficulty": 2,
+      "question": "Co znamená pojem 'Dual Stack' v kontextu přechodu na IPv6?",
+      "options": [
+        { "text": "Současný běh IPv4 i IPv6 na jednom uzlu.", "correct": true },
+        { "text": "Dvě fyzické síťové karty v jednom PC.", "correct": false },
+        { "text": "Použití dvou různých kabelů pro data.", "correct": false }
+      ],
+      "explanation": "Dual Stack umožňuje zařízení rozumět oběma verzím protokolu současně."
+    },
+    {
+      "id": "ipv6-010",
+      "type": "truefalse",
+      "topic": "prechod",
+      "statement": "Metoda tunelování zapouzdří IPv6 pakety do IPv4 paketu, aby mohly cestovat přes starou infrastrukturu.",
+      "answer": true,
+      "explanation": "Tunelování umožňuje překonat IPv4 síť pomocí zapouzdření IPv6 paketu dovnitř IPv4 paketu."
+    },
+    {
+      "id": "ipv6-011",
+      "type": "numeric",
+      "topic": "ipv6-obecne",
+      "difficulty": 2,
+      "question": "Jaký je prefix multicastových adres v IPv6?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Multicast adresy mají prefix FF::/8, tedy 8 bitů."
+    },
+    {
+      "id": "ipv6-012",
+      "type": "gap",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "text": "Nespecifikovaná adresa IPv6 se zapisuje jako {{0}}, zatímco adresa smyčky (loopback) je {{1}}.",
+      "blanks": [
+        { "accept": ["::/128"] },
+        { "accept": ["::1/128"] }
+      ],
+      "explanation": "Nespecifikovaná je ::/128, loopback je ::1/128."
+    },
+    {
+      "id": "ipv6-013",
+      "type": "single",
+      "topic": "zapis-ipv6",
+      "difficulty": 3,
+      "question": "Jak se nazývá 16bitová část IPv6 adresy zapisovaná hexadecimálně?",
+      "options": [
+        { "text": "Hextet", "correct": true },
+        { "text": "Oktet", "correct": false },
+        { "text": "Byte", "correct": false }
+      ],
+      "explanation": "V IPv6 se nepoužívá termín oktet (8 bitů), ale hextet (16 bitů)."
+    },
+    {
+      "id": "ipv6-014",
+      "type": "ordering",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "question": "Seřaďte části IPv6 adresy (prvních 64 bitů) podle hierarchie.",
+      "items": [
+        "Region (/23)",
+        "Poskytovatel (/32)",
+        "Síť (/48)",
+        "Podsíť (/64)"
+      ],
+      "explanation": "Hierarchie je Region -> Poskytovatel -> Síť -> Podsíť."
+    },
+    {
+      "id": "ipv6-015",
+      "type": "multiple",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Které adresy IPv6 nejsou směrovány routery?",
+      "options": [
+        { "text": "Link Local Unicast", "correct": true },
+        { "text": "Global Unicast", "correct": false },
+        { "text": "Anycast", "correct": false }
+      ],
+      "explanation": "Link Local adresy jsou omezeny pouze na jednu fyzickou linku a routery je nesměrují."
+    },
+    {
+      "id": "ipv6-016",
+      "type": "matching",
+      "topic": "prechod",
+      "difficulty": 2,
+      "question": "Přiřaďte metodu přechodu k jejímu popisu.",
+      "pairs": [
+        { "left": "Dual Stack", "right": "Běh IPv4 a IPv6 na jednom uzlu" },
+        { "left": "Tunelování", "right": "Zapouzdření IPv6 do IPv4" },
+        { "left": "NAT64", "right": "Překlad mezi IPv6 a IPv4 službou" }
+      ],
+      "explanation": "Dual Stack je paralelní běh, Tunelování je enkapsulace, NAT64 je translační brána."
+    },
+    {
+      "id": "ipv6-017",
+      "type": "truefalse",
+      "topic": "ipv6-obecne",
+      "statement": "IPv6 adresa má 4× více bitů než adresa IPv4.",
+      "answer": true,
+      "explanation": "IPv6 má 128 bitů, IPv4 má 32 bitů. 128 / 32 = 4."
+    },
+    {
+      "id": "ipv6-018",
+      "type": "numeric",
+      "topic": "zapis-ipv6",
+      "difficulty": 1,
+      "question": "Kolik hextetů obsahuje celkem jedna plná IPv6 adresa?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "hextetů",
+      "explanation": "128 bitů / 16 bitů = 8 hextetů."
+    },
+    {
+      "id": "ipv6-019",
+      "type": "single",
+      "topic": "prechod",
+      "difficulty": 3,
+      "question": "Jaké číslo protokolu se používá pro zapouzdření IPv6 do IPv4 při tunelování?",
+      "options": [
+        { "text": "41", "correct": true },
+        { "text": "80", "correct": false },
+        { "text": "6", "correct": false }
+      ],
+      "explanation": "Protokol číslo 41 se používá pro tunelování IPv6 v IPv4."
+    },
+    {
+      "id": "ipv6-020",
+      "type": "passage",
+      "topic": "ipv6-obecne",
+      "difficulty": 2,
+      "passage": "Protokol IPv6 byl vytvořen jako reakce na vyčerpání adresního prostoru IPv4. Jeho 128bitová adresa poskytuje tak obrovské množství kombinací, že by teoreticky mohl přidělit 5*10^28 adres každému člověku na planetě. Kromě navýšení počtu adres má za úkol zjednodušit hlavičku paketu, čímž minimalizuje zátěž směrovačů a umožňuje efektivnější přenos multimediálního provozu.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Cílem IPv6 je mimo jiné snížit zátěž směrovačů při zpracování paketů.",
+          "answer": true,
+          "explanation": "Jedním z cílů IPv6 je zjednodušení hlavičky paketu a tím i snížení zátěže routerů."
+        },
+        {
+          "type": "single",
+          "question": "Který protokol IPv6 nahrazuje v otázce adresního prostoru?",
+          "options": [
+            { "text": "IPv4", "correct": true },
+            { "text": "ARP", "correct": false },
+            { "text": "ICMP", "correct": false }
+          ],
+          "explanation": "IPv6 byl zaveden jako náhrada za IPv4 kvůli jeho vyčerpání."
+        }
+      ]
+    },
+    {
+      "id": "ipv6-021",
+      "type": "gap",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "text": "Adresa fe80:0000:0000:0000:211:d8ff:fe50:f8cd lze zkrátit na {{0}}.",
+      "blanks": [
+        { "accept": ["fe80::211:d8ff:fe50:f8cd"] }
+      ],
+      "explanation": "Sekvence nul se nahradí ::."
+    },
+    {
+      "id": "ipv6-022",
+      "type": "numeric",
+      "topic": "ipv6-obecne",
+      "difficulty": 2,
+      "question": "Kolik hextetů (16-bitových částí) tvoří první část (identifikace sítě) IPv6 adresy?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "hextety",
+      "explanation": "64 bitů pro síť / 16 bitů = 4 hextety."
+    },
+    {
+      "id": "ipv6-023",
+      "type": "truefalse",
+      "topic": "kategorie-ipv6",
+      "statement": "Anycast adresa v IPv6 doručí paket všem rozhraním ve skupině.",
+      "answer": false,
+      "explanation": "Anycast doručí paket pouze jednomu (obvykle nejbližšímu) rozhraní ze skupiny."
+    },
+    {
+      "id": "ipv6-024",
+      "type": "multiple",
+      "topic": "prechod",
+      "difficulty": 2,
+      "question": "Co umožňuje přechod mezi IPv4 a IPv6?",
+      "options": [
+        { "text": "Dual Stack", "correct": true },
+        { "text": "Tunelování", "correct": true },
+        { "text": "Překlad adres (NAT64)", "correct": true }
+      ],
+      "explanation": "Základní mechanismy jsou Dual Stack, tunelování a NAT64."
+    },
+    {
+      "id": "ipv6-025",
+      "type": "single",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Které adresy nahrazují v IPv6 původní Broadcast z IPv4?",
+      "options": [
+        { "text": "Multicast adresy", "correct": true },
+        { "text": "Unicast adresy", "correct": false },
+        { "text": "Anycast adresy", "correct": false }
+      ],
+      "explanation": "Koncept broadcastu byl v IPv6 nahrazen multicastem."
+    },
+    {
+      "id": "ipv6-026",
+      "type": "matching",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "question": "Přiřaďte zkrácený zápis k plnému (v příkladech nulových skupin).",
+      "pairs": [
+        { "left": "::1", "right": "0000:0000:0000:0000:0000:0000:0000:0001" },
+        { "left": "2001:db8::1", "right": "2001:0db8:0000:0000:0000:0000:0000:0001" }
+      ],
+      "explanation": ":: nahrazuje řadu nulových skupin."
+    },
+    {
+      "id": "ipv6-027",
+      "type": "ordering",
+      "topic": "ipv6-obecne",
+      "difficulty": 3,
+      "question": "Seřaďte bity IPv6 adresy od začátku v pořadí hierarchie.",
+      "items": [
+        "Region (/23)",
+        "Poskytovatel (/32)",
+        "Síť (/48)",
+        "Podsíť (/64)"
+      ],
+      "explanation": "Prvních 64 bitů určuje hierarchii sítě od regionu po podsíť."
+    },
+    {
+      "id": "ipv6-028",
+      "type": "truefalse",
+      "topic": "zapis-ipv6",
+      "statement": "Nuly na začátku každého hextetu lze v zápisu IPv6 vynechat.",
+      "answer": true,
+      "explanation": "Např. 0718 lze zapsat jako 718."
+    },
+    {
+      "id": "ipv6-029",
+      "type": "single",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Který typ Unicast adresy není směrován routery?",
+      "options": [
+        { "text": "Link Local Unicast", "correct": true },
+        { "text": "Global Unicast", "correct": false },
+        { "text": "Unique Local Unicast", "correct": false }
+      ],
+      "explanation": "Link Local adresy jsou určené pouze pro komunikaci na stejné lince."
+    },
+    {
+      "id": "ipv6-030",
+      "type": "numeric",
+      "topic": "ipv6-obecne",
+      "difficulty": 3,
+      "question": "Kolikrát větší je adresní prostor IPv6 oproti IPv4?",
+      "answer": 96,
+      "tolerance": 0,
+      "unit": "rozdíl v bitech",
+      "explanation": "IPv6 má 128 bitů, IPv4 32 bitů, tedy o 96 bitů více (2^96 násobně větší)."
+    },
+    {
+      "id": "ipv6-031",
+      "type": "multiple",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Co platí pro Multicast adresy v IPv6?",
+      "options": [
+        { "text": "Mají prefix FF::/8.", "correct": true },
+        { "text": "Druhý oktet určuje dosah.", "correct": true },
+        { "text": "Nahrazují broadcast.", "correct": true }
+      ],
+      "explanation": "Multicast má prefix FF::/8, druhý oktet definuje dosah a nahrazuje broadcast."
+    },
+    {
+      "id": "ipv6-032",
+      "type": "truefalse",
+      "topic": "prechod",
+      "statement": "NAT64 slouží k překladu adres mezi IPv6 a IPv4 světem.",
+      "answer": true,
+      "explanation": "NAT64 je standardní metoda překladu pro komunikaci IPv6 hostů s IPv4 službami."
+    },
+    {
+      "id": "ipv6-033",
+      "type": "single",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "question": "Jaký termín se používá pro 16bitovou skupinu v IPv6?",
+      "options": [
+        { "text": "Hextet", "correct": true },
+        { "text": "Oktet", "correct": false },
+        { "text": "Sextet", "correct": false }
+      ],
+      "explanation": "16 bitů tvoří hextet."
+    },
+    {
+      "id": "ipv6-034",
+      "type": "numeric",
+      "topic": "kategorie-ipv6",
+      "difficulty": 2,
+      "question": "Kolik bitů určuje identifikaci zařízení v rámci sítě v IPv6?",
+      "answer": 64,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Prvních 64 bitů je síť, druhých 64 bitů zařízení."
+    },
+    {
+      "id": "ipv6-035",
+      "type": "passage",
+      "topic": "prechod",
+      "passage": "Přechod na IPv6 není okamžitý proces. Využívají se mechanismy jako Dual Stack, kde hostitelé podporují obě verze IP protokolu. Další možností je tunelování, kdy jsou IPv6 pakety zapouzdřeny do IPv4 paketů pomocí protokolu 41, aby mohly cestovat skrze stávající síť. Pokud je potřeba komunikovat přímo s IPv4 službou, používá se metoda NAT64, která překládá adresy.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Co je 'Dual Stack' hostitel?",
+          "options": [
+            { "text": "Hostitel podporující IPv4 i IPv6 zároveň.", "correct": true },
+            { "text": "Hostitel s dvojitou RAM pamětí.", "correct": false }
+          ],
+          "explanation": "Dual stack znamená podporu dvou IP verzí v jednom uzlu."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Při tunelování se IPv4 paket balí do IPv6 paketu.",
+          "answer": false,
+          "explanation": "Naopak, IPv6 paket se balí do IPv4, aby prošel starou sítí."
+        }
+      ]
+    },
+    {
+      "id": "ipv6-036",
+      "type": "gap",
+      "topic": "zapis-ipv6",
+      "difficulty": 2,
+      "text": "IPv6 adresa má délku {{0}} bitů a zapisuje se pomocí {{1}} číslic rozdělených do {{2}} skupin.",
+      "blanks": [
+        { "accept": ["128"] },
+        { "accept": ["hexadecimálních", "hexadecimalnich"] },
+        { "accept": ["8"] }
+      ],
+      "explanation": "IPv6 je 128bitová, hexadecimální, 8 hextetů."
+    },
+    {
+      "id": "ipv6-037",
+      "type": "truefalse",
+      "topic": "zapis-ipv6",
+      "statement": "IPv6 hextety se oddělují tečkami.",
+      "answer": false,
+      "explanation": "IPv6 hextety se oddělují dvojtečkami, tečky patří k IPv4."
+    },
+    {
+      "id": "ipv6-038",
+      "type": "single",
+      "topic": "zapis-ipv6",
+      "difficulty": 1,
+      "question": "Kolik hexadecimálních číslic může obsahovat jeden hextet?",
+      "options": [
+        { "text": "4", "correct": true },
+        { "text": "8", "correct": false },
+        { "text": "16", "correct": false }
+      ],
+      "explanation": "Jeden hextet je 16 bitů, tedy 4 hexadecimální číslice (4*4 = 16)."
+    },
+    {
+      "id": "ipv6-039",
+      "type": "numeric",
+      "topic": "ipv6-obecne",
+      "difficulty": 3,
+      "question": "Kolikrát více adres existuje v IPv6 oproti IPv4?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Je to 2^96 násobně více adres."
+    },
+    {
+      "id": "ipv6-040",
+      "type": "truefalse",
+      "topic": "kategorie-ipv6",
+      "statement": "Anycast adresy jsou v IPv6 unikátní, protože mohou být přiřazeny pouze jednomu rozhraní.",
+      "answer": false,
+      "explanation": "Anycast adresa může být přiřazena více rozhraním, ale pakety jsou doručeny pouze jednomu (nejbližšímu)."
+    }
+  ]
+}

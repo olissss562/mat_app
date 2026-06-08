@@ -1,0 +1,484 @@
+{
+  "subject": "pameti",
+  "name": "2. Polovodičové paměti",
+  "topics": [
+    { "id": "pameti-obecne", "name": "Rozdělení a parametry" },
+    { "id": "ram-rom", "name": "RAM vs ROM technologie" },
+    { "id": "vnitrni-fungovani", "name": "Cyklus čtení a zápisu" }
+  ],
+  "questions": [
+    {
+      "id": "mem-001",
+      "type": "single",
+      "topic": "pameti-obecne",
+      "difficulty": 1,
+      "question": "Jak se nazývá paměť umístěná přímo na čipu procesoru pro velmi rychlé uchování informací?",
+      "options": [
+        { "text": "Registry", "correct": true },
+        { "text": "Flash ROM", "correct": false },
+        { "text": "Vnější disk", "correct": false }
+      ],
+      "explanation": "Registry jsou paměťová místa na čipu procesoru."
+    },
+    {
+      "id": "mem-002",
+      "type": "truefalse",
+      "topic": "pameti-obecne",
+      "statement": "Přístupová doba paměti je doba, která uplyne od zadání požadavku po zpřístupnění dat.",
+      "answer": true,
+      "explanation": "Ano, definice přístupové doby odpovídá tomuto popisu."
+    },
+    {
+      "id": "mem-003",
+      "type": "multiple",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Které z následujících pamětí jsou volatilní (energeticky závislé)?",
+      "options": [
+        { "text": "SRAM", "correct": true },
+        { "text": "DRAM", "correct": true },
+        { "text": "ROM", "correct": false },
+        { "text": "Flash ROM", "correct": false }
+      ],
+      "explanation": "RWM paměti (SRAM, DRAM) jsou volatilní."
+    },
+    {
+      "id": "mem-004",
+      "type": "gap",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "text": "DRAM paměť musí být neustále periodicky {{0}}, aby nedošlo ke ztrátě informací, protože kondenzátory se samovolně {{1}}.",
+      "blanks": [
+        { "accept": ["oživovat", "obnovovat", "refreshovat"] },
+        { "accept": ["vybíjejí"] }
+      ],
+      "explanation": "DRAM buňka je kondenzátor, který se samovolně vybíjí, proto vyžaduje refresh."
+    },
+    {
+      "id": "mem-005",
+      "type": "single",
+      "topic": "vnitrni-fungovani",
+      "difficulty": 2,
+      "question": "Z čeho je tvořena jedna paměťová buňka u paměti SRAM?",
+      "options": [
+        { "text": "Bistabilní klopný obvod", "correct": true },
+        { "text": "Kondenzátor a tranzistor", "correct": false },
+        { "text": "Tavná pojistka" }
+      ],
+      "explanation": "SRAM buňka je tvořena bistabilním klopným obvodem."
+    },
+    {
+      "id": "mem-006",
+      "type": "numeric",
+      "topic": "ram-rom",
+      "difficulty": 3,
+      "question": "Jaká je životnost Flash ROM paměti v počtech cyklů zápis/výmaz?",
+      "answer": 100000,
+      "tolerance": 0,
+      "unit": "cyklů",
+      "explanation": "Životnost Flash ROM je omezena na cca 100 000 cyklů."
+    },
+    {
+      "id": "mem-007",
+      "type": "categorize",
+      "topic": "pameti-obecne",
+      "difficulty": 2,
+      "question": "Zařaďte paměť podle typu přístupu.",
+      "categories": ["RAM (Random Access)", "SAM (Sequential Access)"],
+      "items": [
+        { "text": "Operační paměť", "category": "RAM (Random Access)" },
+        { "text": "Magnetická páska (historicky)", "category": "SAM (Sequential Access)" },
+        { "text": "Rychlé vyhledávání podle adresy", "category": "RAM (Random Access)" },
+        { "text": "Nutnost čtení předcházejících dat", "category": "SAM (Sequential Access)" }
+      ],
+      "explanation": "RAM umožňuje přímý přístup, SAM sekvenční."
+    },
+    {
+      "id": "mem-008",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Co se stane při čtení z DRAM buňky?",
+      "options": [
+        { "text": "Hodnota se vyčte, ale buňka se vybije (destruktivní čtení).", "correct": true },
+        { "text": "Hodnota se pouze přečte beze změny.", "correct": false },
+        { "text": "Buňka se automaticky přemaže nulou." }
+      ],
+      "explanation": "Čtení z DRAM je destruktivní, hodnotu je nutné po přečtení znovu zapsat."
+    },
+    {
+      "id": "mem-009",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "EPROM paměti lze mazat pomocí elektrických impulsů.",
+      "answer": false,
+      "explanation": "EPROM se maže pomocí UV záření."
+    },
+    {
+      "id": "mem-010",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Jaký typ paměti ROM lze mazat pomocí elektrických impulsů v řádu milisekund?",
+      "options": [
+        { "text": "EEPROM", "correct": true },
+        { "text": "EPROM", "correct": false },
+        { "text": "PROM", "correct": false }
+      ],
+      "explanation": "EEPROM využívá elektrické mazání."
+    },
+    {
+      "id": "mem-011",
+      "type": "multiple",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Využití Flash ROM pamětí:",
+      "options": [
+        { "text": "Externí flash disky", "correct": true },
+        { "text": "Paměťové karty", "correct": true },
+        { "text": "SSD disky", "correct": true },
+        { "text": "Registry procesoru", "correct": false }
+      ],
+      "explanation": "Flash ROM se používá u disků a karet, registry jsou SRAM."
+    },
+    {
+      "id": "mem-012",
+      "type": "ordering",
+      "topic": "vnitrni-fungovani",
+      "difficulty": 3,
+      "question": "Seřaďte kroky zápisu do paměti.",
+      "items": [
+        "Uvedení adresy místa",
+        "Dekodér vybere adresový vodič",
+        "Nastavení datových hodnot",
+        "Vložení do paměťových buněk"
+      ],
+      "explanation": "Zápis probíhá přes adresu, dekodér, nastavení dat a vložení."
+    },
+    {
+      "id": "mem-013",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 3,
+      "question": "Kolik tranzistorů tvoří minimálně jednu buňku SRAM?",
+      "options": [
+        { "text": "4", "correct": true },
+        { "text": "1", "correct": false },
+        { "text": "10" }
+      ],
+      "explanation": "Jedna buňka SRAM je tvořena minimálně 4 tranzistory."
+    },
+    {
+      "id": "mem-014",
+      "type": "truefalse",
+      "topic": "pameti-obecne",
+      "statement": "Registry jsou paměti vnější.",
+      "answer": false,
+      "explanation": "Registry jsou paměťová místa přímo na čipu procesoru (velmi vnitřní)."
+    },
+    {
+      "id": "mem-015",
+      "type": "numeric",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Doba mazání EPROM paměti pomocí UV záření je cca:",
+      "answer": 30,
+      "tolerance": 5,
+      "unit": "minut",
+      "explanation": "Mazání EPROM trvá cca 30 minut."
+    },
+    {
+      "id": "mem-016",
+      "type": "multiple",
+      "topic": "pameti-obecne",
+      "difficulty": 1,
+      "question": "Které z těchto parametrů jsou parametry pamětí?",
+      "options": [
+        { "text": "Kapacita", "correct": true },
+        { "text": "Přístupová doba", "correct": true },
+        { "text": "Cena za bit", "correct": true },
+        { "text": "Hlučnost", "correct": false }
+      ],
+      "explanation": "Kapacita, přístupová doba a cena jsou parametry pamětí."
+    },
+    {
+      "id": "mem-017",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "PROM paměť lze programovat:",
+      "options": [
+        { "text": "Pouze jednou", "correct": true },
+        { "text": "Opakovaně", "correct": false },
+        { "text": "Nikdy" }
+      ],
+      "explanation": "Zápis u PROM je možný jen jednou pomocí přetavení pojistek."
+    },
+    {
+      "id": "mem-018",
+      "type": "truefalse",
+      "topic": "vnitrni-fungovani",
+      "statement": "Při čtení z paměti se adresa přivede na vstup dekodéru.",
+      "answer": true,
+      "explanation": "Adresa paměťového místa se přivede na vstup dekodéru, který vybere řádek."
+    },
+    {
+      "id": "mem-019",
+      "type": "multiple",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Co platí pro DRAM?",
+      "options": [
+        { "text": "Je pomalejší než SRAM.", "correct": true },
+        { "text": "Má větší kapacitu než SRAM.", "correct": true },
+        { "text": "Vyžaduje obnovu dat.", "correct": true }
+      ],
+      "explanation": "DRAM je pomalejší, má větší kapacitu a vyžaduje refresh."
+    },
+    {
+      "id": "mem-020",
+      "type": "single",
+      "topic": "vnitrni-fungovani",
+      "difficulty": 3,
+      "question": "Co se stane, pokud projde hodnota logické 1 při čtení přes paměťovou buňku?",
+      "options": [
+        { "text": "Na výstupu obdržíme hodnotu bitu 1.", "correct": true },
+        { "text": "Obdržíme hodnotu bitu 0.", "correct": false },
+        { "text": "Paměť se resetuje." }
+      ],
+      "explanation": "Pokud log. 1 projde, na výstupu je 1, jinak 0."
+    },
+    {
+      "id": "mem-021",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "EEPROM využívá UV záření k mazání dat.",
+      "answer": false,
+      "explanation": "EEPROM využívá elektrické impulsy."
+    },
+    {
+      "id": "mem-022",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Co je základní stavební prvek polovodičových pamětí?",
+      "options": [
+        { "text": "Paměťová buňka", "correct": true },
+        { "text": "Tranzistor", "correct": false },
+        { "text": "Kondenzátor" }
+      ],
+      "explanation": "Tyto paměti se skládají z tzv. paměťových buněk."
+    },
+    {
+      "id": "mem-023",
+      "type": "numeric",
+      "topic": "ram-rom",
+      "difficulty": 1,
+      "question": "Jakou kapacitu má jedna základní paměťová buňka?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "bit",
+      "explanation": "Každá základní paměťová buňka má kapacitu 1 bit."
+    },
+    {
+      "id": "mem-024",
+      "type": "multiple",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Které parametry určují cenu paměti?",
+      "options": [
+        { "text": "Cena za bit", "correct": true },
+        { "text": "Výrobní proces", "correct": true },
+        { "text": "Rychlost", "correct": true }
+      ],
+      "explanation": "Cena za bit je základní parametr, ovlivňuje ji i rychlost a technologie."
+    },
+    {
+      "id": "mem-025",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "SRAM je vhodná pro vyrovnávací paměť Cache.",
+      "answer": true,
+      "explanation": "SRAM má nízkou přístupovou dobu, což ji předurčuje pro Cache."
+    },
+    {
+      "id": "mem-026",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Jak jsou uspořádány paměťové buňky?",
+      "options": [
+        { "text": "Maticově", "correct": true },
+        { "text": "Lineárně", "correct": false },
+        { "text": "Náhodně" }
+      ],
+      "explanation": "Paměťové buňky jsou uspořádány maticově."
+    },
+    {
+      "id": "mem-027",
+      "type": "numeric",
+      "topic": "vnitrni-fungovani",
+      "difficulty": 3,
+      "question": "Kolik minimálně tranzistorů má buňka SRAM?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Jedna buňka je tvořena minimálně 4 tranzistory."
+    },
+    {
+      "id": "mem-028",
+      "type": "multiple",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Které z těchto pamětí jsou nevolatilní?",
+      "options": [
+        { "text": "ROM", "correct": true },
+        { "text": "Flash ROM", "correct": true },
+        { "text": "EEPROM", "correct": true }
+      ],
+      "explanation": "ROM, Flash, EEPROM jsou energeticky nezávislé."
+    },
+    {
+      "id": "mem-029",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "DRAM paměti nepotřebují obnovu dat.",
+      "answer": false,
+      "explanation": "DRAM vyžaduje periodické oživování (refresh) kvůli vybíjení kondenzátorů."
+    },
+    {
+      "id": "mem-030",
+      "type": "single",
+      "topic": "ram-rom",
+      "difficulty": 2,
+      "question": "Jaký prvek je klíčový pro DRAM buňku?",
+      "options": [
+        { "text": "Kondenzátor", "correct": true },
+        { "text": "Klopný obvod", "correct": false },
+        { "text": "Tavná pojistka" }
+      ],
+      "explanation": "Paměťová buňka DRAM je tvořena kondenzátorem a tranzistorem."
+    },
+    {
+      "id": "mem-031",
+      "type": "multiple",
+      "topic": "pameti-obecne",
+      "difficulty": 1,
+      "question": "Do jaké kategorie pamětí řadíme Registry?",
+      "options": [
+        { "text": "Paměť procesoru", "correct": true },
+        { "text": "Vnitřní paměť", "correct": true },
+        { "text": "Krátkodobá paměť", "correct": true }
+      ],
+      "explanation": "Registry jsou paměti na čipu procesoru pro krátkodobé uchování."
+    },
+    {
+      "id": "mem-032",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "Flash ROM je mazatelná po blocích.",
+      "answer": true,
+      "explanation": "Flash je mazatelná/zapisovatelná po blocích."
+    },
+    {
+      "id": "mem-033",
+      "type": "numeric",
+      "topic": "pameti-obecne",
+      "difficulty": 2,
+      "question": "Jak se nazývá doba potřebná pro čtení dat v paměti?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "přístupová doba",
+      "explanation": "Přístupová doba je klíčový parametr pamětí."
+    },
+    {
+      "id": "mem-034",
+      "type": "single",
+      "topic": "vnitrni-fungovani",
+      "difficulty": 3,
+      "question": "Jaká hodnota tranzistoru při zápisu vybere adresový vodič?",
+      "options": [
+        { "text": "Logická 1", "correct": true },
+        { "text": "Logická 0", "correct": false },
+        { "text": "Logická X" }
+      ],
+      "explanation": "Dekodér nastaví hodnotu adresového vodiče na log. 1."
+    },
+    {
+      "id": "mem-035",
+      "type": "passage",
+      "topic": "vnitrni-fungovani",
+      "passage": "Proces zápisu do paměti začíná uvedením adresy. Dekodér následně vybere správný adresový vodič nastavením na logickou jedničku. Poté se nastaví hodnoty bitů (b1 až b4), které mají být zapsány. Tyto hodnoty jsou následně vloženy do paměťových buněk na vybraném řádku.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Co je prvním krokem při zápisu?",
+          "options": [
+            { "text": "Uvedení adresy paměťového místa", "correct": true },
+            { "text": "Vložení dat do buněk", "correct": false }
+          ],
+          "explanation": "Zápis začíná uvedením adresy paměťového místa."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Dekodér nastavuje adresový vodič na logickou 0 při výběru buňky.",
+          "answer": false,
+          "explanation": "Dekodér nastaví hodnotu na logickou 1."
+        }
+      ]
+    },
+    {
+      "id": "mem-036",
+      "type": "gap",
+      "topic": "vnitrni-fungovani",
+      "text": "Při čtení z paměti je adresa přivedena na vstup {{0}}, který vybere řádek, a na datových vodičích se objeví {{1}}.",
+      "blanks": [
+        { "accept": ["dekodéru", "dekoderu"] },
+        { "accept": ["hodnota", "log. 1"] }
+      ],
+      "explanation": "Dekodér vybere řádek a na vodičích se objeví hodnota uloženého bitu."
+    },
+    {
+      "id": "mem-037",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "RAM paměti jsou energeticky nezávislé.",
+      "answer": false,
+      "explanation": "RAM (volatilní) paměti jsou energeticky závislé."
+    },
+    {
+      "id": "mem-038",
+      "type": "multiple",
+      "topic": "pameti-obecne",
+      "difficulty": 1,
+      "question": "Které z těchto pamětí jsou vnitřní?",
+      "options": [
+        { "text": "Operační paměť (RAM)", "correct": true },
+        { "text": "Cache paměť", "correct": true },
+        { "text": "Pevný disk (HDD)", "correct": false }
+      ],
+      "explanation": "Vnitřní paměti jsou osazené většinou na základní desce, vnější jsou disky."
+    },
+    {
+      "id": "mem-039",
+      "type": "single",
+      "topic": "vnitrni-fungovani",
+      "difficulty": 2,
+      "question": "Co se zesiluje na koncích datových vodičů při čtení?",
+      "options": [
+        { "text": "Informace (hodnota bitu)", "correct": true },
+        { "text": "Napětí napájení", "correct": false },
+        { "text": "Chyby" }
+      ],
+      "explanation": "Informační hodnota na koncích datových vodičů je zesílena."
+    },
+    {
+      "id": "mem-040",
+      "type": "truefalse",
+      "topic": "ram-rom",
+      "statement": "SRAM paměť je levnější než DRAM.",
+      "answer": false,
+      "explanation": "SRAM je složitější (více tranzistorů) a tudíž dražší než DRAM."
+    }
+  ]
+}

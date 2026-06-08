@@ -1,0 +1,407 @@
+{
+  "subject": "smerovani",
+  "name": "18. Dynamické směrovací protokoly",
+  "topics": [
+    { "id": "routovani-teorie", "name": "Základy dynamického směrování" },
+    { "id": "igp-distance-vector", "name": "Vzdálenostně vektorové protokoly (RIP, IGRP)" },
+    { "id": "eigrp-link-state", "name": "EIGRP a Link-state protokoly (OSPF, IS-IS)" },
+    { "id": "egp-bgp", "name": "Externí protokoly (BGP)" }
+  ],
+  "questions": [
+    {
+      "id": "smer-001",
+      "type": "single",
+      "topic": "routovani-teorie",
+      "difficulty": 1,
+      "question": "Jaký je hlavní rozdíl mezi statickým a dynamickým směrováním?",
+      "options": [
+        { "text": "Dynamické směrování se automaticky přizpůsobuje změnám v topologii sítě.", "correct": true },
+        { "text": "Statické směrování je mnohem rychlejší než dynamické.", "correct": false },
+        { "text": "Dynamické směrování nevyžaduje žádné nastavení na routerech.", "correct": false },
+        { "text": "Statické směrování automaticky vypočítává cesty pomocí protokolů.", "correct": false }
+      ],
+      "explanation": "Dynamické směrování využívá routovací protokoly pro automatické přizpůsobení změnám v topologii."
+    },
+    {
+      "id": "smer-002",
+      "type": "multiple",
+      "topic": "routovani-teorie",
+      "difficulty": 2,
+      "question": "Které metriky mohou routovací protokoly využívat k výpočtu nejlepší cesty?",
+      "options": [
+        { "text": "Počet skoků (hop count)", "correct": true },
+        { "text": "Šířka pásma (bandwidth)", "correct": true },
+        { "text": "Zpoždění (delay)", "correct": true },
+        { "text": "Výrobce síťové karty", "correct": false }
+      ],
+      "explanation": "Protokoly využívají metriky jako počet skoků, šířku pásma, zatížení, zpoždění nebo cenu."
+    },
+    {
+      "id": "smer-003",
+      "type": "numeric",
+      "topic": "routovani-teorie",
+      "difficulty": 3,
+      "question": "Jakou hodnotu Administrativní vzdálenosti (AD) má standardně přímo připojené rozhraní (Connected)?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Administrativní vzdálenost pro přímo připojené rozhraní je vždy 0."
+    },
+    {
+      "id": "smer-004",
+      "type": "matching",
+      "topic": "routovani-teorie",
+      "difficulty": 2,
+      "question": "Přiřaďte typ směrovacího protokolu k jeho popisu.",
+      "pairs": [
+        { "left": "IGP", "right": "Protokol pro směrování uvnitř autonomního systému" },
+        { "left": "EGP", "right": "Protokol pro směrování mezi autonomními systémy" },
+        { "left": "Distance-vector", "right": "Využívá počet skoků a periodické zasílání tabulek" },
+        { "left": "Link-state", "right": "Udržuje komplexní mapu topologie a reaguje jen na změny" }
+      ],
+      "explanation": "IGP je vnitřní, EGP je vnější. Distance-vector jsou starší systémy, Link-state jsou moderní a rychlé."
+    },
+    {
+      "id": "smer-005",
+      "type": "truefalse",
+      "topic": "igp-distance-vector",
+      "difficulty": 1,
+      "statement": "Protokol RIP (Routing Information Protocol) má omezení na maximálně 15 skoků (hops).",
+      "answer": true,
+      "explanation": "Ano, RIP má limit 15 skoků, 16. skok je považován za nedosažitelnou síť."
+    },
+    {
+      "id": "smer-006",
+      "type": "gap",
+      "topic": "igp-distance-vector",
+      "difficulty": 2,
+      "text": "RIPv1 je starší verze protokolu, která nepodporuje {{0}}, což znamená, že neumí přenášet informace o maskách sítí. Tuto možnost až později přinesl {{1}}.",
+      "blanks": [
+        { "accept": ["VLSM"] },
+        { "accept": ["RIPv2"] }
+      ],
+      "explanation": "RIPv1 nepodporuje VLSM, tuto funkci zavedl až RIPv2."
+    },
+    {
+      "id": "smer-007",
+      "type": "single",
+      "topic": "eigrp-link-state",
+      "difficulty": 3,
+      "question": "Který algoritmus využívá protokol EIGRP pro eliminaci smyček v síti?",
+      "options": [
+        { "text": "DUAL", "correct": true },
+        { "text": "Dijkstrův algoritmus", "correct": false },
+        { "text": "Bellman-Ford", "correct": false },
+        { "text": "BGP Best Path", "correct": false }
+      ],
+      "explanation": "EIGRP využívá DUAL algoritmus pro rychlou konvergenci a vyloučení smyček."
+    },
+    {
+      "id": "smer-008",
+      "type": "multiple",
+      "topic": "eigrp-link-state",
+      "difficulty": 2,
+      "question": "Jaké parametry bere EIGRP v úvahu při výpočtu své metriky?",
+      "options": [
+        { "text": "Šířka pásma", "correct": true },
+        { "text": "Zpoždění", "correct": true },
+        { "text": "Spolehlivost", "correct": true },
+        { "text": "Barva kabeláže", "correct": false }
+      ],
+      "explanation": "Výpočet metriky EIGRP zahrnuje šířku pásma, zpoždění, spolehlivost a zátěž."
+    },
+    {
+      "id": "smer-009",
+      "type": "truefalse",
+      "topic": "eigrp-link-state",
+      "difficulty": 2,
+      "statement": "Protokol OSPF využívá k výpočtu nejlepší trasy tzv. cenu (cost), která se počítá ze šířky pásma rozhraní.",
+      "answer": true,
+      "explanation": "OSPF používá metriku 'cena', která je odvozena ze šířky pásma linky."
+    },
+    {
+      "id": "smer-010",
+      "type": "single",
+      "topic": "eigrp-link-state",
+      "difficulty": 2,
+      "question": "Co je to 'Area 0' v hierarchickém designu sítě OSPF?",
+      "options": [
+        { "text": "Páteřní oblast (Backbone), která je povinná.", "correct": true },
+        { "text": "Slepá oblast (Stub Area).", "correct": false },
+        { "text": "Oblast pro směrování mezi autonomními systémy.", "correct": false },
+        { "text": "Oblast s nulovou propustností.", "correct": false }
+      ],
+      "explanation": "Area 0 je páteřní oblast, přes kterou musí procházet veškerý provoz mezi ostatními oblastmi."
+    },
+    {
+      "id": "smer-011",
+      "type": "matching",
+      "topic": "egp-bgp",
+      "difficulty": 3,
+      "question": "Přiřaďte termín k BGP protokolu.",
+      "pairs": [
+        { "left": "BGP", "right": "Protokol pro směrování mezi AS" },
+        { "left": "EBGP", "right": "Protokol mezi routery různých AS" },
+        { "left": "IBGP", "right": "Protokol v rámci stejného AS" },
+        { "left": "Keepalive", "right": "Paket pro ověření konektivity každých 60s" }
+      ],
+      "explanation": "BGP je externí protokol typu Path-vector, rozlišuje vnitřní a vnější směrování a využívá keepalive pakety."
+    },
+    {
+      "id": "smer-012",
+      "type": "gap",
+      "topic": "eigrp-link-state",
+      "difficulty": 3,
+      "text": "Protokol IS-IS se liší od OSPF tím, že pro přenos směrovacích informací nevyužívá {{0}}, ale běží přímo na {{1}}.",
+      "blanks": [
+        { "accept": ["IP", "Internet Protocol"] },
+        { "accept": ["linkové vrstvě", "linkova vrstva"] }
+      ],
+      "explanation": "IS-IS je unikátní tím, že nepoužívá IP protokol, ale běží přímo na linkové vrstvě."
+    },
+    {
+      "id": "smer-013",
+      "type": "multiple",
+      "topic": "egp-bgp",
+      "difficulty": 2,
+      "question": "Jaké informace zasílá BGP v tzv. NLRI (Network Layer Reachability Information)?",
+      "options": [
+        { "text": "Cílový prefix", "correct": true },
+        { "text": "Délku prefixu", "correct": true },
+        { "text": "Cestu k síti", "correct": true },
+        { "text": "Uživatelské heslo k administraci", "correct": false }
+      ],
+      "explanation": "NLRI obsahuje cílový prefix, délku, cestu a next hop."
+    },
+    {
+      "id": "smer-014",
+      "type": "single",
+      "topic": "routovani-teorie",
+      "difficulty": 2,
+      "question": "Co se stane, pokud router nenajde odpovídající síť pro paket a není nakonfigurována defaultní cesta?",
+      "options": [
+        { "text": "Paket je zahozen a odesílatel je informován o nedoručení.", "correct": true },
+        { "text": "Router se pokusí hádat cestu pomocí náhody.", "correct": false },
+        { "text": "Router uloží paket do vyrovnávací paměti na neomezenou dobu.", "correct": false },
+        { "text": "Paket je odeslán zpět na zdrojové rozhraní bez úprav.", "correct": false }
+      ],
+      "explanation": "Pokud není cesta nalezena ani pomocí defaultní cesty, paket je zahozen a odesílatel informován."
+    },
+    {
+      "id": "smer-015",
+      "type": "truefalse",
+      "topic": "igp-distance-vector",
+      "difficulty": 2,
+      "statement": "RIPv2 na rozdíl od RIPv1 podporuje VLSM a autentizaci routerů.",
+      "answer": true,
+      "explanation": "Ano, RIPv2 přinesl podporu VLSM a možnost autentizace."
+    },
+    {
+      "id": "smer-016",
+      "type": "categorize",
+      "topic": "eigrp-link-state",
+      "difficulty": 3,
+      "question": "Rozřaďte směrovače IS-IS do kategorií podle úrovně.",
+      "categories": [
+        "Úroveň 1",
+        "Úroveň 2",
+        "Úroveň 1-2"
+      ],
+      "items": [
+        { "text": "Směrovač pracuje pouze v rámci jedné oblasti", "category": "Úroveň 1" },
+        { "text": "Směrovač směruje mezi oblastmi", "category": "Úroveň 2" },
+        { "text": "Směrovač pracuje v rámci oblasti i mezi oblastmi", "category": "Úroveň 1-2" }
+      ],
+      "explanation": "IS-IS definuje úrovně 1 (v rámci oblasti), 2 (mezi oblastmi) a 1-2 (hybridní)."
+    },
+    {
+      "id": "smer-017",
+      "type": "multiple",
+      "topic": "igp-distance-vector",
+      "difficulty": 2,
+      "question": "Co je typické pro distance-vector protokoly (jako RIP)?",
+      "options": [
+        { "text": "Periodické zasílání celé směrovací tabulky sousedům.", "correct": true },
+        { "text": "Využití počtu hopů jako hlavní metriky.", "correct": true },
+        { "text": "Znalost pouze směru a vzdálenosti k cíli.", "correct": true },
+        { "text": "Okamžitá reakce na topologii pomocí LSA paketů.", "correct": false }
+      ],
+      "explanation": "DV protokoly zasílají tabulky periodicky a znají jen směr a vzdálenost."
+    },
+    {
+      "id": "smer-018",
+      "type": "single",
+      "topic": "eigrp-link-state",
+      "difficulty": 2,
+      "question": "Jak často posílá EIGRP Hello pakety na rychlých linkách?",
+      "options": [
+        { "text": "Každých 5 sekund", "correct": true },
+        { "text": "Každých 60 sekund", "correct": false },
+        { "text": "Každých 30 sekund", "correct": false },
+        { "text": "Každých 10 sekund", "correct": false }
+      ],
+      "explanation": "EIGRP navazuje sousedství pomocí Hello paketů, které se na rychlých linkách zasílají každých 5 sekund."
+    },
+    {
+      "id": "smer-019",
+      "type": "numeric",
+      "topic": "igp-distance-vector",
+      "difficulty": 1,
+      "question": "Jaká je maximální hodnota metriky (počet skoků) u protokolu RIP?",
+      "answer": 15,
+      "tolerance": 0,
+      "unit": "skoků",
+      "explanation": "RIP má omezení na 15 skoků."
+    },
+    {
+      "id": "smer-020",
+      "type": "passage",
+      "topic": "routovani-teorie",
+      "passage": "Dynamické směrování je nezbytnou technologií pro moderní internet. Umožňuje, aby se síť automaticky přizpůsobila výpadkům či změnám v topologii. Namísto ručního vkládání cest využívají směrovače routovací protokoly. Důležitou vlastností je administrativní vzdálenost (AD), která určuje spolehlivost protokolu. Pokud router přijme zprávu o stejné cestě od dvou různých protokolů, vždy dá přednost tomu s nižší hodnotou AD.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Administrativní vzdálenost (AD) definuje spolehlivost protokolu a při konfliktu se dává přednost vyšší hodnotě.",
+          "answer": false,
+          "explanation": "Přednost má nižší hodnota AD, která určuje vyšší důvěryhodnost."
+        },
+        {
+          "type": "single",
+          "question": "Co je hlavní přínos dynamického směrování v porovnání se statickým?",
+          "options": [
+            { "text": "Automatické přizpůsobení změnám topologie.", "correct": true },
+            { "text": "Vyšší bezpečnost proti vnějším útokům.", "correct": false },
+            { "text": "Možnost šifrování obsahu dat.", "correct": false }
+          ],
+          "explanation": "Dynamické směrování reflektuje změny topologie automaticky."
+        }
+      ]
+    },
+    {
+      "id": "smer-021",
+      "type": "multiple",
+      "topic": "igp-distance-vector",
+      "difficulty": 2,
+      "question": "Co je pravdivé o RIPv2?",
+      "options": [
+        { "text": "Podporuje VLSM.", "correct": true },
+        { "text": "Podporuje autentizaci.", "correct": true },
+        { "text": "Je stále omezen na 15 skoků.", "correct": true },
+        { "text": "Nefunguje na IPv4 sítích.", "correct": false }
+      ],
+      "explanation": "RIPv2 přidává podporu VLSM a autentizaci, limit 15 skoků však zůstává."
+    },
+    {
+      "id": "smer-022",
+      "type": "single",
+      "topic": "eigrp-link-state",
+      "difficulty": 3,
+      "question": "V čem je hlavní rozdíl mezi IS-IS a OSPF v otázce přenosu dat?",
+      "options": [
+        { "text": "IS-IS nevyužívá IP pro přenos informací, běží na linkové vrstvě.", "correct": true },
+        { "text": "OSPF nevyužívá IP, ale přímo linkovou vrstvu.", "correct": false },
+        { "text": "OSPF je mnohem pomalejší než IS-IS.", "correct": false },
+        { "text": "IS-IS je proprietární protokol firmy Cisco.", "correct": false }
+      ],
+      "explanation": "IS-IS je unikátní tím, že nepoužívá IP pro přenos informací, na rozdíl od OSPF."
+    },
+    {
+      "id": "smer-023",
+      "type": "numeric",
+      "topic": "eigrp-link-state",
+      "difficulty": 2,
+      "question": "Jaký je maximální počet skoků (hops) u protokolu EIGRP?",
+      "answer": 255,
+      "tolerance": 0,
+      "unit": "skoků",
+      "explanation": "Maximální počet skoků u EIGRP je 255."
+    },
+    {
+      "id": "smer-024",
+      "type": "truefalse",
+      "topic": "routovani-teorie",
+      "difficulty": 1,
+      "statement": "Statické směrování je velmi bezpečné a dobře odolává výpadkům v topologii.",
+      "answer": false,
+      "explanation": "Statické směrování je bezpečné, ale nereflektuje žádné změny v topologii sítě."
+    },
+    {
+      "id": "smer-025",
+      "type": "single",
+      "topic": "egp-bgp",
+      "difficulty": 2,
+      "question": "Pro jaký účel se primárně používá protokol BGP?",
+      "options": [
+        { "text": "Směrování mezi autonomními systémy v Internetu.", "correct": true },
+        { "text": "Směrování mezi počítači v jedné kanceláři.", "correct": false },
+        { "text": "Nastavení IP adres na síťových kartách.", "correct": false },
+        { "text": "Šifrování e-mailů mezi uživateli.", "correct": false }
+      ],
+      "explanation": "BGP je externí protokol pro routování mezi autonomními systémy."
+    },
+    {
+      "id": "smer-026",
+      "type": "gap",
+      "topic": "igp-distance-vector",
+      "difficulty": 3,
+      "text": "IGRP je starší, proprietární protokol společnosti Cisco. Jeho metriku tvoří zejména {{0}} a {{1}}, nepodporuje přitom VLSM.",
+      "blanks": [
+        { "accept": ["šířka pásma", "sirka pasma"] },
+        { "accept": ["zpoždění", "zpozdeni"] }
+      ],
+      "explanation": "Metrika IGRP je cena tvořená šířkou pásma a zpožděním."
+    },
+    {
+      "id": "smer-027",
+      "type": "truefalse",
+      "topic": "eigrp-link-state",
+      "difficulty": 2,
+      "statement": "OSPF podporuje VLSM a je vhodný pro rozsáhlé hierarchické sítě.",
+      "answer": true,
+      "explanation": "OSPF je classless (podporuje VLSM) a je ideální pro velké sítě díky dělení do oblastí (areas)."
+    },
+    {
+      "id": "smer-028",
+      "type": "single",
+      "topic": "eigrp-link-state",
+      "difficulty": 3,
+      "question": "Co musí mít dva routery shodné, aby se mohli stát sousedy v protokolu OSPF?",
+      "options": [
+        { "text": "Stejné číslo oblasti (Area ID) a stejné časovače (timers).", "correct": true },
+        { "text": "Stejnou výrobní šarži routeru.", "correct": false },
+        { "text": "Stejnou MAC adresu na všech rozhraních.", "correct": false },
+        { "text": "Musí mít nastavené stejné statické cesty.", "correct": false }
+      ],
+      "explanation": "Pro sousedství v OSPF musí být shodné parametry jako Area ID, subnet, maska a časovače."
+    },
+    {
+      "id": "smer-029",
+      "type": "numeric",
+      "topic": "egp-bgp",
+      "difficulty": 2,
+      "question": "Jak často se v protokolu BGP posílají keepalive pakety pro ověření konektivity?",
+      "answer": 60,
+      "tolerance": 0,
+      "unit": "sekund",
+      "explanation": "BGP posílá keepalive pakety každých 60 sekund."
+    },
+    {
+      "id": "smer-030",
+      "type": "categorize",
+      "topic": "routovani-teorie",
+      "difficulty": 1,
+      "question": "Rozřaďte typ cesty ve směrovací tabulce k odpovídajícímu kódu.",
+      "categories": [
+        "Kód C",
+        "Kód S",
+        "Kód (např. D nebo O)"
+      ],
+      "items": [
+        { "text": "Přímo připojená síť", "category": "Kód C" },
+        { "text": "Ručně zadaná cesta", "category": "Kód S" },
+        { "text": "Cesta z dynamického protokolu", "category": "Kód (např. D nebo O)" }
+      ],
+      "explanation": "C = Connected, S = Static, D/O = dynamické protokoly."
+    }
+  ]
+}

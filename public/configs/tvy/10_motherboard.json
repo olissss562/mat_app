@@ -1,0 +1,469 @@
+{
+  "subject": "motherboard",
+  "name": "10. Základní deska",
+  "topics": [
+    { "id": "ucel-mb", "name": "Účel a význam desky" },
+    { "id": "cipy-a-bios", "name": "Čipová sada a BIOS" },
+    { "id": "rozsirujici-sloty", "name": "Rozšiřující sloty a sběrnice" }
+  ],
+  "questions": [
+    {
+      "id": "mb-001",
+      "type": "single",
+      "topic": "ucel-mb",
+      "difficulty": 1,
+      "question": "Co je hlavním účelem základní desky (Motherboard)?",
+      "options": [
+        { "text": "Propojení součástí do funkčního celku a rozdělení napájení", "correct": true },
+        { "text": "Samotné provádění výpočtů", "correct": false },
+        { "text": "Ukládání všech dat uživatele" }
+      ],
+      "explanation": "Základní deska propojuje součástky a rozděluje napájení ze zdroje."
+    },
+    {
+      "id": "mb-002",
+      "type": "truefalse",
+      "topic": "ucel-mb",
+      "statement": "Moderní základní desky už v sobě obsahují součástky, které se dříve musely zapojovat zvlášť.",
+      "answer": true,
+      "explanation": "Postupem času se integrace zvýšila a mnohé dříve externí komponenty jsou dnes integrovány."
+    },
+    {
+      "id": "mb-003",
+      "type": "multiple",
+      "topic": "ucel-mb",
+      "difficulty": 2,
+      "question": "Jaké komponenty se typicky připojují k základní desce?",
+      "options": [
+        { "text": "Procesor", "correct": true },
+        { "text": "Operační paměť", "correct": true },
+        { "text": "Grafická karta", "correct": true },
+        { "text": "Zdroj napájení", "correct": true }
+      ],
+      "explanation": "Základní deska umožňuje připojení CPU, RAM, grafiky a zdroje."
+    },
+    {
+      "id": "mb-004",
+      "type": "gap",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "text": "Energeticky nezávislá paměť na desce obsahující systém {{0}} slouží k oživení PC po spuštění.",
+      "blanks": [{ "accept": ["BIOS"] }],
+      "explanation": "BIOS je uložen v paměti Flash (ROM) na desce."
+    },
+    {
+      "id": "mb-005",
+      "type": "numeric",
+      "topic": "ucel-mb",
+      "question": "Jak se jmenuje nejčastější formát základní desky?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": "ATX",
+      "explanation": "ATX je dnes nejčastější typ používaných desek."
+    },
+    {
+      "id": "mb-006",
+      "type": "single",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "question": "Co rozhoduje o tom, jaký procesor a RAM lze k desce připojit?",
+      "options": [
+        { "text": "Čipová sada (chipset)", "correct": true },
+        { "text": "Barva konektorů", "correct": false },
+        { "text": "Výrobce zdroje" }
+      ],
+      "explanation": "Čipová sada rozhoduje o kompatibilitě CPU a RAM."
+    },
+    {
+      "id": "mb-007",
+      "type": "truefalse",
+      "topic": "rozsirujici-sloty",
+      "statement": "PCI slot je dnes standardem pro nejvýkonnější grafické karty.",
+      "answer": false,
+      "explanation": "PCI slot byl nahrazen PCI Express, který je pro grafické karty výrazně rychlejší."
+    },
+    {
+      "id": "mb-008",
+      "type": "categorize",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 2,
+      "question": "Rozřaďte sběrnice podle stavu používání.",
+      "categories": ["Dnes nepoužívané", "Moderní"],
+      "items": [
+        { "text": "ISA", "category": "Dnes nepoužívané" },
+        { "text": "VESA", "category": "Dnes nepoužívané" },
+        { "text": "PCI Express", "category": "Moderní" },
+        { "text": "EISA", "category": "Dnes nepoužívané" }
+      ],
+      "explanation": "ISA, VESA a EISA jsou historické sběrnice, PCI Express je moderní standard."
+    },
+    {
+      "id": "mb-009",
+      "type": "single",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 2,
+      "question": "Jaký slot byl navržen přímo pro grafické karty (před érou PCIe)?",
+      "options": [
+        { "text": "AGP", "correct": true },
+        { "text": "ISA", "correct": false },
+        { "text": "PCI" }
+      ],
+      "explanation": "AGP byl specializovaný slot pro grafické karty před příchodem PCIe."
+    },
+    {
+      "id": "mb-010",
+      "type": "multiple",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "question": "Co patří mezi podpůrné obvody v čipové sadě?",
+      "options": [
+        { "text": "Senzory teploty", "correct": true },
+        { "text": "Řadiče ventilátorů", "correct": true },
+        { "text": "Řízení napětí", "correct": true }
+      ],
+      "explanation": "Čipová sada integruje senzory teploty, napětí a rychlostí větráků."
+    },
+    {
+      "id": "mb-011",
+      "type": "truefalse",
+      "topic": "ucel-mb",
+      "statement": "Zdroj napájení poskytuje napájení přímo každé komponentě zvlášť, deska pouze propojuje data.",
+      "answer": false,
+      "explanation": "Zdroj napájení napájí základní desku, která následně rozděluje napájení jednotlivým součástkám."
+    },
+    {
+      "id": "mb-012",
+      "type": "single",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 2,
+      "question": "Jaká je hlavní výhoda PCI Express oproti staršímu PCI?",
+      "options": [
+        { "text": "Mnohem vyšší přenosové rychlosti", "correct": true },
+        { "text": "Menší rozměry slotu", "correct": false },
+        { "text": "Nižší cena pro výrobce" }
+      ],
+      "explanation": "PCI Express umožňuje mnohem vyšší rychlosti přenosu."
+    },
+    {
+      "id": "mb-013",
+      "type": "numeric",
+      "topic": "cipy-a-bios",
+      "difficulty": 3,
+      "question": "Jak se nazývá paměť, ve které je uložen BIOS?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": "Flash (ROM)",
+      "explanation": "BIOS je uložen v paměti Flash (ROM)."
+    },
+    {
+      "id": "mb-014",
+      "type": "multiple",
+      "topic": "ucel-mb",
+      "difficulty": 2,
+      "question": "Jaké komponenty jsou dnes běžně integrovány na základní desce?",
+      "options": [
+        { "text": "Zvuková karta", "correct": true },
+        { "text": "Síťová karta", "correct": true },
+        { "text": "Grafická karta (v čipsetu)", "correct": true }
+      ],
+      "explanation": "Dnes je většina karet integrována přímo na desce."
+    },
+    {
+      "id": "mb-015",
+      "type": "single",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 1,
+      "question": "Jaký slot nahradil PCI a AGP?",
+      "options": [
+        { "text": "PCI Express", "correct": true },
+        { "text": "ISA", "correct": false },
+        { "text": "EISA" }
+      ],
+      "explanation": "PCI Express sjednotil a nahradil starší sloty."
+    },
+    {
+      "id": "mb-016",
+      "type": "truefalse",
+      "topic": "ucel-mb",
+      "statement": "Základní deska funguje jako komunikační platforma pro všechny připojené součástky.",
+      "answer": true,
+      "explanation": "Umožňuje součástkám komunikovat mezi sebou."
+    },
+    {
+      "id": "mb-017",
+      "type": "multiple",
+      "topic": "ucel-mb",
+      "difficulty": 2,
+      "question": "Co se připojuje ke konektorům základní desky?",
+      "options": [
+        { "text": "Pevné disky", "correct": true },
+        { "text": "Mechaniky", "correct": true },
+        { "text": "Klávesnice (přes zadní panel)", "correct": true }
+      ],
+      "explanation": "Konektory slouží k připojení disků, mechanik i periferií."
+    },
+    {
+      "id": "mb-018",
+      "type": "gap",
+      "topic": "cipy-a-bios",
+      "text": "Čipová sada rozhoduje o tom, jaký {{0}} a {{1}} je možné k desce připojit.",
+      "blanks": [
+        { "accept": ["procesor"] },
+        { "accept": ["operační paměť", "paměť"] }
+      ],
+      "explanation": "Čipset definuje kompatibilitu procesoru a RAM."
+    },
+    {
+      "id": "mb-019",
+      "type": "single",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 2,
+      "question": "K čemu slouží rozšiřující sloty?",
+      "options": [
+        { "text": "Připojení dalších karet", "correct": true },
+        { "text": "Napájení zdroje", "correct": false },
+        { "text": "Chlazení CPU" }
+      ],
+      "explanation": "Sloty umožňují připojit další rozšiřující karty."
+    },
+    {
+      "id": "mb-020",
+      "type": "passage",
+      "topic": "ucel-mb",
+      "passage": "Hlavním účelem základní desky je upevnit, propojit součástky a rozdělit napájení. Časem se integrace zvýšila a na desku se začaly montovat součástky, které dříve byly samostatné.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Základní deska napájí zdroj.",
+          "answer": false,
+          "explanation": "Zdroj napájí desku."
+        },
+        {
+          "type": "single",
+          "question": "Co rozděluje elektrické napájení součástkám?",
+          "options": [
+            { "text": "Základní deska", "correct": true },
+            { "text": "Procesor" }
+          ],
+          "explanation": "Deska rozděluje napájení součástkám."
+        }
+      ]
+    },
+    {
+      "id": "mb-021",
+      "type": "truefalse",
+      "topic": "rozsirujici-sloty",
+      "statement": "PCI Express je univerzální sběrnice.",
+      "answer": true,
+      "explanation": "Ano, funguje jako univerzální sběrnice pro různé typy karet."
+    },
+    {
+      "id": "mb-022",
+      "type": "numeric",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "question": "Jak se jmenuje paměť s BIOSem?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": "Flash ROM",
+      "explanation": "BIOS je v paměti Flash ROM."
+    },
+    {
+      "id": "mb-023",
+      "type": "multiple",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 2,
+      "question": "Které sloty jsou dnes již nepoužívané?",
+      "options": [
+        { "text": "ISA", "correct": true },
+        { "text": "VESA", "correct": true },
+        { "text": "PCI Express", "correct": false }
+      ],
+      "explanation": "ISA a VESA jsou již dávno nepoužívané."
+    },
+    {
+      "id": "mb-024",
+      "type": "truefalse",
+      "topic": "cipy-a-bios",
+      "statement": "Chipset nemá vliv na výkon PC.",
+      "answer": false,
+      "explanation": "Čipová sada má konečný vliv na výkon celého PC."
+    },
+    {
+      "id": "mb-025",
+      "type": "single",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "question": "Co je součástí čipové sady?",
+      "options": [
+        { "text": "Integrované obvody", "correct": true },
+        { "text": "Zásobník na papír", "correct": false }
+      ],
+      "explanation": "Obsahuje integrované obvody pro komunikaci."
+    },
+    {
+      "id": "mb-026",
+      "type": "gap",
+      "topic": "ucel-mb",
+      "text": "Základní deska je deska {{0}}.",
+      "blanks": [{ "accept": ["plošných spojů"] }],
+      "explanation": "Základní deska je deska plošných spojů."
+    },
+    {
+      "id": "mb-027",
+      "type": "truefalse",
+      "topic": "rozsirujici-sloty",
+      "statement": "AGP byl slot určený pro zvukové karty.",
+      "answer": false,
+      "explanation": "AGP byl určen přímo pro grafické karty."
+    },
+    {
+      "id": "mb-028",
+      "type": "single",
+      "topic": "ucel-mb",
+      "difficulty": 1,
+      "question": "Co poskytuje napájení základní desce?",
+      "options": [
+        { "text": "Zdroj", "correct": true },
+        { "text": "CPU", "correct": false }
+      ],
+      "explanation": "Napájení poskytuje základní desce zdroj."
+    },
+    {
+      "id": "mb-029",
+      "type": "numeric",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "question": "Jaký systém slouží k oživení PC?",
+      "answer": 0,
+      "tolerance": 0,
+      "unit": "BIOS",
+      "explanation": "Systém BIOS slouží k oživení PC."
+    },
+    {
+      "id": "mb-030",
+      "type": "truefalse",
+      "topic": "rozsirujici-sloty",
+      "statement": "PCI Express existuje ve více variantách.",
+      "answer": true,
+      "explanation": "Existuje několik variant (x1, x4, x16)."
+    },
+    {
+      "id": "mb-031",
+      "type": "multiple",
+      "topic": "cipy-a-bios",
+      "difficulty": 3,
+      "question": "Co dělají podpůrné obvody?",
+      "options": [
+        { "text": "Maximálně urychlují komunikaci", "correct": true },
+        { "text": "Odlehčují procesoru", "correct": true },
+        { "text": "Provádějí rutinní operace", "correct": true }
+      ],
+      "explanation": "Jejich úkolem je urychlit komunikaci a odlehčit procesoru."
+    },
+    {
+      "id": "mb-032",
+      "type": "truefalse",
+      "topic": "ucel-mb",
+      "statement": "Všechny součástky PC musí mít vlastní napájecí zdroj.",
+      "answer": false,
+      "explanation": "Napájení rozděluje základní deska ze společného zdroje."
+    },
+    {
+      "id": "mb-033",
+      "type": "single",
+      "topic": "ucel-mb",
+      "difficulty": 2,
+      "question": "Kde je uložen BIOS?",
+      "options": [
+        { "text": "Flash ROM", "correct": true },
+        { "text": "RAM", "correct": false }
+      ],
+      "explanation": "BIOS je v paměti Flash (ROM)."
+    },
+    {
+      "id": "mb-034",
+      "type": "numeric",
+      "topic": "cipy-a-bios",
+      "difficulty": 2,
+      "question": "Čipová sada rozhoduje o kompatibilitě kterých 2 hlavních komponent?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": "komponent",
+      "explanation": "Procesor a operační paměť."
+    },
+    {
+      "id": "mb-035",
+      "type": "passage",
+      "topic": "rozsirujici-sloty",
+      "passage": "Rozšiřující sloty umožňují připojit další zařízení. Postupem času se vyvinulo mnoho druhů. Od zastaralých ISA, přes PCI až po současné univerzální PCI Express, které dosahuje vysokých rychlostí.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Která sběrnice je dnes univerzální?",
+          "options": [
+            { "text": "PCI Express", "correct": true },
+            { "text": "ISA" }
+          ],
+          "explanation": "PCI Express funguje jako univerzální sběrnice."
+        },
+        {
+          "type": "truefalse",
+          "statement": "ISA sloty jsou dnes standardem.",
+          "answer": false,
+          "explanation": "ISA je dnes již nepoužívaná."
+        }
+      ]
+    },
+    {
+      "id": "mb-036",
+      "type": "gap",
+      "topic": "ucel-mb",
+      "text": "Základní deska rozděluje {{0}}, které jí poskytne {{1}}.",
+      "blanks": [
+        { "accept": ["napájení"] },
+        { "accept": ["zdroj"] }
+      ],
+      "explanation": "Základní deska rozděluje napájení, které poskytne zdroj."
+    },
+    {
+      "id": "mb-037",
+      "type": "truefalse",
+      "topic": "cipy-a-bios",
+      "statement": "BIOS se musí vždy nahrát z disku při startu PC.",
+      "answer": false,
+      "explanation": "BIOS je na desce dodáván výrobcem v paměti."
+    },
+    {
+      "id": "mb-038",
+      "type": "single",
+      "topic": "rozsirujici-sloty",
+      "difficulty": 2,
+      "question": "K čemu sloužily starší sloty ISA?",
+      "options": [
+        { "text": "GPU, zvukové karty", "correct": true },
+        { "text": "Pouze pro napájení" }
+      ],
+      "explanation": "Sloužily k připojení zvukových karet či grafických karet."
+    },
+    {
+      "id": "mb-039",
+      "type": "numeric",
+      "topic": "ucel-mb",
+      "difficulty": 2,
+      "question": "Kolik hlavních účelů základní desky dokument uvádí v úvodu?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Upevnit, propojit, rozdělit napájení."
+    },
+    {
+      "id": "mb-040",
+      "type": "truefalse",
+      "topic": "cipy-a-bios",
+      "statement": "Čipová sada rozhoduje o výkonu PC.",
+      "answer": true,
+      "explanation": "Kvalita čipové sady má konečný vliv na výkon celého PC."
+    }
+  ]
+}

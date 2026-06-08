@@ -1,0 +1,426 @@
+{
+  "subject": "linkova",
+  "name": "7. Linková vrstva a zařízení",
+  "topics": [
+    { "id": "obecne-mac", "name": "Linková vrstva a MAC adresa" },
+    { "id": "prepinac", "name": "Přepínač (Switch) a jeho funkce" },
+    { "id": "metody-prepinani", "name": "Způsoby přeposílání rámců" },
+    { "id": "mosty", "name": "Mosty (Bridges) a jejich typy" }
+  ],
+  "questions": [
+    {
+      "id": "link-001",
+      "type": "single",
+      "topic": "obecne-mac",
+      "difficulty": 1,
+      "question": "V referenčním modelu ISO/OSI plní Linková vrstva roli v pořadí (odspodu):",
+      "options": [
+        { "text": "Druhé vrstvy", "correct": true },
+        { "text": "První vrstvy", "correct": false },
+        { "text": "Třetí vrstvy", "correct": false },
+        { "text": "Čtvrté vrstvy", "correct": false }
+      ],
+      "explanation": "Jedná se o druhou vrstvu v ISO/OSI modelu. [cite: 821]"
+    },
+    {
+      "id": "link-002",
+      "type": "multiple",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "question": "Vyberte správná tvrzení o tom, jak Linková vrstva manipuluje s daty.",
+      "options": [
+        { "text": "Shlukuje data do rámců.", "correct": true },
+        { "text": "Na začátek přidává hlavičku, ve které je obsažena zdrojová i cílová fyzická (MAC) adresa.", "correct": true },
+        { "text": "Na konec přidává patičku s kontrolním součtem (CRC).", "correct": true },
+        { "text": "Zapouzdřuje rámce přímo do datagramů pro směrování do Internetu.", "correct": false }
+      ],
+      "explanation": "Linková vrstva shlukuje data do rámců a na začátek a konec přidává hlavičku. [cite: 823] Přidává MAC adresu do hlavičky [cite: 825] a patičku obsahující CRC (kontrolní součet). [cite: 826]"
+    },
+    {
+      "id": "link-003",
+      "type": "numeric",
+      "topic": "obecne-mac",
+      "difficulty": 1,
+      "question": "Z kolika bitů se celkově skládá fyzická MAC adresa?",
+      "answer": 48,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "MAC adresa je složena z 48 bitů a je psána v hexadecimální formě. [cite: 832]"
+    },
+    {
+      "id": "link-004",
+      "type": "numeric",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "question": "Kolik úvodních oktetů z MAC adresy jednoznačně určuje konkrétního výrobce daného síťového rozhraní?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "oktety",
+      "explanation": "První 3 oktety určují výrobce a druhá část zařízení. [cite: 834]"
+    },
+    {
+      "id": "link-005",
+      "type": "truefalse",
+      "topic": "obecne-mac",
+      "difficulty": 1,
+      "statement": "MAC adresa je výrobcem fyzicky napevno přidělena do síťové karty a za žádných okolností ji nelze softwarově měnit ani falšovat.",
+      "answer": false,
+      "explanation": "Ačkoliv byla MAC adresa zamýšlena jako permanentní, většina moderního hardwaru umožňuje softwarovou změnu MAC adresy, což je nezbytné mimo jiné pro virtualizaci sítě. [cite: 835, 836]"
+    },
+    {
+      "id": "link-006",
+      "type": "categorize",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "question": "Rozřaďte charakteristiky do správné skupiny podle typu speciální MAC adresy.",
+      "categories": [
+        "Broadcast",
+        "Multicast"
+      ],
+      "items": [
+        { "text": "Zápis adresy je FF:FF:FF:FF:FF:FF", "category": "Broadcast" },
+        { "text": "Adresovaný paket přijmou bez výjimky všechna zařízení v síti", "category": "Broadcast" },
+        { "text": "Adresa označující jen určitou skupinu připojených zařízení", "category": "Multicast" },
+        { "text": "Přijmou ji pouze zařízení nakonfigurovaná jako členové skupiny", "category": "Multicast" },
+        { "text": "Obsahuje v nejméně významném bitu prvního bajtu jedničku (01)", "category": "Multicast" }
+      ],
+      "explanation": "Broadcast (FF:FF:FF:FF:FF:FF) doručí rámec všem zařízením v síti. [cite: 839, 840, 841] Multicast doručí rámec jen definované skupině členů a vyznačuje se bitem 01. [cite: 843, 844, 845]"
+    },
+    {
+      "id": "link-007",
+      "type": "single",
+      "topic": "prepinac",
+      "difficulty": 1,
+      "question": "Jaký je zásadní funkčnostní rozdíl přepínače (Switch) oproti staršímu rozbočovači (HUB)?",
+      "options": [
+        { "text": "Switch analyzuje pakety a posílá je pouze do větve, kde se nachází cílová adresa.", "correct": true },
+        { "text": "Switch posílá veškerý provoz všem uživatelům jako HUB, ale dělá to mnohem rychleji.", "correct": false },
+        { "text": "Switch pracuje na vyšší (síťové) vrstvě a routuje provoz podle IP adres.", "correct": false },
+        { "text": "Switch šifruje všechna data před jejich odesláním do Internetu.", "correct": false }
+      ],
+      "explanation": "Switch se na rozdíl od HUBu chová inteligentně – analyzuje pakety a posílá je do té větve sítě, kde se nachází cílová adresa. Tím dochází k menší zátěži segmentu. [cite: 851, 852, 853]"
+    },
+    {
+      "id": "link-008",
+      "type": "truefalse",
+      "topic": "prepinac",
+      "difficulty": 2,
+      "statement": "Switch standardně kontroluje přístupová práva, aby na linkové vrstvě zajistil stoprocentní bezpečnost připojovaných klientů.",
+      "answer": false,
+      "explanation": "Switche nerespektují přístupová práva o omezení, aby fungovaly co nejrychleji. Zabezpečení nelze na linkové vrstvě prakticky provádět. [cite: 856]"
+    },
+    {
+      "id": "link-009",
+      "type": "gap",
+      "topic": "prepinac",
+      "difficulty": 2,
+      "text": "Switch využívá takzvaný Backward Learning Algorithm. Pomocí něj si plní svoji směrovací tabulku adresami z procházejícího provozu. Pokud však dostane rámec s cílovou adresou, kterou dosud nezná, zachová se dočasně jako {{0}} a rozešle rámec do všech ostatních {{1}}.",
+      "blanks": [
+        { "accept": ["HUB", "rozbočovač", "hub", "rozbocovac"] },
+        { "accept": ["rozhraní", "portů", "portu", "rozhrani"] }
+      ],
+      "explanation": "Pokud switch dostane adresu, kterou dosud nezná, chová se jako HUB a rozešle rámec do všech ostatních rozhraní. Lze očekávat, že stanice odpoví a on se naučí cestu. [cite: 868, 869]"
+    },
+    {
+      "id": "link-010",
+      "type": "numeric",
+      "topic": "prepinac",
+      "difficulty": 1,
+      "question": "Ačkoliv může moderní switch obsahovat i stovky portů, jaký je obvyklý udávaný horní limit běžného počtu portů?",
+      "answer": 128,
+      "tolerance": 0,
+      "unit": "portů",
+      "explanation": "Může obsahovat až stovky portů, obvyklý počet je od 5 do 128. [cite: 849]"
+    },
+    {
+      "id": "link-011",
+      "type": "matching",
+      "topic": "metody-prepinani",
+      "difficulty": 2,
+      "question": "Přiřaďte anglický název způsobu přeposílání rámců k jeho popisu.",
+      "pairs": [
+        { "left": "Store and forward", "right": "Rámec je celý přijat do paměti a po kontrole chyb (FCS) odeslán" },
+        { "left": "Cut-through", "right": "Začíná s odesíláním rámce ihned po zjištění cílové adresy (snížení latence)" },
+        { "left": "Fragment free", "right": "Odesílá rámec po přijetí úvodních 64 bitů, k vyloučení počáteční kolize" },
+        { "left": "Adaptive", "right": "Automaticky přepíná mezi různými způsoby switchování podle potřeby sítě" }
+      ],
+      "explanation": "Store and forward je nejpomalejší, ale bezchybný. [cite: 858, 859] Cut-through začíná s odesíláním ihned. [cite: 860, 861] Fragment free čeká na prvních 64 bitů. [cite: 863, 864] Adaptive dynamicky střídá režimy. [cite: 865, 866]"
+    },
+    {
+      "id": "link-012",
+      "type": "single",
+      "topic": "metody-prepinani",
+      "difficulty": 2,
+      "question": "Která z metod přepínání rámců záměrně začne odesílat data na cílové zařízení ještě dříve, než stačí přijmout celý rámec, a tím výrazně snižuje latenci?",
+      "options": [
+        { "text": "Cut-through", "correct": true },
+        { "text": "Store and forward", "correct": false },
+        { "text": "Fragment free", "correct": false },
+        { "text": "Adaptive", "correct": false }
+      ],
+      "explanation": "Při metodě cut-through switch začne s odesíláním přijatého rámce ještě před tím, než ho celý přijme, jelikož si z přijaté části dokáže ihned zjistit cílovou MAC adresu, a tím snižuje latenci. [cite: 861, 862]"
+    },
+    {
+      "id": "link-013",
+      "type": "numeric",
+      "topic": "metody-prepinani",
+      "difficulty": 3,
+      "question": "Kolik bitů vyčká switch u metody 'Fragment free' předtím, než začne rámec odesílat dál, aby měl jistotu, že nevznikla okamžitá kolize?",
+      "answer": 64,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Switch začne s odesíláním rámce po přijetí 64 bitů, kdy je jisté, že na daném segmentu nevznikla kolize. [cite: 864]"
+    },
+    {
+      "id": "link-014",
+      "type": "ordering",
+      "topic": "metody-prepinani",
+      "difficulty": 2,
+      "question": "Seřaďte procesní kroky switche při použití nejbezpečnější metody přepínání 'Store and forward'.",
+      "items": [
+        "Rámec je z jednoho rozhraní celý přijat",
+        "Zařízení si rámec uloží do vyrovnávací paměti",
+        "Prozkoumají se jeho hlavičky",
+        "Zkontrolují se kontrolní součty FCS",
+        "Následně je poslán na příslušné rozhraní"
+      ],
+      "explanation": "U metody store and forward je rámec z jednoho rozhraní celý přijat, uložen do vyrovnávací paměti, prozkoumají se hlavičky, zkontrolují se FCS a následně je poslán dál. [cite: 859]"
+    },
+    {
+      "id": "link-015",
+      "type": "multiple",
+      "topic": "mosty",
+      "difficulty": 2,
+      "question": "Jaké funkce vykonává síťový most (Bridge)?",
+      "options": [
+        { "text": "Spojuje dvě části sítě na linkové vrstvě.", "correct": true },
+        { "text": "Odděluje provoz různých segmentů sítě, a tím zmenšuje její zatížení.", "correct": true },
+        { "text": "Filtruje pakety a přenáší na druhou stranu pouze ty, které patří cíli ve druhém segmentu.", "correct": true },
+        { "text": "Modifikuje zdrojové IP adresy a mění protokoly vyšších vrstev.", "correct": false }
+      ],
+      "explanation": "Most spojuje sítě na linkové vrstvě [cite: 871], odděluje provoz k zmenšení zátěže [cite: 873] a filtruje pakety. [cite: 874] Pro vyšší vrstvy je neviditelný a nijak nemění protokoly. [cite: 872, 875]"
+    },
+    {
+      "id": "link-016",
+      "type": "truefalse",
+      "topic": "mosty",
+      "difficulty": 1,
+      "statement": "Sestavování směrovací tabulky v paměti RAM mostu (Bridge) probíhá ručním zásahem administrátora, protože zařízení se samo nedokáže učit MAC adresy.",
+      "answer": false,
+      "explanation": "Most si ve své paměti (RAM) sám sestaví tabulku MAC adres a portů, za kterými se dané adresy nacházejí. Není potřeba manuálního zásahu. [cite: 877]"
+    },
+    {
+      "id": "link-017",
+      "type": "categorize",
+      "topic": "mosty",
+      "difficulty": 2,
+      "question": "Rozřaďte vlastnosti podle toho, zda se týkají metody 'Transparent bridging' nebo 'Source route bridging'.",
+      "categories": [
+        "Transparent bridging",
+        "Source route bridging"
+      ],
+      "items": [
+        { "text": "Používá se primárně v ethernetových sítích", "category": "Transparent bridging" },
+        { "text": "Koncové stanice o mostech vůbec neví (jsou neviditelné)", "category": "Transparent bridging" },
+        { "text": "Most se postupně sám umí učit, kde leží stanice", "category": "Transparent bridging" },
+        { "text": "Typické pro nasazení v sítích typu token-ring", "category": "Source route bridging" },
+        { "text": "Cílem je, aby byl samotný most co nejjednodušší", "category": "Source route bridging" },
+        { "text": "Celou cestu k cíli přes mosty zjišťuje přímo vysílací stanice", "category": "Source route bridging" }
+      ],
+      "explanation": "Transparentní mosty jsou na Ethernetu [cite: 882], neviditelné [cite: 883] a samy se učí[cite: 885]. Source route je u Token-Ringu [cite: 887], most je primitivní [cite: 888] a inteligenci cesty řeší vysílací stanice[cite: 890]."
+    },
+    {
+      "id": "link-018",
+      "type": "gap",
+      "topic": "mosty",
+      "difficulty": 3,
+      "text": "U metody 'Source route bridging' musí každý odesílaný paket obsahovat kromě adresy odesílatele a příjemce i celou {{0}} adres všech mostů, kterými musí paket fyzicky projít. Stanice si ji tak musí před odesláním prvního paketu celou {{1}}.",
+      "blanks": [
+        { "accept": ["posloupnost", "sekvenci", "radu"] },
+        { "accept": ["zjistit", "vypočítat", "zjistit si"] }
+      ],
+      "explanation": "Každý paket musí kromě adres obsahovat také posloupnost adres všech mostů, kterými musí projít. Vysílací stanice si dříve než pošle první paket musí zjistit celou cestu. [cite: 889, 890]"
+    },
+    {
+      "id": "link-019",
+      "type": "passage",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "passage": "Linková vrstva figuruje jako druhá vrstva v ISO/OSI modelu a zajišťuje komunikaci datovým spojem mezi přímými sousedy. Pracuje s bloky dat nazývanými rámce. Aby byla tato data doručena správnému hardwaru v lokální síti, používá se fyzická MAC adresa. Tato adresa je obvykle permanentně vyrobena přímo v síti kartě, ale pro moderní potřeby sítě lze adresu měnit i na úrovni software. Délka adresy je stabilně 48 bitů rozložených do šesti dvojic hexadecimálních znaků oddělených dvojtečkou (např. 01:23:45:67:89:AB).",
+      "questions": [
+        {
+          "type": "multiple",
+          "question": "Co platí o struktuře klasické MAC adresy zmíněné v textu?",
+          "options": [
+            { "text": "Její celková velikost činí 48 bitů.", "correct": true },
+            { "text": "Zapisuje se v hexadecimální formě oddělené dvojtečkami.", "correct": true },
+            { "text": "Obsahuje celkem šestici dvojciferných hodnot.", "correct": true },
+            { "text": "První část identifikuje síť, druhá část podsíť.", "correct": false }
+          ],
+          "explanation": "MAC adresa má 48 bitů zapsaných hexadecimálně po šesticích (odděleno dvojtečkou). [cite: 832] Zbytek MAC adresy neřeší sítě, ale výrobce a zařízení. [cite: 834]"
+        },
+        {
+          "type": "single",
+          "question": "Pro jaký specifický moderní proces je podle materiálů občas nezbytné schopnost softwarově pozměnit MAC adresu zařízení?",
+          "options": [
+            { "text": "Virtualizace sítě", "correct": true },
+            { "text": "Routování do Internetu", "correct": false },
+            { "text": "Kryptografické šifrování dat", "correct": false },
+            { "text": "Ověřování certifikátů na L7 vrstvě", "correct": false }
+          ],
+          "explanation": "Změna MAC adresy je softwarově možná a je mimo jiné nezbytná pro virtualizaci sítě. [cite: 835, 836]"
+        }
+      ]
+    },
+    {
+      "id": "link-020",
+      "type": "passage",
+      "topic": "prepinac",
+      "difficulty": 3,
+      "passage": "Pokud se přepínač (switch) pokusí odeslat data do jiného segmentu, nejprve si projde svou vnitřní tabulku vytvořenou Backward Learning algoritmem. Tato RAM paměť se automaticky plní MAC adresami ze všech procházejících dat v síti. Jakmile přijde do switche nový rámec z neznámé MAC adresy, uloží si jeho adresu a port. A co když nezná port příjemce? Poté se dočasně sníží na úroveň 'tupého' rozbočovače (HUBu) a rozešle daná data plošně každému rozhraní ve snaze najít hledaný cíl, jehož odpověď si následně opět zaznamená.",
+      "questions": [
+        {
+          "type": "ordering",
+          "question": "Seřaďte logicky kroky takzvaného Backward Learning Algoritmu na switchi při příjmu rámce pro neznámého adresáta.",
+          "items": [
+            "Switch obdrží rámec s jemu dosud neznámou cílovou MAC adresou.",
+            "Zachová se jako HUB a rozešle rámec ven do všech ostatních svých rozhraní.",
+            "Oslovená stanice příjme data a vzápětí pošle na switch odpověď.",
+            "Z této odpovědi se switch dozví a zapamatuje port, kde se daná cílová MAC adresa nachází."
+          ],
+          "explanation": "Pokud switch dostane adresu, kterou dosud nezná, chová se jako HUB a rozešle rámec do všech ostatních rozhraní. Lze očekávat, že oslovená stanice odpoví a přepínač se tak dozví, kde se nachází. [cite: 868, 869]"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Switch si dokáže automaticky doplňovat tabulku adres bez asistence uživatele z čistého 'procházejícího provozu' připojených zařízení.",
+          "answer": true,
+          "explanation": "Switch využívá Backward Learning Algorithm, pomocí kterého si plní svoji směrovací tabulku tak, že si ji plní adresami z procházejícího provozu. [cite: 867]"
+        }
+      ]
+    },
+    {
+      "id": "link-021",
+      "type": "single",
+      "topic": "metody-prepinani",
+      "difficulty": 1,
+      "question": "Která z metod přeposílání rámců automaticky osciluje mezi zrychleným Cut-through a bezpečným Store and Forward v závislosti na kvalitě linky?",
+      "options": [
+        { "text": "Adaptive", "correct": true },
+        { "text": "Fragment free", "correct": false },
+        { "text": "Transparent bridging", "correct": false },
+        { "text": "Source route bridging", "correct": false }
+      ],
+      "explanation": "Adaptive způsob znamená automatické přepínání mezi store and forward a cut through switchováním. [cite: 865, 866]"
+    },
+    {
+      "id": "link-022",
+      "type": "single",
+      "topic": "obecne-mac",
+      "difficulty": 1,
+      "question": "Jaký cíl plní dodatečná patička (CRC - kontrolní součet) připojená k rámci na konci 2. vrstvy?",
+      "options": [
+        { "text": "Prověřuje výskyt chyb vzniklých v rámci během přenosu.", "correct": true },
+        { "text": "Prodlužuje rámec pro splnění minimální velikosti zprávy.", "correct": false },
+        { "text": "Obsahuje fyzickou zdrojovou a cílovou MAC adresu.", "correct": false },
+        { "text": "Řídí přístupová práva uživatelů k síti.", "correct": false }
+      ],
+      "explanation": "Patička obsahuje CRC (kontrolní součet) [cite: 826] a jejím cílem je prověřovat výskyt chyb v rámci. [cite: 824]"
+    },
+    {
+      "id": "link-023",
+      "type": "matching",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "question": "Přiřaďte zařízení / protokol k jeho klíčové činnosti na linkové vrstvě.",
+      "pairs": [
+        { "left": "Switch (Přepínač)", "right": "Propojuje uzly a analyzuje rámce do konkrétních portů" },
+        { "left": "MAC adresa", "right": "Jednoznačně identifikuje síťovou kartu na světě" },
+        { "left": "Most (Bridge)", "right": "Odděluje zátěž dvou segmentů bez zásahu do IP protokolu" },
+        { "left": "Rámec (Frame)", "right": "Shluknutý blok dat opatřený na krajích hlavičkou a patičkou" }
+      ],
+      "explanation": "Switch propojuje uzly s inteligencí portů. [cite: 848, 852] MAC identifikuje hardware bez ohledu na síť. [cite: 829] Most odděluje segmenty. [cite: 873] A linková vrstva shlukuje data do rámců opatřených hlavičkou. [cite: 823]"
+    },
+    {
+      "id": "link-024",
+      "type": "truefalse",
+      "topic": "mosty",
+      "difficulty": 1,
+      "statement": "Mosty pracují na nižší úrovni a nijak nemodifikují IP protokoly procházejících dat, tudíž je pro existující síť velmi snadné je nasadit.",
+      "answer": true,
+      "explanation": "Jelikož jsou mosty pro vyšší vrstvy neviditelné, nijak nemění protokoly a nemění způsob práce na síti. Lze je jednoduše a bez problémů nainstalovat. [cite: 875]"
+    },
+    {
+      "id": "link-025",
+      "type": "multiple",
+      "topic": "mosty",
+      "difficulty": 2,
+      "question": "Na jakém principu se bridge rozhoduje, zda rámec přepošle či nikoliv?",
+      "options": [
+        { "text": "Leží-li příjemce ve stejném segmentu jako odesílatel, most rámce vůbec neodešle (zablokuje je).", "correct": true },
+        { "text": "Leží-li příjemce v odlišném segmentu, most odešle rámec do příslušného segmentu v nezměněném stavu.", "correct": true },
+        { "text": "Každý paket ihned zahodí a požádá router o provedení směrování z IP adresy.", "correct": false },
+        { "text": "Aktivně překládá zdrojové MAC adresy za adresy jiných zařízení z tabulky.", "correct": false }
+      ],
+      "explanation": "Leží-li příjemce ve stejném segmentu jako odesílatel, most rámce do jiných částí neodešle. [cite: 878] Leží-li v odlišném segmentu, odešle ho v nezměněném stavu. [cite: 879]"
+    },
+    {
+      "id": "link-026",
+      "type": "single",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "question": "Co se stane, pokud má cílová MAC adresa v nejméně významném bitu prvního bajtu hodnotu jedničky (01)?",
+      "options": [
+        { "text": "Rámec bude přijat skupinou zařízení na základě Multicastu.", "correct": true },
+        { "text": "Jedná se o chybu adresace a paket bude okamžitě smazán.", "correct": false },
+        { "text": "Dojde k plošnému rozeslání úplně všem v Broadcastu.", "correct": false },
+        { "text": "Adresa patří výhradně routerům spojujícím síť s Internetem.", "correct": false }
+      ],
+      "explanation": "Multicast adresy označují skupinu a v nejméně významném bitu prvního bajtu obsahují jedničku (01). [cite: 842, 843, 845]"
+    },
+    {
+      "id": "link-027",
+      "type": "gap",
+      "topic": "mosty",
+      "difficulty": 2,
+      "text": "Transparent bridging je v ethernetu velmi oblíbený. Při prvním běhu most vůbec neví, jak jsou cílové stanice po síti rozloženy. Pokud tedy dostane paket určený pro neznámou cílovou stanici, musí jej zkopírovat a poslat do {{0}} ostatních připojených sítí. Až postupně se umí {{1}}, jak jsou stanice v síti reálně rozloženy.",
+      "blanks": [
+        { "accept": ["všech", "vsech", "úplně všech"] },
+        { "accept": ["učit", "naučit", "ucit", "zaznamenávat"] }
+      ],
+      "explanation": "Na začátku transparentní most neví uspořádání, takže posílá paket do všech ostatních připojených sítí. Postupně se ale umí učit rozložení stanic. [cite: 884, 885]"
+    },
+    {
+      "id": "link-028",
+      "type": "truefalse",
+      "topic": "obecne-mac",
+      "difficulty": 1,
+      "statement": "Linková vrstva figuruje v datové komunikaci mezi systémy, které spolu takzvaně přímo nesousedí (na velké vzdálenosti internetu).",
+      "answer": false,
+      "explanation": "Naopak, Linková vrstva zajišťuje komunikaci mezi dvěma nebo více uzly propojenými datovým spojem (tedy komunikaci mezi přímými sousedy). [cite: 822]"
+    },
+    {
+      "id": "link-029",
+      "type": "single",
+      "topic": "prepinac",
+      "difficulty": 2,
+      "question": "Proč je Switch efektivnější než obyčejný rozbočovač, ačkoliv oba vypadají vizuálně téměř identicky?",
+      "options": [
+        { "text": "Protože si pamatuje MAC adresy a posílá komunikaci vždy jen do konkrétní dotčené větve.", "correct": true },
+        { "text": "Protože neposílá data kabelem, ale pomocí bezdrátového šifrování na 5GHz.", "correct": false },
+        { "text": "Protože switch zcela odstranil hlavičky a zasílá pouze surová uživatelská data aplikacím.", "correct": false }
+      ],
+      "explanation": "Switch analyzuje pakety a posílá je do větve sítě s cílovou adresou. Tím dochází k daleko menší zátěži daného segmentu sítě než v případě HUBu. [cite: 852, 853]"
+    },
+    {
+      "id": "link-030",
+      "type": "numeric",
+      "topic": "obecne-mac",
+      "difficulty": 2,
+      "question": "Jaký maximální celkový počet znaků má unikátní MAC adresa v jejím standardním hexadecimálním zápisu včetně pěti dvojteček? (počítejte z ukázky 01:23:45:67:89:AB)",
+      "answer": 17,
+      "tolerance": 0,
+      "unit": "znaků",
+      "explanation": "Hexadecimální zápis se skládá ze šesti dvojciferných hodnot (12 znaků) rozdělených 5 dvojtečkami, což dává dohromady přesně 17 znaků. [cite: 832, 833]"
+    }
+  ]
+}

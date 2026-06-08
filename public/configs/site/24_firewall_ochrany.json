@@ -1,0 +1,481 @@
+{
+  "subject": "firewall",
+  "name": "24. Firewall a ochrany jednotlivých vrstev TCP/IP",
+  "topics": [
+    { "id": "vrstva-rozhrani", "name": "Zabezpečení vrstvy síťového rozhraní" },
+    { "id": "sitova-vrstva", "name": "Zabezpečení na síťové vrstvě (ACL, NAT, VPN)" },
+    { "id": "firewall-typy", "name": "Typy Firewallů" },
+    { "id": "transport-aplikace", "name": "TLS, Antivirus a Aplikační firewall" }
+  ],
+  "questions": [
+    {
+      "id": "fw-001",
+      "type": "single",
+      "topic": "vrstva-rozhrani",
+      "difficulty": 1,
+      "question": "Které vrstvy ISO/OSI modelu jsou v TCP/IP modelu sloučeny do jedné vrstvy 'síťového rozhraní'?",
+      "options": [
+        { "text": "Linková a Fyzická", "correct": true },
+        { "text": "Síťová a Transportní", "correct": false },
+        { "text": "Relační a Prezentační", "correct": false }
+      ],
+      "explanation": "Vrstva síťového rozhraní v TCP/IP spojuje linkovou a fyzickou vrstvu modelu ISO/OSI."
+    },
+    {
+      "id": "fw-002",
+      "type": "truefalse",
+      "topic": "vrstva-rozhrani",
+      "statement": "Vypnutí (shutdown) nepoužívaných interfaců na switchi je považováno za bezpečnostní doporučení.",
+      "answer": true,
+      "explanation": "Doporučuje se nepoužívané interfacy vypnout příkazem shutdown."
+    },
+    {
+      "id": "fw-003",
+      "type": "gap",
+      "topic": "vrstva-rozhrani",
+      "text": "Pro šifrování hesel v konfiguraci routeru, aby nebyla čitelná, slouží příkaz {{0}}.",
+      "blanks": [{ "accept": ["service password-encryption"] }],
+      "explanation": "Příkaz 'service password-encryption' slouží k zašifrování hesel v konfiguraci routeru."
+    },
+    {
+      "id": "fw-004",
+      "type": "multiple",
+      "topic": "vrstva-rozhrani",
+      "difficulty": 2,
+      "question": "Jaké jsou možnosti realizace zabezpečení portu na switchi (Port Security)?",
+      "options": [
+        { "text": "Nastavení maximálního počtu MAC adres na portu.", "correct": true },
+        { "text": "Ruční nastavení povolené MAC adresy.", "correct": true },
+        { "text": "Sticky learning (učení se první připojené adresy).", "correct": true },
+        { "text": "Povinné šifrování všech dat na L7.", "correct": false }
+      ],
+      "explanation": "Port security umožňuje limity počtu MAC, ruční nastavení nebo tzv. 'sticky' učení."
+    },
+    {
+      "id": "fw-005",
+      "type": "single",
+      "topic": "vrstva-rozhrani",
+      "difficulty": 2,
+      "question": "Co se stane při pokusu o připojení neoprávněného zařízení, pokud je nastaven 'switchport port-security violation shutdown'?",
+      "options": [
+        { "text": "Port se vypne.", "correct": true },
+        { "text": "Komunikace se pouze zablokuje, ale port zůstane aktivní.", "correct": false },
+        { "text": "Změní se MAC adresa zařízení.", "correct": false }
+      ],
+      "explanation": "Při nastavení 'violation shutdown' se při pokusu o připojení s neplatnou MAC adresou port vypne."
+    },
+    {
+      "id": "fw-006",
+      "type": "numeric",
+      "topic": "vrstva-rozhrani",
+      "question": "Kolik řádků příkazů (password, login) je obvykle potřeba k zaheslování konzole na routeru?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Typicky: line console 0, password cisco, login (3 příkazy)."
+    },
+    {
+      "id": "fw-007",
+      "type": "categorize",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Rozřaďte typy ACL podle jejich schopnosti kontroly.",
+      "categories": ["Standardní ACL", "Rozšířená ACL"],
+      "items": [
+        { "text": "Kontroluje pouze zdrojovou IP adresu", "category": "Standardní ACL" },
+        { "text": "Kontroluje zdrojovou IP, cílovou IP, port a protokol", "category": "Rozšířená ACL" }
+      ],
+      "explanation": "Standardní ACL kontroluje pouze zdroj, rozšířená kontroluje i cíle, porty a protokoly."
+    },
+    {
+      "id": "fw-008",
+      "type": "truefalse",
+      "topic": "sitova-vrstva",
+      "statement": "Pokud paket při průchodu ACL nenajde žádnou shodu s pravidly, je automaticky povolen.",
+      "answer": false,
+      "explanation": "Není-li nalezena žádná shoda s pravidlem, paket se zahodí (implicitní deny)."
+    },
+    {
+      "id": "fw-009",
+      "type": "single",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Co znamená NAT?",
+      "options": [
+        { "text": "Network Address Translation (překlad adres)", "correct": true },
+        { "text": "Network Access Terminal", "correct": false },
+        { "text": "Network Anti-Threat", "correct": false }
+      ],
+      "explanation": "NAT (Network Address Translation) je překládání neveřejných adres na veřejné."
+    },
+    {
+      "id": "fw-010",
+      "type": "multiple",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Které typy NATu existují?",
+      "options": [
+        { "text": "Statický", "correct": true },
+        { "text": "Dynamický", "correct": true },
+        { "text": "Overload (PAT)", "correct": true },
+        { "text": "Transparentní", "correct": false }
+      ],
+      "explanation": "Existují 3 typy NATu: statický, dynamický a overload."
+    },
+    {
+      "id": "fw-011",
+      "type": "single",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Co zaručuje vytvoření šifrovaného tunelu VPN?",
+      "options": [
+        { "text": "Důvěrnost, autentizaci a neporušenost komunikace", "correct": true },
+        { "text": "Zvýšení rychlosti internetového připojení", "correct": false },
+        { "text": "Automatické odstranění malwaru" }
+      ],
+      "explanation": "VPN zaručuje důvěrnost, autentizaci a neporušenost komunikace přes veřejnou síť."
+    },
+    {
+      "id": "fw-012",
+      "type": "single",
+      "topic": "firewall-typy",
+      "difficulty": 1,
+      "question": "Co kontroluje paketový firewall?",
+      "options": [
+        { "text": "Pouze hlavičku s IP adresami", "correct": true },
+        { "text": "Kompletní obsah souborů uvnitř", "correct": false },
+        { "text": "Pouze uživatelská hesla" }
+      ],
+      "explanation": "Paketový firewall kontroluje pouze hlavičku s IP adresami."
+    },
+    {
+      "id": "fw-013",
+      "type": "truefalse",
+      "topic": "firewall-typy",
+      "statement": "Firewall se řídí pravidlem: co není výslovně povoleno, je zakázáno.",
+      "answer": true,
+      "explanation": "Co není dovoleno, je zakázáno."
+    },
+    {
+      "id": "fw-014",
+      "type": "single",
+      "topic": "firewall-typy",
+      "difficulty": 2,
+      "question": "V čem je stavový firewall (stateful) lepší než paketový?",
+      "options": [
+        { "text": "Kontroluje, zda paket patří do již existujícího spojení.", "correct": true },
+        { "text": "Je mnohem levnější na nákup.", "correct": false },
+        { "text": "Funguje pouze na 1. vrstvě." }
+      ],
+      "explanation": "Stavový firewall kontroluje, zda příchozí paket je součástí již existujícího spojení."
+    },
+    {
+      "id": "fw-015",
+      "type": "numeric",
+      "topic": "transport-aplikace",
+      "difficulty": 2,
+      "question": "Kolik fází zahrnuje zabezpečený protokol TLS?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "TLS zahrnuje 3 fáze: dohodu na algoritmech, výměnu klíčů a šifrování provozu."
+    },
+    {
+      "id": "fw-016",
+      "type": "multiple",
+      "topic": "transport-aplikace",
+      "difficulty": 2,
+      "question": "Které služby využívají zabezpečení protokolem TLS?",
+      "options": [
+        { "text": "WWW (HTTPS)", "correct": true },
+        { "text": "E-mail", "correct": true },
+        { "text": "Základní kabelové propojení (L1)", "correct": false }
+      ],
+      "explanation": "TLS poskytuje zabezpečení pro služby jako WWW, email atd.."
+    },
+    {
+      "id": "fw-017",
+      "type": "single",
+      "topic": "transport-aplikace",
+      "difficulty": 2,
+      "question": "Co chrání aplikační firewall?",
+      "options": [
+        { "text": "Obsah přenášených dat (např. v HTTP paketech).", "correct": true },
+        { "text": "Pouze IP adresu odesílatele.", "correct": false },
+        { "text": "Hardwarové zapojení kabelů." }
+      ],
+      "explanation": "Aplikační firewall nekontroluje provoz paketů, ale jejich obsah."
+    },
+    {
+      "id": "fw-018",
+      "type": "truefalse",
+      "topic": "transport-aplikace",
+      "statement": "Aplikační firewall je součástí Windows již od verze XP z roku 2003.",
+      "answer": true,
+      "explanation": "Ano, obsahuje jej každý OS Windows od Windows XP."
+    },
+    {
+      "id": "fw-019",
+      "type": "gap",
+      "topic": "transport-aplikace",
+      "text": "Antivirový skener funguje na principu skenování {{0}} souborů. Při nalezení škodlivého kódu uživatele upozorní nebo {{1}}.",
+      "blanks": [
+        { "accept": ["příchozích", "prichozich"] },
+        { "accept": ["soubor smaže", "soubor smazé", "ho smaže"] }
+      ],
+      "explanation": "Antivirus skenuje příchozí soubory a po detekci je smaže nebo upozorní uživatele."
+    },
+    {
+      "id": "fw-020",
+      "type": "ordering",
+      "topic": "transport-aplikace",
+      "difficulty": 3,
+      "question": "Seřaďte fáze TLS komunikace.",
+      "items": [
+        "Dohoda na podporovaných algoritmech",
+        "Výměna klíčů na šifrování",
+        "Šifrování provozu symetrickou šifrou"
+      ],
+      "explanation": "TLS má 3 fáze: dohoda, výměna klíčů, šifrování."
+    },
+    {
+      "id": "fw-021",
+      "type": "single",
+      "topic": "vrstva-rozhrani",
+      "difficulty": 2,
+      "question": "Jaký příkaz se používá k vypnutí nevyužívaného interfacu na routeru?",
+      "options": [
+        { "text": "shutdown", "correct": true },
+        { "text": "disable", "correct": false },
+        { "text": "block", "correct": false }
+      ],
+      "explanation": "Doporučuje se nepoužívané interfacy vypnout příkazem shutdown."
+    },
+    {
+      "id": "fw-022",
+      "type": "truefalse",
+      "topic": "sitova-vrstva",
+      "statement": "NAT chrání bezpečnost sítě tím, že neukazuje vnitřní topologii do internetu.",
+      "answer": true,
+      "explanation": "NAT chrání síťovou bezpečnost, protože soukromé sítě neinzerují jejich adresy nebo vnitřní topologii."
+    },
+    {
+      "id": "fw-023",
+      "type": "multiple",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Jaké jsou typy NATu?",
+      "options": [
+        { "text": "Statický", "correct": true },
+        { "text": "Dynamický", "correct": true },
+        { "text": "Overload (PAT)", "correct": true }
+      ],
+      "explanation": "Jsou 3 typy NATu: statický, dynamický a overload."
+    },
+    {
+      "id": "fw-024",
+      "type": "numeric",
+      "topic": "sitova-vrstva",
+      "question": "Kolik typů ACL (standardní a rozšířená) se běžně využívá na routerech?",
+      "answer": 2,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Existují 2 verze ACL: standardní a rozšířená."
+    },
+    {
+      "id": "fw-025",
+      "type": "passage",
+      "topic": "firewall-typy",
+      "passage": "Firewall je zásadní prvek pro zabezpečení provozu mezi sítěmi s různou důvěryhodností. Paketový firewall filtruje pouze na základě IP hlaviček, zatímco stavový firewall sleduje kontext spojení. Pokud firewall vyhodnotí, že provoz není dovolen, automaticky jej zablokuje.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Jaké je základní pravidlo firewallu?",
+          "options": [
+            { "text": "Co není dovoleno, je zakázáno.", "correct": true },
+            { "text": "Co není zakázáno, je dovoleno.", "correct": false }
+          ],
+          "explanation": "Co není dovoleno, je zakázáno."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Paketový firewall umí kontrolovat obsah datových souborů.",
+          "answer": false,
+          "explanation": "Paketový firewall kontroluje pouze hlavičku s IP adresami, obsah nekontroluje."
+        }
+      ]
+    },
+    {
+      "id": "fw-026",
+      "type": "gap",
+      "topic": "vrstva-rozhrani",
+      "text": "Zabezpečení VTY linek pro vzdálený přístup se provádí v módu {{0}}.",
+      "blanks": [{ "accept": ["line vty"] }],
+      "explanation": "Zaheslování linek pro vzdálený přístup se děje pod 'line vty'."
+    },
+    {
+      "id": "fw-027",
+      "type": "truefalse",
+      "topic": "transport-aplikace",
+      "statement": "Antivirus je aplikační firewall.",
+      "answer": false,
+      "explanation": "Antivirus skenuje soubory, aplikační firewall kontroluje obsah síťového provozu."
+    },
+    {
+      "id": "fw-028",
+      "type": "single",
+      "topic": "vrstva-rozhrani",
+      "difficulty": 2,
+      "question": "Co nastavuje příkaz 'switchport port-security mac-address sticky'?",
+      "options": [
+        { "text": "Port se naučí první připojenou MAC adresu.", "correct": true },
+        { "text": "Port se trvale zablokuje.", "correct": false },
+        { "text": "Port povolí libovolné množství MAC adres." }
+      ],
+      "explanation": "Sticky učí port první připojenou MAC adresu."
+    },
+    {
+      "id": "fw-029",
+      "type": "numeric",
+      "topic": "transport-aplikace",
+      "difficulty": 1,
+      "question": "Kolik fází má zabezpečení TLS?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "TLS zahrnuje 3 základní fáze."
+    },
+    {
+      "id": "fw-030",
+      "type": "multiple",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Proč je ACL užitečné?",
+      "options": [
+        { "text": "Umožňuje povolovat určité IP adresy.", "correct": true },
+        { "text": "Umožňuje zakazovat přístup konkrétním IP adresám.", "correct": true },
+        { "text": "Zvyšuje celkovou bezpečnost zařízení.", "correct": true }
+      ],
+      "explanation": "ACL zvyšuje bezpečnost, protože si můžeme povolovat a zakazovat IP adresy."
+    },
+    {
+      "id": "fw-031",
+      "type": "single",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Který protokol se v dnešní době používá jako nástupce SSL?",
+      "options": [
+        { "text": "TLS", "correct": true },
+        { "text": "SSH", "correct": false },
+        { "text": "HTTP" }
+      ],
+      "explanation": "TLS je nástupce SSL."
+    },
+    {
+      "id": "fw-032",
+      "type": "truefalse",
+      "topic": "sitova-vrstva",
+      "statement": "ACL kontroluje provoz, dokud nenajde shodu s pravidlem.",
+      "answer": true,
+      "explanation": "Paket je kontrolován, dokud se nenajde shoda."
+    },
+    {
+      "id": "fw-033",
+      "type": "multiple",
+      "topic": "vrstva-rozhrani",
+      "difficulty": 1,
+      "question": "Jaké módy zabezpečení konzole známe?",
+      "options": [
+        { "text": "Zaheslování konzole", "correct": true },
+        { "text": "Zaheslování privilegovaného módu", "correct": true },
+        { "text": "Zaheslování VTY linek", "correct": true }
+      ],
+      "explanation": "Jedná se o 3 základní způsoby zaheslování zařízení."
+    },
+    {
+      "id": "fw-034",
+      "type": "numeric",
+      "topic": "sitova-vrstva",
+      "difficulty": 3,
+      "question": "Jak se nazývá ACL, které kontroluje i porty a protokoly?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "rozšířená",
+      "explanation": "Rozšířená verze kontroluje zdroj/cíl IP, port a protokol."
+    },
+    {
+      "id": "fw-035",
+      "type": "passage",
+      "topic": "vrstva-rozhrani",
+      "passage": "Zabezpečení přístupu k síťovému zařízení je prvním krokem v obraně. Zaheslování konzole zamezuje přímému přístupu k hardwaru, privilegovaný mód chrání konfiguraci a VTY linky chrání vzdálený přístup. Všechna hesla by měla být následně šifrována službou password-encryption.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Proč šifrujeme hesla v konfiguraci?",
+          "options": [
+            { "text": "Aby nebyla čitelná v konfiguraci routeru.", "correct": true },
+            { "text": "Aby se zrychlilo přihlášení.", "correct": false }
+          ],
+          "explanation": "Hesla šifrujeme, aby nebyla čitelná v konfiguraci."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Privilegovaný mód umožňuje provádět změny na zařízení.",
+          "answer": true,
+          "explanation": "Ano, tento mód umožňuje provádět změny na zařízení."
+        }
+      ]
+    },
+    {
+      "id": "fw-036",
+      "type": "gap",
+      "topic": "sitova-vrstva",
+      "text": "Access Control List je přístupový {{0}}, který buď {{1}} nebo {{2}} síťový provoz.",
+      "blanks": [
+        { "accept": ["seznam"] },
+        { "accept": ["povoluje"] },
+        { "accept": ["zakazuje"] }
+      ],
+      "explanation": "ACL je přístupový seznam, který povoluje nebo zakazuje provoz."
+    },
+    {
+      "id": "fw-037",
+      "type": "truefalse",
+      "topic": "transport-aplikace",
+      "statement": "Aplikační firewall kontroluje provoz paketů na síťové vrstvě.",
+      "answer": false,
+      "explanation": "Aplikační firewall kontroluje obsah, nikoliv provoz paketů na síťové vrstvě."
+    },
+    {
+      "id": "fw-038",
+      "type": "single",
+      "topic": "transport-aplikace",
+      "difficulty": 2,
+      "question": "Co dělá antivirus při nalezení škodlivého souboru?",
+      "options": [
+        { "text": "Oznámí uživateli nebo soubor smaže.", "correct": true },
+        { "text": "Pošle soubor útočníkovi.", "correct": false }
+      ],
+      "explanation": "Antivirus soubor smaže nebo oznámí tuto skutečnost uživateli."
+    },
+    {
+      "id": "fw-039",
+      "type": "numeric",
+      "topic": "sitova-vrstva",
+      "difficulty": 2,
+      "question": "Kolik typů NATu známe podle dokumentu?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Existují 3 typy: statický, dynamický a overload."
+    },
+    {
+      "id": "fw-040",
+      "type": "truefalse",
+      "topic": "sitova-vrstva",
+      "statement": "ACL se implementuje na port příkazem 'ip access-group'.",
+      "answer": true,
+      "explanation": "Implementace probíhá příkazem ip access-group X in/out."
+    }
+  ]
+}

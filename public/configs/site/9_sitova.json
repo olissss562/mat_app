@@ -1,0 +1,441 @@
+{
+  "subject": "sitova",
+  "name": "9. Síťová vrstva a směrování",
+  "topics": [
+    { "id": "sitova-obecne", "name": "Síťová vrstva a paket" },
+    { "id": "ip-adresa", "name": "IP adresace (IPv4 vs IPv6)" },
+    { "id": "smerovani-teorie", "name": "Směrování a tabulka" },
+    { "id": "router-zarizeni", "name": "Router, ARP a L3 Switch" }
+  ],
+  "questions": [
+    {
+      "id": "sit-001",
+      "type": "single",
+      "topic": "sitova-obecne",
+      "difficulty": 1,
+      "question": "Na které vrstvě referenčního modelu ISO/OSI pracuje Síťová vrstva (číslováno odspodu)?",
+      "options": [
+        { "text": "Na třetí vrstvě", "correct": true },
+        { "text": "Na druhé vrstvě", "correct": false },
+        { "text": "Na čtvrté vrstvě", "correct": false },
+        { "text": "Na první vrstvě", "correct": false }
+      ],
+      "explanation": "Jedná se o třetí vrstvu v ISO/OSI modelu."
+    },
+    {
+      "id": "sit-002",
+      "type": "multiple",
+      "topic": "sitova-obecne",
+      "difficulty": 2,
+      "question": "Jaké jsou primární úkoly a vlastnosti Síťové vrstvy?",
+      "options": [
+        { "text": "Stará se o směrování v síti a síťové adresování.", "correct": true },
+        { "text": "Poskytuje spojení mezi systémy, které spolu přímo nesousedí.", "correct": true },
+        { "text": "Zodpovídá za přenos dat od zdroje k cíli optimální cestou.", "correct": true },
+        { "text": "Zajišťuje bezdrátový přenos rádiových vln vzduchem.", "correct": false }
+      ],
+      "explanation": "Síťová vrstva se stará o směrování, adresování a poskytuje spojení nesousedních systémů optimální cestou. O rádiové vlny se stará fyzická vrstva."
+    },
+    {
+      "id": "sit-003",
+      "type": "truefalse",
+      "topic": "sitova-obecne",
+      "difficulty": 1,
+      "statement": "Nejznámějším a nejpoužívanějším protokolem pracujícím na síťové vrstvě je protokol HTTP.",
+      "answer": false,
+      "explanation": "Nejznámější protokol pracující na této vrstvě je Internet Protocol (IP). HTTP patří do aplikační vrstvy."
+    },
+    {
+      "id": "sit-004",
+      "type": "ordering",
+      "topic": "sitova-obecne",
+      "difficulty": 2,
+      "question": "Seřaďte logicky kroky vzniku a předání paketu na 3. vrstvě podle textu.",
+      "items": [
+        "Vrstva přijme datový blok (segment) z transportní vrstvy.",
+        "K segmentu se přidá hlavička s cílovou a zdrojovou IP adresou.",
+        "Tímto zapouzdřením vznikne datový paket.",
+        "Paket je předán nižší (linkové) vrstvě k dalšímu zpracování."
+      ],
+      "explanation": "Formují se zde datové bloky do paketů. K segmentu se přidává hlavička paketu, která obsahuje zdrojovou a cílovou IP adresu. Poté vznikne paket a ten je předán linkové vrstvě."
+    },
+    {
+      "id": "sit-005",
+      "type": "single",
+      "topic": "ip-adresa",
+      "difficulty": 1,
+      "question": "Co přesně jednoznačně identifikuje IP adresa?",
+      "options": [
+        { "text": "Síťové rozhraní v síti", "correct": true },
+        { "text": "Konkrétního uživatele sedícího u počítače", "correct": false },
+        { "text": "Sériové číslo základní desky (vyražené výrobcem)", "correct": false },
+        { "text": "Pouze aktivní směrovače (routery) v internetu", "correct": false }
+      ],
+      "explanation": "IP je číslo, které jednoznačně identifikuje síťové rozhraní v síti (např. síťová karta, IrDA port, loopback)."
+    },
+    {
+      "id": "sit-006",
+      "type": "categorize",
+      "topic": "ip-adresa",
+      "difficulty": 2,
+      "question": "Roztřiďte vlastnosti a charakteristiky k příslušné verzi IP protokolu.",
+      "categories": [
+        "Protokol IPv4",
+        "Protokol IPv6"
+      ],
+      "items": [
+        { "text": "Jeho délka je 32 bitů", "category": "Protokol IPv4" },
+        { "text": "Zapisuje se dekadicky po jednotlivých oktetech (např. 192.168.0.2)", "category": "Protokol IPv4" },
+        { "text": "V současnosti se potýká s nedostatkem a vyčerpáním adres", "category": "Protokol IPv4" },
+        { "text": "Jeho délka je masivních 128 bitů", "category": "Protokol IPv6" },
+        { "text": "Zapisuje se hexadecimálně (např. 2001:db8:0:1234::1)", "category": "Protokol IPv6" },
+        { "text": "Vznikl jako náhrada za starší a kapacitně nedostačující verzi", "category": "Protokol IPv6" }
+      ],
+      "explanation": "IPv4 je 32bitová zapisovaná dekadicky a potýká se s vyčerpáním. Z důvodu nedostatku se postupně nahrazuje protokolem IPv6, který je 128bitový a zapisuje se hexadecimálně."
+    },
+    {
+      "id": "sit-007",
+      "type": "numeric",
+      "topic": "ip-adresa",
+      "difficulty": 1,
+      "question": "Kolik bitů délky poskytuje starší adresa verze IPv4?",
+      "answer": 32,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "V současné době je nejrozšířenější IPv4, která je 32bitová."
+    },
+    {
+      "id": "sit-008",
+      "type": "numeric",
+      "topic": "ip-adresa",
+      "difficulty": 1,
+      "question": "Kolik bitů délky poskytuje moderní adresa verze IPv6?",
+      "answer": 128,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Nahrazuje se protokolem IPv6, který je 128bitový."
+    },
+    {
+      "id": "sit-009",
+      "type": "multiple",
+      "topic": "ip-adresa",
+      "difficulty": 2,
+      "question": "Na jaká 'síťová rozhraní' může být typicky aplikována IP adresa?",
+      "options": [
+        { "text": "Fyzická síťová karta (NIC)", "correct": true },
+        { "text": "IrDA port", "correct": true },
+        { "text": "Virtuální loopback", "correct": true },
+        { "text": "Paměťový modul RAM", "correct": false }
+      ],
+      "explanation": "Využívá se zde tedy IP adres, které se aplikují na síťové rozhraní (síťová karta, IrDA port, ale také virtuálně loopback atd.)."
+    },
+    {
+      "id": "sit-010",
+      "type": "single",
+      "topic": "ip-adresa",
+      "difficulty": 2,
+      "question": "Co v hlavičce IP paketu označuje zkratka TTL?",
+      "options": [
+        { "text": "Time to Live - doba života paketu na síti", "correct": true },
+        { "text": "Time to Link - rychlost spojení na lince", "correct": false },
+        { "text": "Total Transmission Length - celková délka přenosu", "correct": false },
+        { "text": "Transfer To Local - směr přenosu do lokální sítě", "correct": false }
+      ],
+      "explanation": "Zkratka TTL znamená 'Time to Live - doba života paketu na síti'. Zabraňuje zacyklení paketů."
+    },
+    {
+      "id": "sit-011",
+      "type": "gap",
+      "topic": "smerovani-teorie",
+      "difficulty": 2,
+      "text": "Směrování (Routing) je technika sloužící k propojení jednotlivých {{0}}. Úkolem je doručit datagram adresátovi pokud možno co nejefektivnější {{1}}. Každý směrovač dělá vlastní rozhodnutí, která jsou striktně založena na informacích z jeho vlastní směrovací {{2}}.",
+      "blanks": [
+        { "accept": ["sítí", "subnetů", "podsití", "siti", "subnetu"] },
+        { "accept": ["cestou", "linkou"] },
+        { "accept": ["tabulky", "databáze"] }
+      ],
+      "explanation": "Směrování slouží k propojení jednotlivých sítí (subnetů). Úkolem je doručit datagram adresátovi co nejefektivnější cestou na základě informací z vlastní směrovací tabulky."
+    },
+    {
+      "id": "sit-012",
+      "type": "multiple",
+      "topic": "smerovani-teorie",
+      "difficulty": 2,
+      "question": "Která ze zařízení v dnešní době reálně zprostředkovávají routování v síti na 3. vrstvě?",
+      "options": [
+        { "text": "Hlavně klasický Router (Směrovač)", "correct": true },
+        { "text": "L3 Switche (Přepínače 3. vrstvy)", "correct": true },
+        { "text": "Firewally", "correct": true },
+        { "text": "Některé běžné servery nebo počítače s příslušným OS", "correct": true }
+      ],
+      "explanation": "Zařízením, které routování zprostředkovává, je hlavně router, ale dnes se velmi využívají i L3 switche, firewally nebo pouze servery/počítače."
+    },
+    {
+      "id": "sit-013",
+      "type": "matching",
+      "topic": "smerovani-teorie",
+      "difficulty": 2,
+      "question": "Přiřaďte položku, která se objevuje jako řádek ve směrovací tabulce, k jejímu významu.",
+      "pairs": [
+        { "left": "Cíl (IP)", "right": "Adresa sítě, do které chceme data doručit" },
+        { "left": "Maska podsítě", "right": "Určuje rozsah adres spadající do cílové sítě" },
+        { "left": "Brána (Gateway)", "right": "IP adresa sousedního routeru, kterému má být datagram předán" },
+        { "left": "Síťové rozhraní", "right": "Fyzický port, přes který se musí datagram odeslat ven" }
+      ],
+      "explanation": "Směrovací tabulka je sepsána v řádcích, přičemž každý obsahuje cíl (IP), masku podsítě, bránu (IP routeru pro předání) a síťové rozhraní."
+    },
+    {
+      "id": "sit-014",
+      "type": "categorize",
+      "topic": "smerovani-teorie",
+      "difficulty": 2,
+      "question": "Rozřaďte charakteristiky do dvou základních způsobů směrování.",
+      "categories": [
+        "Statické směrování",
+        "Dynamické směrování"
+      ],
+      "items": [
+        { "text": "Cesta je určena a zadána administrátorem zcela ručně", "category": "Statické směrování" },
+        { "text": "Bezpečné řešení, které ale nereflektuje žádné změny či výpadky v topologii", "category": "Statické směrování" },
+        { "text": "Síť se sama automaticky přizpůsobuje změnám a dopravě", "category": "Dynamické směrování" },
+        { "text": "Cesty se vypočítávají automaticky pomocí routovacích protokolů (např. OSPF, RIP)", "category": "Dynamické směrování" }
+      ],
+      "explanation": "Statické routování je ručně zadané a nereflektuje změny v topologii. Dynamické se automaticky přizpůsobuje topologii pomocí routovacích protokolů."
+    },
+    {
+      "id": "sit-015",
+      "type": "single",
+      "topic": "router-zarizeni",
+      "difficulty": 1,
+      "question": "Z jaké konkrétní hardwarové komponenty spouští klasický Router svůj operační systém (IOS)?",
+      "options": [
+        { "text": "Z FLASH paměti", "correct": true },
+        { "text": "Z klasického pevného disku (HDD)", "correct": false },
+        { "text": "Z optické mechaniky (CD/DVD)", "correct": false },
+        { "text": "Nespouští se z disku, běží čistě v procesoru", "correct": false }
+      ],
+      "explanation": "Fyzicky je to počítač, který má vlastní operační systém (IOS), jež je uložen ve FLASH paměti."
+    },
+    {
+      "id": "sit-016",
+      "type": "truefalse",
+      "topic": "router-zarizeni",
+      "difficulty": 1,
+      "statement": "Běžný profesionální router Cisco s vlastním OS je obvykle ovládán přes grafické rozhraní s myší a klávesnicí (podobně jako Windows).",
+      "answer": false,
+      "explanation": "Router se standardně neovládá graficky, ale naopak se ovládá výhradně přes příkazovou řádku (CLI)."
+    },
+    {
+      "id": "sit-017",
+      "type": "matching",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "question": "Přiřaďte kód označení ze směrovací tabulky k jeho původu.",
+      "pairs": [
+        { "left": "Značka (C)", "right": "Přímo připojené cesty (Connected)" },
+        { "left": "Značka (S)", "right": "Statické cesty (Static)" },
+        { "left": "Ostatní značky (např. R, O, D)", "right": "Dynamické cesty získané směrovacími protokoly" }
+      ],
+      "explanation": "Směrovač obsahuje záznamy: Přímo připojené (C), Statické cesty (S) a Dynamické cesty (označení dle směrovacího protokolu)."
+    },
+    {
+      "id": "sit-018",
+      "type": "ordering",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "question": "Seřaďte logicky posloupnost rozhodování routeru, když zkoumá směrovací tabulku pro přijatý paket.",
+      "items": [
+        "Router obdrží paket a přečte si cílovou IP adresu.",
+        "Podívá se do směrovací tabulky, zda zná cestu.",
+        "Pokud je cíl přímo připojen, zašle paket rovnou cílovému zařízení.",
+        "Pokud síť zná přes jinou cestu, předá ho na správné síťové rozhraní.",
+        "Pokud síť vůbec nenalezne, odešle ho na defaultní cestu (pokud existuje).",
+        "Není-li ani defaultní cesta, paket zahodí a informuje odesílatele."
+      ],
+      "explanation": "Pro každý příchozí paket najde ve směrovací tabulce podle IP adresy cíl. Je-li připojen přímo, zašle ho rovnou. Není-li síť nalezena a existuje defaultní cesta, odesílá na ni. Pokud ne, je paket zahozen a odesílatel informován."
+    },
+    {
+      "id": "sit-019",
+      "type": "single",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "question": "Co se stane s přijatým datagramem na routeru, pokud router pro danou cílovou IP nenajde žádný záznam v tabulce a navíc NENÍ nakonfigurována žádná 'defaultní cesta'?",
+      "options": [
+        { "text": "Paket je okamžitě zahozen a odesílatel je informován o nedoručení.", "correct": true },
+        { "text": "Paket je pro jistotu rozeslán všemi dostupnými porty jako broadcast.", "correct": false },
+        { "text": "Router paket dočasně uloží a čeká, až mu jiný router zašle aktualizaci.", "correct": false },
+        { "text": "Router automaticky vygeneruje novou náhodnou defaultní cestu a odešle ho.", "correct": false }
+      ],
+      "explanation": "Není-li nalezena odpovídající síť a není-li nakonfigurována defaultní cesta - paket je zahozen a odesílatel je informován o nedoručení datagramu."
+    },
+    {
+      "id": "sit-020",
+      "type": "truefalse",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "statement": "Ještě předtím, než router přepošle paket na další úsek (hop), sáhne do linkové hlavičky (rámce) a upraví obě MAC adresy - zdrojovou přepíše na svou a cílovou na MAC adresu dalšího routeru.",
+      "answer": true,
+      "explanation": "Před odesláním upraví v hlavičce rámce MAC adresu tak, že za zdrojovou dá tu svoji a za cílovou MAC adresu následujícího routeru."
+    },
+    {
+      "id": "sit-021",
+      "type": "single",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "question": "Když router před přeposláním paketu potřebuje upravit cílovou MAC adresu pro následující hop, ale nezná ji, jaký protokol pro její získání použije?",
+      "options": [
+        { "text": "ARP (Address Resolution Protocol)", "correct": true },
+        { "text": "HTTP (Hypertext Transfer Protocol)", "correct": false },
+        { "text": "ICMP (Internet Control Message Protocol)", "correct": false },
+        { "text": "DHCP (Dynamic Host Configuration Protocol)", "correct": false }
+      ],
+      "explanation": "Cílovou MAC adresu následujícího routeru zjistí pomocí ARP protokolu (vysílá broadcast s hledanou IP adresou a čeká na odpověď)."
+    },
+    {
+      "id": "sit-022",
+      "type": "gap",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "text": "L3 switch je moderní zařízení, které dokáže zároveň pracovat jako klasický {{0}} nebo jako {{1}}. Obrovskou výhodou je, že může na svých jednotlivých interfacech (portech) mezi těmito režimy plynule {{2}}.",
+      "blanks": [
+        { "accept": ["switch", "přepínač", "prepinac"] },
+        { "accept": ["router", "směrovač", "smerovac"] },
+        { "accept": ["přepínat", "přepnout", "prepinat"] }
+      ],
+      "explanation": "L3 switch dokáže pracovat jako switch nebo router a může na jednotlivých interfacech přepínat mezi těmito režimy."
+    },
+    {
+      "id": "sit-023",
+      "type": "multiple",
+      "topic": "ip-adresa",
+      "difficulty": 2,
+      "question": "Ze kterých z těchto ukázek vyčtete správný formát pro moderní IPv6 adresu?",
+      "options": [
+        { "text": "Skládá se ze znaků 0-9 a a-f (hexadecimální formát)", "correct": true },
+        { "text": "Je oddělována dvojtečkami (:)", "correct": true },
+        { "text": "Zapisuje se pouze dekadicky s využitím teček (.)", "correct": false },
+        { "text": "Obsahuje 32 nul a jedniček", "correct": false }
+      ],
+      "explanation": "IPv6 se zapisuje hexadecimálně (např. 2001:db8:0:1234:0:567:8:1) s využitím dvojteček. Dekadický zápis s tečkami a délkou 32 bitů náleží IPv4."
+    },
+    {
+      "id": "sit-024",
+      "type": "numeric",
+      "topic": "sitova-obecne",
+      "difficulty": 2,
+      "question": "Kolik typů 'záznamů cest' podle jejich vzniku (Přímo připojené, Statické, Dynamické) uvádí text pro směrovací tabulku routeru?",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "typy",
+      "explanation": "Do routovací tabulky se vytváří několik typů záznamů. Konkrétně dokument jmenuje 3 typy: Přímo připojené cesty (C), Statické cesty (S) a Dynamické cesty."
+    },
+    {
+      "id": "sit-025",
+      "type": "passage",
+      "topic": "sitova-obecne",
+      "difficulty": 2,
+      "passage": "Na třetí vrstvě modelu ISO/OSI probíhá klíčový proces síťové komunikace. Vrstva přebírá datové bloky (označované jako segmenty) ze 4. transportní vrstvy. Aby tato data mohla vůbec cestovat složitou spletí celosvětového internetu směrem ke svému cíli, aplikuje se zde na ně speciální obálka – přidává se hlavička s identifikátory. Po přidání této obálky vzniká struktura nazývaná paket, který již disponuje vším potřebným pro samostatnou jízdu.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Jaké hlavní dva identifikátory se na síťové vrstvě připojují k segmentu do nově vznikající hlavičky?",
+          "options": [
+            { "text": "Zdrojová a cílová IP adresa", "correct": true },
+            { "text": "Zdrojová a cílová MAC adresa", "correct": false },
+            { "text": "Číslo zdrojového a cílového portu", "correct": false },
+            { "text": "Identifikace WiFi (SSID)", "correct": false }
+          ],
+          "explanation": "K segmentu se zde přidává hlavička paketu, která obsahuje zdrojovou a cílovou IP adresu. (MAC adresy řeší 2. vrstva)."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Výsledný blok dat (paket), který na této vrstvě vznikne, je následně odeslán zpět nahoru do transportní vrstvy.",
+          "answer": false,
+          "explanation": "Poté vznikne paket a ten je předán směrem dolů, konkrétně linkové (druhé) vrstvě k dalšímu zapouzdření do rámce."
+        }
+      ]
+    },
+    {
+      "id": "sit-026",
+      "type": "passage",
+      "topic": "router-zarizeni",
+      "difficulty": 3,
+      "passage": "Když směrovač potřebuje poslat paket na další úsek (například k vedlejšímu routeru poskytovatele internetu), nestačí mu k tomu pouze IP adresy, ty se na cestě k cíli nemění. Naopak, komunikace po fyzickém médiu mezi dvěma přímými sousedy vyžaduje MAC adresy. Router proto před odesláním sahá hluboko do linkové hlavičky – jako zdrojovou MAC zadá MAC svého odchozího rozhraní a jako cílovou potřebuje MAC dalšího routeru na trase. Aby ji zjistil, zavolá o pomoc protokol ARP (Address Resolution Protocol), který pošle do éteru dotaz všem připojeným uzlům: 'Kdo z vás má tuto IP adresu? Ozvěte se!'",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Jaký typ síťového vysílání (na které reagují všichni) využívá ARP protokol pro vznesení svého dotazu?",
+          "options": [
+            { "text": "Broadcast", "correct": true },
+            { "text": "Multicast", "correct": false },
+            { "text": "Unicast", "correct": false },
+            { "text": "Anycast", "correct": false }
+          ],
+          "explanation": "Zjištění MAC adresy u ARP probíhá tím, že se vysílá plošný broadcast s hledanou IP adresou, načež držitel IP odpoví svou MAC adresou."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Při průchodu paketu routerem dochází ke změně MAC adres, ale cílová i zdrojová IP adresa zůstávají typicky celou cestu netknuté.",
+          "answer": true,
+          "explanation": "Ano, IP adresy se nemění (označují absolutní zdroj a cíl), ale v hlavičce rámce se mění MAC adresy tak, že za zdrojovou dá router svoji a za cílovou adresu následujícího routeru."
+        }
+      ]
+    },
+    {
+      "id": "sit-027",
+      "type": "categorize",
+      "topic": "sitova-obecne",
+      "difficulty": 1,
+      "question": "Roztřiďte akce podle toho, na které síťové vrstvě se odehrávají (podle textu dokumentu).",
+      "categories": [
+        "Linková vrstva",
+        "Síťová vrstva",
+        "Transportní vrstva"
+      ],
+      "items": [
+        { "text": "Pracuje zde Internet Protocol (IP)", "category": "Síťová vrstva" },
+        { "text": "Vzniká zde datový blok nazývaný Paket", "category": "Síťová vrstva" },
+        { "text": "Z této vrstvy klesá Segment na 3. vrstvu", "category": "Transportní vrstva" },
+        { "text": "Na tuto vrstvu klesá připravený Paket", "category": "Linková vrstva" }
+      ],
+      "explanation": "Segment vzniká na Transportní (4) vrstvě, klesne na Síťovou (3), kde IP protokol obalí data a vznikne paket. Následně jde na Linkovou (2) vrstvu k zaobsloužení MAC adres."
+    },
+    {
+      "id": "sit-028",
+      "type": "ordering",
+      "topic": "smerovani-teorie",
+      "difficulty": 2,
+      "question": "Z jakých nezbytných sloupců (informací) se skládá záznam pro jedinou cestu ve směrovací tabulce routeru? Seřaďte je tak, jak jsou v textu typicky vyjmenovány.",
+      "items": [
+        "Cíl (IP adresa cílové sítě)",
+        "Maska podsítě",
+        "Brána (IP adresa sousedního routeru)",
+        "Síťové rozhraní (odchozí interface)"
+      ],
+      "explanation": "Každý řádek obsahuje: cíl (IP), masku podsítě, bránu (IP routeru pro předání) a síťové rozhraní."
+    },
+    {
+      "id": "sit-029",
+      "type": "single",
+      "topic": "router-zarizeni",
+      "difficulty": 2,
+      "question": "Router musí po zapnutí provést proces spuštění svého OS. Odkud se u standardního routeru inicializuje a nahrává samotný IOS (Internetwork Operating System)?",
+      "options": [
+        { "text": "Je trvale uložen ve FLASH paměti.", "correct": true },
+        { "text": "Zálohuje se a stahuje dynamicky ze sítě přes DHCP.", "correct": false },
+        { "text": "Je zabudovaný napevno do fyzického ROM čipu a nelze ho měnit.", "correct": false },
+        { "text": "Běží kompletně z pomalého magnetického pevného disku.", "correct": false }
+      ],
+      "explanation": "Fyzicky je to počítač, který má vlastní operační systém (IOS), který je uložen ve FLASH paměti."
+    },
+    {
+      "id": "sit-030",
+      "type": "truefalse",
+      "topic": "ip-adresa",
+      "difficulty": 1,
+      "statement": "Decimální IP adresa '192.168.0.2' je platným a běžným formátem zápisu adresy typu IPv4.",
+      "answer": true,
+      "explanation": "IPv4 je 32bitová a je zapisována dekadicky po jednotlivých oktetech, příkladem je právě 192.168.0.2."
+    }
+  ]
+}

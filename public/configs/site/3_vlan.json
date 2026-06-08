@@ -1,0 +1,456 @@
+{
+  "subject": "vlan",
+  "name": "3. Sítě VLAN",
+  "topics": [
+    { "id": "vlan-zaklady", "name": "Základy a význam VLAN" },
+    { "id": "vlan-typy", "name": "Metody zařazování do VLAN" },
+    { "id": "vlan-porty", "name": "Režimy portů a Subinterface" },
+    { "id": "vlan-tagging", "name": "Proces zapouzdření a tagování" },
+    { "id": "vlan-konfigurace", "name": "Konfigurace v Cisco IOS" }
+  ],
+  "questions": [
+    {
+      "id": "vlan-001",
+      "type": "single",
+      "topic": "vlan-zaklady",
+      "difficulty": 1,
+      "question": "Jaká VLAN je na switchích implicitně (z výroby) nastavena a automaticky do ní spadají všechny porty?",
+      "options": [
+        { "text": "VLAN 1", "correct": true },
+        { "text": "VLAN 0", "correct": false },
+        { "text": "VLAN 10", "correct": false },
+        { "text": "VLAN 99", "correct": false }
+      ],
+      "explanation": "Na switchích je již implicitně nastavena 1 vlan (VLAN 1), do které se automaticky zařadí všechny porty[cite: 821]."
+    },
+    {
+      "id": "vlan-002",
+      "type": "single",
+      "topic": "vlan-porty",
+      "difficulty": 1,
+      "question": "Který z režimů portu zahrnuje všechny nakonfigurované VLAN z databáze a využívá se pro propojení aktivních prvků?",
+      "options": [
+        { "text": "TRUNK", "correct": true },
+        { "text": "ACCESS", "correct": false },
+        { "text": "SUBINTERFACE", "correct": false },
+        { "text": "NATIVE", "correct": false }
+      ],
+      "explanation": "Port v režimu TRUNK zahrnuje všechny nakonfigurované VLAN z databáze[cite: 826, 827]."
+    },
+    {
+      "id": "vlan-003",
+      "type": "single",
+      "topic": "vlan-typy",
+      "difficulty": 2,
+      "question": "Která metoda rozřazování zařízení do VLAN je podle dokumentace nejpoužívanější?",
+      "options": [
+        { "text": "Podle portů", "correct": true },
+        { "text": "Podle MAC adresy", "correct": false },
+        { "text": "Podle protokolu", "correct": false },
+        { "text": "Podle autentizace", "correct": false }
+      ],
+      "explanation": "Typ zařazení do VLAN 'Podle portů' je v sítích nejpoužívanější[cite: 841, 842]."
+    },
+    {
+      "id": "vlan-004",
+      "type": "single",
+      "topic": "vlan-tagging",
+      "difficulty": 2,
+      "question": "Co se stane se značkou (TAGem) rámce u koncového zařízení na posledním přepínači před doručením k uživateli?",
+      "options": [
+        { "text": "Poslední přepínač značku odstraní.", "correct": true },
+        { "text": "Značka je ponechána, aby operační systém PC rozpoznal VLAN.", "correct": false },
+        { "text": "Značka se zamění za kontrolní součet FCS.", "correct": false },
+        { "text": "Rámec je kompletně zahozen a vytvořen nový paket.", "correct": false }
+      ],
+      "explanation": "Při cestě rámu sítěmi VLAN poslední přepínač značku odstraní[cite: 868]."
+    },
+    {
+      "id": "vlan-005",
+      "type": "multiple",
+      "topic": "vlan-zaklady",
+      "difficulty": 2,
+      "question": "Jaké jsou hlavní výhody nasazení virtuálních LAN (VLAN)?",
+      "options": [
+        { "text": "Snížení broadcastu vytvořením více menších broadcastových domén.", "correct": true },
+        { "text": "Zjednodušená správa, kde pro přesun stačí softwarová rekonfigurace.", "correct": true },
+        { "text": "Zvýšení zabezpečení díky oddělení komunikace, kam není jiný přístup.", "correct": true },
+        { "text": "Snížení spotřeby HW (např. stačí méně switchů, protože na jednom mohou být různé podsítě).", "correct": true }
+      ],
+      "explanation": "Výhodami VLAN jsou snížení broadcastu, zjednodušená správa, zvýšení zabezpečení a snížení počtu potřebného HW[cite: 830, 831, 832, 834, 835, 836, 837, 838, 839]."
+    },
+    {
+      "id": "vlan-006",
+      "type": "multiple",
+      "topic": "vlan-typy",
+      "difficulty": 3,
+      "question": "Které z následujících vlastností platí pro autentizační metodu zařazování do VLAN?",
+      "options": [
+        { "text": "Jedná se primárně o bezpečnostní metodu.", "correct": true },
+        { "text": "K ověřování identity se využívá RADIUS server.", "correct": true },
+        { "text": "Uživatel nebo zařízení se ověřuje pomocí protokolu IEEE 802.1x.", "correct": true },
+        { "text": "Využívá se především informace z 3. vrstvy (IP adresa), a proto zpomaluje switch.", "correct": false }
+      ],
+      "explanation": "VLAN podle autentizace je primárně bezpečnostní metoda [cite: 857], používá ověření přes IEEE 802.1x [cite: 856] a obsahuje mapování uživatelů pomocí RADIUS serveru[cite: 858]. Prohlížení 3. vrstvy se týká zařazování 'Podle protokolu'[cite: 853]."
+    },
+    {
+      "id": "vlan-007",
+      "type": "multiple",
+      "topic": "vlan-porty",
+      "difficulty": 2,
+      "question": "Vyberte pravdivá tvrzení týkající se Subinterfaců (podrozhraní).",
+      "options": [
+        { "text": "Jeden fyzický interface můžeme rozdělit na více logických interfaců.", "correct": true },
+        { "text": "Díky nim můžeme přidat jeden fyzický port do více VLAN.", "correct": true },
+        { "text": "Těmto logickým portům můžeme přiřadit odlišné IP adresy.", "correct": true },
+        { "text": "Jedná se o fyzickou hardwarovou kartu (modul), která se instaluje do routeru.", "correct": false }
+      ],
+      "explanation": "Pomocí subinterface rozdělíme 1 port na více logických [cite: 870, 871], těm můžeme přiřadit odlišné IP adresy [cite: 871] a přidat tak jeden port do více VLAN[cite: 872]."
+    },
+    {
+      "id": "vlan-008",
+      "type": "multiple",
+      "topic": "vlan-tagging",
+      "difficulty": 3,
+      "question": "Co přesně se děje při zapouzdření a 'tagování' rámců (metoda 802.1q)?",
+      "options": [
+        { "text": "Hlavička původního rámce je rozšířena o 4 Byty (B) dat.", "correct": true },
+        { "text": "Součástí přidané značky je protokol, příznak, MAC adresa, číslo VLANy a kontrolní součet.", "correct": true },
+        { "text": "Komunikace se značkuje vždy, i při komunikaci pouze mezi 1 switchem a koncovým PC.", "correct": false },
+        { "text": "Spojení dvou takových portů (trunků) se nazývá trunk link.", "correct": true }
+      ],
+      "explanation": "Zapouzdření podle standardu 802.1q rozšiřuje hlavičku o 4B [cite: 861, 866], spojení dvou trunků je 'trunk link' [cite: 864], ale značkování se neděje při komunikaci PC s 1 switchem[cite: 862]."
+    },
+    {
+      "id": "vlan-009",
+      "type": "truefalse",
+      "topic": "vlan-zaklady",
+      "difficulty": 1,
+      "statement": "Přenosy mezi různými virtuálními sítěmi (inter-VLAN komunikace) jsou pouze přepínané, nepotřebujeme k nim L3 zařízení (směrovač).",
+      "answer": false,
+      "explanation": "Přenosy VLAN jsou sice uvnitř podsítě přepínané [cite: 828], ale komunikace mezi různými VLAN musí být směrované[cite: 829]."
+    },
+    {
+      "id": "vlan-010",
+      "type": "truefalse",
+      "topic": "vlan-typy",
+      "difficulty": 2,
+      "statement": "Zařazení do VLAN 'Podle protokolu' se v praxi často nepoužívá, protože nutí switch analyzovat hlavičky 3. vrstvy, což způsobuje zpomalení sítě.",
+      "answer": true,
+      "explanation": "Je to pravda. Metoda podle protokolu se moc nepoužívá a v praxi je nerozšířená [cite: 850, 852, 854], protože se switch musí dívat do 3. vrstvy, což znamená zpomalení[cite: 853]."
+    },
+    {
+      "id": "vlan-011",
+      "type": "truefalse",
+      "topic": "vlan-typy",
+      "difficulty": 2,
+      "statement": "Pokud zařazujeme do VLAN 'Podle portů' a do daného portu připojíme další switch, ocitnou se všechna zařízení za tímto novým switchem v odlišných VLAN.",
+      "answer": false,
+      "explanation": "Naopak. Připojíme-li do portu další switch, tak všechna zařízení připojená k němu budou spadat do jedné zadané VLAN tohoto hlavního portu[cite: 844, 845]."
+    },
+    {
+      "id": "vlan-012",
+      "type": "truefalse",
+      "topic": "vlan-konfigurace",
+      "difficulty": 1,
+      "statement": "Při vkládání portů do nové VLAN přes Cisco IOS (mód access) musíme na zařízení nejprve danou VLAN vytvořit v databázi, např. příkazem 'vlan 20'.",
+      "answer": true,
+      "explanation": "Ano, při přidání access portů musíme nejprve na zařízení přidat patřičnou VLAN do databáze pomocí příkazu vlan[cite: 883, 884]."
+    },
+    {
+      "id": "vlan-013",
+      "type": "matching",
+      "topic": "vlan-zaklady",
+      "difficulty": 1,
+      "question": "Přiřaďte výhodu sítě VLAN k jejímu bližšímu popisu.",
+      "pairs": [
+        { "left": "Zvýšení zabezpečení", "right": "Oddělení komunikace do speciální VLANy, kam není jiný přístup" },
+        { "left": "Snížení HW požadavků", "right": "Na jednom switchi mohou existovat virtuálně různé podsítě" },
+        { "left": "Snížení broadcastu", "right": "Vytvoření více menších broadcastových domén" },
+        { "left": "Zjednodušená správa", "right": "Změna členství podsítě probíhá softwarově bez fyzického přepojování" }
+      ],
+      "explanation": "Zvýšení bezpečnosti je dosaženo izolací[cite: 836, 837]. Hardwarové úspory plynou z použití jednoho switche pro více sítí[cite: 838, 839]. Omezení broadcastu tvoří menší domény[cite: 831, 832]. Správa je o softwarových změnách[cite: 834, 835]."
+    },
+    {
+      "id": "vlan-014",
+      "type": "matching",
+      "topic": "vlan-typy",
+      "difficulty": 2,
+      "question": "Přiřaďte typ uspořádání VLAN k jeho typické charakteristice.",
+      "pairs": [
+        { "left": "Podle portů", "right": "Port switche je napevno přiřazen do VLAN, nejpoužívanější" },
+        { "left": "Podle MAC adresy", "right": "Port se zařadí dynamicky díky interní vyhledávací tabulce zařízení" },
+        { "left": "Podle protokolu", "right": "Zpomaluje switch čtením L3 hlaviček, v praxi téměř nepoužívané" },
+        { "left": "Podle autentizace", "right": "Ověření probíhá vůči RADIUS serveru protokolem 802.1x" }
+      ],
+      "explanation": "Zařazování podle portů je napevno[cite: 843]. Podle MAC používá tabulku se seznamem[cite: 848]. Podle protokolu analyzuje 3. vrstvu a zpomaluje chod[cite: 853]. Autentizace staví na RADIUS serveru a IEEE 802.1x[cite: 856, 858]."
+    },
+    {
+      "id": "vlan-015",
+      "type": "matching",
+      "topic": "vlan-porty",
+      "difficulty": 2,
+      "question": "Přiřaďte klíčový síťový pojem týkající se VLAN k jeho definici.",
+      "pairs": [
+        { "left": "ACCESS port", "right": "Na portu může být vždy pouze 1 specifikovaná VLAN" },
+        { "left": "TRUNK port", "right": "Port přenáší a zapouzdřuje všechny VLAN z databáze" },
+        { "left": "TAG (Značka)", "right": "Rozšířená hlavička určující příslušnost rámce k VLAN" },
+        { "left": "Subinterface", "right": "Logické rozdělení 1 fyzického portu pro snížení nutné kabeláže a ceny" }
+      ],
+      "explanation": "ACCESS port má pouze 1 VLAN[cite: 825]. TRUNK port zahrnuje všechny nakonfigurované VLAN[cite: 827]. TAG určuje do které VLAN rámec patří[cite: 867]. Subinterface logicky dělí jeden fyzický port[cite: 869, 870]."
+    },
+    {
+      "id": "vlan-016",
+      "type": "ordering",
+      "topic": "vlan-konfigurace",
+      "difficulty": 2,
+      "question": "Seřaďte správně příkazy z rozhraní Cisco IOS CLI (Command Line Interface) nutné k nastavení TRUNK portu.",
+      "items": [
+        "configure terminal",
+        "interface F0/1",
+        "switchport mode trunk",
+        "switchport trunk native vlan 99",
+        "end"
+      ],
+      "explanation": "Posloupnost pro nastavení trunku: 1. Vstup do config terminálu, 2. Výběr portu, 3. Aktivace trunk módu, 4. Nastavení nativní VLAN, 5. Návrat přes end[cite: 880]."
+    },
+    {
+      "id": "vlan-017",
+      "type": "ordering",
+      "topic": "vlan-konfigurace",
+      "difficulty": 2,
+      "question": "Seřaďte správně příkazy pro nastavení portu do režimu ACCESS a přidělení VLAN id z příkazové řádky.",
+      "items": [
+        "configure terminal",
+        "interface id",
+        "switchport mode access",
+        "switchport access vlan id",
+        "end"
+      ],
+      "explanation": "Po vytvoření VLAN v databázi se pro access port zadává: 1. config t, 2. interface, 3. mód access, 4. přiřazení patřičné vlan, 5. end[cite: 884]."
+    },
+    {
+      "id": "vlan-018",
+      "type": "ordering",
+      "topic": "vlan-tagging",
+      "difficulty": 3,
+      "question": "Seřaďte logickou cestu neoznačeného (untagged) datagramu mezi dvěma koncovými PC v síti VLAN přes propojené přepínače (trunkem).",
+      "items": [
+        "Zdrojové PC odešle klasický neznačený rámec do sítě.",
+        "Rámec vstoupí do Access portu 1. switche, který zná jeho VLAN z paměti.",
+        "Při přesunu přes Trunk port je rámec obohacen o 4B Tag (značku 802.1Q).",
+        "Rámec prochází trunk linkou směrem k cílovému switchi.",
+        "Poslední switch přečte Tag a před doručením k cílovému PC tuto značku odstraní."
+      ],
+      "explanation": "Obyčejné PC neví nic o VLANu. Rámec je v rámci 1 switche netagovaný[cite: 862]. Na trunk portu se taguje[cite: 863]. K tagování dochází přidáním 4B hlavičky s identifikátorem[cite: 866]. Jakmile má rámec putovat zpět do PC z posledního přepínače, značka se odstraní[cite: 868]."
+    },
+    {
+      "id": "vlan-019",
+      "type": "numeric",
+      "topic": "vlan-zaklady",
+      "difficulty": 1,
+      "question": "Do jakého čísla VLAN se podle výchozího (implicitního) nastavení automaticky zařadí všechny porty na novém switchi?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Na switchích je již implicitně nastavena VLAN s číslem 1, kam automaticky spadají všechny nezkonfigurované porty[cite: 821]."
+    },
+    {
+      "id": "vlan-020",
+      "type": "numeric",
+      "topic": "vlan-tagging",
+      "difficulty": 2,
+      "question": "O kolik Bajtů (B) se podle standardu IEEE 802.1q rozšíří původní hlavička rámce při jeho tagování (značkování)?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "B",
+      "explanation": "Při tagování vezmeme původní rámec a jeho hlavičku rozšíříme o 4B (Byty) dat s patřičnou značkou[cite: 866]."
+    },
+    {
+      "id": "vlan-021",
+      "type": "numeric",
+      "topic": "vlan-typy",
+      "difficulty": 3,
+      "question": "Pokud switch využívá zřídkavou techniku zařazení do VLAN 'Podle protokolu', do jaké vrstvy modelu ISO/OSI se musí podívat (což způsobuje jeho zpomalení)? Napište číslo vrstvy.",
+      "answer": 3,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "Metoda podle protokolu kontroluje cílové IP sítě, a tak se switch musí dívat do hlaviček 3. vrstvy (síťové)[cite: 853]."
+    },
+    {
+      "id": "vlan-022",
+      "type": "numeric",
+      "topic": "vlan-zaklady",
+      "difficulty": 2,
+      "question": "Kolik reálných hardwarových switchů (přepínačů) virtuálně ušetřila firma v ilustrativním diagramu zapojení v textu použitím logické struktury VLAN na centrálním switchi?",
+      "answer": 5,
+      "tolerance": 0,
+      "unit": "switchů",
+      "explanation": "Na základě teoretického obrázku z textu lze vidět, že v daném specifickém případě jsme použitím sítě VLAN ušetřili 5 switchů[cite: 888]."
+    },
+    {
+      "id": "vlan-023",
+      "type": "categorize",
+      "topic": "vlan-porty",
+      "difficulty": 2,
+      "question": "Rozřaďte vlastnosti podle toho, zda přísluší k rozhraní typu ACCESS nebo TRUNK.",
+      "categories": [
+        "ACCESS",
+        "TRUNK"
+      ],
+      "items": [
+        { "text": "Na portu může být pouze 1 specifikovaná VLAN", "category": "ACCESS" },
+        { "text": "Nastavujeme na porty připojující koncové počítače a zařízení", "category": "ACCESS" },
+        { "text": "Port zahrnuje všechny nakonfigurované VLAN z databáze", "category": "TRUNK" },
+        { "text": "Na tomto portu probíhá zapouzdření a tagování rámců", "category": "TRUNK" },
+        { "text": "Slouží převážně pro komunikaci mezi více přepínači (switchi) nebo s routerem", "category": "TRUNK" }
+      ],
+      "explanation": "Access port má nastavenou pouze 1 VLAN pro koncová zařízení[cite: 824, 825]. Trunk port obsahuje všechny VLAN a komunikace na něm se taguje a propojuje prvky infrastruktury[cite: 826, 827, 863]."
+    },
+    {
+      "id": "vlan-024",
+      "type": "categorize",
+      "topic": "vlan-typy",
+      "difficulty": 2,
+      "question": "Rozřaďte typy metod přidělování portů k VLAN do skupin podle jejich vlastností popsaných v textu.",
+      "categories": [
+        "Běžně užívané",
+        "Speciální bezpečnostní metedoa",
+        "Zastaralé a nepoužívané (zpomalující)"
+      ],
+      "items": [
+        { "text": "Podle portů", "category": "Běžně užívané" },
+        { "text": "Podle MAC adresy", "category": "Běžně užívané" },
+        { "text": "Podle autentizace", "category": "Speciální bezpečnostní metedoa" },
+        { "text": "Podle protokolu", "category": "Zastaralé a nepoužívané (zpomalující)" }
+      ],
+      "explanation": "Rozřazení 'Podle portů' je zmíněno jako nejpoužívanější[cite: 842]. Metoda 'Podle autentizace' je zmíněna primárně jako bezpečnostní metoda[cite: 857]. Metoda 'Podle protokolu' je kvůli kontrolám 3. vrstvy pomalá a v praxi nerozšířená[cite: 853, 854]."
+    },
+    {
+      "id": "vlan-025",
+      "type": "categorize",
+      "topic": "vlan-porty",
+      "difficulty": 2,
+      "question": "Roztřiďte vlastnosti podle toho, zda popisují standardní fyzický interface (One physical interface per VLAN) nebo subinterface (One physical interface for many VLANs).",
+      "categories": [
+        "Fyzický interface",
+        "Subinterface"
+      ],
+      "items": [
+        { "text": "Vyžaduje jeden samostatný fyzický port a linku pro každou VLAN zvlášť", "category": "Fyzický interface" },
+        { "text": "Vyšší celková cena kvůli nutnosti nákupu modulů", "category": "Fyzický interface" },
+        { "text": "Více fyzicky komplexní síťové propojení a kabeláž", "category": "Fyzický interface" },
+        { "text": "Sdílená šířka pásma pro více VLAN přes jednu linku", "category": "Subinterface" },
+        { "text": "Jeden fyzický port se připojuje do trunk módu a zprostředkuje více VLAN", "category": "Subinterface" },
+        { "text": "Snižuje se komplikované propojování a redukuje HW nároky", "category": "Subinterface" }
+      ],
+      "explanation": "Na základě komparativní tabulky z textu se fyzický interface pojí s větší cenou a komplikovanou konfigurací kabeláže. Subinterface využívá trunk režim pro více VLAN současně s nižšími náklady[cite: 873, 874]."
+    },
+    {
+      "id": "vlan-026",
+      "type": "gap",
+      "topic": "vlan-zaklady",
+      "difficulty": 2,
+      "text": "VLAN, neboli {{0}} LAN, slouží k {{1}} rozdělení počítačové sítě. Pomáhá bránit šíření nepotřebných informací (tzv. {{2}}) do částí sítě, kde nejsou vyžadovány, čímž vznikají menší domény a znatelně roste výkon celé infrastruktury.",
+      "blanks": [
+        { "accept": ["virtuální", "virtualni"] },
+        { "accept": ["logickému", "logickemu"] },
+        { "accept": ["broadcastu", "broadcast"] }
+      ],
+      "explanation": "Sítě VLAN, jakožto virtuální LAN, slouží primárně k logickému (nikoliv fyzickému) rozdělení sítě[cite: 817, 818]. Tím dochází ke snížení broadcastového šumu a zvýšení výkonu[cite: 820, 831, 833]."
+    },
+    {
+      "id": "vlan-027",
+      "type": "gap",
+      "topic": "vlan-tagging",
+      "difficulty": 3,
+      "text": "Mezi více přepínači (switchi) byl pro zprostředkování VLAN vyvinut standard IEEE {{0}}, který využívá takzvaných značkovacích rámců. Původní rámec je v hlavičce rozšířen o 4 Byty, kde je obsažen protokol, příznak, MAC adresa a samotná značka s číslem VLAN, známá pod anglickým označením {{1}}.",
+      "blanks": [
+        { "accept": ["802.1q", "802.1Q"] },
+        { "accept": ["TAG", "tag"] }
+      ],
+      "explanation": "Klíčovou technologií pro VLAN trunky je zapouzdření definované standardem IEEE 802.1q[cite: 861], které vkládá do datagramu tzv. TAG s identifikací podsítě[cite: 866, 867, 878]."
+    },
+    {
+      "id": "vlan-028",
+      "type": "gap",
+      "topic": "vlan-typy",
+      "difficulty": 3,
+      "text": "Velmi robustní z hlediska bezpečnosti je řazení do VLAN metodou podle ověření, zvanou {{0}}. Při této metodě probíhá proces autentizace, kde je identita uživatele či koncového zařízení ověřována externě skrze dedikovaný {{1}} server za pomoci protokolu IEEE {{2}}.",
+      "blanks": [
+        { "accept": ["autentizace", "autentikace", "ověření", "overeni"] },
+        { "accept": ["RADIUS", "radius"] },
+        { "accept": ["802.1x", "802.1X"] }
+      ],
+      "explanation": "Zařazování podle autentizace [cite: 855] je vynikající bezpečnostní metoda. Využívá protokol IEEE 802.1x pro ověření uživatelů [cite: 856], ke kterému je často asociován dotaz na externí RADIUS server obsahující mapování[cite: 858]."
+    },
+    {
+      "id": "vlan-029",
+      "type": "passage",
+      "topic": "vlan-typy",
+      "difficulty": 2,
+      "passage": "Virtuální sítě poskytují flexibilitu v tom, jakými způsoby do nich můžeme koncová zařízení zařazovat. Nejpoužívanější a nejrychlejší cestou je přiřazení napevno podle fyzických portů na switchi. Jakmile ale uživatel přesedne do jiné kanceláře a píchne PC do jiné zásuvky, musí síťař opět překonfigurovat port. Existují ale i dynamické metody - switch si může držet tabulku s MAC adresami, a jakmile takové zařízení rozpozná na jakémkoliv portu, ihned mu přidělí jeho VLANu. Podobně funguje bezpečnostní metoda skrze 802.1x protokol, která přiřazuje VLANy až teprve po úspěšném ověření identity přes RADIUS server.",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Která z popisovaných metod rozřazování zařízení zajistí, že pokud je zařízení zapojeno do portu na chodbě nepovolaným hostem, zařízení se sice může teoreticky připojit, ale zůstane izolováno dokud neproběhne ověření (autentizace) na základě jeho vnitřních informací uživatele?",
+          "options": [
+            { "text": "Podle autentizace", "correct": true },
+            { "text": "Podle portů", "correct": false },
+            { "text": "Podle MAC adresy", "correct": false },
+            { "text": "Podle protokolu", "correct": false }
+          ],
+          "explanation": "Primárně bezpečnostní metoda zařazení je 'podle autentizace', kdy RADIUS server identifikuje oprávnění a mapování do VLANu[cite: 855, 856, 857, 858]."
+        },
+        {
+          "type": "multiple",
+          "question": "Které metody naopak umožní plynulý 'hot-desking' (tedy situaci, kdy si uživatelé a jejich notebooky stěhují po budově a síť jim ihned po zasunutí kabelu do nového portu přidělí jejich domovskou síť)?",
+          "options": [
+            { "text": "Zařazení podle MAC adresy", "correct": true },
+            { "text": "Zařazení podle autentizace", "correct": true },
+            { "text": "Zařazení podle portů", "correct": false }
+          ],
+          "explanation": "Dynamické přidělení funguje dobře u zařazení podle MAC adresy, kdy se port sám ihned změní po detekci uložené adresy z tabulky[cite: 846, 848, 849]. Podobně dynamicky funguje identifikace dle Autentizace[cite: 856]. Statické porty naopak vyžadují manuální zásah."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Při použití základní metody 'podle portů', kdykoli do tohoto specifického portu zapojíme další řadový hub nebo nepodporovaný switch (cascade), všechna připojená zařízení budou patřit do jedné stejné definované VLAN tohoto hlavního switche.",
+          "answer": true,
+          "explanation": "Ano, port switche je u této metody napevno zařazen[cite: 843]. Jakmile přes něj začne protékat komunikace z externího hubu či switche, všechna připojená zařízení budou spadat automaticky do jedné stejné VLAN[cite: 845]."
+        }
+      ]
+    },
+    {
+      "id": "vlan-030",
+      "type": "passage",
+      "topic": "vlan-porty",
+      "difficulty": 3,
+      "passage": "Kvalitní síťová infrastruktura omezuje hardwarové požadavky logickými nástroji. Standardní procesy v síti VLAN jsou plně přepínané v rámci 2. vrstvy OSI. Co ale dělat, pokud chceme propojit podsíť A (Účetní) a podsíť B (Sklad), z nichž obě běží na jednom fyzickém switchi na různých VLANech? Komunikace mezí různými VLAN musí vždy být směrovaná za pomocí routeru. K propojení switche a routeru postačí využít zapouzdření na jednom spojovacím kabelu do takzvaného Trunk módu a na routeru vytvořit logické subinterfacy, které nahrazují složité fyzické kabelování ke každé VLAN zvlášť.",
+      "questions": [
+        {
+          "type": "gap",
+          "text": "Zapouzdření se používá pro posílání datagramů po lince s nastavením portu do módu {{0}}. Bez tohoto nástroje by datagram po opuštění routeru či switche neměl jak nést informaci o tom, do jaké z mnoha možných {{1}} přesně patří, a spojení by selhalo.",
+          "blanks": [
+            { "accept": ["TRUNK", "trunk"] },
+            { "accept": ["VLAN", "vlan", "virtuální LAN"] }
+          ],
+          "explanation": "Zapouzdření se používá pro posílání datagramů po truncích[cite: 876]. Klasický datagram totiž sám o sobě nenese informaci, do jaké VLAN sítě patří[cite: 877]. Zapouzdření (typicky 802.1Q) to řeší[cite: 878, 879]."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Konfigurace logického rozdělení 'Subinterface' se standardně nastavuje přes příkazy na přepínačích (switchích) a snižuje jejich cenu.",
+          "answer": false,
+          "explanation": "Zatímco subinterface je nástroj pro snížení portů, logické porty na L3 úrovni a odlišné IP adresy subinterfaců aplikujeme a směrujeme na routeru. Switch provádí tagování trunku. Nicméně je pravda, že díky využití subinterface se snižuje potřeba portů a cena zapojení[cite: 870, 871, 872, 873]."
+        },
+        {
+          "type": "numeric",
+          "question": "Aby bylo možné směrovat provoz mezi 8 nezávislými odděleními (1 VLAN pro každé oddělení, celkem 8 podsítí), kolik samostatných fyzických síťových kabelů musíme podle moderních metod (využitím Subinterfaců) reálně protáhnout mezi páteřním Switchem a L3 Routerem?",
+          "answer": 1,
+          "tolerance": 0,
+          "unit": "kabel",
+          "explanation": "Subinterface vyřeší vše! Kde by dříve (při fyzickém řešení - One interface per VLAN) bylo nutné zapojit 8 linkových kabelů, při zapojení přes subinterface a Trunk na switchi stačí jeden fyzický kabelový spoj ('One physical interface for many VLANs')[cite: 869, 870, 872, 873]."
+        }
+      ]
+    }
+  ]
+}

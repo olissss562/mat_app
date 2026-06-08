@@ -1,0 +1,456 @@
+{
+  "subject": "mody",
+  "name": "8. Adresné módy CPU",
+  "topics": [
+    { "id": "real-mode", "name": "Real Mode" },
+    { "id": "protected-mode", "name": "Protected Mode a segmentace" },
+    { "id": "vypocet-adres", "name": "Výpočet adres" }
+  ],
+  "questions": [
+    {
+      "id": "cpu-001",
+      "type": "single",
+      "topic": "real-mode",
+      "difficulty": 1,
+      "question": "V jakém módu pracuje procesor ihned po studeném startu?",
+      "options": [
+        { "text": "Real mode", "correct": true },
+        { "text": "Protected mode", "correct": false },
+        { "text": "Long mode", "correct": false }
+      ],
+      "explanation": "Po studeném startu CPU vždy startuje v Real módu."
+    },
+    {
+      "id": "cpu-002",
+      "type": "truefalse",
+      "topic": "real-mode",
+      "statement": "V Real módu mají aplikace neomezený přístup ke všem portům a paměti.",
+      "answer": true,
+      "explanation": "Ano, v Real módu neexistuje žádná ochrana paměti a aplikace mohou přistupovat kamkoliv."
+    },
+    {
+      "id": "cpu-003",
+      "type": "single",
+      "topic": "real-mode",
+      "difficulty": 2,
+      "question": "Jaký je adresovatelný limit paměti v Real módu?",
+      "options": [
+        { "text": "1 MB", "correct": true },
+        { "text": "4 GB", "correct": false },
+        { "text": "64 KB", "correct": false }
+      ],
+      "explanation": "Vzhledem k 20bitové adresové sběrnici je strop 1 MB (2^20)."
+    },
+    {
+      "id": "cpu-004",
+      "type": "numeric",
+      "topic": "real-mode",
+      "difficulty": 3,
+      "question": "Vzorec pro výpočet fyzické adresy v Real módu je SEGMENT * 16 + OFFSET. Kolik je fyzická adresa pro segment 0x1000 a offset 0x0001?",
+      "answer": 65537,
+      "tolerance": 0,
+      "unit": null,
+      "explanation": "0x1000 * 16 (0x10) = 0x10000; 0x10000 + 0x0001 = 0x10001, což je v desítkové 65537."
+    },
+    {
+      "id": "cpu-005",
+      "type": "multiple",
+      "topic": "real-mode",
+      "question": "Jaké segmenty paměti se používají v Real módu?",
+      "options": [
+        { "text": "CS (Code Segment)", "correct": true },
+        { "text": "DS (Data Segment)", "correct": true },
+        { "text": "SS (Stack Segment)", "correct": true },
+        { "text": "AS (Audio Segment)", "correct": false }
+      ],
+      "explanation": "Standardní segmenty jsou CS, DS, SS a ES."
+    },
+    {
+      "id": "cpu-006",
+      "type": "categorize",
+      "topic": "protected-mode",
+      "question": "Rozřaďte vlastnosti mezi Real a Protected mód.",
+      "categories": ["Real mód", "Protected mód"],
+      "items": [
+        { "text": "Žádná ochrana paměti", "category": "Real mód" },
+        { "text": "Segment:Offset adresování", "category": "Real mód" },
+        { "text": "Využití tabulek deskriptorů (GDT/LDT)", "category": "Protected mód" },
+        { "text": "Multitasking a ochrana paměti", "category": "Protected mód" }
+      ],
+      "explanation": "Protected mód přináší ochranu a tabulky deskriptorů."
+    },
+    {
+      "id": "cpu-007",
+      "type": "truefalse",
+      "topic": "protected-mode",
+      "statement": "V Protected módu je velikost stránky pevně daná hardwarem.",
+      "answer": true,
+      "explanation": "Velikost stránky je určena hardwarem (typicky 4 KB)."
+    },
+    {
+      "id": "cpu-008",
+      "type": "single",
+      "topic": "protected-mode",
+      "question": "K čemu slouží tabulka GDT?",
+      "options": [
+        { "text": "Global Descriptor Table - definuje segmenty systému", "correct": true },
+        { "text": "Game Data Table - tabulka her", "correct": false },
+        { "text": "General Data Transfer", "correct": false }
+      ],
+      "explanation": "GDT (Global Descriptor Table) definuje segmenty dostupné v celém systému."
+    },
+    {
+      "id": "cpu-009",
+      "type": "ordering",
+      "topic": "vypocet-adres",
+      "difficulty": 3,
+      "question": "Seřaďte kroky výpočtu adresy v Protected módu se stránkováním.",
+      "items": [
+        "Proces generuje virtuální adresu",
+        "Selektor vybere deskriptor v GDT/LDT",
+        "Získá se lineární adresa",
+        "Stránkování přeloží lineární adresu na fyzickou"
+      ],
+      "explanation": "Virtuální -> Selektor -> Lineární -> Fyzická."
+    },
+    {
+      "id": "cpu-010",
+      "type": "gap",
+      "topic": "protected-mode",
+      "text": "Pokud je offset větší než {{0}} (limit segmentu), CPU vyvolá chybu přístupu do paměti.",
+      "blanks": [{ "accept": ["LIMIT"] }],
+      "explanation": "LIMIT je parametr v deskriptoru určující maximální velikost segmentu."
+    },
+    {
+      "id": "cpu-011",
+      "type": "single",
+      "topic": "real-mode",
+      "question": "Kolik bitů měla adresová sběrnice v procesoru 8086 (Real mode)?",
+      "options": [
+        { "text": "20 bitů", "correct": true },
+        { "text": "16 bitů", "correct": false },
+        { "text": "32 bitů" }
+      ],
+      "explanation": "Procesor 8086 měl 20bitovou adresovou sběrnici."
+    },
+    {
+      "id": "cpu-012",
+      "type": "truefalse",
+      "topic": "vypocet-adres",
+      "statement": "Virtuální adresa je to samé co fyzická adresa.",
+      "answer": false,
+      "explanation": "Virtuální adresa musí být pomocí tabulek a stránkování přeložena na fyzickou."
+    },
+    {
+      "id": "cpu-013",
+      "type": "multiple",
+      "topic": "protected-mode",
+      "question": "Co obsahuje deskriptor segmentu?",
+      "options": [
+        { "text": "Základní adresu (Base)", "correct": true },
+        { "text": "Limit (velikost)", "correct": true },
+        { "text": "Přístupová práva", "correct": true },
+        { "text": "Jméno procesu" }
+      ],
+      "explanation": "Deskriptor obsahuje Base, Limit a práva."
+    },
+    {
+      "id": "cpu-014",
+      "type": "numeric",
+      "topic": "real-mode",
+      "question": "Kolik KB je 1 MB?",
+      "answer": 1024,
+      "tolerance": 0,
+      "unit": "KB",
+      "explanation": "V adresaci 1 MB = 1024 KB."
+    },
+    {
+      "id": "cpu-015",
+      "type": "single",
+      "topic": "protected-mode",
+      "question": "K čemu slouží LDT (Local Descriptor Table)?",
+      "options": [
+        { "text": "K definici segmentů pro konkrétní proces", "correct": true },
+        { "text": "K definici segmentů celého systému", "correct": false },
+        { "text": "K řazení procesů dle priority" }
+      ],
+      "explanation": "LDT obsahuje deskriptory specifické pro jeden proces."
+    },
+    {
+      "id": "cpu-016",
+      "type": "truefalse",
+      "topic": "protected-mode",
+      "statement": "Stránkování umožňuje umístit části paměti v RAM nesouvisle.",
+      "answer": true,
+      "explanation": "Ano, stránkování umožňuje nesouvislé umístění stránek v fyzické paměti."
+    },
+    {
+      "id": "cpu-017",
+      "type": "multiple",
+      "topic": "protected-mode",
+      "question": "Jaké jsou výhody Protected módu?",
+      "options": [
+        { "text": "Ochrana paměti mezi procesy", "correct": true },
+        { "text": "Multitasking", "correct": true },
+        { "text": "Virtualizace paměti", "correct": true }
+      ],
+      "explanation": "Základem Protected módu je multitasking a ochrana paměti."
+    },
+    {
+      "id": "cpu-018",
+      "type": "gap",
+      "topic": "real-mode",
+      "text": "Fyzickou adresu v Real módu vypočítáme jako: SEGMENT * {{0}} + OFFSET.",
+      "blanks": [{ "accept": ["16"] }],
+      "explanation": "Segment se násobí 16 (posun o 4 bity v hex)."
+    },
+    {
+      "id": "cpu-019",
+      "type": "single",
+      "topic": "vypocet-adres",
+      "difficulty": 2,
+      "question": "Co kontroluje CPU před povolením přístupu k datům v Protected módu?",
+      "options": [
+        { "text": "Zda offset není větší než Limit", "correct": true },
+        { "text": "Zda je uživatel přihlášen", "correct": false },
+        { "text": "Zda je zapnutý monitor" }
+      ],
+      "explanation": "CPU kontroluje offset vůči limitu segmentu, aby nedošlo k přetečení."
+    },
+    {
+      "id": "cpu-020",
+      "type": "passage",
+      "topic": "protected-mode",
+      "passage": "Protected mode je moderní způsob správy paměti. Využívá tabulky deskriptorů GDT a LDT. Při každém přístupu k paměti procesor zkontroluje, zda má daný proces právo přistoupit k danému segmentu. Pokud se proces pokusí o přístup mimo limit segmentu, vyvolá CPU výjimku.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Při pokusu o přístup mimo limit segmentu pokračuje CPU v činnosti.",
+          "answer": false,
+          "explanation": "CPU vyvolá výjimku (chybu)."
+        },
+        {
+          "type": "single",
+          "question": "Co obsahuje tabulka GDT?",
+          "options": [
+            { "text": "Deskriptory segmentů", "correct": true },
+            { "text": "Seznam souborů na disku" }
+          ],
+          "explanation": "GDT obsahuje deskriptory segmentů pro celý systém."
+        }
+      ]
+    },
+    {
+      "id": "cpu-021",
+      "type": "numeric",
+      "topic": "real-mode",
+      "question": "Kolik bitů má offset v Real módu?",
+      "answer": 16,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Offset v Real módu je 16bitový."
+    },
+    {
+      "id": "cpu-022",
+      "type": "truefalse",
+      "topic": "protected-mode",
+      "statement": "GDT tabulka je lokální pro každý proces.",
+      "answer": false,
+      "explanation": "GDT je globální, lokální je LDT."
+    },
+    {
+      "id": "cpu-023",
+      "type": "multiple",
+      "topic": "real-mode",
+      "question": "Které registry uchovávají adresy segmentů v Real módu?",
+      "options": [
+        { "text": "CS", "correct": true },
+        { "text": "DS", "correct": true },
+        { "text": "SS", "correct": true },
+        { "text": "AX", "correct": false }
+      ],
+      "explanation": "Segmentové registry jsou CS, DS, SS, ES."
+    },
+    {
+      "id": "cpu-024",
+      "type": "single",
+      "topic": "protected-mode",
+      "question": "Jaký je hlavní rozdíl mezi segmenty a stránkami?",
+      "options": [
+        { "text": "Segmenty jsou logické, stránky jsou HW bloky.", "correct": true },
+        { "text": "Stránky jsou větší než segmenty.", "correct": false }
+      ],
+      "explanation": "Segmenty jsou definovány uživatelem, stránky hardwarem."
+    },
+    {
+      "id": "cpu-025",
+      "type": "truefalse",
+      "topic": "vypocet-adres",
+      "statement": "Lineární adresa je výsledkem spojení segmentového a stránkovacího mechanismu.",
+      "answer": true,
+      "explanation": "Ano, v Protected módu se z virtuální adresy vytvoří lineární a ta se pak stránkuje."
+    },
+    {
+      "id": "cpu-026",
+      "type": "numeric",
+      "topic": "real-mode",
+      "question": "Kolik bitů má adresová sběrnice 8086?",
+      "answer": 20,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "Procesor 8086 měl 20bitovou sběrnici."
+    },
+    {
+      "id": "cpu-027",
+      "type": "single",
+      "topic": "protected-mode",
+      "question": "Co určuje selektor?",
+      "options": [
+        { "text": "Index do tabulky deskriptorů", "correct": true },
+        { "text": "Přesnou fyzickou adresu" }
+      ],
+      "explanation": "Selektor obsahuje index do GDT nebo LDT."
+    },
+    {
+      "id": "cpu-028",
+      "type": "truefalse",
+      "topic": "real-mode",
+      "statement": "Real mód nepodporuje multitasking.",
+      "answer": true,
+      "explanation": "V Real módu není žádná ochrana, což prakticky znemožňuje multitasking."
+    },
+    {
+      "id": "cpu-029",
+      "type": "numeric",
+      "topic": "vypocet-adres",
+      "question": "Kolik MB paměti adresuje 20bitová sběrnice?",
+      "answer": 1,
+      "tolerance": 0,
+      "unit": "MB",
+      "explanation": "2^20 bajtů = 1 MB."
+    },
+    {
+      "id": "cpu-030",
+      "type": "single",
+      "topic": "protected-mode",
+      "question": "Co se kontroluje, aby se proces nedostal k datům jiného segmentu?",
+      "options": [
+        { "text": "Offset vůči limitu", "correct": true },
+        { "text": "Název souboru", "correct": false }
+      ],
+      "explanation": "Kontroluje se offset vůči limitu v deskriptoru."
+    },
+    {
+      "id": "cpu-031",
+      "type": "multiple",
+      "topic": "protected-mode",
+      "question": "Jaké tabulky deskriptorů známe?",
+      "options": [
+        { "text": "GDT", "correct": true },
+        { "text": "LDT", "correct": true }
+      ],
+      "explanation": "GDT (Global) a LDT (Local)."
+    },
+    {
+      "id": "cpu-032",
+      "type": "truefalse",
+      "topic": "vypocet-adres",
+      "statement": "Offset je relativní adresa v rámci segmentu.",
+      "answer": true,
+      "explanation": "Offset udává vzdálenost od začátku segmentu."
+    },
+    {
+      "id": "cpu-033",
+      "type": "single",
+      "topic": "protected-mode",
+      "question": "Co dělá stránkovací jednotka?",
+      "options": [
+        { "text": "Překládá lineární adresu na fyzickou", "correct": true },
+        { "text": "Změní barvu obrazovky" }
+      ],
+      "explanation": "Stránkování mapuje lineární adresy do fyzické paměti."
+    },
+    {
+      "id": "cpu-034",
+      "type": "numeric",
+      "topic": "protected-mode",
+      "question": "Typická velikost stránky v KB?",
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "KB",
+      "explanation": "Standardní velikost stránky je 4 KB."
+    },
+    {
+      "id": "cpu-035",
+      "type": "passage",
+      "topic": "real-mode",
+      "passage": "V Real módu procesor adresuje paměť pomocí SEGMENT:OFFSET. Segment je 16bitová hodnota, která se vynásobí 16 a přičte se offset. Celkově lze adresovat až 1 MB paměti.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "Real mód adresuje 4 GB paměti.",
+          "answer": false,
+          "explanation": "Real mód adresuje maximálně 1 MB."
+        },
+        {
+          "type": "single",
+          "question": "Čím se násobí segment v Real módu?",
+          "options": [
+            { "text": "16", "correct": true },
+            { "text": "8" }
+          ],
+          "explanation": "Segment se násobí 16."
+        }
+      ]
+    },
+    {
+      "id": "cpu-036",
+      "type": "gap",
+      "topic": "protected-mode",
+      "text": "Protected mód používá k ochraně paměti tabulky {{0}} a {{1}}.",
+      "blanks": [
+        { "accept": ["GDT"] },
+        { "accept": ["LDT"] }
+      ],
+      "explanation": "GDT a LDT jsou základní tabulky v Protected módu."
+    },
+    {
+      "id": "cpu-037",
+      "type": "truefalse",
+      "topic": "vypocet-adres",
+      "statement": "Offset určuje absolutní fyzickou adresu.",
+      "answer": false,
+      "explanation": "Offset určuje relativní adresu v segmentu."
+    },
+    {
+      "id": "cpu-038",
+      "type": "single",
+      "topic": "protected-mode",
+      "difficulty": 2,
+      "question": "Co se stane při pokusu o přepsání dat jiného procesu v Protected módu?",
+      "options": [
+        { "text": "CPU vyvolá chybu.", "correct": true },
+        { "text": "Proces bude ignorován." }
+      ],
+      "explanation": "Protected mód hlídá paměť a při neoprávněném přístupu vyvolá chybu."
+    },
+    {
+      "id": "cpu-039",
+      "type": "numeric",
+      "topic": "real-mode",
+      "question": "Kolik bitů má adresová sběrnice procesoru 8086?",
+      "answer": 20,
+      "tolerance": 0,
+      "unit": "bitů",
+      "explanation": "8086 měl 20bitovou sběrnici."
+    },
+    {
+      "id": "cpu-040",
+      "type": "truefalse",
+      "topic": "protected-mode",
+      "statement": "Protected mód je nezbytný pro multitasking.",
+      "answer": true,
+      "explanation": "Díky ochraně paměti umožňuje spouštět více procesů najednou."
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "subject": "fyzicka",
+  "name": "5. Fyzická vrstva a zařízení",
+  "topics": [
+    { "id": "fyz-obecne", "name": "Fyzická vrstva obecně a zařízení" },
+    { "id": "fyz-optika", "name": "Optické kabely" },
+    { "id": "fyz-metal", "name": "Metalické kabely" },
+    { "id": "fyz-wifi", "name": "Bezdrátové sítě (WiFi)" }
+  ],
+  "questions": [
+    {
+      "id": "fyz-001",
+      "type": "single",
+      "topic": "fyz-obecne",
+      "difficulty": 1,
+      "question": "Z kolika vrstev se skládá referenční model ISO/OSI a na jakém místě (odspodu) se nachází Fyzická vrstva?",
+      "options": [
+        { "text": "Je to 1. vrstva (úplně nejnižší)", "correct": true },
+        { "text": "Je to 2. vrstva", "correct": false },
+        { "text": "Je to 3. vrstva", "correct": false },
+        { "text": "Je to 7. vrstva (nejvyšší)", "correct": false }
+      ],
+      "explanation": "Fyzická vrstva je první vrstva ISO/OSI modelu, zodpovědná za samotný fyzický přenos."
+    },
+    {
+      "id": "fyz-002",
+      "type": "truefalse",
+      "topic": "fyz-obecne",
+      "difficulty": 1,
+      "statement": "Realizace fyzické vrstvy v praxi probíhá primárně softwarově, nikoliv hardwarově.",
+      "answer": false,
+      "explanation": "Jelikož se na úrovni fyzické vrstvy pracuje se signálem, musí být její realizace čistě hardwarová."
+    },
+    {
+      "id": "fyz-003",
+      "type": "multiple",
+      "topic": "fyz-obecne",
+      "difficulty": 2,
+      "question": "Které parametry a vlastnosti fyzicky definuje 1. vrstva ISO/OSI?",
+      "options": [
+        { "text": "Rozložení pinů a konektorů", "correct": true },
+        { "text": "Napěťové úrovně elektrického signálu", "correct": true },
+        { "text": "Způsob přenosu dat a vlastnosti kabelů", "correct": true },
+        { "text": "Směrování paketů podle IP adres", "correct": false }
+      ],
+      "explanation": "Tato vrstva definuje elektrické a fyzikální vlastnosti zařízení: piny, napětí, kabely a přenos dat. O směrování IP se stará síťová vrstva."
+    },
+    {
+      "id": "fyz-004",
+      "type": "categorize",
+      "topic": "fyz-obecne",
+      "difficulty": 2,
+      "question": "Rozřaďte pojmy na základě toho, zda představují „Médium pro přenos“ nebo samotné „Prostředí pro přenos“.",
+      "categories": [
+        "Médium pro přenos",
+        "Prostředí pro přenos"
+      ],
+      "items": [
+        { "text": "Světlo", "category": "Médium pro přenos" },
+        { "text": "Elektrický signál", "category": "Médium pro přenos" },
+        { "text": "Elektromagnetické vlnění", "category": "Médium pro přenos" },
+        { "text": "Vodič", "category": "Prostředí pro přenos" },
+        { "text": "Vlákno", "category": "Prostředí pro přenos" },
+        { "text": "Vzduch", "category": "Prostředí pro přenos" }
+      ],
+      "explanation": "Médium je to, co nese informaci (světlo, elektřina, vlny). Prostředí je to, čím médium cestuje (vlákno, vodič, vzduch)."
+    },
+    {
+      "id": "fyz-005",
+      "type": "multiple",
+      "topic": "fyz-obecne",
+      "difficulty": 1,
+      "question": "Která ze zařízení se typicky vyskytují a pracují výhradně na fyzické vrstvě (L1)?",
+      "options": [
+        { "text": "Huby (Rozbočovače)", "correct": true },
+        { "text": "Opakovače (Repeatery)", "correct": true },
+        { "text": "Síťové adaptéry", "correct": true },
+        { "text": "Switche (Přepínače)", "correct": false }
+      ],
+      "explanation": "Na fyzické vrstvě se mohou vyskytovat huby, opakovače a síťové adaptéry. Switch pracuje na linkové vrstvě (L2)."
+    },
+    {
+      "id": "fyz-006",
+      "type": "single",
+      "topic": "fyz-obecne",
+      "difficulty": 2,
+      "question": "Proč dochází při použití HUBu (rozbočovače) k přetěžování větších sítí?",
+      "options": [
+        { "text": "Chová se jako opakovač – data zkopíruje a rozešle na všechny porty, protože je neumí filtrovat.", "correct": true },
+        { "text": "Filtruje pakety příliš dlouho a zdržuje provoz v síti.", "correct": false },
+        { "text": "Přepisuje MAC adresy a zahazuje pakety s neznámým cílem.", "correct": false },
+        { "text": "Při větším množství dat se přehřívá a uměle snižuje rychlost linky.", "correct": false }
+      ],
+      "explanation": "HUB všechna příchozí data zkopíruje na všechny ostatní porty, není schopen data filtrovat. Tím dochází k zahlcení."
+    },
+    {
+      "id": "fyz-007",
+      "type": "single",
+      "topic": "fyz-obecne",
+      "difficulty": 2,
+      "question": "Jaká je hlavní a jediná funkce Repeateru (Opakovače) v síti?",
+      "options": [
+        { "text": "Přijmout zarušený/oslabený signál, zesílit ho, opravit a vyslat dále.", "correct": true },
+        { "text": "Směrovat data do různých sítí podle IP adres.", "correct": false },
+        { "text": "Zabezpečovat síť proti odposlechům šifrováním dat.", "correct": false },
+        { "text": "Přidělovat zařízením dynamické IP adresy.", "correct": false }
+      ],
+      "explanation": "Úkolem opakovače je přijímat zkreslený signál, opravit ho, zesílit a poslat dále, aby se zvýšil dosah bez ztráty kvality."
+    },
+    {
+      "id": "fyz-008",
+      "type": "truefalse",
+      "topic": "fyz-optika",
+      "difficulty": 1,
+      "statement": "Optické kabely přenášejí data jako rychlé elektrické impulsy ve skleněném vodiči.",
+      "answer": false,
+      "explanation": "Data zde nejsou přenášena jako elektrické impulsy, ale světelnými impulsy v optických vláknech."
+    },
+    {
+      "id": "fyz-009",
+      "type": "multiple",
+      "topic": "fyz-optika",
+      "difficulty": 2,
+      "question": "Jaké jsou hlavní výhody použití optických kabelů oproti kovovým (metalickým) vodičům?",
+      "options": [
+        { "text": "Vlákna jsou zcela imunní vůči elektromagnetickému rušení.", "correct": true },
+        { "text": "Dosahují mnohonásobně vyšších přenosových rychlostí.", "correct": true },
+        { "text": "Mohou přenášet data na obrovské vzdálenosti s menší ztrátou signálu.", "correct": true },
+        { "text": "Jsou levnější a snadněji se instalují v domácnostech.", "correct": false }
+      ],
+      "explanation": "Optika nabízí menší ztrátovost, vyšší rychlosti, větší vzdálenosti a imunitu proti EM rušení. Oproti tomu jsou ale dražší a náchylnější na ohyb."
+    },
+    {
+      "id": "fyz-010",
+      "type": "categorize",
+      "topic": "fyz-optika",
+      "difficulty": 2,
+      "question": "Rozřaďte vlastnosti k příslušnému typu optického vlákna.",
+      "categories": [
+        "Jednovidová vlákna (Singlemod)",
+        "Mnohovidová vlákna (Multimod)"
+      ],
+      "items": [
+        { "text": "Přenáší se pouze 1 paprsek", "category": "Jednovidová vlákna (Singlemod)" },
+        { "text": "Dosahuje nejvyšších rychlostí (Tb/sek)", "category": "Jednovidová vlákna (Singlemod)" },
+        { "text": "Vhodné pro přenosy na velmi velké vzdálenosti", "category": "Jednovidová vlákna (Singlemod)" },
+        { "text": "Levnější varianta na kratší vzdálenosti", "category": "Mnohovidová vlákna (Multimod)" },
+        { "text": "Přenáší více signálů pod různým úhlem", "category": "Mnohovidová vlákna (Multimod)" },
+        { "text": "Pomalejší přenos kvůli čekání na docestování všech signálů", "category": "Mnohovidová vlákna (Multimod)" }
+      ],
+      "explanation": "Jednovidové (single-mode) slouží pro špičkový výkon na dálku pomocí 1 paprsku. Mnohovidové (multi-mode) je levnější, kratší a láme vícero paprsků."
+    },
+    {
+      "id": "fyz-011",
+      "type": "truefalse",
+      "topic": "fyz-optika",
+      "difficulty": 1,
+      "statement": "Protože jsou optická vlákna velmi tenká (jako vlas) a náchylná na ohyby či namáhání, musí být bezpečně uložena v pevném ochranném obalu.",
+      "answer": true,
+      "explanation": "Optická vlákna jsou velmi tenká a křehká, proto je ochranný obal naprostou nutností, aby nedošlo k jejich mechanickému zničení."
+    },
+    {
+      "id": "fyz-012",
+      "type": "gap",
+      "topic": "fyz-metal",
+      "difficulty": 1,
+      "text": "U metalických kabelů je médiem pro přenos {{0}} signál. Jsou sice levnější než optické kabely, ale o to více jsou náchylné k {{1}} rušení.",
+      "blanks": [
+        { "accept": ["elektrický", "elektricky"] },
+        { "accept": ["elektromagnetickému", "elektromagnetickemu", "EM"] }
+      ],
+      "explanation": "Metalické kabely fungují na bázi elektrického signálu a běžné standardy zaručují spolehlivost cca do vzdálenosti 100 m kvůli EM rušení a útlumu."
+    },
+    {
+      "id": "fyz-013",
+      "type": "numeric",
+      "topic": "fyz-metal",
+      "difficulty": 2,
+      "question": "Z kolika celkových jednotlivých vodičů (ne párů) je typicky složena běžná kroucená dvojlinka (Twisted Pair)?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "vodičů",
+      "explanation": "Kroucená dvojlinka je tvořena 4 páry vodičů, což dohromady tvoří 8 samostatných izolovaných drátků (vodičů)."
+    },
+    {
+      "id": "fyz-014",
+      "type": "single",
+      "topic": "fyz-metal",
+      "difficulty": 2,
+      "question": "Z jakého fyzikálního důvodu jsou páry vodičů uvnitř kabelu po celé své délce pravidelně kroucené?",
+      "options": [
+        { "text": "Zlepšují se tím elektromagnetické vlastnosti, minimalizují přeslechy a omezuje se vyzařování.", "correct": true },
+        { "text": "Aby byl kabel fyzicky pevnější a odolnější proti zlomení v ohybu.", "correct": false },
+        { "text": "Kroucení urychluje průchod elektrického proudu díky principu cívky.", "correct": false },
+        { "text": "Usnadňuje to výrobu a krimpování koncovek.", "correct": false }
+      ],
+      "explanation": "Kroucení vodičů slouží k vyrušení elektromagnetického pole, čímž se omezují přeslechy mezi dráty a ztráty vyzařováním."
+    },
+    {
+      "id": "fyz-015",
+      "type": "categorize",
+      "topic": "fyz-metal",
+      "difficulty": 1,
+      "question": "Rozřaďte zkratky podle toho, zda označují stíněnou nebo nestíněnou kroucenou dvojlinku.",
+      "categories": [
+        "Nestíněná (běžná)",
+        "Stíněná (s fólií)"
+      ],
+      "items": [
+        { "text": "UTP (Unshielded Twisted Pair)", "category": "Nestíněná (běžná)" },
+        { "text": "Klasický, v domácnostech nejvíce rozšířený typ", "category": "Nestíněná (běžná)" },
+        { "text": "STP (Shielded Twisted Pair)", "category": "Stíněná (s fólií)" },
+        { "text": "Páry obalené stínící fólií pro maximální ochranu proti rušení", "category": "Stíněná (s fólií)" }
+      ],
+      "explanation": "Nestíněná dvojlinka je běžný klasický kabel. Stíněná (obalená fólií nebo pletivem) se využívá v zarušeném prostředí."
+    },
+    {
+      "id": "fyz-016",
+      "type": "matching",
+      "topic": "fyz-metal",
+      "difficulty": 2,
+      "question": "Přiřaďte kategorii (Cat) kroucené dvojlinky k jejím hlavním vlastnostem a rychlostem.",
+      "pairs": [
+        { "left": "Cat3", "right": "100 Mbit/s, telefonní rozvody, šířka pásma 16 MHz" },
+        { "left": "Cat5e", "right": "Fast/Gigabit Ethernet, 100 MHz, RJ45 konektor" },
+        { "left": "Cat6", "right": "GigabitEthernet, šířka pásma zvýšena na 250 MHz" }
+      ],
+      "explanation": "Kategorie určují úrovně výkonu, šířku pásma a útlum. Čím vyšší kategorie, tím lepší zvládne rychlosti na delší vzdálenost."
+    },
+    {
+      "id": "fyz-017",
+      "type": "numeric",
+      "topic": "fyz-metal",
+      "difficulty": 2,
+      "question": "Jakou šířku pásma (v MHz) poskytuje hojně využívaný kabel kategorie Cat5e?",
+      "answer": 100,
+      "tolerance": 0,
+      "unit": "MHz",
+      "explanation": "Kategorie Cat5e disponuje šířkou pásma 100 MHz. (Cat6 má 250 MHz, Cat3 má 16 MHz)."
+    },
+    {
+      "id": "fyz-018",
+      "type": "ordering",
+      "topic": "fyz-metal",
+      "difficulty": 3,
+      "question": "Seřaďte vrstvy typického koaxiálního kabelu od středu směrem ven.",
+      "items": [
+        "Vnitřní vodič (měděné jádro)",
+        "Izolující vrstva dielektrika",
+        "Vodivé opletení (stínění)",
+        "Vnější izolující vrstva (plášť)"
+      ],
+      "explanation": "Koaxiál je tvořen vnitřním vodičem, na kterém je dielektrikum, následně vodivé opletení a nakonec svrchní izolace."
+    },
+    {
+      "id": "fyz-019",
+      "type": "single",
+      "topic": "fyz-metal",
+      "difficulty": 2,
+      "question": "Jakým typem konektoru je typicky zakončen koaxiální kabel (např. u kamerových či starých počítačových sítí)?",
+      "options": [
+        { "text": "BNC konektor", "correct": true },
+        { "text": "RJ45 konektor", "correct": false },
+        { "text": "LC nebo SC konektor", "correct": false },
+        { "text": "USB konektor", "correct": false }
+      ],
+      "explanation": "Koaxiální kabel bývá zakončen BNC konektorem. RJ45 je na kroucené dvojlince, LC/SC na optice."
+    },
+    {
+      "id": "fyz-020",
+      "type": "truefalse",
+      "topic": "fyz-wifi",
+      "difficulty": 1,
+      "statement": "Sítě WiFi ke svému chodu vyžadují placenou licenci, protože zabírají vládní frekvenční pásma.",
+      "answer": false,
+      "explanation": "WiFi sítě využívají výhradně volného, bezlicenčního frekvenčního pásma."
+    },
+    {
+      "id": "fyz-021",
+      "type": "matching",
+      "topic": "fyz-wifi",
+      "difficulty": 2,
+      "question": "Přiřaďte vlastnosti ke správnému frekvenčnímu pásmu WiFi sítě.",
+      "pairs": [
+        { "left": "Pásmo 2.4 GHz", "right": "Max. výkon 100 mW, vlnová délka 12.5 cm" },
+        { "left": "Pásmo 5 GHz", "right": "Náchylnější na překážky, max. výkon až 1W venku, vlnová délka 6 cm" }
+      ],
+      "explanation": "Nižší frekvence (2.4 GHz) má větší vlnovou délku a lépe prochází zdmi. Vyšší frekvence (5 GHz) je citlivější na překážky, ale mívá povolen vyšší vysílací výkon."
+    },
+    {
+      "id": "fyz-022",
+      "type": "numeric",
+      "topic": "fyz-wifi",
+      "difficulty": 3,
+      "question": "Jaká je vlnová délka (wavelength) signálu u pásma 2.4 GHz udávaná v centimetrech?",
+      "answer": 12.5,
+      "tolerance": 0.1,
+      "unit": "cm",
+      "explanation": "Pro pásmo 2.4 GHz činí vlnová délka 12.5 cm. U pásma 5 GHz je to zhruba polovina (6 cm)."
+    },
+    {
+      "id": "fyz-023",
+      "type": "single",
+      "topic": "fyz-wifi",
+      "difficulty": 2,
+      "question": "Komunikace v síti WiFi standardně probíhá v režimu, kdy se obousměrně sdílí jeden kanál a nelze přijímat i odesílat současně. Jak se tento režim nazývá?",
+      "options": [
+        { "text": "Half-duplex", "correct": true },
+        { "text": "Full-duplex", "correct": false },
+        { "text": "Simplex", "correct": false },
+        { "text": "Multiplex", "correct": false }
+      ],
+      "explanation": "U WiFi se sdílí jeden kanál (éter) pro příjem i vysílání, komunikace je proto z podstaty half-duplexní."
+    },
+    {
+      "id": "fyz-024",
+      "type": "ordering",
+      "topic": "fyz-wifi",
+      "difficulty": 2,
+      "question": "Seřaďte logicky kroky podle metody přístupu k médiu CSMA/CA užívané ve WiFi sítích, když chce stanice vysílat.",
+      "items": [
+        "Stanice nejprve poslouchá vysílací médium (éter).",
+        "Pokud médium není volné, stanice čeká.",
+        "Pokud je médium volné, stanice začne vysílat.",
+        "Případná kolize se nezjišťuje (jejímu vzniku se pouze předchází)."
+      ],
+      "explanation": "Na rozdíl od drátového Ethernetu (CSMA/CD) WiFi nedokáže poslouchat vlastní kolize. Proto metodou Collision Avoidance (CA) nejprve naslouchá a čeká."
+    },
+    {
+      "id": "fyz-025",
+      "type": "gap",
+      "topic": "fyz-wifi",
+      "difficulty": 2,
+      "text": "Jelikož se signál WiFi šíří vzduchem i mimo budovu, je bezpečnost kritická. K zamezení odposlechu přenášených dat cizí osobou slouží proces {{0}}. Ke kontrole a řízení přístupu pouze pro oprávněné uživatele sítě pak slouží metoda zvaná {{1}}.",
+      "blanks": [
+        { "accept": ["šifrování", "sifrovani"] },
+        { "accept": ["autorizace", "autentizace"] }
+      ],
+      "explanation": "Šifrování zajišťuje bezpečnost dat před odposlechem. Autorizace a řízení přístupu ověřuje identitu připojených zařízení."
+    },
+    {
+      "id": "fyz-026",
+      "type": "passage",
+      "topic": "fyz-optika",
+      "difficulty": 3,
+      "passage": "Optické kabely přenášejí informace jako světelné impulsy putující v jádře plastového nebo křemičitého skla, což je zcela odlišuje od metalických kabelů využívajících elektřinu. Jejich masivní výhodou je imunita proti EM rušení, minimální ztráta i na velké vzdálenosti a propustnost. Vlákna se však vyznačují velkou křehkostí. Dělíme je na mnohovidová (multimode), kde paprsky putují pod různými úhly a odráží se, což zpomaluje celkový přenos na kratších linkách, a jednovidová (singlemode), kde letí jediný přímý paprsek nejvyšší rychlostí v řádu terabitů za sekundu.",
+      "questions": [
+        {
+          "type": "truefalse",
+          "statement": "U mnohovidových vláken letí pouze jeden přímý paprsek, díky čemuž dosahují vyšších rychlostí než vlákna jednovidová.",
+          "answer": false,
+          "explanation": "Je to přesně naopak. Mnohovidová vlákna propouští více signálů lámajících se pod různými úhly, což sice kabel zlevňuje, ale rychlost klesá, jelikož se musí čekat, až dorazí k cíli všechny paprsky."
+        },
+        {
+          "type": "single",
+          "question": "Proč je u optických kabelů tak extrémně důležitý kvalitní vnější ochranný obal?",
+          "options": [
+            { "text": "Vlákna jsou velmi tenká a vysoce náchylná na poškození ohybem či mechanickým namáháním.", "correct": true },
+            { "text": "Obal je tvořen kovovou mřížkou, aby blokoval nežádoucí elektromagnetické vlny (rušení).", "correct": false },
+            { "text": "Bez pevného obalu by nebezpečně svítily do okolí a poškodily by uživateli zrak.", "correct": false }
+          ],
+          "explanation": "Optika nereaguje na EM rušení (žádná kovová mřížka není třeba). Hlavním důvodem obalu je ochrana proti zlomení a ohybu vlasových vláken."
+        }
+      ]
+    },
+    {
+      "id": "fyz-027",
+      "type": "passage",
+      "topic": "fyz-obecne",
+      "difficulty": 2,
+      "passage": "Z historického hlediska využívaly sítě zařízení typu HUB (Rozbočovač). Jeho chování bylo primitivní – veškerá přijatá data nerozlišoval, nefiltroval, ale pouze je tupě zkopíroval a fyzicky je rozeslal na všechny ostatní porty k ostatním zařízením. Opakovač (Repeater) sloužil jen k zesílení upadajícího signálu na dálku. Kvůli zahlcení a kolizím v sítích s Hubem však tyto prvky začaly být nahrazovány moderními inteligentními přepínači (Switchi), které pracují na linkové vrstvě.",
+      "questions": [
+        {
+          "type": "gap",
+          "text": "Protože zařízení HUB odesílá data automaticky na všechny porty, všechna zařízení přijímají data i přesto, že jim vůbec nejsou {{0}}. V síti plné takového nekontrolovaného provozu zanedlouho začne docházet k fatálnímu {{1}} celé linky.",
+          "blanks": [
+            { "accept": ["určena", "urcena", "adresována"] },
+            { "accept": ["přetěžování", "zahlcení", "pretezovani"] }
+          ],
+          "explanation": "Hub data rozesílá plošně všem, i když jim nejsou určena, což generuje enormní zbytečný provoz a síť přetíží."
+        },
+        {
+          "type": "single",
+          "question": "Jaké zařízení typicky a efektivně nahradilo v současné době zastaralé rozbočovače (Huby)?",
+          "options": [
+            { "text": "Přepínač (Switch)", "correct": true },
+            { "text": "Repeater (Opakovač)", "correct": false },
+            { "text": "Firewall", "correct": false },
+            { "text": "RADIUS server", "correct": false }
+          ],
+          "explanation": "Díky inteligenci, schopnosti filtrovat provoz a práci na L2 vrstvě nahradily Huby moderní Switche."
+        }
+      ]
+    },
+    {
+      "id": "fyz-028",
+      "type": "truefalse",
+      "topic": "fyz-wifi",
+      "difficulty": 1,
+      "statement": "Ačkoli WiFi (Standard IEEE 802.11) původně vznikla pro lokální bezdrátové sítě, v dnešní době se naprosto běžně používá jako přístupové médium k síti Internet.",
+      "answer": true,
+      "explanation": "Původním cílem bylo pouze lokální spojení. S postupem času se však stala hlavním standardem bezdrátového připojení na internet."
+    },
+    {
+      "id": "fyz-029",
+      "type": "numeric",
+      "topic": "fyz-metal",
+      "difficulty": 1,
+      "question": "Při použití kroucené dvojlinky garantují běžné standardy provoz bez chyb do jaké maximální vzdálenosti v metrech?",
+      "answer": 100,
+      "tolerance": 5,
+      "unit": "metrů",
+      "explanation": "Běžné standardy ethernetu přes UTP kabely spolehlivě fungují na linkách do 100 metrů. Delší spoj vyžaduje nasazení repeateru či switche."
+    },
+    {
+      "id": "fyz-030",
+      "type": "multiple",
+      "topic": "fyz-metal",
+      "difficulty": 2,
+      "question": "Které parametry jsou primárně určovány kategorií (např. Cat5e, Cat6) kabelů s kroucenou dvojlinkou?",
+      "options": [
+        { "text": "Úroveň výkonu a útlumu", "correct": true },
+        { "text": "Garantovaná šířka pásma (v MHz)", "correct": true },
+        { "text": "Míra maximálního přeslechu (crosstalk)", "correct": true },
+        { "text": "IP adresa a směrovací metrika pro router", "correct": false }
+      ],
+      "explanation": "Kategorie kabelů definují fyzické limity hardware (šířky pásma, výkon, přeslechy, útlum). Informace 3. vrstvy (jako IP adresy) se fyzických kabelů vůbec netýkají."
+    }
+  ]
+}

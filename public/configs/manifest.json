@@ -1,0 +1,32 @@
+{
+  "title": "Maturita Trenažér",
+  "version": 3,
+  "subjects": [
+    { "id": "iso-osi", "name": "1. ISO/OSI a TCP/IP", "file": "site/1_iso_osi.json", "icon": "📚" },
+    { "id": "pameti", "name": "2. Polovodičové paměti", "file": "tvy/2_pameti.json", "icon": "💾" },
+    { "id": "vlan", "name": "3. Sítě VLAN", "file": "site/3_vlan.json", "icon": "🔀" },
+    { "id": "soustavy", "name": "4. Číselné soustavy", "file": "tvy/4_soustavy.json", "icon": "🧮" },
+    { "id": "fyzicka", "name": "5. Fyzická vrstva", "file": "site/5_fyzicka.json", "icon": "🔌" },
+    { "id": "eeprom", "name": "6. EEPROM, Flash a SSD", "file": "tvy/6_eeprom_flash_ssd.json", "icon": "💾" },
+    { "id": "linkova", "name": "7. Linková vrstva", "file": "site/7_linkova.json", "icon": "🔗" },
+    { "id": "mody", "name": "8. Adresné módy CPU", "file": "tvy/8_adresne_mody.json", "icon": "🧠" },
+    { "id": "sitova", "name": "9. Síťová vrstva", "file": "site/9_sitova.json", "icon": "🗺️" },
+    { "id": "motherboard", "name": "10. Základní deska", "file": "tvy/10_motherboard.json", "icon": "🖥️" },
+    { "id": "optika", "name": "11. Optická zařízení", "file": "tvy/11_opticka_zarizeni.json", "icon": "💿" },
+    { "id": "ipv4-subnetting", "name": "12. IPv4 adresace a podsítě", "file": "site/12_ipv4_subnetting.json", "icon": "🔢" },
+    { "id": "projektory-tabule", "name": "13. Projektory a tabule", "file": "tvy/13_projektory_tabule.json", "icon": "📽️" },
+    { "id": "subnetting", "name": "14. Vytváření podsítí", "file": "site/14_subnetting.json", "icon": "✂️" },
+    { "id": "zdroje-pc", "name": "15. Zdroje pro PC a UPS", "file": "tvy/15_zdroje_pc.json", "icon": "⚡" },
+    { "id": "ipv6", "name": "16. IPv6 adresace", "file": "site/16_ipv6.json", "icon": "🌐" },
+    { "id": "cpu-preruseni-dma", "name": "17. Přerušení a DMA", "file": "tvy/17_cpu_preruseni_dma.json", "icon": "⏱️" },
+    { "id": "smerovani", "name": "18. Dynamické směrovací protokoly", "file": "site/18_smerovani.json", "icon": "🔄" },
+    { "id": "laserove-led-tiskarny", "name": "19. Laserové a LED tiskárny", "file": "tvy/19_laserove_led_tiskarny.json", "icon": "🖨️" },
+    { "id": "rozsah", "name": "20. Rozdělení sítí", "file": "site/20_rozsah.json", "icon": "📏" },
+    { "id": "vystupni-zobrazovaci-zarizeni", "name": "21. Zobrazovací zařízení", "file": "tvy/21_vystupni_zobrazovaci_zarizeni.json", "icon": "🖥️" },
+    { "id": "hrozby", "name": "22. Hrozby na síti", "file": "site/22_hrozby.json", "icon": "🛡️" },
+    { "id": "aritmeticke-operace", "name": "23. Aritmetické operace", "file": "tvy/23_aritmeticke_operace.json", "icon": "🧮" },
+    { "id": "firewall", "name": "24. Firewall a ochrany", "file": "site/24_firewall_ochrany.json", "icon": "🔐" },
+    { "id": "vstupni-zarizeni", "name": "25. Vstupní zařízení", "file": "tvy/25_vstupni_zarizeni.json", "icon": "⌨️" }
+
+  ]
+}
