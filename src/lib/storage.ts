@@ -104,12 +104,32 @@ function writeJSON(key: string, value: unknown): void {
   }
 }
 
+// ---------- Cross-device sync change notification ----------
+// The optional server sync (src/lib/userDataSync.ts) registers a handler here so it can push the
+// user's data to the backend (debounced) whenever any syncable slice changes locally. We suppress
+// notifications while applying a freshly-pulled snapshot so a pull doesn't immediately re-trigger
+// a push (which would echo back and forth pointlessly).
+let userDataChangeHandler: (() => void) | null = null;
+let suppressUserDataChange = false;
+export function setUserDataChangeHandler(cb: (() => void) | null): void {
+  userDataChangeHandler = cb;
+}
+function emitUserDataChange(): void {
+  if (suppressUserDataChange) return;
+  try {
+    userDataChangeHandler?.();
+  } catch {
+    /* never let a sync listener break a local save */
+  }
+}
+
 // ---------- Progress ----------
 export function loadProgress(): Record<string, Progress> {
   return readJSON<Record<string, Progress>>(ns(KEYS.progress), {});
 }
 export function saveProgress(progress: Record<string, Progress>): void {
   writeJSON(ns(KEYS.progress), progress);
+  emitUserDataChange();
 }
 
 // ---------- Settings ----------
@@ -119,6 +139,7 @@ export function loadSettings(): Settings {
 }
 export function saveSettings(settings: Settings): void {
   writeJSON(ns(KEYS.settings), settings);
+  emitUserDataChange();
 }
 
 // ---------- Bookmarks ----------
@@ -127,6 +148,7 @@ export function loadBookmarks(): string[] {
 }
 export function saveBookmarks(bookmarks: string[]): void {
   writeJSON(ns(KEYS.bookmarks), bookmarks);
+  emitUserDataChange();
 }
 
 // ---------- Question overrides ----------
@@ -140,6 +162,7 @@ export interface QuestionOverride {
   boolAnswer?: boolean; // truefalse
   numericAnswer?: number; // numeric
   numericTolerance?: number; // numeric
+  gapAccept?: string[][]; // per-blank full list of accepted answers (gap) — replaces the original
   note?: string; // optional free-text note explaining the change, shown only to the editor
 }
 export type QuestionOverrides = Record<string, QuestionOverride>;
@@ -149,6 +172,7 @@ export function loadQuestionOverrides(): QuestionOverrides {
 }
 export function saveQuestionOverrides(overrides: QuestionOverrides): void {
   writeJSON(ns(KEYS.questionOverrides), overrides);
+  emitUserDataChange();
 }
 export function setQuestionOverride(questionId: string, override: QuestionOverride | null): QuestionOverrides {
   const all = loadQuestionOverrides();
@@ -262,6 +286,7 @@ export function appendSession(summary: SessionSummary): void {
   sessions.push(summary);
   while (sessions.length > SESSIONS_CAP) sessions.shift();
   writeJSON(ns(KEYS.sessions), sessions);
+  emitUserDataChange();
 }
 
 // ---------- Backup / restore ----------
@@ -291,6 +316,45 @@ export function importBackup(data: BackupData): void {
   if (data.bookmarks) saveBookmarks(data.bookmarks);
   if (data.sessions) writeJSON(ns(KEYS.sessions), data.sessions);
   if (data.settings) saveSettings(data.settings);
+}
+
+// ---------- Cross-device user-data snapshot ----------
+// One bundle of everything that should follow a learner across devices. Pushed to / pulled from
+// the server by src/lib/userDataSync.ts. `updatedAt` lets the sync layer pick the newer settings.
+export interface UserDataSnapshot {
+  progress: Record<string, Progress>;
+  sessions: SessionSummary[];
+  bookmarks: string[];
+  settings: Settings;
+  questionOverrides: QuestionOverrides;
+  updatedAt: number;
+}
+
+/** Snapshots the active user's current syncable data from localStorage. */
+export function collectUserData(): UserDataSnapshot {
+  return {
+    progress: loadProgress(),
+    sessions: loadSessions(),
+    bookmarks: loadBookmarks(),
+    settings: loadSettings(),
+    questionOverrides: loadQuestionOverrides(),
+    updatedAt: Date.now(),
+  };
+}
+
+/** Writes a (merged) snapshot back to the active user's localStorage. Suppresses change
+ *  notifications so applying a pulled snapshot doesn't immediately trigger another push. */
+export function applyUserData(data: Partial<UserDataSnapshot>): void {
+  suppressUserDataChange = true;
+  try {
+    if (data.progress) saveProgress(data.progress);
+    if (data.sessions) writeJSON(ns(KEYS.sessions), data.sessions.slice(-SESSIONS_CAP));
+    if (data.bookmarks) saveBookmarks(data.bookmarks);
+    if (data.settings) saveSettings({ ...DEFAULT_SETTINGS, ...data.settings });
+    if (data.questionOverrides) saveQuestionOverrides(data.questionOverrides);
+  } finally {
+    suppressUserDataChange = false;
+  }
 }
 
 // ---------- Accounts (simple local login) ----------

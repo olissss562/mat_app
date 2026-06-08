@@ -122,3 +122,17 @@ export function serverSaveMyConfigs(token: string, configs: SubjectConfig[]) {
     body: JSON.stringify({ configs }),
   });
 }
+
+// Per-user learning data (progress / sessions / bookmarks / settings / overrides) so stats and
+// preferences follow the user across devices. The blob shape is defined in storage.ts.
+export function serverLoadUserData<T = unknown>(token: string) {
+  return call<{ data: T | null }>('user-data/sync', { headers: authHeaders(token) });
+}
+
+export function serverSaveUserData<T = unknown>(token: string, data: T) {
+  return call<{ ok: true }>('user-data/sync', {
+    method: 'POST',
+    headers: authHeaders(token),
+    body: JSON.stringify({ data }),
+  });
+}

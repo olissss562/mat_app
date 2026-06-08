@@ -9,8 +9,8 @@ import {
   updateProgress,
   type Progress,
 } from '../lib/srs';
-import { appendSession, loadProgress, loadQuestionOverrides, saveProgress, type SessionSummary } from '../lib/storage';
-import { applyQuestionOverride } from '../lib/questionOverrides';
+import { appendSession, loadProgress, loadQuestionOverrides, saveProgress, setQuestionOverride, type SessionSummary } from '../lib/storage';
+import { applyQuestionOverride, buildAcceptOverride } from '../lib/questionOverrides';
 import { shuffle } from '../lib/shuffle';
 
 export type SessionMode = 'practice' | 'exam' | 'mistakes' | 'srs' | 'mix' | 'topic' | 'speed';
@@ -60,6 +60,7 @@ interface SessionState {
   finish: () => void;
   reset: () => void;
   retryMistakes: (subjects: LoadedSubject[]) => void;
+  acceptCurrentAnswer: () => void;
 }
 
 const SRS_SESSION_CAP = 30;
@@ -343,6 +344,36 @@ export const useSessionStore = create<SessionState>((set, get) => ({
       streak: 0,
       emptyReason: null,
     });
+  },
+
+  // "Přidat do správných odpovědí": the learner believes their answer was actually right.
+  // We persist an override so the question accepts that answer from now on (locally + synced),
+  // mark the current item as correct, and reflect it in their SM-2 progress.
+  acceptCurrentAnswer: () => {
+    const { items, currentIndex } = get();
+    const item = items[currentIndex];
+    if (!item || !item.revealed || item.isCorrect === true) return;
+    const existing = loadQuestionOverrides()[item.question.id];
+    const override = buildAcceptOverride(item.question, item.answer, existing);
+    if (!override) return;
+    setQuestionOverride(item.question.id, override);
+    const correctedQuestion = applyQuestionOverride(item.question, override);
+
+    const next = [...items];
+    next[currentIndex] = {
+      ...item,
+      question: correctedQuestion,
+      isCorrect: true,
+      fraction: 1,
+      grade: Math.max(item.grade ?? 0, 4),
+    };
+    set({ items: next });
+
+    // Reflect the correction in spaced-repetition progress (counts as a correct review).
+    const progressMap = loadProgress();
+    const prev = progressMap[item.question.id] ?? createInitialProgress();
+    progressMap[item.question.id] = updateProgress(prev, 4, Date.now());
+    saveProgress(progressMap);
   },
 
   retryMistakes: (subjects) => {

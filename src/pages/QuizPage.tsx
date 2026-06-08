@@ -7,8 +7,12 @@ import Feedback from '../components/Feedback';
 import ProgressBar from '../components/ProgressBar';
 import { correctAnswerText } from '../components/questions/correctAnswerText';
 import { loadBookmarks, saveBookmarks } from '../lib/storage';
-import { isOverridable } from '../lib/questionOverrides';
+import { canAcceptAnswer, isOverridable } from '../lib/questionOverrides';
 import QuestionEditModal from '../components/QuestionEditModal';
+
+// How quickly we jump to the next question after a correct answer when auto-advance is on.
+// Short enough to feel snappy, long enough to glimpse the green "Správně!" feedback.
+const AUTO_ADVANCE_DELAY_MS = 650;
 
 function formatTime(ms: number): string {
   const totalSec = Math.max(0, Math.ceil(ms / 1000));
@@ -33,6 +37,7 @@ export default function QuizPage() {
     next,
     skip,
     finish,
+    acceptCurrentAnswer,
   } = useSessionStore();
 
   const autoAdvance = useSettingsStore((s) => s.autoAdvance);
@@ -117,7 +122,7 @@ export default function QuizPage() {
     if (!item || !item.revealed || item.isCorrect !== true || mode === 'exam' || !autoAdvance) return;
     const timer = setTimeout(() => {
       handleNext();
-    }, 1100);
+    }, AUTO_ADVANCE_DELAY_MS);
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item?.revealed, item?.isCorrect, currentIndex, autoAdvance, mode]);
@@ -225,6 +230,16 @@ export default function QuizPage() {
             source={item.question.type !== 'passage' ? item.question.source : undefined}
             correctAnswerText={item.question.type !== 'passage' ? correctAnswerText(item.question) : undefined}
           />
+        )}
+        {showFeedback && item.isCorrect === false && canAcceptAnswer(item.question) && (
+          <button
+            type="button"
+            onClick={() => acceptCurrentAnswer()}
+            className="mt-3 inline-flex items-center gap-2 rounded-lg border border-green-400 px-4 py-2 text-sm font-medium text-green-700 transition-colors hover:bg-green-50 dark:border-green-600 dark:text-green-300 dark:hover:bg-green-900/30"
+            title="Myslíte si, že vaše odpověď je správná? Přidá ji mezi uznávané odpovědi."
+          >
+            ✓ Přidat do správných odpovědí
+          </button>
         )}
       </div>
 

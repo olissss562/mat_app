@@ -64,6 +64,7 @@ const KEYS = {
   users: 'mt:server:users', // ServerUser[]
   community: 'mt:server:community', // CommunitySubject[]
   myConfigs: (username: string) => `mt:server:myconfigs:${username.toLowerCase()}`, // SubjectConfig[]
+  userData: (username: string) => `mt:server:userdata:${username.toLowerCase()}`, // progress/sessions/settings blob
   sessions: 'mt:server:sessions', // Record<token, username>
 } as const;
 
@@ -157,6 +158,17 @@ export async function loadMyConfigs(username: string): Promise<SubjectConfig[]> 
 }
 export async function saveMyConfigs(username: string, configs: SubjectConfig[]): Promise<void> {
   await setJSON(KEYS.myConfigs(username), configs);
+}
+
+// ---------- Per-user data blob (progress / sessions / bookmarks / settings / overrides) ----------
+// Opaque JSON blob owned by the client — the server just stores and returns it so the learner's
+// stats and preferences follow them across devices. The shape is defined client-side
+// (see src/lib/storage.ts UserDataSnapshot); we deliberately don't validate it here.
+export async function loadUserData(username: string): Promise<Record<string, unknown> | null> {
+  return getJSON<Record<string, unknown> | null>(KEYS.userData(username), null);
+}
+export async function saveUserData(username: string, data: Record<string, unknown>): Promise<void> {
+  await setJSON(KEYS.userData(username), data);
 }
 
 // ---------- Community sharing pool ----------

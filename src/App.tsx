@@ -16,15 +16,32 @@ import PromptsPage from './pages/PromptsPage';
 import LoginPage from './pages/LoginPage';
 import { resolveEffectiveTheme, useSettingsStore } from './store/useSettingsStore';
 import { useAuthStore } from './store/useAuthStore';
+import { startUserDataSync, stopUserDataSync } from './lib/userDataSync';
 
 export default function App() {
   const theme = useSettingsStore((s) => s.theme);
   const accentColor = useSettingsStore((s) => s.accentColor);
   const { username, ready, init } = useAuthStore();
+  const token = useAuthStore((s) => s.token);
 
   useEffect(() => {
     init();
   }, [init]);
+
+  // Cross-device sync: when signed in with a server session, pull the user's saved progress,
+  // stats and settings, merge them with this device, and mirror future changes back up.
+  useEffect(() => {
+    if (!token) {
+      stopUserDataSync();
+      return;
+    }
+    void startUserDataSync(token, () => {
+      // A pull may have replaced the stored settings (theme/accent/etc.) — re-read them so the
+      // UI updates immediately.
+      useSettingsStore.getState().reloadFromStorage();
+    });
+    return () => stopUserDataSync();
+  }, [token]);
 
   useEffect(() => {
     const apply = () => {

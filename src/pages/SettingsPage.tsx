@@ -30,13 +30,13 @@ function ToggleRow({
         role="switch"
         aria-checked={checked}
         onClick={() => onChange(!checked)}
-        className={`relative h-7 w-12 shrink-0 rounded-full transition-colors ${
+        className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer items-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900 ${
           checked ? 'bg-violet-600' : 'bg-gray-300 dark:bg-gray-600'
         }`}
       >
         <span
-          className={`absolute top-0.5 h-6 w-6 rounded-full bg-white shadow transition-transform ${
-            checked ? 'translate-x-5' : 'translate-x-0.5'
+          className={`inline-block h-5 w-5 transform rounded-full bg-white shadow-sm ring-0 transition-transform duration-200 ease-in-out ${
+            checked ? 'translate-x-6' : 'translate-x-1'
           }`}
         />
       </button>
@@ -119,7 +119,7 @@ export default function SettingsPage() {
         <h2 className="mb-0 text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Procvičování</h2>
         <ToggleRow
           label="Automaticky pokračovat na další otázku"
-          description="Po správné odpovědi vás aplikace sama pošle na další otázku, abyste neztráceli čas klikáním."
+          description="Po správné odpovědi vás aplikace ihned (po krátké pauze) pošle na další otázku, abyste procvičovali rychleji a neztráceli čas klikáním."
           checked={autoAdvance}
           onChange={setAutoAdvance}
         />
