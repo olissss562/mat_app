@@ -1,0 +1,285 @@
+{
+"subject": "maupassant-kulicka",
+"name": "Kulička",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "maupassant-kulicka-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Guy de Maupassant byl významný francouzský spisovatel 19. století, mistr krátkých forem.",
+"question": "Kdo je autorem novely Kulička?",
+"options": [
+{ "text": "Émile Zola", "correct": false },
+{ "text": "Guy de Maupassant", "correct": true },
+{ "text": "Gustave Flaubert", "correct": false },
+{ "text": "Honoré de Balzac", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-002", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Dílo vzniklo v 19. století, konkrétně bylo vydáno roku 1880.",
+"statement": "Kulička byla napsána v 21. století.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-003", "type": "single", "topic": "autor-a-doba",
+"explanation": "Příběh se odehrává v době prusko-francouzské války (1870).",
+"question": "V jakém historickém období se odehrává děj novely?",
+"options": [
+{ "text": "Francouzská revoluce", "correct": false },
+{ "text": "Prusko-francouzská válka", "correct": true },
+{ "text": "Napoleonské války", "correct": false },
+{ "text": "První světová válka", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Maupassant je považován za představitele realismu a naturalismu.",
+"question": "Které literární směry ovlivnily Maupassantovu tvorbu? (vyberte 2)",
+"options": [
+{ "text": "Realismus", "correct": true },
+{ "text": "Naturalismus", "correct": true },
+{ "text": "Klasicismus", "correct": false },
+{ "text": "Symbolismus", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Děj se odehrává ve Francii, konkrétně při útěku z Rouenu.",
+"question": "V jaké zemi se příběh odehrává?",
+"options": [
+{ "text": "Německo", "correct": false },
+{ "text": "Francie", "correct": true },
+{ "text": "Belgie", "correct": false },
+{ "text": "Rakousko", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Autorův mentor byl Gustave Flaubert, který ho výrazně ovlivnil.",
+"statement": "Maupassantovým literárním učitelem byl Gustave Flaubert.",
+"answer": true
+},
+{
+"id": "maupassant-kulicka-007", "type": "single", "topic": "postavy",
+"explanation": "Hlavní hrdinka se jmenuje Elisabeth Rousset, přezdívaná Kulička.",
+"question": "Jaké je pravé jméno Kuličky?",
+"options": [
+{ "text": "Marie Louise", "correct": false },
+{ "text": "Elisabeth Rousset", "correct": true },
+{ "text": "Jeanne d'Arc", "correct": false },
+{ "text": "Anna Karenina", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-008", "type": "single", "topic": "postavy",
+"explanation": "Kulička je prostitutka, což je hlavní důvod opovržení měšťanů.",
+"question": "Čím se živí hlavní postava Kulička?",
+"options": [
+{ "text": "Je to švadlena", "correct": false },
+{ "text": "Je to prostitutka", "correct": true },
+{ "text": "Je to herečka", "correct": false },
+{ "text": "Je to učitelka", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-009", "type": "multiple", "topic": "postavy",
+"explanation": "Cestující jsou rozděleni na bohaté měšťany a Kuličku s Cornudetem.",
+"question": "Které skupiny tvoří společnost v dostavníku? (vyberte 2)",
+"options": [
+{ "text": "Bohatí měšťané a aristokracie", "correct": true },
+{ "text": "Kulička a demokrat Cornudet", "correct": true },
+{ "text": "Výhradně pruská armáda", "correct": false },
+{ "text": "Skupina dětí", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-010", "type": "truefalse", "topic": "postavy",
+"explanation": "Měšťané pohrdají Kuličkou, dokud ji nepotřebují.",
+"statement": "Měšťané přijímají Kuličku jako sobě rovnou od začátku cesty.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-011", "type": "single", "topic": "postavy",
+"explanation": "Cornudet je demokrat a revolucionář, který jako jediný stojí při Kuličce.",
+"question": "Kdo zastupuje politické názory demokrata v dostavníku?",
+"options": [
+{ "text": "Loiseau", "correct": false },
+{ "text": "Cornudet", "correct": true },
+{ "text": "Hrabě z Bréville", "correct": false },
+{ "text": "Pruský důstojník", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-012", "type": "single", "topic": "postavy",
+"explanation": "Kulička je vylíčena jako jediná, kdo má skutečné vlastenecké cítění.",
+"question": "Jak je Kulička charakterizována v kontrastu s měšťany?",
+"options": [
+{ "text": "Je jediná skutečná vlastenka", "correct": true },
+{ "text": "Je sobecká a zlá", "correct": false },
+{ "text": "Je hloupá", "correct": false },
+{ "text": "Je bohatší než ostatní", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-013", "type": "truefalse", "topic": "postavy",
+"explanation": "Měšťané jsou zobrazeni jako pokrytci, kterým jde jen o vlastní pohodlí.",
+"statement": "Maupassant zobrazuje měšťany jako morální vzory.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-014", "type": "numeric", "topic": "postavy",
+"explanation": "Ve voze cestuje několik manželských párů měšťanů, hraběcí pár, jeptišky, Cornudet a Kulička.",
+"question": "Kolik řádových sester (jeptišek) cestuje v dostavníku?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "maupassant-kulicka-015", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Pruský důstojník je drží v hostinci, dokud Kulička neposlechne jeho přání.",
+"question": "Proč dostavník nemůže pokračovat v cestě?",
+"options": [
+{ "text": "Rozbilo se kolo", "correct": false },
+{ "text": "Pruský důstojník zadržel cestující", "correct": true },
+{ "text": "Došlo palivo", "correct": false },
+{ "text": "Silnice byla zatarasena", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-016", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Kulička zpočátku odmítá, ale pod nátlakem spolucestujících nakonec souhlasí.",
+"statement": "Kulička okamžitě souhlasila s požadavkem důstojníka.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-017", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Spolucestující používají morální nátlak a argumenty, aby Kuličku přesvědčili.",
+"question": "Jakými způsoby přesvědčují měšťané Kuličku? (vyberte 2)",
+"options": [
+{ "text": "Morálním nátlakem", "correct": true },
+{ "text": "Fyzickým násilím", "correct": false },
+{ "text": "Manipulací s jejími city a povinností", "correct": true },
+{ "text": "Nabídkou velké finanční odměny", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-018", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Kulička se dělí o jídlo, které má, protože ostatní měšťané hladoví.",
+"question": "Co Kulička udělá jako první, když ostatní cestující hladoví?",
+"options": [
+{ "text": "Sní vše sama", "correct": false },
+{ "text": "Podělí se o své zásoby jídla", "correct": true },
+{ "text": "Schová jídlo před ostatními", "correct": false },
+{ "text": "Prodá jim jídlo za peníze", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-019", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Pokrytectví měšťanů je hlavním tématem novely.",
+"statement": "Po incidentu s důstojníkem přijmou měšťané Kuličku mezi sebe.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-020", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Kulička pláče, zatímco ostatní jedí a ignorují ji.",
+"question": "Jak končí příběh Kuličky?",
+"options": [
+{ "text": "Je šťastná a bohatá", "correct": false },
+{ "text": "Pláče, opovrhována spolucestujícími", "correct": true },
+{ "text": "Vdá se za hraběte", "correct": false },
+{ "text": "Zabije pruského důstojníka", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-021", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Příběh je krátký, odehrává se během pár dní cesty.",
+"question": "Kolik dní přibližně trvá celá cesta, o které novela vypráví?",
+"answer": 2,
+"tolerance": 1
+},
+{
+"id": "maupassant-kulicka-022", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Kulička je obětována pro blaho ostatních, kteří jí pak pohrdají.",
+"statement": "Kulička se obětuje dobrovolně bez jakéhokoli vnějšího nátlaku.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-023", "type": "single", "topic": "literarni-forma",
+"explanation": "Dílo je řazeno mezi novely.",
+"question": "Jaký je žánr díla?",
+"options": [
+{ "text": "Román", "correct": false },
+{ "text": "Novela", "correct": true },
+{ "text": "Epos", "correct": false },
+{ "text": "Povídka", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-024", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Maupassantův styl je věcný, bez přehnaného patosu.",
+"question": "Jaké znaky má Maupassantův vypravěčský styl? (vyberte 2)",
+"options": [
+{ "text": "Věcnost a úspornost", "correct": true },
+{ "text": "Objektivní popis postav", "correct": true },
+{ "text": "Složitá filozofická souvětí", "correct": false },
+{ "text": "Lyrické popisy přírody", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-025", "type": "single", "topic": "literarni-forma",
+"explanation": "Vypravěč je v er-formě, nezúčastněně pozoruje děj.",
+"question": "V jaké osobě je novela vyprávěna?",
+"options": [
+{ "text": "Ich-forma", "correct": false },
+{ "text": "Er-forma", "correct": true },
+{ "text": "Ty-forma", "correct": false },
+{ "text": "Střídání osob", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-026", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Novela se soustředí na jednu hlavní událost a omezený počet postav.",
+"statement": "Novela má velmi košatý děj s mnoha vedlejšími liniemi.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-027", "type": "single", "topic": "literarni-forma",
+"explanation": "Dílo ostře kritizuje pokrytectví vyšších vrstev.",
+"question": "Co je hlavním uměleckým záměrem novely?",
+"options": [
+{ "text": "Zábava čtenáře bez hlubšího významu", "correct": false },
+{ "text": "Kritika měšťáckého pokrytectví", "correct": true },
+{ "text": "Oslava války", "correct": false },
+{ "text": "Vzdělávání v historii", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-028", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Lidé se bojí o své pohodlí více než o svou čest.",
+"question": "Jaké hodnoty preferují měšťané v novele? (vyberte 2)",
+"options": [
+{ "text": "Vlastní pohodlí", "correct": true },
+{ "text": "Osobní čest", "correct": false },
+{ "text": "Sociální status", "correct": true },
+{ "text": "Oběť pro druhé", "correct": false }
+]
+},
+{
+"id": "maupassant-kulicka-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Novela využívá kontrastu mezi postavami.",
+"statement": "Maupassant v novele nevyužívá kontrast.",
+"answer": false
+},
+{
+"id": "maupassant-kulicka-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Děj se odehrává během prusko-francouzské války, v jednom roce.",
+"question": "Kolik postav zastupuje 'demokratické' smýšlení ve voze?",
+"answer": 1,
+"tolerance": 0
+}
+]
+}

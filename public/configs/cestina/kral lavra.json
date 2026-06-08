@@ -1,0 +1,283 @@
+{
+  "subject": "kral-lavra",
+  "name": "Král Lávra",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Hlavní postavy" },
+    { "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+    { "id": "literarni-forma", "name": "Literární forma a žánr" }
+  ],
+  "questions": [
+    {
+      "id": "kral-lavra-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Karel Havlíček Borovský byl významný český novinář, básník a politik 19. století.",
+      "question": "Kdo je autorem satirické balady Král Lávra?",
+      "options": [
+        { "text": "Karel Jaromír Erben", "correct": false },
+        { "text": "Karel Havlíček Borovský", "correct": true },
+        { "text": "Jan Neruda", "correct": false },
+        { "text": "Karel Hynek Mácha", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-002", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Borovský byl významným kritikem tehdejších poměrů, jehož tvorba je spojena s národním obrozením a odporem k absolutismu.",
+      "statement": "Karel Havlíček Borovský je známý svou kritikou společenských nešvarů a politického útlaku.",
+      "answer": true
+    },
+    {
+      "id": "kral-lavra-003", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Borovský byl za své politické názory pronásledován a deportován do Brixenu.",
+      "question": "Kam byl Karel Havlíček Borovský rakouskými úřady deportován?",
+      "options": [
+        { "text": "Do Vídně", "correct": false },
+        { "text": "Do Brixenu", "correct": true },
+        { "text": "Do Moskvy", "correct": false },
+        { "text": "Do Paříže", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Borovský ovlivnil českou žurnalistiku a literaturu satirou, epigramy a jasným postojem k národní identitě.",
+      "question": "Vyberte tvrzení, která charakterizují tvorbu K. H. Borovského (více správných):",
+      "options": [
+        { "text": "Využívání satiry a ironie k politické kritice", "correct": true },
+        { "text": "Písání čistě náboženských traktátů", "correct": false },
+        { "text": "Tvorba epigramů", "correct": true },
+        { "text": "Psaní dlouhých, melancholických románů", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Král Lávra byl napsán v roce 1854, v období po revolučních letech 1848/1849.",
+      "question": "V jakém století byla balada Král Lávra napsána?",
+      "options": [
+        { "text": "17. století", "correct": false },
+        { "text": "18. století", "correct": false },
+        { "text": "19. století", "correct": true },
+        { "text": "20. století", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Ačkoliv jde o báseň, Borovský ji napsal v exilu v Brixenu.",
+      "statement": "Král Lávra vznikl během Borovského pobytu v exilu v Brixenu.",
+      "answer": true
+    },
+    {
+      "id": "kral-lavra-007", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Kromě Krále Lávry je známý např. sbírkou Tyrolské elegie.",
+      "question": "Které další satirické dílo je spojeno s K. H. Borovským?",
+      "options": [
+        { "text": "Máj", "correct": false },
+        { "text": "Tyrolské elegie", "correct": true },
+        { "text": "Babička", "correct": false },
+        { "text": "Kytice", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-008", "type": "single", "topic": "postavy",
+      "explanation": "Král Lávra je hlavní postavou, jehož hlavním problémem jsou oslí uši.",
+      "question": "Co je fyzickou vadou krále Lávry?",
+      "options": [
+        { "text": "Nemá uši", "correct": false },
+        { "text": "Má oslí uši", "correct": true },
+        { "text": "Má obrovský nos", "correct": false },
+        { "text": "Má křivé nohy", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-009", "type": "single", "topic": "postavy",
+      "explanation": "Kukulín je mladý holič, kterému král nakonec daruje život, pokud udrží tajemství.",
+      "question": "Jak se jmenuje mladý holič, který králi holil vlasy?",
+      "options": [
+        { "text": "Kukulín", "correct": true },
+        { "text": "Krakonoš", "correct": false },
+        { "text": "Kajetán", "correct": false },
+        { "text": "Kamil", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-010", "type": "multiple", "topic": "postavy",
+      "explanation": "Král Lávra byl lidem považován za hodného, ale pod podmínkou, že nikdo nesmí vědět o jeho vadě.",
+      "question": "Jaké vlastnosti jsou připisovány králi Lávrovi? (více správných):",
+      "options": [
+        { "text": "Byl lidem považován za dobrého krále", "correct": true },
+        { "text": "Byl krutý a bezdůvodně trestal", "correct": false },
+        { "text": "Byl posedlý utajováním své vady", "correct": true },
+        { "text": "Byl naprosto lhostejný ke svému vzhledu", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "Holič Kukulín není jediný, kdo králi sloužil; král dával popravovat každého, kdo ho holil, aby tajemství neprozradil.",
+      "statement": "Kukulín byl prvním holičem, který krále Lávru holil.",
+      "answer": false
+    },
+    {
+      "id": "kral-lavra-012", "type": "single", "topic": "postavy",
+      "explanation": "Kukulínova matka se přimluvila za svého syna, aby mu král daroval život.",
+      "question": "Kdo se přimluvil za holiče Kukulína, aby nebyl popraven?",
+      "options": [
+        { "text": "Jeho otec", "correct": false },
+        { "text": "Jeho matka", "correct": true },
+        { "text": "Jeho sestra", "correct": false },
+        { "text": "Sám král", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-013", "type": "multiple", "topic": "postavy",
+      "explanation": "Postavy reprezentují lidové vrstvy (holič, matka) a vrstvu vládnoucí (král).",
+      "question": "Které postavy vystupují v příběhu? (více správných):",
+      "options": [
+        { "text": "Král Lávra", "correct": true },
+        { "text": "Holič Kukulín", "correct": true },
+        { "text": "Kukulínova matka", "correct": true },
+        { "text": "Sousední král", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-014", "type": "truefalse", "topic": "postavy",
+      "explanation": "Král byl zpočátku hodný, ale své tajemství si střežil za cenu životů svých holičů.",
+      "statement": "Král Lávra byl lidumil, který se nikdy nikoho nebál.",
+      "answer": false
+    },
+    {
+      "id": "kral-lavra-015", "type": "numeric", "topic": "postavy",
+      "explanation": "V příběhu je zmíněno, že král dával popravit každého, kdo ho holil, Kukulín byl ten, kdo díky matce přežil.",
+      "question": "Kolik holičů (včetně Kukulína) bylo v příběhu vystřídáno předtím, než se tajemství provalilo? (Uveďte pouze číslo)",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "kral-lavra-016", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Aby se Kukulín zbavil nutkání tajemství prozradit, zašeptal ho do vrby.",
+      "question": "Kam Kukulín zašeptal tajemství o králových oslích uších?",
+      "options": [
+        { "text": "Do studny", "correct": false },
+        { "text": "Do duté vrby", "correct": true },
+        { "text": "Do zdi", "correct": false },
+        { "text": "Do své vlastní ruky", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-017", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Z vrbového dřeva byla vyrobena píšťala, která při hraní tajemství vyzradila.",
+      "statement": "Tajemství bylo prozrazeno díky muzikantovi, který vyrobil nástroj z vrby.",
+      "answer": true
+    },
+    {
+      "id": "kral-lavra-018", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Když muzikant hrál na svatbě, nástroj sám vyzradil: 'Král Lávra má dlouhé oslí uši'.",
+      "question": "Co nástroj vyrobený z vrby při hraní zpíval?",
+      "options": [
+        { "text": "Král Lávra je hloupý.", "correct": false },
+        { "text": "Král Lávra má dlouhé oslí uši.", "correct": true },
+        { "text": "Král Lávra není král.", "correct": false },
+        { "text": "Král Lávra ztratil korunu.", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-019", "type": "multiple", "topic": "dej-a-motivy",
+      "explanation": "Motivy zahrnují tajemství, strach, lidovou moudrost a odhalení pravdy.",
+      "question": "Vyberte klíčové motivy díla (více správných):",
+      "options": [
+        { "text": "Udržení tajemství", "correct": true },
+        { "text": "Krutost vládnoucích", "correct": true },
+        { "text": "Magická proměna krále", "correct": false },
+        { "text": "Hlas lidu", "correct": true }
+      ]
+    },
+    {
+      "id": "kral-lavra-020", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Lidé se dozvěděli pravdu a král ji již nemohl skrýt, musel se s ní smířit.",
+      "statement": "Když se lidé dozvěděli pravdu o královi, okamžitě ho svrhli z trůnu.",
+      "answer": false
+    },
+    {
+      "id": "kral-lavra-021", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Příběh čerpá z irské legendy o králi Labraidu Loingsechovi.",
+      "question": "Z jakého typu literatury vychází námět pro Krále Lávru?",
+      "options": [
+        { "text": "Z antické báje", "correct": false },
+        { "text": "Z irské pověsti", "correct": true },
+        { "text": "Z biblického příběhu", "correct": false },
+        { "text": "Ze skutečné historie českých králů", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-022", "type": "numeric", "topic": "dej-a-motivy",
+      "explanation": "Pravda se nakonec provalila, což symbolizuje, že žádné tajemství nezůstane navždy skryté.",
+      "question": "Kolik hlavních částí/obratů má tento příběh (problém, řešení, odhalení)?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "kral-lavra-023", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Kukulín byl poddaný, který měl strach o svůj život.",
+      "statement": "Kukulín vyzradil tajemství schválně, aby králi ublížil.",
+      "answer": false
+    },
+    {
+      "id": "kral-lavra-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Král Lávra je satirická balada s lidovým nádechem.",
+      "question": "Jaký je žánr díla Král Lávra?",
+      "options": [
+        { "text": "Román", "correct": false },
+        { "text": "Satirická balada", "correct": true },
+        { "text": "Povídka", "correct": false },
+        { "text": "Sonet", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Dílo využívá lidový jazyk, ironii a humor.",
+      "question": "Jaké jazykové prostředky jsou pro dílo typické? (více správných):",
+      "options": [
+        { "text": "Lidový, srozumitelný jazyk", "correct": true },
+        { "text": "Ironie a humor", "correct": true },
+        { "text": "Složitá archaická latina", "correct": false },
+        { "text": "Technické a odborné termíny", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo je veršované, tedy básnické.",
+      "question": "Je Král Lávra napsán prózou nebo ve verších?",
+      "options": [
+        { "text": "Prózou", "correct": false },
+        { "text": "Ve verších", "correct": true }
+      ]
+    },
+    {
+      "id": "kral-lavra-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Balada je žánr, který v sobě spojuje epiku (děj) a často i tragické prvky, zde však satiricky zpracované.",
+      "statement": "Král Lávra je čistě lyrická báseň bez děje.",
+      "answer": false
+    },
+    {
+      "id": "kral-lavra-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Satira zesměšňuje nešvary, což je hlavní rys tohoto díla.",
+      "question": "Co je hlavním cílem satiry v tomto díle?",
+      "options": [
+        { "text": "Oslava králů", "correct": false },
+        { "text": "Zesměšnění mocipánů a jejich tajností", "correct": true },
+        { "text": "Popis přírody", "correct": false },
+        { "text": "Vzdělávání dětí", "correct": false }
+      ]
+    },
+    {
+      "id": "kral-lavra-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Borovský často využíval lidovou slovesnost jako inspiraci.",
+      "statement": "Styl díla připomíná lidovou vypravěčskou tradici.",
+      "answer": true
+    },
+    {
+      "id": "kral-lavra-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Král Lávra je součástí Borovského tvorby, která reflektovala společenskou situaci poloviny 19. století.",
+      "question": "Kolik veršů má typická sloka v této básni (počet veršů)?",
+      "answer": 4,
+      "tolerance": 0
+    }
+  ]
+}

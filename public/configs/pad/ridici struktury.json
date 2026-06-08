@@ -1,0 +1,280 @@
+{
+  "subject": "ridici-struktury",
+  "name": "Řídící struktury a cykly",
+  "topics": [
+    { "id": "vetveni", "name": "Větvení a podmínky" },
+    { "id": "logika", "name": "Logické operátory" },
+    { "id": "cykly", "name": "Druhy cyklů" },
+    { "id": "algoritmy", "name": "Algoritmické úlohy" }
+  ],
+  "questions": [
+    {
+      "id": "ridici-struktury-001", "type": "single", "topic": "vetveni",
+      "explanation": "Příkaz 'if' vyhodnocuje podmínku a na základě toho větví běh programu.",
+      "question": "Který příkaz slouží k základnímu větvení programu na základě podmínky?",
+      "options": [
+        { "text": "loop", "correct": false },
+        { "text": "if", "correct": true },
+        { "text": "break", "correct": false },
+        { "text": "function", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-002", "type": "single", "topic": "vetveni",
+      "explanation": "Switch-case je vhodný pro přehledné porovnávání jedné proměnné s více konstantními hodnotami.",
+      "question": "Kdy je výhodnější použít 'switch' místo řetězce 'if-else'?",
+      "options": [
+        { "text": "Při porovnávání mnoha hodnot jedné proměnné", "correct": true },
+        { "text": "Nikdy", "correct": false },
+        { "text": "Při práci s poli", "correct": false },
+        { "text": "Při cyklech", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-003", "type": "truefalse", "topic": "vetveni",
+      "explanation": "Blok 'else' je volitelný a provede se pouze tehdy, pokud podmínka 'if' neplatí.",
+      "statement": "Blok 'else' je v příkazu 'if-else' povinný.",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-004", "type": "multiple", "topic": "vetveni",
+      "explanation": "Příkaz 'else if' umožňuje řetězit více podmínek za sebou.",
+      "question": "Jaké příkazy umožňují větvení programu? (vyberte 2)",
+      "options": [
+        { "text": "if", "correct": true },
+        { "text": "switch", "correct": true },
+        { "text": "for", "correct": false },
+        { "text": "while", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-005", "type": "numeric", "topic": "vetveni",
+      "explanation": "Vnořený if je if uvnitř jiného if.",
+      "question": "Kolikrát můžeme maximálně vnořit 'if' do 'if' v běžných jazycích (teoreticky)?",
+      "answer": 999,
+      "tolerance": 999
+    },
+    {
+      "id": "ridici-struktury-006", "type": "single", "topic": "logika",
+      "explanation": "Operátor '&&' (AND) vyžaduje, aby byly obě podmínky pravdivé.",
+      "question": "Co platí pro výraz `(a > 5 && b < 10)`?",
+      "options": [
+        { "text": "Stačí, aby a > 5 bylo pravdivé", "correct": false },
+        { "text": "Obě podmínky musí být pravdivé", "correct": true },
+        { "text": "Podmínka je pravdivá, pokud je jedna nepravdivá", "correct": false },
+        { "text": "Výraz nelze vyhodnotit", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-007", "type": "truefalse", "topic": "logika",
+      "explanation": "Negace '!' mění true na false a naopak.",
+      "statement": "Operátor '!' (negace) mění hodnotu true na false.",
+      "answer": true
+    },
+    {
+      "id": "ridici-struktury-008", "type": "multiple", "topic": "logika",
+      "explanation": "Logické spojky umožňují vytvářet složité rozhodovací mechanismy.",
+      "question": "Které z těchto symbolů jsou logické operátory? (vyberte 2)",
+      "options": [
+        { "text": "&&", "correct": true },
+        { "text": "||", "correct": true },
+        { "text": "++", "correct": false },
+        { "text": "==", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-009", "type": "single", "topic": "logika",
+      "explanation": "Operátor '||' (OR) vrátí true, pokud je alespoň jedna strana true.",
+      "question": "Jaký výsledek má `(false || true)`?",
+      "options": [
+        { "text": "false", "correct": false },
+        { "text": "true", "correct": true },
+        { "text": "0", "correct": false },
+        { "text": "Chyba", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-010", "type": "truefalse", "topic": "logika",
+      "explanation": "Kombinace && a || vyžaduje závorky pro jasné určení priorit.",
+      "statement": "Ve složitých podmínkách není nutné používat závorky, prioritní je vždy levá strana.",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-011", "type": "single", "topic": "cykly",
+      "explanation": "Cyklus 'for' se používá primárně tehdy, známe-li počet iterací.",
+      "question": "Který cyklus je nejvhodnější pro průchod polem (známe počet prvků)?",
+      "options": [
+        { "text": "while", "correct": false },
+        { "text": "for", "correct": true },
+        { "text": "do-while", "correct": false },
+        { "text": "if", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-012", "type": "single", "topic": "cykly",
+      "explanation": "Cyklus 'do-while' zaručuje, že kód proběhne alespoň jednou, protože podmínku testuje až po vykonání těla.",
+      "question": "Který cyklus vždy proběhne alespoň jednou?",
+      "options": [
+        { "text": "for", "correct": false },
+        { "text": "while", "correct": false },
+        { "text": "do-while", "correct": true },
+        { "text": "if", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-013", "type": "multiple", "topic": "cykly",
+      "explanation": "Cyklus `while` a `for` se liší v tom, jak a kdy testují podmínku.",
+      "question": "Jaké jsou hlavní rozdíly mezi cykly? (vyberte 2)",
+      "options": [
+        { "text": "For je lepší pro pevný počet iterací", "correct": true },
+        { "text": "While je lepší pro neznámý počet iterací", "correct": true },
+        { "text": "Do-while nikdy neproběhne", "correct": false },
+        { "text": "For nelze použít pro pole", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-014", "type": "truefalse", "topic": "cykly",
+      "explanation": "Nekonečný cyklus (např. while(true)) běží pořád, dokud není ukončen příkazem 'break'.",
+      "statement": "Nekonečný cyklus v programu není nikdy možné ukončit.",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-015", "type": "single", "topic": "cykly",
+      "explanation": "Příkaz 'break' okamžitě ukončí provádění cyklu.",
+      "question": "Který příkaz ukončí právě probíhající cyklus?",
+      "options": [
+        { "text": "continue", "correct": false },
+        { "text": "break", "correct": true },
+        { "text": "return", "correct": false },
+        { "text": "exit", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-016", "type": "truefalse", "topic": "algoritmy",
+      "explanation": "Operátor modulo (`%`) vrací zbytek po celočíselném dělení.",
+      "statement": "Operátor modulo (zbytek po dělení) slouží k zjištění parity (sudé/liché číslo).",
+      "answer": true
+    },
+    {
+      "id": "ridici-struktury-017", "type": "single", "topic": "algoritmy",
+      "explanation": "Číslo x je sudé, pokud po dělení dvěma nezůstane žádný zbytek (x % 2 == 0).",
+      "question": "Co vrací výraz `10 % 2`?",
+      "options": [
+        { "text": "1", "correct": false },
+        { "text": "0", "correct": true },
+        { "text": "5", "correct": false },
+        { "text": "2", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-018", "type": "multiple", "topic": "algoritmy",
+      "explanation": "Při zadávání čísel dokud není nula, využijeme cyklus `while` s `break` nebo `do-while`.",
+      "question": "Jaké komponenty jsou potřeba pro program čtoucí čísla do nuly? (vyberte 2)",
+      "options": [
+        { "text": "Cyklus (while/do-while)", "correct": true },
+        { "text": "Podmínka pro zastavení (if)", "correct": true },
+        { "text": "Vnořený cyklus for", "correct": false },
+        { "text": "Statická metoda bez parametrů", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-019", "type": "truefalse", "topic": "algoritmy",
+      "explanation": "Počítadla (sudých/lichých) musíme na začátku vynulovat.",
+      "statement": "Před zahájením počítání sudých a lichých čísel nemusíme proměnné vynulovat.",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-020", "type": "single", "topic": "algoritmy",
+      "explanation": "Pokud uživatel zadá 0, chceme cyklus okamžitě ukončit, k tomu slouží 'break'.",
+      "question": "Co se musí stát v cyklu pro počítání čísel, když uživatel zadá 0?",
+      "options": [
+        { "text": "Program přidá nulu k sudým", "correct": false },
+        { "text": "Cyklus se ukončí", "correct": true },
+        { "text": "Program zahlásí chybu", "correct": false },
+        { "text": "Změní se datový typ", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-021", "type": "truefalse", "topic": "vetveni",
+      "explanation": "Při vnořeném if-else musí být logické podmínky správně vyhodnoceny, aby nedošlo k chybám.",
+      "statement": "Vnořený if-else neovlivňuje logiku programu, pouze jeho vzhled.",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-022", "type": "numeric", "topic": "logika",
+      "explanation": "Logický výraz (true && false) || true se vyhodnotí na true.",
+      "question": "Jaká je výsledná logická hodnota výrazu: (true && false) || true?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "ridici-struktury-023", "type": "single", "topic": "cykly",
+      "explanation": "Příkaz 'continue' přeskočí zbytek těla cyklu a jde na další iteraci.",
+      "question": "Který příkaz přeskočí zbytek těla cyklu a pokračuje další iterací?",
+      "options": [
+        { "text": "break", "correct": false },
+        { "text": "continue", "correct": true },
+        { "text": "return", "correct": false },
+        { "text": "stop", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-024", "type": "truefalse", "topic": "algoritmy",
+      "explanation": "Pro zjištění lichého čísla stačí zkontrolovat, zda `cislo % 2 != 0`.",
+      "statement": "Podmínka pro liché číslo je `cislo % 2 == 0`.",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-025", "type": "multiple", "topic": "algoritmy",
+      "explanation": "Pro počítání sudých a lichých čísel potřebujeme dvě proměnné typu int.",
+      "question": "Co musíme definovat před zahájením cyklu počítajícího sudá/lichá čísla? (vyberte 2)",
+      "options": [
+        { "text": "Proměnnou pro počet sudých", "correct": true },
+        { "text": "Proměnnou pro počet lichých", "correct": true },
+        { "text": "Proměnnou typu boolean", "correct": false },
+        { "text": "Vnořený cyklus pro každé číslo", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-026", "type": "single", "topic": "cykly",
+      "explanation": "Iterace je jedno průchod cyklem.",
+      "question": "Jak se odborně nazývá jedno provedení cyklu?",
+      "options": [
+        { "text": "Větvení", "correct": false },
+        { "text": "Iterace", "correct": true },
+        { "text": "Logická operace", "correct": false },
+        { "text": "Proměnná", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-027", "type": "truefalse", "topic": "logika",
+      "explanation": "Zákon negace konjunkce (De Morganovy zákony) říká, že !(a && b) je (!a || !b).",
+      "statement": "Logický výraz !(a && b) je ekvivalentní výrazu (!a || !b).",
+      "answer": true
+    },
+    {
+      "id": "ridici-struktury-028", "type": "single", "topic": "cykly",
+      "explanation": "Všechny tři (for, while, do-while) jsou v mnoha jazycích ekvivalentní a lze je na sebe převést.",
+      "question": "Lze cyklus 'for' přepsat na cyklus 'while'?",
+      "options": [
+        { "text": "Ano, vždy", "correct": true },
+        { "text": "Ne, nikdy", "correct": false },
+        { "text": "Pouze pokud je pole prázdné", "correct": false },
+        { "text": "Pouze v Javě", "correct": false }
+      ]
+    },
+    {
+      "id": "ridici-struktury-029", "type": "truefalse", "topic": "vetveni",
+      "explanation": "Podmínka v 'if' musí být vždy typu boolean (true/false).",
+      "statement": "Podmínka v 'if' může vracet jakýkoliv datový typ (např. řetězec).",
+      "answer": false
+    },
+    {
+      "id": "ridici-struktury-030", "type": "numeric", "topic": "algoritmy",
+      "explanation": "Při zadání čísel 2, 4, 1, 3, 0 jsou sudé: 2, 4 (2 ks), liché: 1, 3 (2 ks).",
+      "question": "Kolik sudých čísel zadáme, pokud uživatel napíše: 2, 4, 1, 3, 0?",
+      "answer": 2,
+      "tolerance": 0
+    }
+  ]
+}

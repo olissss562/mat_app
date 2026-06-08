@@ -1,0 +1,285 @@
+{
+"subject": "audience",
+"name": "Audience",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-konflikt", "name": "Děj a konflikt" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "audience-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Václav Havel byl český dramatik, disident a pozdější prezident, klíčová postava normalizační kultury.",
+"question": "Kdo je autorem jednoaktovky Audience?",
+"options": [
+{ "text": "Pavel Kohout", "correct": false },
+{ "text": "Václav Havel", "correct": true },
+{ "text": "Milan Kundera", "correct": false },
+{ "text": "Ivan Klíma", "correct": false }
+]
+},
+{
+"id": "audience-002", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Hra vznikla v 70. letech 20. století v období normalizace, kdy byli disidenti pronásledováni režimem.",
+"statement": "Hra Audience vznikla v období normalizace v Československu.",
+"answer": true
+},
+{
+"id": "audience-003", "type": "single", "topic": "autor-a-doba",
+"explanation": "Vaněk, hlavní postava, je často považován za autorovo alter ego, protože sdílí s Havlem podobné osudy.",
+"question": "Která postava v dramatech Václava Havla často funguje jako autorovo alter ego?",
+"options": [
+{ "text": "Sládek", "correct": false },
+{ "text": "Ferdinand Vaněk", "correct": true },
+{ "text": "Staněk", "correct": false },
+{ "text": "Architekt", "correct": false }
+]
+},
+{
+"id": "audience-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Normalizační kultura byla charakteristická cenzurou a tlakem na loajalitu k režimu.",
+"question": "Jaké prvky charakterizují období normalizace? (vyberte 2)",
+"options": [
+{ "text": "Cenzura a politický útlak", "correct": true },
+{ "text": "Svobodný trh s literaturou", "correct": false },
+{ "text": "Tlak na konformitu a loajalitu režimu", "correct": true },
+{ "text": "Vysoká podpora disidentské kultury státem", "correct": false }
+]
+},
+{
+"id": "audience-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Divadlo Na zábradlí bylo místem, kde se Havlovy hry začaly uvádět, ale za normalizace byl zakázán.",
+"question": "Kde byla premiéra mnoha Havlových her před zákazem?",
+"options": [
+{ "text": "Národní divadlo", "correct": false },
+{ "text": "Divadlo Na zábradlí", "correct": true },
+{ "text": "Vinohradské divadlo", "correct": false },
+{ "text": "Semafor", "correct": false }
+]
+},
+{
+"id": "audience-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Hra Audience byla v tehdejším Československu zakázána a šířila se samizdatem.",
+"statement": "Hra byla oficiálně vydávána a podporována tehdejším ministerstvem kultury.",
+"answer": false
+},
+{
+"id": "audience-007", "type": "single", "topic": "postavy",
+"explanation": "Ferdinand Vaněk je spisovatel, který byl režimem nucen pracovat manuálně.",
+"question": "Jaké je povolání Ferdinanda Vaňka?",
+"options": [
+{ "text": "Pivovarský dělník", "correct": false },
+{ "text": "Spisovatel", "correct": true },
+{ "text": "Státní úředník", "correct": false },
+{ "text": "Voják", "correct": false }
+]
+},
+{
+"id": "audience-008", "type": "single", "topic": "postavy",
+"explanation": "Sládek je vedoucí v pivovaru, který se snaží Vaňka přimět ke spolupráci s StB.",
+"question": "Co je funkcí postavy Sládka?",
+"options": [
+{ "text": "Disident", "correct": false },
+{ "text": "Vedoucí v pivovaru", "correct": true },
+{ "text": "Příslušník tajné policie v přestrojení", "correct": false },
+{ "text": "Spisovatelův přítel", "correct": false }
+]
+},
+{
+"id": "audience-009", "type": "multiple", "topic": "postavy",
+"explanation": "Sládek je představitelem režimu, který je sice v moci, ale je sám pod tlakem a působí poněkud komicky.",
+"question": "Jaké vlastnosti má Sládek? (vyberte 2)",
+"options": [
+{ "text": "Je pod tlakem nadřízených", "correct": true },
+{ "text": "Je to vzdělaný intelektuál", "correct": false },
+{ "text": "Snaží se působit jako 'chlapík z lidu'", "correct": true },
+{ "text": "Je to nekompromisní fanatik", "correct": false }
+]
+},
+{
+"id": "audience-010", "type": "single", "topic": "postavy",
+"explanation": "Vaněk na Sládkovu nabídku spolupracovat na sebe samého odpovídá odmítavě, což tvoří jádro konfliktu.",
+"question": "Jak Vaněk reaguje na Sládkovu nabídku, aby na sebe donášel?",
+"options": [
+{ "text": "Souhlasí ze strachu", "correct": false },
+{ "text": "Odmítá to", "correct": true },
+{ "text": "Vůbec to nepochopil", "correct": false },
+{ "text": "Slíbí, že si to rozmyslí", "correct": false }
+]
+},
+{
+"id": "audience-011", "type": "truefalse", "topic": "postavy",
+"explanation": "Sládek se snaží s Vaňkem mluvit 'přátelsky' u piva, aby ho zlomil.",
+"statement": "Sládek se k Vaňkovi od začátku chová otevřeně nepřátelsky a agresivně.",
+"answer": false
+},
+{
+"id": "audience-012", "type": "single", "topic": "postavy",
+"explanation": "Vaněk je postava, která odmítá zradit své morální principy.",
+"question": "Co je hlavní morální postoj Vaňka?",
+"options": [
+{ "text": "Snaha vyhnout se problémům za každou cenu", "correct": false },
+{ "text": "Zachování integrity a odmítnutí donášení", "correct": true },
+{ "text": "Touha získat lepší pracovní místo", "correct": false },
+{ "text": "Podpora režimu", "correct": false }
+]
+},
+{
+"id": "audience-013", "type": "multiple", "topic": "postavy",
+"explanation": "Postavy se pohybují v prostředí pivovaru, což podtrhuje absurditu celého setkání.",
+"question": "Které postavy se objevují přímo na scéně? (vyberte 2)",
+"options": [
+{ "text": "Ferdinand Vaněk", "correct": true },
+{ "text": "Sládek", "correct": true },
+{ "text": "Prezident", "correct": false },
+{ "text": "Vaňkova manželka", "correct": false }
+]
+},
+{
+"id": "audience-014", "type": "truefalse", "topic": "postavy",
+"explanation": "Sládek si uvědomuje svou trapnou roli, ale cítí se nucen ji plnit.",
+"statement": "Sládek je zcela spokojen se svým úkolem a vůbec mu nevadí.",
+"answer": false
+},
+{
+"id": "audience-015", "type": "numeric", "topic": "dej-a-konflikt",
+"explanation": "Děj se odehrává v kanceláři sládka, kde se popíjí pivo a vede nekonečný dialog.",
+"question": "Kolik postav je fyzicky přítomno při rozhovoru v kanceláři?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "audience-016", "type": "single", "topic": "dej-a-konflikt",
+"explanation": "Pivovar je prostředí, kde Vaněk musí pracovat, aby se uživil.",
+"question": "V jakém prostředí se odehrává děj hry?",
+"options": [
+{ "text": "V bytě disidenta", "correct": false },
+{ "text": "V kanceláři pivovaru", "correct": true },
+{ "text": "Ve vězení", "correct": false },
+{ "text": "V restauraci", "correct": false }
+]
+},
+{
+"id": "audience-017", "type": "truefalse", "topic": "dej-a-konflikt",
+"explanation": "Dialog se neustále točí v kruzích, Sládek opakuje stejné fráze, což je znak absurdního dramatu.",
+"statement": "Dialog mezi postavami je přímočarý a rychle vede k vyřešení problému.",
+"answer": false
+},
+{
+"id": "audience-018", "type": "single", "topic": "dej-a-konflikt",
+"explanation": "Sládek chce, aby Vaněk psal zprávy o sobě samém, aby měli 'papír' pro StB.",
+"question": "Co přesně po Vaňkovi Sládek chce?",
+"options": [
+{ "text": "Aby odešel ze země", "correct": false },
+{ "text": "Aby na sebe donášel pro StB", "correct": true },
+{ "text": "Aby mu pomohl s prací v pivovaru", "correct": false },
+{ "text": "Aby napsal hru pro divadlo", "correct": false }
+]
+},
+{
+"id": "audience-019", "type": "multiple", "topic": "dej-a-konflikt",
+"explanation": "Absurdita spočívá v tom, že Sládek vlastně nic nechce, jen vykonává příkazy 'shora'.",
+"question": "V čem spočívá absurdita konfliktu? (vyberte 2)",
+"options": [
+{ "text": "Sládek neví, co po Vaňkovi vlastně chce", "correct": true },
+{ "text": "Vaněk na všechno přikyvuje", "correct": false },
+{ "text": "Celá situace je nesmyslným nátlakem systému", "correct": true },
+{ "text": "Hrají spolu karty", "correct": false }
+]
+},
+{
+"id": "audience-020", "type": "truefalse", "topic": "dej-a-konflikt",
+"explanation": "Konec hry je otevřený, konflikt není vyřešen, vše zůstává v patové situaci.",
+"statement": "Hra končí jasným vítězstvím Vaňka a jeho odchodem do svobody.",
+"answer": false
+},
+{
+"id": "audience-021", "type": "single", "topic": "dej-a-konflikt",
+"explanation": "Pití piva je rituál, který Sládek využívá k prolomení ledů a navození atmosféry důvěry.",
+"question": "Co během rozhovoru obě postavy neustále dělají?",
+"options": [
+{ "text": "Hrají šachy", "correct": false },
+{ "text": "Pijí pivo", "correct": true },
+{ "text": "Píší zprávy", "correct": false },
+{ "text": "Hádají se", "correct": false }
+]
+},
+{
+"id": "audience-022", "type": "numeric", "topic": "dej-a-konflikt",
+"explanation": "Sládek a Vaněk vedou rozhovor, který nikam nevede; je to jeden dlouhý cyklus otázek a odpovědí.",
+"question": "Kolikrát se Sládek v průběhu hry pokusí 'nenápadně' naznačit svou nabídku?",
+"answer": 5,
+"tolerance": 2
+},
+{
+"id": "audience-023", "type": "truefalse", "topic": "dej-a-konflikt",
+"explanation": "Sládek je sice v podřízené roli vůči policii, ale vůči Vaňkovi vystupuje jako ten, kdo 'vše vyřeší'.",
+"statement": "Sládek je mocný muž, který si může dělat, co chce.",
+"answer": false
+},
+{
+"id": "audience-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Absurdní drama se vyznačuje ztrátou smyslu komunikace a odcizením postav.",
+"question": "Jaký je hlavní žánr Audience?",
+"options": [
+{ "text": "Absurdní drama", "correct": true },
+{ "text": "Historická tragédie", "correct": false },
+{ "text": "Satirická komedie", "correct": false },
+{ "text": "Psychologický román", "correct": false }
+]
+},
+{
+"id": "audience-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Pro absurdní drama je typický nefunkční jazyk a repetitivní dialogy.",
+"question": "Jaké znaky absurdního dramatu jsou v Audience? (vyberte 2)",
+"options": [
+{ "text": "Repetitivní dialogy", "correct": true },
+{ "text": "Nefunkční komunikace", "correct": true },
+{ "text": "Rozsáhlé popisy scény", "correct": false },
+{ "text": "Vzletný básnický jazyk", "correct": false }
+]
+},
+{
+"id": "audience-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Audience je drama, které stojí téměř výhradně na dialozích.",
+"question": "Na čem je hra primárně založena?",
+"options": [
+{ "text": "Na složité scénografii", "correct": false },
+{ "text": "Na dialozích postav", "correct": true },
+{ "text": "Na akčních scénách", "correct": false },
+{ "text": "Na monologu jedné postavy", "correct": false }
+]
+},
+{
+"id": "audience-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Jazyk v Audience je prostý, hovorový, až vulgární v případě Sládka, což kontrastuje s Vaňkem.",
+"statement": "Hra využívá velmi spisovný a vznešený jazyk.",
+"answer": false
+},
+{
+"id": "audience-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Hra kritizuje totalitní režim a jeho vliv na morálku člověka.",
+"question": "Co je hlavním tématem hry?",
+"options": [
+{ "text": "Hledání lásky", "correct": false },
+{ "text": "Kritika totalitní morálky a nátlaku", "correct": true },
+{ "text": "Práce v pivovaru", "correct": false },
+{ "text": "Filozofie pití piva", "correct": false }
+]
+},
+{
+"id": "audience-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Audience je jednou z nejhranějších her Václava Havla.",
+"statement": "Audience je zcela neznámá a nezajímavá hra.",
+"answer": false
+},
+{
+"id": "audience-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Hra je jednoaktovka, nemá žádné přestávky v ději.",
+"question": "Kolik dějství (aktů) má tato hra?",
+"answer": 1,
+"tolerance": 0
+}
+]
+}

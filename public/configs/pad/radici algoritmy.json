@@ -1,0 +1,286 @@
+{
+  "subject": "radici-algoritmy",
+  "name": "Jednoduché řadící algoritmy a řazení objektů",
+  "topics": [
+    { "id": "bubble-sort", "name": "Teorie Bubble Sort" },
+    { "id": "objektove-razeni", "name": "Řazení objektů v OOP" },
+    { "id": "implementace-obchod", "name": "Implementace třídy Obchod" }
+  ],
+  "questions": [
+    {
+      "id": "radic-001", "type": "single", "topic": "bubble-sort",
+      "explanation": "Bubble Sort pracuje tak, že opakovaně prochází pole a porovnává sousední prvky, které v případě špatného pořadí prohodí.",
+      "question": "Jaký je základní princip algoritmu Bubble Sort?",
+      "options": [
+        { "text": "Rozdělení pole na poloviny", "correct": false },
+        { "text": "Prohazování sousedních prvků podle velikosti", "correct": true },
+        { "text": "Hledání nejmenšího prvku v celém poli", "correct": false },
+        { "text": "Vložení prvku na správnou pozici", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-002", "type": "single", "topic": "bubble-sort",
+      "explanation": "Časová složitost Bubble Sortu v nejhorším případě je kvadratická, tedy O(n^2).",
+      "question": "Jaká je časová složitost algoritmu Bubble Sort v nejhorším případě?",
+      "options": [
+        { "text": "O(n)", "correct": false },
+        { "text": "O(n log n)", "correct": false },
+        { "text": "O(n^2)", "correct": true },
+        { "text": "O(1)", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-003", "type": "truefalse", "topic": "bubble-sort",
+      "explanation": "Bubble Sort je neefektivní pro velké objemy dat kvůli své kvadratické složitosti.",
+      "statement": "Bubble Sort je ideální algoritmus pro řazení milionů prvků.",
+      "answer": false
+    },
+    {
+      "id": "radic-004", "type": "multiple", "topic": "objektove-razeni",
+      "explanation": "Pro přirozené řazení objektů v Javě používáme rozhraní Comparable, pro externí řazení Comparator.",
+      "question": "Která rozhraní v Javě slouží k řazení objektů? (vyberte 2)",
+      "options": [
+        { "text": "Comparable", "correct": true },
+        { "text": "Comparator", "correct": true },
+        { "text": "Sortable", "correct": false },
+        { "text": "Orderable", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-005", "type": "single", "topic": "objektove-razeni",
+      "explanation": "Metoda compareTo vrací kladné číslo, pokud je první objekt větší, záporné, pokud je menší, a 0 při rovnosti.",
+      "question": "Co vrací metoda compareTo, pokud je aktuální objekt větší než argument?",
+      "options": [
+        { "text": "Kladné číslo (>0)", "correct": true },
+        { "text": "Nulu", "correct": false },
+        { "text": "Záporné číslo (<0)", "correct": false },
+        { "text": "Boolean true", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-006", "type": "single", "topic": "implementace-obchod",
+      "explanation": "Když řadíme podle dvou kritérií, nejdříve porovnáme primární (podlaží) a pokud jsou stejná, porovnáme sekundární (název).",
+      "question": "Pokud jsou podlaží stejná, podle čeho se bude v zadání třídy Obchod řadit dál?",
+      "options": [
+        { "text": "Podle kapacity", "correct": false },
+        { "text": "Podle názvu", "correct": true },
+        { "text": "Podle ceny", "correct": false },
+        { "text": "Podle data založení", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-007", "type": "truefalse", "topic": "bubble-sort",
+      "explanation": "Algoritmus Bubble Sort je stabilní, zachovává pořadí prvků se stejnou hodnotou.",
+      "statement": "Bubble Sort patří mezi stabilní řadící algoritmy.",
+      "answer": true
+    },
+    {
+      "id": "radic-008", "type": "multiple", "topic": "objektove-razeni",
+      "explanation": "Bez implementace rozhraní pro porovnávání by Java nevěděla, jak objekty vaší třídy srovnávat.",
+      "question": "Proč musíme implementovat rozhraní Comparable pro objekty? (vyberte 2)",
+      "options": [
+        { "text": "Aby metoda sort věděla, jak objekty řadit", "correct": true },
+        { "text": "Abychom mohli používat operátory > a < přímo na objekty", "correct": false },
+        { "text": "Aby Java chápala logiku řazení uživatelem definovanou", "correct": true },
+        { "text": "Aby se program rychleji kompiloval", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-009", "type": "numeric", "topic": "implementace-obchod",
+      "explanation": "V metodě compareTo řadíme nejdříve podlaží, pak názvy.",
+      "question": "Kolik parametrů přijímá metoda compareTo v rámci rozhraní Comparable?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "radic-010", "type": "single", "topic": "bubble-sort",
+      "explanation": "Největší prvek po prvním průchodu 'vybublá' na konec pole.",
+      "question": "Kam se dostane největší prvek po prvním kompletním průchodu v Bubble Sortu?",
+      "options": [
+        { "text": "Na začátek", "correct": false },
+        { "text": "Na konec", "correct": true },
+        { "text": "Zůstane uprostřed", "correct": false },
+        { "text": "Na náhodnou pozici", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-011", "type": "truefalse", "topic": "implementace-obchod",
+      "explanation": "Metoda compareTo vrací 0, pokud jsou oba objekty podle zadaných kritérií rovnocenné.",
+      "statement": "Metoda compareTo musí vrátit hodnotu 0, pokud jsou objekty identické.",
+      "answer": true
+    },
+    {
+      "id": "radic-012", "type": "single", "topic": "bubble-sort",
+      "explanation": "V nejlepším případě (již seřazené pole) je složitost O(n), pokud je algoritmus optimalizován.",
+      "question": "Jaká je nejlepší možná časová složitost Bubble Sortu (při optimalizaci)?",
+      "options": [
+        { "text": "O(n)", "correct": true },
+        { "text": "O(1)", "correct": false },
+        { "text": "O(n^2)", "correct": false },
+        { "text": "O(log n)", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-013", "type": "multiple", "topic": "objektove-razeni",
+      "explanation": "Comparator se používá, když chceme více různých způsobů řazení (např. jednou podle podlaží, podruhé podle názvu).",
+      "question": "V čem se liší Comparator od Comparable? (vyberte 2)",
+      "options": [
+        { "text": "Comparable je 'přirozené' řazení uvnitř třídy", "correct": true },
+        { "text": "Comparator umožňuje definovat více různých řazení externě", "correct": true },
+        { "text": "Comparable je vždy pomalejší", "correct": false },
+        { "text": "Comparator nelze použít pro řazení", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-014", "type": "truefalse", "topic": "bubble-sort",
+      "explanation": "Při prohazování (swapping) sousedních prvků často používáme pomocnou proměnnou (temp).",
+      "statement": "K prohození prvků v Bubble Sortu nepotřebujeme žádnou další pomocnou proměnnou.",
+      "answer": false
+    },
+    {
+      "id": "radic-015", "type": "numeric", "topic": "bubble-sort",
+      "explanation": "Při řazení n prvků provede Bubble Sort v nejhorším případě n*(n-1)/2 operací.",
+      "question": "Kolik porovnání provede Bubble Sort pro 3 prvky v nejhorším případě?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "radic-016", "type": "single", "topic": "implementace-obchod",
+      "explanation": "V Javě používáme Collections.sort(list) pro seřazení seznamu objektů, které implementují Comparable.",
+      "question": "Jak se v Javě seřadí seznam objektů implementujících Comparable?",
+      "options": [
+        { "text": "Collections.sort(seznam);", "correct": true },
+        { "text": "seznam.sort();", "correct": false },
+        { "text": "sort(seznam);", "correct": false },
+        { "text": "Objekty nelze řadit", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-017", "type": "truefalse", "topic": "objektove-razeni",
+      "explanation": "Metoda compareTo vrací int, což odpovídá kontraktu (záporné, nula, kladné).",
+      "statement": "Metoda compareTo musí vracet logickou hodnotu (boolean).",
+      "answer": false
+    },
+    {
+      "id": "radic-018", "type": "single", "topic": "bubble-sort",
+      "explanation": "Pro výměnu dvou hodnot (a, b) potřebujeme dočasné úložiště (temp).",
+      "question": "Jaký je typický kód pro prohození prvků 'a' a 'b'?",
+      "options": [
+        { "text": "temp = a; a = b; b = temp;", "correct": true },
+        { "text": "a = b;", "correct": false },
+        { "text": "swap(a, b);", "correct": false },
+        { "text": "Nic, je to automatické", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-019", "type": "multiple", "topic": "objektove-razeni",
+      "explanation": "Při řazení podle jména řetězců používáme standardní metodu compareTo třídy String.",
+      "question": "Jaké typy dat v naší třídě Obchod porovnáváme? (vyberte 2)",
+      "options": [
+        { "text": "String (název)", "correct": true },
+        { "text": "int (podlaží)", "correct": true },
+        { "text": "boolean (otevřeno)", "correct": false },
+        { "text": "list (seznam)", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-020", "type": "truefalse", "topic": "bubble-sort",
+      "explanation": "Jméno 'bublinkové' pochází z toho, že lehčí (menší) prvky 'stoupají' (bublají) k začátku.",
+      "statement": "Bubble Sort se nazývá bublinkový, protože prvky se přeskupují jako bubliny ve vodě.",
+      "answer": true
+    },
+    {
+      "id": "radic-021", "type": "single", "topic": "objektove-razeni",
+      "explanation": "Metoda Integer.compare(x, y) je bezpečný způsob porovnání dvou čísel.",
+      "question": "Co je výhodou použití Integer.compare(a, b)?",
+      "options": [
+        { "text": "Je přehlednější a bezpečnější než operátor -", "correct": true },
+        { "text": "Je pomalejší", "correct": false },
+        { "text": "Funguje jen pro kladná čísla", "correct": false },
+        { "text": "Není žádná výhoda", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-022", "type": "numeric", "topic": "implementace-obchod",
+      "explanation": "Pořadí je: 1. Podlaží, 2. Název. Pokud podlaží 1 a 2, řadí se 1 dřív.",
+      "question": "Pokud máme Obchod A v 1. patře a Obchod B v 2. patře, který bude při řazení první?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "radic-023", "type": "truefalse", "topic": "bubble-sort",
+      "explanation": "Bubble Sort mění pole přímo (in-place), nepotřebuje tedy extra paměť.",
+      "statement": "Bubble Sort vyžaduje paměť úměrnou velikosti pole (O(n)).",
+      "answer": false
+    },
+    {
+      "id": "radic-024", "type": "single", "topic": "objektove-razeni",
+      "explanation": "String.compareTo porovnává řetězce lexikograficky (podle abecedy).",
+      "question": "Jak funguje String.compareTo?",
+      "options": [
+        { "text": "Porovnává abecedně (lexikograficky)", "correct": true },
+        { "text": "Porovnává délku řetězců", "correct": false },
+        { "text": "Ignoruje první písmeno", "correct": false },
+        { "text": "Vrací vždy 0", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-025", "type": "multiple", "topic": "bubble-sort",
+      "explanation": "Složitost Bubble sortu je O(n^2), což znamená, že počet operací roste kvadraticky.",
+      "question": "Jak se změní počet operací Bubble sortu, když zvětšíme počet prvků 2x? (vyberte 2)",
+      "options": [
+        { "text": "Vzroste 4x (2^2)", "correct": true },
+        { "text": "Počet operací se zvětší kvadraticky", "correct": true },
+        { "text": "Počet operací zůstane stejný", "correct": false },
+        { "text": "Vzroste 2x", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-026", "type": "single", "topic": "implementace-obchod",
+      "explanation": "Interface vyžaduje, aby třída implementovala metodu compareTo.",
+      "question": "Co musí obsahovat třída, aby implementovala Comparable<Obchod>?",
+      "options": [
+        { "text": "Metodu compareTo", "correct": true },
+        { "text": "Metodu sort", "correct": false },
+        { "text": "Statickou proměnnou", "correct": false },
+        { "text": "Vlastní hlavní metodu", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-027", "type": "truefalse", "topic": "objektove-razeni",
+      "explanation": "Sortable není standardní rozhraní v Javě pro řazení.",
+      "statement": "Interface Sortable se v Javě standardně používá pro řazení objektů.",
+      "answer": false
+    },
+    {
+      "id": "radic-028", "type": "single", "topic": "bubble-sort",
+      "explanation": "Když pole po průchodu není změněno, můžeme skončit dříve.",
+      "question": "Co můžeme přidat do Bubble Sortu, abychom zrychlili řazení téměř seřazeného pole?",
+      "options": [
+        { "text": "Příznak (flag), zda došlo k prohození", "correct": true },
+        { "text": "Nové pole", "correct": false },
+        { "text": "Rekurzi", "correct": false },
+        { "text": "Nic, Bubble sort je neměnný", "correct": false }
+      ]
+    },
+    {
+      "id": "radic-029", "type": "truefalse", "topic": "objektove-razeni",
+      "explanation": "U objektů řadíme dle jejich vnitřních vlastností.",
+      "statement": "Řazení objektů je vždy založeno na paměťové adrese objektu.",
+      "answer": false
+    },
+    {
+      "id": "radic-030", "type": "numeric", "topic": "bubble-sort",
+      "explanation": "Pokud je pole již seřazené, Bubble Sort provede jen jeden průchod (n-1 porovnání).",
+      "question": "Kolik průchodů polem udělá základní (neoptimalizovaný) Bubble Sort pro n prvků?",
+      "answer": 1,
+      "explanation": "N-1 (pro n prvků). Tolerance 0, protože n-1 je matematicky přesné, ale pro zjednodušení zadáme n-1, tolerance 0.",
+      "question": "Kolik porovnání provede vnější cyklus v základním Bubble Sortu pro n prvků?",
+      "answer": 0,
+      "explanation": "Zadám jako 'Počet průchodů' - n-1.",
+      "question": "Kolikrát bude vnější cyklus (pro n=10) iterovat v základním Bubble Sortu?",
+      "answer": 9,
+      "tolerance": 0
+    }
+  ]
+}

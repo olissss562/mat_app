@@ -1,0 +1,286 @@
+{
+  "subject": "noc-na-karlstejne",
+  "name": "Noc na Karlštejně",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Charakteristika postav" },
+    { "id": "dej-a-zapletka", "name": "Děj a zápletka" },
+    { "id": "literarni-forma", "name": "Literární forma a žánr" }
+  ],
+  "questions": [
+    {
+      "id": "noc-na-karlstejne-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Autorem divadelní hry Noc na Karlštejně je významný český spisovatel, básník a dramatik Jaroslav Vrchlický.",
+      "question": "Kdo je autorem divadelní hry Noc na Karlštejně?",
+      "options": [
+        { "text": "Alois Jirásek", "correct": false },
+        { "text": "Jaroslav Vrchlický", "correct": true },
+        { "text": "Karel Čapek", "correct": false },
+        { "text": "Josef Kajetán Tyl", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-002", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Jaroslav Vrchlický byl klíčovým představitelem lumírovců, kteří se snažili o povznesení české literatury na evropskou úroveň.",
+      "question": "Ke které literární skupině Jaroslav Vrchlický patřil?",
+      "options": [
+        { "text": "Májovci", "correct": false },
+        { "text": "Lumírovci", "correct": true },
+        { "text": "Ruchovci", "correct": false },
+        { "text": "Generace 90. let", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-003", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Děj hry je zasazen do 14. století na hrad Karlštejn, přestože byla hra napsána v 19. století.",
+      "statement": "Hra se odehrává ve stejném století, ve kterém byla napsána.",
+      "answer": false
+    },
+    {
+      "id": "noc-na-karlstejne-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Vrchlický byl nesmírně plodným autorem, známým svou básnickou i dramatickou tvorbou.",
+      "question": "Jaké další literární útvary Vrchlický tvořil? (vyberte 2)",
+      "options": [
+        { "text": "Básnické sbírky", "correct": true },
+        { "text": "Vědecké příručky", "correct": false },
+        { "text": "Divadelní hry", "correct": true },
+        { "text": "Cestopisy o cestách do vesmíru", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Hra je vrcholem historismu v české literatuře, kdy se autoři vraceli k slavným dějinám.",
+      "question": "Jaký umělecký směr 19. století hru nejvíce ovlivnil?",
+      "explanation": "Historismus a novoromantismus.",
+      "options": [
+        { "text": "Naturalismus", "correct": false },
+        { "text": "Historismus", "correct": true },
+        { "text": "Existencialismus", "correct": false },
+        { "text": "Futurismus", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Vrchlický byl nejen spisovatelem, ale i významným překladatelem z mnoha cizích jazyků.",
+      "statement": "Jaroslav Vrchlický se věnoval také překladatelské činnosti.",
+      "answer": true
+    },
+    {
+      "id": "noc-na-karlstejne-007", "type": "single", "topic": "postavy",
+      "explanation": "Hlavní postavou je císař Karel IV., známý svou rozvážností a láskou k hradu.",
+      "question": "Který panovník je hlavní postavou hry?",
+      "options": [
+        { "text": "Václav IV.", "correct": false },
+        { "text": "Karel IV.", "correct": true },
+        { "text": "Přemysl Otakar II.", "correct": false },
+        { "text": "Rudolf II.", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-008", "type": "single", "topic": "postavy",
+      "explanation": "Eliška Pomořanská, manželka Karla IV., se převlékne za páže, aby se dostala na hrad.",
+      "question": "Jak se jmenuje manželka Karla IV., která na hrad pronikne v převleku?",
+      "options": [
+        { "text": "Blanka z Valois", "correct": false },
+        { "text": "Eliška Pomořanská", "correct": true },
+        { "text": "Anna Svidnická", "correct": false },
+        { "text": "Alžběta Bavorská", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-009", "type": "multiple", "topic": "postavy",
+      "explanation": "Petr z Kypru je cizí král, který navštíví Karlštejn a svou přítomností komplikuje situaci.",
+      "question": "Jaké postavy se v příběhu vyskytují? (vyberte 2)",
+      "options": [
+        { "text": "Petr z Kypru", "correct": true },
+        { "text": "Karel IV.", "correct": true },
+        { "text": "Jára Cimrman", "correct": false },
+        { "text": "Sherlock Holmes", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-010", "type": "single", "topic": "postavy",
+      "explanation": "Pešek Hlavně je mladý panoš, který je zamilovaný do Aleny.",
+      "question": "Čím je Pešek Hlavně?",
+      "options": [
+        { "text": "Císařem", "correct": false },
+        { "text": "Panošem", "correct": true },
+        { "text": "Purkrabím", "correct": false },
+        { "text": "Kuchařem", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "Alena je dcera purkrabího, která se snaží získat otcovo svolení ke sňatku.",
+      "statement": "Alena je dcerou purkrabího.",
+      "answer": true
+    },
+    {
+      "id": "noc-na-karlstejne-012", "type": "single", "topic": "postavy",
+      "explanation": "Vévoda bavorský Štěpán je další významnou postavou, která se objeví na hradě.",
+      "question": "Kdo doprovází Petra z Kypru na hrad?",
+      "options": [
+        { "text": "Karel IV.", "correct": false },
+        { "text": "Vévoda Štěpán Bavorský", "correct": true },
+        { "text": "Pešek Hlavně", "correct": false },
+        { "text": "Purkrabí", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-013", "type": "truefalse", "topic": "postavy",
+      "explanation": "Karel IV. je zobrazen jako spravedlivý, ale přísný panovník, který miluje svou ženu, ale dodržuje pravidla.",
+      "statement": "Císař Karel IV. je zobrazen jako slabý a lehkomyslný vládce.",
+      "answer": false
+    },
+    {
+      "id": "noc-na-karlstejne-014", "type": "multiple", "topic": "postavy",
+      "explanation": "Alena a Pešek tvoří druhou, lehčí milostnou dvojici v příběhu.",
+      "question": "Které dvojice tvoří hlavní milostné linie? (vyberte 2)",
+      "options": [
+        { "text": "Karel IV. a Eliška Pomořanská", "correct": true },
+        { "text": "Pešek Hlavně a Alena", "correct": true },
+        { "text": "Purkrabí a jeptiška", "correct": false },
+        { "text": "Petr z Kypru a Štěpán Bavorský", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-015", "type": "numeric", "topic": "postavy",
+      "explanation": "V příběhu vystupuje purkrabí, který přísně hlídá dodržování pravidel.",
+      "question": "Kolik osob v příběhu aktivně (v hlavní dějové lince) hlídá zákaz vstupu žen na hrad (v rámci zápletky)?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "noc-na-karlstejne-016", "type": "single", "topic": "dej-a-zapletka",
+      "explanation": "Základním pravidlem hradu je, že na Karlštejn nesmějí ženy.",
+      "question": "Jaké pravidlo platí na hradě Karlštejn?",
+      "options": [
+        { "text": "Zákaz vstupu psů", "correct": false },
+        { "text": "Zákaz vstupu žen", "correct": true },
+        { "text": "Zákaz vstupu cizinců", "correct": false },
+        { "text": "Zákaz vstupu králů", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-017", "type": "truefalse", "topic": "dej-a-zapletka",
+      "explanation": "Eliška Pomořanská se vkrade na hrad v přestrojení za páže.",
+      "statement": "Eliška Pomořanská se na hrad dostane v převleku za páže.",
+      "answer": true
+    },
+    {
+      "id": "noc-na-karlstejne-018", "type": "single", "topic": "dej-a-zapletka",
+      "explanation": "Alena musí prokázat svou lásku splněním úkolu, což je střelba z luku.",
+      "question": "Jaký úkol musí Alena splnit, aby mohla být s Peškem?",
+      "options": [
+        { "text": "Uvařit hostinu", "correct": false },
+        { "text": "Střelit z luku do terče", "correct": true },
+        { "text": "Složit báseň", "correct": false },
+        { "text": "Vylézt na věž", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-019", "type": "multiple", "topic": "dej-a-zapletka",
+      "explanation": "Kompikace nastávají kvůli přítomnosti dvou cizích králů na hradě.",
+      "question": "Jaké komplikace se v příběhu dějí? (vyberte 2)",
+      "options": [
+        { "text": "Přítomnost cizích panovníků", "correct": true },
+        { "text": "Vloupání nepřátelské armády", "correct": false },
+        { "text": "Odhalení královnina převleku", "correct": true },
+        { "text": "Požár na hradě", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-020", "type": "truefalse", "topic": "dej-a-zapletka",
+      "explanation": "Na konci hry jsou všechny zápletky vyřešeny a šťastně ukončeny.",
+      "statement": "Příběh končí tragicky odchodem královny.",
+      "answer": false
+    },
+    {
+      "id": "noc-na-karlstejne-021", "type": "single", "topic": "dej-a-zapletka",
+      "explanation": "Karel IV. se nakonec o převleku své ženy dozví, ale odpustí jí, protože ji miluje.",
+      "question": "Jak se zachová Karel IV., když zjistí, že na hradě je jeho žena?",
+      "options": [
+        { "text": "Uvězní ji", "correct": false },
+        { "text": "Odpustí jí", "correct": true },
+        { "text": "Vyžene ji z Čech", "correct": false },
+        { "text": "Rozvede se s ní", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-022", "type": "numeric", "topic": "dej-a-zapletka",
+      "explanation": "Děj se odehrává v průběhu jedné noci.",
+      "question": "Během kolika nocí se odehrává hlavní zápletka hry?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "noc-na-karlstejne-023", "type": "truefalse", "topic": "dej-a-zapletka",
+      "explanation": "Zápletka je plná humoru a situační komiky.",
+      "statement": "Hra je vážné historické drama bez humorných prvků.",
+      "answer": false
+    },
+    {
+      "id": "noc-na-karlstejne-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Žánrově se jedná o veselohru, tedy komedii.",
+      "question": "Jaký je žánr díla Noc na Karlštejně?",
+      "options": [
+        { "text": "Tragédie", "correct": false },
+        { "text": "Veselohra", "correct": true },
+        { "text": "Epos", "correct": false },
+        { "text": "Román", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Vrchlický v díle používá kultivovaný jazyk, typický pro jeho tvorbu.",
+      "question": "Jaké jazykové prostředky jsou pro dílo typické? (vyberte 2)",
+      "options": [
+        { "text": "Kultivovaný, veršovaný jazyk", "correct": true },
+        { "text": "Nespisovný, vulgární jazyk", "correct": false },
+        { "text": "Humorné dialogy", "correct": true },
+        { "text": "Technický žargon", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo je určeno pro divadelní provoz.",
+      "question": "Pro jaké médium je hra primárně určena?",
+      "options": [
+        { "text": "Rozhlas", "correct": false },
+        { "text": "Divadlo", "correct": true },
+        { "text": "Televize", "correct": false },
+        { "text": "Knižní vydání (pouze ke čtení)", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Vrchlického hra je psána velmi vtipně a hravě, což je pro veselohru typické.",
+      "statement": "Styl hry je těžkopádný a plný archaismů, které brání v pochopení děje.",
+      "answer": false
+    },
+    {
+      "id": "noc-na-karlstejne-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Hlavním motivem je láska, která překonává zákazy a překážky.",
+      "question": "Co je hlavním motivem hry?",
+      "options": [
+        { "text": "Politické intriky", "correct": false },
+        { "text": "Láska překonávající překážky", "correct": true },
+        { "text": "Válka s cizinci", "correct": false },
+        { "text": "Nuda na hradě", "correct": false }
+      ]
+    },
+    {
+      "id": "noc-na-karlstejne-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Hra využívá situační komiku vyplývající z převleků a nedorozumění.",
+      "statement": "Hra využívá prvky situační komiky.",
+      "answer": true
+    },
+    {
+      "id": "noc-na-karlstejne-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Hra je strukturována do tří dějství.",
+      "question": "Kolik dějství má tato divadelní hra?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

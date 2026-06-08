@@ -1,0 +1,395 @@
+{
+"subject": "js-a-autentizace",
+"name": "JavaScript, Node.js a zabezpečení",
+"topics": [
+{ "id": "js-zaklady", "name": "Základy JavaScriptu a DOM" },
+{ "id": "js-async-ajax", "name": "Asynchronní JS a AJAX" },
+{ "id": "js-eco", "name": "TypeScript a Node.js" },
+{ "id": "auth-zaklady", "name": "Autentizace a autorizace" },
+{ "id": "auth-mechanismy", "name": "Bezpečnostní mechanismy" }
+],
+"questions": [
+{
+"id": "js-auth-001",
+"type": "single",
+"topic": "js-zaklady",
+"difficulty": 1,
+"explanation": "JavaScript je primárně skriptovací jazyk, který v prohlížeči umožňuje manipulaci s DOM (Document Object Model) a reakci na uživatelské akce.",
+"question": "Který z následujících jazyků se používá pro skriptování na straně klienta?",
+"options": [
+{ "text": "PHP", "correct": false },
+{ "text": "JavaScript", "correct": true },
+{ "text": "SQL", "correct": false },
+{ "text": "C#", "correct": false }
+]
+},
+{
+"id": "js-auth-002",
+"type": "truefalse",
+"topic": "js-zaklady",
+"difficulty": 1,
+"explanation": "DOM (Document Object Model) je rozhraní, které umožňuje JavaScriptu přistupovat a měnit obsah a strukturu HTML stránky.",
+"statement": "DOM umožňuje JavaScriptu manipulovat s obsahem a strukturou HTML stránky.",
+"answer": true
+},
+{
+"id": "js-auth-003",
+"type": "single",
+"topic": "js-zaklady",
+"difficulty": 2,
+"explanation": "Události (Events) jako 'click', 'submit' nebo 'input' jsou klíčové pro interaktivitu webu.",
+"question": "Jak se v JavaScriptu nazývá mechanismus, který reaguje na interakci uživatele (např. kliknutí)?",
+"options": [
+{ "text": "Event", "correct": true },
+{ "text": "Action", "correct": false },
+{ "text": "Trigger", "correct": false },
+{ "text": "Hook", "correct": false }
+]
+},
+{
+"id": "js-auth-004",
+"type": "single",
+"topic": "js-async-ajax",
+"difficulty": 2,
+"explanation": "AJAX (Asynchronous JavaScript and XML) umožňuje webové stránce odesílat a přijímat data z serveru na pozadí, aniž by se musela celá stránka znovu načíst.",
+"question": "Co je hlavní výhodou použití technologie AJAX?",
+"options": [
+{ "text": "Zvýšení bezpečnosti databáze", "correct": false },
+{ "text": "Aktualizace obsahu stránky bez jejího celého znovunačtení", "correct": true },
+{ "text": "Změna barvy pozadí webu", "correct": false },
+{ "text": "Zrychlení kompilace kódu", "correct": false }
+]
+},
+{
+"id": "js-auth-005",
+"type": "single",
+"topic": "js-async-ajax",
+"difficulty": 2,
+"explanation": "Fetch API je moderní způsob v JavaScriptu, jak provádět síťové požadavky a pracovat s asynchronními operacemi pomocí Promise.",
+"question": "Které moderní rozhraní v JavaScriptu nahrazuje starší XMLHttpRequest pro síťové požadavky?",
+"options": [
+{ "text": "Get", "correct": false },
+{ "text": "Fetch API", "correct": true },
+{ "text": "AjaxLoad", "correct": false },
+{ "text": "NetworkControl", "correct": false }
+]
+},
+{
+"id": "js-auth-006",
+"type": "multiple",
+"topic": "js-async-ajax",
+"difficulty": 2,
+"explanation": "JSON (JavaScript Object Notation) je standardní formát pro výměnu dat mezi klientem a serverem.",
+"question": "Jaké formáty dat se běžně používají při komunikaci AJAX? (Vyberte všechny správné)",
+"options": [
+{ "text": "JSON", "correct": true },
+{ "text": "XML", "correct": true },
+{ "text": "EXE", "correct": false },
+{ "text": "JPG", "correct": false }
+]
+},
+{
+"id": "js-auth-007",
+"type": "single",
+"topic": "js-eco",
+"difficulty": 2,
+"explanation": "TypeScript je nadstavba JavaScriptu, která přidává statické typování, což pomáhá předcházet chybám v kódu před spuštěním.",
+"question": "Jaký je hlavní rozdíl mezi JavaScriptem a TypeScriptem?",
+"options": [
+{ "text": "TypeScript je rychlejší v prohlížeči", "correct": false },
+{ "text": "TypeScript přidává statické typování", "correct": true },
+{ "text": "JavaScript nemá funkce", "correct": false },
+{ "text": "TypeScript běží pouze na serveru", "correct": false }
+]
+},
+{
+"id": "js-auth-008",
+"type": "single",
+"topic": "js-eco",
+"difficulty": 2,
+"explanation": "Node.js je runtime prostředí, které umožňuje spouštět JavaScriptový kód mimo prohlížeč, tedy na serveru.",
+"question": "K čemu slouží Node.js?",
+"options": [
+{ "text": "Ke tvorbě designu webu", "correct": false },
+{ "text": "K běhu JavaScriptu na straně serveru", "correct": true },
+{ "text": "Ke správě SQL databází", "correct": false },
+{ "text": "K šifrování HTTPS certifikátů", "correct": false }
+]
+},
+{
+"id": "js-auth-009",
+"type": "single",
+"topic": "js-eco",
+"difficulty": 3,
+"explanation": "NPM (Node Package Manager) je výchozí správce balíčků pro Node.js, který umožňuje instalovat knihovny třetích stran.",
+"question": "Jak se jmenuje správce balíčků pro Node.js?",
+"options": [
+{ "text": "NPM", "correct": true },
+{ "text": "JS-Manager", "correct": false },
+{ "text": "NodePack", "correct": false },
+{ "text": "PackageStore", "correct": false }
+]
+},
+{
+"id": "js-auth-010",
+"type": "truefalse",
+"topic": "js-zaklady",
+"difficulty": 1,
+"explanation": "JavaScriptový kód je nutné uzavřít do značek  nebo vložit ze souboru pomocí atributu src.",
+"statement": "JavaScriptový kód v HTML stránce se standardně vkládá do elementu .",
+"answer": true
+},
+{
+"id": "js-auth-011",
+"type": "numeric",
+"topic": "js-zaklady",
+"difficulty": 1,
+"explanation": "Cyklus poběží 5x, tedy text vypíše 5krát.",
+"question": "Pokud v JS zavolám funkci pro výpis textu v cyklu for(let i=0; i<5; i++), kolikrát se text vypíše?",
+"answer": 5,
+"tolerance": 0
+},
+{
+"id": "js-auth-012",
+"type": "single",
+"topic": "js-async-ajax",
+"difficulty": 3,
+"explanation": "Promise je objekt v JS reprezentující budoucí výsledek asynchronní operace (úspěch nebo selhání).",
+"question": "Co reprezentuje Promise v JavaScriptu?",
+"options": [
+{ "text": "Synchronní výpočet", "correct": false },
+{ "text": "Budoucí výsledek asynchronní operace", "correct": true },
+{ "text": "Chybu při spuštění kódu", "correct": false },
+{ "text": "Přístup k databázi", "correct": false }
+]
+},
+{
+"id": "js-auth-013",
+"type": "truefalse",
+"topic": "auth-zaklady",
+"difficulty": 1,
+"explanation": "Autentizace ověřuje, kdo uživatel je (kdo jsi?), zatímco autorizace určuje, co smí dělat (co můžeš?).",
+"statement": "Autentizace a autorizace jsou v informatice naprosto identické pojmy.",
+"answer": false
+},
+{
+"id": "js-auth-014",
+"type": "single",
+"topic": "auth-zaklady",
+"difficulty": 2,
+"explanation": "Autentizace je proces ověření identity uživatele (např. pomocí hesla, biometrie).",
+"question": "Který z těchto procesů odpovídá na otázku 'Kdo jsi?'",
+"options": [
+{ "text": "Autorizace", "correct": false },
+{ "text": "Autentizace", "correct": true },
+{ "text": "Auditování", "correct": false },
+{ "text": "Šifrování", "correct": false }
+]
+},
+{
+"id": "js-auth-015",
+"type": "single",
+"topic": "auth-zaklady",
+"difficulty": 2,
+"explanation": "Autorizace je proces rozhodování o oprávnění uživatele k přístupu k určitému zdroji.",
+"question": "Který proces určuje, ke kterým souborům má uživatel přístup?",
+"options": [
+{ "text": "Autentizace", "correct": false },
+{ "text": "Autorizace", "correct": true },
+{ "text": "Registrace", "correct": false },
+{ "text": "Hashing", "correct": false }
+]
+},
+{
+"id": "js-auth-016",
+"type": "multiple",
+"topic": "auth-mechanismy",
+"difficulty": 2,
+"explanation": "Mezi běžné metody autentizace patří hesla, vícefaktorové ověření (MFA) a digitální certifikáty.",
+"question": "Které z těchto prvků patří mezi metody autentizace? (Vyberte všechny správné)",
+"options": [
+{ "text": "Heslo", "correct": true },
+{ "text": "Vícefaktorové ověření (2FA/MFA)", "correct": true },
+{ "text": "IP adresa serveru", "correct": false },
+{ "text": "Biometrie (např. otisk prstu)", "correct": true }
+]
+},
+{
+"id": "js-auth-017",
+"type": "single",
+"topic": "auth-mechanismy",
+"difficulty": 3,
+"explanation": "JWT (JSON Web Token) je standard pro bezpečné předávání informací mezi stranami jako JSON objekt.",
+"question": "Co je zkratka JWT?",
+"options": [
+{ "text": "JSON Web Token", "correct": true },
+{ "text": "Java Web Tool", "correct": false },
+{ "text": "Joint Web Transfer", "correct": false },
+{ "text": "JSON Web Transfer", "correct": false }
+]
+},
+{
+"id": "js-auth-018",
+"type": "truefalse",
+"topic": "auth-mechanismy",
+"difficulty": 2,
+"explanation": "Hashování je nevratný proces. Z hashe nelze získat původní heslo. Šifrování je vratný proces (lze dešifrovat).",
+"statement": "Hashování hesla je proces, ze kterého lze pomocí dešifrovacího klíče získat původní heslo.",
+"answer": false
+},
+{
+"id": "js-auth-019",
+"type": "single",
+"topic": "auth-mechanismy",
+"difficulty": 3,
+"explanation": "Sůl (Salt) je náhodná data přidaná k heslu před hashováním, což chrání před útoky pomocí duhové tabulky (Rainbow tables).",
+"question": "K čemu slouží 'sůl' (salt) při ukládání hesel?",
+"options": [
+{ "text": "Ke zvýšení výkonu serveru", "correct": false },
+{ "text": "K ochraně před útoky duhovými tabulkami", "correct": true },
+{ "text": "Ke zjednodušení přihlášení uživatele", "correct": false },
+{ "text": "K automatickému generování hesel", "correct": false }
+]
+},
+{
+"id": "js-auth-020",
+"type": "single",
+"topic": "js-eco",
+"difficulty": 3,
+"explanation": "TypeScript přidává typy, které kompilátor kontroluje. Zabraňuje např. přiřazení čísla do string proměnné.",
+"question": "Jaká je hlavní výhoda používání rozhraní (interface) v TypeScriptu?",
+"options": [
+{ "text": "Definování struktury objektu a typová kontrola", "correct": true },
+{ "text": "Změna barvy v prohlížeči", "correct": false },
+{ "text": "Automatické odesílání emailů", "correct": false },
+{ "text": "Zrychlení běhu kódu", "correct": false }
+]
+},
+{
+"id": "js-auth-021",
+"type": "truefalse",
+"topic": "js-async-ajax",
+"difficulty": 2,
+"explanation": "JavaScript v prohlížeči je jednovláknový. Asynchronní operace (jako AJAX) umožňují, aby se zbytek kódu nezablokoval během čekání na odpověď serveru.",
+"statement": "JavaScript v prohlížeči je vícevláknový jazyk, proto nepotřebuje asynchronní operace.",
+"answer": false
+},
+{
+"id": "js-auth-022",
+"type": "single",
+"topic": "auth-mechanismy",
+"difficulty": 3,
+"explanation": "OAuth 2.0 je protokol pro autorizaci, který umožňuje aplikaci přistupovat k uživatelským datům (např. Google/Facebook login) bez sdílení hesla.",
+"question": "Co je hlavním účelem protokolu OAuth 2.0?",
+"options": [
+{ "text": "Autorizace přístupu k API bez sdílení hesla", "correct": true },
+{ "text": "Šifrování e-mailů", "correct": false },
+{ "text": "Výhradně autentizace pomocí hesla", "correct": false },
+{ "text": "Náhrada za SQL databáze", "correct": false }
+]
+},
+{
+"id": "js-auth-023",
+"type": "multiple",
+"topic": "auth-mechanismy",
+"difficulty": 3,
+"explanation": "HTTPS zajišťuje šifrovaný přenos dat mezi klientem a serverem, čímž brání odposlechu (např. hesel).",
+"question": "Proč je HTTPS klíčové pro autentizaci? (Vyberte všechny správné)",
+"options": [
+{ "text": "Šifruje komunikaci", "correct": true },
+{ "text": "Zajišťuje integritu přenášených dat", "correct": true },
+{ "text": "Samo o sobě autentizuje uživatele", "correct": false },
+{ "text": "Zabraňuje útokům typu man-in-the-middle", "correct": true }
+]
+},
+{
+"id": "js-auth-024",
+"type": "single",
+"topic": "auth-mechanismy",
+"difficulty": 2,
+"explanation": "MFA (Multi-Factor Authentication) vyžaduje více nezávislých způsobů ověření (např. heslo + SMS kód).",
+"question": "Co znamená zkratka MFA v kontextu bezpečnosti?",
+"options": [
+{ "text": "Multi-Factor Authentication", "correct": true },
+{ "text": "Master File Access", "correct": false },
+{ "text": "Main Frame Authorization", "correct": false },
+{ "text": "Memory Flow Algorithm", "correct": false }
+]
+},
+{
+"id": "js-auth-025",
+"type": "single",
+"topic": "js-zaklady",
+"difficulty": 2,
+"explanation": "Klíčové slovo `const` vytvoří proměnnou, jejíž referenci nelze změnit. `let` umožňuje změnu.",
+"question": "Který klíčový výraz v JS definuje proměnnou, kterou nelze znovu přiřadit?",
+"options": [
+{ "text": "const", "correct": true },
+{ "text": "let", "correct": false },
+{ "text": "var", "correct": false },
+{ "text": "dynamic", "correct": false }
+]
+},
+{
+"id": "js-auth-026",
+"type": "truefalse",
+"topic": "js-eco",
+"difficulty": 2,
+"explanation": "Node.js používá V8 engine od Google, což je stejný engine jako v prohlížeči Chrome.",
+"statement": "Node.js běží na stejném enginu jako prohlížeč Google Chrome (V8).",
+"answer": true
+},
+{
+"id": "js-auth-027",
+"type": "single",
+"topic": "auth-mechanismy",
+"difficulty": 3,
+"explanation": "Session hijacking je útok, při kterém útočník získá přístup k session ID uživatele a zosobní se za něj.",
+"question": "Co je to Session Hijacking?",
+"options": [
+{ "text": "Smazání historie prohlížeče", "correct": false },
+{ "text": "Krádež session ID a zosobnění uživatele", "correct": true },
+{ "text": "Pomalý přenos dat", "correct": false },
+{ "text": "Změna hesla správcem", "correct": false }
+]
+},
+{
+"id": "js-auth-028",
+"type": "numeric",
+"topic": "auth-mechanismy",
+"difficulty": 3,
+"explanation": "Nejmenší doporučená délka pro silné heslo je v moderních standardech často 12 znaků.",
+"question": "Kolik znaků by mělo mít minimálně moderní bezpečné heslo (doporučení)?",
+"answer": 12,
+"tolerance": 2
+},
+{
+"id": "js-auth-029",
+"type": "single",
+"topic": "auth-zaklady",
+"difficulty": 2,
+"explanation": "Role-Based Access Control (RBAC) přiděluje oprávnění na základě rolí (např. admin, uživatel), nikoliv individuálně.",
+"question": "Jaký přístup k autorizaci přiděluje práva na základě rolí?",
+"options": [
+{ "text": "RBAC", "correct": true },
+{ "text": "ABAC", "correct": false },
+{ "text": "JSON", "correct": false },
+{ "text": "XSS", "correct": false }
+]
+},
+{
+"id": "js-auth-030",
+"type": "single",
+"topic": "js-async-ajax",
+"difficulty": 3,
+"explanation": "CORS (Cross-Origin Resource Sharing) je mechanismus, který řídí, zda prohlížeč dovolí skriptu na jedné doméně přistoupit k datům z jiné domény.",
+"question": "Co řídí bezpečnostní mechanismus CORS?",
+"options": [
+{ "text": "Přístup ke zdrojům z jiných domén", "correct": true },
+{ "text": "Rychlost stahování obrázků", "correct": false },
+{ "text": "Šifrování hesla uživatele", "correct": false },
+{ "text": "Počet otevřených tabů", "correct": false }
+]
+}
+]
+}

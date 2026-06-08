@@ -1,0 +1,401 @@
+{
+"subject": "sql-vazby",
+"name": "Relační databáze a SQL",
+"topics": [
+{ "id": "zaklady-sql", "name": "Základy SQL dotazů" },
+{ "id": "typy-spojeni", "name": "Typy spojení tabulek" },
+{ "id": "agregace", "name": "Agregační funkce a seskupování" },
+{ "id": "vazby-entit", "name": "Relační vazby a klíče" },
+{ "id": "pokrocile-dotazy", "name": "Pokročilé dotazy a filtrace" }
+],
+"questions": [
+{
+"id": "sql-vazby-001",
+"type": "single",
+"topic": "zaklady-sql",
+"difficulty": 1,
+"explanation": "Příkaz SELECT se používá k získávání dat z databáze. Je to základní stavební kámen každého dotazu.",
+"question": "Který SQL příkaz slouží k výběru dat z databáze?",
+"options": [
+{ "text": "EXTRACT", "correct": false },
+{ "text": "SELECT", "correct": true },
+{ "text": "GET", "correct": false },
+{ "text": "FETCH", "correct": false }
+]
+},
+{
+"id": "sql-vazby-002",
+"type": "single",
+"topic": "zaklady-sql",
+"difficulty": 1,
+"explanation": "Klauzule FROM určuje zdrojovou tabulku, ze které se mají data vybrat.",
+"question": "Která klauzule určuje zdrojovou tabulku pro výběr dat?",
+"options": [
+{ "text": "SOURCE", "correct": false },
+{ "text": "WHERE", "correct": false },
+{ "text": "FROM", "correct": true },
+{ "text": "JOIN", "correct": false }
+]
+},
+{
+"id": "sql-vazby-003",
+"type": "truefalse",
+"topic": "zaklady-sql",
+"difficulty": 2,
+"explanation": "WHERE se používá pro filtrování jednotlivých řádků před seskupením, zatímco HAVING se používá pro filtrování skupin po provedení GROUP BY.",
+"statement": "Klauzule HAVING se používá ke stejnému účelu jako WHERE, tedy k filtrování jednotlivých řádků před seskupením.",
+"answer": false
+},
+{
+"id": "sql-vazby-004",
+"type": "single",
+"topic": "zaklady-sql",
+"difficulty": 2,
+"explanation": "Klíčové slovo LIMIT (v některých systémech TOP) slouží k omezení počtu vrácených řádků.",
+"question": "Jak omezíme počet vrácených řádků v SQL dotazu (např. pouze na 10 záznamů)?",
+"options": [
+{ "text": "ROWCOUNT 10", "correct": false },
+{ "text": "LIMIT 10", "correct": true },
+{ "text": "MAX 10", "correct": false },
+{ "text": "TOP 10", "correct": false }
+]
+},
+{
+"id": "sql-vazby-005",
+"type": "multiple",
+"topic": "zaklady-sql",
+"difficulty": 2,
+"explanation": "DML (Data Manipulation Language) slouží k manipulaci s daty. INSERT, UPDATE a DELETE jsou typické příkazy pro změnu obsahu tabulek.",
+"question": "Které z následujících příkazů patří do kategorie DML (Data Manipulation Language)? (Vyberte všechny správné)",
+"options": [
+{ "text": "INSERT", "correct": true },
+{ "text": "CREATE", "correct": false },
+{ "text": "UPDATE", "correct": true },
+{ "text": "DELETE", "correct": true },
+{ "text": "DROP", "correct": false }
+]
+},
+{
+"id": "sql-vazby-006",
+"type": "single",
+"topic": "zaklady-sql",
+"difficulty": 2,
+"explanation": "Alias (klíčové slovo AS) se používá k dočasnému přejmenování sloupce nebo tabulky v rámci jednoho dotazu.",
+"question": "K čemu slouží v SQL klíčové slovo AS?",
+"options": [
+{ "text": "K odstranění duplicit", "correct": false },
+{ "text": "K vytvoření aliasu", "correct": true },
+{ "text": "Ke spojení dvou tabulek", "correct": false },
+{ "text": "K seřazení výsledků", "correct": false }
+]
+},
+{
+"id": "sql-vazby-007",
+"type": "single",
+"topic": "typy-spojeni",
+"difficulty": 2,
+"explanation": "INNER JOIN vrátí pouze záznamy, které mají odpovídající hodnoty v obou spojovaných tabulkách.",
+"question": "Jaký typ spojení vrací pouze řádky, kde existuje shoda v obou tabulkách?",
+"options": [
+{ "text": "FULL OUTER JOIN", "correct": false },
+{ "text": "LEFT JOIN", "correct": false },
+{ "text": "INNER JOIN", "correct": true },
+{ "text": "CROSS JOIN", "correct": false }
+]
+},
+{
+"id": "sql-vazby-008",
+"type": "single",
+"topic": "typy-spojeni",
+"difficulty": 2,
+"explanation": "LEFT JOIN vrací všechny záznamy z levé tabulky a odpovídající z pravé. Pokud shoda neexistuje, doplní NULL.",
+"question": "Co získáme použitím LEFT JOIN?",
+"options": [
+{ "text": "Pouze shody z obou tabulek", "correct": false },
+{ "text": "Všechny záznamy z levé tabulky a shody z pravé", "correct": true },
+{ "text": "Pouze záznamy, které v pravé tabulce nemají shodu", "correct": false },
+{ "text": "Kartézský součin obou tabulek", "correct": false }
+]
+},
+{
+"id": "sql-vazby-009",
+"type": "multiple",
+"topic": "typy-spojeni",
+"difficulty": 3,
+"explanation": "FULL OUTER JOIN vrací záznamy, i když shoda není v levé, ani v pravé tabulce (doplní NULL). Je to sjednocení LEFT a RIGHT JOIN.",
+"question": "Jaké výsledky vrací FULL OUTER JOIN? (Vyberte všechny správné)",
+"options": [
+{ "text": "Všechny záznamy z levé tabulky", "correct": true },
+{ "text": "Všechny záznamy z pravé tabulky", "correct": true },
+{ "text": "Pouze záznamy s identickými klíči", "correct": false },
+{ "text": "NULL hodnoty tam, kde chybí shoda v druhé tabulce", "correct": true }
+]
+},
+{
+"id": "sql-vazby-010",
+"type": "truefalse",
+"topic": "typy-spojeni",
+"difficulty": 3,
+"explanation": "CROSS JOIN vytváří kartézský součin, což znamená, že každý řádek z první tabulky se spojí s každým řádkem z druhé tabulky.",
+"statement": "CROSS JOIN vrací kartézský součin dvou tabulek, tedy spojí každý řádek první tabulky s každým řádkem druhé tabulky.",
+"answer": true
+},
+{
+"id": "sql-vazby-011",
+"type": "single",
+"topic": "typy-spojeni",
+"difficulty": 1,
+"explanation": "Klauzule ON specifikuje podmínku, podle které se mají řádky z tabulek spojit.",
+"question": "Která klauzule se používá k definování podmínky spojení v příkazu JOIN?",
+"options": [
+{ "text": "WHERE", "correct": false },
+{ "text": "ON", "correct": true },
+{ "text": "FOR", "correct": false },
+{ "text": "USING", "correct": false }
+]
+},
+{
+"id": "sql-vazby-012",
+"type": "single",
+"topic": "typy-spojeni",
+"difficulty": 3,
+"explanation": "NATURAL JOIN automaticky spojí tabulky na základě sloupců se stejným názvem v obou tabulkách.",
+"question": "Jaký typ spojení provede automatické spojení tabulek na základě všech sloupců se stejným názvem?",
+"options": [
+{ "text": "NATURAL JOIN", "correct": true },
+{ "text": "INNER JOIN", "correct": false },
+{ "text": "AUTO JOIN", "correct": false },
+{ "text": "EQUI JOIN", "correct": false }
+]
+},
+{
+"id": "sql-vazby-013",
+"type": "multiple",
+"topic": "typy-spojeni",
+"difficulty": 2,
+"explanation": "LEFT JOIN je užitečný, když chceme zachovat všechny entity z hlavní (levé) tabulky, i když k nim nejsou přiřazeny žádné záznamy v přidružené (pravé) tabulce.",
+"question": "Kdy je vhodné použít LEFT JOIN? (Vyberte všechny správné)",
+"options": [
+{ "text": "Když chceme vidět všechny zákazníky, i ty, kteří ještě neudělali žádnou objednávku", "correct": true },
+{ "text": "Když chceme pouze ty studenty, kteří mají zapsaný alespoň jeden předmět", "correct": false },
+{ "text": "Když chceme vypsat všechny oddělení, včetně těch, která zatím nemají přidělené zaměstnance", "correct": true },
+{ "text": "Když chceme vyloučit všechny záznamy bez shody", "correct": false }
+]
+},
+{
+"id": "sql-vazby-014",
+"type": "single",
+"topic": "typy-spojeni",
+"difficulty": 2,
+"explanation": "V SQL syntaxi se klíčové slovo JOIN obvykle píše mezi názvy tabulek v klauzuli FROM.",
+"question": "Kde se v SQL dotazu standardně uvádí operace JOIN?",
+"options": [
+{ "text": "V klauzuli WHERE", "correct": false },
+{ "text": "V klauzuli SELECT", "correct": false },
+{ "text": "V klauzuli FROM", "correct": true },
+{ "text": "V klauzuli HAVING", "correct": false }
+]
+},
+{
+"id": "sql-vazby-015",
+"type": "single",
+"topic": "agregace",
+"difficulty": 1,
+"explanation": "Funkce SUM() sčítá hodnoty v zadaném sloupci.",
+"question": "Která agregační funkce vypočítá součet hodnot ve sloupci?",
+"options": [
+{ "text": "TOTAL()", "correct": false },
+{ "text": "SUM()", "correct": true },
+{ "text": "ADD()", "correct": false },
+{ "text": "COUNT()", "correct": false }
+]
+},
+{
+"id": "sql-vazby-016",
+"type": "single",
+"topic": "agregace",
+"difficulty": 1,
+"explanation": "Funkce AVG() (average) vypočítá aritmetický průměr hodnot ve sloupci.",
+"question": "Která agregační funkce vypočítá průměrnou hodnotu ve sloupci?",
+"options": [
+{ "text": "AVG()", "correct": true },
+{ "text": "MEAN()", "correct": false },
+{ "text": "MEDIUM()", "correct": false },
+{ "text": "PRUMER()", "correct": false }
+]
+},
+{
+"id": "sql-vazby-017",
+"type": "multiple",
+"topic": "agregace",
+"difficulty": 2,
+"explanation": "COUNT spočítá počet řádků, MAX najde nejvyšší hodnotu a MIN nejnižší hodnotu.",
+"question": "Které z následujících jsou platné agregační funkce v SQL? (Vyberte všechny správné)",
+"options": [
+{ "text": "COUNT()", "correct": true },
+{ "text": "MAX()", "correct": true },
+{ "text": "MIN()", "correct": true },
+{ "text": "SORT()", "correct": false }
+]
+},
+{
+"id": "sql-vazby-018",
+"type": "truefalse",
+"topic": "agregace",
+"difficulty": 2,
+"explanation": "GROUP BY se používá k seskupení výsledků, a agregační funkce (jako SUM, AVG) pak pracují nad těmito skupinami. Pokud nepoužijeme agregaci, GROUP BY nemá smysl.",
+"statement": "Použití GROUP BY je povinné vždy, když v dotazu používáme agregační funkce.",
+"answer": false
+},
+{
+"id": "sql-vazby-019",
+"type": "numeric",
+"topic": "agregace",
+"difficulty": 1,
+"explanation": "Funkce COUNT(*) počítá všechny řádky v tabulce, včetně těch s NULL hodnotami.",
+"question": "Kolik řádků vrátí dotaz 'SELECT COUNT(*) FROM tabulka', pokud tabulka obsahuje právě 5 řádků?",
+"answer": 5,
+"tolerance": 0
+},
+{
+"id": "sql-vazby-020",
+"type": "single",
+"topic": "agregace",
+"difficulty": 3,
+"explanation": "Klauzule HAVING se používá pro filtrování výsledků, které jsou již seskupeny pomocí GROUP BY.",
+"question": "Kterou klauzuli použijeme, pokud chceme filtrovat skupiny vytvořené pomocí GROUP BY?",
+"options": [
+{ "text": "WHERE", "correct": false },
+{ "text": "HAVING", "correct": true },
+{ "text": "FILTER", "correct": false },
+{ "text": "LIMIT", "correct": false }
+]
+},
+{
+"id": "sql-vazby-021",
+"type": "single",
+"topic": "vazby-entit",
+"difficulty": 2,
+"explanation": "Primární klíč (Primary Key) jednoznačně identifikuje každý záznam v tabulce. Musí být unikátní a nesmí obsahovat NULL.",
+"question": "Co je to primární klíč (Primary Key)?",
+"options": [
+{ "text": "Sloupec, který spojuje dvě tabulky", "correct": false },
+{ "text": "Identifikátor, který jednoznačně určuje řádek v tabulce", "correct": true },
+{ "text": "Heslo pro přístup do databáze", "correct": false },
+{ "text": "Index, který zrychluje vyhledávání", "correct": false }
+]
+},
+{
+"id": "sql-vazby-022",
+"type": "single",
+"topic": "vazby-entit",
+"difficulty": 2,
+"explanation": "Cizí klíč (Foreign Key) vytváří vazbu na primární klíč v jiné tabulce a zajišťuje referenční integritu.",
+"question": "Jak se nazývá sloupec v tabulce, který odkazuje na primární klíč jiné tabulky?",
+"options": [
+{ "text": "Cizí klíč (Foreign Key)", "correct": true },
+{ "text": "Sekundární klíč", "correct": false },
+{ "text": "Hlavní klíč", "correct": false },
+{ "text": "Propojený klíč", "correct": false }
+]
+},
+{
+"id": "sql-vazby-023",
+"type": "multiple",
+"topic": "vazby-entit",
+"difficulty": 2,
+"explanation": "V relačních databázích rozlišujeme základní typy kardinality vazeb: 1:1, 1:N a M:N.",
+"question": "Které z následujících jsou standardní typy vazeb mezi tabulkami? (Vyberte všechny správné)",
+"options": [
+{ "text": "1:1", "correct": true },
+{ "text": "1:N", "correct": true },
+{ "text": "M:N", "correct": true },
+{ "text": "X:Y", "correct": false }
+]
+},
+{
+"id": "sql-vazby-024",
+"type": "truefalse",
+"topic": "vazby-entit",
+"difficulty": 3,
+"explanation": "Pro realizaci vazby M:N (mnoho k mnoha) v relační databázi je nezbytná tzv. vazební (asociativní) tabulka.",
+"statement": "Pro implementaci vztahu M:N (mnoho k mnoha) v relační databázi je nutné vytvořit další vazební tabulku.",
+"answer": true
+},
+{
+"id": "sql-vazby-025",
+"type": "single",
+"topic": "vazby-entit",
+"difficulty": 3,
+"explanation": "Referenční integrita zajišťuje, že vztahy mezi tabulkami zůstávají konzistentní (např. nelze smazat záznam, na který odkazuje cizí klíč).",
+"question": "Co zajišťuje referenční integrita v databázi?",
+"options": [
+{ "text": "Že cizí klíč vždy odkazuje na existující záznam", "correct": true },
+{ "text": "Že databáze je rychlejší", "correct": false },
+{ "text": "Že jsou data šifrovaná", "correct": false },
+{ "text": "Že jsou názvy tabulek unikátní", "correct": false }
+]
+},
+{
+"id": "sql-vazby-026",
+"type": "single",
+"topic": "pokrocile-dotazy",
+"difficulty": 3,
+"explanation": "Poddotaz (subquery) je dotaz vnořený uvnitř jiného SQL příkazu.",
+"question": "Jak se nazývá dotaz, který je vnořen uvnitř jiného SQL dotazu?",
+"options": [
+{ "text": "Vnořený spoj", "correct": false },
+{ "text": "Poddotaz (Subquery)", "correct": true },
+{ "text": "Závislý dotaz", "correct": false },
+{ "text": "Sekundární dotaz", "correct": false }
+]
+},
+{
+"id": "sql-vazby-027",
+"type": "multiple",
+"topic": "pokrocile-dotazy",
+"difficulty": 2,
+"explanation": "ORDER BY slouží k řazení výsledků. ASC určuje vzestupné pořadí, DESC sestupné pořadí.",
+"question": "Které klauzule se používají pro řazení výsledků? (Vyberte všechny správné)",
+"options": [
+{ "text": "SORT BY", "correct": false },
+{ "text": "ORDER BY", "correct": true },
+{ "text": "ASC", "correct": true },
+{ "text": "DESC", "correct": true }
+]
+},
+{
+"id": "sql-vazby-028",
+"type": "truefalse",
+"topic": "pokrocile-dotazy",
+"difficulty": 2,
+"explanation": "UNION spojuje výsledky dvou SELECT dotazů a standardně odstraňuje duplicity. UNION ALL duplicity ponechává.",
+"statement": "Příkaz UNION v SQL standardně automaticky odstraňuje duplicitní řádky z výsledku.",
+"answer": true
+},
+{
+"id": "sql-vazby-029",
+"type": "numeric",
+"topic": "pokrocile-dotazy",
+"difficulty": 1,
+"explanation": "Pokud má tabulka 3 sloupce, SELECT * vybere hodnoty ze všech 3 sloupců.",
+"question": "Kolik sloupců bude mít výsledek dotazu 'SELECT * FROM tabulka', pokud má daná tabulka 3 sloupce?",
+"answer": 3,
+"tolerance": 0
+},
+{
+"id": "sql-vazby-030",
+"type": "single",
+"topic": "pokrocile-dotazy",
+"difficulty": 2,
+"explanation": "DISTINCT se používá k odstranění duplicitních hodnot ve výsledku dotazu.",
+"question": "Které klíčové slovo se používá k získání pouze unikátních (jedinečných) hodnot?",
+"options": [
+{ "text": "UNIQUE", "correct": false },
+{ "text": "DISTINCT", "correct": true },
+{ "text": "DIFFERENT", "correct": false },
+{ "text": "SINGLE", "correct": false }
+]
+}
+]
+}

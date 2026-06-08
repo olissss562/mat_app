@@ -1,0 +1,281 @@
+{
+  "subject": "funkce-a-metody",
+  "name": "Funkce a metody",
+  "topics": [
+    { "id": "zaklady-funkci", "name": "Základy funkcí a parametrů" },
+    { "id": "typy-metod", "name": "Typy metod a přetěžování" },
+    { "id": "rekurze", "name": "Rekurze" },
+    { "id": "implementace-ulohy", "name": "Implementace mocniny" }
+  ],
+  "questions": [
+    {
+      "id": "funkce-001", "type": "single", "topic": "zaklady-funkci",
+      "explanation": "Argumenty jsou hodnoty, které předáváme funkci při jejím volání, a návratová hodnota je výsledek, který funkce vrací.",
+      "question": "Co je to návratová hodnota funkce?",
+      "options": [
+        { "text": "Hodnota, kterou funkce vrací volajícímu kódu", "correct": true },
+        { "text": "Hodnota, kterou funkce přijímá jako parametr", "correct": false },
+        { "text": "Proměnná definovaná uvnitř funkce", "correct": false },
+        { "text": "Adresa funkce v paměti", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-002", "type": "truefalse", "topic": "zaklady-funkci",
+      "explanation": "Metoda může mít více parametrů různých typů, nebo také žádný parametr.",
+      "statement": "Metoda musí mít vždy alespoň jeden parametr.",
+      "answer": false
+    },
+    {
+      "id": "funkce-003", "type": "single", "topic": "typy-metod",
+      "explanation": "Přetěžování metod (overloading) znamená, že máme v jedné třídě více metod se stejným názvem, ale odlišnými parametry.",
+      "question": "Co je to přetěžování metod (method overloading)?",
+      "options": [
+        { "text": "Stejný název metody, různé parametry", "correct": true },
+        { "text": "Stejný název i parametry v různých třídách", "correct": false },
+        { "text": "Změna typu návratové hodnoty při stejném názvu a parametrech", "correct": false },
+        { "text": "Předefinování metody v potomkovi", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-004", "type": "single", "topic": "typy-metod",
+      "explanation": "Statická metoda patří celé třídě a volá se bez nutnosti vytvářet instanci objektu.",
+      "question": "Jaký je hlavní rozdíl statické metody oproti instanční?",
+      "options": [
+        { "text": "Statická metoda vyžaduje vytvoření objektu", "correct": false },
+        { "text": "Instanční metoda patří objektu, statická třídě", "correct": true },
+        { "text": "Statická metoda vrací vždy void", "correct": false },
+        { "text": "Není žádný rozdíl", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-005", "type": "multiple", "topic": "rekurze",
+      "explanation": "Rekurze vyžaduje ukončovací podmínku, jinak dojde k přetečení zásobníku (StackOverflow).",
+      "question": "Co je klíčové pro správnou rekurzi? (vyberte 2)",
+      "options": [
+        { "text": "Ukončovací podmínka (bázový případ)", "correct": true },
+        { "text": "Rekurzivní volání (funkce volá sama sebe)", "correct": true },
+        { "text": "Použití cyklu for uvnitř rekurze", "correct": false },
+        { "text": "Definování globální proměnné", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-006", "type": "truefalse", "topic": "rekurze",
+      "explanation": "Rekurze je často elegantnější než cyklus, ale může být paměťově náročnější kvůli volání funkcí.",
+      "statement": "Každý rekurzivní algoritmus lze vždy přepsat pomocí cyklu.",
+      "answer": true
+    },
+    {
+      "id": "funkce-007", "type": "numeric", "topic": "implementace-ulohy",
+      "explanation": "Rekurzivní výpočet mocniny x^n funguje tak, že x^n = x * x^(n-1), dokud n není 0 (kde výsledek je 1).",
+      "question": "Jaká je hodnota mocniny x^0?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "funkce-008", "type": "single", "topic": "implementace-ulohy",
+      "explanation": "Statická metoda se v Javě označuje klíčovým slovem 'static'.",
+      "question": "Které klíčové slovo v Javě označuje statickou metodu?",
+      "options": [
+        { "text": "final", "correct": false },
+        { "text": "static", "correct": true },
+        { "text": "public", "correct": false },
+        { "text": "void", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-009", "type": "multiple", "topic": "zaklady-funkci",
+      "explanation": "Parametry mohou být předávány hodnotou (u primitiv) nebo referencí (u objektů).",
+      "question": "Co jsou argumenty funkce? (vyberte 2)",
+      "options": [
+        { "text": "Vstupní data předávaná metodě", "correct": true },
+        { "text": "Hodnoty v závorkách při volání metody", "correct": true },
+        { "text": "Návratový typ metody", "correct": false },
+        { "text": "Název třídy", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-010", "type": "truefalse", "topic": "typy-metod",
+      "explanation": "Přetěžování vyžaduje odlišné parametry (počet nebo typ), ne pouze jiný návratový typ.",
+      "statement": "Metody lze přetížit pouze změnou jejich návratového typu.",
+      "answer": false
+    },
+    {
+      "id": "funkce-011", "type": "single", "topic": "rekurze",
+      "explanation": "StackOverflowError vzniká, pokud se rekurze volá do nekonečna (chybí ukončovací podmínka).",
+      "question": "Jaká chyba nastane při nekonečné rekurzi?",
+      "options": [
+        { "text": "ArithmeticException", "correct": false },
+        { "text": "StackOverflowError", "correct": true },
+        { "text": "NullPointerException", "correct": false },
+        { "text": "MemoryError", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-012", "type": "numeric", "topic": "implementace-ulohy",
+      "explanation": "Výpočet mocniny 2^3 je 2 * 2 * 2 = 8.",
+      "question": "Jaký je výsledek statické metody power(2, 3)?",
+      "answer": 8,
+      "tolerance": 0
+    },
+    {
+      "id": "funkce-013", "type": "truefalse", "topic": "zaklady-funkci",
+      "explanation": "Metoda typu 'void' nevrací žádnou hodnotu.",
+      "statement": "Metoda označená jako 'void' může vracet hodnotu typu int.",
+      "answer": false
+    },
+    {
+      "id": "funkce-014", "type": "multiple", "topic": "typy-metod",
+      "explanation": "Statické metody jsou součástí třídy, instanční metody jsou součástí vytvořeného objektu.",
+      "question": "Jaké jsou rozdíly v přístupu k metodám? (vyberte 2)",
+      "options": [
+        { "text": "Statické voláme přes název třídy", "correct": true },
+        { "text": "Instanční voláme přes proměnnou objektu", "correct": true },
+        { "text": "Statické metody nelze volat vůbec", "correct": false },
+        { "text": "Instanční metody jsou rychlejší než statické", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-015", "type": "single", "topic": "rekurze",
+      "explanation": "Rekurze je algoritmus, kde metoda volá samu sebe.",
+      "question": "Jaký je základní princip rekurze?",
+      "options": [
+        { "text": "Vnořené cykly", "correct": false },
+        { "text": "Metoda volá samu sebe", "correct": true },
+        { "text": "Použití vícero tříd", "correct": false },
+        { "text": "Náhodné generování čísel", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-016", "type": "truefalse", "topic": "rekurze",
+      "explanation": "Rekurze je matematicky elegantní, ale u velkých hloubek může dojít k vyčerpání paměti zásobníku.",
+      "statement": "Rekurze je vždy efektivnější než cyklus for.",
+      "answer": false
+    },
+    {
+      "id": "funkce-017", "type": "single", "topic": "implementace-ulohy",
+      "explanation": "Statická metoda pro mocninu musí mít jako parametry základ (base) a exponent (exp).",
+      "question": "Jaká by byla správná signatura statické metody pro mocninu?",
+      "options": [
+        { "text": "static void power(int base, int exp)", "correct": false },
+        { "text": "static double power(double base, int exp)", "correct": true },
+        { "text": "static int power()", "correct": false },
+        { "text": "public power(int base)", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-018", "type": "multiple", "topic": "typy-metod",
+      "explanation": "Přetěžování umožňuje flexibilitu, např. metoda může brát jako exponent int i double.",
+      "question": "Proč přetěžujeme metody? (vyberte 2)",
+      "options": [
+        { "text": "Pro snadnější použití s různými typy parametrů", "correct": true },
+        { "text": "Pro zvýšení čitelnosti kódu", "correct": true },
+        { "text": "Pro změnu funkčnosti programu", "correct": false },
+        { "text": "Pro smazání původní metody", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-019", "type": "truefalse", "topic": "zaklady-funkci",
+      "explanation": "Lokální proměnné definované uvnitř funkce nejsou mimo ni viditelné.",
+      "statement": "Proměnná definovaná uvnitř metody je přístupná v celé třídě.",
+      "answer": false
+    },
+    {
+      "id": "funkce-020", "type": "numeric", "topic": "rekurze",
+      "explanation": "Při výpočtu mocniny x^3 proběhne: f(x,3) -> x*f(x,2) -> x*x*f(x,1) -> x*x*x*f(x,0) = x*x*x*1.",
+      "question": "Kolik rekurzivních volání (včetně prvního) proběhne pro 2^3?",
+      "answer": 4,
+      "tolerance": 0
+    },
+    {
+      "id": "funkce-021", "type": "single", "topic": "zaklady-funkci",
+      "explanation": "Předávání hodnotou znamená, že se zkopíruje hodnota proměnné a metoda s originálem nepracuje.",
+      "question": "Co znamená předávání parametrů 'hodnotou'?",
+      "options": [
+        { "text": "Metoda dostane kopii hodnoty", "correct": true },
+        { "text": "Metoda dostane odkaz na původní proměnnou", "correct": false },
+        { "text": "Metoda nemůže měnit vstupní hodnotu", "correct": false },
+        { "text": "Všechny parametry jsou automaticky globální", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-022", "type": "multiple", "topic": "typy-metod",
+      "explanation": "Instance třídy potřebuje instanci objektu, statické metody jsou spojené s třídou jako celkem.",
+      "question": "Co nelze volat ze statické metody? (vyberte 2)",
+      "options": [
+        { "text": "Instanční metody přímo", "correct": true },
+        { "text": "Instanční proměnné přímo", "correct": true },
+        { "text": "Jiné statické metody", "correct": false },
+        { "text": "Lokální proměnné", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-023", "type": "truefalse", "topic": "rekurze",
+      "explanation": "Bázový případ (ukončovací podmínka) je nejdůležitější částí každé rekurze.",
+      "statement": "Rekurze bez bázového případu je správný program.",
+      "answer": false
+    },
+    {
+      "id": "funkce-024", "type": "single", "topic": "implementace-ulohy",
+      "explanation": "Rekurzivní volání pro mocninu: base * power(base, exp - 1).",
+      "question": "Jak vypadá typické rekurzivní volání pro mocninu base^exp?",
+      "options": [
+        { "text": "return base * power(base, exp - 1);", "correct": true },
+        { "text": "return base + power(base, exp);", "correct": false },
+        { "text": "return power(base, exp) * power(base, exp);", "correct": false },
+        { "text": "return 0;", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-025", "type": "multiple", "topic": "zaklady-funkci",
+      "explanation": "Návratová hodnota může být cokoliv, od primitivních typů až po objekty.",
+      "question": "Jaké typy může funkce vracet? (vyberte 2)",
+      "options": [
+        { "text": "Primitivní typy (int, double)", "correct": true },
+        { "text": "Objekty (String, vlastní třídy)", "correct": true },
+        { "text": "Pouze void", "correct": false },
+        { "text": "Pouze řetězce", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-026", "type": "single", "topic": "typy-metod",
+      "explanation": "Klíčové slovo 'this' v instančních metodách odkazuje na aktuální objekt.",
+      "question": "K čemu slouží klíčové slovo 'this' v metodě?",
+      "options": [
+        { "text": "Odkazuje na aktuální instanci objektu", "correct": true },
+        { "text": "Vrací statickou metodu", "correct": false },
+        { "text": "Ukončuje program", "correct": false },
+        { "text": "Definuje návratový typ", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-027", "type": "truefalse", "topic": "typy-metod",
+      "explanation": "Statické metody jsou definovány jako `static` v hlavičce metody.",
+      "statement": "Statické metody jsou automaticky vytvořeny pro každou instanci objektu.",
+      "answer": false
+    },
+    {
+      "id": "funkce-028", "type": "single", "topic": "rekurze",
+      "explanation": "Bázový případ je podmínka, která zastaví další rekurzivní volání.",
+      "question": "Co je to 'bázový případ' v rekurzi?",
+      "options": [
+        { "text": "První řádek kódu", "correct": false },
+        { "text": "Podmínka pro zastavení rekurze", "correct": true },
+        { "text": "Název metody", "correct": false },
+        { "text": "Návratová hodnota", "correct": false }
+      ]
+    },
+    {
+      "id": "funkce-029", "type": "truefalse", "topic": "implementace-ulohy",
+      "explanation": "Statické metody jsou nejlepší volbou pro utility (matematické výpočty, konverze).",
+      "statement": "Je nevhodné používat statické metody pro matematické výpočty.",
+      "answer": false
+    },
+    {
+      "id": "funkce-030", "type": "numeric", "topic": "rekurze",
+      "explanation": "Pokud je bázový případ exp == 0, vrací se 1.",
+      "question": "Pro jaký exponent v rekurzivní funkci pro mocninu vracíme bázovou hodnotu 1?",
+      "answer": 0,
+      "tolerance": 0
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "subject": "datove-struktury",
+  "name": "Datové struktury",
+  "topics": [
+    { "id": "zaklady-struk", "name": "Základní struktury" },
+    { "id": "abstraktni-typ", "name": "FIFO a LIFO" },
+    { "id": "mapy-mnoziny", "name": "Slovníky a množiny" },
+    { "id": "implementace", "name": "Implementace a praxe" }
+  ],
+  "questions": [
+    {
+      "id": "ds-001", "type": "single", "topic": "zaklady-struk",
+      "explanation": "Pole má pevnou velikost a prvky uložené za sebou, což umožňuje rychlý přímý přístup podle indexu.",
+      "question": "Jaká je hlavní výhoda datové struktury pole?",
+      "options": [
+        { "text": "Rychlá změna velikosti", "correct": false },
+        { "text": "Rychlý přímý přístup k prvkům podle indexu", "correct": true },
+        { "text": "Automatické seřazení prvků", "correct": false },
+        { "text": "Nízká paměťová náročnost při vkládání", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-002", "type": "single", "topic": "zaklady-struk",
+      "explanation": "Spojový seznam je složen z uzlů, kde každý obsahuje data a odkaz na další uzel.",
+      "question": "Z čeho se skládá lineární spojový seznam?",
+      "options": [
+        { "text": "Pouze z pole čísel", "correct": false },
+        { "text": "Z uzlů obsahujících data a odkaz na další prvek", "correct": true },
+        { "text": "Z klíčů a hodnot", "correct": false },
+        { "text": "Z kořene a listů", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-003", "type": "truefalse", "topic": "zaklady-struk",
+      "explanation": "Strom je hierarchická struktura, kde každý uzel může mít více následníků (potomků).",
+      "statement": "Strom je lineární datová struktura.",
+      "answer": false
+    },
+    {
+      "id": "ds-004", "type": "single", "topic": "abstraktni-typ",
+      "explanation": "FIFO znamená First-In-First-Out, což je princip fronty.",
+      "question": "Co znamená zkratka FIFO?",
+      "options": [
+        { "text": "First-In-First-Out", "correct": true },
+        { "text": "Fast-Input-Fast-Output", "correct": false },
+        { "text": "First-In-Last-Out", "correct": false },
+        { "text": "Fixed-Input-Fixed-Output", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-005", "type": "single", "topic": "abstraktni-typ",
+      "explanation": "LIFO (Last-In-First-Out) je princip zásobníku, kde poslední přidaný prvek je odebrán jako první.",
+      "question": "Která struktura pracuje na principu LIFO?",
+      "options": [
+        { "text": "Fronta", "correct": false },
+        { "text": "Zásobník", "correct": true },
+        { "text": "Pole", "correct": false },
+        { "text": "Množina", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-006", "type": "multiple", "topic": "mapy-mnoziny",
+      "explanation": "Slovník (Map) ukládá data jako dvojice klíč-hodnota. Množina (Set) ukládá pouze unikátní prvky.",
+      "question": "Jaké jsou základní vlastnosti těchto struktur? (vyberte 2)",
+      "options": [
+        { "text": "Slovník (Map) pracuje s dvojicemi klíč-hodnota", "correct": true },
+        { "text": "Množina (Set) povoluje duplicitní prvky", "correct": false },
+        { "text": "Množina (Set) obsahuje pouze unikátní prvky", "correct": true },
+        { "text": "Slovník (Map) neumožňuje vyhledávání podle klíče", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-007", "type": "single", "topic": "implementace",
+      "explanation": "Při použití ArrayList pro frontu odebíráme prvek z indexu 0.",
+      "question": "Jaký index odebíráme v ArrayListu, pokud simulujeme frontu (FIFO)?",
+      "options": [
+        { "text": "Poslední index", "correct": false },
+        { "text": "0 (nultý index)", "correct": true },
+        { "text": "Střední index", "correct": false },
+        { "text": "Náhodný index", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-008", "type": "truefalse", "topic": "implementace",
+      "explanation": "Kapacita v konstruktoru ArrayListu pouze předalokuje místo v paměti, ale ArrayList se dynamicky zvětší, pokud je potřeba.",
+      "statement": "Pokud v ArrayListu v Javě naplníme zadanou počáteční kapacitu, nelze do něj již nic přidat.",
+      "answer": false
+    },
+    {
+      "id": "ds-009", "type": "single", "topic": "zaklady-struk",
+      "explanation": "Binární vyhledávací strom umožňuje efektivní vyhledávání, vkládání a mazání.",
+      "question": "Jak se nazývá strom, kde má každý uzel maximálně dva potomky?",
+      "options": [
+        { "text": "Lineární strom", "correct": false },
+        { "text": "Binární strom", "correct": true },
+        { "text": "Množinový strom", "correct": false },
+        { "text": "Slovníkový strom", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-010", "type": "truefalse", "topic": "abstraktni-typ",
+      "explanation": "Zásobník se často používá pro operace 'zpět' (undo) nebo pro správu volání funkcí.",
+      "statement": "Zásobník je vhodný pro implementaci funkce 'zpět' (undo).",
+      "answer": true
+    },
+    {
+      "id": "ds-011", "type": "single", "topic": "zaklady-struk",
+      "explanation": "Pro vkládání prvků doprostřed je spojový seznam mnohem efektivnější než pole, protože nemusíme posouvat všechna data.",
+      "question": "Která struktura je efektivnější při častém vkládání prvků doprostřed?",
+      "options": [
+        { "text": "Pole", "correct": false },
+        { "text": "Spojový seznam", "correct": true },
+        { "text": "Fronta", "correct": false },
+        { "text": "Zásobník", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-012", "type": "numeric", "topic": "abstraktni-typ",
+      "explanation": "Pokud vložíme do fronty prvky A, B, C (v tomto pořadí), jako první odebereme A.",
+      "question": "Pokud vložíme do prázdné fronty postupně prvky 1, 2, 3, který prvek odebereme jako první?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "ds-013", "type": "truefalse", "topic": "mapy-mnoziny",
+      "explanation": "Hašovací tabulky využívají hašovací funkci pro okamžité nalezení pozice prvku podle klíče.",
+      "statement": "Hašovací tabulky umožňují průměrně velmi rychlé vyhledávání.",
+      "answer": true
+    },
+    {
+      "id": "ds-014", "type": "multiple", "topic": "implementace",
+      "explanation": "FIFO (First In, First Out) je definice fronty, LIFO (Last In, First Out) je definice zásobníku.",
+      "question": "Které dvojice pojmů k sobě patří? (vyberte 2)",
+      "options": [
+        { "text": "Fronta - FIFO", "correct": true },
+        { "text": "Zásobník - LIFO", "correct": true },
+        { "text": "Fronta - LIFO", "correct": false },
+        { "text": "Zásobník - FIFO", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-015", "type": "single", "topic": "zaklady-struk",
+      "explanation": "Root (kořen) je uzel, ze kterého vše vychází.",
+      "question": "Jak se nazývá horní uzel ve stromu?",
+      "options": [
+        { "text": "List", "correct": false },
+        { "text": "Kořen (root)", "correct": true },
+        { "text": "Větev", "correct": false },
+        { "text": "Hrana", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-016", "type": "truefalse", "topic": "abstraktni-typ",
+      "explanation": "Zásobník funguje jako komín, poslední dovnitř, první ven.",
+      "statement": "Zásobník je v podstatě totéž co fronta.",
+      "answer": false
+    },
+    {
+      "id": "ds-017", "type": "single", "topic": "implementace",
+      "explanation": "ArrayList v Javě umožňuje měnit svou velikost, pole (Array) nikoliv.",
+      "question": "Jaký je hlavní rozdíl mezi ArrayList a klasickým polem v Javě?",
+      "options": [
+        { "text": "ArrayList má pevnou velikost", "correct": false },
+        { "text": "ArrayList se umí dynamicky zvětšovat", "correct": true },
+        { "text": "Pole je pomalejší", "correct": false },
+        { "text": "ArrayList nelze použít pro generika", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-018", "type": "multiple", "topic": "mapy-mnoziny",
+      "explanation": "Set (množina) neobsahuje duplicity, zatímco List (seznam) je může obsahovat.",
+      "question": "Co platí o množině (Set)? (vyberte 2)",
+      "options": [
+        { "text": "Neobsahuje duplicitní prvky", "correct": true },
+        { "text": "Je to řazená struktura s indexy", "correct": false },
+        { "text": "Prvky se v ní neopakují", "correct": true },
+        { "text": "Umožňuje přístup podle indexu", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-019", "type": "single", "topic": "abstraktni-typ",
+      "explanation": "Fronta je ideální pro plánování úloh (tisková fronta, čekání na procesor).",
+      "question": "Která struktura se používá pro tiskovou frontu?",
+      "options": [
+        { "text": "Zásobník", "correct": false },
+        { "text": "Fronta", "correct": true },
+        { "text": "Strom", "correct": false },
+        { "text": "Množina", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-020", "type": "truefalse", "topic": "zaklady-struk",
+      "explanation": "Strom může mít více úrovní, ale uzel bez rodiče je pouze jeden (kořen).",
+      "statement": "Binární strom může mít libovolný počet kořenů.",
+      "answer": false
+    },
+    {
+      "id": "ds-021", "type": "single", "topic": "implementace",
+      "explanation": "Generika umožňují vytvářet kontejnery pro libovolné typy dat (String, Integer atd.).",
+      "question": "Co v Javě znamená zápis ArrayList<String>?",
+      "options": [
+        { "text": "ArrayList, který drží pouze Stringy", "correct": true },
+        { "text": "ArrayList, který drží pouze čísla", "correct": false },
+        { "text": "ArrayList s pevnou velikostí Stringů", "correct": false },
+        { "text": "Nefunkční kód", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-022", "type": "numeric", "topic": "abstraktni-typ",
+      "explanation": "Do zásobníku vložíme postupně 5, 10, 15. Odebereme jako první ten, který byl vložen jako poslední.",
+      "question": "Vložíme do zásobníku 5, 10, 15. Jaké číslo odebereme jako první?",
+      "answer": 15,
+      "tolerance": 0
+    },
+    {
+      "id": "ds-023", "type": "truefalse", "topic": "zaklady-struk",
+      "explanation": "Lineární seznam umožňuje dynamické přidávání, což pole bez přealokace neumí.",
+      "statement": "Lineární seznam má vždy statickou velikost.",
+      "answer": false
+    },
+    {
+      "id": "ds-024", "type": "single", "topic": "mapy-mnoziny",
+      "explanation": "Map (slovník) používá klíč pro přístup k hodnotě, což je pro vyhledávání extrémně rychlé.",
+      "question": "Co je klíčem k rychlosti slovníku (Map)?",
+      "options": [
+        { "text": "Lineární procházení", "correct": false },
+        { "text": "Hašování (hash function)", "correct": true },
+        { "text": "Pořadí vložení", "correct": false },
+        { "text": "Velikost klíče", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-025", "type": "multiple", "topic": "zaklady-struk",
+      "explanation": "Datové struktury se dělí na lineární (pole, seznam) a nelineární (stromy, grafy).",
+      "question": "Které struktury patří mezi nelineární? (vyberte 2)",
+      "options": [
+        { "text": "Strom", "correct": true },
+        { "text": "Graf", "correct": true },
+        { "text": "Pole", "correct": false },
+        { "text": "Zásobník", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-026", "type": "single", "topic": "implementace",
+      "explanation": "Metoda `add` v ArrayListu přidá prvek na konec a metoda `remove(0)` jej odstraní z počátku.",
+      "question": "Proč je FIFO implementované jako ArrayList v Javě v některých případech pomalejší?",
+      "options": [
+        { "text": "Protože odebírání z indexu 0 vyžaduje posun všech ostatních prvků", "correct": true },
+        { "text": "Protože ArrayList neumí růst", "correct": false },
+        { "text": "Protože je napsaný v C++", "correct": false },
+        { "text": "Protože neexistuje metoda add", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-027", "type": "truefalse", "topic": "mapy-mnoziny",
+      "explanation": "Slovník je ideální pro indexy, jako je např. telefonní seznam (jméno -> číslo).",
+      "statement": "Slovník je nevhodný pro ukládání dvojic typu jméno - telefonní číslo.",
+      "answer": false
+    },
+    {
+      "id": "ds-028", "type": "single", "topic": "zaklady-struk",
+      "explanation": "V binárním stromu je každý uzel předkem dalších dvou, což vytváří strukturu podobnou rodokmenu.",
+      "question": "Jaké základní pravidlo platí pro binární vyhledávací strom?",
+      "options": [
+        { "text": "Levý potomek je menší, pravý větší", "correct": true },
+        { "text": "Pravý potomek je menší, levý větší", "correct": false },
+        { "text": "Všechny uzly musí být stejné", "correct": false },
+        { "text": "Strom nesmí mít listy", "correct": false }
+      ]
+    },
+    {
+      "id": "ds-029", "type": "truefalse", "topic": "abstraktni-typ",
+      "explanation": "Fronta je základním principem v operačních systémech při plánování úloh CPU (round-robin).",
+      "statement": "Fronta není v informatice příliš využívaná struktura.",
+      "answer": false
+    },
+    {
+      "id": "ds-030", "type": "numeric", "topic": "implementace",
+      "explanation": "Pokud je kapacita ArrayListu v konstruktoru 10, je to výchozí prostor, ale ArrayList může růst dál.",
+      "question": "Jakou kapacitu bude mít náš ArrayList, pokud v konstruktoru FIFO zadáme hodnotu 10?",
+      "answer": 10,
+      "tolerance": 0
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+{
+"subject": "mysql-sprava",
+"name": "Správa a zabezpečení databáze",
+"topics": [
+{ "id": "uzivatele", "name": "Uživatelé a oprávnění" },
+{ "id": "transakce", "name": "Transakce a zamykání" },
+{ "id": "pohledy", "name": "Pohledy (Views)" },
+{ "id": "programovani", "name": "Procedury a triggery" },
+{ "id": "zabezpeceni", "name": "Zabezpečení a údržba" }
+],
+"questions": [
+{
+"id": "mysql-sprava-001",
+"type": "single",
+"topic": "uzivatele",
+"difficulty": 1,
+"explanation": "Příkaz CREATE USER slouží k definici nového uživatelského účtu v MySQL databázi. Následně se mu pomocí GRANT přiřazují práva.",
+"question": "Jaký příkaz se v MySQL používá pro vytvoření nového uživatele?",
+"options": [
+{ "text": "ADD USER", "correct": false },
+{ "text": "CREATE USER", "correct": true },
+{ "text": "NEW USER", "correct": false },
+{ "text": "INSERT USER", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-002",
+"type": "single",
+"topic": "uzivatele",
+"difficulty": 2,
+"explanation": "Příkaz GRANT umožňuje udělit konkrétní oprávnění (SELECT, INSERT, atd.) uživateli nad určitou tabulkou nebo databází. REVOKE se pak používá k odebrání těchto práv.",
+"question": "Který příkaz slouží k přidělení práv uživateli v MySQL?",
+"options": [
+{ "text": "ALLOW", "correct": false },
+{ "text": "SET PERMISSIONS", "correct": false },
+{ "text": "GRANT", "correct": true },
+{ "text": "GIVE", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-003",
+"type": "multiple",
+"topic": "uzivatele",
+"difficulty": 2,
+"explanation": "Práva v MySQL lze definovat na úrovni celé databáze (databasename.*) nebo na úrovni konkrétní tabulky (databasename.tablename). Root má implicitně přístup všude.",
+"question": "Na jakých úrovních lze v MySQL udělovat přístupová práva? (Vyberte všechny správné)",
+"options": [
+{ "text": "Na úrovni celého serveru", "correct": true },
+{ "text": "Na úrovni konkrétní databáze", "correct": true },
+{ "text": "Na úrovni konkrétní tabulky", "correct": true },
+{ "text": "Pouze na úrovni řádků", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-004",
+"type": "truefalse",
+"topic": "uzivatele",
+"difficulty": 1,
+"explanation": "Příkaz FLUSH PRIVILEGES je nutné spustit, pokud byla práva měněna přímo v tabulkách databáze 'mysql', aby server znovu načetl oprávnění z disku.",
+"statement": "Po každém příkazu GRANT nebo REVOKE je v MySQL vždy nutné manuálně spustit FLUSH PRIVILEGES, aby se změny projevily.",
+"answer": false
+},
+{
+"id": "mysql-sprava-005",
+"type": "single",
+"topic": "uzivatele",
+"difficulty": 3,
+"explanation": "ROLE v MySQL umožňují seskupit několik oprávnění pod jeden název a následně toto seskupení přiřadit uživatelům, což zjednodušuje správu.",
+"question": "Co je hlavním účelem rolí (ROLES) v MySQL?",
+"options": [
+{ "text": "Zrychlení dotazů", "correct": false },
+{ "text": "Seskupení oprávnění pro snadnější správu", "correct": true },
+{ "text": "Šifrování komunikace", "correct": false },
+{ "text": "Zálohování dat", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-006",
+"type": "numeric",
+"topic": "uzivatele",
+"difficulty": 2,
+"explanation": "Počet parametrů v základním definování uživatele 'uzivatel'@'host' je 2 (uživatelské jméno a hostitel).",
+"question": "Kolik parametrů (hodnot) tvoří identifikaci uživatele v syntaxi 'uzivatel'@'host'?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "mysql-sprava-007",
+"type": "single",
+"topic": "transakce",
+"difficulty": 2,
+"explanation": "COMMIT uloží změny provedené během transakce trvale do databáze. ROLLBACK naopak změny vrací zpět (stornuje).",
+"question": "Který příkaz v SQL trvale potvrdí změny provedené v rámci transakce?",
+"options": [
+{ "text": "SAVE", "correct": false },
+{ "text": "CONFIRM", "correct": false },
+{ "text": "COMMIT", "correct": true },
+{ "text": "APPLY", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-008",
+"type": "single",
+"topic": "transakce",
+"difficulty": 2,
+"explanation": "ACID (Atomicity, Consistency, Isolation, Durability) jsou základní vlastnosti transakcí v relačních databázích zajišťující spolehlivost.",
+"question": "Jak se nazývá soubor vlastností zajišťující spolehlivost databázových transakcí?",
+"options": [
+{ "text": "ACID", "correct": true },
+{ "text": "BASE", "correct": false },
+{ "text": "CRUD", "correct": false },
+{ "text": "SOLID", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-009",
+"type": "multiple",
+"topic": "transakce",
+"difficulty": 3,
+"explanation": "Transakce zaručují Atomicitu (vše nebo nic) a Konzistenci (přechod z jednoho platného stavu do druhého).",
+"question": "Které z následujících tvrzení platí pro transakce? (Vyberte všechny správné)",
+"options": [
+{ "text": "Atomicity znamená, že transakce proběhne celá, nebo vůbec", "correct": true },
+{ "text": "Isolation zajišťuje, že jedna transakce nevidí nedokončené změny druhé", "correct": true },
+{ "text": "COMMIT lze volat kdykoliv během transakce", "correct": false },
+{ "text": "Transakce jsou možné ve všech úložných enginech MySQL", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-010",
+"type": "truefalse",
+"topic": "transakce",
+"difficulty": 2,
+"explanation": "MyISAM engine nepodporuje transakce, zatímco InnoDB je transakční engine, který je v moderním MySQL standardem.",
+"statement": "Úložný engine MyISAM podporuje transakce stejně jako InnoDB.",
+"answer": false
+},
+{
+"id": "mysql-sprava-011",
+"type": "single",
+"topic": "transakce",
+"difficulty": 3,
+"explanation": "Zamykání tabulek (LOCK TABLES) zabraňuje jiným uživatelům v přístupu k tabulce, což snižuje paralelizaci, ale zajišťuje exkluzivní přístup.",
+"question": "Jaký je hlavní negativní efekt zamykání tabulek (LOCK TABLES) v ostrém provozu?",
+"options": [
+{ "text": "Nízká bezpečnost", "correct": false },
+{ "text": "Zpomalení ostatních uživatelů a snížení propustnosti", "correct": true },
+{ "text": "Poškození dat na disku", "correct": false },
+{ "text": "Nejde data zálohovat", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-012",
+"type": "single",
+"topic": "transakce",
+"difficulty": 2,
+"explanation": "Příkaz START TRANSACTION zahajuje novou transakci, po které následují operace (DML) a ukončení pomocí COMMIT nebo ROLLBACK.",
+"question": "Jak se v SQL zahajuje transakce?",
+"options": [
+{ "text": "BEGIN TRANSACTION", "correct": false },
+{ "text": "START TRANSACTION", "correct": true },
+{ "text": "INIT TRANSACTION", "correct": false },
+{ "text": "OPEN TRANSACTION", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-013",
+"type": "single",
+"topic": "pohledy",
+"difficulty": 1,
+"explanation": "Pohled (view) je virtuální tabulka, která neobsahuje data, ale uložený dotaz. Při dotazu na pohled se tento dotaz pokaždé vykoná nad základními tabulkami.",
+"question": "Co je to pohled (VIEW) v MySQL?",
+"options": [
+{ "text": "Fyzická kopie tabulky", "correct": false },
+{ "text": "Uložený dotaz, který se tváří jako tabulka", "correct": true },
+{ "text": "Záloha databáze", "correct": false },
+{ "text": "Typ uživatelského oprávnění", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-014",
+"type": "multiple",
+"topic": "pohledy",
+"difficulty": 2,
+"explanation": "Pohledy slouží k zjednodušení složitých dotazů, skrytí citlivých sloupců a abstrakci nad strukturou databáze.",
+"question": "Proč se v praxi používají pohledy? (Vyberte všechny správné)",
+"options": [
+{ "text": "Pro zjednodušení komplexních SQL dotazů", "correct": true },
+{ "text": "Pro zvýšení bezpečnosti skrytím citlivých sloupců", "correct": true },
+{ "text": "Pro fyzické zrychlení zápisu dat", "correct": false },
+{ "text": "Pro automatické zálohování", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-015",
+"type": "truefalse",
+"topic": "pohledy",
+"difficulty": 2,
+"explanation": "Pohledy (pokud nejsou materializované) samy o sobě data neobsahují, takže nezabírají místo na disku pro data (pouze pro definici dotazu).",
+"statement": "Pohledy v databázi zabírají stejné místo na disku jako tabulky, protože obsahují kopii všech dat.",
+"answer": false
+},
+{
+"id": "mysql-sprava-016",
+"type": "single",
+"topic": "pohledy",
+"difficulty": 3,
+"explanation": "Většina pohledů je čitelná, ale existují omezení (např. agregace, UNION, DISTINCT), při kterých nelze přes pohled data měnit (INSERT/UPDATE).",
+"question": "Může být pohled editovatelný (umožňovat INSERT/UPDATE)?",
+"options": [
+{ "text": "Nikdy", "correct": false },
+{ "text": "Vždy", "correct": false },
+{ "text": "Ano, pokud pohled není příliš složitý", "correct": true },
+{ "text": "Pouze u systémových tabulek", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-017",
+"type": "single",
+"topic": "pohledy",
+"difficulty": 2,
+"explanation": "Příkaz DROP VIEW se používá k odstranění definice pohledu z databáze.",
+"question": "Kterým příkazem odstraníte pohled?",
+"options": [
+{ "text": "DELETE VIEW", "correct": false },
+{ "text": "REMOVE VIEW", "correct": false },
+{ "text": "DROP VIEW", "correct": true },
+{ "text": "CLEAR VIEW", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-018",
+"type": "single",
+"topic": "pohledy",
+"difficulty": 2,
+"explanation": "Příkaz CREATE VIEW ... AS SELECT... slouží k vytvoření nového pohledu založeného na výsledku selectu.",
+"question": "Jakou klauzuli používáme při vytváření pohledu?",
+"options": [
+{ "text": "AS", "correct": true },
+{ "text": "IS", "correct": false },
+{ "text": "FOR", "correct": false },
+{ "text": "WITH", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-019",
+"type": "single",
+"topic": "programovani",
+"difficulty": 2,
+"explanation": "Uložená procedura (stored procedure) je pojmenovaný blok SQL kódu, který lze opakovaně volat s parametry.",
+"question": "Co je to uložená procedura (Stored Procedure)?",
+"options": [
+{ "text": "Externí soubor se skriptem", "correct": false },
+{ "text": "Pojmenovaný SQL kód uložený v databázi", "correct": true },
+{ "text": "Program v PHP běžící nad databází", "correct": false },
+{ "text": "Typ indexu", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-020",
+"type": "single",
+"topic": "programovani",
+"difficulty": 2,
+"explanation": "Trigger (spoušť) je kód, který se automaticky spustí při určité akci (INSERT, UPDATE, DELETE) na tabulce.",
+"question": "Kdy se aktivuje (spustí) Trigger?",
+"options": [
+{ "text": "Pouze při spuštění procedury", "correct": false },
+{ "text": "Při změně dat v tabulce (např. INSERT)", "correct": true },
+{ "text": "Při startu databázového serveru", "correct": false },
+{ "text": "Při každém Selectu", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-021",
+"type": "multiple",
+"topic": "programovani",
+"difficulty": 3,
+"explanation": "Triggery lze nastavit tak, aby se spustily před (BEFORE) nebo po (AFTER) dané operaci.",
+"question": "Kdy lze nastavit spuštění triggeru vůči operaci? (Vyberte všechny správné)",
+"options": [
+{ "text": "BEFORE", "correct": true },
+{ "text": "AFTER", "correct": true },
+{ "text": "DURING", "correct": false },
+{ "text": "INSTEAD OF", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-022",
+"type": "single",
+"topic": "programovani",
+"difficulty": 3,
+"explanation": "Procedura může mít parametry IN, OUT nebo INOUT, které definují směr předávání dat.",
+"question": "Jaký typ parametru se používá v proceduře, pokud chceme hodnotu pouze číst?",
+"options": [
+{ "text": "OUT", "correct": false },
+{ "text": "IN", "correct": true },
+{ "text": "READ", "correct": false },
+{ "text": "GET", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-023",
+"type": "truefalse",
+"topic": "programovani",
+"difficulty": 3,
+"explanation": "Triggery mohou negativně ovlivnit výkon, pokud jsou příliš složité, protože se vykonávají při každé změně dat.",
+"statement": "Triggery nemají žádný vliv na výkon databáze, protože se spouští na pozadí.",
+"answer": false
+},
+{
+"id": "mysql-sprava-024",
+"type": "single",
+"topic": "programovani",
+"difficulty": 3,
+"explanation": "Příkaz CALL se používá k vyvolání (spuštění) existující procedury.",
+"question": "Jakým příkazem spustíme uloženou proceduru?",
+"options": [
+{ "text": "RUN", "correct": false },
+{ "text": "EXECUTE", "correct": false },
+{ "text": "CALL", "correct": true },
+{ "text": "START", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-025",
+"type": "single",
+"topic": "zabezpeceni",
+"difficulty": 1,
+"explanation": "Výchozí port pro MySQL server je 3306. Změna tohoto portu je základní bezpečnostní opatření proti automatizovaným útokům.",
+"question": "Jaký je standardní port MySQL serveru?",
+"options": [
+{ "text": "80", "correct": false },
+{ "text": "443", "correct": false },
+{ "text": "3306", "correct": true },
+{ "text": "21", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-026",
+"type": "multiple",
+"topic": "zabezpeceni",
+"difficulty": 2,
+"explanation": "Zabezpečení zahrnuje používání silných hesel, omezování přístupů (GRANT), aktualizace serveru a šifrování komunikace (SSL/TLS).",
+"question": "Jaké jsou základní pilíře zabezpečení databáze? (Vyberte všechny správné)",
+"options": [
+{ "text": "Silná hesla", "correct": true },
+{ "text": "Minimální nutná práva uživatelů", "correct": true },
+{ "text": "Pravidelné zálohování", "correct": true },
+{ "text": "Používání pouze jednoho účtu pro vše", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-027",
+"type": "truefalse",
+"topic": "zabezpeceni",
+"difficulty": 2,
+"explanation": "SQL Injection je útok, při kterém útočník podstrčí škodlivý SQL kód do vstupních polí aplikace. Prevencí jsou např. prepared statements.",
+"statement": "SQL Injection je druh útoku, kterému lze částečně předejít používáním připravených příkazů (prepared statements).",
+"answer": true
+},
+{
+"id": "mysql-sprava-028",
+"type": "single",
+"topic": "zabezpeceni",
+"difficulty": 3,
+"explanation": "SSL/TLS šifrování zajišťuje, že komunikace mezi aplikací a databází nemůže být odposlechnuta třetí stranou.",
+"question": "Jak se nazývá technologie pro šifrovanou komunikaci mezi klientem a databází?",
+"options": [
+{ "text": "SSL/TLS", "correct": true },
+{ "text": "HTTP/2", "correct": false },
+{ "text": "FTP", "correct": false },
+{ "text": "SQLSECURE", "correct": false }
+]
+},
+{
+"id": "mysql-sprava-029",
+"type": "numeric",
+"topic": "zabezpeceni",
+"difficulty": 2,
+"explanation": "Doporučená minimální délka hesla pro databázového správce by měla být alespoň 12 znaků (dle moderních standardů).",
+"question": "Kolik znaků by mělo mít minimálně silné heslo databázového správce?",
+"answer": 12,
+"tolerance": 2
+},
+{
+"id": "mysql-sprava-030",
+"type": "single",
+"topic": "zabezpeceni",
+"difficulty": 3,
+"explanation": "Logování (např. general log nebo slow query log) pomáhá při auditování činnosti v databázi a hledání bezpečnostních incidentů.",
+"question": "K čemu slouží databázové logy (např. general query log)?",
+"options": [
+{ "text": "K rychlejšímu zápisu dat", "correct": false },
+{ "text": "K auditování a sledování aktivity uživatelů", "correct": true },
+{ "text": "K automatickému mazání dat", "correct": false },
+{ "text": "K šifrování tabulek", "correct": false }
+]
+}
+]
+}

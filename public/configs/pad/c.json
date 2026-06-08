@@ -1,0 +1,400 @@
+{
+"subject": "c-pointery",
+"name": "Programovací jazyk C a pointery",
+"topics": [
+{ "id": "zaklady-pointeru", "name": "Základy a adresy" },
+{ "id": "aritmetika-pointeru", "name": "Pointerová aritmetika" },
+{ "id": "pole-pointery", "name": "Pole a pointery" },
+{ "id": "prochazeni", "name": "Procházení a manipulace" },
+{ "id": "pokrocile-pamet", "name": "Paměť a pokročilé koncepty" }
+],
+"questions": [
+{
+"id": "c-pointery-001",
+"type": "single",
+"topic": "zaklady-pointeru",
+"difficulty": 1,
+"explanation": "Operátor '&' (adresní operátor) vrací adresu proměnné v paměti.",
+"question": "Který operátor v jazyce C vrací adresu proměnné?",
+"options": [
+{ "text": "*", "correct": false },
+{ "text": "&", "correct": true },
+{ "text": "->", "correct": false },
+{ "text": "%", "correct": false }
+]
+},
+{
+"id": "c-pointery-002",
+"type": "single",
+"topic": "zaklady-pointeru",
+"difficulty": 1,
+"explanation": "Operátor dereference '*' se používá pro přístup k hodnotě, na kterou pointer ukazuje.",
+"question": "Který operátor se používá pro dereferenci pointeru (přístup k hodnotě, na kterou ukazuje)?",
+"options": [
+{ "text": "&", "correct": false },
+{ "text": "*", "correct": true },
+{ "text": "->", "correct": false },
+{ "text": ".", "correct": false }
+]
+},
+{
+"id": "c-pointery-003",
+"type": "truefalse",
+"topic": "zaklady-pointeru",
+"difficulty": 2,
+"explanation": "Pointer je proměnná, která ukládá adresu jiné proměnné, nikoliv její hodnotu přímo.",
+"statement": "Pointer je datový typ, který přímo ukládá hodnotu jiné proměnné.",
+"answer": false
+},
+{
+"id": "c-pointery-004",
+"type": "single",
+"topic": "zaklady-pointeru",
+"difficulty": 2,
+"explanation": "NULL pointer ukazuje na žádné platné místo v paměti a používá se k indikaci, že pointer zatím nikam neukazuje.",
+"question": "Co představuje hodnota NULL přiřazená pointeru?",
+"options": [
+{ "text": "Pointer ukazuje na adresu 0 (nebo speciální hodnotu)", "correct": true },
+{ "text": "Pointer ukazuje na začátek paměti", "correct": false },
+{ "text": "Pointer je neplatný a nelze ho použít", "correct": false },
+{ "text": "Hodnota pointeru je nedefinovaná", "correct": false }
+]
+},
+{
+"id": "c-pointery-005",
+"type": "multiple",
+"topic": "zaklady-pointeru",
+"difficulty": 2,
+"explanation": "Typ `void*` je generický pointer, který může ukazovat na jakýkoliv datový typ, ale nelze jej dereferencovat bez přetypování.",
+"question": "Co platí pro typ 'void*'? (Vyberte všechny správné)",
+"options": [
+{ "text": "Může ukazovat na jakýkoliv datový typ", "correct": true },
+{ "text": "Lze jej přímo dereferencovat bez přetypování", "correct": false },
+{ "text": "Je to ukazatel na funkci", "correct": false },
+{ "text": "Často se používá u funkcí jako malloc", "correct": true }
+]
+},
+{
+"id": "c-pointery-006",
+"type": "single",
+"topic": "aritmetika-pointeru",
+"difficulty": 2,
+"explanation": "Když k pointeru přičteme 1, pointer se posune o velikost typu, na který ukazuje (např. u int o 4 bajty).",
+"question": "Co se stane, když k pointeru typu `int*` přičteme 1?",
+"options": [
+{ "text": "Adresa se zvětší o 1 bajt", "correct": false },
+{ "text": "Adresa se zvětší o velikost typu int (obvykle 4 bajty)", "correct": true },
+{ "text": "Hodnota, na kterou ukazuje, se zvýší o 1", "correct": false },
+{ "text": "Doje k chybě kompilace", "correct": false }
+]
+},
+{
+"id": "c-pointery-007",
+"type": "single",
+"topic": "aritmetika-pointeru",
+"difficulty": 2,
+"explanation": "Pointerová aritmetika je povolená, pokud oba pointery ukazují do stejného pole.",
+"question": "Je dovoleno odečítat dva pointery, které ukazují do stejného pole?",
+"options": [
+{ "text": "Ne, je to zakázané", "correct": false },
+{ "text": "Ano, výsledek je počet prvků mezi nimi", "correct": true },
+{ "text": "Ano, výsledek je rozdíl adres v bajtech", "correct": false },
+{ "text": "Pouze pokud jsou stejného typu", "correct": false }
+]
+},
+{
+"id": "c-pointery-008",
+"type": "single",
+"topic": "pole-pointery",
+"difficulty": 1,
+"explanation": "Název pole se v mnoha situacích chová jako pointer na jeho první prvek.",
+"question": "Co představuje název pole `int arr[10]` v C?",
+"options": [
+{ "text": "Konstantní pointer na první prvek pole", "correct": true },
+{ "text": "Celé pole", "correct": false },
+{ "text": "Počet prvků pole", "correct": false },
+{ "text": "Proměnný pointer", "correct": false }
+]
+},
+{
+"id": "c-pointery-009",
+"type": "multiple",
+"topic": "pole-pointery",
+"difficulty": 2,
+"explanation": "Přístup k `pole[i]` je v C ekvivalentní zápisu `*(pole + i)`.",
+"question": "Které zápisy jsou ekvivalentní přístupu k i-tému prvku pole? (Vyberte všechny správné)",
+"options": [
+{ "text": "pole[i]", "correct": true },
+{ "text": "*(pole + i)", "correct": true },
+{ "text": "*pole + i", "correct": false },
+{ "text": "i[pole]", "correct": true }
+]
+},
+{
+"id": "c-pointery-010",
+"type": "truefalse",
+"topic": "pole-pointery",
+"difficulty": 3,
+"explanation": "Název pole je konstantní pointer, proto nelze provést operaci jako `pole++`.",
+"statement": "U názvu pole (např. `int a[5]`) lze provést inkrementaci (a++).",
+"answer": false
+},
+{
+"id": "c-pointery-011",
+"type": "single",
+"topic": "prochazeni",
+"difficulty": 2,
+"explanation": "Pomocí pointeru můžeme procházet pole tak, že ho v cyklu inkrementujeme, dokud neukazuje za poslední prvek.",
+"question": "Jak nejlépe procházet pole pomocí pointeru `ptr`?",
+"options": [
+{ "text": "Cyklem while(ptr != konec_pole)", "correct": true },
+{ "text": "Cyklem for(i=0; i<n; i++) { ptr = &pole[i]; }", "correct": false },
+{ "text": "Použitím operatoru &&", "correct": false },
+{ "text": "Nelze procházet", "correct": false }
+]
+},
+{
+"id": "c-pointery-012",
+"type": "single",
+"topic": "prochazeni",
+"difficulty": 2,
+"explanation": "Ukazatel `ptr` po `ptr++` ukazuje na další prvek, dereference pak vrátí jeho hodnotu.",
+"question": "Co vrátí `*ptr` po provedení `ptr++` v cyklu procházejícím pole?",
+"options": [
+{ "text": "Předchozí hodnotu", "correct": false },
+{ "text": "Následující prvek pole", "correct": true },
+{ "text": "Adresu pole", "correct": false },
+{ "text": "NULL", "correct": false }
+]
+},
+{
+"id": "c-pointery-013",
+"type": "multiple",
+"topic": "prochazeni",
+"difficulty": 3,
+"explanation": "Při procházení pole pointerem musíme hlídat meze, jinak dojde k přístupu mimo pole (Undefined Behavior).",
+"question": "Jaká rizika hrozí při procházení pole pomocí pointerů? (Vyberte všechny správné)",
+"options": [
+{ "text": "Přístup mimo meze pole (Buffer Overflow)", "correct": true },
+{ "text": "Pomalý výkon", "correct": false },
+{ "text": "Segmentation fault", "correct": true },
+{ "text": "Přepsání jiných proměnných v paměti", "correct": true }
+]
+},
+{
+"id": "c-pointery-014",
+"type": "single",
+"topic": "pokrocile-pamet",
+"difficulty": 3,
+"explanation": "Funkce `malloc` vrací `void*`, který ukazuje na alokovaný blok paměti na heapu.",
+"question": "Která funkce v C slouží k dynamické alokaci paměti?",
+"options": [
+{ "text": "alloc()", "correct": false },
+{ "text": "malloc()", "correct": true },
+{ "text": "create()", "correct": false },
+{ "text": "new()", "correct": false }
+]
+},
+{
+"id": "c-pointery-015",
+"type": "single",
+"topic": "pokrocile-pamet",
+"difficulty": 2,
+"explanation": "Funkce `free()` uvolňuje paměť, která byla dříve alokována pomocí malloc/calloc.",
+"question": "Jak uvolníme paměť alokovanou dynamicky pomocí malloc?",
+"options": [
+{ "text": "delete(ptr)", "correct": false },
+{ "text": "clear(ptr)", "correct": false },
+{ "text": "free(ptr)", "correct": true },
+{ "text": "release(ptr)", "correct": false }
+]
+},
+{
+"id": "c-pointery-016",
+"type": "single",
+"topic": "zaklady-pointeru",
+"difficulty": 2,
+"explanation": "Pointer na pointer (`p`) ukládá adresu pointeru.",
+"question": "Jak deklarujeme pointer na pointer (double pointer)?",
+"options": [
+{ "text": "int *ptr;", "correct": false },
+{ "text": "int **ptr;", "correct": true },
+{ "text": "int &ptr;", "correct": false },
+{ "text": "ptr int*;", "correct": false }
+]
+},
+{
+"id": "c-pointery-017",
+"type": "multiple",
+"topic": "pokrocile-pamet",
+"difficulty": 3,
+"explanation": "Memory leak nastane, když alokujeme paměť a zapomeneme ji uvolnit, přičemž ztratíme ukazatel na ni.",
+"question": "Co může způsobit memory leak v C? (Vyberte všechny správné)",
+"options": [
+{ "text": "Zapomenutí zavolat free()", "correct": true },
+{ "text": "Ztráta ukazatele na alokovanou paměť", "correct": true },
+{ "text": "Příliš mnoho proměnných na stacku", "correct": false },
+{ "text": "Opakované volání free() na stejnou adresu", "correct": false }
+]
+},
+{
+"id": "c-pointery-018",
+"type": "truefalse",
+"topic": "pokrocile-pamet",
+"difficulty": 2,
+"explanation": "Dangling pointer je ukazatel, který míří na místo v paměti, které již bylo uvolněno.",
+"statement": "Dangling pointer vzniká, pokud po zavolání free(ptr) pointer dále používáme.",
+"answer": true
+},
+{
+"id": "c-pointery-019",
+"type": "numeric",
+"topic": "aritmetika-pointeru",
+"difficulty": 2,
+"explanation": "Pokud pointer ukazuje na adresu 1000 a typ je int (4 bajty), posun o 2 prvky znamená 1000 + 2*4 = 1008.",
+"question": "Pointer `p` ukazuje na adresu 1000. Typ je `int` (4 bajty). Jaká bude hodnota adresy po `p + 2`?",
+"answer": 1008,
+"tolerance": 0
+},
+{
+"id": "c-pointery-020",
+"type": "single",
+"topic": "zaklady-pointeru",
+"difficulty": 3,
+"explanation": "Konstantní pointer (`int * const p`) znamená, že sám pointer nelze změnit, ale hodnotu na kterou ukazuje ano.",
+"question": "Co znamená deklarace `int * const p`?",
+"options": [
+{ "text": "Nelze měnit adresu, kterou p ukládá", "correct": true },
+{ "text": "Nelze měnit hodnotu, na kterou p ukazuje", "correct": false },
+{ "text": "Nelze měnit ani adresu, ani hodnotu", "correct": false },
+{ "text": "Pointer je na konstantní int", "correct": false }
+]
+},
+{
+"id": "c-pointery-021",
+"type": "single",
+"topic": "pole-pointery",
+"difficulty": 2,
+"explanation": "Jméno pole není L-hodnota, kterou lze měnit, proto není možné pole jako celek přiřadit.",
+"question": "Lze v C přiřadit jedno pole druhému (a = b)?",
+"options": [
+{ "text": "Ano, zkopíruje prvky", "correct": false },
+{ "text": "Ne, pole nelze přiřadit přímo", "correct": true },
+{ "text": "Ano, pokud mají stejnou velikost", "correct": false },
+{ "text": "Ano, pomocí operátoru =", "correct": false }
+]
+},
+{
+"id": "c-pointery-022",
+"type": "single",
+"topic": "pokrocile-pamet",
+"difficulty": 3,
+"explanation": "Funkce `calloc` alokuje paměť a navíc ji vynuluje (naplní nulami).",
+"question": "Jaký je rozdíl mezi `malloc` a `calloc`?",
+"options": [
+{ "text": "Žádný", "correct": false },
+{ "text": "calloc vynuluje alokovanou paměť", "correct": true },
+{ "text": "malloc je pro pole, calloc pro jednotlivé prvky", "correct": false },
+{ "text": "malloc vrací int*, calloc vrací void*", "correct": false }
+]
+},
+{
+"id": "c-pointery-023",
+"type": "multiple",
+"topic": "aritmetika-pointeru",
+"difficulty": 3,
+"explanation": "Pointerovou aritmetiku lze používat pro +, -, ++, --, +=, -=.",
+"question": "Které operace jsou povoleny s pointery? (Vyberte všechny správné)",
+"options": [
+{ "text": "Inkrementace (++)", "correct": true },
+{ "text": "Sčítání dvou pointerů", "correct": false },
+{ "text": "Odečítání dvou pointerů (pokud jsou ve stejném poli)", "correct": true },
+{ "text": "Násobení pointerů", "correct": false }
+]
+},
+{
+"id": "c-pointery-024",
+"type": "truefalse",
+"topic": "zaklady-pointeru",
+"difficulty": 2,
+"explanation": "Velikost pointeru závisí na architektuře systému (32-bit vs 64-bit), nikoliv na datovém typu, na který ukazuje.",
+"statement": "Všechny pointery (int*, char*, double*) mají v rámci jedné architektury stejnou velikost.",
+"answer": true
+},
+{
+"id": "c-pointery-025",
+"type": "single",
+"topic": "prochazeni",
+"difficulty": 3,
+"explanation": "Ukazatel na funkci se deklaruje jako `typ (*jmeno)(parametry)`. Závorky kolem jména jsou nutné.",
+"question": "Jak vypadá deklarace pointeru na funkci?",
+"options": [
+{ "text": "int *f(int);", "correct": false },
+{ "text": "int (*f)(int);", "correct": true },
+{ "text": "(*int) f(int);", "correct": false },
+{ "text": "int f*(int);", "correct": false }
+]
+},
+{
+"id": "c-pointery-026",
+"type": "single",
+"topic": "prochazeni",
+"difficulty": 3,
+"explanation": "Předávání pole do funkce v C probíhá vždy předáním ukazatele na první prvek (decay).",
+"question": "Co se skutečně předá funkci, když jí jako parametr pošleme pole?",
+"options": [
+{ "text": "Celá kopie pole", "correct": false },
+{ "text": "Pointer na první prvek pole", "correct": true },
+{ "text": "Velikost pole a pointer", "correct": false },
+{ "text": "Nic, pole nelze předat", "correct": false }
+]
+},
+{
+"id": "c-pointery-027",
+"type": "multiple",
+"topic": "pokrocile-pamet",
+"difficulty": 3,
+"explanation": "Stack je oblast paměti pro lokální proměnné, Heap je oblast pro dynamickou paměť.",
+"question": "Kde je alokována paměť při těchto operacích? (Vyberte správné)",
+"options": [
+{ "text": "Lokální proměnné: Stack", "correct": true },
+{ "text": "Dynamicky alokovaná paměť (malloc): Heap", "correct": true },
+{ "text": "Globální proměnné: Stack", "correct": false },
+{ "text": "Parametry funkcí: Heap", "correct": false }
+]
+},
+{
+"id": "c-pointery-028",
+"type": "truefalse",
+"topic": "zaklady-pointeru",
+"difficulty": 1,
+"explanation": "Dereference NULL pointeru způsobí pád programu (Segmentation Fault).",
+"statement": "Dereference NULL pointeru je bezpečná operace, která vrátí 0.",
+"answer": false
+},
+{
+"id": "c-pointery-029",
+"type": "numeric",
+"topic": "aritmetika-pointeru",
+"difficulty": 2,
+"explanation": "Pokud pointer na char (1 bajt) ukazuje na 100, pak p + 5 ukazuje na 105.",
+"question": "Pointer `p` typu `char*` ukazuje na adresu 100. Jaká je adresa `p + 5`?",
+"answer": 105,
+"tolerance": 0
+},
+{
+"id": "c-pointery-030",
+"type": "single",
+"topic": "prochazeni",
+"difficulty": 3,
+"explanation": "Pointery jsou základem pro implementaci dynamických struktur jako jsou spojové seznamy.",
+"question": "Která datová struktura v C nejčastěji využívá pointery pro své propojení?",
+"options": [
+{ "text": "Statické pole", "correct": false },
+{ "text": "Spojový seznam", "correct": true },
+{ "text": "Enumerace", "correct": false },
+{ "text": "Konstanta", "correct": false }
+]
+}
+]
+}

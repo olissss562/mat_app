@@ -1,0 +1,285 @@
+{
+"subject": "451-stupnu-fahrenheita",
+"name": "451 stupňů Fahrenheita",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "451-stupnu-fahrenheita-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Ray Bradbury byl významný americký spisovatel žánru sci-fi a fantasy.",
+"question": "Kdo je autorem románu 451 stupňů Fahrenheita?",
+"options": [
+{ "text": "George Orwell", "correct": false },
+{ "text": "Ray Bradbury", "correct": true },
+{ "text": "Aldous Huxley", "correct": false },
+{ "text": "Isaac Asimov", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-002", "type": "single", "topic": "autor-a-doba",
+"explanation": "Dílo je typickým příkladem antiutopie (dystopie), která varuje před budoucností ovládanou technologiemi a cenzurou.",
+"question": "Jaký je literární žánr tohoto díla?",
+"options": [
+{ "text": "Utopie", "correct": false },
+{ "text": "Antiutopie (dystopie)", "correct": true },
+{ "text": "Historický román", "correct": false },
+{ "text": "Detektivní povídka", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-003", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Bradbury napsal román v roce 1953, kdy reagoval na rozmach televize a společenské atmosféry v USA.",
+"statement": "Román byl napsán v 19. století.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Autor varoval především před konzumní společností, úpadkem kritického myšlení a vlivem masmédií.",
+"question": "Před čím Bradbury v románu varuje? (vyberte 2)",
+"options": [
+{ "text": "Před úpadkem vzdělání a kritického myšlení", "correct": true },
+{ "text": "Před přílišným čtením knih", "correct": false },
+{ "text": "Před vlivem masmédií na společnost", "correct": true },
+{ "text": "Před nedostatkem technologií", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Bradbury patří mezi americké spisovatele 20. století, kteří ovlivnili moderní sci-fi literaturu.",
+"question": "Z jaké země autor pochází?",
+"options": [
+{ "text": "Velká Británie", "correct": false },
+{ "text": "USA", "correct": true },
+{ "text": "Francie", "correct": false },
+{ "text": "Rusko", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Bradbury je známý svou bohatou fantazií a poetickým stylem psaní v rámci sci-fi žánru.",
+"statement": "Ray Bradbury se věnoval výhradně realistické literatuře bez prvků fikce.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-007", "type": "single", "topic": "postavy",
+"explanation": "Guy Montag je hasič, jehož hlavní náplní práce je pálení knih.",
+"question": "Co je povoláním hlavního hrdiny Guye Montaga?",
+"options": [
+{ "text": "Lékař", "correct": false },
+{ "text": "Hasič (palič knih)", "correct": true },
+{ "text": "Učitel literatury", "correct": false },
+{ "text": "Programátor", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-008", "type": "single", "topic": "postavy",
+"explanation": "Clarisse McClellan je mladá dívka, která díky svému myšlení a zvídavosti změní Montagův pohled na svět.",
+"question": "Jak se jmenuje dívka, která Montaga přiměje k přemýšlení?",
+"options": [
+{ "text": "Mildred", "correct": false },
+{ "text": "Clarisse McClellan", "correct": true },
+{ "text": "Faberová", "correct": false },
+{ "text": "Beattyová", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-009", "type": "multiple", "topic": "postavy",
+"explanation": "Mildred je Montagova manželka, která je závislá na televizi a prášcích na spaní.",
+"question": "Co platí o postavě Mildred? (vyberte 2)",
+"options": [
+{ "text": "Je závislá na televizní zábavě", "correct": true },
+{ "text": "Podporuje Montaga v četbě", "correct": false },
+{ "text": "Je uzavřená ve vlastním světě obrazovek", "correct": true },
+{ "text": "Je profesorkou na univerzitě", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-010", "type": "single", "topic": "postavy",
+"explanation": "Kapitán Beatty je Montagův nadřízený, který zná knihy velmi dobře, ale přesto je nenávidí.",
+"question": "Kdo je hlavním antagonistou (nepřítelem) Montaga?",
+"options": [
+{ "text": "Clarisse", "correct": false },
+{ "text": "Faber", "correct": false },
+{ "text": "Kapitán Beatty", "correct": true },
+{ "text": "Mildred", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-011", "type": "truefalse", "topic": "postavy",
+"explanation": "Faber je bývalý profesor angličtiny, který se stane Montagovým spojencem.",
+"statement": "Faber je mladý hasič, který Montaga udá.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-012", "type": "single", "topic": "postavy",
+"explanation": "Knižní lidé jsou skupinou vyhnanců, kteří se učí knihy zpaměti, aby je zachránili.",
+"question": "Jak se nazývá skupina lidí, ke které se Montag na konci přidá?",
+"options": [
+{ "text": "Knižní lidé", "correct": true },
+{ "text": "Hasičská garda", "correct": false },
+{ "text": "Televizní diváci", "correct": false },
+{ "text": "Politická opozice", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-013", "type": "multiple", "topic": "postavy",
+"explanation": "Clarisse je vnímána společností jako podivínka, protože se ptá na otázky a pozoruje přírodu.",
+"question": "Proč je Clarisse ostatními považována za podivnou? (vyberte 2)",
+"options": [
+{ "text": "Zajímá se o přírodu a svět kolem sebe", "correct": true },
+{ "text": "Čte příliš mnoho brakové literatury", "correct": false },
+{ "text": "Klade otázky a přemýšlí", "correct": true },
+{ "text": "Je závislá na technologiích", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-014", "type": "truefalse", "topic": "postavy",
+"explanation": "Beatty je velmi sečtělý, což využívá k manipulaci s Montagem.",
+"statement": "Kapitán Beatty je nevzdělaný a knihy nikdy nečetl.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-015", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Název knihy odkazuje na teplotu, při které hoří papír.",
+"question": "Kolik stupňů Fahrenheita je teplota, při které podle názvu začíná hořet papír?",
+"answer": 451,
+"tolerance": 0
+},
+{
+"id": "451-stupnu-fahrenheita-016", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Mechanický ohař je robotické zvíře vycvičené k vyhledávání a ničení lidí, kteří čtou knihy.",
+"question": "Co je 'mechanický ohař'?",
+"options": [
+{ "text": "Domácí mazlíček hasičů", "correct": false },
+{ "text": "Robotické zařízení k lovu odpůrců režimu", "correct": true },
+{ "text": "Hračka pro Mildred", "correct": false },
+{ "text": "Symbol míru", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-017", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "V této společnosti je držení knih považováno za zločin.",
+"statement": "V románu je čtení knih vysoce ceněno a podporováno vládou.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-018", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Parlorní zdi jsou velké televizní obrazovky, které nahrazují realitu.",
+"question": "Co jsou v románu 'parlorní zdi'?",
+"options": [
+{ "text": "Knihovny", "correct": false },
+{ "text": "Obří televizní obrazovky", "correct": true },
+{ "text": "Okna do zahrady", "correct": false },
+{ "text": "Stěny z cihel", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-019", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Oheň má v románu dvojí symboliku: ničení (pálení knih) a očistu/naději (na konci).",
+"question": "Jakou roli hraje v románu oheň? (vyberte 2)",
+"options": [
+{ "text": "Symbol destrukce a cenzury", "correct": true },
+{ "text": "Symbol věčného mládí", "correct": false },
+{ "text": "Symbol naděje na obnovu", "correct": true },
+{ "text": "Symbol nekonečného bohatství", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-020", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Montag nakonec opouští město a přidává se ke skupině, která chce zachovat vědění.",
+"statement": "Montag na konci románu přijme roli hlavního hasiče a začne pálit více knih než kdy dřív.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-021", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Válka nakonec město zničí, což dává prostor pro začátek nové éry.",
+"question": "Jak končí město, ve kterém Montag žil?",
+"options": [
+{ "text": "Je zachráněno díky knihám", "correct": false },
+{ "text": "Je zničeno bombovým útokem", "correct": true },
+{ "text": "Stane se rájem na zemi", "correct": false },
+{ "text": "Nic se nezměnilo", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-022", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Montag v příběhu mění svůj názor a nakonec se rozhodne knihy zachránit, i když je v příběhu zmíněno, že dříve pálil knihy 10 let.",
+"question": "Kolik let Montag pracoval jako hasič, než začal pochybovat o své práci?",
+"answer": 10,
+"tolerance": 0
+},
+{
+"id": "451-stupnu-fahrenheita-023", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Lidé v románu jsou natolik ovlivněni médii, že ztratili zájem o hlubší komunikaci.",
+"statement": "Lidé v této společnosti vedou hluboké filozofické debaty.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Dílo je román s prvky sci-fi, který kritizuje soudobou společnost.",
+"question": "Který literární útvar toto dílo představuje?",
+"options": [
+{ "text": "Román", "correct": true },
+{ "text": "Divadelní hra", "correct": false },
+{ "text": "Báseň", "correct": false },
+{ "text": "Naučná literatura", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Bradburyho styl je metaforický, využívá přirovnání a symboliku.",
+"question": "Jaké stylové prostředky autor používá? (vyberte 2)",
+"options": [
+{ "text": "Bohatou metaforiku", "correct": true },
+{ "text": "Symboliku", "correct": true },
+{ "text": "Výhradně úřední jazyk", "correct": false },
+{ "text": "Žádné popisy, pouze dialogy", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Román je vyprávěn v er-formě s důrazem na prožívání hlavní postavy.",
+"question": "Kdo vystupuje jako vypravěč v románu?",
+"options": [
+{ "text": "Guy Montag (ich-forma)", "correct": false },
+{ "text": "Autorský vypravěč (er-forma)", "correct": true },
+{ "text": "Kapitán Beatty (ich-forma)", "correct": false },
+{ "text": "Clarisse (ich-forma)", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Kniha je známá svým varovným, až naléhavým tónem.",
+"statement": "Tón vyprávění je zcela neutrální a bez jakéhokoli varování.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Dílo využívá nadsázku (hyperbolu) k vykreslení negativních dopadů techniky.",
+"question": "Jaký literární prostředek dominuje popisu budoucnosti?",
+"options": [
+{ "text": "Hyperbola (nadsázka)", "correct": true },
+{ "text": "Eufemismus", "correct": false },
+{ "text": "Archaismy", "correct": false },
+{ "text": "Lidové obraty", "correct": false }
+]
+},
+{
+"id": "451-stupnu-fahrenheita-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Bradburyho styl je velmi čtivý a apelativní (snaží se zapůsobit na čtenáře).",
+"statement": "Styl díla je složitý a nesrozumitelný pro běžného čtenáře.",
+"answer": false
+},
+{
+"id": "451-stupnu-fahrenheita-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Román je rozdělen na tři hlavní části.",
+"question": "Do kolika hlavních částí (kapitol/knih) je román rozdělen?",
+"answer": 3,
+"tolerance": 0
+}
+]
+}

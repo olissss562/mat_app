@@ -1,0 +1,276 @@
+{
+  "subject": "oop-dedicnost",
+  "name": "Dědičnost, interface a polymorfismus",
+  "topics": [
+    { "id": "dedicnost", "name": "Základy dědičnosti" },
+    { "id": "interface-abstrakce", "name": "Abstraktní třídy a rozhraní" },
+    { "id": "polymorfismus", "name": "Polymorfismus a přetypování" }
+  ],
+  "questions": [
+    {
+      "id": "oop-001", "type": "single", "topic": "dedicnost",
+      "explanation": "Dědičnost umožňuje vytvářet hierarchie tříd, kde potomek přebírá vlastnosti rodiče.",
+      "question": "Které klíčové slovo v Javě slouží pro dědění od třídy?",
+      "options": [
+        { "text": "implements", "correct": false },
+        { "text": "extends", "correct": true },
+        { "text": "interface", "correct": false },
+        { "text": "abstract", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-002", "type": "truefalse", "topic": "interface-abstrakce",
+      "explanation": "Abstraktní třídu nelze instanciovat (vytvořit objekt), slouží jako šablona.",
+      "statement": "Abstraktní třídu lze instanciovat pomocí klíčového slova new.",
+      "answer": false
+    },
+    {
+      "id": "oop-003", "type": "single", "topic": "interface-abstrakce",
+      "explanation": "Rozhraní (interface) definuje chování, které musí třída implementovat.",
+      "question": "Co definuje rozhraní (interface) v OOP?",
+      "options": [
+        { "text": "Vlastnosti objektu", "correct": false },
+        { "text": "Kontrakt (seznam metod), který musí třída splnit", "correct": true },
+        { "text": "Konkrétní datovou strukturu", "correct": false },
+        { "text": "Privátní proměnné", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-004", "type": "multiple", "topic": "polymorfismus",
+      "explanation": "Polymorfismus umožňuje zacházet s různými typy objektů stejným způsobem přes společný interface.",
+      "question": "Co umožňuje polymorfismus? (vyberte 2)",
+      "options": [
+        { "text": "Zacházet s objekty jako s typem jejich předka", "correct": true },
+        { "text": "Spouštět metody podle skutečného typu objektu za běhu", "correct": true },
+        { "text": "Smazat třídy z paměti", "correct": false },
+        { "text": "Automaticky převádět String na int", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-005", "type": "numeric", "topic": "polymorfismus",
+      "explanation": "Pokud mají Jidlo a Napoj stejný interface, počet metod, které interface definuje, je 2 (getCena, vypocetDPH).",
+      "question": "Kolik metod musí implementovat třída Jidlo, pokud interface má 2 metody?",
+      "answer": 2,
+      "tolerance": 0
+    },
+    {
+      "id": "oop-006", "type": "single", "topic": "dedicnost",
+      "explanation": "V Javě může třída dědit pouze od jedné třídy, ale implementovat více rozhraní.",
+      "question": "Kolik tříd může v Javě přímo dědit jedna třída?",
+      "options": [
+        { "text": "Jednu", "correct": true },
+        { "text": "Dvě", "correct": false },
+        { "text": "Libovolný počet", "correct": false },
+        { "text": "Žádnou", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-007", "type": "truefalse", "topic": "polymorfismus",
+      "explanation": "Downcasting je riziková operace, proto používáme instanceof pro kontrolu.",
+      "statement": "Downcasting je bezpečný bez kontroly typu pomocí instanceof.",
+      "answer": false
+    },
+    {
+      "id": "oop-008", "type": "single", "topic": "interface-abstrakce",
+      "explanation": "Klíčové slovo pro implementaci rozhraní je 'implements'.",
+      "question": "Které slovo se používá pro implementaci rozhraní?",
+      "options": [
+        { "text": "extends", "correct": false },
+        { "text": "implements", "correct": true },
+        { "text": "abstract", "correct": false },
+        { "text": "interface", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-009", "type": "multiple", "topic": "polymorfismus",
+      "explanation": "Při procházení Listu s interface, voláme metodu definovanou v interface.",
+      "question": "Co se stane, když zavolám metodu interface na seznamu objektů? (vyberte 2)",
+      "options": [
+        { "text": "Provede se verze metody konkrétní třídy", "correct": true },
+        { "text": "Provádí se dynamická vazba (vázání za běhu)", "correct": true },
+        { "text": "Program skončí chybou", "correct": false },
+        { "text": "Vybere se náhodná metoda", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-010", "type": "numeric", "topic": "dedicnost",
+      "explanation": "DPH 10% z 200 je 20, 10% z 50 je 5, 21% z 100 je 21. Celkem 46.",
+      "question": "Jaké je celkové DPH pro objednávku: Jidlo(200), Napoj(50, nealko), Napoj(100, alko)?",
+      "answer": 46,
+      "tolerance": 1
+    },
+    {
+      "id": "oop-011", "type": "truefalse", "topic": "dedicnost",
+      "explanation": "Třída 'Object' je kořenem hierarchie v Javě.",
+      "statement": "Všechny třídy v Javě automaticky dědí od třídy Object.",
+      "answer": true
+    },
+    {
+      "id": "oop-012", "type": "single", "topic": "interface-abstrakce",
+      "explanation": "Rozhraní definuje, co objekt umí, abstraktní třída definuje, co objekt je.",
+      "question": "Jaký je hlavní rozdíl mezi interface a abstraktní třídou?",
+      "options": [
+        { "text": "Interface nelze implementovat", "correct": false },
+        { "text": "Abstraktní třída může mít implementované metody", "correct": true },
+        { "text": "Interface je vždy pomalejší", "correct": false },
+        { "text": "Není žádný rozdíl", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-013", "type": "multiple", "topic": "polymorfismus",
+      "explanation": "Downcasting je nutný, pokud chceme volat metodu, kterou má jen potomek, nikoliv interface.",
+      "question": "Kdy musíme použít downcasting? (vyberte 2)",
+      "options": [
+        { "text": "Když potřebujeme metodu specifickou pro potomka", "correct": true },
+        { "text": "Když víme, že objekt je typu potomek", "correct": true },
+        { "text": "Vždy, když používáme interface", "correct": false },
+        { "text": "Když chceme smazat objekt", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-014", "type": "truefalse", "topic": "dedicnost",
+      "explanation": "Metoda `final` v rodiči brání jejímu přepsání (override) v potomkovi.",
+      "statement": "Všechny metody v rodičovské třídě lze vždy přepsat (override).",
+      "answer": false
+    },
+    {
+      "id": "oop-015", "type": "numeric", "topic": "polymorfismus",
+      "explanation": "Počet prvků v kolekci se v našem příkladu rovná 3.",
+      "question": "Kolik instancí (objektů) bylo přidáno do seznamu v příkladu?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "oop-016", "type": "single", "topic": "interface-abstrakce",
+      "explanation": "Moderní Java umožňuje definovat defaultní implementaci v interface pomocí 'default'.",
+      "question": "Co umožňuje klíčové slovo 'default' v interface v moderní Javě?",
+      "options": [
+        { "text": "Definovat výchozí implementaci metody", "correct": true },
+        { "text": "Změnit viditelnost na private", "correct": false },
+        { "text": "Zakázat dědičnost", "correct": false },
+        { "text": "Vytvořit proměnnou", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-017", "type": "truefalse", "topic": "polymorfismus",
+      "explanation": "Instanceof vrací true, pokud objekt patří do dané třídy nebo ji implementuje.",
+      "statement": "Operátor 'instanceof' vrací logickou hodnotu (boolean).",
+      "answer": true
+    },
+    {
+      "id": "oop-018", "type": "single", "topic": "dedicnost",
+      "explanation": "Konstruktory se nedědí, volají se přes 'super'.",
+      "question": "Co se stane při volání konstruktoru potomka?",
+      "options": [
+        { "text": "Automaticky se volá konstruktor rodiče", "correct": true },
+        { "text": "Rodičovský konstruktor se ignoruje", "correct": false },
+        { "text": "Vytvoří se dvě instance", "correct": false },
+        { "text": "Program spadne", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-019", "type": "multiple", "topic": "dedicnost",
+      "explanation": "Soukromé (private) atributy nejsou přístupné přímo, jen přes metody.",
+      "question": "Které atributy potomek přímo nedědí? (vyberte 2)",
+      "options": [
+        { "text": "Private atributy rodiče", "correct": true },
+        { "text": "Statické inicializátory", "correct": true },
+        { "text": "Public metody", "correct": false },
+        { "text": "Protected atributy", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-020", "type": "truefalse", "topic": "polymorfismus",
+      "explanation": "Polymorfismus umožňuje, aby kód pracoval s obecným typem, zatímco za běhu vykonává specifický kód.",
+      "statement": "Polymorfismus snižuje flexibilitu kódu.",
+      "answer": false
+    },
+    {
+      "id": "oop-021", "type": "single", "topic": "interface-abstrakce",
+      "explanation": "Interface je čistá abstrakce chování.",
+      "question": "Může interface obsahovat běžné instanční proměnné?",
+      "options": [
+        { "text": "Ano", "correct": false },
+        { "text": "Ne, pouze konstanty (public static final)", "correct": true },
+        { "text": "Pouze pokud jsou private", "correct": false },
+        { "text": "Ano, ale jen typu int", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-022", "type": "numeric", "topic": "dedicnost",
+      "explanation": "DPH 10% z 200 je 20.",
+      "question": "Jaké je DPH pro Jidlo s cenou 200?",
+      "answer": 20,
+      "tolerance": 0
+    },
+    {
+      "id": "oop-023", "type": "truefalse", "topic": "interface-abstrakce",
+      "explanation": "Třída může implementovat libovolný počet rozhraní.",
+      "statement": "Třída může implementovat pouze jedno rozhraní.",
+      "answer": false
+    },
+    {
+      "id": "oop-024", "type": "single", "topic": "polymorfismus",
+      "explanation": "Většina objektů v Javě je polimorfní, protože všechny dědí od Object.",
+      "question": "Jaký typ mají všechny objekty v Javě?",
+      "options": [
+        { "text": "Jen svůj vlastní", "correct": false },
+        { "text": "Typ Object", "correct": true },
+        { "text": "Typ Interface", "correct": false },
+        { "text": "Typ Primitive", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-025", "type": "multiple", "topic": "interface-abstrakce",
+      "explanation": "Abstraktní třída může mít konstruktor, interface nikoliv.",
+      "question": "V čem je abstraktní třída 'silnější' než interface? (vyberte 2)",
+      "options": [
+        { "text": "Může mít stav (instanční proměnné)", "correct": true },
+        { "text": "Může mít konstruktor", "correct": true },
+        { "text": "Může být implementována víckrát", "correct": false },
+        { "text": "Je rychlejší", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-026", "type": "single", "topic": "dedicnost",
+      "explanation": "Override znamená přepsání metody rodiče v potomkovi.",
+      "question": "Co znamená anotace @Override?",
+      "options": [
+        { "text": "Že metoda přepisuje metodu rodiče", "correct": true },
+        { "text": "Že metoda je abstraktní", "correct": false },
+        { "text": "Že metoda je statická", "correct": false },
+        { "text": "Že metoda je soukromá", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-027", "type": "truefalse", "topic": "dedicnost",
+      "explanation": "Dědičnost je 'is-a' vztah (Jidlo je IPlaceniRestaurace).",
+      "statement": "Dědičnost vyjadřuje vztah 'je typem' (is-a).",
+      "answer": true
+    },
+    {
+      "id": "oop-028", "type": "single", "topic": "polymorfismus",
+      "explanation": "Runtime polymorfismus se děje při volání metod na instancích za běhu.",
+      "question": "Kdy se určuje, která verze metody se zavolá?",
+      "options": [
+        { "text": "Při kompilaci", "correct": false },
+        { "text": "Za běhu programu (Runtime)", "correct": true },
+        { "text": "Při psaní kódu", "correct": false },
+        { "text": "Při instalaci", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-029", "type": "truefalse", "topic": "interface-abstrakce",
+      "explanation": "Metody v interface jsou implicitně public a abstract.",
+      "statement": "Metody v interface mohou být privátní (v původní verzi Javy).",
+      "answer": false
+    },
+    {
+      "id": "oop-030", "type": "numeric", "topic": "dedicnost",
+      "explanation": "V naší třídě Napoj je 0.21 jako DPH pro alkohol.",
+      "question": "Kolik procent je DPH pro alkohol v našem příkladu?",
+      "answer": 21,
+      "tolerance": 0
+    }
+  ]
+}

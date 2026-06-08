@@ -1,0 +1,281 @@
+{
+  "subject": "sql-jazyk",
+  "name": "Jazyk SQL a dotazování",
+  "topics": [
+    { "id": "sql-rozdeleni", "name": "Rozdělení SQL (DDL, DML, DQL)" },
+    { "id": "select-zaklady", "name": "SELECT a restrikce" },
+    { "id": "agregace-having", "name": "Agregace a seskupování" },
+    { "id": "vnorene-dotazy", "name": "Vnořené dotazy" }
+  ],
+  "questions": [
+    {
+      "id": "sql-001", "type": "single", "topic": "sql-rozdeleni",
+      "explanation": "DDL (Data Definition Language) slouží k definici struktury databáze (CREATE, ALTER, DROP).",
+      "question": "Do které kategorie SQL příkazů patří CREATE?",
+      "options": [
+        { "text": "DML", "correct": false },
+        { "text": "DDL", "correct": true },
+        { "text": "DQL", "correct": false },
+        { "text": "DCL", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-002", "type": "single", "topic": "sql-rozdeleni",
+      "explanation": "DQL (Data Query Language) je vyhrazeno pro příkaz SELECT.",
+      "question": "Jak se nazývá kategorie SQL pro dotazování (SELECT)?",
+      "options": [
+        { "text": "DQL", "correct": true },
+        { "text": "DML", "correct": false },
+        { "text": "DDL", "correct": false },
+        { "text": "DCL", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-003", "type": "truefalse", "topic": "select-zaklady",
+      "explanation": "Projekce v SQL znamená výběr konkrétních sloupců v příkazu SELECT.",
+      "statement": "Projekce v relační algebře odpovídá výběru sloupců v SQL.",
+      "answer": true
+    },
+    {
+      "id": "sql-004", "type": "single", "topic": "select-zaklady",
+      "explanation": "Restrikce (výběr řádků) se v SQL provádí pomocí klauzule WHERE.",
+      "question": "Která klauzule se používá pro restrikci (filtrování řádků)?",
+      "options": [
+        { "text": "WHERE", "correct": true },
+        { "text": "ORDER BY", "correct": false },
+        { "text": "GROUP BY", "correct": false },
+        { "text": "HAVING", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-005", "type": "single", "topic": "select-zaklady",
+      "explanation": "Operátor LIKE s hvězdičkami nebo procenty umožňuje hledání podle vzoru v řetězcích.",
+      "question": "Jaký operátor použijete pro nalezení jmen obsahujících písmeno 'w'?",
+      "options": [
+        { "text": "LIKE '%w%'", "correct": true },
+        { "text": "IN 'w'", "correct": false },
+        { "text": "MATCH 'w'", "correct": false },
+        { "text": "WHERE 'w'", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-006", "type": "multiple", "topic": "select-zaklady",
+      "explanation": "Pro řazení výsledků se používá ORDER BY. Pro určení směru jsou klíčová slova ASC a DESC.",
+      "question": "Jaké klauzule se používají pro řazení výsledků? (vyberte 2)",
+      "options": [
+        { "text": "ORDER BY", "correct": true },
+        { "text": "DESC", "correct": true },
+        { "text": "LIMIT", "correct": false },
+        { "text": "HAVING", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-007", "type": "numeric", "topic": "select-zaklady",
+      "explanation": "Příkaz LIMIT 20 omezí počet vypsaných řádků.",
+      "question": "Kolik prezidentů maximálně vypíše dotaz s klauzulí LIMIT 20?",
+      "answer": 20,
+      "tolerance": 0
+    },
+    {
+      "id": "sql-008", "type": "truefalse", "topic": "agregace-having",
+      "explanation": "HAVING se používá pro filtrování skupin vytvořených pomocí GROUP BY, na rozdíl od WHERE.",
+      "statement": "HAVING se používá pro filtrování řádků před seskupením.",
+      "answer": false
+    },
+    {
+      "id": "sql-009", "type": "single", "topic": "agregace-having",
+      "explanation": "Agregační funkce (SUM, AVG, COUNT, MIN, MAX) pracují nad skupinou hodnot.",
+      "question": "Která funkce vypočítá průměrnou hodnotu sloupce?",
+      "options": [
+        { "text": "AVG()", "correct": true },
+        { "text": "SUM()", "correct": false },
+        { "text": "COUNT()", "correct": false },
+        { "text": "MEAN()", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-010", "type": "multiple", "topic": "agregace-having",
+      "explanation": "Pokud chceme měsíc narození, použijeme funkci pro extrakci měsíce z data.",
+      "question": "Které prvky jsou nutné pro výpis počtu prezidentů podle měsíce narození? (vyberte 2)",
+      "options": [
+        { "text": "GROUP BY měsíc", "correct": true },
+        { "text": "COUNT(*)", "correct": true },
+        { "text": "ORDER BY měsíc", "correct": false },
+        { "text": "JOIN", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-011", "type": "truefalse", "topic": "vnorene-dotazy",
+      "explanation": "Vnořený dotaz (subquery) se nejprve vyhodnotí a jeho výsledek se použije ve vnějším dotazu.",
+      "statement": "Vnořený dotaz lze použít v klauzuli WHERE jako filtr.",
+      "answer": true
+    },
+    {
+      "id": "sql-012", "type": "numeric", "topic": "agregace-having",
+      "explanation": "Počet narozených > 3 znamená použití HAVING COUNT(*) > 3.",
+      "question": "Jaké číslo (počet) musí být v podmínce HAVING pro více než 3 prezidenty?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "sql-013", "type": "single", "topic": "sql-rozdeleni",
+      "explanation": "DML (Data Manipulation Language) slouží k práci s daty (INSERT, UPDATE, DELETE).",
+      "question": "Který příkaz patří do DML?",
+      "options": [
+        { "text": "INSERT", "correct": true },
+        { "text": "CREATE", "correct": false },
+        { "text": "SELECT", "correct": false },
+        { "text": "GRANT", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-014", "type": "truefalse", "topic": "select-zaklady",
+      "explanation": "Hvězdička v SELECT * vybere všechny sloupce tabulky.",
+      "statement": "SELECT * vybírá pouze první sloupec tabulky.",
+      "answer": false
+    },
+    {
+      "id": "sql-015", "type": "single", "topic": "vnorene-dotazy",
+      "explanation": "Vnořený dotaz pro nadprůměrné score vypadá: WHERE score > (SELECT AVG(score) FROM score).",
+      "question": "Co vrací vnořený dotaz (SELECT AVG(score)...)?",
+      "options": [
+        { "text": "Jeden skalární výsledek (průměr)", "correct": true },
+        { "text": "Celou tabulku", "correct": false },
+        { "text": "Nic", "correct": false },
+        { "text": "Seznam ID studentů", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-016", "type": "multiple", "topic": "select-zaklady",
+      "explanation": "Projekce (výběr sloupců) a restrikce (WHERE) jsou základní operace.",
+      "question": "Které klauzule definují projekci a restrikci? (vyberte 2)",
+      "options": [
+        { "text": "SELECT (projekce)", "correct": true },
+        { "text": "WHERE (restrikce)", "correct": true },
+        { "text": "GROUP BY", "correct": false },
+        { "text": "HAVING", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-017", "type": "truefalse", "topic": "select-zaklady",
+      "explanation": "ORDER BY bez ASC/DESC řadí standardně vzestupně.",
+      "statement": "ORDER BY příjmení seřadí záznamy vzestupně (A-Z).",
+      "answer": true
+    },
+    {
+      "id": "sql-018", "type": "single", "topic": "agregace-having",
+      "explanation": "COUNT(*) počítá všechny řádky ve skupině.",
+      "question": "Jaký je rozdíl mezi COUNT(sloupec) a COUNT(*)?",
+      "options": [
+        { "text": "COUNT(*) počítá i NULL hodnoty", "correct": true },
+        { "text": "COUNT(sloupec) je vždy větší", "correct": false },
+        { "text": "Žádný", "correct": false },
+        { "text": "COUNT(sloupec) počítá i řádky s NULL", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-019", "type": "multiple", "topic": "sql-rozdeleni",
+      "explanation": "DCL (Data Control Language) řeší přístupová práva (GRANT, REVOKE).",
+      "question": "Které příkazy jsou součástí DCL? (vyberte 2)",
+      "options": [
+        { "text": "GRANT", "correct": true },
+        { "text": "REVOKE", "correct": true },
+        { "text": "SELECT", "correct": false },
+        { "text": "UPDATE", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-020", "type": "truefalse", "topic": "vnorene-dotazy",
+      "explanation": "Vnořený dotaz může být velmi náročný na výkon, pokud se provádí pro každý řádek.",
+      "statement": "Vnořené dotazy jsou vždy výkonnější než spojování tabulek (JOIN).",
+      "answer": false
+    },
+    {
+      "id": "sql-021", "type": "single", "topic": "select-zaklady",
+      "explanation": "Logické operátory AND/OR propojují podmínky ve WHERE.",
+      "question": "Jak propojíme dvě podmínky ve WHERE, aby musely platit obě?",
+      "options": [
+        { "text": "AND", "correct": true },
+        { "text": "OR", "correct": false },
+        { "text": "NOT", "correct": false },
+        { "text": "BUT", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-022", "type": "numeric", "topic": "select-zaklady",
+      "explanation": "Zadání požaduje posledních 20 prezidentů, tedy LIMIT 20.",
+      "question": "Kolik řádků by vrátil dotaz s LIMIT 20?",
+      "answer": 20,
+      "tolerance": 0
+    },
+    {
+      "id": "sql-023", "type": "truefalse", "topic": "agregace-having",
+      "explanation": "GROUP BY seskupuje řádky se stejnou hodnotou v daném sloupci.",
+      "statement": "GROUP BY se používá k vytvoření skupin pro agregační funkce.",
+      "answer": true
+    },
+    {
+      "id": "sql-024", "type": "single", "topic": "select-zaklady",
+      "explanation": "DISTINCT odstraňuje duplicitní řádky z výsledku dotazu.",
+      "question": "Které klíčové slovo v SELECT zajistí, že uvidíte jen unikátní hodnoty?",
+      "options": [
+        { "text": "DISTINCT", "correct": true },
+        { "text": "UNIQUE", "correct": false },
+        { "text": "ONLY", "correct": false },
+        { "text": "SINGLE", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-025", "type": "multiple", "topic": "sql-rozdeleni",
+      "explanation": "TCL (Transaction Control Language) řídí transakce (COMMIT, ROLLBACK).",
+      "question": "Co patří do TCL? (vyberte 2)",
+      "options": [
+        { "text": "COMMIT", "correct": true },
+        { "text": "ROLLBACK", "correct": true },
+        { "text": "CREATE", "correct": false },
+        { "text": "SELECT", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-026", "type": "single", "topic": "vnorene-dotazy",
+      "explanation": "Vnořený dotaz může vrátit seznam hodnot, pak se používá operátor IN.",
+      "question": "Který operátor se používá pro vnořený dotaz vracející seznam hodnot?",
+      "options": [
+        { "text": "IN", "correct": true },
+        { "text": "EQUALS", "correct": false },
+        { "text": "IS", "correct": false },
+        { "text": "LIKE", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-027", "type": "truefalse", "topic": "agregace-having",
+      "explanation": "WHERE se provádí před seskupením, HAVING po něm.",
+      "statement": "HAVING lze použít bez předchozího GROUP BY.",
+      "answer": false
+    },
+    {
+      "id": "sql-028", "type": "single", "topic": "select-zaklady",
+      "explanation": "Příkaz SELECT vybírá data z tabulky.",
+      "question": "Jaký je hlavní účel SQL příkazu SELECT?",
+      "options": [
+        { "text": "Čtení a výběr dat", "correct": true },
+        { "text": "Mazání tabulky", "correct": false },
+        { "text": "Změna práv uživatele", "correct": false },
+        { "text": "Vytvoření nového uživatele", "correct": false }
+      ]
+    },
+    {
+      "id": "sql-029", "type": "truefalse", "topic": "sql-rozdeleni",
+      "explanation": "Příkazy SQL jsou standardizované, ale implementace se mohou lišit (tzv. dialekty).",
+      "statement": "SQL je jednotný jazyk a každá databáze ho implementuje naprosto identicky.",
+      "answer": false
+    },
+    {
+      "id": "sql-030", "type": "numeric", "topic": "select-zaklady",
+      "explanation": "Počet klauzulí v základním SELECT (SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT) je 7.",
+      "question": "Kolik hlavních klauzulí má kompletní SELECT (základní sada)?",
+      "answer": 7,
+      "tolerance": 0
+    }
+  ]
+}

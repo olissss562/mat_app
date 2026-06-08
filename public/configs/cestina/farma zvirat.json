@@ -1,0 +1,285 @@
+{
+  "subject": "farma-zvirat",
+  "name": "Farma zvířat",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Charakteristika postav" },
+    { "id": "dej-a-alegorie", "name": "Děj a alegorie" },
+    { "id": "literarni-forma", "name": "Literární forma a symbolika" }
+  ],
+  "questions": [
+    {
+      "id": "farma-zvirat-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "George Orwell byl britský spisovatel, který ve své tvorbě ostře kritizoval totalitní režimy.",
+      "question": "Kdo je autorem alegorické novely Farma zvířat?",
+      "options": [
+        { "text": "Aldous Huxley", "correct": false },
+        { "text": "George Orwell", "correct": true },
+        { "text": "Ray Bradbury", "correct": false },
+        { "text": "Karel Čapek", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-002", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Farma zvířat je přímou alegorií na události VŘSR a následný vývoj v Sovětském svazu.",
+      "statement": "Farma zvířat je alegorií na vývoj v Sovětském svazu po revoluci.",
+      "answer": true
+    },
+    {
+      "id": "farma-zvirat-003", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Orwell publikoval toto dílo v roce 1945, tedy krátce po druhé světové válce.",
+      "question": "V jakém roce byla Farma zvířat poprvé vydána?",
+      "options": [
+        { "text": "1939", "correct": false },
+        { "text": "1945", "correct": true },
+        { "text": "1948", "correct": false },
+        { "text": "1950", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Orwell byl kritikem totalitních ideologií, zejména stalinismu, což se projevilo i v jeho dalším slavném románu 1984.",
+      "question": "Které z následujících pojmů souvisejí s tvorbou George Orwella? (vyberte 2)",
+      "options": [
+        { "text": "Kritika totalitarismu", "correct": true },
+        { "text": "Kritika stalinismu", "correct": true },
+        { "text": "Oslava monarchie", "correct": false },
+        { "text": "Vědecká fantastika bez společenského přesahu", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Eric Arthur Blair byl skutečné jméno George Orwella.",
+      "question": "Jaké je vlastní jméno George Orwella?",
+      "options": [
+        { "text": "Eric Arthur Blair", "correct": true },
+        { "text": "Thomas Stearns Eliot", "correct": false },
+        { "text": "Aldous Leonard Huxley", "correct": false },
+        { "text": "Arthur C. Clarke", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Autor byl britského původu, nikoliv ruského.",
+      "statement": "George Orwell byl ruský revolucionář, který utekl do Británie.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-007", "type": "single", "topic": "postavy",
+      "explanation": "Napoleon je prase, které se postupně stane diktátorem farmy.",
+      "question": "Které prase se stane diktátorem farmy?",
+      "options": [
+        { "text": "Snowball", "correct": false },
+        { "text": "Napoleon", "correct": true },
+        { "text": "Squealer", "correct": false },
+        { "text": "Old Major", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-008", "type": "single", "topic": "postavy",
+      "explanation": "Snowball byl inteligentní prase, které bylo Napoleonem vyhnáno.",
+      "question": "Jak se jmenuje prase, které bylo vyhnáno z farmy?",
+      "options": [
+        { "text": "Napoleon", "correct": false },
+        { "text": "Snowball", "correct": true },
+        { "text": "Old Major", "correct": false },
+        { "text": "Squealer", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-009", "type": "multiple", "topic": "postavy",
+      "explanation": "Boxer je kůň, který představuje pracující třídu, je věrný a neuvěřitelně pracovitý.",
+      "question": "Jaké jsou typické vlastnosti koně Boxera? (vyberte 2)",
+      "options": [
+        { "text": "Neuvěřitelná pracovitost", "correct": true },
+        { "text": "Naprostá loajalita k farmě", "correct": true },
+        { "text": "Chytré intrikaření", "correct": false },
+        { "text": "Lenost", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-010", "type": "single", "topic": "postavy",
+      "explanation": "Squealer je Napoleonův mluvčí, který dokáže zmanipulovat ostatní zvířata.",
+      "question": "Které prase působí jako Napoleonův mluvčí a manipulátor?",
+      "options": [
+        { "text": "Old Major", "correct": false },
+        { "text": "Snowball", "correct": false },
+        { "text": "Squealer", "correct": true },
+        { "text": "Boxer", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "Old Major byl prase, které iniciovalo revoluci, ale zemřelo dříve, než byla plně realizována.",
+      "statement": "Old Major se stal prvním doživotním diktátorem farmy.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-012", "type": "single", "topic": "postavy",
+      "explanation": "Pan Jones byl původní majitel farmy, kterého zvířata vyhnala.",
+      "question": "Jak se jmenuje původní majitel farmy?",
+      "options": [
+        { "text": "Frederick", "correct": false },
+        { "text": "Pilkington", "correct": false },
+        { "text": "Jones", "correct": true },
+        { "text": "Whymper", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-013", "type": "multiple", "topic": "postavy",
+      "explanation": "Psi byli od počátku vychováváni Napoleonem jako jeho osobní garda a nástroj teroru.",
+      "question": "Které postavy slouží Napoleonovi jako nástroj násilí? (vyberte 2)",
+      "options": [
+        { "text": "Psi", "correct": true },
+        { "text": "Slepice", "correct": false },
+        { "text": "Štěňata (po výcviku)", "correct": true },
+        { "text": "Osel Benjamin", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-014", "type": "truefalse", "topic": "postavy",
+      "explanation": "Benjamin byl starý osel, který byl skeptický k revoluci a vše prokoukl.",
+      "statement": "Osel Benjamin byl velkým fanouškem Napoleona.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-015", "type": "numeric", "topic": "dej-a-alegorie",
+      "explanation": "Původně byla sepsána 7 přikázání, která byla postupně upravována.",
+      "question": "Kolik přikázání bylo původně sepsáno na zdi farmy?",
+      "answer": 7,
+      "tolerance": 0
+    },
+    {
+      "id": "farma-zvirat-016", "type": "single", "topic": "dej-a-alegorie",
+      "explanation": "Původní název byl Panská farma (Manor Farm), po revoluci přejmenována na Farmu zvířat.",
+      "question": "Jak se farma jmenovala před revolucí?",
+      "options": [
+        { "text": "Farma zvířat", "correct": false },
+        { "text": "Panská farma", "correct": true },
+        { "text": "Napoleonova farma", "correct": false },
+        { "text": "Zvířecí ráj", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-017", "type": "truefalse", "topic": "dej-a-alegorie",
+      "explanation": "Na konci knihy se prasata začala podobat lidem natolik, že je zvířata nedokázala odlišit.",
+      "statement": "Na konci příběhu prasata konečně začala žít v harmonii se zvířaty.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-018", "type": "single", "topic": "dej-a-alegorie",
+      "explanation": "Hlavním důvodem konfliktu mezi Napoleonem a Snowballem byl plán stavby větrného mlýna.",
+      "question": "Co bylo hlavním předmětem sváru mezi Napoleonem a Snowballem?",
+      "options": [
+        { "text": "Stavba větrného mlýna", "correct": true },
+        { "text": "Příděl jídla", "correct": false },
+        { "text": "Jméno farmy", "correct": false },
+        { "text": "Vztah s lidmi", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-019", "type": "multiple", "topic": "dej-a-alegorie",
+      "explanation": "Boxer byl nakonec poslán na jatka, což je vrcholný důkaz zrady prasat.",
+      "question": "Jaký byl osud koně Boxera? (vyberte 2)",
+      "options": [
+        { "text": "Zemřel vyčerpáním", "correct": true },
+        { "text": "Byl prodán na jatka", "correct": true },
+        { "text": "Odešel do důchodu na pastvu", "correct": false },
+        { "text": "Stal se zástupcem Napoleona", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-020", "type": "truefalse", "topic": "dej-a-alegorie",
+      "explanation": "Zvířata původně chtěla rovnost, ale skončila v diktatuře.",
+      "statement": "Revoluce zvířat splnila svůj cíl nastolení rovnosti.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-021", "type": "single", "topic": "dej-a-alegorie",
+      "explanation": "Závěrečné heslo bylo: 'Všechna zvířata jsou si rovna, ale některá jsou si rovnější.'",
+      "question": "Jak zní konečná podoba sedmého přikázání?",
+      "options": [
+        { "text": "Žádné zvíře nesmí zabít jiné zvíře.", "correct": false },
+        { "text": "Všechna zvířata jsou si rovna.", "correct": false },
+        { "text": "Všechna zvířata jsou si rovna, ale některá jsou si rovnější.", "correct": true },
+        { "text": "Člověk je nepřítelem zvířat.", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-022", "type": "numeric", "topic": "dej-a-alegorie",
+      "explanation": "Napoleon, Snowball a Squealer byli tři hlavní prasata, která iniciovala vedení po revoluci.",
+      "question": "Kolik hlavních prasat tvořilo 'intelektuální' vedení v rané fázi revoluce?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "farma-zvirat-023", "type": "truefalse", "topic": "dej-a-alegorie",
+      "explanation": "Prasata se na konci naučila chodit po dvou nohách.",
+      "statement": "Prasata na konci knihy chodila stále po čtyřech.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Farma zvířat je typickým příkladem alegorie a satiry.",
+      "question": "Jaký žánr nejlépe charakterizuje Farmu zvířat?",
+      "options": [
+        { "text": "Satirická alegorická bajka", "correct": true },
+        { "text": "Romantický román", "correct": false },
+        { "text": "Historická kronika", "correct": false },
+        { "text": "Pohádka", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Orwell používá prostý jazyk, aby příběh působil jako bajka.",
+      "question": "Které stylové rysy jsou typické pro tuto knihu? (vyberte 2)",
+      "options": [
+        { "text": "Jednoduchý vypravěčský styl", "correct": true },
+        { "text": "Alegorické zobrazení reality", "correct": true },
+        { "text": "Složitá básnická forma", "correct": false },
+        { "text": "Přílišný patos", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Vypravěč je autorský, sleduje děj z odstupu.",
+      "question": "Kdo vypráví příběh?",
+      "options": [
+        { "text": "Boxer (ich-forma)", "correct": false },
+        { "text": "Autorský vypravěč (er-forma)", "correct": true },
+        { "text": "Napoleon (ich-forma)", "correct": false },
+        { "text": "Benjamin (ich-forma)", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "I když je kniha krátká, obsahuje hlubokou politickou kritiku.",
+      "statement": "Farma zvířat je bezobsažný příběh určený jen pro děti.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Satira je hlavním nástrojem, kterým autor zesměšňuje totalitní praktiky.",
+      "question": "Jakou funkci má v knize satira?",
+      "options": [
+        { "text": "Zesměšnit totalitní praktiky a zneužívání moci", "correct": true },
+        { "text": "Zabavit čtenáře humorem bez pointy", "correct": false },
+        { "text": "Oslavit revoluci", "correct": false },
+        { "text": "Zabránit čtení knih", "correct": false }
+      ]
+    },
+    {
+      "id": "farma-zvirat-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Bajka využívá zvířata k zobrazení lidských vlastností.",
+      "statement": "Použití zvířat je jen náhodné, vlastnosti neodpovídají lidem.",
+      "answer": false
+    },
+    {
+      "id": "farma-zvirat-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Příběh je krátký, soustředěný na hlavní dějovou linku.",
+      "question": "Kolik hlavních částí má příběh (myšleno jako chronologický vývoj revoluce: příprava, převzetí, úpadek)?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

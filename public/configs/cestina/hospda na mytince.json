@@ -1,0 +1,285 @@
+{
+"subject": "hospoda-na-mytince",
+"name": "Hospoda na mýtince",
+"topics": [
+{ "id": "autor-a-kontext", "name": "Autor a divadlo Járy Cimrmana" },
+{ "id": "postavy", "name": "Postavy a jejich role" },
+{ "id": "dej-a-zapletka", "name": "Děj a klíčové momenty" },
+{ "id": "styl-a-humor", "name": "Styl, humor a žánr" }
+],
+"questions": [
+{
+"id": "hospoda-na-mytince-001", "type": "single", "topic": "autor-a-kontext",
+"explanation": "Hra je dílem Divadla Járy Cimrmana, které napsali Zdeněk Svěrák a Ladislav Smoljak.",
+"question": "Kdo jsou skuteční autoři hry Hospoda na mýtince?",
+"options": [
+{ "text": "Jára Cimrman", "correct": false },
+{ "text": "Zdeněk Svěrák a Ladislav Smoljak", "correct": true },
+{ "text": "Karel Čapek", "correct": false },
+{ "text": "Václav Havel", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-002", "type": "truefalse", "topic": "autor-a-kontext",
+"explanation": "Jára Cimrman je fiktivní postava, český polyhistor, kolem které je vybudována celá poetika divadla.",
+"statement": "Jára Cimrman je skutečná historická postava z 18. století.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-003", "type": "single", "topic": "autor-a-kontext",
+"explanation": "Divadlo Járy Cimrmana je známé pro svůj unikátní styl založený na mystifikaci.",
+"question": "Co je hlavním principem humoru v Divadle Járy Cimrmana?",
+"options": [
+{ "text": "Sprostá mluva", "correct": false },
+{ "text": "Mystifikace", "correct": true },
+{ "text": "Politická agitace", "correct": false },
+{ "text": "Slapstick (fyzická komedie)", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-004", "type": "multiple", "topic": "autor-a-kontext",
+"explanation": "Představení se obvykle skládá z odborného semináře a vlastní divadelní hry.",
+"question": "Z jakých částí se standardně skládá večer v Divadle Járy Cimrmana? (vyberte 2)",
+"options": [
+{ "text": "Odborný seminář", "correct": true },
+{ "text": "Vlastní divadelní hra", "correct": true },
+{ "text": "Taneční vystoupení", "correct": false },
+{ "text": "Politická přednáška", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-005", "type": "single", "topic": "autor-a-kontext",
+"explanation": "Stylizací her je konec 19. století a rakousko-uherská éra.",
+"question": "Do jakého období jsou hry Járy Cimrmana obvykle stylizovány?",
+"options": [
+{ "text": "Doba husitská", "correct": false },
+{ "text": "Rakousko-Uhersko (konec 19. stol.)", "correct": true },
+{ "text": "První republika", "correct": false },
+{ "text": "Socialismus", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-006", "type": "truefalse", "topic": "autor-a-kontext",
+"explanation": "Hry jsou parodií na tehdejší amatérské divadlo a naivitu.",
+"statement": "Hry Járy Cimrmana jsou čistou parodií na tehdejší naivní divadelní tvorbu.",
+"answer": true
+},
+{
+"id": "hospoda-na-mytince-007", "type": "single", "topic": "postavy",
+"explanation": "Inspektor Trachta je jednou z hlavních postav, která přijíždí prověřit hospodu.",
+"question": "Jaké je povolání postavy Trachty?",
+"options": [
+{ "text": "Hospodský", "correct": false },
+{ "text": "Inspektor", "correct": true },
+{ "text": "Vynálezce", "correct": false },
+{ "text": "Učitel", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-008", "type": "single", "topic": "postavy",
+"explanation": "Hospodský v příběhu je bývalý učitel, který se v hospodě skrývá.",
+"question": "Co dělal hospodský předtím, než začal provozovat hospodu?",
+"options": [
+{ "text": "Byl vojákem", "correct": false },
+{ "text": "Byl učitelem", "correct": true },
+{ "text": "Byl právníkem", "correct": false },
+{ "text": "Byl vynálezcem", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-009", "type": "multiple", "topic": "postavy",
+"explanation": "Kulhánek a Trachta jsou dvojice, která tvoří komický prvek inspektorů.",
+"question": "Které postavy vystupují jako inspektoři? (vyberte 2)",
+"options": [
+{ "text": "Trachta", "correct": true },
+{ "text": "Kulhánek", "correct": true },
+{ "text": "Hospodský", "correct": false },
+{ "text": "Hrabě Zeppelin", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-010", "type": "single", "topic": "postavy",
+"explanation": "Hedvika je dcera hospodského, o kterou se zajímá inspektor Trachta.",
+"question": "V jakém vztahu je Hedvika k hospodskému?",
+"options": [
+{ "text": "Je to jeho žena", "correct": false },
+{ "text": "Je to jeho dcera", "correct": true },
+{ "text": "Je to jeho milenka", "correct": false },
+{ "text": "Je to jeho sestra", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-011", "type": "truefalse", "topic": "postavy",
+"explanation": "Hrabě Zeppelin je v příběhu očekávaným hostem, jehož identita je záhadou.",
+"statement": "Hrabě Zeppelin se v průběhu hry vůbec neobjeví.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-012", "type": "single", "topic": "postavy",
+"explanation": "Většina postav jsou karikatury, které zdůrazňují absurditu situace.",
+"question": "Jakým způsobem jsou postavy v díle budovány?",
+"options": [
+{ "text": "Psychologicky propracovaně", "correct": false },
+{ "text": "Jako komické karikatury", "correct": true },
+{ "text": "Realisticky", "correct": false },
+{ "text": "Bez jakékoli charakteristiky", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-013", "type": "multiple", "topic": "postavy",
+"explanation": "Vedlejší postavy doplňují atmosféru a absurdní humor.",
+"question": "Kdo další se objevuje ve hře? (vyberte 2)",
+"options": [
+{ "text": "Rozeklaný (jako host)", "correct": true },
+{ "text": "Vypravěč", "correct": true },
+{ "text": "Císař František Josef I.", "correct": false },
+{ "text": "Hrdina jiné hry", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-014", "type": "truefalse", "topic": "postavy",
+"explanation": "Postavy spolu často vedou nesmyslné dialogy, které nikam nevedou.",
+"statement": "Postavy v této hře vedou vždy logické a smysluplné debaty.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-015", "type": "numeric", "topic": "dej-a-zapletka",
+"explanation": "Inspektoři hledají zločince, který se má v hospodě objevit.",
+"question": "Kolik inspektorů přijíždí do hospody?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "hospoda-na-mytince-016", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Hlavní zápletkou je pátrání po zločinci a zároveň milostné pletky.",
+"question": "Co je hlavním tématem zápletky?",
+"options": [
+{ "text": "Pátrání po zločinci", "correct": true },
+{ "text": "Revoluce v zemi", "correct": false },
+{ "text": "Založení nové školy", "correct": false },
+{ "text": "Válka s cizinou", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-017", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Hospoda na mýtince je považována za jednu z nejlepších her divadla.",
+"statement": "Děj se odehrává v rušném velkoměstě.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-018", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Hrabě Zeppelin přiletí na své vzducholodi.",
+"question": "Na čem hrabě Zeppelin přijede do hospody?",
+"options": [
+{ "text": "Na koni", "correct": false },
+{ "text": "Vzducholodí", "correct": true },
+{ "text": "Autem", "correct": false },
+{ "text": "Vlakem", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-019", "type": "multiple", "topic": "dej-a-zapletka",
+"explanation": "Humor je založen na absurdních situacích a jazykových chybách.",
+"question": "Které momenty jsou v ději klíčové? (vyberte 2)",
+"options": [
+{ "text": "Návštěva inspektorů", "correct": true },
+{ "text": "Přílet Zeppelina", "correct": true },
+{ "text": "Konec světa", "correct": false },
+{ "text": "Odjezd na dovolenou", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-020", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Hra je známa svými vtipnými písničkami, které komentují děj.",
+"statement": "Ve hře se vůbec nezpívá.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-021", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Inspektor Trachta se snaží zatknout zločince, ale situace se stále komplikuje.",
+"question": "Jaký je hlavní úkol Trachty?",
+"options": [
+{ "text": "Zatknout zločince", "correct": true },
+{ "text": "Ochutnat pivo", "correct": false },
+{ "text": "Vyhrát v kartách", "correct": false },
+{ "text": "Najít poklad", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-022", "type": "numeric", "topic": "dej-a-zapletka",
+"explanation": "Hra má jedno hlavní dějství, přestože je strukturovaná jako delší divadelní kus.",
+"question": "Kolik dějství (aktů) má vlastní hra (nepočítáme seminář)?",
+"answer": 1,
+"tolerance": 0
+},
+{
+"id": "hospoda-na-mytince-023", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Hospoda je v lese, na mýtince, což ztěžuje přístup.",
+"statement": "Hospoda je v centru Prahy.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-024", "type": "single", "topic": "styl-a-humor",
+"explanation": "Cimrmanovský humor využívá ironii, nadsázku a jazykové hříčky.",
+"question": "Jaký typ humoru je pro hru typický?",
+"options": [
+{ "text": "Černý humor", "correct": false },
+{ "text": "Ironie a jazykové hříčky", "correct": true },
+{ "text": "Sprostý humor", "correct": false },
+{ "text": "Fyzická komedie", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-025", "type": "multiple", "topic": "styl-a-humor",
+"explanation": "Hra obsahuje písně, které doplňují děj a zdůrazňují absurditu.",
+"question": "Co je součástí stylu této hry? (vyberte 2)",
+"options": [
+{ "text": "Hudební čísla (písně)", "correct": true },
+{ "text": "Slovní hříčky", "correct": true },
+{ "text": "Dlouhé monology bez konce", "correct": false },
+{ "text": "Bojové scény", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-026", "type": "single", "topic": "styl-a-humor",
+"explanation": "Divadlo Járy Cimrmana používá autorské, intelektuální humory.",
+"question": "Pro jaké diváky je hra primárně určena?",
+"options": [
+{ "text": "Pro děti", "correct": false },
+{ "text": "Pro milovníky intelektuálního humoru", "correct": true },
+{ "text": "Pro experty na historii", "correct": false },
+{ "text": "Pro zahraniční turisty", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-027", "type": "truefalse", "topic": "styl-a-humor",
+"explanation": "Humor vychází z kontrastu mezi vážností situace a nesmyslností chování postav.",
+"statement": "Humor vychází z realistického zobrazení vesnického života.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-028", "type": "single", "topic": "styl-a-humor",
+"explanation": "Cimrmanův humor často využívá 'blbost' postav jako zdroj komiky.",
+"question": "Jakou roli hraje 'blbost' postav v Cimrmanových hrách?",
+"options": [
+{ "text": "Není důležitá", "correct": false },
+{ "text": "Je hlavním zdrojem komiky", "correct": true },
+{ "text": "Je pouze vedlejší", "correct": false },
+{ "text": "Je negativní", "correct": false }
+]
+},
+{
+"id": "hospoda-na-mytince-029", "type": "truefalse", "topic": "styl-a-humor",
+"explanation": "Hry jsou velmi populární a často citované v české společnosti.",
+"statement": "Hra nebyla nikdy divácky úspěšná.",
+"answer": false
+},
+{
+"id": "hospoda-na-mytince-030", "type": "numeric", "topic": "styl-a-humor",
+"explanation": "Tato hra je jednou z nejznámějších her divadla, často citovaná.",
+"question": "Kolik postav má v této hře (včetně vedlejších) aktivní mluvenou roli v ději?",
+"answer": 5,
+"tolerance": 1
+}
+]
+}

@@ -1,0 +1,285 @@
+{
+"subject": "o-mysich-a-lidech",
+"name": "O myších a lidech",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "o-mysich-a-lidech-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "John Steinbeck byl americký spisovatel, nositel Nobelovy ceny za literaturu.",
+"question": "Kdo je autorem novely O myších a lidech?",
+"options": [
+{ "text": "Ernest Hemingway", "correct": false },
+{ "text": "John Steinbeck", "correct": true },
+{ "text": "William Faulkner", "correct": false },
+{ "text": "Francis Scott Fitzgerald", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-002", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Děj se odehrává v období hospodářské krize ve 30. letech 20. století v USA.",
+"statement": "Děj novely je zasazen do období Velké hospodářské krize v USA.",
+"answer": true
+},
+{
+"id": "o-mysich-a-lidech-003", "type": "single", "topic": "autor-a-doba",
+"explanation": "Steinbeck se ve své tvorbě často zaměřoval na osudy chudých dělníků a migrantů.",
+"question": "Ve kterém státě USA se příběh odehrává?",
+"options": [
+{ "text": "Kalifornie", "correct": true },
+{ "text": "Texas", "correct": false },
+{ "text": "New York", "correct": false },
+{ "text": "Florida", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Steinbeckova díla často reflektují sociální nespravedlnost a boj za důstojnost.",
+"question": "Která témata se často objevují v Steinbeckově díle? (vyberte 2)",
+"options": [
+{ "text": "Sociální nespravedlnost", "correct": true },
+{ "text": "Osudy chudých dělníků", "correct": true },
+{ "text": "Vědeckofantastické technologie", "correct": false },
+{ "text": "Bohatství a luxus šlechty", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Název díla je inspirován básní 'To a Mouse' od Roberta Burnse.",
+"question": "Čím byl inspirován název novely?",
+"options": [
+{ "text": "Básní Roberta Burnse", "correct": true },
+{ "text": "Biblickým příběhem", "correct": false },
+{ "text": "Starou lidovou pověstí", "correct": false },
+{ "text": "Vlastním zážitkem autora", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Steinbeckova tvorba je silně ovlivněna naturalismem a realismem.",
+"statement": "Steinbeckova tvorba je čistě fantastická a nereálná.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-007", "type": "single", "topic": "postavy",
+"explanation": "George je chytrý a pragmatický, Lennie je fyzicky silný, ale mentálně postižený.",
+"question": "Která z hlavních postav je fyzicky silná, ale mentálně zaostalá?",
+"options": [
+{ "text": "George", "correct": false },
+{ "text": "Lennie", "correct": true },
+{ "text": "Candy", "correct": false },
+{ "text": "Slim", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-008", "type": "single", "topic": "postavy",
+"explanation": "George se o Lennieho stará, protože mu to slíbil jeho tetě.",
+"question": "Proč se George stará o Lennieho?",
+"options": [
+{ "text": "Jsou to bratři", "correct": false },
+{ "text": "Slíbil to Lennieho tetě", "correct": true },
+{ "text": "Lennie mu za to platí", "correct": false },
+{ "text": "Jsou to dávní přátelé ze školy", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-009", "type": "multiple", "topic": "postavy",
+"explanation": "Candy je starý dělník, který má pouze jednoho psa.",
+"question": "Co platí o postavě Candyho? (vyberte 2)",
+"options": [
+{ "text": "Je to starý dělník", "correct": true },
+{ "text": "Má pouze jednu ruku", "correct": true },
+{ "text": "Je to mladý agresivní muž", "correct": false },
+{ "text": "Je to majitel farmy", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-010", "type": "single", "topic": "postavy",
+"explanation": "Curley je syn majitele farmy, je malý a agresivní.",
+"question": "Kdo je Curley?",
+"options": [
+{ "text": "Majitel farmy", "correct": false },
+{ "text": "Syn majitele farmy", "correct": true },
+{ "text": "Hlavní dělník", "correct": false },
+{ "text": "Ošetřovatel koní", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-011", "type": "truefalse", "topic": "postavy",
+"explanation": "Curleyho žena je v knize osamělá a hledá pozornost, nemá ani jméno.",
+"statement": "Curleyho žena je spokojená se svým manželstvím.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-012", "type": "single", "topic": "postavy",
+"explanation": "Slim je uznávaný dělník, jehož slovo má na farmě váhu.",
+"question": "Kdo je na farmě přirozenou autoritou?",
+"options": [
+{ "text": "Curley", "correct": false },
+{ "text": "Slim", "correct": true },
+{ "text": "George", "correct": false },
+{ "text": "Lennie", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-013", "type": "multiple", "topic": "postavy",
+"explanation": "Lennie miluje věci, které jsou jemné na dotek, jako králíci.",
+"question": "Co má Lennie rád? (vyberte 2)",
+"options": [
+{ "text": "Měkké věci", "correct": true },
+{ "text": "Hladění králíků", "correct": true },
+{ "text": "Bojování s Curleym", "correct": false },
+{ "text": "Práci v kanceláři", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-014", "type": "truefalse", "topic": "postavy",
+"explanation": "Lennie neví, jak velkou má sílu, a proto nechtěně ubližuje.",
+"statement": "Lennie je od přírody zlý a úmyslně lidem ubližuje.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-015", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "George a Lennie sní o vlastním kousku země, kde budou chovat králíky.",
+"question": "Kolik peněz plánují George a Lennie našetřit na svou farmu (ve stovkách dolarů)?",
+"answer": 6,
+"tolerance": 1
+},
+{
+"id": "o-mysich-a-lidech-016", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Lennie omylem zabije Curleyho ženu při hlazení jejích vlasů.",
+"question": "Jak Lennie zabije Curleyho ženu?",
+"options": [
+{ "text": "Zastřelí ji", "correct": false },
+{ "text": "Zlomí jí vaz při hlazení vlasů", "correct": true },
+{ "text": "Utopí ji", "correct": false },
+{ "text": "Otráví ji", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-017", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Děj novely končí smrtí Lennieho, kterého George zastřelí, aby ho ušetřil trýznivé smrti.",
+"statement": "George na konci knihy Lennieho opustí a nechá ho napospas osudu.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-018", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Sen o vlastní farmě je symbolem naděje, která se ale v drsné realitě nenaplní.",
+"question": "Co symbolizuje sen o vlastní farmě?",
+"options": [
+{ "text": "Nezávislost a bezpečí", "correct": true },
+{ "text": "Touhu po moci", "correct": false },
+{ "text": "Nenávist ke společnosti", "correct": false },
+{ "text": "Snahu o získání majetku pro stát", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-019", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Hlavními motivy jsou osamělost lidí a křehkost jejich snů.",
+"question": "Jaké jsou hlavní motivy díla? (vyberte 2)",
+"options": [
+{ "text": "Osamělost a izolace", "correct": true },
+{ "text": "Křehkost lidských snů", "correct": true },
+{ "text": "Vítězství technologie nad přírodou", "correct": false },
+{ "text": "Radost z bohatství", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-020", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Candyho starý pes je symbolem toho, že v tomto světě přežijí jen ti nejsilnější.",
+"statement": "Candyho pes je v příběhu zachráněn a žije šťastně až do konce.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-021", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Lennieho smrt je nevyhnutelným vyústěním tragické situace, do které se dostal.",
+"question": "Proč George zastřelí Lennieho?",
+"options": [
+{ "text": "Protože už ho nemá rád", "correct": false },
+{ "text": "Aby ho ušetřil trýznivé smrti od Curleyho", "correct": true },
+{ "text": "Aby získal jeho peníze", "correct": false },
+{ "text": "Kvůli hádce o jídlo", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-022", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Steinbeckovo dílo je velmi krátké a úderné.",
+"question": "Kolik dní (přibližně) trvá děj celé novely?",
+"answer": 3,
+"tolerance": 1
+},
+{
+"id": "o-mysich-a-lidech-023", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Okolní svět je k postavám krutý a jejich sny jsou často odsouzeny k zániku.",
+"statement": "Všechny postavy v novele dosáhnou svých cílů.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Dílo je řazeno mezi novely kvůli svému rozsahu a soustředěnosti na jednu dějovou linii.",
+"question": "Jaký je žánr díla?",
+"options": [
+{ "text": "Román", "correct": false },
+{ "text": "Novela", "correct": true },
+{ "text": "Epos", "correct": false },
+{ "text": "Povídka", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Steinbeckův styl je prostý, jasný a plný dialogů, které vykreslují charaktery.",
+"question": "Co je typické pro Steinbeckův styl? (vyberte 2)",
+"options": [
+{ "text": "Prostý, věcný jazyk", "correct": true },
+{ "text": "Důraz na dialogy", "correct": true },
+{ "text": "Složitá básnická souvětí", "correct": false },
+{ "text": "Absence postav", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Příběh je vyprávěn v er-formě, autor se drží zpátky.",
+"question": "V jaké osobě je novela vyprávěna?",
+"options": [
+{ "text": "Ich-forma", "correct": false },
+{ "text": "Er-forma", "correct": true },
+{ "text": "Ty-forma", "correct": false },
+{ "text": "Střídá se er a ich-forma", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Kniha je známá tím, že je v ní minimum popisů vnitřních pocitů postav, vše se ukazuje skrze činy.",
+"statement": "Autor tráví většinu knihy popisem abstraktních pocitů postav.",
+"answer": false
+},
+{
+"id": "o-mysich-a-lidech-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Dílo kritizuje americkou realitu 30. let.",
+"question": "Co je hlavní umělecký záměr novely?",
+"options": [
+{ "text": "Pobavit čtenáře", "correct": false },
+{ "text": "Kriticky zobrazit realitu 30. let v USA", "correct": true },
+{ "text": "Oslavit úspěch farmářů", "correct": false },
+{ "text": "Vzdělávat o zemědělství", "correct": false }
+]
+},
+{
+"id": "o-mysich-a-lidech-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Dílo je pro svou dramatičnost často upravováno pro divadlo.",
+"statement": "Dílo je strukturováno podobně jako divadelní hra, děje se odehrávají v celcích.",
+"answer": true
+},
+{
+"id": "o-mysich-a-lidech-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Dílo má velmi sevřený děj, rozdělený do 6 kapitol.",
+"question": "Kolik kapitol má novela O myších a lidech?",
+"answer": 6,
+"tolerance": 0
+}
+]
+}

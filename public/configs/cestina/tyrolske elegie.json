@@ -1,0 +1,285 @@
+{
+"subject": "tyrolske-elegie",
+"name": "Tyrolské elegie",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Postavy a jejich role" },
+{ "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "tyrolske-elegie-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Karel Havlíček Borovský byl český novinář, básník a politik, který se stal symbolem boje proti absolutismu.",
+"question": "Kdo je autorem satirické básně Tyrolské elegie?",
+"options": [
+{ "text": "Karel Jaromír Erben", "correct": false },
+{ "text": "Karel Hynek Mácha", "correct": false },
+{ "text": "Karel Havlíček Borovský", "correct": true },
+{ "text": "Jan Neruda", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-002", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Havlíček byl za své názory násilně odvezen do vyhnanství v Brixenu.",
+"statement": "Karel Havlíček Borovský pobýval v Brixenu dobrovolně kvůli studiu.",
+"answer": false
+},
+{
+"id": "tyrolske-elegie-003", "type": "single", "topic": "autor-a-doba",
+"explanation": "Dílo reaguje na období Bachova absolutismu v Rakouském císařství.",
+"question": "Na jaké historické období dílo reaguje?",
+"options": [
+{ "text": "Husitské války", "correct": false },
+{ "text": "Bachův absolutismus", "correct": true },
+{ "text": "První světová válka", "correct": false },
+{ "text": "Národní obrození - počátky", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Havlíček kritizoval rakouskou policii, cenzuru a nespravedlivý režim.",
+"question": "Co Havlíček ve svém díle kritizuje? (vyberte 2)",
+"options": [
+{ "text": "Rakouskou policii a úřady", "correct": true },
+{ "text": "Cenzuru a nesvobodu", "correct": true },
+{ "text": "Zemědělskou techniku v Tyrolsku", "correct": false },
+{ "text": "Horskou turistiku", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Brixen je město v Tyrolsku, kam byl Havlíček deportován v roce 1851.",
+"question": "Ve kterém dnešním státě leží Brixen?",
+"options": [
+{ "text": "Rakousko", "correct": false },
+{ "text": "Itálie", "correct": true },
+{ "text": "Německo", "correct": false },
+{ "text": "Švýcarsko", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Havlíček v elegiích využívá ironii a humor jako zbraň proti útlaku.",
+"statement": "Havlíček ve své tvorbě často využíval satiru a ironii.",
+"answer": true
+},
+{
+"id": "tyrolske-elegie-007", "type": "single", "topic": "postavy",
+"explanation": "Hlavní postavou je sám autor (vypravěč), který líčí svou cestu do vyhnanství.",
+"question": "Kdo je hlavní postavou-vypravěčem?",
+"options": [
+{ "text": "Císař František Josef I.", "correct": false },
+{ "text": "Policejní komisař", "correct": false },
+{ "text": "Sám autor (Havlíček)", "correct": true },
+{ "text": "Tyrolský horal", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-008", "type": "single", "topic": "postavy",
+"explanation": "Jandarmi (četníci) jsou symbolem moci rakouského státu, kteří autora zatkli.",
+"question": "Jak jsou v díle vykresleni četníci (jandarmi)?",
+"options": [
+{ "text": "Jako přátelé autora", "correct": false },
+{ "text": "Jako ustrašení a komičtí vykonavatelé moci", "correct": true },
+{ "text": "Jako hrdinní vojáci", "correct": false },
+{ "text": "Jako mudrci", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-009", "type": "multiple", "topic": "postavy",
+"explanation": "Autor v díle ironizuje představitele moci, kteří se ho bojí.",
+"question": "Které postavy z mocenského aparátu v díle figurují? (vyberte 2)",
+"options": [
+{ "text": "Policejní komisař", "correct": true },
+{ "text": "Četníci (jandarmi)", "correct": true },
+{ "text": "Český král", "correct": false },
+{ "text": "Sousední sedlák", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-010", "type": "truefalse", "topic": "postavy",
+"explanation": "Havlíček se v textu nestaví do role mučedníka, ale člověka, který se režimu vysmívá.",
+"statement": "Autor se v básni stylizuje do role trpícího světce.",
+"answer": false
+},
+{
+"id": "tyrolske-elegie-011", "type": "single", "topic": "postavy",
+"explanation": "Četníci v díle jednají zmatečně, jsou vystrašeni autorovou přítomností i jeho myšlenkami.",
+"question": "Proč se četníci autora bojí?",
+"options": [
+{ "text": "Protože je fyzicky napadl", "correct": false },
+{ "text": "Protože je to 'politický' vězeň a nebezpečný kritik", "correct": true },
+{ "text": "Protože jim neplatí", "correct": false },
+{ "text": "Protože ho považují za ducha", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-012", "type": "single", "topic": "postavy",
+"explanation": "Autor často přímo oslovuje čtenáře a glosuje situaci.",
+"question": "Jak autor přistupuje k čtenáři v díle?",
+"options": [
+{ "text": "Ignoruje ho", "correct": false },
+{ "text": "Přímo ho oslovuje a vede dialog", "correct": true },
+{ "text": "Píše pouze pro sebe", "correct": false },
+{ "text": "Oslovuje pouze císaře", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-013", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Děj začíná přepadením v noci a pokračuje cestou do vyhnanství.",
+"question": "Jaké jsou hlavní dějové úseky básně? (vyberte 2)",
+"options": [
+{ "text": "Zatčení a přepadení v noci", "correct": true },
+{ "text": "Cesta do Brixenu", "correct": true },
+{ "text": "Velká námořní bitva", "correct": false },
+{ "text": "Svatba autora v Brixenu", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-014", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Elegie je původně žánr vyjadřující smutek, ale Havlíček ho paroduje.",
+"statement": "Báseň je vážným elegickým žalozpěvem bez humoru.",
+"answer": false
+},
+{
+"id": "tyrolske-elegie-015", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Havlíček byl do Brixenu deportován v roce 1851.",
+"question": "V kolik hodin v noci byli četníci u Havlíčka (dle vyprávění v úvodu básně)?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "tyrolske-elegie-016", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Autor vnímá cestu ironicky, popisuje absurditu situace.",
+"question": "Jaký tón převažuje při popisu cesty?",
+"options": [
+{ "text": "Patetický a tragický", "correct": false },
+{ "text": "Ironický a posměšný", "correct": true },
+{ "text": "Neutrální reportážní", "correct": false },
+{ "text": "Snový a fantazijní", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-017", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Jedním z hlavních motivů je kontrast mezi mocí úřadů a svobodou ducha.",
+"statement": "Dílo obsahuje motivy kritiky církve.",
+"answer": true
+},
+{
+"id": "tyrolske-elegie-018", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Dílo končí úvahami o situaci v Čechách a postavení autora ve vyhnanství.",
+"question": "Jakým způsobem báseň končí?",
+"options": [
+{ "text": "Autorovým útěkem domů", "correct": false },
+{ "text": "Úvahami o osudu a situaci v Čechách", "correct": true },
+{ "text": "Popravou autora", "correct": false },
+{ "text": "Omluvou císaři", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-019", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Dílo pracuje s prvky humoru a nadsázky, které znásobují ironický účinek.",
+"question": "Které prvky jsou v ději časté? (vyberte 2)",
+"options": [
+{ "text": "Humor a nadsázka", "correct": true },
+{ "text": "Parodie", "correct": true },
+{ "text": "Pravdivé historické datumy bez komentáře", "correct": false },
+{ "text": "Příliš dlouhé popisy počasí", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-020", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Havlíček se v elegiích přirovnává k svatému Janu Nepomuckému, což je ironické.",
+"statement": "Autor se v díle přirovnává ke světcům.",
+"answer": true
+},
+{
+"id": "tyrolske-elegie-021", "type": "single", "topic": "literarni-forma",
+"explanation": "Tyrolské elegie jsou satirickou skladbou, nikoliv tragickým elegickým žánrem.",
+"question": "Jaký je hlavní literární žánr díla?",
+"options": [
+{ "text": "Román", "correct": false },
+{ "text": "Satirická báseň (skladba)", "correct": true },
+{ "text": "Povídka", "correct": false },
+{ "text": "Drama", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-022", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Báseň je členěna na 9 částí (zpěvů), které mají stejnou formu.",
+"question": "Z kolika zpěvů (částí) se Tyrolské elegie skládají?",
+"answer": 9,
+"tolerance": 0
+},
+{
+"id": "tyrolske-elegie-023", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Báseň využívá lidový jazyk, aby byla přístupná všem vrstvám.",
+"statement": "Jazyk díla je velmi složitý, plný latinských výrazů.",
+"answer": false
+},
+{
+"id": "tyrolske-elegie-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Havlíček využívá pravidelný rytmus a rým.",
+"question": "Jaká je forma básně?",
+"options": [
+{ "text": "Volný verš", "correct": false },
+{ "text": "Rýmovaný, rytmický verš", "correct": true },
+{ "text": "Próza", "correct": false },
+{ "text": "Básně v próze", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Kombinace lidovosti a břitké ironie je pro Havlíčka typická.",
+"question": "Jaké stylové znaky báseň obsahuje? (vyberte 2)",
+"options": [
+{ "text": "Srozumitelný lidový jazyk", "correct": true },
+{ "text": "Ironie a satira", "correct": true },
+{ "text": "Složité metafory", "correct": false },
+{ "text": "Vzletný, vysoký styl", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Autor se v textu často obrací na čtenáře nebo na představitele moci.",
+"question": "Který z těchto prvků je pro formu díla typický?",
+"options": [
+{ "text": "Pravidelný sonet", "correct": false },
+{ "text": "Autorské glosy a vsuvky", "correct": true },
+{ "text": "Epický rozvláčný popis", "correct": false },
+{ "text": "Chybějící rým", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Havlíček píše o vážném tématu (vyhnanství) s humorem a nadhledem.",
+"statement": "Báseň je napsána pesimistickým tónem, který čtenáře zarmoutí.",
+"answer": false
+},
+{
+"id": "tyrolske-elegie-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Parodie je základním tvůrčím principem díla.",
+"question": "Co je parodováno názvem 'elegie'?",
+"options": [
+{ "text": "Svatba", "correct": false },
+{ "text": "Žánr elegie (smuteční báseň)", "correct": true },
+{ "text": "Císařský dvůr", "correct": false },
+{ "text": "Cestovní ruch", "correct": false }
+]
+},
+{
+"id": "tyrolske-elegie-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Dílo je ukázkou politické satiry.",
+"statement": "Dílo nemá žádný politický podtext.",
+"answer": false
+},
+{
+"id": "tyrolske-elegie-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Pravidelná struktura slok je pro Havlíčka typická.",
+"question": "Kolik veršů má obvykle jedna sloka v této básni?",
+"answer": 4,
+"tolerance": 0
+}
+]
+}

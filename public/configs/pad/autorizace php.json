@@ -1,0 +1,304 @@
+{
+"subject": "autentizace-autorizace",
+"name": "Autentizace a autorizace",
+"topics": [
+{ "id": "zaklady", "name": "Základy autentizace a autorizace" },
+{ "id": "session-cookies", "name": "Sessions a Cookies" },
+{ "id": "metody-auth", "name": "Autentizační metody" },
+{ "id": "tokeny-zabezpeceni", "name": "Tokeny a zabezpečení přenosu" },
+{ "id": "pristupova-prava", "name": "Správa přístupových práv" }
+],
+"questions": [
+{
+"id": "auth-001", "type": "single", "topic": "zaklady", "difficulty": 1,
+"explanation": "Autentizace (Authentication) je proces ověření identity uživatele (kdo jsi?), zatímco autorizace (Authorization) určuje, co uživatel smí v systému dělat (co můžeš?).",
+"question": "Jaký je hlavní rozdíl mezi autentizací a autorizací?",
+"options": [
+{ "text": "Autentizace ověřuje identitu, autorizace práva", "correct": true },
+{ "text": "Autorizace ověřuje identitu, autentizace práva", "correct": false },
+{ "text": "Jsou to synonyma", "correct": false },
+{ "text": "Autentizace je šifrování, autorizace je přístup", "correct": false }
+]
+},
+{
+"id": "auth-002", "type": "truefalse", "topic": "zaklady", "difficulty": 1,
+"explanation": "Autentizace probíhá dříve. Systém musí nejdříve vědět, kdo jste, aby mohl rozhodnout, jaká práva vám přidělí.",
+"statement": "V procesu přihlášení uživatele do systému probíhá autorizace vždy dříve než autentizace.",
+"answer": false
+},
+{
+"id": "auth-003", "type": "single", "topic": "zaklady", "difficulty": 2,
+"explanation": "Principy 3A (Authentication, Authorization, Accounting) jsou základem bezpečnosti v IT.",
+"question": "Který pojem doplňuje trojici A, A, A v bezpečnosti (Authentication, Authorization, ...)?",
+"options": [
+{ "text": "Accounting (Auditování)", "correct": true },
+{ "text": "Access (Přístup)", "correct": false },
+{ "text": "Application (Aplikace)", "correct": false },
+{ "text": "Algorithm (Algoritmus)", "correct": false }
+]
+},
+{
+"id": "auth-004", "type": "single", "topic": "session-cookies", "difficulty": 2,
+"explanation": "Cookie je malý textový soubor, který server ukládá do prohlížeče klienta. Používá se pro udržení stavu (např. session ID).",
+"question": "Co je to cookie v kontextu webových aplikací?",
+"options": [
+{ "text": "Databáze uložená na serveru", "correct": false },
+{ "text": "Malý textový soubor uložený v prohlížeči uživatele", "correct": true },
+{ "text": "Sada uživatelských hesel", "correct": false },
+{ "text": "Program běžící na serveru", "correct": false }
+]
+},
+{
+"id": "auth-005", "type": "single", "topic": "session-cookies", "difficulty": 2,
+"explanation": "Session proměnné jsou uloženy na serveru a klient o nich ví pouze skrze tzv. session ID, které je často přenášeno pomocí cookie.",
+"question": "Kde jsou primárně uložena data session proměnných?",
+"options": [
+{ "text": "V prohlížeči uživatele (stejně jako cookies)", "correct": false },
+{ "text": "V paměti nebo na disku serveru", "correct": true },
+{ "text": "V DNS záznamech", "correct": false },
+{ "text": "V lokálním souboru systému uživatele", "correct": false }
+]
+},
+{
+"id": "auth-006", "type": "multiple", "topic": "session-cookies", "difficulty": 2,
+"explanation": "Session zaniká po zavření prohlížeče nebo po uplynutí nastaveného času (timeout), zatímco cookies mohou mít nastavenou dlouhou expiraci.",
+"question": "Jaké jsou typické vlastnosti session oproti cookies? (Vyberte všechny správné)",
+"options": [
+{ "text": "Data jsou bezpečnější, protože nejsou přímo u klienta", "correct": true },
+{ "text": "Session automaticky zaniká (např. při zavření prohlížeče)", "correct": true },
+{ "text": "Cookies jsou vždy bezpečnější než session", "correct": false },
+{ "text": "Session se ukládá do cache prohlížeče", "correct": false }
+]
+},
+{
+"id": "auth-007", "type": "truefalse", "topic": "session-cookies", "difficulty": 2,
+"explanation": "Pokud session neexistuje (např. vypršela nebo nebyla vytvořena), přístup ke chráněným datům by měl být odepřen.",
+"statement": "Při programování práce se session je nutné vždy kontrolovat, zda session existuje, před pokusem o čtení jejích hodnot.",
+"answer": true
+},
+{
+"id": "auth-008", "type": "single", "topic": "session-cookies", "difficulty": 3,
+"explanation": "HttpOnly cookie je příznak, který brání JavaScriptu přistoupit k dané cookie, což snižuje riziko XSS útoků.",
+"question": "K čemu slouží příznak 'HttpOnly' u cookie?",
+"options": [
+{ "text": "Aby byla cookie čitelná pouze přes HTTPS", "correct": false },
+{ "text": "Aby cookie nebylo možné číst pomocí JavaScriptu", "correct": true },
+{ "text": "Aby cookie expiruje po jedné hodině", "correct": false },
+{ "text": "Aby byla cookie sdílena mezi doménami", "correct": false }
+]
+},
+{
+"id": "auth-009", "type": "single", "topic": "metody-auth", "difficulty": 1,
+"explanation": "MFA vyžaduje alespoň dva různé faktory (např. heslo + kód z aplikace), což výrazně zvyšuje bezpečnost.",
+"question": "Co znamená zkratka MFA (Multi-Factor Authentication)?",
+"options": [
+{ "text": "Vícestupňové ověření identity", "correct": true },
+{ "text": "Vícenásobná filtrace adres", "correct": false },
+{ "text": "Masivní šifrovací algoritmus", "correct": false },
+{ "text": "Mechanism for Access", "correct": false }
+]
+},
+{
+"id": "auth-010", "type": "multiple", "topic": "metody-auth", "difficulty": 2,
+"explanation": "Faktory autentizace se dělí na: něco, co víte (heslo), něco, co máte (token/telefon), a něco, čím jste (biometrie).",
+"question": "Které z následujících patří mezi faktory autentizace? (Vyberte všechny správné)",
+"options": [
+{ "text": "Znalost (heslo, PIN)", "correct": true },
+{ "text": "Vlastnictví (mobilní telefon, čipová karta)", "correct": true },
+{ "text": "Inherence (biometrie – otisk prstu)", "correct": true },
+{ "text": "Prohlížeč, který používáte", "correct": false }
+]
+},
+{
+"id": "auth-011", "type": "single", "topic": "metody-auth", "difficulty": 3,
+"explanation": "OAuth 2.0 je autorizační protokol, který umožňuje aplikacím získat přístup k datům uživatele (např. u Google) bez nutnosti znát jeho heslo.",
+"question": "Který protokol se běžně používá pro 'Přihlášení přes Facebook/Google'?",
+"options": [
+{ "text": "OAuth 2.0", "correct": true },
+{ "text": "HTTPS", "correct": false },
+{ "text": "FTP", "correct": false },
+{ "text": "SQL", "correct": false }
+]
+},
+{
+"id": "auth-012", "type": "truefalse", "topic": "metody-auth", "difficulty": 2,
+"explanation": "Biometrie není 100% spolehlivá, proto se obvykle používá jako jeden z faktorů v MFA, nikoliv jako jediný prostředek.",
+"statement": "Biometrické údaje (otisk prstu, obličej) jsou vždy 100% bezpečné a nelze je zfalšovat.",
+"answer": false
+},
+{
+"id": "auth-013", "type": "single", "topic": "tokeny-zabezpeceni", "difficulty": 3,
+"explanation": "JWT (JSON Web Token) obsahuje informace o uživateli podepsané digitálním podpisem, což umožňuje ověření identity bez dotazu do databáze při každém požadavku.",
+"question": "Co je hlavní výhodou používání JWT (JSON Web Token)?",
+"options": [
+{ "text": "Je velmi velký a bezpečný", "correct": false },
+{ "text": "Umožňuje bezstavovou autentizaci (stateless)", "correct": true },
+{ "text": "Automaticky maže historii prohlížeče", "correct": false },
+{ "text": "Je to náhrada za heslo uživatele", "correct": false }
+]
+},
+{
+"id": "auth-014", "type": "truefalse", "topic": "tokeny-zabezpeceni", "difficulty": 2,
+"explanation": "HTTPS šifruje data při přenosu, což je kritické pro ochranu přenášených hesel nebo session tokenů před odposlechem.",
+"statement": "Použití protokolu HTTPS je pro bezpečnost přihlašovacích údajů naprosto nezbytné.",
+"answer": true
+},
+{
+"id": "auth-015", "type": "single", "topic": "tokeny-zabezpeceni", "difficulty": 2,
+"explanation": "Sůl (salt) je náhodná data přidaná k heslu před hashováním, což chrání proti útokům pomocí duhových tabulek (předem vypočítané hashe).",
+"question": "K čemu slouží tzv. 'sůl' (salt) při ukládání hesel?",
+"options": [
+{ "text": "K rychlejšímu přihlášení", "correct": false },
+{ "text": "K ochraně proti útokům duhovými tabulkami", "correct": true },
+{ "text": "K šifrování databáze", "correct": false },
+{ "text": "Ke generování nového hesla", "correct": false }
+]
+},
+{
+"id": "auth-016", "type": "numeric", "topic": "tokeny-zabezpeceni", "difficulty": 2,
+"explanation": "Moderní standardy často doporučují minimálně 12 znaků pro silné heslo, aby se ztížila možnost brute-force útoku.",
+"question": "Kolik znaků by mělo mít minimálně silné heslo podle moderních doporučení?",
+"answer": 12,
+"tolerance": 2
+},
+{
+"id": "auth-017", "type": "single", "topic": "tokeny-zabezpeceni", "difficulty": 3,
+"explanation": "Hashování (např. bcrypt, Argon2) je jednosměrná funkce. Z hashe nelze získat původní heslo.",
+"question": "Co je charakteristické pro hashování hesel?",
+"options": [
+{ "text": "Je to vratný proces (lze dešifrovat)", "correct": false },
+{ "text": "Je to nevratný proces", "correct": true },
+{ "text": "Hashuje se pouze uživatelské jméno", "correct": false },
+{ "text": "Je to stejné jako šifrování", "correct": false }
+]
+},
+{
+"id": "auth-018", "type": "multiple", "topic": "pristupova-prava", "difficulty": 2,
+"explanation": "RBAC (Role-Based Access Control) přiřazuje práva rolím (admin, editor), zatímco ACL (Access Control List) přiřazuje práva přímo konkrétním uživatelům nebo objektům.",
+"question": "Které metody se používají pro řízení přístupu? (Vyberte všechny správné)",
+"options": [
+{ "text": "RBAC (Role-Based Access Control)", "correct": true },
+{ "text": "ACL (Access Control List)", "correct": true },
+{ "text": "MFA (Multi-Factor Authentication)", "correct": false },
+{ "text": "HTTPS", "correct": false }
+]
+},
+{
+"id": "auth-019", "type": "single", "topic": "pristupova-prava", "difficulty": 2,
+"explanation": "Princip nejnižších privilegií (Principle of Least Privilege) říká, že uživatel má mít pouze taková práva, která nezbytně potřebuje ke své práci.",
+"question": "Jak se nazývá princip, podle kterého má uživatel dostat jen nezbytně nutná práva?",
+"options": [
+{ "text": "Princip nejnižších privilegií", "correct": true },
+{ "text": "Princip maximální svobody", "correct": false },
+{ "text": "Administrátorský princip", "correct": false },
+{ "text": "Princip otevřenosti", "correct": false }
+]
+},
+{
+"id": "auth-020", "type": "truefalse", "topic": "pristupova-prava", "difficulty": 3,
+"explanation": "Pokud uživatel v systému 'admin' odstraní svou roli, ztratí práva, která byla k této roli vázána.",
+"statement": "V systému založeném na RBAC jsou práva vázána na role, nikoliv přímo na jednotlivé uživatele.",
+"answer": true
+},
+{
+"id": "auth-021", "type": "single", "topic": "zaklady", "difficulty": 1,
+"explanation": "Protokol HTTP je bezestavový (stateless), proto se pro udržení přihlášení používají techniky jako session nebo tokeny.",
+"question": "Jakou vlastnost má protokol HTTP, kvůli které potřebujeme session/cookies pro přihlášení?",
+"options": [
+{ "text": "Je bezestavový (stateless)", "correct": true },
+{ "text": "Je velmi pomalý", "correct": false },
+{ "text": "Je vázán pouze na jeden prohlížeč", "correct": false },
+{ "text": "Neumožňuje přenos dat", "correct": false }
+]
+},
+{
+"id": "auth-022", "type": "single", "topic": "session-cookies", "difficulty": 3,
+"explanation": "Session hijacking je útok, při kterém útočník ukradne session cookie uživatele a získá tak přístup k jeho účtu.",
+"question": "Co je to Session Hijacking?",
+"options": [
+{ "text": "Krádež session cookie a zosobnění uživatele", "correct": true },
+{ "text": "Smazání všech session na serveru", "correct": false },
+{ "text": "Útok na databázi serveru", "correct": false },
+{ "text": "Pomalé načítání webové stránky", "correct": false }
+]
+},
+{
+"id": "auth-023", "type": "single", "topic": "metody-auth", "difficulty": 2,
+"explanation": "Jednorázové heslo (OTP - One Time Password) je kód platný pouze pro jedno přihlášení, často zasílaný přes SMS nebo generovaný aplikací.",
+"question": "Co je to OTP (One Time Password)?",
+"options": [
+{ "text": "Heslo, které se nikdy nemění", "correct": false },
+{ "text": "Jednorázové heslo platné pro jeden přístup", "correct": true },
+{ "text": "Hlavní heslo administrátora", "correct": false },
+{ "text": "Typ šifrování databáze", "correct": false }
+]
+},
+{
+"id": "auth-024", "type": "truefalse", "topic": "tokeny-zabezpeceni", "difficulty": 2,
+"explanation": "Stále je dobré hashovat hesla, protože pokud dojde k úniku databáze, útočník nezíská hesla v čitelné podobě.",
+"statement": "Pokud je databáze správně zašifrovaná (TDE), nemusíme hesla v databázi hashovat.",
+"answer": false
+},
+{
+"id": "auth-025", "type": "single", "topic": "pristupova-prava", "difficulty": 3,
+"explanation": "ABAC (Attribute-Based Access Control) rozhoduje o přístupu na základě atributů (např. čas, lokalita, typ zařízení), což je flexibilnější než RBAC.",
+"question": "Který model řízení přístupu je založen na atributech (např. čas, lokalita)?",
+"options": [
+{ "text": "RBAC", "correct": false },
+{ "text": "ABAC", "correct": true },
+{ "text": "MAC", "correct": false },
+{ "text": "ACL", "correct": false }
+]
+},
+{
+"id": "auth-026", "type": "single", "topic": "session-cookies", "difficulty": 2,
+"explanation": "Session ID je náhodný identifikátor, který spojuje uživatele s jeho daty na serveru.",
+"question": "Jakou roli hraje Session ID?",
+"options": [
+{ "text": "Identifikuje uživatele na serveru", "correct": true },
+{ "text": "Šifruje celé heslo uživatele", "correct": false },
+{ "text": "Je to název prohlížeče uživatele", "correct": false },
+{ "text": "Definuje práva uživatele", "correct": false }
+]
+},
+{
+"id": "auth-027", "type": "single", "topic": "tokeny-zabezpeceni", "difficulty": 3,
+"explanation": "Brute-force útok je metoda, při které se útočník pokouší uhodnout heslo zkoušením všech možných kombinací znaků.",
+"question": "Co je to Brute-force útok?",
+"options": [
+{ "text": "Zkoušení všech možných kombinací hesla", "correct": true },
+{ "text": "Útok na šifrovaný přenos HTTPS", "correct": false },
+{ "text": "Změna kódu aplikace", "correct": false },
+{ "text": "Získání přístupu přes sociální inženýrství", "correct": false }
+]
+},
+{
+"id": "auth-028", "type": "truefalse", "topic": "zaklady", "difficulty": 2,
+"explanation": "Anonymní uživatel není autentizovaný. Autorizace může být nastavena tak, že anonymní uživatelé mají velmi omezený přístup (např. jen čtení).",
+"statement": "Autorizace může být nastavena i pro uživatele, kteří nejsou autentizovaní (anonymní).",
+"answer": true
+},
+{
+"id": "auth-029", "type": "single", "topic": "metody-auth", "difficulty": 2,
+"explanation": "CAPTCHA je test, který rozliší člověka od stroje (bota).",
+"question": "K čemu slouží CAPTCHA na přihlašovacím formuláři?",
+"options": [
+{ "text": "K zabránění automatizovaným útokům (botům)", "correct": true },
+{ "text": "Ke zrychlení přihlášení", "correct": false },
+{ "text": "K šifrování databáze", "correct": false },
+{ "text": "K ověření identity uživatele", "correct": false }
+]
+},
+{
+"id": "auth-030", "type": "single", "topic": "session-cookies", "difficulty": 3,
+"explanation": "Pokud uživatel zavře prohlížeč, session cookie (pokud nemá nastavený čas expirace) je prohlížečem smazána, čímž uživatel ztrácí přístup k session na serveru.",
+"question": "Co se stane se session cookie při zavření prohlížeče (pokud není nastavena expirace)?",
+"options": [
+{ "text": "Je smazána prohlížečem", "correct": true },
+{ "text": "Zůstává uložena na disku serveru navždy", "correct": false },
+{ "text": "Přesune se do cache", "correct": false },
+{ "text": "Nic, prohlížeč ji ignoruje", "correct": false }
+]
+}
+]
+}

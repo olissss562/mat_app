@@ -1,0 +1,278 @@
+{
+  "subject": "databaze",
+  "name": "Databáze",
+  "topics": [
+    { "id": "druhy-db", "name": "Druhy databází" },
+    { "id": "relacni-model", "name": "Relační model" },
+    { "id": "navrh-norm", "name": "Návrh a normalizace" },
+    { "id": "indexace", "name": "Ukládání a indexování" },
+    { "id": "erd-pripad", "name": "Příklad: IT středisko" }
+  ],
+  "questions": [
+    {
+      "id": "db-001", "type": "single", "topic": "druhy-db",
+      "explanation": "Relační databáze (RDBMS) využívají tabulky se schématem, zatímco NoSQL jsou flexibilnější.",
+      "question": "Co je základním stavebním prvkem relační databáze?",
+      "options": [
+        { "text": "Dokument", "correct": false },
+        { "text": "Tabulka (relace)", "correct": true },
+        { "text": "Graf", "correct": false },
+        { "text": "Key-value pár", "correct": false }
+      ]
+    },
+    {
+      "id": "db-002", "type": "truefalse", "topic": "druhy-db",
+      "explanation": "NoSQL databáze se často používají pro velké objemy nestrukturovaných dat, kde se SQL schema mění příliš často.",
+      "statement": "NoSQL databáze vždy vyžadují striktní schéma (tabulky a relace).",
+      "answer": false
+    },
+    {
+      "id": "db-003", "type": "single", "topic": "relacni-model",
+      "explanation": "Primární klíč (Primary Key) jednoznačně identifikuje řádek v tabulce.",
+      "question": "Jak se nazývá sloupec jednoznačně identifikující záznam v tabulce?",
+      "options": [
+        { "text": "Cizí klíč", "correct": false },
+        { "text": "Primární klíč", "correct": true },
+        { "text": "Index", "correct": false },
+        { "text": "Unikátní index", "correct": false }
+      ]
+    },
+    {
+      "id": "db-004", "type": "multiple", "topic": "relacni-model",
+      "explanation": "Cizí klíč (Foreign Key) vytváří vazbu mezi tabulkami.",
+      "question": "Jaké jsou účely cizího klíče? (vyberte 2)",
+      "options": [
+        { "text": "Propojení dvou tabulek", "correct": true },
+        { "text": "Zajištění referenční integrity", "correct": true },
+        { "text": "Urychlení vyhledávání", "correct": false },
+        { "text": "Změna datového typu", "correct": false }
+      ]
+    },
+    {
+      "id": "db-005", "type": "numeric", "topic": "navrh-norm",
+      "explanation": "Třetí normální forma (3NF) odstraňuje tranzitivní závislosti.",
+      "question": "Jakou normální formu (číslo) považujeme za standard pro dobře navrženou DB?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "db-006", "type": "single", "topic": "navrh-norm",
+      "explanation": "Normalizace redukuje redundanci dat a tím předchází anomáliím při zápisu/aktualizaci.",
+      "question": "Co je hlavním cílem normalizace databáze?",
+      "options": [
+        { "text": "Snížení redundance (duplicit) dat", "correct": true },
+        { "text": "Zrychlení zápisu dat", "correct": false },
+        { "text": "Větší velikost souborů", "correct": false },
+        { "text": "Změna SQL dotazů", "correct": false }
+      ]
+    },
+    {
+      "id": "db-007", "type": "truefalse", "topic": "indexace",
+      "explanation": "Indexy zrychlují vyhledávání (SELECT), ale zpomalují zápis (INSERT/UPDATE/DELETE).",
+      "statement": "Indexy v databázi zrychlují operaci vkládání (INSERT).",
+      "answer": false
+    },
+    {
+      "id": "db-008", "type": "single", "topic": "indexace",
+      "explanation": "Datové struktury jako B-stromy (B-Trees) jsou standardem pro ukládání indexů.",
+      "question": "Jaká struktura se typicky používá pro implementaci indexů?",
+      "options": [
+        { "text": "B-strom (B-tree)", "correct": true },
+        { "text": "Zásobník", "correct": false },
+        { "text": "Fronta", "correct": false },
+        { "text": "Lineární seznam", "correct": false }
+      ]
+    },
+    {
+      "id": "db-009", "type": "multiple", "topic": "druhy-db",
+      "explanation": "NoSQL databáze zahrnují dokumentové, klíč-hodnota nebo grafové databáze.",
+      "question": "Jaké typy NoSQL databází existují? (vyberte 2)",
+      "options": [
+        { "text": "Dokumentové", "correct": true },
+        { "text": "Grafové", "correct": true },
+        { "text": "SQL-Tabulkové", "correct": false },
+        { "text": "Relační s vazbou", "correct": false }
+      ]
+    },
+    {
+      "id": "db-010", "type": "numeric", "topic": "erd-pripad",
+      "explanation": "Vztah mezi studentem a školením je obvykle M:N (mnoho ku mnoha), což vyžaduje vazební tabulku.",
+      "question": "Kolik tabulek minimálně potřebujeme pro zobrazení vztahu M:N (student-školení)?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "db-011", "type": "truefalse", "topic": "erd-pripad",
+      "explanation": "V IT středisku je vazba mezi lektorem a školením typu 1:N (jeden lektor vede více školení).",
+      "statement": "Vztah 'Lektor vede Školení' je typicky 1:N.",
+      "answer": true
+    },
+    {
+      "id": "db-012", "type": "single", "topic": "erd-pripad",
+      "explanation": "Pokud každá učebna má seznam vybavení, jde o relaci 1:N (jedna učebna, mnoho kusů vybavení).",
+      "question": "Jaký typ relace je mezi Učebnou a jejím Vybavením?",
+      "options": [
+        { "text": "1:1", "correct": false },
+        { "text": "1:N", "correct": true },
+        { "text": "M:N", "correct": false },
+        { "text": "Bez relace", "correct": false }
+      ]
+    },
+    {
+      "id": "db-013", "type": "multiple", "topic": "relacni-model",
+      "explanation": "SQL (Structured Query Language) je standardní jazyk pro relační DB.",
+      "question": "Co patří mezi základní operace SQL? (vyberte 2)",
+      "options": [
+        { "text": "SELECT", "correct": true },
+        { "text": "UPDATE", "correct": true },
+        { "text": "FIND_OBJECT", "correct": false },
+        { "text": "INDEX_ALL", "correct": false }
+      ]
+    },
+    {
+      "id": "db-014", "type": "truefalse", "topic": "indexace",
+      "explanation": "Příliš mnoho indexů zpomaluje zápis a zabírá místo na disku.",
+      "statement": "Indexování všech sloupců v tabulce je vždy nejlepší volbou pro výkon.",
+      "answer": false
+    },
+    {
+      "id": "db-015", "type": "numeric", "topic": "navrh-norm",
+      "explanation": "Normalizační proces má primárně 3 základní formy (1NF, 2NF, 3NF).",
+      "question": "Kolik je základních (nejčastěji používaných) normálních forem?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "db-016", "type": "single", "topic": "druhy-db",
+      "explanation": "ACID zaručuje spolehlivost transakcí v relačních databázích.",
+      "question": "Co zaručuje zkratka ACID?",
+      "options": [
+        { "text": "Spolehlivost transakcí", "correct": true },
+        { "text": "Velikost tabulky", "correct": false },
+        { "text": "Počet indexů", "correct": false },
+        { "text": "Jazyk pro dotazování", "correct": false }
+      ]
+    },
+    {
+      "id": "db-017", "type": "truefalse", "topic": "relacni-model",
+      "explanation": "NULL hodnota reprezentuje chybějící hodnotu, není to 0 ani prázdný řetězec.",
+      "statement": "Hodnota NULL je v databázi ekvivalentní číslu 0.",
+      "answer": false
+    },
+    {
+      "id": "db-018", "type": "single", "topic": "erd-pripad",
+      "explanation": "Specializace lektora je vlastnost, kterou lektor má (např. 'java-OOP').",
+      "question": "Kde byste v ER diagramu IT střediska uložili specializaci lektora?",
+      "options": [
+        { "text": "V tabulce Lektor", "correct": true },
+        { "text": "V tabulce Školení", "correct": false },
+        { "text": "V tabulce Učebna", "correct": false },
+        { "text": "V tabulce Zařízení", "correct": false }
+      ]
+    },
+    {
+      "id": "db-019", "type": "multiple", "topic": "indexace",
+      "explanation": "Cluster index určuje fyzické pořadí dat na disku.",
+      "question": "Jaké typy indexů známe? (vyberte 2)",
+      "options": [
+        { "text": "Clustered", "correct": true },
+        { "text": "Non-clustered", "correct": true },
+        { "text": "Hard-index", "correct": false },
+        { "text": "Soft-index", "correct": false }
+      ]
+    },
+    {
+      "id": "db-020", "type": "truefalse", "topic": "druhy-db",
+      "explanation": "NoSQL databáze jsou často distribuované a škálovatelné.",
+      "statement": "NoSQL databáze se obtížněji škálují než relační databáze.",
+      "answer": false
+    },
+    {
+      "id": "db-021", "type": "single", "topic": "relacni-model",
+      "explanation": "Cizí klíč musí odkazovat na primární klíč v jiné tabulce.",
+      "question": "Na co odkazuje cizí klíč?",
+      "options": [
+        { "text": "Na primární klíč jiné tabulky", "correct": true },
+        { "text": "Na název tabulky", "correct": false },
+        { "text": "Na index v paměti", "correct": false },
+        { "text": "Na nic", "correct": false }
+      ]
+    },
+    {
+      "id": "db-022", "type": "numeric", "topic": "navrh-norm",
+      "explanation": "1NF vyžaduje atomické hodnoty (v jednom poli není seznam).",
+      "question": "Jak se nazývá první normální forma?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "db-023", "type": "truefalse", "topic": "erd-pripad",
+      "explanation": "Vazební tabulka (např. Studenti_Skoleni) je nutná pro realizaci vztahu M:N.",
+      "statement": "Pro vztah M:N potřebujeme v relační databázi vazební tabulku.",
+      "answer": true
+    },
+    {
+      "id": "db-024", "type": "single", "topic": "navrh-norm",
+      "explanation": "Redundance dat způsobuje, že jedna informace je uložena na více místech, což vede k nekonzistenci.",
+      "question": "Co je to redundance dat?",
+      "options": [
+        { "text": "Duplicita (nadbytečnost) dat", "correct": true },
+        { "text": "Ztráta dat", "correct": false },
+        { "text": "Zabezpečení dat", "correct": false },
+        { "text": "Kódování dat", "correct": false }
+      ]
+    },
+    {
+      "id": "db-025", "type": "multiple", "topic": "druhy-db",
+      "explanation": "Příklady relačních DB: MySQL, PostgreSQL, Oracle.",
+      "question": "Které z nich jsou relační databáze? (vyberte 2)",
+      "options": [
+        { "text": "MySQL", "correct": true },
+        { "text": "PostgreSQL", "correct": true },
+        { "text": "MongoDB", "correct": false },
+        { "text": "Redis", "correct": false }
+      ]
+    },
+    {
+      "id": "db-026", "type": "single", "topic": "indexace",
+      "explanation": "Full table scan znamená, že databáze musí projít všechny řádky tabulky, protože neexistuje vhodný index.",
+      "question": "Co se stane, pokud při hledání neexistuje vhodný index?",
+      "options": [
+        { "text": "Full table scan", "correct": true },
+        { "text": "Zrychlení dotazu", "correct": false },
+        { "text": "Automatické vytvoření indexu", "correct": false },
+        { "text": "Chyba dotazu", "correct": false }
+      ]
+    },
+    {
+      "id": "db-027", "type": "truefalse", "topic": "relacni-model",
+      "explanation": "JOIN je operace, která spojuje řádky z více tabulek na základě společného sloupce.",
+      "statement": "Operace JOIN slouží ke spojování dat z více tabulek.",
+      "answer": true
+    },
+    {
+      "id": "db-028", "type": "single", "topic": "erd-pripad",
+      "explanation": "Školení má konkrétní obsah, který je v našem případě definován (Java, JS).",
+      "question": "Jaký vztah je mezi Školením a Lektorem?",
+      "options": [
+        { "text": "Jeden lektor může vést více školení", "correct": true },
+        { "text": "Školení vede více lektorů současně (vždy)", "correct": false },
+        { "text": "Školení nemá lektora", "correct": false },
+        { "text": "Lektor nemá školení", "correct": false }
+      ]
+    },
+    {
+      "id": "db-029", "type": "truefalse", "topic": "navrh-norm",
+      "explanation": "Normalizace je kompromis mezi redundancí a výkonem (příliš mnoho JOINů může zpomalit čtení).",
+      "statement": "Normalizace je vždy výhodná a nemá žádné nevýhody.",
+      "answer": false
+    },
+    {
+      "id": "db-030", "type": "numeric", "topic": "erd-pripad",
+      "explanation": "Potřebujeme evidovat: Zařízení, Učebny, Lektoři, Školení, Lidé, plus vazební tabulky.",
+      "question": "Kolik minimálně hlavních entit (tabulek) by mělo mít IT středisko?",
+      "answer": 5,
+      "tolerance": 1
+    }
+  ]
+}

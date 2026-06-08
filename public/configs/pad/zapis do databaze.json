@@ -1,0 +1,305 @@
+{
+"subject": "zapis-do-databaze",
+"name": "Zápis do databáze",
+"topics": [
+{ "id": "formulare", "name": "Formuláře a zpracování" },
+{ "id": "zabezpeceni", "name": "Zabezpečení a validace" },
+{ "id": "db-zapis", "name": "Práce s databází - zápis" },
+{ "id": "http-metody", "name": "HTTP metody a přenos" },
+{ "id": "databazove-typy", "name": "Databázové typy a ENUM" }
+],
+"questions": [
+{
+"id": "zapis-001", "type": "single", "topic": "db-zapis", "difficulty": 1,
+"explanation": "Příkaz INSERT INTO se používá k přidání nového řádku do tabulky v SQL.",
+"question": "Který SQL příkaz se používá pro zápis nových dat do tabulky?",
+"options": [
+{ "text": "SELECT", "correct": false },
+{ "text": "UPDATE", "correct": false },
+{ "text": "INSERT INTO", "correct": true },
+{ "text": "DELETE", "correct": false }
+]
+},
+{
+"id": "zapis-002", "type": "single", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "Prepared Statements (připravené dotazy) oddělují logiku SQL dotazu od dat, což znemožňuje útočníkovi vložit vlastní kód (SQL Injection).",
+"question": "Co je nejlepší ochranou proti SQL Injection při zápisu dat?",
+"options": [
+{ "text": "Použití JavaScriptu", "correct": false },
+{ "text": "Použití připravených dotazů (Prepared Statements)", "correct": true },
+{ "text": "Převedení všech dat na malá písmena", "correct": false },
+{ "text": "Zakázání zápisu do databáze", "correct": false }
+]
+},
+{
+"id": "zapis-003", "type": "multiple", "topic": "http-metody", "difficulty": 1,
+"explanation": "Metoda POST je pro odesílání dat do formulářů bezpečnější, protože data nejsou viditelná v URL a mají větší limit velikosti.",
+"question": "Proč je metoda POST vhodnější pro odesílání formulářů? (Vyberte všechny správné)",
+"options": [
+{ "text": "Data nejsou součástí URL adresy", "correct": true },
+{ "text": "Je vhodná pro odesílání citlivých údajů", "correct": true },
+{ "text": "Je rychlejší než GET", "correct": false },
+{ "text": "Automaticky šifruje všechna data", "correct": false }
+]
+},
+{
+"id": "zapis-004", "type": "single", "topic": "databazove-typy", "difficulty": 2,
+"explanation": "ENUM definuje seznam povolených hodnot, které sloupec může obsahovat. Jiné hodnoty databáze odmítne.",
+"question": "Jaký je hlavní účel typu ENUM v databázi?",
+"options": [
+{ "text": "Automatické formátování textu", "correct": false },
+{ "text": "Omezení hodnot sloupce na definovaný seznam", "correct": true },
+{ "text": "Zrychlení vyhledávání", "correct": false },
+{ "text": "Umožňuje ukládání neomezeného počtu znaků", "correct": false }
+]
+},
+{
+"id": "zapis-005", "type": "truefalse", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "Validace na straně klienta (JavaScript) je pouze pro uživatelskou přívětivost. Útočník ji může obejít, proto je nutná validace na straně serveru.",
+"statement": "Validaci uživatelských vstupů stačí provést pouze v JavaScriptu v prohlížeči uživatele.",
+"answer": false
+},
+{
+"id": "zapis-006", "type": "numeric", "topic": "formulare", "difficulty": 1,
+"explanation": "HTML formulář potřebuje metodu odeslání (method) a cílovou URL (action).",
+"question": "Kolik povinných základních atributů má obvykle tag  pro odeslání dat?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "zapis-007", "type": "single", "topic": "db-zapis", "difficulty": 2,
+"explanation": "Při zápisu dat je nutné mít aktivní spojení s databází, obvykle pomocí PDO v PHP.",
+"question": "Jaká je základní podmínka pro úspěšný zápis do databáze?",
+"options": [
+{ "text": "Vypnutý firewall", "correct": false },
+{ "text": "Existující a aktivní spojení s databází", "correct": true },
+{ "text": "Přihlášený administrátor", "correct": false },
+{ "text": "Otevřený soubor s databází v Excelu", "correct": false }
+]
+},
+{
+"id": "zapis-008", "type": "single", "topic": "databazove-typy", "difficulty": 3,
+"explanation": "Typ DATE v MySQL ukládá datum ve formátu YYYY-MM-DD.",
+"question": "V jakém formátu se standardně vkládá datum do MySQL typu DATE?",
+"options": [
+{ "text": "DD.MM.YYYY", "correct": false },
+{ "text": "YYYY-MM-DD", "correct": true },
+{ "text": "MM/DD/YYYY", "correct": false },
+{ "text": "DD-MM-YY", "correct": false }
+]
+},
+{
+"id": "zapis-009", "type": "truefalse", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "SQL Injection útočník využívá znaky jako ' nebo ; k přerušení dotazu a vložení svého kódu.",
+"statement": "Znaky jako apostrof (') mohou být v SQL dotazu nebezpečné, pokud nejsou ošetřeny.",
+"answer": true
+},
+{
+"id": "zapis-010", "type": "single", "topic": "formulare", "difficulty": 2,
+"explanation": "Atribut 'required' v HTML tagu  vynutí, aby pole nebylo prázdné.",
+"question": "Který atribut v HTML formuláři vynutí vyplnění pole?",
+"options": [
+{ "text": "mandatory", "correct": false },
+{ "text": "required", "correct": true },
+{ "text": "strict", "correct": false },
+{ "text": "validate", "correct": false }
+]
+},
+{
+"id": "zapis-011", "type": "multiple", "topic": "db-zapis", "difficulty": 3,
+"explanation": "Zápis může selhat kvůli duplicitním hodnotám (unique klíč), chybějícím povinným polím (NOT NULL) nebo špatnému typu dat.",
+"question": "Jaké jsou časté příčiny selhání zápisu do databáze? (Vyberte všechny správné)",
+"options": [
+{ "text": "Porušení omezení UNIQUE (duplicita)", "correct": true },
+{ "text": "Vložení NULL do sloupce typu NOT NULL", "correct": true },
+{ "text": "Špatný datový typ (např. text do čísla)", "correct": true },
+{ "text": "Příliš dlouhý text v SQL dotazu", "correct": false }
+]
+},
+{
+"id": "zapis-012", "type": "single", "topic": "http-metody", "difficulty": 2,
+"explanation": "GET je nevhodný pro zápis dat, protože data jsou v URL a mohou být cachována nebo uložena v historii.",
+"question": "Proč je metoda GET nevhodná pro odesílání dat ke změně (zápis) v databázi?",
+"options": [
+{ "text": "Je příliš rychlá", "correct": false },
+{ "text": "Data jsou viditelná v URL a mohou být nežádoucně cachována", "correct": true },
+{ "text": "Nefunguje na mobilních telefonech", "correct": false },
+{ "text": "Nepodporuje speciální znaky", "correct": false }
+]
+},
+{
+"id": "zapis-013", "type": "single", "topic": "zabezpeceni", "difficulty": 3,
+"explanation": "XSS (Cross-Site Scripting) je útok, kdy se vloží skript do pole, který se pak zobrazí jinému uživateli. Ochrana je htmlspecialchars.",
+"question": "Co hrozí, pokud vypíšeme uživatelský vstup přímo do stránky bez ošetření?",
+"options": [
+{ "text": "XSS (Cross-Site Scripting)", "correct": true },
+{ "text": "SQL Injection", "correct": false },
+{ "text": "Pád celého serveru", "correct": false },
+{ "text": "Změna databáze", "correct": false }
+]
+},
+{
+"id": "zapis-014", "type": "truefalse", "topic": "db-zapis", "difficulty": 1,
+"explanation": "Všechny hodnoty (včetně řetězců) v připraveném dotazu jsou automaticky ošetřeny.",
+"statement": "Při použití připravených dotazů (prepared statements) se nemusíme bát SQL Injection.",
+"answer": true
+},
+{
+"id": "zapis-015", "type": "single", "topic": "databazove-typy", "difficulty": 3,
+"explanation": "Pro datum a čas se v MySQL často používá typ DATETIME.",
+"question": "Který typ v MySQL slouží k uložení data i času?",
+"options": [
+{ "text": "DATE", "correct": false },
+{ "text": "TIME", "correct": false },
+{ "text": "DATETIME", "correct": true },
+{ "text": "TIMESTAMP", "correct": false }
+]
+},
+{
+"id": "zapis-016", "type": "single", "topic": "formulare", "difficulty": 2,
+"explanation": "Tlačítko typu 'submit' automaticky odešle data z formuláře, ve kterém se nachází.",
+"question": "Jaký typ tlačítka je nutný pro odeslání dat z formuláře?",
+"options": [
+{ "text": "button", "correct": false },
+{ "text": "submit", "correct": true },
+{ "text": "reset", "correct": false },
+{ "text": "input", "correct": false }
+]
+},
+{
+"id": "zapis-017", "type": "multiple", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "Validace na serveru by měla zahrnovat kontrolu, zda jsou data přítomna, zda jsou ve správném formátu a zda splňují byznys logiku.",
+"question": "Co by měla zahrnovat validace na straně serveru? (Vyberte všechny správné)",
+"options": [
+{ "text": "Kontrolu, zda je pole prázdné", "correct": true },
+{ "text": "Kontrolu datového typu", "correct": true },
+{ "text": "Kontrolu formátu (např. e-mail)", "correct": true },
+{ "text": "Obarvení formuláře v prohlížeči", "correct": false }
+]
+},
+{
+"id": "zapis-018", "type": "single", "topic": "db-zapis", "difficulty": 2,
+"explanation": "PDO v PHP pošle dotaz na databázi a vrátí objekt příkazu, pomocí něhož můžeme provést execute().",
+"question": "Co v PHP (PDO) vytvoříme před spuštěním dotazu INSERT?",
+"options": [
+{ "text": "Objekt spojení", "correct": false },
+{ "text": "Připravený dotaz (prepared statement)", "correct": true },
+{ "text": "Datový soubor", "correct": false },
+{ "text": "Index v tabulce", "correct": false }
+]
+},
+{
+"id": "zapis-019", "type": "truefalse", "topic": "databazove-typy", "difficulty": 3,
+"explanation": "ENUM je pevný seznam. Pokud se pokusíme vložit jinou hodnotu, databáze vrátí chybu.",
+"statement": "Do sloupce typu ENUM můžeme vložit libovolný řetězec.",
+"answer": false
+},
+{
+"id": "zapis-020", "type": "single", "topic": "http-metody", "difficulty": 2,
+"explanation": "Atribut 'method' ve formuláři určuje způsob přenosu dat na server.",
+"question": "Jaký atribut určuje metodu přenosu dat ve formuláři?",
+"options": [
+{ "text": "action", "correct": false },
+{ "text": "method", "correct": true },
+{ "text": "type", "correct": false },
+{ "text": "target", "correct": false }
+]
+},
+{
+"id": "zapis-021", "type": "single", "topic": "zabezpeceni", "difficulty": 3,
+"explanation": "Sanitizace je proces čištění vstupu (např. odstranění HTML tagů), což pomáhá předcházet XSS.",
+"question": "Co je to sanitizace dat?",
+"options": [
+{ "text": "Šifrování databáze", "correct": false },
+{ "text": "Čištění uživatelského vstupu od nebezpečných prvků", "correct": true },
+{ "text": "Změna hesla správce", "correct": false },
+{ "text": "Vytvoření zálohy", "correct": false }
+]
+},
+{
+"id": "zapis-022", "type": "numeric", "topic": "db-zapis", "difficulty": 1,
+"explanation": "Při vkládání (INSERT) dat obvykle neuvádíme automaticky inkrementované ID, databáze si jej dopočítá sama.",
+"question": "Kolik řádků vloží jeden příkaz 'INSERT INTO tabulka (jmeno) VALUES ('Petr')'?",
+"answer": 1,
+"tolerance": 0
+},
+{
+"id": "zapis-023", "type": "single", "topic": "db-zapis", "difficulty": 2,
+"explanation": "Pokud databáze při zápisu hodí výjimku (např. Duplicate entry), skript musí tuto chybu zachytit, aby nespadl.",
+"question": "Jak nejlépe ošetřit chybu při zápisu do DB?",
+"options": [
+{ "text": "Ignorovat ji", "correct": false },
+{ "text": "Použít blok try-catch", "correct": true },
+{ "text": "Restartovat server", "correct": false },
+{ "text": "Smazat tabulku", "correct": false }
+]
+},
+{
+"id": "zapis-024", "type": "truefalse", "topic": "formulare", "difficulty": 1,
+"explanation": "Pokud uživatel pošle data, server je dostane v poli $_POST (pokud je metoda POST).",
+"statement": "Data z formuláře odeslaného metodou POST jsou v PHP dostupná v superglobálním poli $_POST.",
+"answer": true
+},
+{
+"id": "zapis-025", "type": "single", "topic": "databazove-typy", "difficulty": 2,
+"explanation": "VARCHAR je datový typ pro proměnnou délku textu, ideální pro jména nebo krátké texty.",
+"question": "Který typ použijete pro krátký textový řetězec (např. jméno)?",
+"options": [
+{ "text": "INT", "correct": false },
+{ "text": "VARCHAR", "correct": true },
+{ "text": "BLOB", "correct": false },
+{ "text": "DATE", "correct": false }
+]
+},
+{
+"id": "zapis-026", "type": "multiple", "topic": "db-zapis", "difficulty": 3,
+"explanation": "Zápis do DB vyžaduje: spojení s DB, SQL dotaz, předání parametrů a provedení (execute).",
+"question": "Které kroky jsou nezbytné pro bezpečný zápis do databáze v PHP? (Vyberte všechny správné)",
+"options": [
+{ "text": "Vytvoření spojení s DB", "correct": true },
+{ "text": "Příprava SQL dotazu", "correct": true },
+{ "text": "Provedení dotazu (execute) s parametry", "correct": true },
+{ "text": "Výpis hesla k databázi uživateli", "correct": false }
+]
+},
+{
+"id": "zapis-027", "type": "single", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "Šifrování databáze (TDE) chrání data na disku, ale proti SQL Injection nás neochrání – na to jsou potřeba Prepared Statements.",
+"question": "Chrání šifrování databáze na disku proti SQL Injection?",
+"options": [
+{ "text": "Ano", "correct": false },
+{ "text": "Ne", "correct": true },
+{ "text": "Pouze u MySQL", "correct": false },
+{ "text": "Pouze u SQLite", "correct": false }
+]
+},
+{
+"id": "zapis-028", "type": "single", "topic": "http-metody", "difficulty": 2,
+"explanation": "Atribut 'action' určuje URL, na kterou se mají data z formuláře odeslat.",
+"question": "Který atribut v HTML určuje cíl formuláře?",
+"options": [
+{ "text": "method", "correct": false },
+{ "text": "action", "correct": true },
+{ "text": "submit", "correct": false },
+{ "text": "target", "correct": false }
+]
+},
+{
+"id": "zapis-029", "type": "truefalse", "topic": "db-zapis", "difficulty": 2,
+"explanation": "Při vkládání dat (INSERT) by uživatel nikdy neměl mít možnost přímo definovat SQL kód.",
+"statement": "Uživatel by nikdy neměl mít možnost přímo vkládat vlastní SQL příkazy do formuláře.",
+"answer": true
+},
+{
+"id": "zapis-030", "type": "single", "topic": "databazove-typy", "difficulty": 2,
+"explanation": "Datový typ INT slouží k ukládání celých čísel.",
+"question": "Který datový typ je vhodný pro ukládání celých čísel?",
+"options": [
+{ "text": "TEXT", "correct": false },
+{ "text": "INT", "correct": true },
+{ "text": "VARCHAR", "correct": false },
+{ "text": "DATE", "correct": false }
+]
+}
+]
+}

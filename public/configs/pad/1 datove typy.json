@@ -1,0 +1,280 @@
+{
+  "subject": "datove-typy",
+  "name": "Datové typy a generika",
+  "topics": [
+    { "id": "teorie-typovani", "name": "Statické a dynamické typování" },
+    { "id": "pamet-a-typy", "name": "Paměť a datové typy" },
+    { "id": "generika-teorie", "name": "Generické typy" },
+    { "id": "implementace-myarray", "name": "Implementace MyArray<E>" }
+  ],
+  "questions": [
+    {
+      "id": "datove-typy-001", "type": "single", "topic": "teorie-typovani",
+      "explanation": "Statické typování znamená, že datový typ proměnné je znám již při kompilaci programu.",
+      "question": "Co charakterizuje staticky typovaný jazyk?",
+      "options": [
+        { "text": "Typ proměnné se mění za běhu", "correct": false },
+        { "text": "Typ proměnné je určen při kompilaci", "correct": true },
+        { "text": "Nepotřebuje deklaraci typu", "correct": false },
+        { "text": "Je vždy pomalejší než dynamický", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-002", "type": "truefalse", "topic": "teorie-typovani",
+      "explanation": "Dynamické jazyky (např. Python) kontrolují typy až při spuštění programu, nikoliv při překladu.",
+      "statement": "U dynamicky typovaných jazyků dochází ke kontrole typů až za běhu programu.",
+      "answer": true
+    },
+    {
+      "id": "datove-typy-003", "type": "single", "topic": "teorie-typovani",
+      "explanation": "Java patří mezi staticky typované jazyky, což zvyšuje typovou bezpečnost.",
+      "question": "Do které kategorie typování patří jazyk Java?",
+      "options": [
+        { "text": "Statické", "correct": true },
+        { "text": "Dynamické", "correct": false },
+        { "text": "Hybridní", "correct": false },
+        { "text": "Netytované", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-004", "type": "multiple", "topic": "pamet-a-typy",
+      "explanation": "Zásobník (Stack) slouží pro rychlé lokální proměnné a reference, Halda (Heap) pro objekty.",
+      "question": "Které z následujících tvrzení platí o paměti? (vyberte 2)",
+      "options": [
+        { "text": "Primitivní typy jsou obvykle na Stacku", "correct": true },
+        { "text": "Objekty jsou alokovány na Heap", "correct": true },
+        { "text": "Zásobník má neomezenou velikost", "correct": false },
+        { "text": "Všechny proměnné jsou vždy na Heapu", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-005", "type": "single", "topic": "pamet-a-typy",
+      "explanation": "Neprimitivní typy (objekty) jsou v proměnné uloženy jako odkaz (reference) na adresu v paměti (Heap).",
+      "question": "Co obsahuje proměnná, která drží neprimitivní datový typ (objekt)?",
+      "options": [
+        { "text": "Přímo hodnotu objektu", "correct": false },
+        { "text": "Odkaz (referenci) na místo v paměti", "correct": true },
+        { "text": "Index v poli", "correct": false },
+        { "text": "Nic, objekty nemají hodnotu", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-006", "type": "truefalse", "topic": "pamet-a-typy",
+      "explanation": "Primitivní typy (int, boolean, atd.) jsou v paměti uloženy přímo jako hodnoty.",
+      "statement": "Primitivní datové typy jsou v paměti uloženy jako reference.",
+      "answer": false
+    },
+    {
+      "id": "datove-typy-007", "type": "single", "topic": "generika-teorie",
+      "explanation": "Generika (Generics) umožňují psát kód, který pracuje s libovolným typem při zachování typové bezpečnosti.",
+      "question": "K čemu v Javě slouží generické typy (<E>, <T>)?",
+      "options": [
+        { "text": "Ke zrychlení běhu programu", "correct": false },
+        { "text": "K psaní typově bezpečného kódu pro různé typy", "correct": true },
+        { "text": "K přímé manipulaci s RAM", "correct": false },
+        { "text": "K automatickému mazání objektů", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-008", "type": "truefalse", "topic": "generika-teorie",
+      "explanation": "Generika umožňují při kompilaci kontrolovat, zda do kontejneru vkládáme správný typ dat.",
+      "statement": "Generické typy eliminují nutnost přetypovávání objektů a zvyšují bezpečnost.",
+      "answer": true
+    },
+    {
+      "id": "datove-typy-009", "type": "single", "topic": "implementace-myarray",
+      "explanation": "V Javě nelze přímo vytvořit pole generického typu (např. new E[size]), proto se používá Object[] a přetypování.",
+      "question": "Jak se správně inicializuje pole generického typu v konstruktoru?",
+      "options": [
+        { "text": "this.myArray = new E[size];", "correct": false },
+        { "text": "this.myArray = (E[]) new Object[size];", "correct": true },
+        { "text": "this.myArray = new GenericArray<E>(size);", "correct": false },
+        { "text": "this.myArray = E.createArray(size);", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-010", "type": "truefalse", "topic": "implementace-myarray",
+      "explanation": "Aby se dodrželo zadání, nesmí mít pole 'díry', tedy prvky musí být zarovnány na začátku a počet prvků hlídá proměnná count.",
+      "statement": "Při odebrání prvku z libovolného místa v MyArray není nutné posouvat ostatní prvky.",
+      "answer": false
+    },
+    {
+      "id": "datove-typy-011", "type": "single", "topic": "implementace-myarray",
+      "explanation": "Když odebereme prvek uprostřed, musíme všechny následující posunout o index doleva, aby nezůstala 'díra'.",
+      "question": "Co je nutné udělat při odebrání prvku z prostředku pole?",
+      "options": [
+        { "text": "Nic, nechat prázdné místo", "correct": false },
+        { "text": "Posunout následující prvky o jednu pozici doleva", "correct": true },
+        { "text": "Vytvořit nové pole", "correct": false },
+        { "text": "Změnit kapacitu pole", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-012", "type": "numeric", "topic": "implementace-myarray",
+      "explanation": "Pokud máme v poli 3 prvky na indexech 0, 1, 2, a přidáme nový prvek, bude na indexu 3.",
+      "question": "Pokud count (počet prvků) je 3, na jakém indexu v poli bude přidán nový prvek?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "datove-typy-013", "type": "multiple", "topic": "implementace-myarray",
+      "explanation": "Při přidávání musíme kontrolovat, zda pole není plné (count == length).",
+      "question": "Jaké kontroly jsou nezbytné při přidání prvku? (vyberte 2)",
+      "options": [
+        { "text": "Zda je pole plné", "correct": true },
+        { "text": "Zda není prvek null", "correct": false },
+        { "text": "Zda je count < myArray.length", "correct": true },
+        { "text": "Zda je pole seřazené", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-014", "type": "truefalse", "topic": "implementace-myarray",
+      "explanation": "Počet prvků (count) v MyArray je vždy menší nebo roven délce fyzického pole (length).",
+      "statement": "Proměnná 'count' v MyArray označuje kapacitu pole.",
+      "answer": false
+    },
+    {
+      "id": "datove-typy-015", "type": "single", "topic": "implementace-myarray",
+      "explanation": "Po odebrání prvku je dobré nastavit poslední obsazenou pozici na null, aby nedošlo k memory leaku (pokud by to byl objekt).",
+      "question": "Co se děje s posledním prvkem pole po odebrání prvku uprostřed?",
+      "options": [
+        { "text": "Zůstane tam původní hodnota", "correct": false },
+        { "text": "Nastaví se na null (nebo defaultní hodnotu)", "correct": true },
+        { "text": "Automaticky se smaže celé pole", "correct": false },
+        { "text": "Zkopíruje se na začátek", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-016", "type": "multiple", "topic": "teorie-typovani",
+      "explanation": "Statické typování: C++, Java, C#. Dynamické: Python, JS.",
+      "question": "Které z těchto jazyků jsou staticky typované? (vyberte 2)",
+      "options": [
+        { "text": "Java", "correct": true },
+        { "text": "Python", "correct": false },
+        { "text": "C++", "correct": true },
+        { "text": "JavaScript", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-017", "type": "truefalse", "topic": "pamet-a-typy",
+      "explanation": "Garbage Collector v Javě automaticky uvolňuje paměť na haldě (Heap) od objektů, na které již neukazuje žádná reference.",
+      "statement": "V Javě je správa paměti na Heapu plně v režii programátora (manuální).",
+      "answer": false
+    },
+    {
+      "id": "datove-typy-018", "type": "single", "topic": "generika-teorie",
+      "explanation": "Generika jsou v Javě implementována pomocí 'type erasure' (vymazání typu), což znamená, že informace o typu jsou dostupné pouze při kompilaci.",
+      "question": "Jak se nazývá mechanismus v Javě, kdy generické typy existují hlavně při kompilaci?",
+      "options": [
+        { "text": "Type erasure", "correct": true },
+        { "text": "Runtime binding", "correct": false },
+        { "text": "Dynamic injection", "correct": false },
+        { "text": "Stack allocation", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-019", "type": "multiple", "topic": "implementace-myarray",
+      "explanation": "Pokud je index < 0 nebo index >= count, prvek neexistuje a odebrání není možné.",
+      "question": "Jaké podmínky pro index je nutné kontrolovat při metodě remove? (vyberte 2)",
+      "options": [
+        { "text": "index < 0", "correct": true },
+        { "text": "index >= count", "correct": true },
+        { "text": "index == 0", "correct": false },
+        { "text": "index < count", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-020", "type": "truefalse", "topic": "teorie-typovani",
+      "explanation": "Dynamické jazyky jsou flexibilnější, ale chyby v typech se projeví až za běhu, což může být riskantní.",
+      "statement": "Statické typování je vždy bezpečnější pro odhalení chyb typu již při kompilaci.",
+      "answer": true
+    },
+    {
+      "id": "datove-typy-021", "type": "single", "topic": "pamet-a-typy",
+      "explanation": "Primitivní typy nezabírají na haldě místo jako objekty, jsou přímo na zásobníku nebo jako součást jiného objektu.",
+      "question": "Který z následujících je primitivní datový typ v Javě?",
+      "options": [
+        { "text": "String", "correct": false },
+        { "text": "int", "correct": true },
+        { "text": "ArrayList", "correct": false },
+        { "text": "MyArray", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-022", "type": "numeric", "topic": "implementace-myarray",
+      "explanation": "Pokud je pole naplněno na kapacitu 10, count je 10. Při přidání dalšího prvku by nastala chyba.",
+      "question": "Pokud má pole myArray délku 10 a count je 10, kolik prvků lze ještě přidat?",
+      "answer": 0,
+      "tolerance": 0
+    },
+    {
+      "id": "datove-typy-023", "type": "truefalse", "topic": "generika-teorie",
+      "explanation": "Ano, generickou třídu lze instanciovat s různými typy (např. MyArray<Integer>, MyArray<String>).",
+      "statement": "Třídu MyArray<E> lze vytvořit jako instanci pro různé datové typy.",
+      "answer": true
+    },
+    {
+      "id": "datove-typy-024", "type": "single", "topic": "implementace-myarray",
+      "explanation": "Zadání definuje pole jako myArray a počet jako count.",
+      "question": "Jaký je správný název proměnné pro počet prvků v MyArray dle zadání?",
+      "options": [
+        { "text": "size", "correct": false },
+        { "text": "count", "correct": true },
+        { "text": "length", "correct": false },
+        { "text": "index", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-025", "type": "multiple", "topic": "pamet-a-typy",
+      "explanation": "Při volání metody s primitivním typem se předává kopie hodnoty, u objektu reference.",
+      "question": "Co se děje při předávání parametrů metodě? (vyberte 2)",
+      "options": [
+        { "text": "U primitivních typů se kopíruje hodnota", "correct": true },
+        { "text": "U objektů se předává reference (odkaz)", "correct": true },
+        { "text": "U objektů se kopíruje celý objekt do zásobníku", "correct": false },
+        { "text": "Vždy se předává pouze hodnota", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-026", "type": "single", "topic": "generika-teorie",
+      "explanation": "E představuje v generické třídě zástupný typ, který se určí až při vytvoření instance.",
+      "question": "Co znamená písmeno E v definici třídy MyArray<E>?",
+      "options": [
+        { "text": "Error", "correct": false },
+        { "text": "Element (zástupný typ)", "correct": true },
+        { "text": "Entry", "correct": false },
+        { "text": "Extra", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-027", "type": "truefalse", "topic": "implementace-myarray",
+      "explanation": "Pokud je count 5, jsou obsazeny indexy 0, 1, 2, 3, 4. Index 5 je první volný.",
+      "statement": "Index 0 v poli je vždy prázdný, pokud count > 0.",
+      "answer": false
+    },
+    {
+      "id": "datove-typy-028", "type": "single", "topic": "teorie-typovani",
+      "explanation": "Silně typované jazyky nedovolují implicitní (automatické) přetypování mezi neslučitelnými typy.",
+      "question": "Co znamená, že je jazyk silně typovaný?",
+      "options": [
+        { "text": "Nedovoluje nebezpečné implicitní konverze typů", "correct": true },
+        { "text": "Je pomalý", "correct": false },
+        { "text": "Má pouze dva datové typy", "correct": false },
+        { "text": "Všechny typy musí být velké (názvy)", "correct": false }
+      ]
+    },
+    {
+      "id": "datove-typy-029", "type": "truefalse", "topic": "implementace-myarray",
+      "explanation": "Pole je v Javě objekt a jeho velikost je neměnná po inicializaci.",
+      "statement": "Při použití pole E[] myArray lze měnit velikost fyzického pole za běhu.",
+      "answer": false
+    },
+    {
+      "id": "datove-typy-030", "type": "numeric", "topic": "implementace-myarray",
+      "explanation": "Při přidání prvku do MyArray se po operaci incrementuje count o 1.",
+      "question": "Pokud bylo v MyArray 5 prvků a přidáme jeden, jaká bude hodnota count?",
+      "answer": 6,
+      "tolerance": 0
+    }
+  ]
+}

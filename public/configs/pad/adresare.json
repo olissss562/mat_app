@@ -1,0 +1,276 @@
+{
+  "subject": "soubory-a-adresare",
+  "name": "Práce se soubory a adresáři",
+  "topics": [
+    { "id": "io-operace", "name": "Čtení a zápis souborů" },
+    { "id": "adresare-rekurze", "name": "Práce s adresáři a rekurze" },
+    { "id": "serializace", "name": "Serializace objektů" }
+  ],
+  "questions": [
+    {
+      "id": "soubory-001", "type": "single", "topic": "io-operace",
+      "explanation": "Streamy jsou základním abstraktním konceptem pro tok dat v Javě (z/do souborů, sítě, atd.).",
+      "question": "Co je to 'Stream' v kontextu práce se soubory?",
+      "options": [
+        { "text": "Datový proud (tok dat)", "correct": true },
+        { "text": "Typ souboru", "correct": false },
+        { "text": "Způsob komprese", "correct": false },
+        { "text": "Operační systém", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-002", "type": "truefalse", "topic": "io-operace",
+      "explanation": "Pro čtení textových souborů je BufferedReader efektivnější než čtení po znacích díky bufferování (ukládání do paměti).",
+      "statement": "BufferedReader je vhodný pro efektivní čtení textových souborů po řádcích.",
+      "answer": true
+    },
+    {
+      "id": "soubory-003", "type": "single", "topic": "adresare-rekurze",
+      "explanation": "Rekurze v adresářích znamená, že metoda volá samu sebe, pokud narazí na další podadresář.",
+      "question": "Proč je rekurze vhodná pro procházení adresářů?",
+      "options": [
+        { "text": "Protože adresáře mají stromovou strukturu", "correct": true },
+        { "text": "Protože je rychlejší než cyklus", "correct": false },
+        { "text": "Protože to vyžaduje operační systém", "correct": false },
+        { "text": "Protože nezabírá paměť", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-004", "type": "multiple", "topic": "io-operace",
+      "explanation": "Files.readAllLines a Files.write jsou moderní a pohodlné metody z balíčku java.nio.file.",
+      "question": "Které třídy se moderně používají pro práci se soubory? (vyberte 2)",
+      "options": [
+        { "text": "java.nio.file.Files", "correct": true },
+        { "text": "java.nio.file.Paths", "correct": true },
+        { "text": "java.util.Scanner", "correct": false },
+        { "text": "java.awt.Color", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-005", "type": "numeric", "topic": "adresare-rekurze",
+      "explanation": "Při rekurzivním volání funkce musíme vždy kontrolovat, zda metoda listFiles() nevrací null (např. u systémových souborů).",
+      "question": "Kolik parametrů (minimálně) potřebuje metoda pro rekurzivní výpis adresáře?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "soubory-006", "type": "single", "topic": "serializace",
+      "explanation": "Serializace převádí objekt do bajtové podoby pro uložení na disk nebo přenos po síti.",
+      "question": "Co je to serializace objektu?",
+      "options": [
+        { "text": "Šifrování objektu", "correct": false },
+        { "text": "Převod objektu na proud bajtů", "correct": true },
+        { "text": "Smazání objektu z paměti", "correct": false },
+        { "text": "Změna typu objektu", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-007", "type": "truefalse", "topic": "serializace",
+      "explanation": "Objekt musí implementovat rozhraní Serializable, aby mohl být serializován.",
+      "statement": "Objekt v Javě může být serializován, aniž by implementoval rozhraní Serializable.",
+      "answer": false
+    },
+    {
+      "id": "soubory-008", "type": "single", "topic": "serializace",
+      "explanation": "ObjectOutputStream slouží k zápisu serializovaných objektů do proudu dat.",
+      "question": "Která třída v Javě se používá k zápisu objektů?",
+      "options": [
+        { "text": "ObjectOutputStream", "correct": true },
+        { "text": "FileWriter", "correct": false },
+        { "text": "Scanner", "correct": false },
+        { "text": "PrintStream", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-009", "type": "multiple", "topic": "io-operace",
+      "explanation": "Souborové operace mohou vyvolat IOException, proto je třeba je ošetřit.",
+      "question": "Jaké výjimky mohou nastat při čtení souboru? (vyberte 2)",
+      "options": [
+        { "text": "IOException", "correct": true },
+        { "text": "FileNotFoundException", "correct": true },
+        { "text": "StackOverflowError", "correct": false },
+        { "text": "NullPointerException", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-010", "type": "numeric", "topic": "io-operace",
+      "explanation": "Délka slova se kontroluje v cyklu `if (word.length() < maxLength)`.",
+      "question": "Pokud chceme slova kratší než 5 znaků, jaká bude podmínka `if`?",
+      "answer": 5,
+      "tolerance": 0
+    },
+    {
+      "id": "soubory-011", "type": "truefalse", "topic": "adresare-rekurze",
+      "explanation": "Rekurze bez podmínky zastavení vede k přetečení zásobníku.",
+      "statement": "Rekurzivní metoda procházení adresářů musí mít ukončovací podmínku.",
+      "answer": true
+    },
+    {
+      "id": "soubory-012", "type": "single", "topic": "io-operace",
+      "explanation": "Metoda .split(\"\\s+\") rozdělí text podle libovolně dlouhých bílých znaků.",
+      "question": "Co dělá v kódu příkaz `split(\"\\s+\")`?",
+      "options": [
+        { "text": "Rozdělí text na slova podle bílých znaků", "correct": true },
+        { "text": "Smaže celý text", "correct": false },
+        { "text": "Změní všechna písmena na velká", "correct": false },
+        { "text": "Vypočítá počet slov", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-013", "type": "multiple", "topic": "serializace",
+      "explanation": "Deserializace je proces opačný k serializaci, tedy načtení objektu z bajtů.",
+      "question": "Co se děje při deserializaci? (vyberte 2)",
+      "options": [
+        { "text": "Načtení objektu z bajtů", "correct": true },
+        { "text": "Obnova stavu objektu", "correct": true },
+        { "text": "Smazání dat na disku", "correct": false },
+        { "text": "Změna typu objektu", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-014", "type": "truefalse", "topic": "serializace",
+      "explanation": "Klíčové slovo 'transient' zajistí, že daná proměnná nebude serializována.",
+      "statement": "Transientní proměnné se při serializaci ukládají do souboru.",
+      "answer": false
+    },
+    {
+      "id": "soubory-015", "type": "numeric", "topic": "io-operace",
+      "explanation": "Slovo o délce 3 není kratší než 3, proto se do výsledku neuloží (pokud podmínka je <).",
+      "question": "Pokud je podmínka `word.length() < 3`, bude slovo 'auto' (délka 4) uloženo?",
+      "answer": 0,
+      "tolerance": 0
+    },
+    {
+      "id": "soubory-016", "type": "single", "topic": "adresare-rekurze",
+      "explanation": "File je základní třída pro reprezentaci souborů a adresářů v Javě.",
+      "question": "Která třída v Javě reprezentuje cestu k souboru nebo adresáři?",
+      "options": [
+        { "text": "File", "correct": true },
+        { "text": "Stream", "correct": false },
+        { "text": "Object", "correct": false },
+        { "text": "Reader", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-017", "type": "truefalse", "topic": "io-operace",
+      "explanation": "Zápis do souboru musí být vždy uzavřen, aby se data správně uložila (flush).",
+      "statement": "Zavření souborového streamu po zápisu není nutné.",
+      "answer": false
+    },
+    {
+      "id": "soubory-018", "type": "single", "topic": "serializace",
+      "explanation": "Serializable je 'marker interface' – nemá žádné metody, jen značí schopnost serializace.",
+      "question": "Jaký typ rozhraní je Serializable?",
+      "options": [
+        { "text": "Marker interface", "correct": true },
+        { "text": "Funkcionální rozhraní", "correct": false },
+        { "text": "Abstraktní třída", "correct": false },
+        { "text": "Kolekce", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-019", "type": "multiple", "topic": "io-operace",
+      "explanation": "Soubory můžeme otevřít v textovém nebo binárním režimu.",
+      "question": "Jaké režimy otevírání souborů známe? (vyberte 2)",
+      "options": [
+        { "text": "Textový", "correct": true },
+        { "text": "Binární", "correct": true },
+        { "text": "Reverzní", "correct": false },
+        { "text": "Syntaktický", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-020", "type": "truefalse", "topic": "adresare-rekurze",
+      "explanation": "Při procházení může dojít k nekonečnému zacyklení, pokud existují symbolické odkazy (symlinks).",
+      "statement": "Rekurzivní procházení adresářů je vždy bezpečné i u symlinků.",
+      "answer": false
+    },
+    {
+      "id": "soubory-021", "type": "single", "topic": "io-operace",
+      "explanation": "Paths.get() vrací objekt typu Path, který je modernější náhradou za File.",
+      "question": "Která třída nahrazuje starší File pro reprezentaci cesty?",
+      "options": [
+        { "text": "Path", "correct": true },
+        { "text": "String", "correct": false },
+        { "text": "URL", "correct": false },
+        { "text": "Scanner", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-022", "type": "numeric", "topic": "adresare-rekurze",
+      "explanation": "Pokud v adresáři nejsou žádné soubory, metoda listFiles() vrací pole o délce 0.",
+      "question": "Kolik souborů má prázdný adresář?",
+      "answer": 0,
+      "tolerance": 0
+    },
+    {
+      "id": "soubory-023", "type": "truefalse", "topic": "io-operace",
+      "explanation": "Při zápisu do souboru se starý obsah obvykle přepíše, pokud nepoužijeme append mód.",
+      "statement": "Zápis do souboru vždy automaticky zachová původní obsah.",
+      "answer": false
+    },
+    {
+      "id": "soubory-024", "type": "single", "topic": "serializace",
+      "explanation": "SerialVersionUID je verze třídy, která zajišťuje kompatibilitu při deserializaci.",
+      "question": "Co zajišťuje serialVersionUID?",
+      "options": [
+        { "text": "Verzi třídy pro deserializaci", "correct": true },
+        { "text": "Rychlost zápisu", "correct": false },
+        { "text": "Zabezpečení proti hackerům", "correct": false },
+        { "text": "Kódování znaků", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-025", "type": "multiple", "topic": "io-operace",
+      "explanation": "Souborové operace vyžadují správnou práci se zdroji (zavírání).",
+      "question": "Na co si dát pozor při práci se soubory? (vyberte 2)",
+      "options": [
+        { "text": "Zavření streamu", "correct": true },
+        { "text": "Ošetření výjimek (try-catch)", "correct": true },
+        { "text": "Vždy používat pole", "correct": false },
+        { "text": "Nepoužívat cestu k souboru", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-026", "type": "single", "topic": "adresare-rekurze",
+      "explanation": "Metoda listFiles() vrací pole objektů File.",
+      "question": "Co vrací metoda listFiles() u objektu File?",
+      "options": [
+        { "text": "Pole objektů File", "correct": true },
+        { "text": "Seznam řetězců", "correct": false },
+        { "text": "Nic (void)", "correct": false },
+        { "text": "Počet souborů", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-027", "type": "truefalse", "topic": "serializace",
+      "explanation": "Stav objektu se uloží do souboru a při deserializaci se znovu vytvoří instance.",
+      "statement": "Serializace ukládá pouze metody třídy, nikoliv stav dat.",
+      "answer": false
+    },
+    {
+      "id": "soubory-028", "type": "single", "topic": "io-operace",
+      "explanation": "Metoda readAllLines načte všechny řádky souboru do Listu.",
+      "question": "Co dělá metoda Files.readAllLines(path)?",
+      "options": [
+        { "text": "Načte všechny řádky do seznamu", "correct": true },
+        { "text": "Vytiskne soubor na tiskárnu", "correct": false },
+        { "text": "Smaže soubor", "correct": false },
+        { "text": "Převede soubor do binární podoby", "correct": false }
+      ]
+    },
+    {
+      "id": "soubory-029", "type": "truefalse", "topic": "serializace",
+      "explanation": "Všechny datové členy objektu, které nejsou 'transient', se serializují.",
+      "statement": "Během serializace se automaticky ukládají i hodnoty všech privátních proměnných.",
+      "answer": true
+    },
+    {
+      "id": "soubory-030", "type": "numeric", "topic": "io-operace",
+      "explanation": "Standardní délka cesty k souboru není pevně omezena kódem, ale limity OS.",
+      "question": "Kolik argumentů má metoda write v třídě Files pro zápis listu řádků?",
+      "answer": 2,
+      "tolerance": 0
+    }
+  ]
+}

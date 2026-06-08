@@ -1,0 +1,290 @@
+{
+  "subject": "uml-a-vzory",
+  "name": "UML diagramy a návrhové vzory",
+  "topics": [
+    { "id": "uml-diagramy", "name": "UML diagramy" },
+    { "id": "navrhove-vzory", "name": "Návrhové vzory" },
+    { "id": "frameworky", "name": "Šablony a frameworky" },
+    { "id": "use-case-priklad", "name": "Příklad: Use Case" }
+  ],
+  "questions": [
+    {
+      "id": "uml-001", "type": "single", "topic": "uml-diagramy",
+      "explanation": "UML je zkratka pro Unified Modeling Language, standard pro vizualizaci softwaru.",
+      "question": "Co znamená zkratka UML?",
+      "options": [
+        { "text": "Unified Modeling Language", "correct": true },
+        { "text": "Universal Management Logic", "correct": false },
+        { "text": "Unified Method Library", "correct": false },
+        { "text": "Universal Modeling Level", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-002", "type": "multiple", "topic": "uml-diagramy",
+      "explanation": "UML diagramy se dělí na strukturální (statické) a diagramy chování (dynamické).",
+      "question": "Do jakých dvou hlavních skupin dělíme UML diagramy? (vyberte 2)",
+      "options": [
+        { "text": "Strukturální (statické)", "correct": true },
+        { "text": "Diagramy chování (dynamické)", "correct": true },
+        { "text": "Databázové diagramy", "correct": false },
+        { "text": "Komunikační diagramy", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-003", "type": "single", "topic": "uml-diagramy",
+      "explanation": "Diagram tříd (Class Diagram) ukazuje statickou strukturu systému – třídy, metody a vztahy.",
+      "question": "Který diagram zobrazuje třídy, jejich atributy a vztahy mezi nimi?",
+      "options": [
+        { "text": "Diagram případů užití", "correct": false },
+        { "text": "Diagram tříd", "correct": true },
+        { "text": "Sekvenční diagram", "correct": false },
+        { "text": "Diagram aktivit", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-004", "type": "truefalse", "topic": "uml-diagramy",
+      "explanation": "Use case diagram slouží k popisu interakce mezi aktéry a systémem.",
+      "statement": "Use Case diagram se používá k zobrazení vnitřní logiky metody v kódu.",
+      "answer": false
+    },
+    {
+      "id": "uml-005", "type": "single", "topic": "navrhove-vzory",
+      "explanation": "Návrhové vzory jsou osvědčená řešení pro často se opakující problémy při návrhu softwaru.",
+      "question": "Co je to návrhový vzor (design pattern)?",
+      "options": [
+        { "text": "Programovací jazyk", "correct": false },
+        { "text": "Osvědčené řešení pro opakující se problém", "correct": true },
+        { "text": "Chyba v kódu", "correct": false },
+        { "text": "Způsob, jak zrychlit kompilaci", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-006", "type": "single", "topic": "navrhove-vzory",
+      "explanation": "Singleton zajišťuje, že existuje pouze jedna instance dané třídy v aplikaci.",
+      "question": "Který návrhový vzor zajišťuje existenci pouze jedné instance třídy?",
+      "options": [
+        { "text": "Singleton", "correct": true },
+        { "text": "Observer", "correct": false },
+        { "text": "Strategy", "correct": false },
+        { "text": "Factory", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-007", "type": "multiple", "topic": "navrhove-vzory",
+      "explanation": "Observer slouží k odebírání změn (předplatitelé/pozorovatelé), Strategy k výměně algoritmů.",
+      "question": "Které návrhové vzory znáte? (vyberte 2)",
+      "options": [
+        { "text": "Observer", "correct": true },
+        { "text": "Strategy", "correct": true },
+        { "text": "Loop-Pattern", "correct": false },
+        { "text": "Binary-Pattern", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-008", "type": "truefalse", "topic": "navrhove-vzory",
+      "explanation": "Vzor Strategy umožňuje za běhu měnit algoritmus výpočtu.",
+      "statement": "Vzor Strategy umožňuje za běhu programu zaměnit různé algoritmy.",
+      "answer": true
+    },
+    {
+      "id": "uml-009", "type": "single", "topic": "navrhove-vzory",
+      "explanation": "Factory Method se používá pro abstraktní vytváření objektů bez specifikace konkrétní třídy.",
+      "question": "Který vzor definuje rozhraní pro vytváření objektů?",
+      "options": [
+        { "text": "Factory Method", "correct": true },
+        { "text": "Singleton", "correct": false },
+        { "text": "Observer", "correct": false },
+        { "text": "State", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-010", "type": "numeric", "topic": "navrhove-vzory",
+      "explanation": "Počet požadovaných příkladů v zadání je 4.",
+      "question": "Kolik minimálně příkladů návrhových vzorů bylo požadováno v zadání?",
+      "answer": 4,
+      "tolerance": 0
+    },
+    {
+      "id": "uml-011", "type": "single", "topic": "frameworky",
+      "explanation": "Framework je kostra aplikace, která definuje architekturu a volá váš kód.",
+      "question": "Jaký je hlavní rozdíl mezi knihovnou a frameworkem?",
+      "options": [
+        { "text": "Framework volá váš kód (Inversion of Control)", "correct": true },
+        { "text": "Framework je menší než knihovna", "correct": false },
+        { "text": "Framework je jen textový soubor", "correct": false },
+        { "text": "Není v nich žádný rozdíl", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-012", "type": "truefalse", "topic": "frameworky",
+      "explanation": "Šablona (Template) může být v programování buď generický kód, nebo systém pro generování HTML.",
+      "statement": "Frameworky a šablony jsou v programování totožné pojmy.",
+      "answer": false
+    },
+    {
+      "id": "uml-013", "type": "multiple", "topic": "frameworky",
+      "explanation": "Frameworky poskytují předpřipravenou strukturu, např. Spring nebo React.",
+      "question": "Příklady frameworků jsou: (vyberte 2)",
+      "options": [
+        { "text": "Spring", "correct": true },
+        { "text": "React", "correct": true },
+        { "text": "Int", "correct": false },
+        { "text": "For-loop", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-014", "type": "single", "topic": "use-case-priklad",
+      "explanation": "V Use Case diagramu je Student aktér (herec), který interaguje se systémem.",
+      "question": "Kdo je v systému 'Výukový portál' považován za aktéra (aktora)?",
+      "options": [
+        { "text": "Student", "correct": true },
+        { "text": "Diagram", "correct": false },
+        { "text": "Kódování", "correct": false },
+        { "text": "Případ užití", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-015", "type": "truefalse", "topic": "use-case-priklad",
+      "explanation": "V Use case diagramu jsou případy užití (Use Cases) zobrazeny jako elipsy.",
+      "statement": "Případy užití (Use Cases) se v diagramu kreslí jako obdélníky.",
+      "answer": false
+    },
+    {
+      "id": "uml-016", "type": "single", "topic": "uml-diagramy",
+      "explanation": "Sekvenční diagram zobrazuje časovou posloupnost zpráv mezi objekty.",
+      "question": "Který diagram zobrazuje časovou posloupnost zpráv?",
+      "options": [
+        { "text": "Sekvenční diagram", "correct": true },
+        { "text": "Diagram tříd", "correct": false },
+        { "text": "Diagram komponent", "correct": false },
+        { "text": "Diagram balíčků", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-017", "type": "multiple", "topic": "uml-diagramy",
+      "explanation": "Aktivity v diagramu aktivit popisují procesy a rozhodovací body.",
+      "question": "Co definuje diagram aktivit? (vyberte 2)",
+      "options": [
+        { "text": "Workflow (postup)", "correct": true },
+        { "text": "Rozhodovací body", "correct": true },
+        { "text": "Statické atributy třídy", "correct": false },
+        { "text": "Vztahy dědičnosti", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-018", "type": "numeric", "topic": "uml-diagramy",
+      "explanation": "Statické a dynamické (chování).",
+      "question": "Kolik je základních skupin UML diagramů (statické vs dynamické)?",
+      "answer": 2,
+      "tolerance": 0
+    },
+    {
+      "id": "uml-019", "type": "multiple", "topic": "navrhove-vzory",
+      "explanation": "Vzor Strategy umožňuje za běhu měnit algoritmy, Observer notifikuje o změnách.",
+      "question": "Které vzory jsou behaviorální? (vyberte 2)",
+      "options": [
+        { "text": "Observer", "correct": true },
+        { "text": "Strategy", "correct": true },
+        { "text": "Singleton", "correct": false },
+        { "text": "Builder", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-020", "type": "truefalse", "topic": "navrhove-vzory",
+      "explanation": "Singleton zajišťuje pouze jednu instanci, což je v globálním měřítku užitečné.",
+      "statement": "Singleton umožňuje vytvořit neomezený počet instancí třídy.",
+      "answer": false
+    },
+    {
+      "id": "uml-021", "type": "single", "topic": "frameworky",
+      "explanation": "Frameworky definují kontrolu nad během programu (tzv. Inversion of Control).",
+      "question": "Co je Inversion of Control (IoC) u frameworků?",
+      "options": [
+        { "text": "Framework volá váš kód", "correct": true },
+        { "text": "Váš kód volá framework v každém řádku", "correct": false },
+        { "text": "Změna operačního systému", "correct": false },
+        { "text": "Změna hardwaru", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-022", "type": "multiple", "topic": "uml-diagramy",
+      "explanation": "Use case diagram obsahuje herce (aktory) a případy užití.",
+      "question": "Z čeho se skládá Use Case diagram? (vyberte 2)",
+      "options": [
+        { "text": "Aktéři", "correct": true },
+        { "text": "Případy užití", "correct": true },
+        { "text": "Atributy metody", "correct": false },
+        { "text": "Stavová paměť", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-023", "type": "single", "topic": "use-case-priklad",
+      "explanation": "V MS Teams je učitel ten, kdo vytváří schůzky a hodnotí studenty.",
+      "question": "Jaká je role 'Učitele' v MS Teams Use Case diagramu?",
+      "options": [
+        { "text": "Aktér", "correct": true },
+        { "text": "Případ užití", "correct": false },
+        { "text": "Systém", "correct": false },
+        { "text": "Komponenta", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-024", "type": "truefalse", "topic": "use-case-priklad",
+      "explanation": "Vztah 'include' znamená, že případ užití povinně vyžaduje jiný případ užití.",
+      "statement": "Vztah 'include' v Use Case diagramu značí volitelnou funkci.",
+      "answer": false
+    },
+    {
+      "id": "uml-025", "type": "single", "topic": "navrhove-vzory",
+      "explanation": "Návrhové vzory jsou řešení pro opakující se problémy v softwarovém návrhu.",
+      "question": "Jaký je hlavní důvod použití návrhových vzorů?",
+      "options": [
+        { "text": "Zvýšení udržitelnosti a znovupoužitelnosti kódu", "correct": true },
+        { "text": "Zmenšení velikosti souborů", "correct": false },
+        { "text": "Rychlejší kompilace", "correct": false },
+        { "text": "Zlepšení vzhledu GUI", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-026", "type": "multiple", "topic": "uml-diagramy",
+      "explanation": "Komponentní diagram ukazuje strukturu systému (moduly).",
+      "question": "K čemu slouží komponentní diagram? (vyberte 2)",
+      "options": [
+        { "text": "Zobrazení modulů systému", "correct": true },
+        { "text": "Popis závislostí mezi komponentami", "correct": true },
+        { "text": "Popis průběhu algoritmu", "correct": false },
+        { "text": "Vytvoření uživatelského rozhraní", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-027", "type": "truefalse", "topic": "frameworky",
+      "explanation": "Frameworky nám poskytují základ, abychom nemuseli psát vše od nuly.",
+      "statement": "Frameworky jsou užitečné pro zjednodušení vývoje komplexních aplikací.",
+      "answer": true
+    },
+    {
+      "id": "uml-028", "type": "single", "topic": "uml-diagramy",
+      "explanation": "Stavový diagram (State machine) zobrazuje stavy, ve kterých se objekt nachází.",
+      "question": "Který diagram popisuje životní cyklus objektu?",
+      "options": [
+        { "text": "Stavový diagram", "correct": true },
+        { "text": "Use Case diagram", "correct": false },
+        { "text": "Diagram tříd", "correct": false },
+        { "text": "Balíčkový diagram", "correct": false }
+      ]
+    },
+    {
+      "id": "uml-029", "type": "truefalse", "topic": "navrhove-vzory",
+      "explanation": "Singleton není všelék a může být někdy považován za anti-pattern kvůli globálnímu stavu.",
+      "statement": "Singleton je univerzální vzor, který by se měl používat úplně všude.",
+      "answer": false
+    },
+    {
+      "id": "uml-030", "type": "numeric", "topic": "use-case-priklad",
+      "explanation": "V příkladu jsme definovali 3 role: Student, Učitel, Administrátor.",
+      "question": "Kolik typů aktérů jsme identifikovali pro výukový portál v příkladu?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

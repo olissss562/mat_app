@@ -1,0 +1,265 @@
+{
+  "subject": "vyhledavaci-algoritmy",
+  "name": "Vyhledávací algoritmy",
+  "topics": [
+    { "id": "linear-search", "name": "Vyhledávání v nesetříděném poli" },
+    { "id": "binary-search", "name": "Rekurzivní vyhledávání v setříděném poli" },
+    { "id": "cclovek-impl", "name": "Implementace a objekty" }
+  ],
+  "questions": [
+    {
+      "id": "search-001", "type": "single", "topic": "linear-search",
+      "explanation": "Lineární vyhledávání prochází prvky jeden po druhém od začátku do konce.",
+      "question": "Jaký je princip lineárního vyhledávání?",
+      "options": [
+        { "text": "Rozdělení pole na poloviny", "correct": false },
+        { "text": "Sekvenční průchod všemi prvky", "correct": true },
+        { "text": "Hašování klíče", "correct": false },
+        { "text": "Skokové vyhledávání", "correct": false }
+      ]
+    },
+    {
+      "id": "search-002", "type": "numeric", "topic": "linear-search",
+      "explanation": "V nejhorším případě musíme projít všech n prvků pole, složitost je O(n).",
+      "question": "Lineární vyhledávání má časovou složitost O(n na kolikátou)?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "search-003", "type": "truefalse", "topic": "linear-search",
+      "explanation": "Lineární vyhledávání nevyžaduje žádné seřazení dat.",
+      "statement": "Pro použití lineárního vyhledávání musí být pole seřazené.",
+      "answer": false
+    },
+    {
+      "id": "search-004", "type": "single", "topic": "binary-search",
+      "explanation": "Binární vyhledávání funguje na principu 'rozděl a panuj', vyžaduje seřazené pole.",
+      "question": "Která podmínka musí být splněna pro binární vyhledávání?",
+      "options": [
+        { "text": "Pole musí být seřazené", "correct": true },
+        { "text": "Pole musí obsahovat jen sudá čísla", "correct": false },
+        { "text": "Pole musí být typu float", "correct": false },
+        { "text": "Velikost pole musí být mocnina dvou", "correct": false }
+      ]
+    },
+    {
+      "id": "search-005", "type": "single", "topic": "binary-search",
+      "explanation": "Binární vyhledávání dělí vyhledávací prostor na polovinu v každém kroku, což vede na logaritmickou složitost.",
+      "question": "Jaká je časová složitost binárního vyhledávání?",
+      "options": [
+        { "text": "O(log n)", "correct": true },
+        { "text": "O(n)", "correct": false },
+        { "text": "O(n^2)", "correct": false },
+        { "text": "O(1)", "correct": false }
+      ]
+    },
+    {
+      "id": "search-006", "type": "truefalse", "topic": "binary-search",
+      "explanation": "Rekurzivní implementace binárního vyhledávání volá samu sebe s novými indexy low/high.",
+      "statement": "Binární vyhledávání lze implementovat rekurzivně.",
+      "answer": true
+    },
+    {
+      "id": "search-007", "type": "single", "topic": "binary-search",
+      "explanation": "Při binárním hledání v poli float čísel potřebujeme jako parametry pole, hledanou hodnotu, levý a pravý index.",
+      "question": "Kolik parametrů má ideální rekurzivní pomocná metoda pro binární vyhledávání?",
+      "options": [
+        { "text": "1", "correct": false },
+        { "text": "2", "correct": false },
+        { "text": "4", "correct": true },
+        { "text": "8", "correct": false }
+      ]
+    },
+    {
+      "id": "search-008", "type": "numeric", "topic": "binary-search",
+      "explanation": "V binárním hledání se prostor půlí, pro 8 prvků je to log2(8) = 3 kroky.",
+      "question": "Kolik kroků (maximálně) potřebuje binární vyhledávání v poli o 8 prvcích?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "search-009", "type": "truefalse", "topic": "cclovek-impl",
+      "explanation": "Metoda pro hledání v poli typu Clovek[] vrací index nalezeného prvku (int).",
+      "statement": "Hledání prvního výskytu objektu v nesetříděném poli vrací boolean.",
+      "answer": false
+    },
+    {
+      "id": "search-010", "type": "single", "topic": "cclovek-impl",
+      "explanation": "Při porovnávání objektů (jméno a příjmení) musíme v Javě použít metodu .equals(), nikoliv operátor ==.",
+      "question": "Jak se v Javě správně porovnávají řetězce (Stringy) v třídě Clovek?",
+      "options": [
+        { "text": "pomocí == ", "correct": false },
+        { "text": "pomocí .equals()", "correct": true },
+        { "text": "pomocí compareTo()", "correct": false },
+        { "text": "pomocí .isEqual()", "correct": false }
+      ]
+    },
+    {
+      "id": "search-011", "type": "truefalse", "topic": "cclovek-impl",
+      "explanation": "Metoda pro hledání v poli vrací index (pořadí), nebo -1, pokud prvek neexistuje.",
+      "statement": "Pokud metoda hledání objekt v poli nenajde, měla by vrátit -1.",
+      "answer": true
+    },
+    {
+      "id": "search-012", "type": "single", "topic": "linear-search",
+      "explanation": "Lineární vyhledávání je jediné použitelné, pokud data nejsou seřazena.",
+      "question": "Kdy je lineární vyhledávání nejlepší volbou?",
+      "options": [
+        { "text": "Vždy", "correct": false },
+        { "text": "Pokud je pole nesetříděné", "correct": true },
+        { "text": "Pokud je pole obrovské a seřazené", "correct": false },
+        { "text": "Nikdy", "correct": false }
+      ]
+    },
+    {
+      "id": "search-013", "type": "numeric", "topic": "binary-search",
+      "explanation": "Index středu se počítá jako (low + high) / 2. Pro (0 + 7) / 2 = 3.5, tedy 3.",
+      "question": "Pokud je levý index 0 a pravý 7, jaký index bude středový pro binární vyhledávání?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "search-014", "type": "truefalse", "topic": "binary-search",
+      "explanation": "Rekurze v binárním hledání volá sama sebe buď pro levou nebo pravou polovinu, nikdy obě najednou.",
+      "statement": "Binární vyhledávání volá rekurzivně obě poloviny pole najednou.",
+      "answer": false
+    },
+    {
+      "id": "search-015", "type": "single", "topic": "cclovek-impl",
+      "explanation": "Vlastnosti objektu Clovek jsou jméno a příjmení.",
+      "question": "Jaké vlastnosti má objekt třídy Clovek dle zadání?",
+      "options": [
+        { "text": "Jméno a příjmení", "correct": true },
+        { "text": "Věk a jméno", "correct": false },
+        { "text": "Pouze ID", "correct": false },
+        { "text": "Adresa a telefon", "correct": false }
+      ]
+    },
+    {
+      "id": "search-016", "type": "truefalse", "topic": "linear-search",
+      "explanation": "Pro nalezení všech výskytů musíme projít celé pole, nekončíme po prvním.",
+      "statement": "Lineární vyhledávání lze upravit i pro nalezení všech výskytů hledané hodnoty.",
+      "answer": true
+    },
+    {
+      "id": "search-017", "type": "numeric", "topic": "cclovek-impl",
+      "explanation": "První pozice v poli má v Javě index 0.",
+      "question": "Jaký index vrátí metoda pro hledání, pokud je prvek na 1. pozici?",
+      "answer": 0,
+      "tolerance": 0
+    },
+    {
+      "id": "search-018", "type": "single", "topic": "binary-search",
+      "explanation": "Pokud je hledaná hodnota menší než střed, hledáme v levé části (indexy pod středem).",
+      "question": "Kam se posune pravý index při binárním vyhledávání, je-li hodnota menší než střed?",
+      "options": [
+        { "text": "Střed + 1", "correct": false },
+        { "text": "Střed - 1", "correct": true },
+        { "text": "Na konec pole", "correct": false },
+        { "text": "Na začátek pole", "correct": false }
+      ]
+    },
+    {
+      "id": "search-019", "type": "multiple", "topic": "cclovek-impl",
+      "explanation": "Při hledání musíme porovnat jak jméno, tak příjmení.",
+      "question": "Co musíme porovnat při hledání objektu Clovek? (vyberte 2)",
+      "options": [
+        { "text": "Jméno", "correct": true },
+        { "text": "Příjmení", "correct": true },
+        { "text": "ID", "correct": false },
+        { "text": "Věk", "correct": false }
+      ]
+    },
+    {
+      "id": "search-020", "type": "truefalse", "topic": "linear-search",
+      "explanation": "U lineárního vyhledávání nezáleží na tom, zda je pole seřazené, algoritmus bude fungovat stejně.",
+      "statement": "Lineární vyhledávání funguje správně na seřazeném i neseřazeném poli.",
+      "answer": true
+    },
+    {
+      "id": "search-021", "type": "single", "topic": "binary-search",
+      "explanation": "Metoda hledající v poli float čísel musí mít float[] jako parametr.",
+      "question": "Jaká je hlavička metody pro hledání v poli float?",
+      "options": [
+        { "text": "int hledej(float[] pole, float hodnota, int low, int high)", "correct": true },
+        { "text": "void hledej(int[] pole, float hodnota)", "correct": false },
+        { "text": "float hledej(float[] pole)", "correct": false },
+        { "text": "int hledej(float pole, float hodnota)", "correct": false }
+      ]
+    },
+    {
+      "id": "search-022", "type": "numeric", "topic": "cclovek-impl",
+      "question": "Pokud metoda nenajde člověka v poli, jakou hodnotu (index) by měla vrátit?",
+      "answer": -1,
+      "tolerance": 0
+    },
+    {
+      "id": "search-023", "type": "truefalse", "topic": "binary-search",
+      "explanation": "Při každém kroku binárního hledání se velikost vyhledávacího prostoru zmenší na polovinu.",
+      "statement": "Binární vyhledávání v každém kroku odstraní polovinu neprohledaných prvků.",
+      "answer": true
+    },
+    {
+      "id": "search-024", "type": "single", "topic": "linear-search",
+      "explanation": "V nesetříděném poli nelze provést binární vyhledávání bez předchozího seřazení.",
+      "question": "Lze aplikovat binární vyhledávání na nesetříděné pole?",
+      "options": [
+        { "text": "Ano, vždy", "correct": false },
+        { "text": "Ne", "correct": true },
+        { "text": "Pouze pokud je pole malé", "correct": false },
+        { "text": "Ano, po náhodném zamíchání", "correct": false }
+      ]
+    },
+    {
+      "id": "search-025", "type": "multiple", "topic": "binary-search",
+      "explanation": "Rekurze v binárním vyhledávání potřebuje bázový případ (prvek nalezen nebo vyhledávací prostor prázdný).",
+      "question": "Kdy končí rekurze u binárního vyhledávání? (vyberte 2)",
+      "options": [
+        { "text": "Prvek byl nalezen", "correct": true },
+        { "text": "Vyhledávací prostor je prázdný", "correct": true },
+        { "text": "Prošli jsme celé pole", "correct": false },
+        { "text": "Po 100 pokusech", "correct": false }
+      ]
+    },
+    {
+      "id": "search-026", "type": "single", "topic": "cclovek-impl",
+      "explanation": "Statická metoda nepotřebuje instanci třídy, volá se přes jméno třídy.",
+      "question": "Proč by měla být metoda pro hledání člověka statická?",
+      "options": [
+        { "text": "Protože nepotřebuje stav žádného objektu (stačí jí vstupní pole)", "correct": true },
+        { "text": "Protože je to povinnost pro každou metodu", "correct": false },
+        { "text": "Protože je rychlejší", "correct": false },
+        { "text": "Protože má více parametrů", "correct": false }
+      ]
+    },
+    {
+      "id": "search-027", "type": "truefalse", "topic": "linear-search",
+      "explanation": "V průměrném případě lineární vyhledávání najde prvek v polovině pole.",
+      "statement": "Lineární vyhledávání najde prvek vždy v posledním kroku.",
+      "answer": false
+    },
+    {
+      "id": "search-028", "type": "single", "topic": "binary-search",
+      "explanation": "Výpočet středu v binárním vyhledávání: (low + high) / 2.",
+      "question": "Jak se vypočítá index středu pole v binárním vyhledávání?",
+      "options": [
+        { "text": "(low + high) / 2", "correct": true },
+        { "text": "(low * high) / 2", "correct": false },
+        { "text": "low + high", "correct": false },
+        { "text": "high - low", "correct": false }
+      ]
+    },
+    {
+      "id": "search-029", "type": "truefalse", "topic": "cclovek-impl",
+      "explanation": "Objekt se hledá v poli typu Clovek[].",
+      "statement": "Hledání v poli objektů Clovek vyžaduje porovnání referencí, ne dat.",
+      "answer": false
+    },
+    {
+      "id": "search-030", "type": "numeric", "topic": "linear-search",
+      "question": "Pokud máme 100 prvků a hledaný prvek je na 10. pozici, kolik porovnání udělá lineární vyhledávání?",
+      "answer": 10,
+      "tolerance": 0
+    }
+  ]
+}

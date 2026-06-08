@@ -1,0 +1,314 @@
+{
+"subject": "datove-formaty",
+"name": "Formáty výměny dat",
+"topics": [
+{ "id": "xml-zaklady", "name": "XML a základní principy" },
+{ "id": "dtd-schema", "name": "DTD a validace XML" },
+{ "id": "xml-parsing", "name": "Parsování XML (DOM vs SAX)" },
+{ "id": "json-format", "name": "JSON a moderní formáty" },
+{ "id": "vymena-dat", "name": "Výměna a integrace dat" }
+],
+"questions": [
+{
+"id": "datove-formaty-001", "type": "single", "topic": "xml-zaklady", "difficulty": 1,
+"explanation": "XML (eXtensible Markup Language) je značkovací jazyk určený k přenosu a ukládání dat, ne k jejich formátování (jako HTML).",
+"question": "Co je hlavním účelem jazyka XML?",
+"options": [
+{ "text": "Formátování vzhledu webových stránek", "correct": false },
+{ "text": "Ukládání a přenos strukturovaných dat", "correct": true },
+{ "text": "Programování logiky serveru", "correct": false },
+{ "text": "Vytváření vektorové grafiky", "correct": false }
+]
+},
+{
+"id": "datove-formaty-002", "type": "truefalse", "topic": "xml-zaklady", "difficulty": 1,
+"explanation": "V XML musí mít každý dokument právě jeden kořenový (root) element, který obaluje všechny ostatní.",
+"statement": "XML dokument může obsahovat více kořenových elementů na stejné úrovni.",
+"answer": false
+},
+{
+"id": "datove-formaty-003", "type": "single", "topic": "xml-zaklady", "difficulty": 2,
+"explanation": "XML je case-sensitive, což znamená, že  a  jsou dvě různé značky.",
+"question": "Je jazyk XML case-sensitive (rozlišuje velká a malá písmena)?",
+"options": [
+{ "text": "Ne, XML je case-insensitive", "correct": false },
+{ "text": "Ano, rozlišuje velká a malá písmena", "correct": true },
+{ "text": "Pouze v atributech, v elementech ne", "correct": false },
+{ "text": "Závisí na verzi XML", "correct": false }
+]
+},
+{
+"id": "datove-formaty-004", "type": "single", "topic": "xml-zaklady", "difficulty": 2,
+"explanation": "Dobře formátovaný (well-formed) XML dokument splňuje základní syntaktická pravidla (např. uzavřené tagy, kořenový element).",
+"question": "Co znamená, že XML dokument je 'well-formed'?",
+"options": [
+{ "text": "Že odpovídá DTD schématu", "correct": false },
+{ "text": "Že splňuje základní syntaktická pravidla XML", "correct": true },
+{ "text": "Že obsahuje pouze textová data", "correct": false },
+{ "text": "Že je validní vůči XML Schema (XSD)", "correct": false }
+]
+},
+{
+"id": "datove-formaty-005", "type": "multiple", "topic": "xml-zaklady", "difficulty": 2,
+"explanation": "XML elementy mohou obsahovat text, vnořené elementy nebo atributy. Atributy se píší přímo do úvodní značky.",
+"question": "Jaké prvky může obsahovat XML element? (Vyberte všechny správné)",
+"options": [
+{ "text": "Textový obsah", "correct": true },
+{ "text": "Další vnořené elementy", "correct": true },
+{ "text": "Atributy v úvodním tagu", "correct": true },
+{ "text": "Vlastní spustitelný kód v jazyce C++", "correct": false }
+]
+},
+{
+"id": "datove-formaty-006", "type": "single", "topic": "xml-zaklady", "difficulty": 2,
+"explanation": "Entita < se používá pro znak '<', aby nedošlo k záměně se začátkem značky.",
+"question": "Jak zapíšeme znak '<' v textovém obsahu XML?",
+"options": [
+{ "text": "<", "correct": false },
+{ "text": "&lt", "correct": true },
+{ "text": "\\<", "correct": false },
+{ "text": "[[<]]", "correct": false }
+]
+},
+{
+"id": "datove-formaty-007", "type": "single", "topic": "dtd-schema", "difficulty": 2,
+"explanation": "DTD (Document Type Definition) definuje strukturu XML dokumentu, tedy které elementy a atributy jsou povoleny.",
+"question": "K čemu slouží DTD?",
+"options": [
+{ "text": "K definování vzhledu (CSS)", "correct": false },
+{ "text": "K definování struktury a pravidel XML dokumentu", "correct": true },
+{ "text": "Ke kompresi XML dat", "correct": false },
+{ "text": "K parsování XML do paměti", "correct": false }
+]
+},
+{
+"id": "datove-formaty-008", "type": "single", "topic": "dtd-schema", "difficulty": 3,
+"explanation": "XML Schema (XSD) je modernější a výkonnější alternativa k DTD, která využívá XML syntaxi a podporuje datové typy.",
+"question": "Jaká je hlavní výhoda XML Schema (XSD) oproti DTD?",
+"options": [
+{ "text": "Je mnohem kratší na zápis", "correct": false },
+{ "text": "Podporuje datové typy a jmenné prostory (namespaces)", "correct": true },
+{ "text": "Je povinné pro každý XML soubor", "correct": false },
+{ "text": "DTD se již nepoužívá", "correct": false }
+]
+},
+{
+"id": "datove-formaty-009", "type": "truefalse", "topic": "dtd-schema", "difficulty": 2,
+"explanation": "Validní XML dokument je takový, který vyhovuje přidruženému schématu (DTD nebo XSD).",
+"statement": "Validní XML dokument musí odpovídat pravidlům definovaným v jeho schématu (DTD/XSD).",
+"answer": true
+},
+{
+"id": "datove-formaty-010", "type": "single", "topic": "dtd-schema", "difficulty": 3,
+"explanation": "Symbol '*' v DTD značí, že element se může vyskytovat 0 nebo vícekrát (opakování).",
+"question": "Co v DTD znamená zápis 'ELEMENT*'? ",
+"options": [
+{ "text": "Právě jeden výskyt", "correct": false },
+{ "text": "Nula nebo více výskytů", "correct": true },
+{ "text": "Jeden nebo více výskytů", "correct": false },
+{ "text": "Volitelný výskyt (0 nebo 1)", "correct": false }
+]
+},
+{
+"id": "datove-formaty-011", "type": "single", "topic": "dtd-schema", "difficulty": 2,
+"explanation": "DOCTYPE deklarace se používá pro propojení XML dokumentu s DTD schématem.",
+"question": "Který tag se v XML používá pro odkaz na DTD?",
+"options": [
+{ "text": "", "correct": false },
+{ "text": "", "correct": true },
+{ "text": "", "correct": false },
+{ "text": "<!XML-LINK>", "correct": false }
+]
+},
+{
+"id": "datove-formaty-012", "type": "multiple", "topic": "dtd-schema", "difficulty": 3,
+"explanation": "DTD umožňuje definovat elementy (ELEMENT), atributy (ATTLIST) a entity (ENTITY).",
+"question": "Jaké konstrukce DTD podporuje? (Vyberte všechny správné)",
+"options": [
+{ "text": "ELEMENT", "correct": true },
+{ "text": "ATTLIST", "correct": true },
+{ "text": "FUNCTION", "correct": false },
+{ "text": "ENTITY", "correct": true }
+]
+},
+{
+"id": "datove-formaty-013", "type": "single", "topic": "xml-parsing", "difficulty": 2,
+"explanation": "DOM (Document Object Model) načte celý XML soubor do paměti jako stromovou strukturu, což je paměťově náročné.",
+"question": "Co je typické pro DOM parser?",
+"options": [
+{ "text": "Je velmi paměťově úsporný", "correct": false },
+{ "text": "Načítá celý dokument do paměti jako strom", "correct": true },
+{ "text": "Je událostmi řízený", "correct": false },
+{ "text": "Nepotřebuje XML strukturu", "correct": false }
+]
+},
+{
+"id": "datove-formaty-014", "type": "single", "topic": "xml-parsing", "difficulty": 2,
+"explanation": "SAX (Simple API for XML) čte XML dokument postupně (proudově) a vyvolává události (start tag, end tag), takže je velmi rychlý a úsporný.",
+"question": "Co je typické pro SAX parser?",
+"options": [
+{ "text": "Je to objektový model", "correct": false },
+{ "text": "Je to proudový (stream) parser řízený událostmi", "correct": true },
+{ "text": "Ukládá celý strom do RAM", "correct": false },
+{ "text": "Umožňuje snadnou editaci XML dokumentu", "correct": false }
+]
+},
+{
+"id": "datove-formaty-015", "type": "single", "topic": "xml-parsing", "difficulty": 3,
+"explanation": "DOM umožňuje snadnou navigaci a editaci dokumentu v libovolném směru, což SAX neumožňuje.",
+"question": "Kdy je výhodnější použít DOM parser místo SAX?",
+"options": [
+{ "text": "Při zpracování obrovských souborů (GB)", "correct": false },
+{ "text": "Když potřebujeme s daty manipulovat a procházet je libovolně", "correct": true },
+{ "text": "Když nám záleží na rychlosti a nízké paměti", "correct": false },
+{ "text": "Nikdy, SAX je vždy lepší", "correct": false }
+]
+},
+{
+"id": "datove-formaty-016", "type": "truefalse", "topic": "xml-parsing", "difficulty": 2,
+"explanation": "SAX parser nelze snadno použít pro úpravu XML souboru, protože neuchovává celou strukturu v paměti.",
+"statement": "SAX parser je vhodný pro editaci a zápis změn do XML dokumentu.",
+"answer": false
+},
+{
+"id": "datove-formaty-017", "type": "single", "topic": "xml-parsing", "difficulty": 2,
+"explanation": "Parsování je proces, při kterém program čte textový formát (XML/JSON) a převádí jej na datovou strukturu v paměti.",
+"question": "Co znamená pojem 'parsování'?",
+"options": [
+{ "text": "Šifrování dat", "correct": false },
+{ "text": "Analýza a převod textu na datovou strukturu", "correct": true },
+{ "text": "Změna formátu souboru na binární", "correct": false },
+{ "text": "Validace proti DTD", "correct": false }
+]
+},
+{
+"id": "datove-formaty-018", "type": "single", "topic": "xml-parsing", "difficulty": 3,
+"explanation": "StAX (Streaming API for XML) je podobný SAX, ale umožňuje (na rozdíl od SAX) 'pull' přístup, kdy si parser data vyžaduje.",
+"question": "Jaký je hlavní rozdíl mezi SAX a StAX?",
+"options": [
+{ "text": "StAX je DOM parser", "correct": false },
+{ "text": "StAX je pull-parser, SAX je push-parser", "correct": true },
+{ "text": "SAX je pro JSON", "correct": false },
+{ "text": "Žádný, jsou to synonyma", "correct": false }
+]
+},
+{
+"id": "datove-formaty-019", "type": "single", "topic": "json-format", "difficulty": 1,
+"explanation": "JSON (JavaScript Object Notation) je lehký formát pro výměnu dat, který je přirozeně čitelný pro JS.",
+"question": "Co znamená zkratka JSON?",
+"options": [
+{ "text": "Java Standard Object Notation", "correct": false },
+{ "text": "JavaScript Object Notation", "correct": true },
+{ "text": "JSON Serialized Object Network", "correct": false },
+{ "text": "Joint Standard Open Network", "correct": false }
+]
+},
+{
+"id": "datove-formaty-020", "type": "multiple", "topic": "json-format", "difficulty": 2,
+"explanation": "JSON podporuje datové typy: řetězec, číslo, boolean, pole, objekt a null.",
+"question": "Které z následujících datových typů JSON nativně podporuje? (Vyberte všechny)",
+"options": [
+{ "text": "String (řetězec)", "correct": true },
+{ "text": "Number (číslo)", "correct": true },
+{ "text": "Object (objekt)", "correct": true },
+{ "text": "Date (datum)", "correct": false }
+]
+},
+{
+"id": "datove-formaty-021", "type": "single", "topic": "json-format", "difficulty": 2,
+"explanation": "V JSONu musí být klíče vždy v uvozovkách, na rozdíl od JS objektů.",
+"question": "Jak musí být v JSONu zapsány klíče objektů?",
+"options": [
+{ "text": "Bez uvozovek", "correct": false },
+{ "text": "V uvozovkách (dvojitých)", "correct": true },
+{ "text": "V apostrofech", "correct": false },
+{ "text": "Jako komentář", "correct": false }
+]
+},
+{
+"id": "datove-formaty-022", "type": "truefalse", "topic": "json-format", "difficulty": 2,
+"explanation": "Standardní JSON formát neumožňuje zápis komentářů, což je častý rozdíl oproti YAML nebo některým rozšířením.",
+"statement": "JSON soubory standardně podporují zápis komentářů pomocí // nebo /* */.",
+"answer": false
+},
+{
+"id": "datove-formaty-023", "type": "single", "topic": "json-format", "difficulty": 2,
+"explanation": "JSON je obecně mnohem méně ukecaný (verbosní) než XML, protože nemá uzavírací tagy.",
+"question": "Jaký je hlavní rozdíl mezi XML a JSON z hlediska velikosti dat?",
+"options": [
+{ "text": "XML je vždy menší", "correct": false },
+{ "text": "JSON je obvykle méně rozsáhlý (menší objem dat)", "correct": true },
+{ "text": "Oba formáty mají vždy stejnou velikost", "correct": false },
+{ "text": "JSON neumožňuje strukturovaná data", "correct": false }
+]
+},
+{
+"id": "datove-formaty-024", "type": "single", "topic": "json-format", "difficulty": 2,
+"explanation": "JSON je v moderním webu (REST API) mnohem oblíbenější než XML.",
+"question": "V jakém prostředí je JSON nejpoužívanější?",
+"options": [
+{ "text": "Ve webových API (REST)", "correct": true },
+{ "text": "Pro definici dokumentů (DTD)", "correct": false },
+{ "text": "Pro tisk dokumentů", "correct": false },
+{ "text": "Pro grafické programy", "correct": false }
+]
+},
+{
+"id": "datove-formaty-025", "type": "single", "topic": "vymena-dat", "difficulty": 2,
+"explanation": "Export a import dat slouží k přenosu dat mezi odlišnými systémy, které by jinak nemohly komunikovat.",
+"question": "K čemu slouží import/export dat v systémech?",
+"options": [
+{ "text": "K šifrování databáze", "correct": false },
+{ "text": "K přenosu dat mezi odlišnými systémy", "correct": true },
+{ "text": "K mazání duplicit", "correct": false },
+{ "text": "K zálohování uživatelských hesel", "correct": false }
+]
+},
+{
+"id": "datove-formaty-026", "type": "truefalse", "topic": "vymena-dat", "difficulty": 2,
+"explanation": "UTF-8 je standardní kódování, které zajišťuje správné zobrazení znaků různých jazyků v XML i JSON.",
+"statement": "Pro správnou výměnu dat (zejména s diakritikou) se doporučuje kódování UTF-8.",
+"answer": true
+},
+{
+"id": "datove-formaty-027", "type": "single", "topic": "vymena-dat", "difficulty": 3,
+"explanation": "Serializace je převod objektu v paměti na formát vhodný pro ukládání nebo přenos (např. XML, JSON).",
+"question": "Jak se nazývá proces převodu objektu na datový formát (např. JSON/XML)?",
+"options": [
+{ "text": "Deserializace", "correct": false },
+{ "text": "Serializace", "correct": true },
+{ "text": "Komprese", "correct": false },
+{ "text": "Validace", "correct": false }
+]
+},
+{
+"id": "datove-formaty-028", "type": "numeric", "topic": "vymena-dat", "difficulty": 2,
+"explanation": "Počet tagů v jednom XML elementu ... je 2 (otevírací a zavírací).",
+"question": "Kolik tagů (značek) tvoří jeden kompletní XML element (např. hodnota)?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "datove-formaty-029", "type": "single", "topic": "vymena-dat", "difficulty": 3,
+"explanation": "YAML je další formát pro výměnu dat, který je známý tím, že je velmi čitelný pro lidi a používá odsazení.",
+"question": "Jaký formát je známý svou vysokou čitelností pro lidi díky odsazení?",
+"options": [
+{ "text": "JSON", "correct": false },
+{ "text": "YAML", "correct": true },
+{ "text": "Binární XML", "correct": false },
+{ "text": "CSV bez hlavičky", "correct": false }
+]
+},
+{
+"id": "datove-formaty-030", "type": "multiple", "topic": "vymena-dat", "difficulty": 3,
+"explanation": "Při volbě formátu záleží na rychlosti parsování, velikosti přenášených dat a čitelnosti pro člověka.",
+"question": "Podle čeho vybíráme formát pro výměnu dat? (Vyberte všechny správné)",
+"options": [
+{ "text": "Rychlost parsování", "correct": true },
+{ "text": "Velikost dat (bandwidth)", "correct": true },
+{ "text": "Čitelnost pro člověka", "correct": true },
+{ "text": "Barva ikonky formátu", "correct": false }
+]
+}
+]
+}

@@ -1,0 +1,280 @@
+{
+  "subject": "oop",
+  "name": "Základy OOP",
+  "topics": [
+    { "id": "trida-objekt", "name": "Třída a objekt" },
+    { "id": "statika", "name": "Statické vs. instanční členy" },
+    { "id": "implementace", "name": "Praktická implementace" }
+  ],
+  "questions": [
+    {
+      "id": "oop-001", "type": "single", "topic": "trida-objekt",
+      "explanation": "Třída je pouze návrh (šablona), zatímco objekt je reálná instance v paměti.",
+      "question": "Co je to třída v OOP?",
+      "options": [
+        { "text": "Konkrétní instance objektu", "correct": false },
+        { "text": "Šablona (předloha) pro vytváření objektů", "correct": true },
+        { "text": "Metoda pro výpočet dat", "correct": false },
+        { "text": "Datový typ pro celá čísla", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-002", "type": "truefalse", "topic": "trida-objekt",
+      "explanation": "Objektů jedné třídy může v paměti existovat libovolné množství.",
+      "statement": "Z jedné třídy lze vytvořit pouze jeden objekt.",
+      "answer": false
+    },
+    {
+      "id": "oop-003", "type": "single", "topic": "statika",
+      "explanation": "Klíčové slovo 'static' v Javě označuje člen, který patří třídě, nikoliv konkrétní instanci.",
+      "question": "Co určuje klíčové slovo 'static' u proměnné?",
+      "options": [
+        { "text": "Proměnná patří každému objektu zvlášť", "correct": false },
+        { "text": "Proměnná je sdílená všemi instancemi třídy", "correct": true },
+        { "text": "Proměnnou nelze měnit", "correct": false },
+        { "text": "Proměnná je přístupná jen z metody main", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-004", "type": "multiple", "topic": "statika",
+      "explanation": "Statické metody nemají přístup k 'this' (instanci), protože nepatří žádnému konkrétnímu objektu.",
+      "question": "Které omezení platí pro statické metody? (vyberte 2)",
+      "options": [
+        { "text": "Nemohou přistupovat k instančním proměnným", "correct": true },
+        { "text": "Nemohou volat jiné statické metody", "correct": false },
+        { "text": "Nemohou pracovat s 'this'", "correct": true },
+        { "text": "Musí být vždy public", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-005", "type": "single", "topic": "implementace",
+      "explanation": "Konstruktor se volá automaticky při vytvoření nového objektu pomocí klíčového slova 'new'.",
+      "question": "Kdy se volá konstruktor třídy?",
+      "options": [
+        { "text": "Při kompilaci programu", "correct": false },
+        { "text": "Při instancování objektu (klíčové slovo new)", "correct": true },
+        { "text": "Při ukončení programu", "correct": false },
+        { "text": "Při zavolání jakékoliv metody", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-006", "type": "truefalse", "topic": "implementace",
+      "explanation": "V konstruktoru třídy Student jsme v příkladu prováděli `pocetStudentu++`, což je správný způsob čítání instancí.",
+      "statement": "Pro počítání instancí třídy je vhodné použít statickou proměnnou.",
+      "answer": true
+    },
+    {
+      "id": "oop-007", "type": "single", "topic": "implementace",
+      "explanation": "Instanční proměnné uchovávají stav konkrétního objektu (např. jméno konkrétního studenta).",
+      "question": "Jaký je účel instančních proměnných?",
+      "options": [
+        { "text": "Sdílet data mezi všemi studenty", "correct": false },
+        { "text": "Uchovávat stav konkrétního objektu", "correct": true },
+        { "text": "Počítat celkový počet objektů", "correct": false },
+        { "text": "Ukládat konstanty třídy", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-008", "type": "multiple", "topic": "trida-objekt",
+      "explanation": "OOP stojí na pilířích jako zapouzdření, dědičnost a polymorfismus.",
+      "question": "Jaké jsou základní pilíře OOP? (vyberte 2)",
+      "options": [
+        { "text": "Zapouzdření (Encapsulation)", "correct": true },
+        { "text": "Dědičnost (Inheritance)", "correct": true },
+        { "text": "Lineární programování", "correct": false },
+        { "text": "Základní aritmetika", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-009", "type": "numeric", "topic": "implementace",
+      "explanation": "Každý student má svůj seznam známek v ArrayListu.",
+      "question": "Pokud máme 3 studenty, kolik instancí ArrayListu pro známky existuje v paměti?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "oop-010", "type": "truefalse", "topic": "statika",
+      "explanation": "Statické metody voláme přímo přes název třídy, např. Student.vypisPocetStudentu().",
+      "statement": "Statickou metodu voláme přes instanci objektu (student.vypisPocetStudentu()).",
+      "answer": false
+    },
+    {
+      "id": "oop-011", "type": "single", "topic": "implementace",
+      "explanation": "Průměr vypočítáme jako součet prvků vydělený jejich počtem.",
+      "question": "Co vrací metoda vypocitejPrumer()?",
+      "options": [
+        { "text": "Součet všech známek", "correct": false },
+        { "text": "Aritmetický průměr známek", "correct": true },
+        { "text": "Počet známek", "correct": false },
+        { "text": "Nejlepší známku", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-012", "type": "multiple", "topic": "implementace",
+      "explanation": "Důležité je ošetřit dělení nulou, pokud student nemá žádné známky.",
+      "question": "Co musíme ošetřit v metodě vypocitejPrumer? (vyberte 2)",
+      "options": [
+        { "text": "Dělení nulou (pokud je seznam prázdný)", "correct": true },
+        { "text": "Datový typ návratové hodnoty (double)", "correct": true },
+        { "text": "Jméno studenta", "correct": false },
+        { "text": "Počet studentů ve třídě", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-013", "type": "truefalse", "topic": "trida-objekt",
+      "explanation": "Instanční metoda má vždy přístup k proměnným `this.jmeno`, `this.prijmeni`.",
+      "statement": "Instanční metoda může přistupovat k privátním instančním proměnným svého objektu.",
+      "answer": true
+    },
+    {
+      "id": "oop-014", "type": "numeric", "topic": "statika",
+      "explanation": "Proměnná `pocetStudentu` se zvyšuje v konstruktoru.",
+      "question": "Pokud vytvoříme 5 studentů, jakou hodnotu má statická proměnná pocetStudentu?",
+      "answer": 5,
+      "tolerance": 0
+    },
+    {
+      "id": "oop-015", "type": "single", "topic": "trida-objekt",
+      "explanation": "Klíčové slovo 'new' vyhradí paměť na haldě (heap) pro nový objekt.",
+      "question": "Co dělá klíčové slovo 'new'?",
+      "options": [
+        { "text": "Definuje statickou metodu", "correct": false },
+        { "text": "Vytvoří novou instanci třídy v paměti", "correct": true },
+        { "text": "Smaže objekt", "correct": false },
+        { "text": "Vrací prázdnou hodnotu", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-016", "type": "truefalse", "topic": "statika",
+      "explanation": "Statické proměnné existují v paměti pouze jednou, bez ohledu na počet instancí.",
+      "statement": "Každý objekt má svou vlastní kopii statické proměnné.",
+      "answer": false
+    },
+    {
+      "id": "oop-017", "type": "single", "topic": "implementace",
+      "explanation": "ArrayList umožňuje dynamicky přidávat libovolný počet známek.",
+      "question": "Proč je pro známky vhodný ArrayList?",
+      "options": [
+        { "text": "Má pevnou velikost", "correct": false },
+        { "text": "Umožňuje měnit počet prvků za běhu", "correct": true },
+        { "text": "Je vždy řazený", "correct": false },
+        { "text": "Je rychlejší než pole", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-018", "type": "multiple", "topic": "trida-objekt",
+      "explanation": "Zapouzdření (Encapsulation) znamená skrytí vnitřních dat (private) a přístup přes metody.",
+      "question": "Co znamená zapouzdření? (vyberte 2)",
+      "options": [
+        { "text": "Skrytí vnitřního stavu objektu (private)", "correct": true },
+        { "text": "Poskytnutí přístupu přes veřejné metody", "correct": true },
+        { "text": "Změna dat na statická", "correct": false },
+        { "text": "Dědění všech proměnných", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-019", "type": "truefalse", "topic": "implementace",
+      "explanation": "Metoda `this()` v konstruktoru volá jiný konstruktor téže třídy.",
+      "statement": "Konstruktor nemůže volat jiný konstruktor.",
+      "answer": false
+    },
+    {
+      "id": "oop-020", "type": "numeric", "topic": "implementace",
+      "explanation": "Průměr známek 1, 3, 2 je (1+3+2)/3 = 2.",
+      "question": "Jaký je průměr studenta se známkami 1, 3, 2?",
+      "answer": 2,
+      "tolerance": 0.1
+    },
+    {
+      "id": "oop-021", "type": "single", "topic": "statika",
+      "explanation": "Statické metody jsou ideální pro utility, které nepotřebují stav objektu.",
+      "question": "Kdy použijeme statickou metodu?",
+      "options": [
+        { "text": "Když metoda nepracuje s instancí objektu", "correct": true },
+        { "text": "Když potřebujeme měnit instanční proměnné", "correct": false },
+        { "text": "Když vytváříme novou třídu", "correct": false },
+        { "text": "Vždy", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-022", "type": "multiple", "topic": "trida-objekt",
+      "explanation": "Třídy sdružují data (atributy) a logiku (metody).",
+      "question": "Co může obsahovat třída? (vyberte 2)",
+      "options": [
+        { "text": "Atributy (proměnné)", "correct": true },
+        { "text": "Metody (funkce)", "correct": true },
+        { "text": "Pouze komentáře", "correct": false },
+        { "text": "Nic", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-023", "type": "truefalse", "topic": "statika",
+      "explanation": "Statická proměnná `pocetStudentu` se v našem příkladu zvyšuje v konstruktoru.",
+      "statement": "Statická proměnná se inicializuje při každém volání instanční metody.",
+      "answer": false
+    },
+    {
+      "id": "oop-024", "type": "single", "topic": "implementace",
+      "explanation": "Klíčové slovo 'this' odkazuje na instanci, na které byla metoda zavolána.",
+      "question": "Co se stane, pokud nepoužijeme 'this' při přiřazení jména v konstruktoru?",
+      "options": [
+        { "text": "Program spadne", "correct": false },
+        { "text": "Dojde ke stínování (shadowing) a proměnná třídy zůstane prázdná", "correct": true },
+        { "text": "Změní se typ proměnné", "correct": false },
+        { "text": "NIC, funguje to stejně", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-025", "type": "multiple", "topic": "trida-objekt",
+      "explanation": "Příkladem tříd jsou např. String, ArrayList, Student.",
+      "question": "Co v Javě považujeme za třídu? (vyberte 2)",
+      "options": [
+        { "text": "String", "correct": true },
+        { "text": "ArrayList", "correct": true },
+        { "text": "int", "correct": false },
+        { "text": "double", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-026", "type": "single", "topic": "statika",
+      "explanation": "Statické metody můžeme volat bez vytvoření objektu.",
+      "question": "Jak voláme statickou metodu třídy Student?",
+      "options": [
+        { "text": "Student.vypisPocetStudentu();", "correct": true },
+        { "text": "Student s = new Student(); s.vypisPocetStudentu();", "correct": false },
+        { "text": "vypisPocetStudentu();", "correct": false },
+        { "text": "Student::vypisPocetStudentu()", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-027", "type": "truefalse", "topic": "implementace",
+      "explanation": "Metoda `vypocitejPrumer` vrací double, aby výsledek nebyl zaokrouhlen (např. 2.5).",
+      "statement": "Metoda pro průměr by měla vracet hodnotu typu double, aby byla přesná.",
+      "answer": true
+    },
+    {
+      "id": "oop-028", "type": "single", "topic": "trida-objekt",
+      "explanation": "Public přístup umožňuje volání metod/atributů z jiných tříd.",
+      "question": "Jaký přístupový modifikátor je nejvíce omezující?",
+      "options": [
+        { "text": "public", "correct": false },
+        { "text": "private", "correct": true },
+        { "text": "protected", "correct": false },
+        { "text": "package-private", "correct": false }
+      ]
+    },
+    {
+      "id": "oop-029", "type": "truefalse", "topic": "statika",
+      "explanation": "Všechny objekty třídy sdílejí stejnou statickou proměnnou.",
+      "statement": "Pokud vytvořím 10 objektů, mám 10 kopií statické proměnné.",
+      "answer": false
+    },
+    {
+      "id": "oop-030", "type": "numeric", "topic": "implementace",
+      "explanation": "Pokud student nemá žádnou známku, vracíme 0.0.",
+      "question": "Jakou hodnotu vrátí průměr, pokud student nemá žádné známky (dle našeho kódu)?",
+      "answer": 0,
+      "tolerance": 0.1
+    }
+  ]
+}

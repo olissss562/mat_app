@@ -1,0 +1,276 @@
+{
+  "subject": "retezce",
+  "name": "Řetězce a regulární výrazy",
+  "topics": [
+    { "id": "kodovani", "name": "Kódování znaků" },
+    { "id": "regex-teorie", "name": "Teorie regulárních výrazů" },
+    { "id": "validace-aplikace", "name": "Aplikace a validace" }
+  ],
+  "questions": [
+    {
+      "id": "retezce-001", "type": "single", "topic": "kodovani",
+      "explanation": "UTF-8 je celosvětový standard, který umožňuje správné zobrazení všech znaků (včetně českých) a je zpětně kompatibilní s ASCII.",
+      "question": "Které kódování je dnes standardem pro webové stránky a češtinu?",
+      "options": [
+        { "text": "ASCII", "correct": false },
+        { "text": "UTF-8", "correct": true },
+        { "text": "ISO-8859-1", "correct": false },
+        { "text": "Binary 16", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-002", "type": "truefalse", "topic": "kodovani",
+      "explanation": "ASCII je 7-bitové kódování, které obsahuje pouze základní znaky anglické abecedy a neobsahuje českou diakritiku.",
+      "statement": "Kódování ASCII plně podporuje českou diakritiku.",
+      "answer": false
+    },
+    {
+      "id": "retezce-003", "type": "single", "topic": "regex-teorie",
+      "explanation": "Regulární výrazy jsou mocný nástroj pro vyhledávání, validaci a manipulaci s textovými vzory.",
+      "question": "K čemu v programování primárně slouží regulární výrazy?",
+      "options": [
+        { "text": "K šifrování dat", "correct": false },
+        { "text": "K vyhledávání a validaci vzorů v textu", "correct": true },
+        { "text": "K formátování zdrojového kódu", "correct": false },
+        { "text": "Ke kompresi souborů", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-004", "type": "multiple", "topic": "regex-teorie",
+      "explanation": "Znak '^' označuje začátek řetězce a '$' označuje konec řetězce. Jsou zásadní pro přesnou validaci.",
+      "question": "Které meta-znaky ukotvují regulární výraz k hranicím řetězce? (vyberte 2)",
+      "options": [
+        { "text": "^", "correct": true },
+        { "text": "$", "correct": true },
+        { "text": "@", "correct": false },
+        { "text": "#", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-005", "type": "numeric", "topic": "validace-aplikace",
+      "explanation": "V zadání máme povoleny tři koncovky: cz, edu, com. Ty tvoří alternativy v regexu.",
+      "question": "Kolik povolených koncovek (.cz, .edu, .com) obsahuje náš validační regex?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "retezce-006", "type": "single", "topic": "validace-aplikace",
+      "explanation": "Emailová adresa před @ smí mít jen malá písmena a tečky. Regex `^[a-z.]+@` toto splňuje.",
+      "question": "Který z těchto emailů by prošel validací `^[a-z.]+@[a-z0-9-]+\\.(cz|edu|com)$`?",
+      "options": [
+        { "text": "Prijmeni.Jmeno@gmail.com", "correct": false },
+        { "text": "prijmeni.jmeno@seznam.cz", "correct": true },
+        { "text": "prijmeni_jmeno@web.edu", "correct": false },
+        { "text": "jmeno123@gmail.com", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-007", "type": "truefalse", "topic": "regex-teorie",
+      "explanation": "Hranaté závorky [ ] definují množinu znaků, ze kterých se vybírá.",
+      "statement": "Výraz [a-z] v regexu znamená, že hledáme pouze znaky malé 'a' až 'z'.",
+      "answer": true
+    },
+    {
+      "id": "retezce-008", "type": "single", "topic": "kodovani",
+      "explanation": "Unicode je univerzální norma, která každému znaku z každého jazyka přiřadí unikátní číslo.",
+      "question": "Co je hlavním účelem kódování Unicode?",
+      "options": [
+        { "text": "Snížení nároků na paměť", "correct": false },
+        { "text": "Poskytnout unikátní identifikátor pro znaky všech jazyků", "correct": true },
+        { "text": "Zrychlení síťové komunikace", "correct": false },
+        { "text": "Zabezpečení přenosu dat", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-009", "type": "multiple", "topic": "regex-teorie",
+      "explanation": "Kvantifikátor '+' znamená 1 a více výskytů, '*' znamená 0 a více.",
+      "question": "Co znamenají tyto kvantifikátory v Regexu? (vyberte 2)",
+      "options": [
+        { "text": "+ znamená 1 a více výskytů", "correct": true },
+        { "text": "* znamená 0 a více výskytů", "correct": true },
+        { "text": "+ znamená přesně 0 výskytů", "correct": false },
+        { "text": "* znamená povinný výskyt", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-010", "type": "numeric", "topic": "validace-aplikace",
+      "explanation": "Regex pro třídu `^[A-Z][0-9]+[A-Z]?$` má tři hlavní bloky: písmeno, čísla, nepovinné písmeno.",
+      "question": "Kolik funkčních bloků (písmeno, čísla, nepovinné písmeno) má regex pro třídu?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "retezce-011", "type": "truefalse", "topic": "validace-aplikace",
+      "explanation": "Regex `[A-Z][0-9]+[A-Z]?$` vyžaduje na začátku jedno velké písmeno, což '1A' nesplňuje.",
+      "statement": "Třída '1A' by prošla validací `^[A-Z][0-9]+[A-Z]?$`.",
+      "answer": false
+    },
+    {
+      "id": "retezce-012", "type": "single", "topic": "kodovani",
+      "explanation": "UTF-8 používá pro běžné znaky (ASCII) pouze jeden bajt, což je velmi efektivní.",
+      "question": "Jaká je hlavní výhoda kódování UTF-8 pro běžné texty?",
+      "options": [
+        { "text": "Je kompatibilní s ASCII a úsporné", "correct": true },
+        { "text": "Vždy používá 4 bajty na znak", "correct": false },
+        { "text": "Nepodporuje latinku", "correct": false },
+        { "text": "Je to starší formát", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-013", "type": "multiple", "topic": "regex-teorie",
+      "explanation": "Znaky pro výčet možností v závorkách jsou |.",
+      "question": "Jaké znaky se používají pro 'nebo' (alternativu) v regexu? (vyberte 2)",
+      "options": [
+        { "text": "|", "correct": true },
+        { "text": "svislá čára", "correct": true },
+        { "text": "&&", "correct": false },
+        { "text": "??", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-014", "type": "truefalse", "topic": "kodovani",
+      "explanation": "ASCII tabulka obsahuje 128 znaků, což je pro moderní potřeby včetně českých znaků nedostatečné.",
+      "statement": "ASCII tabulka obsahuje dostatek místa pro všechny znaky všech světových jazyků.",
+      "answer": false
+    },
+    {
+      "id": "retezce-015", "type": "numeric", "topic": "kodovani",
+      "explanation": "Byte (bajt) je 8 bitů, což je základní jednotka pro většinu kódování znaků v počítači.",
+      "question": "Kolik bitů má jeden bajt, který je základem pro UTF-8?",
+      "answer": 8,
+      "tolerance": 0
+    },
+    {
+      "id": "retezce-016", "type": "single", "topic": "validace-aplikace",
+      "explanation": "Znak ? za [A-Z] znamená, že písmeno na konci třídy (např. V1A) může, ale nemusí být přítomno (např. I4).",
+      "question": "Co znamená znak '?' za [A-Z] ve výrazu pro třídu?",
+      "options": [
+        { "text": "Písmeno je povinné", "correct": false },
+        { "text": "Písmeno je nepovinné (0 nebo 1 výskyt)", "correct": true },
+        { "text": "Písmeno se musí opakovat", "correct": false },
+        { "text": "Písmeno nesmí být použito", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-017", "type": "truefalse", "topic": "kodovani",
+      "explanation": "Všechny moderní programovací jazyky dnes interně pracují s Unicode.",
+      "statement": "Většina moderních programovacích jazyků používá v řetězcích Unicode.",
+      "answer": true
+    },
+    {
+      "id": "retezce-018", "type": "single", "topic": "regex-teorie",
+      "explanation": "Znak \\ se v regexu používá pro escape (zrušení speciálního významu) znaku, např. tečky.",
+      "question": "Jaký význam má zpětné lomítko (\\) před tečkou v regexu?",
+      "options": [
+        { "text": "Tečka získá význam 'jakýkoliv znak'", "correct": false },
+        { "text": "Tečka se bere jako doslovný znak (literál)", "correct": true },
+        { "text": "Regex skončí chybu", "correct": false },
+        { "text": "Znamená konec řádku", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-019", "type": "multiple", "topic": "validace-aplikace",
+      "explanation": "Regex pro třídu `[A-Z][0-9]+[A-Z]?` by neměl validovat třídy jako '1A' (chybí velké písmeno na začátku).",
+      "question": "Které z těchto tříd by náš regex [A-Z][0-9]+[A-Z]? validoval? (vyberte 2)",
+      "options": [
+        { "text": "V1A", "correct": true },
+        { "text": "I4", "correct": true },
+        { "text": "1A", "correct": false },
+        { "text": "v1a", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-020", "type": "truefalse", "topic": "regex-teorie",
+      "explanation": "Hranaté závorky [] definují množinu znaků, nikoliv jejich pořadí.",
+      "statement": "Výraz [0-9] v regexu znamená, že se musí vyskytnout číslo 0 až 9.",
+      "answer": true
+    },
+    {
+      "id": "retezce-021", "type": "single", "topic": "kodovani",
+      "explanation": "Znak 'š' je mimo standardní ASCII, proto je v ASCII nečitelný.",
+      "question": "Co se stane se znakem 'š', pokud je uložen v kódování ASCII?",
+      "options": [
+        { "text": "Zobrazí se správně", "correct": false },
+        { "text": "Bude zobrazen jako chybný znak nebo otazník", "correct": true },
+        { "text": "ASCII ho automaticky převede na 's'", "correct": false },
+        { "text": "Nic se nestane", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-022", "type": "numeric", "topic": "regex-teorie",
+      "explanation": "Základní kvantifikátory v Regexu jsou +, *, ?, {n}.",
+      "question": "Kolik základních kvantifikátorů (plus, hvězdička, otazník) jsme si popsali?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "retezce-023", "type": "truefalse", "topic": "validace-aplikace",
+      "explanation": "Zavináč @ je v emailu literál, ne speciální operátor (kromě kontextu emailu).",
+      "statement": "Ve výrazu pro email je zavináč zástupný znak pro jakýkoliv znak.",
+      "answer": false
+    },
+    {
+      "id": "retezce-024", "type": "single", "topic": "kodovani",
+      "explanation": "Diakritika jsou znaky, které ASCII neobsahuje, proto musíme používat moderní kódování.",
+      "question": "Proč je ASCII pro češtinu nevhodné?",
+      "options": [
+        { "text": "Je příliš pomalé", "correct": false },
+        { "text": "Neobsahuje české znaky s diakritikou", "correct": true },
+        { "text": "Je příliš drahé", "correct": false },
+        { "text": "Je nepoužívané", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-025", "type": "multiple", "topic": "validace-aplikace",
+      "explanation": "Regex pouze kontroluje formát, nikoliv existenci adresy.",
+      "question": "Co regex u emailu kontroluje? (vyberte 2)",
+      "options": [
+        { "text": "Formát (syntaxi) řetězce", "correct": true },
+        { "text": "Zda je email funkční", "correct": false },
+        { "text": "Strukturu (@, doména)", "correct": true },
+        { "text": "Jméno majitele", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-026", "type": "single", "topic": "regex-teorie",
+      "explanation": "Regex nevidí význam slov, ale pouze shodu vzoru (patternu).",
+      "question": "Vidí regulární výraz význam slova?",
+      "options": [
+        { "text": "Ano, rozumí kontextu", "correct": false },
+        { "text": "Ne, hledá pouze shodu vzoru", "correct": true },
+        { "text": "Částečně", "correct": false },
+        { "text": "Pouze pokud je psán anglicky", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-027", "type": "truefalse", "topic": "regex-teorie",
+      "explanation": "Regex je case-sensitive, pokud není specifikováno jinak (např. flag 'i').",
+      "statement": "Regulární výrazy jsou standardně citlivé na velikost písmen.",
+      "answer": true
+    },
+    {
+      "id": "retezce-028", "type": "single", "topic": "kodovani",
+      "explanation": "UTF-8 je dnes dominantní kódování na celém internetu.",
+      "question": "Které kódování je dnes standardem pro webové aplikace?",
+      "options": [
+        { "text": "ANSI", "correct": false },
+        { "text": "UTF-8", "correct": true },
+        { "text": "DOS-852", "correct": false },
+        { "text": "Windows-1250", "correct": false }
+      ]
+    },
+    {
+      "id": "retezce-029", "type": "truefalse", "topic": "regex-teorie",
+      "explanation": "Kombinace znaků mohou vytvářet velmi komplexní regexy pro validaci složitých dat.",
+      "statement": "Regulární výrazy nelze kombinovat do složitějších struktur.",
+      "answer": false
+    },
+    {
+      "id": "retezce-030", "type": "numeric", "topic": "regex-teorie",
+      "explanation": "Hranaté závorky jsou základním kamenem pro definici množin znaků.",
+      "question": "Kolik znaků (hranaté závorky otevřená a zavřená) musíme použít pro definici jedné množiny?",
+      "answer": 2,
+      "tolerance": 0
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "subject": "starec-a-more",
+  "name": "Stařec a moře",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Charakteristika postav" },
+    { "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+    { "id": "literarni-forma", "name": "Literární forma a žánr" }
+  ],
+  "questions": [
+    {
+      "id": "starec-a-more-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Ernest Hemingway byl významný americký spisovatel 20. století, představitel 'ztracené generace' a nositel Nobelovy ceny.",
+      "question": "Kdo je autorem novely Stařec a moře?",
+      "options": [
+        { "text": "William Faulkner", "correct": false },
+        { "text": "Ernest Hemingway", "correct": true },
+        { "text": "John Steinbeck", "correct": false },
+        { "text": "Francis Scott Fitzgerald", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-002", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Dílo bylo publikováno v roce 1952 a bylo jedním z posledních velkých úspěchů autora.",
+      "question": "V jakém období byla novela vydána?",
+      "options": [
+        { "text": "19. století", "correct": false },
+        { "text": "První polovina 20. století", "correct": false },
+        { "text": "Druhá polovina 20. století", "correct": true },
+        { "text": "Začátek 21. století", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-003", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Hemingway za svou tvorbu, včetně tohoto díla, obdržel Nobelovu cenu za literaturu.",
+      "statement": "Autor novely obdržel Nobelovu cenu za literaturu.",
+      "answer": true
+    },
+    {
+      "id": "starec-a-more-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Hemingwayův styl je známý úsporností, využíváním metody 'ledovce' a důrazem na akci.",
+      "question": "Jaké znaky jsou typické pro Hemingwayův styl? (vyberte 2)",
+      "options": [
+        { "text": "Úspornost a věcnost", "correct": true },
+        { "text": "Květnaté a dlouhé popisy", "correct": false },
+        { "text": "Metoda 'ledovce' (skryté významy)", "correct": true },
+        { "text": "Používání archaismů", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Hemingway byl součástí tzv. ztracené generace, která byla poznamenána zkušeností z první světové války.",
+      "question": "Do jaké skupiny spisovatelů je Hemingway řazen?",
+      "options": [
+        { "text": "Beat generation", "correct": false },
+        { "text": "Ztracená generace", "correct": true },
+        { "text": "Symbolisté", "correct": false },
+        { "text": "Existencialisté", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Hemingway byl vášnivým cestovatelem a miloval rybaření, což se v knize zrcadlí.",
+      "statement": "Autor nikdy nebyl u moře a příběh si zcela vymyslel bez reálného základu.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-007", "type": "single", "topic": "postavy",
+      "explanation": "Santiago je starý, zkušený kubánský rybář, který bojuje s nepřízní osudu.",
+      "question": "Jak se jmenuje hlavní postava starého rybáře?",
+      "options": [
+        { "text": "Manolin", "correct": false },
+        { "text": "Santiago", "correct": true },
+        { "text": "Pedro", "correct": false },
+        { "text": "Antonio", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-008", "type": "single", "topic": "postavy",
+      "explanation": "Manolin je mladý chlapec, který Santiaga obdivuje a stará se o něj.",
+      "question": "Jakou roli hraje chlapec Manolin v životě Santiaga?",
+      "options": [
+        { "text": "Je to jeho syn", "correct": false },
+        { "text": "Je to jeho učedník a jediný opravdový přítel", "correct": true },
+        { "text": "Je to jeho nepřítel", "correct": false },
+        { "text": "Je to jeho nadřízený", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-009", "type": "multiple", "topic": "postavy",
+      "explanation": "Santiago projevuje vytrvalost, pokoru před přírodou a hluboký respekt k živým tvorům.",
+      "question": "Jaké vlastnosti Santiago projevuje? (vyberte 2)",
+      "options": [
+        { "text": "Vytrvalost a trpělivost", "correct": true },
+        { "text": "Respekt k přírodě", "correct": true },
+        { "text": "Aroganci vůči moři", "correct": false },
+        { "text": "Strach z práce", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-010", "type": "single", "topic": "postavy",
+      "explanation": "Marlín (mečoun) je obrovská ryba, se kterou Santiago bojuje; stává se jeho důstojným protivníkem.",
+      "question": "Co představuje marlín pro Santiaga?",
+      "options": [
+        { "text": "Pouze kořist pro peníze", "correct": false },
+        { "text": "Důstojného protivníka a symbol síly", "correct": true },
+        { "text": "Zlo, které ho chce zabít", "correct": false },
+        { "text": "Symbol neštěstí", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "Ostatní rybáři Santiagem pohrdají, protože dlouho nic neulovil.",
+      "statement": "Všichni rybáři v přístavu Santiaga obdivují a nikdy se mu nesmějí.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-012", "type": "single", "topic": "postavy",
+      "explanation": "Santiago v rybě vidí bratra a obdivuje její odvahu.",
+      "question": "Jak Santiago vnímá rybu, kterou loví?",
+      "options": [
+        { "text": "Jako nepřítele, kterého musí zničit", "correct": false },
+        { "text": "Jako bratra a rovnocenného soupeře", "correct": true },
+        { "text": "Jako zdroj rychlého zbohatnutí", "correct": false },
+        { "text": "Jako podřadné zvíře", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-013", "type": "multiple", "topic": "dej-a-motivy",
+      "explanation": "Moře je v knize místem obživy, bojištěm i zdrojem krásy.",
+      "question": "Co pro Santiaga moře představuje? (vyberte 2)",
+      "options": [
+        { "text": "Zdroj obživy", "correct": true },
+        { "text": "Místo pro odpočinek", "correct": false },
+        { "text": "Prostor pro zkoušku odolnosti", "correct": true },
+        { "text": "Místo pro sportovní hry", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-014", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Santiago nakonec rybu uloví, ale žraloci ji během cesty domů sežerou.",
+      "statement": "Rybu se Santiagovi podaří dopravit do přístavu celou a nepoškozenou.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-015", "type": "numeric", "topic": "dej-a-motivy",
+      "explanation": "Santiago před tím, než chytil marlína, neměl žádný úlovek po dobu 84 dní.",
+      "question": "Kolik dní byl Santiago bez úlovku, než se vydal na moře?",
+      "answer": 84,
+      "tolerance": 0
+    },
+    {
+      "id": "starec-a-more-016", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Santiago bojuje se žraloky, aby ochránil svůj úlovek, i když ví, že je to marné.",
+      "question": "Proč Santiago bojuje se žraloky?",
+      "options": [
+        { "text": "Aby získal odměnu od vlády", "correct": false },
+        { "text": "Protože žraloci útočí na jeho úlovek", "correct": true },
+        { "text": "Z nudy", "correct": false },
+        { "text": "Protože chce být hrdinou", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-017", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Santiago se vrací do přístavu vyčerpaný a s kostrou ryby, ale získává zpět úctu.",
+      "statement": "Příběh končí tím, že Santiago umírá na lodi.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-018", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "V příběhu se často objevuje motiv snů o lvech na pláži, což symbolizuje sílu a mládí.",
+      "question": "O čem se Santiagovi často zdá?",
+      "options": [
+        { "text": "O bouři na moři", "correct": false },
+        { "text": "O lvech na africké pláži", "correct": true },
+        { "text": "O jeho manželce", "correct": false },
+        { "text": "O bohatství", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-019", "type": "multiple", "topic": "dej-a-motivy",
+      "explanation": "Dílo obsahuje řadu náboženských symbolů, např. utrpení rybáře podobné Kristovu.",
+      "question": "Jaké symbolické roviny dílo obsahuje? (vyberte 2)",
+      "options": [
+        { "text": "Biblické/křesťanské paralely", "correct": true },
+        { "text": "Symbolika boje člověka s přírodou", "correct": true },
+        { "text": "Kritika politiky 20. století", "correct": false },
+        { "text": "Popis průmyslového rybolovu", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-020", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Santiago rybu uloví daleko na otevřeném moři, kam si jiní rybáři netroufnou.",
+      "statement": "Santiago rybu uloví v mělkých vodách u přístavu.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-021", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Vítězství ducha nad tělem je hlavním tématem, i když ryba byla sežrána.",
+      "question": "Co je hlavním morálním vítězstvím Santiaga?",
+      "options": [
+        { "text": "Získal hodně peněz", "correct": false },
+        { "text": "Dokázal svou vytrvalost a nezlomnost", "correct": true },
+        { "text": "Zabil žraloky", "correct": false },
+        { "text": "Stal se králem rybářů", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-022", "type": "numeric", "topic": "dej-a-motivy",
+      "explanation": "Ryba táhla loďku dlouho, ale v samotném zápase se projevila rybářova trpělivost.",
+      "question": "Kolik dní trval boj Santiaga s rybou (než ji vytáhl k lodi)?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "starec-a-more-023", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Dílo oslavuje lidskou sílu a nezlomnost.",
+      "statement": "Kniha je pesimistickým popisem lidského selhání.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo je řazeno jako novela, je krátké a má sevřený děj.",
+      "question": "Jaký je žánr díla?",
+      "options": [
+        { "text": "Román", "correct": false },
+        { "text": "Novela", "correct": true },
+        { "text": "Epos", "correct": false },
+        { "text": "Povídka", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Novela je psána jednoduchým, ale velmi působivým jazykem.",
+      "question": "Jaké znaky formy jsou typické? (vyberte 2)",
+      "options": [
+        { "text": "Jednoduchá, přehledná větná stavba", "correct": true },
+        { "text": "Hluboká symbolika", "correct": true },
+        { "text": "Příliš mnoho postav", "correct": false },
+        { "text": "Chaos v ději", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Vypravěč je v er-formě a sleduje Santiagovy myšlenky.",
+      "question": "Kdo vypráví příběh?",
+      "options": [
+        { "text": "Santiago (ich-forma)", "correct": false },
+        { "text": "Nezúčastněný autorský vypravěč (er-forma)", "correct": true },
+        { "text": "Manolin (ich-forma)", "correct": false },
+        { "text": "Všechny postavy", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Dílo je známé svou schopností vyjádřit hluboké lidské pravdy skrze jednoduchý příběh.",
+      "statement": "Příběh je zbytečně komplikovaný a plný odboček.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo je oslavou lidské důstojnosti v boji proti osudu.",
+      "question": "Jaký je hlavní smysl díla?",
+      "options": [
+        { "text": "Varovat před mořem", "correct": false },
+        { "text": "Oslavit nezlomnost lidského ducha", "correct": true },
+        { "text": "Popsat metody rybolovu", "correct": false },
+        { "text": "Kritizovat chudobu", "correct": false }
+      ]
+    },
+    {
+      "id": "starec-a-more-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Dílo se řadí k vrcholům světové literatury 20. století.",
+      "statement": "Dílo je zapomenutým spisem bez literárního významu.",
+      "answer": false
+    },
+    {
+      "id": "starec-a-more-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Příběh je vyprávěn lineárně, vcelku bez kapitol v klasickém smyslu (je to novela).",
+      "question": "Kolik hlavních dějových částí (odjezd, boj, návrat) v příběhu přibližně rozeznáváme?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

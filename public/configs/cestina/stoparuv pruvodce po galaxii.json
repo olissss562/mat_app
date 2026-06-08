@@ -1,0 +1,285 @@
+{
+"subject": "stoparuv-pruvodce",
+"name": "Stopařův průvodce po Galaxii",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-zapletka", "name": "Děj a zápletka" },
+{ "id": "styl-a-humor", "name": "Styl a humor" }
+],
+"questions": [
+{
+"id": "stoparuv-pruvodce-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Douglas Adams byl britský spisovatel, známý především pro svou komediální sci-fi sérii.",
+"question": "Kdo je autorem knihy Stopařův průvodce po Galaxii?",
+"options": [
+{ "text": "Isaac Asimov", "correct": false },
+{ "text": "Douglas Adams", "correct": true },
+{ "text": "Arthur C. Clarke", "correct": false },
+{ "text": "Philip K. Dick", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-002", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Kniha byla původně vytvořena jako rozhlasový pořad pro BBC předtím, než vyšla jako román.",
+"statement": "Kniha byla původně vytvořena jako rozhlasový seriál pro BBC.",
+"answer": true
+},
+{
+"id": "stoparuv-pruvodce-003", "type": "single", "topic": "autor-a-doba",
+"explanation": "Příběh kombinuje prvky sci-fi s absurdním humorem a satirou.",
+"question": "Jaký žánr nejlépe definuje toto dílo?",
+"options": [
+{ "text": "Horor", "correct": false },
+{ "text": "Humoristické sci-fi", "correct": true },
+{ "text": "Historický román", "correct": false },
+{ "text": "Detektivka", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Adams využívá satiru k výsměchu byrokracii, politice a lidské hlouposti.",
+"question": "Co Adams ve svém díle satirizuje? (vyberte 2)",
+"options": [
+{ "text": "Byrokracii", "correct": true },
+{ "text": "Lidskou hloupost", "correct": true },
+{ "text": "Středověkou historii", "correct": false },
+{ "text": "Pravidla kvantové fyziky", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Douglas Adams pocházel z Velké Británie.",
+"question": "Jaké národnosti byl autor?",
+"options": [
+{ "text": "Americké", "correct": false },
+{ "text": "Britské", "correct": true },
+{ "text": "Kanadské", "correct": false },
+{ "text": "Australské", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Stopařův průvodce je součástí mnohem delší pětidílné 'trilogie'.",
+"statement": "Stopařův průvodce po Galaxii je uzavřený, samostatný příběh bez pokračování.",
+"answer": false
+},
+{
+"id": "stoparuv-pruvodce-007", "type": "single", "topic": "postavy",
+"explanation": "Arthur Dent je typický průměrný Angličan, který se nečekaně ocitne ve vesmíru.",
+"question": "Kdo je hlavní postavou knihy?",
+"options": [
+{ "text": "Zaphod Beeblebrox", "correct": false },
+{ "text": "Arthur Dent", "correct": true },
+{ "text": "Ford Prefect", "correct": false },
+{ "text": "Marvin", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-008", "type": "single", "topic": "postavy",
+"explanation": "Ford Prefect je výzkumník pro Průvodce, který se vydává za nezaměstnaného herce.",
+"question": "Jaká je pravá identita Forda Prefecta?",
+"options": [
+{ "text": "Lidský herec", "correct": false },
+{ "text": "Výzkumník pro Stopařův průvodce", "correct": true },
+{ "text": "Vogonský velitel", "correct": false },
+{ "text": "Bývalý prezident Galaxie", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-009", "type": "multiple", "topic": "postavy",
+"explanation": "Zaphod Beeblebrox má dvě hlavy a tři ruce a je bývalým prezidentem Galaxie.",
+"question": "Co charakterizuje Zaphoda Beeblebroxe? (vyberte 2)",
+"options": [
+{ "text": "Má dvě hlavy", "correct": true },
+{ "text": "Má tři ruce", "correct": true },
+{ "text": "Je velmi plachý", "correct": false },
+{ "text": "Je to hluboce věřící mnich", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-010", "type": "single", "topic": "postavy",
+"explanation": "Marvin je robot, který trpí těžkými depresemi, ačkoliv má 'mozek o velikosti planety'.",
+"question": "Jakou osobnostní vlastnost má robot Marvin?",
+"options": [
+{ "text": "Je optimistický", "correct": false },
+{ "text": "Je v těžké depresi", "correct": true },
+{ "text": "Je agresivní", "correct": false },
+{ "text": "Je hloupý", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-011", "type": "truefalse", "topic": "postavy",
+"explanation": "Trillian (Tricia McMillan) je pozemšťanka, která odletěla se Zaphodem.",
+"statement": "Trillian je jediná další pozemšťanka, která přežila zničení Země.",
+"answer": true
+},
+{
+"id": "stoparuv-pruvodce-012", "type": "single", "topic": "postavy",
+"explanation": "Ford Prefect pochází z malé planety v blízkosti Betelgeuze.",
+"question": "Odkud pochází Ford Prefect?",
+"options": [
+{ "text": "Ze Země", "correct": false },
+{ "text": "Z planety u Betelgeuze", "correct": true },
+{ "text": "Z Marsu", "correct": false },
+{ "text": "Z Vogonu", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-013", "type": "truefalse", "topic": "postavy",
+"explanation": "Vogonové jsou byrokratičtí, krutí a oškliví tvorové, kteří zničí Zemi.",
+"statement": "Vogonové jsou přátelští a milují poezii.",
+"answer": false
+},
+{
+"id": "stoparuv-pruvodce-014", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Země byla zničena, aby uvolnila cestu pro hyperprostorový obchvat.",
+"question": "Proč byla zničena Země?",
+"options": [
+{ "text": "Kvůli válce", "correct": false },
+{ "text": "Kvůli výstavbě hyperprostorové dálnice", "correct": true },
+{ "text": "Kvůli přelidnění", "correct": false },
+{ "text": "Kvůli nedostatku zdrojů", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-015", "type": "numeric", "topic": "dej-a-zapletka",
+"explanation": "V knize je 42 uváděna jako odpověď na 'Otázku na Život, Vesmír a Všechno'.",
+"question": "Jaké je číslo, které je odpovědí na 'Otázku na Život, Vesmír a Všechno'?",
+"answer": 42,
+"tolerance": 0
+},
+{
+"id": "stoparuv-pruvodce-016", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Babel fish je malá žlutá rybka, která slouží jako univerzální překladač.",
+"question": "K čemu slouží Babel fish?",
+"options": [
+{ "text": "K dýchání pod vodou", "correct": false },
+{ "text": "K okamžitému překladu jazyků", "correct": true },
+{ "text": "K předpovídání budoucnosti", "correct": false },
+{ "text": "K léčení nemocí", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-017", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Průvodce má na obálce velkými přátelskými písmeny napsáno 'NEPROPADEJTE PANICE'.",
+"statement": "Na obálce Průvodce je napsáno 'Nepropadejte panice'.",
+"answer": true
+},
+{
+"id": "stoparuv-pruvodce-018", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Loď, kterou Zaphod ukradl, se jmenuje Srdce ze zlata.",
+"question": "Jak se jmenuje kosmická loď, kterou Zaphod ukradl?",
+"options": [
+{ "text": "Enterprise", "correct": false },
+{ "text": "Srdce ze zlata", "correct": true },
+{ "text": "Galaktický poutník", "correct": false },
+{ "text": "Vogonský koráb", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-019", "type": "multiple", "topic": "dej-a-zapletka",
+"explanation": "Ručník je podle Průvodce nejužitečnější věc, kterou může mít stopař u sebe.",
+"question": "Proč je ručník tak důležitý pro stopaře? (vyberte 2)",
+"options": [
+{ "text": "Má velkou praktickou cenu", "correct": true },
+{ "text": "Má psychologickou hodnotu", "correct": true },
+{ "text": "Dá se použít jako zbraň", "correct": false },
+{ "text": "Je to jediná věc, kterou galaktické úřady dovolují", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-020", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Myši jsou v knize vyobrazeny jako vysoce inteligentní bytosti, které vedly experiment na lidech.",
+"statement": "Myši jsou v knize jen obyčejní hlodavci bez inteligence.",
+"answer": false
+},
+{
+"id": "stoparuv-pruvodce-021", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Planeta Magrathea vyráběla zakázkové planety pro nejbohatší obyvatele vesmíru.",
+"question": "Čím se zabývala planeta Magrathea?",
+"options": [
+{ "text": "Výrobou zbraní", "correct": false },
+{ "text": "Výrobou planet na zakázku", "correct": true },
+{ "text": "Pěstováním obilí", "correct": false },
+{ "text": "Vězením pro galaktické zločince", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-022", "type": "numeric", "topic": "dej-a-zapletka",
+"explanation": "Počítač Deep Thought počítal odpověď na 'Otázku na Život, Vesmír a Všechno' po dobu 7,5 milionu let.",
+"question": "Kolik milionů let počítal počítač Deep Thought odpověď?",
+"answer": 7,
+"tolerance": 0
+},
+{
+"id": "stoparuv-pruvodce-023", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Země byla ve skutečnosti obrovský superpočítač, navržený tak, aby vypočítal vlastní otázku.",
+"statement": "Země byla obyčejná planeta bez hlubšího významu.",
+"answer": false
+},
+{
+"id": "stoparuv-pruvodce-024", "type": "single", "topic": "styl-a-humor",
+"explanation": "Humor v knize je často britský, absurdní a ironický.",
+"question": "Který typ humoru dominuje v Stopařově průvodci?",
+"options": [
+{ "text": "Fyzická komedie", "correct": false },
+{ "text": "Absurdní a ironický humor", "correct": true },
+{ "text": "Černý humor bez nadhledu", "correct": false },
+{ "text": "Politická satira bez nadsázky", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-025", "type": "multiple", "topic": "styl-a-humor",
+"explanation": "Adams rád používá jazykové hříčky a nečekané zvraty v logice.",
+"question": "Jaké prvky stylu autor používá? (vyberte 2)",
+"options": [
+{ "text": "Jazykové hříčky", "correct": true },
+{ "text": "Absurdní logiku", "correct": true },
+{ "text": "Dlouhé vědecké popisy", "correct": false },
+{ "text": "Tragický patos", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-026", "type": "single", "topic": "styl-a-humor",
+"explanation": "Vypravěč je autorský (vševědoucí), který ironicky komentuje dění.",
+"question": "V jaké osobě je kniha vyprávěna?",
+"options": [
+{ "text": "Ich-forma (Arthur Dent)", "correct": false },
+{ "text": "Er-forma (autorský vypravěč)", "correct": true },
+{ "text": "Ty-forma", "correct": false },
+{ "text": "Střídání osob", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-027", "type": "truefalse", "topic": "styl-a-humor",
+"explanation": "Kniha se nebere vážně a cíleně porušuje klasická pravidla sci-fi.",
+"statement": "Kniha se striktně drží vědeckých faktů a bere se smrtelně vážně.",
+"answer": false
+},
+{
+"id": "stoparuv-pruvodce-028", "type": "single", "topic": "styl-a-humor",
+"explanation": "Adams kritizuje lidskou omezenost a posedlost nedůležitými věcmi.",
+"question": "Co je hlavním cílem autorovy satiry?",
+"options": [
+{ "text": "Technologie", "correct": false },
+{ "text": "Lidská povaha a její omezenost", "correct": true },
+{ "text": "Vesmírní mimozemšťané", "correct": false },
+{ "text": "Astronomie", "correct": false }
+]
+},
+{
+"id": "stoparuv-pruvodce-029", "type": "truefalse", "topic": "styl-a-humor",
+"explanation": "Kniha je známá svými nečekanými filosofickými vhledy zabalenými do komických situací.",
+"statement": "Kniha obsahuje filozofické myšlenky skryté v humorných situacích.",
+"answer": true
+},
+{
+"id": "stoparuv-pruvodce-030", "type": "numeric", "topic": "styl-a-humor",
+"explanation": "V knize vystupuje jedna z nejznámějších postav, Marvin, který je robotem s osobností.",
+"question": "Kolik hlavních rysů (hlavy/ruce) dělalo Zaphoda výjimečným v součtu (počet hlav + počet rukou)?",
+"answer": 5,
+"tolerance": 0
+}
+]
+}

@@ -1,0 +1,285 @@
+{
+  "subject": "pikova-dama",
+  "name": "Piková dáma",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Charakteristika postav" },
+    { "id": "dej-a-zapletka", "name": "Děj a zápletka" },
+    { "id": "literarni-forma", "name": "Literární forma a žánr" }
+  ],
+  "questions": [
+    {
+      "id": "pikova-dama-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Alexandr Sergejevič Puškin je zakladatelem moderní ruské literatury a významným představitelem ruského realismu.",
+      "question": "Kdo je autorem novely Piková dáma?",
+      "options": [
+        { "text": "Nikolaj Vasiljevič Gogol", "correct": false },
+        { "text": "Alexandr Sergejevič Puškin", "correct": true },
+        { "text": "Fjodor Michajlovič Dostojevskij", "correct": false },
+        { "text": "Lev Nikolajevič Tolstoj", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-002", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Puškinova tvorba se řadí do období raného realismu s dozvuky romantismu.",
+      "question": "Do jakého literárního období spadá tvorba A. S. Puškina?",
+      "options": [
+        { "text": "Klasicismus", "correct": false },
+        { "text": "Realismus a romantismus", "correct": true },
+        { "text": "Existencialismus", "correct": false },
+        { "text": "Modernismus", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-003", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Puškin je považován za jednoho z nejvýznamnějších ruských autorů všech dob.",
+      "statement": "Alexandr Sergejevič Puškin je považován za jednoho ze zakladatelů moderní ruské literatury.",
+      "answer": true
+    },
+    {
+      "id": "pikova-dama-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Puškinova díla často reflektují ruskou společnost, morálku a postavení jednotlivce.",
+      "question": "Které motivy jsou typické pro Puškinovu tvorbu? (vyberte 2)",
+      "options": [
+        { "text": "Kritika ruské šlechty", "correct": true },
+        { "text": "Motiv osudu a hazardu", "correct": true },
+        { "text": "Výhradně optimistické konce", "correct": false },
+        { "text": "Naprostá absence sociálních témat", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Novela byla poprvé publikována v roce 1834.",
+      "question": "Ve kterém století byla Piková dáma publikována?",
+      "options": [
+        { "text": "18. století", "correct": false },
+        { "text": "19. století", "correct": true },
+        { "text": "20. století", "correct": false },
+        { "text": "17. století", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Puškin zemřel v roce 1837 po souboji.",
+      "statement": "Puškin se dožil vysokého věku a zemřel přirozenou smrtí.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-007", "type": "single", "topic": "postavy",
+      "explanation": "Hermann je inženýr německého původu, posedlý bohatstvím.",
+      "question": "Kdo je hlavní postavou novely?",
+      "options": [
+        { "text": "Tomský", "correct": false },
+        { "text": "Hermann", "correct": true },
+        { "text": "Líza", "correct": false },
+        { "text": "Hraběnka", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-008", "type": "single", "topic": "postavy",
+      "explanation": "Líza je mladá chudá schovanka, kterou Hermann využije ke svým cílům.",
+      "question": "Jaký je vztah mezi Hermannem a Lížou?",
+      "options": [
+        { "text": "Jsou manželé", "correct": false },
+        { "text": "Hermann ji využívá k proniknutí k hraběnce", "correct": true },
+        { "text": "Jsou to sourozenci", "correct": false },
+        { "text": "Hermann ji upřímně miluje", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-009", "type": "single", "topic": "postavy",
+      "explanation": "Hraběnka Anna Fedotovna zná tajemství tří karet, které kdysi vyhrála.",
+      "question": "Proč se Hermann zajímá o starou hraběnku?",
+      "options": [
+        { "text": "Chce ji okrást o majetek", "correct": false },
+        { "text": "Chce znát tajemství tří karet", "correct": true },
+        { "text": "Je do ní zamilovaný", "correct": false },
+        { "text": "Je to jeho příbuzná", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-010", "type": "multiple", "topic": "postavy",
+      "explanation": "Hermann je popisován jako chladný, vypočítavý a ambiciózní.",
+      "question": "Jaké vlastnosti charakterizují Hermanna? (vyberte 2)",
+      "options": [
+        { "text": "Chladná vypočítavost", "correct": true },
+        { "text": "Upřímnost a laskavost", "correct": false },
+        { "text": "Posedlost hazardem", "correct": true },
+        { "text": "Naivita", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "Hraběnka umírá leknutím, když ji Hermann v noci konfrontuje.",
+      "statement": "Hraběnka umírá přirozenou smrtí ve spánku.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-012", "type": "single", "topic": "postavy",
+      "explanation": "Tomský je Hermannův známý, který mu vypráví příběh o hraběnce a kartách.",
+      "question": "Kdo Hermannovi řekne o tajemství staré hraběnky?",
+      "options": [
+        { "text": "Líza", "correct": false },
+        { "text": "Tomský", "correct": true },
+        { "text": "Hraběnka osobně", "correct": false },
+        { "text": "Sluha", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-013", "type": "multiple", "topic": "postavy",
+      "explanation": "Postavy reprezentují kontrast mezi starou aristokracií a novou dravou generací.",
+      "question": "Které postavy zosobňují starý řád?",
+      "options": [
+        { "text": "Hraběnka", "correct": true },
+        { "text": "Hermann", "correct": false },
+        { "text": "Tomský", "correct": true },
+        { "text": "Líza", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-014", "type": "truefalse", "topic": "postavy",
+      "explanation": "Líza je tragickou postavou, která nakonec pochopí, že byla jen nástrojem.",
+      "statement": "Líza končí příběh bohatá a šťastná.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-015", "type": "numeric", "topic": "postavy",
+      "explanation": "Tajemství hraběnky jsou tři konkrétní karty.",
+      "question": "Kolik karet tvoří hraběnčino tajemství?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "pikova-dama-016", "type": "single", "topic": "dej-a-zapletka",
+      "explanation": "Hermann se k hraběnce vloupe, aby ji přinutil prozradit tajemství.",
+      "question": "Jak Hermann získá přístup k hraběnce?",
+      "options": [
+        { "text": "Pozve ji na večeři", "correct": false },
+        { "text": "Vloupe se k ní v noci", "correct": true },
+        { "text": "Koupí si její dům", "correct": false },
+        { "text": "Požádá ji o ruku", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-017", "type": "truefalse", "topic": "dej-a-zapletka",
+      "explanation": "Hraběnčin duch se Hermannovi zjeví ve snu a karty mu prozradí.",
+      "statement": "Hraběnka Hermannovi tajemství karet dobrovolně prozradí ještě za života.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-018", "type": "single", "topic": "dej-a-zapletka",
+      "explanation": "Poslední kartou je piková dáma, která Hermanna zničí.",
+      "question": "Která karta místo očekávaného esa nakonec Hermanna zničí?",
+      "options": [
+        { "text": "Piková dáma", "correct": true },
+        { "text": "Srdcový král", "correct": false },
+        { "text": "Křížová sedma", "correct": false },
+        { "text": "Trefová desítka", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-019", "type": "multiple", "topic": "dej-a-zapletka",
+      "explanation": "Hermannovy sázky vedou k jeho finančnímu i duševnímu úpadku.",
+      "question": "Co způsobilo Hermannův pád? (vyberte 2)",
+      "options": [
+        { "text": "Posedlost výhrou", "correct": true },
+        { "text": "Svědomitá práce", "correct": false },
+        { "text": "Hazardní hra", "correct": true },
+        { "text": "Loterijní výhra", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-020", "type": "truefalse", "topic": "dej-a-zapletka",
+      "explanation": "Hermann po prohře zešílí a končí v blázinci.",
+      "statement": "Hermann po prohře začne nový život jako bohatý člověk.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-021", "type": "single", "topic": "dej-a-zapletka",
+      "explanation": "Hermann věřil, že mu karty zajistí bohatství a nezávislost.",
+      "question": "Co bylo hlavní motivací Hermanna pro získání tajemství?",
+      "options": [
+        { "text": "Láska k ženě", "correct": false },
+        { "text": "Touha po bohatství a moci", "correct": true },
+        { "text": "Zvědavost", "correct": false },
+        { "text": "Pomsta hraběnce", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-022", "type": "numeric", "topic": "dej-a-zapletka",
+      "explanation": "Hermann se vsadil na tři karty, které mu prozradil duch.",
+      "question": "Kolikrát Hermann v kasinu vsadil na karty (úspěšné sázky)?",
+      "answer": 2,
+      "tolerance": 0
+    },
+    {
+      "id": "pikova-dama-023", "type": "truefalse", "topic": "dej-a-zapletka",
+      "explanation": "Příběh obsahuje prvky mystiky, které se prolínají s realitou.",
+      "statement": "Děj novely je zcela realistický a neobsahuje žádné tajemno.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Piková dáma je klasifikována jako novela.",
+      "question": "Jaký literární žánr představuje toto dílo?",
+      "options": [
+        { "text": "Román", "correct": false },
+        { "text": "Novela", "correct": true },
+        { "text": "Epos", "correct": false },
+        { "text": "Drama", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Novela se vyznačuje zhuštěným dějem a rychlým spádem.",
+      "question": "Jaké znaky má tato novela? (vyberte 2)",
+      "options": [
+        { "text": "Zhuštěný děj", "correct": true },
+        { "text": "Mnoho vedlejších linií", "correct": false },
+        { "text": "Pointa na konci", "correct": true },
+        { "text": "Velký rozsah jako román", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Puškinův jazyk je úsporný, jasný a přesný.",
+      "question": "Jaký je jazykový styl díla?",
+      "options": [
+        { "text": "Složitý a barvitý", "correct": false },
+        { "text": "Úsporný a jasný", "correct": true },
+        { "text": "Archaisující", "correct": false },
+        { "text": "Dialektický", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Novela je psána er-formou.",
+      "statement": "Novela je psána v ich-formě z pohledu Hermanna.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo kombinuje realitu s fantastickými prvky.",
+      "question": "Co je hlavním vypravěčským principem novely?",
+      "options": [
+        { "text": "Vše je vysvětleno rozumem", "correct": false },
+        { "text": "Prolínání reality a fantazie", "correct": true },
+        { "text": "Snová vize", "correct": false },
+        { "text": "Historický popis", "correct": false }
+      ]
+    },
+    {
+      "id": "pikova-dama-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Dílo kritizuje hazard a morální úpadek.",
+      "statement": "Dílo slouží jako oslava kasin a hazardu.",
+      "answer": false
+    },
+    {
+      "id": "pikova-dama-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Hermann se snaží vsadit na karty tři, sedm a eso.",
+      "question": "Kolikátá karta (v pořadí tří karet) byla ona osudná \"piková dáma\"?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

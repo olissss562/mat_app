@@ -1,0 +1,285 @@
+{
+"subject": "saturnin",
+"name": "Saturnin",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "saturnin-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Zdeněk Jirotka byl český spisovatel a fejetonista, známý především pro svůj humor.",
+"question": "Kdo je autorem humoristického románu Saturnin?",
+"options": [
+{ "text": "Karel Poláček", "correct": false },
+{ "text": "Zdeněk Jirotka", "correct": true },
+{ "text": "Jaroslav Hašek", "correct": false },
+{ "text": "Eduard Bass", "correct": false }
+]
+},
+{
+"id": "saturnin-002", "type": "single", "topic": "autor-a-doba",
+"explanation": "Román Saturnin byl poprvé vydán v roce 1942, v období protektorátu.",
+"question": "Ve kterém roce byl román Saturnin poprvé vydán?",
+"options": [
+{ "text": "1938", "correct": false },
+{ "text": "1942", "correct": true },
+{ "text": "1945", "correct": false },
+{ "text": "1948", "correct": false }
+]
+},
+{
+"id": "saturnin-003", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Jirotkův styl bývá srovnáván s anglickým humorem, konkrétně s Jeromem Klapkou Jeromem.",
+"statement": "Styl románu Saturnin je často přirovnáván k anglickému humoristickému stylu.",
+"answer": true
+},
+{
+"id": "saturnin-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Saturnin vyšel za nacistické okupace a pro čtenáře představoval únik od tehdejší tíživé reality.",
+"question": "Jaký význam měla kniha v době svého vydání? (vyberte 2)",
+"options": [
+{ "text": "Únik od reality protektorátu", "correct": true },
+{ "text": "Kritika nacistické ideologie", "correct": false },
+{ "text": "Humor jako obrana před depresí", "correct": true },
+{ "text": "Oslava oficiální protektorátní kultury", "correct": false }
+]
+},
+{
+"id": "saturnin-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Zdeněk Jirotka byl kromě spisovatele také známým rozhlasovým fejetonistou.",
+"question": "Čemu se Jirotka věnoval kromě psaní románů?",
+"options": [
+{ "text": "Politice", "correct": false },
+{ "text": "Rozhlasovým fejetonům", "correct": true },
+{ "text": "Malířství", "correct": false },
+{ "text": "Opernímu zpěvu", "correct": false }
+]
+},
+{
+"id": "saturnin-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Jirotka napsal Saturnina jako svou prvotinu, která ho okamžitě proslavila.",
+"statement": "Saturnin je autorovým posledním románem, který napsal těsně před smrtí.",
+"answer": false
+},
+{
+"id": "saturnin-007", "type": "single", "topic": "postavy",
+"explanation": "Saturnin je hlavní postava, velmi inteligentní a svéhlavý sluha.",
+"question": "Co je Saturnin za profesi?",
+"options": [
+{ "text": "Vypravěč", "correct": false },
+{ "text": "Sluha", "correct": true },
+{ "text": "Majitel domu", "correct": false },
+{ "text": "Právník", "correct": false }
+]
+},
+{
+"id": "saturnin-008", "type": "single", "topic": "postavy",
+"explanation": "Vypravěč románu (Jiří Oulický) si najme Saturnina, aby mu sloužil.",
+"question": "Jak se jmenuje vypravěč příběhu?",
+"options": [
+{ "text": "Jiří Oulický", "correct": true },
+{ "text": "Petr Novák", "correct": false },
+{ "text": "Karel Vlach", "correct": false },
+{ "text": "Milan Sat", "correct": false }
+]
+},
+{
+"id": "saturnin-009", "type": "multiple", "topic": "postavy",
+"explanation": "Teta Kateřina je známá svým citováním přísloví a snahou o výhody.",
+"question": "Co je typické pro tetu Kateřinu? (vyberte 2)",
+"options": [
+{ "text": "Neustálé citování přísloví", "correct": true },
+{ "text": "Vypočítavost a snaha o získání dědictví", "correct": true },
+{ "text": "Tichá a nenápadná povaha", "correct": false },
+{ "text": "Láska k adrenalinovým sportům", "correct": false }
+]
+},
+{
+"id": "saturnin-010", "type": "single", "topic": "postavy",
+"explanation": "Milouš je syn tety Kateřiny, který je v příběhu vykreslen jako nepříliš bystrý a otravný.",
+"question": "Kdo je Milouš?",
+"options": [
+{ "text": "Saturninův přítel", "correct": false },
+{ "text": "Syn tety Kateřiny", "correct": true },
+{ "text": "Vypravěčův otec", "correct": false },
+{ "text": "Lékař", "correct": false }
+]
+},
+{
+"id": "saturnin-011", "type": "truefalse", "topic": "postavy",
+"explanation": "Doktor Vlach je přítel vypravěče, který rád glosuje situace s humorem.",
+"statement": "Doktor Vlach je v knize postavou, která nenávidí humor.",
+"answer": false
+},
+{
+"id": "saturnin-012", "type": "single", "topic": "postavy",
+"explanation": "Slečna Barbora je atraktivní, moderní a inteligentní žena, do které se vypravěč zamiluje.",
+"question": "Kdo je slečna Barbora?",
+"options": [
+{ "text": "Saturninova sestra", "correct": false },
+{ "text": "Vypravěčova láska", "correct": true },
+{ "text": "Teta Kateřina v převleku", "correct": false },
+{ "text": "Dědečkova hospodyně", "correct": false }
+]
+},
+{
+"id": "saturnin-013", "type": "multiple", "topic": "postavy",
+"explanation": "Dědeček je postarší muž, který se po příjezdu na chatu zotavuje.",
+"question": "Co platí o dědečkovi? (vyberte 2)",
+"options": [
+{ "text": "Je velmi bohatý", "correct": true },
+{ "text": "Změní svůj pohled na rodinu", "correct": true },
+{ "text": "Vždy souhlasí s tetou Kateřinou", "correct": false },
+{ "text": "Je to mladý sportovec", "correct": false }
+]
+},
+{
+"id": "saturnin-014", "type": "truefalse", "topic": "postavy",
+"explanation": "Saturnin je v příběhu aktivní hybatel děje, i když to tak zpočátku nevypadá.",
+"statement": "Saturnin je pasivní postava, která pouze přihlíží ději.",
+"answer": false
+},
+{
+"id": "saturnin-015", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Dům na lodi je místem, kam se část postav přestěhuje během dovolené u dědečka.",
+"question": "Kolikrát se v knize objeví motiv 'kanceláře' jako místa pro vyřizování věcí?",
+"answer": 1,
+"tolerance": 0
+},
+{
+"id": "saturnin-016", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Saturnin zaplaví dům, aby přinutil návštěvu odejít.",
+"question": "Proč Saturnin zaplaví dědečkův dům?",
+"options": [
+{ "text": "Omylem", "correct": false },
+{ "text": "Aby se zbavil tety Kateřiny", "correct": true },
+{ "text": "Aby vyčistil podlahu", "correct": false },
+{ "text": "Z pomsty dědečkovi", "correct": false }
+]
+},
+{
+"id": "saturnin-017", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Příběh je postaven na epizodických humorných situacích.",
+"statement": "Děj knihy je jeden dlouhý, napínavý detektivní příběh.",
+"answer": false
+},
+{
+"id": "saturnin-018", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Vypravěč se často vrací do své kanceláře, kterou si zařídil.",
+"question": "Co si vypravěč zařídí v bytě, aby se vyhnul návštěvám?",
+"options": [
+{ "text": "Tajnou místnost", "correct": false },
+{ "text": "Kancelář", "correct": true },
+{ "text": "Dílnu", "correct": false },
+{ "text": "Knihovnu", "correct": false }
+]
+},
+{
+"id": "saturnin-019", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Dovolená u dědečka je plná komických situací, jako je přechod přes rozvodněnou řeku.",
+"question": "Které motivy se objevují na dědečkově sídle? (vyberte 2)",
+"options": [
+{ "text": "Boj s rozvodněnou řekou", "correct": true },
+{ "text": "Společné rybaření", "correct": false },
+{ "text": "Sportovní soutěže", "correct": true },
+{ "text": "Výuka cizích jazyků", "correct": false }
+]
+},
+{
+"id": "saturnin-020", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Milouš se několikrát dostane do trapné situace kvůli své nešikovnosti.",
+"statement": "Milouš je v knize vzorem šikovnosti a diplomatického vystupování.",
+"answer": false
+},
+{
+"id": "saturnin-021", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Saturnin vypráví příběhy o svém předchozím pánovi, které jsou často přehnané.",
+"question": "O čem Saturnin často vypráví?",
+"options": [
+{ "text": "O svém bývalém pánovi", "correct": true },
+{ "text": "O politice", "correct": false },
+{ "text": "O receptech na vaření", "correct": false },
+{ "text": "O své rodině", "correct": false }
+]
+},
+{
+"id": "saturnin-022", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Teta Kateřina má syna Milouše.",
+"question": "Kolik dětí má teta Kateřina v tomto příběhu?",
+"answer": 1,
+"tolerance": 0
+},
+{
+"id": "saturnin-023", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Slečna Barbora má ráda humor a nebojí se účastnit bláznivých situací.",
+"statement": "Slečna Barbora nesnáší humor a drží se stranou.",
+"answer": false
+},
+{
+"id": "saturnin-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Jde o humoristický román, který paroduje tehdejší společenské konvence.",
+"question": "Jaký žánr nejlépe vystihuje Saturnina?",
+"options": [
+{ "text": "Detektivka", "correct": false },
+{ "text": "Humoristický román", "correct": true },
+{ "text": "Drama", "correct": false },
+{ "text": "Básnická sbírka", "correct": false }
+]
+},
+{
+"id": "saturnin-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Kniha využívá ich-formu a epizodické vyprávění.",
+"question": "Jaké formální prvky román obsahuje? (vyberte 2)",
+"options": [
+{ "text": "Ich-formu", "correct": true },
+{ "text": "Epizodickou strukturu", "correct": true },
+{ "text": "Změnu perspektivy v každé kapitole", "correct": false },
+{ "text": "Výhradně dialogy bez popisu", "correct": false }
+]
+},
+{
+"id": "saturnin-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Román je psán kultivovaným, vtipným a lehce archaickým jazykem.",
+"question": "Jaký jazyk je v knize použit?",
+"options": [
+{ "text": "Sprostý a hrubý", "correct": false },
+{ "text": "Kultivovaný, vtipný a lehce archaický", "correct": true },
+{ "text": "Technický a strohý", "correct": false },
+{ "text": "Nářečí", "correct": false }
+]
+},
+{
+"id": "saturnin-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Vypravěčem je sám hlavní hrdina Jiří Oulický.",
+"statement": "Vypravěčem je nezúčastněný pozorovatel.",
+"answer": false
+},
+{
+"id": "saturnin-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Hlavním cílem autora je pobavit čtenáře a nastavit zrcadlo společenským normám.",
+"question": "Co je hlavním uměleckým záměrem autora?",
+"options": [
+{ "text": "Poučit čtenáře o historii", "correct": false },
+{ "text": "Pobavit a ironizovat společenské konvence", "correct": true },
+{ "text": "Vyděsit čtenáře", "correct": false },
+{ "text": "Popsat politický systém", "correct": false }
+]
+},
+{
+"id": "saturnin-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Dílo je považováno za českou klasiku humoristické literatury.",
+"statement": "Saturnin je zapomenuté a nevýznamné dílo.",
+"answer": false
+},
+{
+"id": "saturnin-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Kniha je rozdělena do řady kapitol, které jsou epizodické.",
+"question": "Kolik postav tvoří nejužší okruh hlavních protagonistů v domě dědečka?",
+"answer": 6,
+"tolerance": 1
+}
+]
+}

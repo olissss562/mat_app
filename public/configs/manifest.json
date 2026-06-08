@@ -1,8 +1,10 @@
 {
-  "title": "Maturita",
-  "version": 4,
-  "groups": [
-    { "id": "site", "name": "Sítě", "dir": "site", "icon": "🌐" },
-    { "id": "tvy", "name": "Technické vybavení", "dir": "tvy", "icon": "🖥️" }
-  ]
+"title": "Maturita",
+"version": 4,
+"groups": [
+{ "id": "site", "name": "Sítě", "dir": "site", "icon": "🌐" },
+{ "id": "tvy", "name": "Technické vybavení", "dir": "tvy", "icon": "🖥️" },
+{ "id": "pad", "name": "Programování a databáze", "dir": "pad", "icon": "💻" },
+{ "id": "cestina", "name": "Český jazyk a literatura", "dir": "cestina", "icon": "📚" }
+]
 }

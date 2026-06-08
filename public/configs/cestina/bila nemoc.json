@@ -1,0 +1,286 @@
+{
+"subject": "bila-nemoc",
+"name": "Bílá nemoc",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "bila-nemoc-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Karel Čapek byl český spisovatel, dramatik a novinář, který ve svých dílech varoval před hrozbami totalitarismu.",
+"question": "Kdo je autorem dramatu Bílá nemoc?",
+"options": [
+{ "text": "Jaroslav Hašek", "correct": false },
+{ "text": "Karel Čapek", "correct": true },
+{ "text": "Václav Havel", "correct": false },
+{ "text": "František Langer", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-002", "type": "single", "topic": "autor-a-doba",
+"explanation": "Dílo bylo napsáno v roce 1937 jako varování před nástupem fašismu a nacismu v Evropě.",
+"question": "Před jakým společenským jevem Čapek v Bílé nemoci varuje?",
+"options": [
+{ "text": "Před rozvojem techniky", "correct": false },
+{ "text": "Před nástupem fašismu a diktaturou", "correct": true },
+{ "text": "Před přílišnou svobodou slova", "correct": false },
+{ "text": "Před globalizací", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-003", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Karel Čapek byl známým demokratem a humanistou, který odmítal jakoukoli formu totalitní moci.",
+"statement": "Karel Čapek ve svých dílech často obhajoval principy demokracie a humanismu.",
+"answer": true
+},
+{
+"id": "bila-nemoc-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Dílo reflektuje atmosféru strachu a militarismu v období před druhou světovou válkou.",
+"question": "Které motivy jsou v díle obsaženy? (vyberte 2)",
+"options": [
+{ "text": "Militarismus a zbrojení", "correct": true },
+{ "text": "Kult osobnosti diktátora", "correct": true },
+{ "text": "Vědecká utopie bez konfliktů", "correct": false },
+{ "text": "Ideální soužití národů", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-005", "type": "numeric", "topic": "autor-a-doba",
+"explanation": "Dílo vzniklo krátce před vypuknutím druhé světové války, v roce 1937.",
+"question": "V jakém roce byla Bílá nemoc poprvé vydána?",
+"answer": 1937,
+"tolerance": 0
+},
+{
+"id": "bila-nemoc-006", "type": "single", "topic": "autor-a-doba",
+"explanation": "Čapek byl opakovaně nominován na Nobelovu cenu za literaturu.",
+"question": "Byl Karel Čapek nominován na Nobelovu cenu za literaturu?",
+"options": [
+{ "text": "Ano, opakovaně", "correct": true },
+{ "text": "Ne, nikdy", "correct": false },
+{ "text": "Ano, pouze jednou", "correct": false },
+{ "text": "Získal ji", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-007", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Čapek zemřel krátce po mnichovské dohodě, psychicky zlomený situací v zemi.",
+"statement": "Karel Čapek se dožil konce druhé světové války.",
+"answer": false
+},
+{
+"id": "bila-nemoc-008", "type": "single", "topic": "postavy",
+"explanation": "Dr. Galén je lékař, který jako jediný zná lék na bílou nemoc, ale podmiňuje jeho podání mírem.",
+"question": "Jak se jmenuje hlavní hrdina, lékař, který má lék?",
+"options": [
+{ "text": "Baron Krüg", "correct": false },
+{ "text": "Dr. Galén", "correct": true },
+{ "text": "Maršál", "correct": false },
+{ "text": "Dr. Sigelius", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-009", "type": "single", "topic": "postavy",
+"explanation": "Maršál je diktátor, který touží po válce a expanzi, ale nakonec sám onemocní bílou nemocí.",
+"question": "Kdo je hlavním představitelem moci a válkychtivosti?",
+"options": [
+{ "text": "Dr. Galén", "correct": false },
+{ "text": "Maršál", "correct": true },
+{ "text": "Baron Krüg", "correct": false },
+{ "text": "Anička", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-010", "type": "multiple", "topic": "postavy",
+"explanation": "Baron Krüg je majitel zbrojovek, který sice válku vyrábí, ale po onemocnění se snaží s Maršálem vyjednávat.",
+"question": "Jaké jsou charakteristické rysy Barona Krüga? (vyberte 2)",
+"options": [
+{ "text": "Je majitelem zbrojovek", "correct": true },
+{ "text": "Je to chudý pacient", "correct": false },
+{ "text": "Je mocným spojencem Maršála", "correct": true },
+{ "text": "Je to pacifista", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-011", "type": "single", "topic": "postavy",
+"explanation": "Dr. Sigelius je ambiciózní lékař, který se zajímá spíše o slávu a vědecký postup než o samotné léčení.",
+"question": "Která postava představuje 'vědu pro vědu' bez ohledu na lidský život?",
+"options": [
+{ "text": "Dr. Galén", "correct": false },
+{ "text": "Dr. Sigelius", "correct": true },
+{ "text": "Maršál", "correct": false },
+{ "text": "Otec", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-012", "type": "truefalse", "topic": "postavy",
+"explanation": "Galén léčí pouze chudé lidi, protože bohatí a mocní by mohli válku zastavit, ale nechtějí.",
+"statement": "Dr. Galén léčí pouze bohaté a mocné lidi.",
+"answer": false
+},
+{
+"id": "bila-nemoc-013", "type": "single", "topic": "postavy",
+"explanation": "Maršál je v závěru hry nemocen bílou nemocí a je zoufalý.",
+"question": "Jak dopadne Maršál na konci hry?",
+"options": [
+{ "text": "Vítězí ve válce", "correct": false },
+{ "text": "Dostává bílou nemoc a je zoufalý", "correct": true },
+{ "text": "Stává se pacifistou", "correct": false },
+{ "text": "Uteče do exilu", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-014", "type": "multiple", "topic": "postavy",
+"explanation": "Anička a Pavel jsou mladí lidé, kteří reprezentují naději a nevinnost, jež je zničena válkou.",
+"question": "Koho zastupují postavy Anička a Pavel? (vyberte 2)",
+"options": [
+{ "text": "Naději na budoucnost", "correct": true },
+{ "text": "Válečné štváče", "correct": false },
+{ "text": "Nevinné oběti války", "correct": true },
+{ "text": "Politické vůdce", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-015", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Bílá nemoc je fiktivní choroba, která se projevuje bílými skvrnami na kůži.",
+"question": "Kolik fází má podle popisu v knize 'bílá nemoc' (často se uvádí specifické stadium)?",
+"answer": 3,
+"tolerance": 1
+},
+{
+"id": "bila-nemoc-016", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Galén podmínil vyléčení mocných lidí tím, že tito musí nastolit mír.",
+"question": "Co požaduje Galén od mocných výměnou za vyléčení?",
+"options": [
+{ "text": "Peníze", "correct": false },
+{ "text": "Nastolení světového míru", "correct": true },
+{ "text": "Zrušení armády", "correct": false },
+{ "text": "Vědeckou slávu", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-017", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Děj vrcholí tragicky, když je Galén zabit rozvášněným davem, který nerozumí jeho mírovým úmyslům.",
+"statement": "Dr. Galén je na konci hry slavnostně korunován jako vládce země.",
+"answer": false
+},
+{
+"id": "bila-nemoc-018", "type": "multiple", "topic": "dej-a-motivy",
+"explanation": "Bílá nemoc je přímou metaforou fašismu a fanatismu, které 'požírají' společnost.",
+"question": "Co symbolizuje 'bílá nemoc' v díle? (vyberte 2)",
+"options": [
+{ "text": "Nacismus a fašismus", "correct": true },
+{ "text": "Morální rozklad společnosti", "correct": true },
+{ "text": "Pouhou fyzickou chorobu bez významu", "correct": false },
+{ "text": "Nedostatek vitamínů", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-019", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Když je Galén zabit, lék je zničen a naděje na zastavení války mizí.",
+"question": "Co se stane s lékem po smrti doktora Galéna?",
+"options": [
+{ "text": "Předá ho Maršálovi", "correct": false },
+{ "text": "Je zničen rozvášněným davem", "correct": true },
+{ "text": "Skryje ho pro budoucí generace", "correct": false },
+{ "text": "Vezme si ho do hrobu", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-020", "type": "truefalse", "topic": "dej-a-motivy",
+"explanation": "Maršál se nakonec rozhodne válku rozpoutat, i když je sám nemocný, což ukazuje jeho fanatismus.",
+"statement": "Maršál na konci hry radostně přijímá Galénovy podmínky míru.",
+"answer": false
+},
+{
+"id": "bila-nemoc-021", "type": "single", "topic": "dej-a-motivy",
+"explanation": "Baron Krüg se v závěru snaží prosadit mír, aby se mohl léčit, což vyvolá hněv Maršála.",
+"question": "Proč se Baron Krüg dostane do konfliktu s Maršálem?",
+"options": [
+{ "text": "Kvůli penězům", "correct": false },
+{ "text": "Protože chce mír, aby se mohl léčit", "correct": true },
+{ "text": "Kvůli ženě", "correct": false },
+{ "text": "Protože chce zradit svou vlast", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-022", "type": "numeric", "topic": "dej-a-motivy",
+"explanation": "Hra má tři dějství, což je tradiční struktura Čapkových dramat.",
+"question": "Kolik dějství má hra Bílá nemoc?",
+"answer": 3,
+"tolerance": 0
+},
+{
+"id": "bila-nemoc-023", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Dílo je řazeno mezi dramata, konkrétně mezi antiutopická dramata.",
+"statement": "Bílá nemoc je řazena mezi divadelní hry (drama).",
+"answer": true
+},
+{
+"id": "bila-nemoc-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Čapkův styl je charakteristický úsporností, intelektuální hloubkou a srozumitelností.",
+"question": "Co je typické pro Čapkův jazyk?",
+"options": [
+{ "text": "Složitá a nesrozumitelná syntaxe", "correct": false },
+{ "text": "Srozumitelnost, jasnost a filozofická hloubka", "correct": true },
+{ "text": "Využití archaismů", "correct": false },
+{ "text": "Absence dialogů", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Dílo využívá dialogy jako hlavní nástroj k vyjádření filozofických postojů postav.",
+"question": "Jakou funkci mají dialogy v dramatu? (vyberte 2)",
+"options": [
+{ "text": "Vykreslení charakterů postav", "correct": true },
+{ "text": "Konfrontaci odlišných ideologií", "correct": true },
+{ "text": "Pouze pro vyplnění času", "correct": false },
+{ "text": "K popisu scény", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Hra je tragédie, protože končí zánikem hlavní postavy a vítězstvím války.",
+"question": "Jaký žánr lze v rámci dramatu přiřadit k Bílé nemoci?",
+"options": [
+{ "text": "Komedie", "correct": false },
+{ "text": "Tragédie", "correct": true },
+{ "text": "Fraška", "correct": false },
+{ "text": "Pohádka", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Čapek v dramatech často používá tzv. 'drama myšlenek', kde postavy reprezentují různé ideologie.",
+"statement": "Postavy v dramatu jsou pouze ploché a nemají žádný vnitřní vývoj.",
+"answer": false
+},
+{
+"id": "bila-nemoc-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Čapek varuje před tím, že lidé jsou ochotni následovat vůdce i do záhuby.",
+"question": "Co je hlavním uměleckým záměrem autora?",
+"options": [
+{ "text": "Varovat před fanatismem a destrukcí lidskosti", "correct": true },
+{ "text": "Oslavit vědu", "correct": false },
+{ "text": "Popsat medicínský objev", "correct": false },
+{ "text": "Zabavit diváky", "correct": false }
+]
+},
+{
+"id": "bila-nemoc-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Bílá nemoc patří k nejdůležitějším dramatům českého 20. století.",
+"statement": "Dílo bylo napsáno jen pro úzký okruh lidí a nemá širší význam.",
+"answer": false
+},
+{
+"id": "bila-nemoc-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Hra má tři dějství, což je v díle klíčové pro gradaci napětí.",
+"question": "Kolik dějství obsahuje hra Bílá nemoc?",
+"answer": 3,
+"tolerance": 0
+}
+]
+}

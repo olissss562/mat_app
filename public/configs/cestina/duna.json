@@ -1,0 +1,286 @@
+{
+  "subject": "duna",
+  "name": "Duna",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Charakteristika postav" },
+    { "id": "svet-a-dej", "name": "Svět a děj románu" },
+    { "id": "literarni-forma", "name": "Literární forma" },
+    { "id": "temata-a-symboly", "name": "Témata a symboly" }
+  ],
+  "questions": [
+    {
+      "id": "duna-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Frank Herbert publikoval Dunu v roce 1965 a dílo se stalo milníkem žánru sci-fi.",
+      "question": "Kdo je autorem románu Duna?",
+      "options": [
+        { "text": "Isaac Asimov", "correct": false },
+        { "text": "Frank Herbert", "correct": true },
+        { "text": "Arthur C. Clarke", "correct": false },
+        { "text": "Ray Bradbury", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-002", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Duna je považována za první velký ekologický sci-fi román, který řeší vztah člověka k nehostinnému prostředí.",
+      "statement": "Duna je považována za jeden z prvních románů, které se hlouběji zabývají ekologií v rámci sci-fi.",
+      "answer": true
+    },
+    {
+      "id": "duna-003", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Herbert se při psaní inspiroval studiem pouštních ekosystémů, konkrétně pohybem dun v Oregonu.",
+      "question": "Co inspirovalo Herberta při studiu pro psaní Duny?",
+      "options": [
+        { "text": "Studium historie antického Říma", "correct": false },
+        { "text": "Pozorování pohybu písečných dun", "correct": true },
+        { "text": "Výzkum hlubinného oceánu", "correct": false },
+        { "text": "Analýza vesmírných programů NASA", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Duna kombinuje prvky politického thrilleru, náboženské epiky a sociální kritiky.",
+      "question": "Jaké žánrové prvky Duna obsahuje? (vyberte 2)",
+      "options": [
+        { "text": "Politický thriller", "correct": true },
+        { "text": "Náboženská epika", "correct": true },
+        { "text": "Detektivka z moderního prostředí", "correct": false },
+        { "text": "Pohádka pro děti", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-005", "type": "single", "topic": "postavy",
+      "explanation": "Paul Atreides je hlavním hrdinou, který se vyvíjí z mladého šlechtice v mesianistického vůdce.",
+      "question": "Jak se jmenuje hlavní protagonista příběhu?",
+      "options": [
+        { "text": "Feyd-Rautha Harkonnen", "correct": false },
+        { "text": "Paul Atreides", "correct": true },
+        { "text": "Leto Atreides II.", "correct": false },
+        { "text": "Duncan Idaho", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-006", "type": "truefalse", "topic": "postavy",
+      "explanation": "Lady Jessica je členkou řádu Bene Gesserit, což jí dává specifické schopnosti.",
+      "statement": "Lady Jessica je příslušnicí řádu Bene Gesserit.",
+      "answer": true
+    },
+    {
+      "id": "duna-007", "type": "single", "topic": "postavy",
+      "explanation": "Baron Vladimir Harkonnen je krutý a zkorumpovaný vládce, který se snaží zničit rod Atreidů.",
+      "question": "Kdo je hlavním nepřítelem rodu Atreidů?",
+      "options": [
+        { "text": "Císař Shaddam IV.", "correct": false },
+        { "text": "Baron Vladimir Harkonnen", "correct": true },
+        { "text": "Fremenský vůdce Stilgar", "correct": false },
+        { "text": "Doktor Yueh", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-008", "type": "multiple", "topic": "postavy",
+      "explanation": "Fremeni jsou domorodci z Arrakis, kteří mají modré oči kvůli dlouhodobé konzumaci koření.",
+      "question": "Jaké jsou typické znaky Fremenů? (vyberte 2)",
+      "options": [
+        { "text": "Mají modré oči (oči Ibad)", "correct": true },
+        { "text": "Jsou to vládci galaktického impéria", "correct": false },
+        { "text": "Žijí v hluboké poušti v sítech", "correct": true },
+        { "text": "Nenávidí pouštní červy", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-009", "type": "single", "topic": "postavy",
+      "explanation": "Chani je fremenská válečnice a Paulova osudová partnerka.",
+      "question": "Jak se jmenuje Paulova fremenská partnerka?",
+      "options": [
+        { "text": "Irulan", "correct": false },
+        { "text": "Chani", "correct": true },
+        { "text": "Reverendka matka Mohiam", "correct": false },
+        { "text": "Jessica", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-010", "type": "truefalse", "topic": "postavy",
+      "explanation": "Doktor Yueh je sice lékařem Atreidů, ale je vydírán Harkonneny a nakonec rod zradí.",
+      "statement": "Doktor Yueh je věrným spojencem Atreidů až do konce.",
+      "answer": false
+    },
+    {
+      "id": "duna-011", "type": "single", "topic": "postavy",
+      "explanation": "Bene Gesserit je sesterstvo, které manipuluje s krevními liniemi, aby vytvořilo vyvoleného (Kwisatz Haderach).",
+      "question": "Co je hlavním cílem řádu Bene Gesserit?",
+      "options": [
+        { "text": "Zničit veškeré koření", "correct": false },
+        { "text": "Vytvořit pomocí genetiky vyvoleného (Kwisatz Haderach)", "correct": true },
+        { "text": "Vládnout vesmíru skrze stroje", "correct": false },
+        { "text": "Změnit počasí na všech planetách", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-012", "type": "multiple", "topic": "postavy",
+      "explanation": "Stilgar je fremenský naib (vůdce) a mentor, který Paula přijme do kmene.",
+      "question": "Co platí o postavě Stilgara? (vyberte 2)",
+      "options": [
+        { "text": "Je vůdcem (naibem) fremenského síty", "correct": true },
+        { "text": "Je věrným služebníkem barona Harkonnena", "correct": false },
+        { "text": "Stává se Paulovým spojencem", "correct": true },
+        { "text": "Je to zrádce Atreidů", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-013", "type": "truefalse", "topic": "postavy",
+      "explanation": "Feyd-Rautha je synovcem barona Harkonnena a jeho zamýšleným dědicem.",
+      "statement": "Feyd-Rautha je jedním z hlavních kandidátů barona Harkonnena na převzetí moci.",
+      "answer": true
+    },
+    {
+      "id": "duna-014", "type": "single", "topic": "svet-a-dej",
+      "explanation": "Koření (melanž) je nezbytné pro navigátory Kosmické gildy, aby mohli bezpečně cestovat vesmírem.",
+      "question": "Proč je koření klíčové pro celé Impérium?",
+      "options": [
+        { "text": "Je to jediný zdroj kyslíku", "correct": false },
+        { "text": "Umožňuje navigátorům cestovat vesmírem", "correct": true },
+        { "text": "Slouží jako palivo pro kosmické lodě", "correct": false },
+        { "text": "Léčí všechny nemoci", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-015", "type": "numeric", "topic": "svet-a-dej",
+      "explanation": "Gom Jabbar je smrtící jehla používaná řádem Bene Gesserit při testování lidskosti.",
+      "question": "Kolik lidí musí projít testem Gom Jabbar v úvodní scéně knihy (Paul a matka)?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "duna-016", "type": "single", "topic": "svet-a-dej",
+      "explanation": "Destily jsou speciální obleky Fremenů, které zachycují veškerou vlhkost těla a recyklují ji na vodu k pití.",
+      "question": "K čemu slouží fremenské destily?",
+      "options": [
+        { "text": "K dýchání pod pískem", "correct": false },
+        { "text": "K recyklaci tělesné vlhkosti na pitnou vodu", "correct": true },
+        { "text": "K boji proti písečným červům", "correct": false },
+        { "text": "K maskování v poušti", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-017", "type": "truefalse", "topic": "svet-a-dej",
+      "explanation": "Zrada doktora Yueha umožnila Harkonnenům a císařským sardaukarům proniknout na Arrakis.",
+      "statement": "Zradu na rodu Atreidů provedl doktor Yueh.",
+      "answer": true
+    },
+    {
+      "id": "duna-018", "type": "single", "topic": "svet-a-dej",
+      "explanation": "Sardaukaři jsou elitní císařské jednotky, které jsou obávané pro svou brutalitu a výcvik.",
+      "question": "Kdo jsou Sardaukaři?",
+      "options": [
+        { "text": "Domorodí obyvatelé Arrakis", "correct": false },
+        { "text": "Elitní jednotky císařské armády", "correct": true },
+        { "text": "Obchodníci s kořením", "correct": false },
+        { "text": "Vědci řádu Bene Gesserit", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-019", "type": "multiple", "topic": "svet-a-dej",
+      "explanation": "Paul získá moc nad Fremeny díky tomu, že naplní proroctví a prokáže své schopnosti.",
+      "question": "Jak Paul získá autoritu u Fremenů? (vyberte 2)",
+      "options": [
+        { "text": "Proroctvím, které naplňuje", "correct": true },
+        { "text": "Svými bojovými schopnostmi", "correct": true },
+        { "text": "Tím, že je baronovým synem", "correct": false },
+        { "text": "Tím, že jim slíbí peníze", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-020", "type": "truefalse", "topic": "svet-a-dej",
+      "explanation": "Arrakis je nehostinná planeta, kde je voda posvátná a vzácná.",
+      "statement": "Arrakis je planeta pokrytá oceány a bohatou vegetací.",
+      "answer": false
+    },
+    {
+      "id": "duna-021", "type": "single", "topic": "temata-a-symboly",
+      "explanation": "Hlavním tématem je ekologie a vliv člověka na planetu.",
+      "question": "Co je jednou z hlavních myšlenek Duny?",
+      "options": [
+        { "text": "Ekologie a vztah k prostředí", "correct": true },
+        { "text": "Nezbytnost neomezené těžby", "correct": false },
+        { "text": "Výhody totalitních režimů", "correct": false },
+        { "text": "Utopická budoucnost bez konfliktů", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-022", "type": "numeric", "topic": "temata-a-symboly",
+      "explanation": "Koření je spojeno s vědomím; ve vesmíru Duny existuje 'Mentat', lidský počítač.",
+      "question": "Kolik základních 'škol' (např. Mentati, Bene Gesserit) ovlivňuje vývoj lidstva?",
+      "answer": 3,
+      "tolerance": 1
+    },
+    {
+      "id": "duna-023", "type": "truefalse", "topic": "temata-a-symboly",
+      "explanation": "Náboženství je v Duně nástrojem moci a manipulace mas.",
+      "statement": "Náboženství v Duně nehraje žádnou roli.",
+      "answer": false
+    },
+    {
+      "id": "duna-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Duna využívá strukturu epického románu s mnoha detaily o světě.",
+      "question": "Do jakého rozsahu žánru román řadíme?",
+      "options": [
+        { "text": "Epický román", "correct": true },
+        { "text": "Novela", "correct": false },
+        { "text": "Krátká povídka", "correct": false },
+        { "text": "Báseň", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Dílo vyniká komplexním budováním světa (worldbuilding) a filosofickými vsuvkami.",
+      "question": "Co je charakteristické pro formu Duny? (vyberte 2)",
+      "options": [
+        { "text": "Komplexní 'worldbuilding'", "correct": true },
+        { "text": "Filosofické vsuvky (epigrafy)", "correct": true },
+        { "text": "Absence jakéhokoliv popisu", "correct": false },
+        { "text": "Děj v reálném čase (24 hodin)", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Vypravěč je er-formě, což umožňuje nahlížet do nitra postav i popisovat svět.",
+      "question": "V jaké osobě je román vyprávěn?",
+      "options": [
+        { "text": "Ich-forma", "correct": false },
+        { "text": "Er-forma", "correct": true },
+        { "text": "Ty-forma", "correct": false },
+        { "text": "Střídá se er a ich-forma", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Dodatky na konci knihy jsou pro hloubku světa zásadní.",
+      "statement": "Dodatky na konci knihy jsou nedůležité.",
+      "answer": false
+    },
+    {
+      "id": "duna-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo kombinuje politické intriky, náboženský mesianismus a ekologickou vizi.",
+      "question": "Co tvoří základní stavební kámen Duny?",
+      "options": [
+        { "text": "Kombinace politiky, náboženství a ekologie", "correct": true },
+        { "text": "Zaměření pouze na vesmírné bitvy", "correct": false },
+        { "text": "Love story", "correct": false },
+        { "text": "Příběh o sportu", "correct": false }
+      ]
+    },
+    {
+      "id": "duna-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Herbertův styl je popisný a analytický.",
+      "statement": "Duna je napsána jako divadelní hra.",
+      "answer": false
+    },
+    {
+      "id": "duna-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Román je rozdělen na tři knihy, což odpovídá Paulově proměně.",
+      "question": "Na kolik knih je rozdělen první román Duna?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

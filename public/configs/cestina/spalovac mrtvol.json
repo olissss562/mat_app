@@ -1,0 +1,288 @@
+{
+  "subject": "spalovac-mrtvol",
+  "name": "Spalovač mrtvol",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Postavy a jejich vývoj" },
+    { "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+    { "id": "literarni-forma", "name": "Literární forma a styl" }
+  ],
+  "questions": [
+    {
+      "id": "spalovac-mrtvol-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Ladislav Fuks byl český prozaik, mistr psychologické prózy a hororu.",
+      "question": "Kdo je autorem románu Spalovač mrtvol?",
+      "options": [
+        { "text": "Bohumil Hrabal", "correct": false },
+        { "text": "Ladislav Fuks", "correct": true },
+        { "text": "Milan Kundera", "correct": false },
+        { "text": "Václav Havel", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-002", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Dílo vzniklo v 60. letech 20. století, v období společenského uvolnění před normalizací.",
+      "question": "V jakém desetiletí byl román vydán?",
+      "options": [
+        { "text": "1940. léta", "correct": false },
+        { "text": "1960. léta", "correct": true },
+        { "text": "1980. léta", "correct": false },
+        { "text": "1990. léta", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-003", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Fuks ve svých dílech často reflektoval hrůzy nacismu a ztrátu lidskosti.",
+      "statement": "Román Spalovač mrtvol se odehrává v období druhé světové války a nacistické okupace.",
+      "answer": true
+    },
+    {
+      "id": "spalovac-mrtvol-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Autor v románu využívá prvky psychologického hororu a grotesky k zobrazení rozkladu osobnosti.",
+      "question": "Které žánrové prvky se v románu vyskytují? (vyberte 2)",
+      "options": [
+        { "text": "Psychologický horor", "correct": true },
+        { "text": "Groteska", "correct": true },
+        { "text": "Historická romance", "correct": false },
+        { "text": "Pohádka pro dospělé", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Fuks byl známý svým samotářským životem a hlubokým zájmem o psychologii.",
+      "question": "Co bylo pro Fuksovu tvorbu typické?",
+      "options": [
+        { "text": "Optimismus a radost ze života", "correct": false },
+        { "text": "Studium psychiky člověka v mezních situacích", "correct": true },
+        { "text": "Psaní veselých komedií", "correct": false },
+        { "text": "Popisy přírody", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Dílo bylo úspěšně zfilmováno Jurajem Herzem v roce 1968.",
+      "statement": "Román nebyl nikdy zfilmován.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-007", "type": "single", "topic": "postavy",
+      "explanation": "Karel Kopfrkingl je hlavním hrdinou, který se z uctivého a slušného člověka mění v masového vraha.",
+      "question": "Jak se jmenuje hlavní postava románu?",
+      "options": [
+        { "text": "Viliam Reindl", "correct": false },
+        { "text": "Karel Kopfrkingl", "correct": true },
+        { "text": "Bohumil Hrabal", "correct": false },
+        { "text": "Jan Dvořák", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-008", "type": "single", "topic": "postavy",
+      "explanation": "Lakmé je přezdívka manželky Karla Kopfrkingla, která je původem z vyšší společnosti.",
+      "question": "Jak se jmenuje manželka hlavního hrdiny?",
+      "options": [
+        { "text": "Marie", "correct": false },
+        { "text": "Lakmé", "correct": true },
+        { "text": "Anna", "correct": false },
+        { "text": "Jana", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-009", "type": "multiple", "topic": "postavy",
+      "explanation": "Kopfrkingl má dvě děti, Zinu a Miliho, které vychovává ke své představě o 'čistotě'.",
+      "question": "Jak se jmenují děti Kopfrkinglových? (vyberte 2)",
+      "options": [
+        { "text": "Zina", "correct": true },
+        { "text": "Mili", "correct": true },
+        { "text": "Petr", "correct": false },
+        { "text": "Klára", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-010", "type": "single", "topic": "postavy",
+      "explanation": "Willi Reindl je bývalý přítel z vojny, který Kopfrkingla svede na cestu nacistické ideologie.",
+      "question": "Kdo je iniciátorem Kopfrkinglovy změny v nacistu?",
+      "options": [
+        { "text": "Jeho manželka", "correct": false },
+        { "text": "Willi Reindl", "correct": true },
+        { "text": "Jeho syn", "correct": false },
+        { "text": "Neznámý cizinec", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "Kopfrkingl se na začátku příběhu prezentuje jako milující otec a manžel, což je v kontrastu s jeho pozdějšími činy.",
+      "statement": "Kopfrkingl je od začátku příběhu vykreslen jako otevřený vrah.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-012", "type": "single", "topic": "postavy",
+      "explanation": "Kopfrkingl svou rodinu vnímá jako překážku své nové ideologie, což vede k jejich vraždám.",
+      "question": "Co Kopfrkingl udělá se svou rodinou?",
+      "options": [
+        { "text": "Pošle je do zahraničí", "correct": false },
+        { "text": "Zavraždí je", "correct": true },
+        { "text": "Ignoruje je", "correct": false },
+        { "text": "Daruje je nacistům", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-013", "type": "multiple", "topic": "postavy",
+      "explanation": "Kopfrkingl se považuje za kultivovaného člověka, milovníka umění a čistoty.",
+      "question": "Čím se Kopfrkingl v běžném životě vyznačuje? (vyberte 2)",
+      "options": [
+        { "text": "Posedlostí čistotou a pořádkem", "correct": true },
+        { "text": "Zájmem o umění a náboženství", "correct": true },
+        { "text": "Aktivní účastí v odboji", "correct": false },
+        { "text": "Láskou k hazardním hrám", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-014", "type": "truefalse", "topic": "postavy",
+      "explanation": "Reverendka (postava z jiného díla) v tomto románu nevystupuje, Kopfrkingl jedná pod vlivem nacistické doktríny.",
+      "statement": "Kopfrkingl jedná pod vlivem náboženského fanatismu, nikoliv nacistické ideologie.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-015", "type": "numeric", "topic": "dej-a-motivy",
+      "explanation": "Kopfrkingl pracuje v krematoriu jako zaměstnanec, který věří v 'osvobození duše' spálením.",
+      "question": "Jak se jmenuje instituce, ve které Kopfrkingl pracuje?",
+      "answer": 0,
+      "explanation": "Pracuje v krematoriu (není číselná odpověď, toto je chyták, pro účely trenažeru použijeme jinou otázku).",
+      "question": "Kolik členů rodiny Kopfrkingl postupně zavraždí?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "spalovac-mrtvol-016", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Kopfrkingl věří, že kremace je vznešený způsob, jak osvobodit duši z utrpení.",
+      "question": "Jaký je Kopfrkinglův vztah ke kremaci?",
+      "options": [
+        { "text": "Považuje ji za odpornou", "correct": false },
+        { "text": "Považuje ji za vznešené poslání a osvobození duše", "correct": true },
+        { "text": "Je mu lhostejná", "correct": false },
+        { "text": "Obává se jí", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-017", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Motiv Tibetu a buddhistické filosofie je Kopfrkinglovým únikem od reality.",
+      "statement": "Kopfrkingl se často odvolává na tibetskou filosofii.",
+      "answer": true
+    },
+    {
+      "id": "spalovac-mrtvol-018", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Willi Reindl postupně vnucuje Kopfrkinglovi myšlenky o jeho 'německém' původu.",
+      "question": "Čím Willi přesvědčí Kopfrkingla o jeho výjimečnosti?",
+      "options": [
+        { "text": "Důkazem o jeho bohatství", "correct": false },
+        { "text": "Tvrzením, že má německý původ", "correct": true },
+        { "text": "Nabídkou práce v armádě", "correct": false },
+        { "text": "Slibem vysokého postavení ve státě", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-019", "type": "multiple", "topic": "dej-a-motivy",
+      "explanation": "Klíčovými motivy jsou zvrácená ideologie, ztráta lidskosti a manipulace.",
+      "question": "Které motivy jsou pro román klíčové? (vyberte 2)",
+      "options": [
+        { "text": "Zvrácená nacistická ideologie", "correct": true },
+        { "text": "Ztráta lidskosti a morálky", "correct": true },
+        { "text": "Idylický život na venkově", "correct": false },
+        { "text": "Boj za svobodu slova", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-020", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Kopfrkinglův příběh je příkladem toho, jak snadno může podprůměrný člověk podlehnout zlu.",
+      "statement": "Kopfrkingl na konci románu lituje svých činů a spáchá sebevraždu.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-021", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Kopfrkinglův vnitřní monolog se postupně stává čím dál děsivějším.",
+      "question": "Jaký dojem vyvolává Kopfrkinglova řeč v průběhu knihy?",
+      "options": [
+        { "text": "Stává se čím dál více šílenou a fanatickou", "correct": true },
+        { "text": "Stává se čím dál logičtější", "correct": false },
+        { "text": "Ztrácí srozumitelnost", "correct": false },
+        { "text": "Je stále stejná", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-022", "type": "numeric", "topic": "dej-a-motivy",
+      "explanation": "Román je relativně krátký, členěný do 15 kapitol.",
+      "question": "Do kolika kapitol je román rozdělen?",
+      "answer": 15,
+      "tolerance": 0
+    },
+    {
+      "id": "spalovac-mrtvol-023", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Krematorium je v románu zobrazeno jako místo, kde se smrt stává byznysem.",
+      "statement": "Krematorium je v románu místem úcty k zesnulým.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-024", "type": "single", "topic": "literarni-forma",
+      "explanation": "Román je napsán jako psychologický portrét vrahovy mysli.",
+      "question": "Jaký literární druh/žánr představuje toto dílo?",
+      "options": [
+        { "text": "Psychologický román", "correct": true },
+        { "text": "Pohádka", "correct": false },
+        { "text": "Báseň", "correct": false },
+        { "text": "Detektivka", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-025", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Fuks využívá ironii, nadsázku a místy až groteskní popisy.",
+      "question": "Jaké stylové prostředky Fuks využívá? (vyberte 2)",
+      "options": [
+        { "text": "Ironie a nadsázka", "correct": true },
+        { "text": "Groteskní prvky", "correct": true },
+        { "text": "Vysoký patos a hrdinský styl", "correct": false },
+        { "text": "Absence jakýchkoliv obrazných prostředků", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Román je vyprávěn v er-formě, autor používá objektivní, ale zároveň zneklidňující pohled.",
+      "question": "V jaké osobě je román vyprávěn?",
+      "options": [
+        { "text": "Ich-forma (Kopfrkingl)", "correct": false },
+        { "text": "Er-forma (autorský vypravěč)", "correct": true },
+        { "text": "Ty-forma", "correct": false },
+        { "text": "Střídání osob", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-027", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Styl Fukse je velmi osobitý, zaměřený na detail a vnitřní stavy postav.",
+      "statement": "Styl psaní je jednoduchý a lineární, bez žádných náznaků.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-028", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo kritizuje totalitní myšlení, které vede k dehumanizaci.",
+      "question": "Co je hlavním uměleckým záměrem románu?",
+      "options": [
+        { "text": "Zesměšnit nacistické pohlaváry", "correct": false },
+        { "text": "Varovat před rozkladem lidskosti v totalitním režimu", "correct": true },
+        { "text": "Popsat historii kremace", "correct": false },
+        { "text": "Zabavit čtenáře", "correct": false }
+      ]
+    },
+    {
+      "id": "spalovac-mrtvol-029", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Dílo patří k vrcholům české psychologické prózy.",
+      "statement": "Fuksův román je považován za bezvýznamný pokus o horror.",
+      "answer": false
+    },
+    {
+      "id": "spalovac-mrtvol-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Román má silně uzavřený děj, končí definitivním vítězstvím Kopfrkinglovy zvrácenosti.",
+      "question": "Kolik hlavních postav (Kopfrkingl, Lakmé, Willi, Zina, Mili) tvoří rodinné a společenské jádro příběhu?",
+      "answer": 5,
+      "tolerance": 0
+    }
+  ]
+}

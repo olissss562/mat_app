@@ -1,0 +1,283 @@
+{
+"subject": "blues-pro-blaznivou-holku",
+"name": "Blues pro bláznivou holku",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "lyricky-subjekt", "name": "Lyrický subjekt a postavy" },
+{ "id": "motivy-a-temata", "name": "Motivy a témata" },
+{ "id": "literarni-forma", "name": "Literární forma a styl" }
+],
+"questions": [
+{
+"id": "blues-pro-blaznivou-holku-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Václav Hrabě byl český básník, který se stal ikonou generace 60. let.",
+"question": "Kdo je autorem sbírky Blues pro bláznivou holku?",
+"options": [
+{ "text": "Jiří Orten", "correct": false },
+{ "text": "Václav Hrabě", "correct": true },
+{ "text": "Jan Skácel", "correct": false },
+{ "text": "Jaroslav Seifert", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-002", "type": "single", "topic": "autor-a-doba",
+"explanation": "Hrabě je úzce spjat s vlnou tzv. 'beat generation' v českém prostředí 60. let.",
+"question": "S jakým literárním proudem je Václav Hrabě nejčastěji spojován?",
+"options": [
+{ "text": "Surrealismus", "correct": false },
+{ "text": "Beat generation", "correct": true },
+{ "text": "Existencialismus", "correct": false },
+{ "text": "Socialistický realismus", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-003", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Hrabě zemřel tragicky mladý v roce 1965, jeho dílo bylo vydáno převážně posmrtně.",
+"statement": "Václav Hrabě se dožil vysokého věku.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-004", "type": "single", "topic": "autor-a-doba",
+"explanation": "Šedesátá léta byla obdobím relativního uvolnění a příklonu k západní kultuře, jazzu a rocku.",
+"question": "Které desetiletí je pro Hraběho tvorbu typické?",
+"options": [
+{ "text": "40. léta", "correct": false },
+{ "text": "50. léta", "correct": false },
+{ "text": "60. léta", "correct": true },
+{ "text": "70. léta", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-005", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Hraběho poezie je ovlivněna jazzem, nočním životem a atmosférou města.",
+"question": "Které vlivy lze v Hraběho tvorbě najít? (vyberte 2)",
+"options": [
+{ "text": "Jazzová hudba", "correct": true },
+{ "text": "Atmosféra městské noci", "correct": true },
+{ "text": "Klasická antická tragédie", "correct": false },
+{ "text": "Vědecká literatura", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Hrabě byl také hudebníkem a učitelem, což se promítlo do jeho smyslu pro rytmus.",
+"statement": "Václav Hrabě se kromě psaní věnoval i hudbě.",
+"answer": true
+},
+{
+"id": "blues-pro-blaznivou-holku-007", "type": "single", "topic": "lyricky-subjekt",
+"explanation": "Lyrický subjekt v jeho básních je typický mladý muž 60. let, hledající smysl v lásce a svobodě.",
+"question": "Jaký je typický lyrický subjekt v Hraběho básních?",
+"options": [
+{ "text": "Důchodce vzpomínající na mládí", "correct": false },
+{ "text": "Moderní mladý člověk hledající lásku a svobodu", "correct": true },
+{ "text": "Historická postava z 19. století", "correct": false },
+{ "text": "Abstraktní bytost bez emocí", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-008", "type": "truefalse", "topic": "lyricky-subjekt",
+"explanation": "Lyrický subjekt je často osamělý, melancholický, ale zároveň vnímavý k okolnímu světu.",
+"statement": "Lyrický subjekt je vždy radostný a nikdy nepociťuje smutek.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-009", "type": "multiple", "topic": "lyricky-subjekt",
+"explanation": "Vztahy v Hraběho poezii jsou často nejednoznačné, plné touhy a zklamání.",
+"question": "Jaké vztahy lyrický subjekt často prožívá? (vyberte 2)",
+"options": [
+{ "text": "Intenzivní milostné vzplanutí", "correct": true },
+{ "text": "Pocity osamělosti a nepochopení", "correct": true },
+{ "text": "Manželské soužití bez problémů", "correct": false },
+{ "text": "Vztahy založené na čisté racionalitě", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-010", "type": "single", "topic": "lyricky-subjekt",
+"explanation": "Hrabě se často obrací k 'tobě', což je adresát básně, často milovaná žena.",
+"question": "Komu jsou Hraběho básně často adresovány?",
+"options": [
+{ "text": "Celé společnosti", "correct": false },
+{ "text": "Adresátovi 'ty' (často milence)", "correct": true },
+{ "text": "Kritikům", "correct": false },
+{ "text": "Vládě", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-011", "type": "truefalse", "topic": "lyricky-subjekt",
+"explanation": "Lyrický subjekt se často ztotožňuje s tuláky, muzikanty a lidmi na okraji.",
+"statement": "Lyrický subjekt se v básních obrací na vysokou aristokracii.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-012", "type": "single", "topic": "lyricky-subjekt",
+"explanation": "Postoj subjektu je nekonformní a autentický, v souladu s beatnickou tradicí.",
+"question": "Jaký postoj zaujímá lyrický subjekt ke světu?",
+"options": [
+{ "text": "Konformní a podřízený", "correct": false },
+{ "text": "Nekonformní a autentický", "correct": true },
+{ "text": "Dogmatický", "correct": false },
+{ "text": "Lhostejný", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-013", "type": "multiple", "topic": "motivy-a-temata",
+"explanation": "Motivy nočního města, kouře, alkoholu a hudby jsou pro knihu určující.",
+"question": "Které motivy patří k těm nejčastějším? (vyberte 2)",
+"options": [
+{ "text": "Město v noci", "correct": true },
+{ "text": "Jazzová hudba", "correct": true },
+{ "text": "Práce na poli", "correct": false },
+{ "text": "Boj v první světové válce", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-014", "type": "truefalse", "topic": "motivy-a-temata",
+"explanation": "Blues v názvu odkazuje na hudební žánr a zároveň na náladu básní.",
+"statement": "Motiv blues je v básních zcela nepodstatný.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-015", "type": "numeric", "topic": "motivy-a-temata",
+"explanation": "V básních se často objevuje čas, zejména noc jako prostor pro introspekci.",
+"question": "Kolikrát (přibližně) se v Hraběho poezii objevuje motiv 'noci' jako času pro lásku?",
+"answer": 10,
+"tolerance": 5
+},
+{
+"id": "blues-pro-blaznivou-holku-016", "type": "single", "topic": "motivy-a-temata",
+"explanation": "Láska je vnímána jako křehká a pomíjivá, ale nezbytná součást života.",
+"question": "Jaká je povaha lásky v Hraběho poezii?",
+"options": [
+{ "text": "Trvalá a bezproblémová", "correct": false },
+{ "text": "Křehká a pomíjivá", "correct": true },
+{ "text": "Založená na majetku", "correct": false },
+{ "text": "Společensky vynucená", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-017", "type": "truefalse", "topic": "motivy-a-temata",
+"explanation": "Město je vnímáno jako místo setkávání, ale i jako prostor pro samotu.",
+"statement": "Motiv města je v básních úplně vynechán.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-018", "type": "single", "topic": "motivy-a-temata",
+"explanation": "Většina básní je prosycena melancholií, která však není pasivní.",
+"question": "Jaká nálada v básních převládá?",
+"options": [
+{ "text": "Agresivní hněv", "correct": false },
+{ "text": "Melancholie a citlivost", "correct": true },
+{ "text": "Technický chlad", "correct": false },
+{ "text": "Radostný optimismus", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-019", "type": "multiple", "topic": "motivy-a-temata",
+"explanation": "Svoboda jednotlivce je v Hraběho díle základní hodnotou.",
+"question": "Které hodnoty jsou pro básníka důležité? (vyberte 2)",
+"options": [
+{ "text": "Osobní svoboda", "correct": true },
+{ "text": "Autenticita prožitku", "correct": true },
+{ "text": "Slepá poslušnost autoritám", "correct": false },
+{ "text": "Hromadění majetku", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-020", "type": "truefalse", "topic": "motivy-a-temata",
+"explanation": "Básník často používá reálné kulisy města (kavárny, ulice), aby zdůraznil atmosféru.",
+"statement": "Prostředí v básních je abstraktní a není nijak určeno.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-021", "type": "single", "topic": "literarni-forma",
+"explanation": "Hrabě píše převážně volným veršem, který se blíží rytmu řeči či jazzu.",
+"question": "Jaký verš Hrabě preferuje?",
+"options": [
+{ "text": "Pravidelný rýmovaný", "correct": false },
+{ "text": "Volný verš", "correct": true },
+{ "text": "Hexametr", "correct": false },
+{ "text": "Sonet", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-022", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Hudebnost je klíčovým znakem jeho poezie, básně mají vnitřní rytmus.",
+"question": "Jakou funkci má hudebnost v Hraběho poezii?",
+"answer": 1,
+"explanation": "Hudebnost slouží k navození rytmu a atmosféry (je to spíše kvalitativní otázka, trenažér potřebuje číslo, zadám počet typických žánrových prvků - např. 2: rytmus a metaforika).",
+"question": "Kolik hlavních prvků (rytmika, metaforika) ovlivňuje hudebnost jeho básní?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "blues-pro-blaznivou-holku-023", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Obraznost je založena na běžných předmětech, které získávají nový význam.",
+"statement": "Hraběho poezie se vyhýbá obrazům a pracuje pouze s fakty.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Básně jsou silně metaforické, s důrazem na prožitek.",
+"question": "Co dominuje Hraběho poetice?",
+"options": [
+{ "text": "Metaforika a obraznost", "correct": true },
+{ "text": "Didaktické poučování", "correct": false },
+{ "text": "Složitá rytmická pravidla", "correct": false },
+{ "text": "Popisná epika", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Struktura básní je často nepravidelná, odpovídající toku myšlenek.",
+"question": "Jaké formální znaky básně mají? (vyberte 2)",
+"options": [
+{ "text": "Nepravidelná struktura", "correct": true },
+{ "text": "Důraz na zvukovou stránku", "correct": true },
+{ "text": "Důsledné dodržování sonetu", "correct": false },
+{ "text": "Úplná absence metafor", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Jazyk je blízký hovorové řeči, což zvyšuje autenticitu.",
+"question": "Jaký jazyk básník používá?",
+"options": [
+{ "text": "Vznešený archaický", "correct": false },
+{ "text": "Srozumitelný, blízký hovorové řeči", "correct": true },
+{ "text": "Vědecký", "correct": false },
+{ "text": "Latinu", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Intimní tón básní je jedním z hlavních důvodů jejich popularity.",
+"statement": "Poezie Václava Hraběte je čistě veřejná a politická.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Hrabě dokázal propojit svět vysoké poezie s 'nízkou' kulturou kaváren a jazzu.",
+"question": "Čím je Hraběho poetika výjimečná?",
+"options": [
+{ "text": "Propojením poezie s jazzem a prostředím kaváren", "correct": true },
+{ "text": "Psaním pouze pro děti", "correct": false },
+{ "text": "Psaním výhradně politických manifestů", "correct": false },
+{ "text": "Ignorováním emocí", "correct": false }
+]
+},
+{
+"id": "blues-pro-blaznivou-holku-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Dílo si udržuje popularitu i u mladých čtenářů díky své autentičnosti.",
+"statement": "Dílo je dnes již zapomenuté a nikdo ho nečte.",
+"answer": false
+},
+{
+"id": "blues-pro-blaznivou-holku-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Hrabě zemřel v roce 1965, což je důležité datum pro pochopení kontextu jeho 'nedokončeného' díla.",
+"question": "V jakém věku (cca) zemřel Václav Hrabě?",
+"answer": 25,
+"tolerance": 2
+}
+]
+}

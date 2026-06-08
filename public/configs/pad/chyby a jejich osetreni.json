@@ -1,0 +1,277 @@
+{
+  "subject": "chyby-a-osetreni",
+  "name": "Chyby a výjimky",
+  "topics": [
+    { "id": "druhy-chyb", "name": "Druhy chyb" },
+    { "id": "vyjimky-mechanismus", "name": "Mechanismus výjimek" },
+    { "id": "jednotkove-testy", "name": "Jednotkové testy" },
+    { "id": "prakticka-aplikace", "name": "Validace vstupů" }
+  ],
+  "questions": [
+    {
+      "id": "chyby-001", "type": "single", "topic": "druhy-chyb",
+      "explanation": "Syntaktická chyba je problém ve struktuře kódu, který kompilátor neakceptuje.",
+      "question": "Jaký typ chyby znemožní překlad (kompilaci) programu?",
+      "options": [
+        { "text": "Logická chyba", "correct": false },
+        { "text": "Syntaktická chyba", "correct": true },
+        { "text": "Runtime chyba", "correct": false },
+        { "text": "Výjimka", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-002", "type": "truefalse", "topic": "druhy-chyb",
+      "explanation": "Logické chyby program nezastaví, ale vedou k nesprávným výsledkům.",
+      "statement": "Logická chyba způsobí okamžitý pád programu (crash).",
+      "answer": false
+    },
+    {
+      "id": "chyby-003", "type": "single", "topic": "vyjimky-mechanismus",
+      "explanation": "Blok 'try' obsahuje kód, který může vyvolat výjimku.",
+      "question": "Který blok kódu obsahuje rizikový kód, jenž může vyvolat výjimku?",
+      "options": [
+        { "text": "catch", "correct": false },
+        { "text": "try", "correct": true },
+        { "text": "finally", "correct": false },
+        { "text": "throw", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-004", "type": "multiple", "topic": "vyjimky-mechanismus",
+      "explanation": "Výjimky v Javě jsou objekty odvozené od třídy Throwable.",
+      "question": "Které klíčové bloky se používají pro ošetření výjimek? (vyberte 2)",
+      "options": [
+        { "text": "try", "correct": true },
+        { "text": "catch", "correct": true },
+        { "text": "loop", "correct": false },
+        { "text": "case", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-005", "type": "numeric", "topic": "vyjimky-mechanismus",
+      "explanation": "Blok finally se provede vždy, bez ohledu na to, zda k výjimce došlo.",
+      "question": "Kolikrát se provede kód v bloku 'finally'?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "chyby-006", "type": "single", "topic": "vyjimky-mechanismus",
+      "explanation": "Klíčové slovo 'throw' se používá k explicitnímu vyhození (vyvolání) výjimky.",
+      "question": "Které slovo použijete, pokud chcete ručně vyvolat výjimku?",
+      "options": [
+        { "text": "catch", "correct": false },
+        { "text": "throw", "correct": true },
+        { "text": "throws", "correct": false },
+        { "text": "try", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-007", "type": "truefalse", "topic": "jednotkove-testy",
+      "explanation": "Jednotkové testy testují izolované části kódu (metody), nikoliv celý systém najednou.",
+      "statement": "Jednotkové testy testují celé aplikace najednou.",
+      "answer": false
+    },
+    {
+      "id": "chyby-008", "type": "single", "topic": "jednotkove-testy",
+      "explanation": "Assert metody porovnávají očekávaný výsledek se skutečným.",
+      "question": "Co dělá metoda typu 'assert' v jednotkových testech?",
+      "options": [
+        { "text": "Vypisuje výsledek na obrazovku", "correct": false },
+        { "text": "Ověřuje, zda se výsledek shoduje s očekáváním", "correct": true },
+        { "text": "Ukončuje program", "correct": false },
+        { "text": "Generuje nová data", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-009", "type": "multiple", "topic": "prakticka-aplikace",
+      "explanation": "Při vstupu čísel od uživatele je nutné ošetřit chybu neplatného formátu (InputMismatchException).",
+      "question": "Jaké výjimky musíme ošetřit při načítání čísel z konzole? (vyberte 2)",
+      "options": [
+        { "text": "InputMismatchException", "correct": true },
+        { "text": "Exception (všeobecná)", "correct": true },
+        { "text": "StackOverflowError", "correct": false },
+        { "text": "FileNotFoundException", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-010", "type": "numeric", "topic": "prakticka-aplikace",
+      "explanation": "Číslo v rozsahu 0-10. Pokud uživatel zadá 11, podmínka (cislo > 10) je pravdivá -> chyba.",
+      "question": "Které z těchto čísel by vyvolalo výjimku v našem programu (rozsah 0-10)?",
+      "answer": 11,
+      "tolerance": 50
+    },
+    {
+      "id": "chyby-011", "type": "truefalse", "topic": "prakticka-aplikace",
+      "explanation": "Je dobrým zvykem vždy zavřít Scanner pomocí close().",
+      "statement": "Blok finally je ideální pro uzavírání otevřených zdrojů (např. souborů nebo Scanneru).",
+      "answer": true
+    },
+    {
+      "id": "chyby-012", "type": "single", "topic": "druhy-chyb",
+      "explanation": "Runtime error nastává, když program běží, ale pokusí se provést nepovolenou operaci.",
+      "question": "Kdy nastává Runtime error?",
+      "options": [
+        { "text": "Při psaní kódu v editoru", "correct": false },
+        { "text": "Až při spuštění programu", "correct": true },
+        { "text": "Při kompilaci", "correct": false },
+        { "text": "Při instalaci", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-013", "type": "multiple", "topic": "jednotkove-testy",
+      "explanation": "Jednotkové testy zajišťují stabilitu kódu při změnách (refaktoringu).",
+      "question": "K čemu jsou jednotkové testy? (vyberte 2)",
+      "options": [
+        { "text": "Ověření správnosti logiky metod", "correct": true },
+        { "text": "Zajištění bezpečnosti při změnách kódu", "correct": true },
+        { "text": "Kreslení grafiky", "correct": false },
+        { "text": "Automatické psaní kódu", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-014", "type": "truefalse", "topic": "vyjimky-mechanismus",
+      "explanation": "Program může mít více bloků catch pro různé typy výjimek.",
+      "statement": "V jednom try bloku může být více catch bloků.",
+      "answer": true
+    },
+    {
+      "id": "chyby-015", "type": "numeric", "topic": "prakticka-aplikace",
+      "explanation": "Pokud první znak není číslice, náš program vyhodí InvalidStartException.",
+      "question": "Kolik vlastních typů výjimek jsme definovali v příkladu?",
+      "answer": 1,
+      "tolerance": 0
+    },
+    {
+      "id": "chyby-016", "type": "single", "topic": "vyjimky-mechanismus",
+      "explanation": "RuntimeException je výjimka, kterou není nutné deklarovat v podpisu metody (unchecked).",
+      "question": "Jaký je rozdíl mezi Checked a Unchecked výjimkou?",
+      "options": [
+        { "text": "Checked výjimku musíme ošetřit (try-catch nebo throws)", "correct": true },
+        { "text": "Checked výjimky neexistují", "correct": false },
+        { "text": "Unchecked výjimky program vždy zastaví", "correct": false },
+        { "text": "Checked výjimky jsou jen názvy", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-017", "type": "truefalse", "topic": "druhy-chyb",
+      "explanation": "Chybějící středník je typická syntaktická chyba.",
+      "statement": "Chybějící středník v jazyce Java je logická chyba.",
+      "answer": false
+    },
+    {
+      "id": "chyby-018", "type": "single", "topic": "jednotkove-testy",
+      "explanation": "Frameworky jako JUnit automaticky spustí testy a vyhodnotí výsledek.",
+      "question": "Který nástroj se v Javě používá pro jednotkové testování?",
+      "options": [
+        { "text": "JUnit", "correct": true },
+        { "text": "Scanner", "correct": false },
+        { "text": "JDK", "correct": false },
+        { "text": "Jvm", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-019", "type": "multiple", "topic": "vyjimky-mechanismus",
+      "explanation": "Špatné ošetření výjimek může vést k tzv. úniku informací (security risk) nebo pádu aplikace.",
+      "question": "Co může způsobit neoseřená výjimka? (vyberte 2)",
+      "options": [
+        { "text": "Pád aplikace (crash)", "correct": true },
+        { "text": "Nekonzistentní stav dat", "correct": true },
+        { "text": "Zrychlení programu", "correct": false },
+        { "text": "Automatické opravení chyby", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-020", "type": "truefalse", "topic": "prakticka-aplikace",
+      "explanation": "Character.isDigit() je standardní metoda v Javě pro kontrolu číslice.",
+      "statement": "Pro kontrolu, zda je znak číslice, použijeme v Javě metodu Character.isDigit().",
+      "answer": true
+    },
+    {
+      "id": "chyby-021", "type": "single", "topic": "druhy-chyb",
+      "explanation": "Logická chyba je, když kód běží bez chyb, ale vypočítá špatný výsledek (např. 2+2=5).",
+      "question": "Co je příznakem logické chyby?",
+      "options": [
+        { "text": "Program se nespustí", "correct": false },
+        { "text": "Program běží, ale výsledky jsou chybné", "correct": true },
+        { "text": "Program vyhodí Exception", "correct": false },
+        { "text": "Počítač se vypne", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-022", "type": "numeric", "topic": "vyjimky-mechanismus",
+      "explanation": "Hierarchie výjimek v Javě začíná u třídy Throwable.",
+      "question": "Kolik základních větví má třída Throwable (Error a Exception)?",
+      "answer": 2,
+      "tolerance": 0
+    },
+    {
+      "id": "chyby-023", "type": "truefalse", "topic": "jednotkove-testy",
+      "explanation": "Testy by měly být nezávislé, aby bylo možné identifikovat konkrétní selhání.",
+      "statement": "Jednotkové testy by měly být na sobě co nejvíce závislé.",
+      "answer": false
+    },
+    {
+      "id": "chyby-024", "type": "single", "topic": "vyjimky-mechanismus",
+      "explanation": "System.err slouží k výpisu chybových hlášení, jsou barevně odlišené od běžného výstupu.",
+      "question": "Jaký je doporučený stream v Javě pro výpis chybových hlášení?",
+      "options": [
+        { "text": "System.out", "correct": false },
+        { "text": "System.err", "correct": true },
+        { "text": "System.in", "correct": false },
+        { "text": "System.log", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-025", "type": "multiple", "topic": "prakticka-aplikace",
+      "explanation": "U vstupu řetězce kontrolujeme, zda není prázdný a začíná správně.",
+      "question": "Co kontrolujeme u vstupu řetězce (v našem příkladě)? (vyberte 2)",
+      "options": [
+        { "text": "Zda není prázdný", "correct": true },
+        { "text": "Zda první znak je číslice", "correct": true },
+        { "text": "Zda má přesně 10 znaků", "correct": false },
+        { "text": "Zda obsahuje velké písmeno", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-026", "type": "single", "topic": "vyjimky-mechanismus",
+      "explanation": "Throws klauzule v hlavičce metody signalizuje, že metoda může vyhodit danou výjimku.",
+      "question": "Co znamená 'throws Exception' v hlavičce metody?",
+      "options": [
+        { "text": "Metoda vyhodí výjimku", "correct": false },
+        { "text": "Metoda může vyhodit výjimku, volající ji musí ošetřit", "correct": true },
+        { "text": "Metoda zachytí výjimku", "correct": false },
+        { "text": "Metoda ignoruje výjimky", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-027", "type": "truefalse", "topic": "druhy-chyb",
+      "explanation": "Kompilátor je program, který kontroluje syntaktickou správnost kódu.",
+      "statement": "Kompilátor je schopen opravit veškeré logické chyby v kódu.",
+      "answer": false
+    },
+    {
+      "id": "chyby-028", "type": "single", "topic": "jednotkove-testy",
+      "explanation": "TDD (Test Driven Development) je technika, kdy píšeme testy před samotným kódem.",
+      "question": "Jak se nazývá vývojový postup, kde nejdříve píšeme testy?",
+      "options": [
+        { "text": "TDD (Test Driven Development)", "correct": true },
+        { "text": "Debugging", "correct": false },
+        { "text": "Refactoring", "correct": false },
+        { "text": "Deployment", "correct": false }
+      ]
+    },
+    {
+      "id": "chyby-029", "type": "truefalse", "topic": "prakticka-aplikace",
+      "explanation": "Při zadání znaku tam, kde má být číslo, Scanner vyhodí InputMismatchException.",
+      "statement": "Při zadávání čísla může uživatel zadat text, na což Scanner zareaguje vyhozením výjimky.",
+      "answer": true
+    },
+    {
+      "id": "chyby-030", "type": "numeric", "topic": "druhy-chyb",
+      "explanation": "Základní dělení je na syntaktické, běhové a logické.",
+      "question": "Kolik základních typů chyb (syntaktické, runtime, logické) jsme popsali?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

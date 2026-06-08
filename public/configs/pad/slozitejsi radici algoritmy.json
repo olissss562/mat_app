@@ -1,0 +1,281 @@
+{
+  "subject": "slozite-radici-algoritmy",
+  "name": "Složitější řadící algoritmy",
+  "topics": [
+    { "id": "rekurze", "name": "Princip rekurze" },
+    { "id": "quick-sort", "name": "Quick Sort" },
+    { "id": "merge-sort", "name": "Merge Sort" },
+    { "id": "srovnani", "name": "Srovnání a teorie" }
+  ],
+  "questions": [
+    {
+      "id": "slozite-001", "type": "single", "topic": "rekurze",
+      "explanation": "Bázový případ ukončuje rekurzi a brání nekonečnému volání.",
+      "question": "Co musí obsahovat každá správná rekurzivní metoda?",
+      "options": [
+        { "text": "Cyklus for", "correct": false },
+        { "text": "Bázový případ (ukončovací podmínku)", "correct": true },
+        { "text": "Proměnnou typu double", "correct": false },
+        { "text": "Externí soubor", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-002", "type": "truefalse", "topic": "rekurze",
+      "explanation": "Pokud není rekurze ukončena podmínkou, volá se do vyčerpání paměti zásobníku.",
+      "statement": "Nekonečná rekurze způsobí chybu StackOverflowError.",
+      "answer": true
+    },
+    {
+      "id": "slozite-003", "type": "single", "topic": "quick-sort",
+      "explanation": "Quick Sort používá k rozdělení pole tzv. pivota.",
+      "question": "Jaký prvek volí Quick Sort k rozdělení pole?",
+      "options": [
+        { "text": "Pivot", "correct": true },
+        { "text": "Medián", "correct": false },
+        { "text": "Náhodné číslo", "correct": false },
+        { "text": "Nejmenší prvek", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-004", "type": "multiple", "topic": "merge-sort",
+      "explanation": "Merge sort je založen na postupném dělení a následném slévání.",
+      "question": "Jaké fáze má Merge sort? (vyberte 2)",
+      "options": [
+        { "text": "Dělení (split)", "correct": true },
+        { "text": "Slévání (merge)", "correct": true },
+        { "text": "Hledání pivota", "correct": false },
+        { "text": "Vkládání", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-005", "type": "single", "topic": "quick-sort",
+      "explanation": "Průměrná časová složitost Quick Sortu je n log n.",
+      "question": "Jaká je průměrná časová složitost Quick Sortu?",
+      "options": [
+        { "text": "n log n", "correct": true },
+        { "text": "n^2", "correct": false },
+        { "text": "n", "correct": false },
+        { "text": "1", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-006", "type": "single", "topic": "merge-sort",
+      "explanation": "Merge sort potřebuje pro operaci slévání pomocné pole, proto O(n).",
+      "question": "Jaká je prostorová složitost Merge sortu?",
+      "options": [
+        { "text": "O(n)", "correct": true },
+        { "text": "O(1)", "correct": false },
+        { "text": "O(log n)", "correct": false },
+        { "text": "O(n^2)", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-007", "type": "truefalse", "topic": "quick-sort",
+      "explanation": "V nejhorším případě (např. pivot je vždy nejmenší prvek) je Quick Sort O(n^2).",
+      "statement": "Quick Sort má vždy složitost O(n log n).",
+      "answer": false
+    },
+    {
+      "id": "slozite-008", "type": "single", "topic": "rekurze",
+      "explanation": "Metoda volající samu sebe je definice rekurze.",
+      "question": "Který pojem označuje metodu volající samu sebe?",
+      "options": [
+        { "text": "Iterace", "correct": false },
+        { "text": "Rekurze", "correct": true },
+        { "text": "Polymorfismus", "correct": false },
+        { "text": "Serializace", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-009", "type": "multiple", "topic": "quick-sort",
+      "explanation": "Při partitioningu se prvky menší než pivot přesouvají doleva, větší doprava.",
+      "question": "Co se děje při partitioningu v Quick Sortu? (vyberte 2)",
+      "options": [
+        { "text": "Menší prvky jdou doleva", "correct": true },
+        { "text": "Větší prvky jdou doprava", "correct": true },
+        { "text": "Pole se náhodně zamíchá", "correct": false },
+        { "text": "Pivot se smaže", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-010", "type": "numeric", "topic": "quick-sort",
+      "explanation": "V poli [3, -1, 0, 7, -2, 8, 1, 5] je při pivotu 5 na začátku (levá část) 5 prvků (3, -1, 0, -2, 1).",
+      "question": "Kolik prvků skončí v levé části, pokud je pivot 5?",
+      "answer": 5,
+      "tolerance": 0
+    },
+    {
+      "id": "slozite-011", "type": "truefalse", "topic": "merge-sort",
+      "explanation": "Merge sort je stabilní algoritmus, zachovává pořadí stejných prvků.",
+      "statement": "Merge sort je stabilní řadící algoritmus.",
+      "answer": true
+    },
+    {
+      "id": "slozite-012", "type": "single", "topic": "rekurze",
+      "explanation": "Zásobník (Stack) se používá k ukládání informací o voláních metod při rekurzi.",
+      "question": "Jaká datová struktura se využívá při volání rekurzivních metod?",
+      "options": [
+        { "text": "Zásobník (Stack)", "correct": true },
+        { "text": "Fronta (Queue)", "correct": false },
+        { "text": "Strom", "correct": false },
+        { "text": "Pole", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-013", "type": "multiple", "topic": "srovnani",
+      "explanation": "Quick Sort je in-place, Merge Sort vyžaduje extra paměť.",
+      "question": "V čem je Quick Sort lepší než Merge Sort? (vyberte 2)",
+      "options": [
+        { "text": "Nevyžaduje extra paměť (je in-place)", "correct": true },
+        { "text": "Je často rychlejší v praxi", "correct": true },
+        { "text": "Je vždy stabilní", "correct": false },
+        { "text": "Má vždy lepší časovou složitost", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-014", "type": "truefalse", "topic": "quick-sort",
+      "explanation": "Quick sort není stabilní, protože při rozdělování může měnit relativní pořadí stejných prvků.",
+      "statement": "Quick sort je stabilní řadící algoritmus.",
+      "answer": false
+    },
+    {
+      "id": "slozite-015", "type": "numeric", "topic": "rekurze",
+      "explanation": "V příkladu quickSort(arr, 0, arr.length - 1) má 3 parametry.",
+      "question": "Kolik parametrů má standardní hlavička metody Quick Sort (pole, start, konec)?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "slozite-016", "type": "single", "topic": "merge-sort",
+      "explanation": "Merge sort je založen na principu 'rozděl a panuj'.",
+      "question": "Které filozofie využívá Merge sort?",
+      "options": [
+        { "text": "Rozděl a panuj", "correct": true },
+        { "text": "Bublinkové řazení", "correct": false },
+        { "text": "Iterativní prohledávání", "correct": false },
+        { "text": "Náhodné řazení", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-017", "type": "truefalse", "topic": "rekurze",
+      "explanation": "Rekurzivní metoda musí volat samu sebe, jinak to není rekurze.",
+      "statement": "Rekurzivní metoda musí volat jinou metodu, aby byla rekurzivní.",
+      "answer": false
+    },
+    {
+      "id": "slozite-018", "type": "single", "topic": "quick-sort",
+      "explanation": "Při dělení pole (partition) se pivot po správném umístění již nepřesouvá.",
+      "question": "Co je výsledkem jedné operace rozdělení (partition) v Quick Sortu?",
+      "options": [
+        { "text": "Pivot je na své konečné pozici", "correct": true },
+        { "text": "Pole je zcela seřazené", "correct": false },
+        { "text": "Smaže se levá část", "correct": false },
+        { "text": "Vznikne nový pivot", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-019", "type": "multiple", "topic": "srovnani",
+      "explanation": "Oba algoritmy mají stejnou průměrnou časovou složitost.",
+      "question": "Co mají Quick a Merge Sort společné? (vyberte 2)",
+      "options": [
+        { "text": "Průměrná časová složitost O(n log n)", "correct": true },
+        { "text": "Používají rekurzi", "correct": true },
+        { "text": "Potřebují vždy O(1) paměti", "correct": false },
+        { "text": "Jsou vždy stabilní", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-020", "type": "truefalse", "topic": "quick-sort",
+      "explanation": "Quick sort je v průměrném případě velmi efektivní.",
+      "statement": "Quick sort je téměř vždy pomalejší než Bubble sort.",
+      "answer": false
+    },
+    {
+      "id": "slozite-021", "type": "single", "topic": "rekurze",
+      "explanation": "Rekurzivní volání využívá paměť zásobníku (stack) pro každé vnořené volání.",
+      "question": "Proč je rekurze paměťově náročnější?",
+      "options": [
+        { "text": "Ukládá se stav každého volání na zásobník", "correct": true },
+        { "text": "Vytváří se nová instance třídy", "correct": false },
+        { "text": "Přepisuje se disk", "correct": false },
+        { "text": "Není paměťově náročnější", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-022", "type": "numeric", "topic": "merge-sort",
+      "explanation": "Logaritmus 8 při základu 2 je 3.",
+      "question": "Pro n=8, kolik úrovní (depth) má strom dělení u Merge sortu?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "slozite-023", "type": "truefalse", "topic": "merge-sort",
+      "explanation": "Merge sort dělá operace slévání, která vyžaduje pomocné pole.",
+      "statement": "Merge sort nepotřebuje žádnou pomocnou paměť (je in-place).",
+      "answer": false
+    },
+    {
+      "id": "slozite-024", "type": "single", "topic": "quick-sort",
+      "explanation": "Závislost na pivotu je hlavní slabinou Quick Sortu.",
+      "question": "Jaká je největší slabina Quick Sortu?",
+      "options": [
+        { "text": "Závislost výkonu na volbě pivota", "correct": true },
+        { "text": "Nemůže řadit čísla", "correct": false },
+        { "text": "Nefunguje na velkých polích", "correct": false },
+        { "text": "Složitá implementace", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-025", "type": "multiple", "topic": "rekurze",
+      "explanation": "Rekurze se využívá pro práci se stromy, grafy a řadícími algoritmy.",
+      "question": "Kde se rekurze běžně používá? (vyberte 2)",
+      "options": [
+        { "text": "Průchod stromovou strukturou", "correct": true },
+        { "text": "Algoritmy typu 'rozděl a panuj'", "correct": true },
+        { "text": "Jednoduché čtení z konzole", "correct": false },
+        { "text": "Deklarace proměnných", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-026", "type": "single", "topic": "merge-sort",
+      "explanation": "Merge sort má složitost O(n log n) v nejlepším i nejhorším případě.",
+      "question": "Jaká je nejhorší časová složitost Merge sortu?",
+      "options": [
+        { "text": "O(n log n)", "correct": true },
+        { "text": "O(n^2)", "correct": false },
+        { "text": "O(n)", "correct": false },
+        { "text": "O(1)", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-027", "type": "truefalse", "topic": "quick-sort",
+      "explanation": "Quick sort je in-place (není třeba extra pole jako u merge sort).",
+      "statement": "Quick sort je příkladem in-place řadícího algoritmu.",
+      "answer": true
+    },
+    {
+      "id": "slozite-028", "type": "single", "topic": "rekurze",
+      "explanation": "Bázový případ je podmínka, která zastaví volání sebe sama.",
+      "question": "Co se stane, pokud rekurze nemá bázový případ?",
+      "options": [
+        { "text": "StackOverflowError", "correct": true },
+        { "text": "Program běží rychleji", "correct": false },
+        { "text": "Vrátí se null", "correct": false },
+        { "text": "Nic se nestane", "correct": false }
+      ]
+    },
+    {
+      "id": "slozite-029", "type": "truefalse", "topic": "srovnani",
+      "explanation": "Quick sort je v praxi často rychlejší díky menší režii.",
+      "statement": "Merge sort je v praxi téměř vždy rychlejší než Quick sort.",
+      "answer": false
+    },
+    {
+      "id": "slozite-030", "type": "numeric", "topic": "rekurze",
+      "explanation": "Rekurzivní metoda potřebuje bázový případ a rekurzivní krok.",
+      "question": "Kolik klíčových částí má rekurzivní algoritmus?",
+      "answer": 2,
+      "tolerance": 0
+    }
+  ]
+}

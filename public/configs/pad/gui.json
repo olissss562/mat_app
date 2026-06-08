@@ -1,0 +1,277 @@
+{
+  "subject": "gui",
+  "name": "GUI a událostmi řízené programování",
+  "topics": [
+    { "id": "zaklady-gui", "name": "Základy GUI" },
+    { "id": "layouty", "name": "Layouty a rozmístění" },
+    { "id": "udalosti", "name": "Událostmi řízené programování" },
+    { "id": "java-fx-kontext", "name": "JavaFX a komponenty" }
+  ],
+  "questions": [
+    {
+      "id": "gui-001", "type": "single", "topic": "zaklady-gui",
+      "explanation": "GUI (Graphical User Interface) umožňuje uživateli ovládat program pomocí grafických prvků místo textových příkazů.",
+      "question": "Co znamená zkratka GUI?",
+      "options": [
+        { "text": "Graphical User Interface", "correct": true },
+        { "text": "General User Integration", "correct": false },
+        { "text": "Global User Interaction", "correct": false },
+        { "text": "Graphical Unified Input", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-002", "type": "truefalse", "topic": "udalosti",
+      "explanation": "U událostmi řízeného programování program reaguje na akce uživatele (kliknutí, psaní).",
+      "statement": "U událostmi řízeného programování běží kód sekvenčně od začátku do konce bez ohledu na uživatele.",
+      "answer": false
+    },
+    {
+      "id": "gui-003", "type": "single", "topic": "layouty",
+      "explanation": "VBox v JavaFX řadí komponenty vertikálně pod sebe.",
+      "question": "Jaký layout řadí komponenty vertikálně (pod sebe)?",
+      "options": [
+        { "text": "HBox", "correct": false },
+        { "text": "VBox", "correct": true },
+        { "text": "BorderPane", "correct": false },
+        { "text": "GridPane", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-004", "type": "multiple", "topic": "zaklady-gui",
+      "explanation": "TextField slouží pro vstup textu, Label pro zobrazení statického textu.",
+      "question": "Které prvky se standardně používají v GUI? (vyberte 2)",
+      "options": [
+        { "text": "TextField", "correct": true },
+        { "text": "Label", "correct": true },
+        { "text": "MainMethod", "correct": false },
+        { "text": "DatabaseConnection", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-005", "type": "numeric", "topic": "udalosti",
+      "explanation": "Číslo představuje počet opakování, tedy počet iterací v cyklu.",
+      "question": "Pokud v příkladu uživatel zadá číslo 3, kolikrát bude výsledný text zřetězen?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "gui-006", "type": "single", "topic": "udalosti",
+      "explanation": "Event handler je metoda, která se spustí při určité události (např. kliknutí na tlačítko).",
+      "question": "Jak se nazývá kód, který se provede při kliknutí na tlačítko?",
+      "options": [
+        { "text": "Event Handler", "correct": true },
+        { "text": "Main Loop", "correct": false },
+        { "text": "Compiler", "correct": false },
+        { "text": "Constructor", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-007", "type": "truefalse", "topic": "java-fx-kontext",
+      "explanation": "FXML je deklarativní jazyk založený na XML používaný k popisu vzhledu GUI v JavaFX.",
+      "statement": "Soubor .fxml slouží k definování logiky programu v Javě.",
+      "answer": false
+    },
+    {
+      "id": "gui-008", "type": "single", "topic": "layouty",
+      "explanation": "BorderPane rozděluje prostor na 5 oblastí: top, bottom, left, right, center.",
+      "question": "Který layout umožňuje umístit prvky na strany (top, bottom, left, right, center)?",
+      "options": [
+        { "text": "VBox", "correct": false },
+        { "text": "HBox", "correct": false },
+        { "text": "BorderPane", "correct": true },
+        { "text": "GridPane", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-009", "type": "multiple", "topic": "udalosti",
+      "explanation": "Běžné události v GUI jsou kliknutí myší nebo stisk klávesy.",
+      "question": "Které akce jsou příklady událostí v GUI? (vyberte 2)",
+      "options": [
+        { "text": "Kliknutí myší", "correct": true },
+        { "text": "Stisk klávesy", "correct": true },
+        { "text": "Spuštění kompilace", "correct": false },
+        { "text": "Alokace paměti", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-010", "type": "numeric", "topic": "zaklady-gui",
+      "explanation": "V příkladu máme 3 základní vizuální prvky: TextField(text), TextField(číslo), Button.",
+      "question": "Kolik TextFieldů jsme použili v příkladu formuláře?",
+      "answer": 2,
+      "tolerance": 0
+    },
+    {
+      "id": "gui-011", "type": "truefalse", "topic": "java-fx-kontext",
+      "explanation": "FX:ID je identifikátor, díky kterému můžeme v controlleru přistupovat k prvkům z FXML.",
+      "statement": "Atribut fx:id slouží k propojení FXML elementu s kódem v controlleru.",
+      "answer": true
+    },
+    {
+      "id": "gui-012", "type": "single", "topic": "udalosti",
+      "explanation": "Metoda parseInt může vyvolat NumberFormatException, pokud vstup není číslo.",
+      "question": "Co se stane, když uživatel do pole pro číslo napíše text 'abc'?",
+      "options": [
+        { "text": "Program se nic nestane", "correct": false },
+        { "text": "Vyvolá se NumberFormatException", "correct": true },
+        { "text": "Program automaticky opraví na 0", "correct": false },
+        { "text": "Program se okamžitě ukončí", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-013", "type": "multiple", "topic": "zaklady-gui",
+      "explanation": "Label zobrazuje text, Button provádí akci.",
+      "question": "Které z prvků jsou 'interaktivní' (lze je ovládat)? (vyberte 2)",
+      "options": [
+        { "text": "Button", "correct": true },
+        { "text": "TextField", "correct": true },
+        { "text": "Label", "correct": false },
+        { "text": "LayoutPane", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-014", "type": "truefalse", "topic": "zaklady-gui",
+      "explanation": "Gui aplikace běží v nekonečné smyčce, která čeká na události.",
+      "statement": "GUI aplikace po spuštění ihned skončí, pokud není volána nějaká metoda.",
+      "answer": false
+    },
+    {
+      "id": "gui-015", "type": "numeric", "topic": "udalosti",
+      "explanation": "V příkladu spojujeme texty znakem *.",
+      "question": "Kolik hvězdiček bude ve výsledku, pokud uživatel zadá 4x text?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "gui-016", "type": "single", "topic": "java-fx-kontext",
+      "explanation": "Controller je třída, která obsahuje logiku pro FXML soubor.",
+      "question": "Jak se v JavaFX nazývá třída pro logiku formuláře?",
+      "options": [
+        { "text": "LogicClass", "correct": false },
+        { "text": "Controller", "correct": true },
+        { "text": "MainView", "correct": false },
+        { "text": "EventHandler", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-017", "type": "truefalse", "topic": "layouty",
+      "explanation": "GridPane organizuje prvky do řádků a sloupců (tabulka).",
+      "statement": "GridPane organizuje prvky jako tabulku.",
+      "answer": true
+    },
+    {
+      "id": "gui-018", "type": "single", "topic": "udalosti",
+      "explanation": "StringBuilder je efektivní způsob, jak spojovat řetězce v cyklu.",
+      "question": "Která třída je efektivní pro zřetězení mnoha řetězců?",
+      "options": [
+        { "text": "String", "correct": false },
+        { "text": "StringBuilder", "correct": true },
+        { "text": "ArrayList", "correct": false },
+        { "text": "Scanner", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-019", "type": "multiple", "topic": "zaklady-gui",
+      "explanation": "Hlavními součástmi jsou Stage (okno) a Scene (obsah okna).",
+      "question": "Co patří mezi základní objekty JavaFX? (vyberte 2)",
+      "options": [
+        { "text": "Stage", "correct": true },
+        { "text": "Scene", "correct": true },
+        { "text": "HardDisk", "correct": false },
+        { "text": "Network", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-020", "type": "truefalse", "topic": "java-fx-kontext",
+      "explanation": "@FXML anotace říká, že pole je propojeno s FXML.",
+      "statement": "Anotace @FXML není nutná pro propojení s FXML.",
+      "answer": false
+    },
+    {
+      "id": "gui-021", "type": "single", "topic": "zaklady-gui",
+      "explanation": "Event-driven znamená, že kód čeká na uživatele a reaguje na něj.",
+      "question": "Co znamená 'událostmi řízené' (event-driven) programování?",
+      "options": [
+        { "text": "Program reaguje na vstupy uživatele", "correct": true },
+        { "text": "Program běží bez vstupu", "correct": false },
+        { "text": "Program se vždy ukončí po minutě", "correct": false },
+        { "text": "Program neexistuje", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-022", "type": "numeric", "topic": "udalosti",
+      "explanation": "Pokud zadáme text 1x, není potřeba oddělovač.",
+      "question": "Kolik hvězdiček bude ve výsledku, pokud uživatel zadá 1x text?",
+      "answer": 0,
+      "tolerance": 0
+    },
+    {
+      "id": "gui-023", "type": "truefalse", "topic": "layouty",
+      "explanation": "HBox řadí komponenty horizontálně (vedle sebe).",
+      "statement": "HBox řadí komponenty horizontálně.",
+      "answer": true
+    },
+    {
+      "id": "gui-024", "type": "single", "topic": "java-fx-kontext",
+      "explanation": "Při použití Integer.parseInt může nastat chyba, pokud uživatel zadá text místo čísla.",
+      "question": "Co ošetřuje blok try-catch v našem příkladu?",
+      "options": [
+        { "text": "Chybu při zadání čísla", "correct": true },
+        { "text": "Chybu grafiky", "correct": false },
+        { "text": "Chybu připojení k internetu", "correct": false },
+        { "text": "Chybu v paměti", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-025", "type": "multiple", "topic": "zaklady-gui",
+      "explanation": "Komponenty jsou stavební kameny GUI.",
+      "question": "Co je považováno za komponentu GUI? (vyberte 2)",
+      "options": [
+        { "text": "Tlačítko (Button)", "correct": true },
+        { "text": "Vstupní pole (TextField)", "correct": true },
+        { "text": "Datový typ int", "correct": false },
+        { "text": "Logický operátor &&", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-026", "type": "single", "topic": "udalosti",
+      "explanation": "Událost vzniká v momentě, kdy uživatel provede akci.",
+      "question": "Kdo iniciuje událost v GUI?",
+      "options": [
+        { "text": "Operační systém", "correct": false },
+        { "text": "Uživatel", "correct": true },
+        { "text": "Kompilátor", "correct": false },
+        { "text": "Hardware", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-027", "type": "truefalse", "topic": "java-fx-kontext",
+      "explanation": "JavaFX je dnes standardní framework pro GUI v Javě.",
+      "statement": "JavaFX je jedinou možností, jak v Javě vytvořit okno.",
+      "answer": false
+    },
+    {
+      "id": "gui-028", "type": "single", "topic": "layouty",
+      "explanation": "StackPane umísťuje prvky na sebe (do vrstev).",
+      "question": "Který layout umísťuje prvky na sebe (do vrstev)?",
+      "options": [
+        { "text": "StackPane", "correct": true },
+        { "text": "VBox", "correct": false },
+        { "text": "HBox", "correct": false },
+        { "text": "GridPane", "correct": false }
+      ]
+    },
+    {
+      "id": "gui-029", "type": "truefalse", "topic": "udalosti",
+      "explanation": "GUI aplikace využívá události pro interakci.",
+      "statement": "Událostmi řízené programování je v GUI aplikacích nezbytné.",
+      "answer": true
+    },
+    {
+      "id": "gui-030", "type": "numeric", "topic": "zaklady-gui",
+      "explanation": "Zadání definuje text, číslo a výstupní label.",
+      "question": "Kolik vstupních prvků (TextField) máme v příkladu?",
+      "answer": 2,
+      "tolerance": 0
+    }
+  ]
+}

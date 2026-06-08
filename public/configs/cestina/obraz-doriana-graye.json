@@ -1,0 +1,294 @@
+{
+  "subject": "obraz-doriana-graye",
+  "name": "Obraz Doriana Graye",
+  "topics": [
+    { "id": "autor-a-doba", "name": "Autor a historický kontext" },
+    { "id": "postavy", "name": "Charakteristika postav" },
+    { "id": "dej-a-motivy", "name": "Děj a klíčové motivy" },
+    { "id": "literarni-forma", "name": "Literární forma a žánr" }
+  ],
+  "questions": [
+    {
+      "id": "obraz-doriana-graye-001", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Oscar Wilde byl irský dramatik, prozaik a básník, hlavní představitel esteticismu.",
+      "question": "Kdo je autorem románu Obraz Doriana Graye?",
+      "options": [
+        { "text": "Charles Dickens", "correct": false },
+        { "text": "Oscar Wilde", "correct": true },
+        { "text": "Robert Louis Stevenson", "correct": false },
+        { "text": "Bram Stoker", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-002", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Dílo vzniklo na konci 19. století, kdy v literatuře dominoval dekadentní směr a esteticismus.",
+      "question": "V jakém uměleckém směru je dílo psáno?",
+      "options": [
+        { "text": "Romantismus", "correct": false },
+        { "text": "Realismus", "correct": false },
+        { "text": "Dekadence a esteticismus", "correct": true },
+        { "text": "Existencialismus", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-003", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Dílo bylo publikováno v roce 1890, nejprve časopisecky a později jako kniha.",
+      "statement": "Román byl poprvé publikován v 19. století.",
+      "answer": true
+    },
+    {
+      "id": "obraz-doriana-graye-004", "type": "multiple", "topic": "autor-a-doba",
+      "explanation": "Wildeho tvorba se vyznačovala důrazem na krásu, umění pro umění a provokativní společenskou kritikou.",
+      "question": "Které rysy jsou typické pro tvorbu Oscara Wilda? (vyberte 2)",
+      "options": [
+        { "text": "Důraz na estetickou stránku díla", "correct": true },
+        { "text": "Absence humoru", "correct": false },
+        { "text": "Ironie a vtipné aforismy", "correct": true },
+        { "text": "Tvorba pouze pro děti", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-005", "type": "single", "topic": "autor-a-doba",
+      "explanation": "Wildeho jediný román vyvolal skandál kvůli své morální nejednoznačnosti.",
+      "question": "Jaký byl vztah dobové kritiky k románu Obraz Doriana Graye?",
+      "options": [
+        { "text": "Byl okamžitě přijat jako mistrovské dílo", "correct": false },
+        { "text": "Byl ostře kritizován za údajnou nemorálnost", "correct": true },
+        { "text": "Kritika si díla nevšimla", "correct": false },
+        { "text": "Byl zakázán církví, ale ne kritiky", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-006", "type": "truefalse", "topic": "autor-a-doba",
+      "explanation": "Wilde v předmluvě tvrdí, že 'umění je naprosto neužitečné' a nemá být hodnoceno morálně.",
+      "statement": "Oscar Wilde v předmluvě k románu obhajuje morální hodnocení umění.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-007", "type": "single", "topic": "postavy",
+      "explanation": "Dorian Gray je krásný mladý muž, který díky portrétu nestárne.",
+      "question": "Kdo je hlavní postavou románu?",
+      "options": [
+        { "text": "Basil Hallward", "correct": false },
+        { "text": "Lord Henry Wotton", "correct": false },
+        { "text": "Dorian Gray", "correct": true },
+        { "text": "James Vane", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-008", "type": "single", "topic": "postavy",
+      "explanation": "Basil Hallward je malířem, který do portrétu vložil svou duši a cit.",
+      "question": "Jakou profesi vykonává Basil Hallward?",
+      "options": [
+        { "text": "Je spisovatelem", "correct": false },
+        { "text": "Je malířem", "correct": true },
+        { "text": "Je aristokratem", "correct": false },
+        { "text": "Je právníkem", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-009", "type": "single", "topic": "postavy",
+      "explanation": "Lord Henry je cynik, který Doriana ovlivňuje svými hedonistickými názory.",
+      "question": "Kdo zásadně ovlivňuje Dorianův pohled na svět?",
+      "options": [
+        { "text": "Basil Hallward", "correct": false },
+        { "text": "Sibyla Vaneová", "correct": false },
+        { "text": "Lord Henry Wotton", "correct": true },
+        { "text": "James Vane", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-010", "type": "multiple", "topic": "postavy",
+      "explanation": "Sibyla je talentovaná herečka, do které se Dorian zamiluje díky jejímu umění.",
+      "question": "Co platí o postavě Sibyly Vaneové? (vyberte 2)",
+      "options": [
+        { "text": "Je to šlechtična", "correct": false },
+        { "text": "Je to nadaná herečka", "correct": true },
+        { "text": "Páchá sebevraždu", "correct": true },
+        { "text": "Stává se Dorianovou manželkou", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-011", "type": "truefalse", "topic": "postavy",
+      "explanation": "James Vane je Sibylin bratr, který chce Doriana zabít z pomsty za její smrt.",
+      "statement": "James Vane je Dorianův nejlepší přítel.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-012", "type": "single", "topic": "postavy",
+      "explanation": "Dorian Gray se během příběhu mění z nevinného mladíka v cynického člověka.",
+      "question": "Jak se v průběhu děje mění povaha Doriana Graye?",
+      "options": [
+        { "text": "Zůstává stále stejný", "correct": false },
+        { "text": "Stává se laskavějším a moudřejším", "correct": false },
+        { "text": "Morálně upadá", "correct": true },
+        { "text": "Stává se poustevníkem", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-013", "type": "truefalse", "topic": "postavy",
+      "explanation": "Basil je postavou, která Doriana upřímně obdivuje a později se ho snaží zachránit.",
+      "statement": "Basil Hallward je Dorianův úhlavní nepřítel od začátku knihy.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-014", "type": "multiple", "topic": "postavy",
+      "explanation": "Postavy jako Lord Henry ztělesňují morální rozklad a cynismus tehdejší vyšší společnosti.",
+      "question": "Které postavy ztělesňují v románu spíše negativní vliv?",
+      "options": [
+        { "text": "Lord Henry Wotton", "correct": true },
+        { "text": "Dorian Gray", "correct": true },
+        { "text": "Basil Hallward", "correct": false },
+        { "text": "Sibyla Vaneová", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-015", "type": "single", "topic": "postavy",
+      "explanation": "Lord Henry věří, že jedinou hodnotou v životě je krása a mládí.",
+      "question": "Jakou filozofii zastává Lord Henry?",
+      "options": [
+        { "text": "Ascetismus", "correct": false },
+        { "text": "Hedonismus", "correct": true },
+        { "text": "Altruismus", "correct": false },
+        { "text": "Stoicismus", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-016", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Dorian si přeje, aby obraz stárl místo něj, což se stane.",
+      "question": "Co se stane s portrétem Doriana Graye?",
+      "options": [
+        { "text": "Je zničen ohněm", "correct": false },
+        { "text": "Stárne a hyzdí se místo Doriana", "correct": true },
+        { "text": "Dorian ho prodá", "correct": false },
+        { "text": "Dorian ho přemaluje", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-017", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Dorian obraz schová na půdu, aby ho nikdo neviděl.",
+      "statement": "Dorian obraz veřejně vystavuje, aby se chlubil svou věčnou krásou.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-018", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Dorian zavraždí Basila, protože mu obraz ukázal a vyčítal jeho hříchy.",
+      "question": "Proč Dorian zavraždí Basila?",
+      "options": [
+        { "text": "Kvůli penězům", "correct": false },
+        { "text": "Protože ho Basil vydíral", "correct": false },
+        { "text": "Protože mu Basil ukázal pravdu o jeho duši", "correct": true },
+        { "text": "Kvůli žárlivosti na Sibylu", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-019", "type": "multiple", "topic": "dej-a-motivy",
+      "explanation": "Kniha (často nazývaná jako Žlutá kniha) slouží jako katalyzátor Dorianova zvráceného vývoje.",
+      "question": "Co symbolizuje 'Žlutá kniha', kterou Dorianovi daroval Lord Henry?",
+      "options": [
+        { "text": "Inspiraci k hříchu", "correct": true },
+        { "text": "Dorianův nevinný vkus", "correct": false },
+        { "text": "Závislost na požitcích", "correct": true },
+        { "text": "Náboženskou výchovu", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-020", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "V závěru knihy Dorian probodne obraz, čímž zabije sám sebe.",
+      "statement": "Kniha končí Dorianovou šťastnou svatbou.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-021", "type": "single", "topic": "dej-a-motivy",
+      "explanation": "Po Dorianově smrti obraz vypadá opět jako mladý, krásný mladík a Dorian leží mrtev jako stařec.",
+      "question": "Jak vypadá obraz na konci příběhu?",
+      "options": [
+        { "text": "Je roztrhaný", "correct": false },
+        { "text": "Je opět krásný a mladý", "correct": true },
+        { "text": "Je ošklivý a starý", "correct": false },
+        { "text": "Je černý a prázdný", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-022", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Román je rozdělen do 20 kapitol.",
+      "question": "Kolik kapitol má román Obraz Doriana Graye?",
+      "answer": 20,
+      "tolerance": 0
+    },
+    {
+      "id": "obraz-doriana-graye-023", "type": "single", "topic": "literarni-forma",
+      "explanation": "Jde o filozofický román s prvky hororu (gotický román).",
+      "question": "Jaký žánr nejlépe vystihuje toto dílo?",
+      "options": [
+        { "text": "Autobiografie", "correct": false },
+        { "text": "Filozofický a gotický román", "correct": true },
+        { "text": "Cestopis", "correct": false },
+        { "text": "Divadelní hra", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-024", "type": "multiple", "topic": "literarni-forma",
+      "explanation": "Dílo je bohaté na metafory, symboly a estetizovaný popis.",
+      "question": "Které prvky jsou typické pro styl knihy?",
+      "options": [
+        { "text": "Bohatý popisný jazyk", "correct": true },
+        { "text": "Symbolika krásy a mládí", "correct": true },
+        { "text": "Stručné, strohé věty", "correct": false },
+        { "text": "Absence dialogů", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-025", "type": "truefalse", "topic": "literarni-forma",
+      "explanation": "Dílo obsahuje hluboké úvahy o umění, morálce a lidské psychice.",
+      "statement": "Obraz Doriana Graye je pouze povrchní příběh bez hlubších myšlenek.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-026", "type": "single", "topic": "literarni-forma",
+      "explanation": "Vypravěč je v er-formě (autorský vypravěč).",
+      "question": "V jaké osobě je román vyprávěn?",
+      "options": [
+        { "text": "Ich-forma", "correct": false },
+        { "text": "Er-forma", "correct": true },
+        { "text": "Ty-forma", "correct": false },
+        { "text": "Střídá se er a ich-forma", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-027", "type": "truefalse", "topic": "dej-a-motivy",
+      "explanation": "Obraz zrcadlí Dorianovu duši, která se vlivem hříchů mění.",
+      "statement": "Obraz je symbolem Dorianovy svědomitosti a čistoty.",
+      "answer": false
+    },
+    {
+      "id": "obraz-doriana-graye-028", "type": "multiple", "topic": "dej-a-motivy",
+      "explanation": "Klíčovými tématy je střet mezi morálkou a hédonismem, vliv umění na život a cena krásy.",
+      "question": "Jaká jsou hlavní témata románu? (vyberte 2)",
+      "options": [
+        { "text": "Věčné mládí a krása", "correct": true },
+        { "text": "Vliv prostředí a svodů", "correct": true },
+        { "text": "Boj za nezávislost Irska", "correct": false },
+        { "text": "Průmyslová revoluce", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-029", "type": "single", "topic": "literarni-forma",
+      "explanation": "Dílo patří k vrcholům světové literatury konce 19. století.",
+      "question": "Do jakého období řadíme Obraz Doriana Graye?",
+      "options": [
+        { "text": "Klasicismus", "correct": false },
+        { "text": "Fin de siècle (konec století)", "correct": true },
+        { "text": "Osvícenství", "correct": false },
+        { "text": "Humanismus", "correct": false }
+      ]
+    },
+    {
+      "id": "obraz-doriana-graye-030", "type": "numeric", "topic": "literarni-forma",
+      "explanation": "Dorian Gray je postava, která se v románu snaží dosáhnout nesmrtelnosti skrze portrét.",
+      "question": "Kolik postav (Dorian, Basil, Lord Henry) tvoří hlavní trojici ovlivňující děj?",
+      "answer": 3,
+      "tolerance": 0
+    }
+  ]
+}

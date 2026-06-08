@@ -1,0 +1,606 @@
+{
+  "subject": "sluha-dvou-panu",
+  "name": "Sluha dvou pánů",
+  "topics": [
+    {
+      "id": "autor-a-doba",
+      "name": "Autor a historický kontext"
+    },
+    {
+      "id": "postavy",
+      "name": "Charakteristika postav"
+    },
+    {
+      "id": "dej-a-zapletka",
+      "name": "Děj a zápletka"
+    },
+    {
+      "id": "literarni-forma",
+      "name": "Literární forma a žánr"
+    }
+  ],
+  "questions": [
+    {
+      "id": "sluha-dvou-panu-001",
+      "type": "single",
+      "topic": "autor-a-doba",
+      "explanation": "Carlo Goldoni byl významný italský dramatik, který zásadně ovlivnil evropskou komedii 18. století.",
+      "question": "Kdo je autorem divadelní hry Sluha dvou pánů?",
+      "options": [
+        {
+          "text": "William Shakespeare",
+          "correct": false
+        },
+        {
+          "text": "Carlo Goldoni",
+          "correct": true
+        },
+        {
+          "text": "Molière",
+          "correct": false
+        },
+        {
+          "text": "Niccolò Machiavelli",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-002",
+      "type": "truefalse",
+      "topic": "autor-a-doba",
+      "explanation": "Děj se odehrává v 18. století, což je období, ve kterém Goldoni tvořil.",
+      "statement": "Děj hry Sluha dvou pánů se odehrává v období baroka, konkrétně v 17. století.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-003",
+      "type": "single",
+      "topic": "autor-a-doba",
+      "explanation": "Goldoni pocházel z Itálie, konkrétně z Benátek, kde se hra poprvé odehrála.",
+      "question": "Ve kterém městě se odehrává děj hry Sluha dvou pánů?",
+      "options": [
+        {
+          "text": "Řím",
+          "correct": false
+        },
+        {
+          "text": "Benátky",
+          "correct": true
+        },
+        {
+          "text": "Neapol",
+          "correct": false
+        },
+        {
+          "text": "Milán",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-004",
+      "type": "multiple",
+      "topic": "autor-a-doba",
+      "explanation": "Goldoniho reformy spočívaly v ústupu od improvizovaných masek commedie dell'arte směrem k propracovanému scénáři.",
+      "question": "Vyberte tvrzení, která charakterizují Goldoniho dramatickou tvorbu:",
+      "options": [
+        {
+          "text": "Prosazoval reformu italského divadla směrem k pevnému textu",
+          "correct": true
+        },
+        {
+          "text": "Psát pouze tragédie",
+          "correct": false
+        },
+        {
+          "text": "Omezoval význam improvizace ve prospěch charakterů postav",
+          "correct": true
+        },
+        {
+          "text": "Ignoroval lidové postavy",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-005",
+      "type": "single",
+      "topic": "autor-a-doba",
+      "explanation": "Goldoni je známý jako mistr komedie, kterých napsal přes sto.",
+      "question": "Jaký literární směr ovlivnil Goldoniho tvorbu?",
+      "options": [
+        {
+          "text": "Romantismus",
+          "correct": false
+        },
+        {
+          "text": "Osvícenství",
+          "correct": true
+        },
+        {
+          "text": "Symbolismus",
+          "correct": false
+        },
+        {
+          "text": "Existencialismus",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-006",
+      "type": "truefalse",
+      "topic": "autor-a-doba",
+      "explanation": "Goldoni se na konci života přestěhoval do Francie.",
+      "statement": "Carlo Goldoni strávil závěr svého života ve Španělsku.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-007",
+      "type": "single",
+      "topic": "postavy",
+      "explanation": "Truffaldino je ústřední postavou, jehož snaha o zisk a jídlo pohání celý děj.",
+      "question": "Která postava je hlavním protagonistou a sluhou dvou pánů?",
+      "options": [
+        {
+          "text": "Florindo",
+          "correct": false
+        },
+        {
+          "text": "Truffaldino",
+          "correct": true
+        },
+        {
+          "text": "Pantalone",
+          "correct": false
+        },
+        {
+          "text": "Silvio",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-008",
+      "type": "multiple",
+      "topic": "postavy",
+      "explanation": "Beatrice Rasponi vystupuje převlečená za svého bratra Frederiga, aby našla svého milence Florinda.",
+      "question": "Které z následujících tvrzení o postavě Beatrice Rasponi jsou pravdivá?",
+      "options": [
+        {
+          "text": "Vystupuje v převleku za svého bratra",
+          "correct": true
+        },
+        {
+          "text": "Je matkou Klárky",
+          "correct": false
+        },
+        {
+          "text": "Hledá svého milence Florinda",
+          "correct": true
+        },
+        {
+          "text": "Je služebnou v hostinci",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-009",
+      "type": "single",
+      "topic": "postavy",
+      "explanation": "Smeraldina je Klárčina služebná, která se nakonec zasnoubí s Truffaldinem.",
+      "question": "Jaké je povolání postavy Smeraldiny?",
+      "options": [
+        {
+          "text": "Hostinská",
+          "correct": false
+        },
+        {
+          "text": "Služebná",
+          "correct": true
+        },
+        {
+          "text": "Šlechtična",
+          "correct": false
+        },
+        {
+          "text": "Lékařka",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-010",
+      "type": "truefalse",
+      "topic": "postavy",
+      "explanation": "Pantalone Agnivorla je v příběhu vykreslen jako spravedlivý obchodník.",
+      "statement": "Pantalone Agnivorla je v příběhu vykreslen jako intrikán a zrádce.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-011",
+      "type": "single",
+      "topic": "postavy",
+      "explanation": "Florindo Aretusi je milencem Beatrice a je tím, koho ona hledá.",
+      "question": "Kým je Florindo Aretusi pro Beatrice Rasponi?",
+      "options": [
+        {
+          "text": "Jejím bratrem",
+          "correct": false
+        },
+        {
+          "text": "Jejím milencem",
+          "correct": true
+        },
+        {
+          "text": "Jejím otcem",
+          "correct": false
+        },
+        {
+          "text": "Jejím nepřítelem",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-012",
+      "type": "single",
+      "topic": "postavy",
+      "explanation": "Brighella je hostinský.",
+      "question": "Kdo v příběhu zastává roli hostinského?",
+      "options": [
+        {
+          "text": "Pantalone",
+          "correct": false
+        },
+        {
+          "text": "Silvio",
+          "correct": false
+        },
+        {
+          "text": "Brighella",
+          "correct": true
+        },
+        {
+          "text": "Truffaldino",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-013",
+      "type": "multiple",
+      "topic": "postavy",
+      "explanation": "Silvio je syn Palmira a zamiloval se do Klárky.",
+      "question": "Co platí o postavě Silvia?",
+      "options": [
+        {
+          "text": "Je synem Palmira",
+          "correct": true
+        },
+        {
+          "text": "Je to klidný a rozvážný člověk",
+          "correct": false
+        },
+        {
+          "text": "Je zamilovaný do Klárky",
+          "correct": true
+        },
+        {
+          "text": "Je to Truffaldinův bratr",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-014",
+      "type": "truefalse",
+      "topic": "postavy",
+      "explanation": "Truffaldino je vykreslen jako vypočítavý a prolhaný, což je zdrojem komiky.",
+      "statement": "Truffaldino je vzorem poctivosti a nikdy nelže.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-015",
+      "type": "single",
+      "topic": "dej-a-zapletka",
+      "explanation": "Základní zápletka spočívá v tom, že Truffaldino slouží dvěma pánům najednou, aby získal dvojí žold a jídlo.",
+      "question": "Proč se Truffaldino rozhodl sloužit dvěma pánům současně?",
+      "options": [
+        {
+          "text": "Chtěl oběma pomoci s jejich láskou",
+          "correct": false
+        },
+        {
+          "text": "Chtěl získat dvojí výplatu a jídlo",
+          "correct": true
+        },
+        {
+          "text": "Byl k tomu nucen policií",
+          "correct": false
+        },
+        {
+          "text": "Omylem se tak rozhodl",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-016",
+      "type": "single",
+      "topic": "dej-a-zapletka",
+      "explanation": "Klíčovým nedorozuměním je dopis, který Truffaldino neví, komu doručit, protože neumí číst.",
+      "question": "Co je příčinou většiny komických nedorozumění v ději?",
+      "options": [
+        {
+          "text": "Ztráta peněz",
+          "correct": false
+        },
+        {
+          "text": "Truffaldinova neschopnost číst a rozlišit dopisy",
+          "correct": true
+        },
+        {
+          "text": "Sňatek Pantaloneho",
+          "correct": false
+        },
+        {
+          "text": "Válka v Benátkách",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-017",
+      "type": "truefalse",
+      "topic": "dej-a-zapletka",
+      "explanation": "Příběh končí komicky a smířlivě.",
+      "statement": "Hra končí tragicky, kdy se všichni milenci rozejdou.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-018",
+      "type": "numeric",
+      "topic": "literarni-forma",
+      "explanation": "Hra je rozdělena na tři akty.",
+      "question": "Kolik dějství (aktů) má hra Sluha dvou pánů?",
+      "answer": 3,
+      "tolerance": 0
+    },
+    {
+      "id": "sluha-dvou-panu-019",
+      "type": "single",
+      "topic": "dej-a-zapletka",
+      "explanation": "Ke konci hry Truffaldino přizná, že sloužil dvěma pánům, aby si mohl vzít Smeraldinu.",
+      "question": "Jak se vyřeší situace se sluhováním?",
+      "options": [
+        {
+          "text": "Truffaldino uteče z města",
+          "correct": false
+        },
+        {
+          "text": "Truffaldino se přizná, aby si mohl vzít Smeraldinu",
+          "correct": true
+        },
+        {
+          "text": "Pánové ho vyhodí",
+          "correct": false
+        },
+        {
+          "text": "Pantalone ho nechá uvěznit",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-020",
+      "type": "multiple",
+      "topic": "literarni-forma",
+      "explanation": "Hra využívá prvky commedie dell'arte, typické postavy a situační komiku.",
+      "question": "Které prvky jsou typické pro commedii dell'arte obsaženou v díle?",
+      "options": [
+        {
+          "text": "Typizované postavy",
+          "correct": true
+        },
+        {
+          "text": "Absence jakéhokoliv humoru",
+          "correct": false
+        },
+        {
+          "text": "Situační komika",
+          "correct": true
+        },
+        {
+          "text": "Psaní výhradně ve verších",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-021",
+      "type": "single",
+      "topic": "literarni-forma",
+      "explanation": "Dílo je napsáno formou dramatu.",
+      "question": "Jaký literární druh představuje Sluha dvou pánů?",
+      "options": [
+        {
+          "text": "Lyrika",
+          "correct": false
+        },
+        {
+          "text": "Epika",
+          "correct": false
+        },
+        {
+          "text": "Drama",
+          "correct": true
+        },
+        {
+          "text": "Nauková literatura",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-022",
+      "type": "truefalse",
+      "topic": "literarni-forma",
+      "explanation": "Hra je psána prózou.",
+      "statement": "Celá hra je napsána ve verších.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-023",
+      "type": "single",
+      "topic": "literarni-forma",
+      "explanation": "Žánrem je komedie, která využívá satiru a situační humor.",
+      "question": "Který literární žánr nejlépe vystihuje hru?",
+      "options": [
+        {
+          "text": "Tragédie",
+          "correct": false
+        },
+        {
+          "text": "Komedie",
+          "correct": true
+        },
+        {
+          "text": "Fraška",
+          "correct": false
+        },
+        {
+          "text": "Epos",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-024",
+      "type": "numeric",
+      "topic": "literarni-forma",
+      "explanation": "Děj se odehrává v 18. století.",
+      "question": "V jakém století se odehrává děj hry?",
+      "answer": 18,
+      "tolerance": 0
+    },
+    {
+      "id": "sluha-dvou-panu-025",
+      "type": "truefalse",
+      "topic": "dej-a-zapletka",
+      "explanation": "Beatrice se vydává za svého bratra Frederiga, který byl zabit v souboji.",
+      "statement": "Beatrice Rasponi se vydává za svého mrtvého bratra.",
+      "answer": true
+    },
+    {
+      "id": "sluha-dvou-panu-026",
+      "type": "single",
+      "topic": "dej-a-zapletka",
+      "explanation": "Florindo si myslí, že Beatrice zemřela, protože našel její podobiznu.",
+      "question": "Proč je Florindo zoufalý?",
+      "options": [
+        {
+          "text": "Protože ztratil peníze",
+          "correct": false
+        },
+        {
+          "text": "Protože si myslí, že Beatrice je mrtvá",
+          "correct": true
+        },
+        {
+          "text": "Protože ho odmítl Pantalone",
+          "correct": false
+        },
+        {
+          "text": "Protože prohrál v kartách",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-027",
+      "type": "multiple",
+      "topic": "postavy",
+      "explanation": "Pantalone je otec Klárky, Silvio je syn Palmira. Beatrice a Florindo jsou milenci.",
+      "question": "Které dvojice postav mají k sobě v ději nejblíže?",
+      "options": [
+        {
+          "text": "Klárka a Silvio",
+          "correct": true
+        },
+        {
+          "text": "Beatrice a Florindo",
+          "correct": true
+        },
+        {
+          "text": "Truffaldino a Pantalone",
+          "correct": false
+        },
+        {
+          "text": "Brighella a Silvio",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-028",
+      "type": "single",
+      "topic": "literarni-forma",
+      "explanation": "Goldoniho hry se vyznačují realistickým pojetím.",
+      "question": "Jaký postoj ke skutečnosti Goldoni v díle zaujímá?",
+      "options": [
+        {
+          "text": "Snový",
+          "correct": false
+        },
+        {
+          "text": "Satirický a realistický",
+          "correct": true
+        },
+        {
+          "text": "Výhradně abstraktní",
+          "correct": false
+        },
+        {
+          "text": "Tragický",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "sluha-dvou-panu-029",
+      "type": "truefalse",
+      "topic": "literarni-forma",
+      "explanation": "Jazyk díla je kombinací spisovné a hovorové řeči.",
+      "statement": "Jazyk díla je pouze zastaralý a nesrozumitelný.",
+      "answer": false
+    },
+    {
+      "id": "sluha-dvou-panu-030",
+      "type": "single",
+      "topic": "dej-a-zapletka",
+      "explanation": "Dějová stavba je chronologická a graduje až k odhalení totožnosti všech postav.",
+      "question": "Jaký je kompoziční postup v díle?",
+      "options": [
+        {
+          "text": "Retrospektivní",
+          "correct": false
+        },
+        {
+          "text": "Chronologický",
+          "correct": true
+        },
+        {
+          "text": "Rámcový",
+          "correct": false
+        },
+        {
+          "text": "Nelineární",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

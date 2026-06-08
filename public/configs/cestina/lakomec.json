@@ -1,0 +1,283 @@
+{
+"subject": "lakomec",
+"name": "Lakomec",
+"topics": [
+{ "id": "autor-a-doba", "name": "Autor a historický kontext" },
+{ "id": "postavy", "name": "Charakteristika postav" },
+{ "id": "dej-a-zapletka", "name": "Děj a zápletka" },
+{ "id": "literarni-forma", "name": "Literární forma a žánr" }
+],
+"questions": [
+{
+"id": "lakomec-001", "type": "single", "topic": "autor-a-doba",
+"explanation": "Molière, vlastním jménem Jean-Baptiste Poquelin, byl nejvýznamnější francouzský dramatik 17. století.",
+"question": "Kdo je autorem komedie Lakomec?",
+"options": [
+{ "text": "Pierre Corneille", "correct": false },
+{ "text": "Molière", "correct": true },
+{ "text": "Jean Racine", "correct": false },
+{ "text": "Voltaire", "correct": false }
+]
+},
+{
+"id": "lakomec-002", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Molière tvořil v období klasicismu, pro který je typické dodržování pravidel (např. jednota času a děje).",
+"statement": "Molière je představitelem francouzského klasicismu.",
+"answer": true
+},
+{
+"id": "lakomec-003", "type": "single", "topic": "autor-a-doba",
+"explanation": "Dílo bylo poprvé uvedeno v Paříži v roce 1668.",
+"question": "V jakém století byla hra Lakomec poprvé uvedena?",
+"options": [
+{ "text": "16. století", "correct": false },
+{ "text": "17. století", "correct": true },
+{ "text": "18. století", "correct": false },
+{ "text": "19. století", "correct": false }
+]
+},
+{
+"id": "lakomec-004", "type": "multiple", "topic": "autor-a-doba",
+"explanation": "Klasicismus se v dramatu řídil pravidlem tří jednot: místa, času a děje.",
+"question": "Které z následujících znaků jsou typické pro klasicistní drama? (vyberte 2)",
+"options": [
+{ "text": "Dodržování pravidel tří jednot", "correct": true },
+{ "text": "Volná struktura bez pravidel", "correct": false },
+{ "text": "Jasné oddělení komedie a tragédie", "correct": true },
+{ "text": "Kombinace všech literárních žánrů v jednom díle", "correct": false }
+]
+},
+{
+"id": "lakomec-005", "type": "single", "topic": "autor-a-doba",
+"explanation": "Molière jako dramatik a herec úzce spolupracoval s dvorem Ludvíka XIV.",
+"question": "Který francouzský panovník byl patronem Molièrova divadla?",
+"options": [
+{ "text": "Ludvík XIII.", "correct": false },
+{ "text": "Ludvík XIV.", "correct": true },
+{ "text": "Ludvík XVI.", "correct": false },
+{ "text": "Napoleon Bonaparte", "correct": false }
+]
+},
+{
+"id": "lakomec-006", "type": "truefalse", "topic": "autor-a-doba",
+"explanation": "Molière často ve svých hrách kritizoval tehdejší společnost, církev a šlechtu.",
+"statement": "Molièrovy hry byly vždy přijímány s nadšením všemi vrstvami společnosti bez kritiky.",
+"answer": false
+},
+{
+"id": "lakomec-007", "type": "single", "topic": "postavy",
+"explanation": "Harpagon je ústřední postavou, jejíž lakomství ovládá veškeré její jednání.",
+"question": "Jak se jmenuje hlavní postava komedie, která je chorobně lakomá?",
+"options": [
+{ "text": "Kleant", "correct": false },
+{ "text": "Valér", "correct": false },
+{ "text": "Harpagon", "correct": true },
+{ "text": "La Fleche", "correct": false }
+]
+},
+{
+"id": "lakomec-008", "type": "multiple", "topic": "postavy",
+"explanation": "Kleant a Eliška jsou Harpagonovy děti, které trpí jeho přísností a lakotou.",
+"question": "Které postavy jsou Harpagonovy děti? (vyberte 2)",
+"options": [
+{ "text": "Kleant", "correct": true },
+{ "text": "Eliška", "correct": true },
+{ "text": "Marianna", "correct": false },
+{ "text": "Frosina", "correct": false }
+]
+},
+{
+"id": "lakomec-009", "type": "single", "topic": "postavy",
+"explanation": "Marianna je dívka, kterou si chce Harpagon vzít za manželku, ale miluje ho Kleant.",
+"question": "Kdo je Marianna v příběhu?",
+"options": [
+{ "text": "Harpagonova dcera", "correct": false },
+{ "text": "Kleantova milá a Harpagonova vyvolená", "correct": true },
+{ "text": "Harpagonova sestra", "correct": false },
+{ "text": "Služebná v domě", "correct": false }
+]
+},
+{
+"id": "lakomec-010", "type": "truefalse", "topic": "postavy",
+"explanation": "Valér je správce Harpagonova domu, který tajně miluje Elišku.",
+"statement": "Valér je Harpagonův nejlepší přítel, který s ním sdílí jeho lakomství.",
+"answer": false
+},
+{
+"id": "lakomec-011", "type": "single", "topic": "postavy",
+"explanation": "Frosina je dohazovačka, která Harpagonovi pomáhá domluvit sňatek s Mariannou.",
+"question": "Jakou roli zastává Frosina?",
+"options": [
+{ "text": "Kuchařka", "correct": false },
+{ "text": "Dohazovačka", "correct": true },
+{ "text": "Kleantova milenka", "correct": false },
+{ "text": "Eliščina vychovatelka", "correct": false }
+]
+},
+{
+"id": "lakomec-012", "type": "single", "topic": "postavy",
+"explanation": "La Fleche je Kleantův sluha, který Harpagonovi ukradne skříňku s penězi.",
+"question": "Kdo ukradne Harpagonovi jeho skříňku s penězi?",
+"options": [
+{ "text": "Kleant", "correct": false },
+{ "text": "Valér", "correct": false },
+{ "text": "La Fleche", "correct": true },
+{ "text": "Frosina", "correct": false }
+]
+},
+{
+"id": "lakomec-013", "type": "truefalse", "topic": "postavy",
+"explanation": "Harpagon je tak lakomý, že své děti i služebnictvo drží v extrémní bídě.",
+"statement": "Harpagon je velkorysý a rád hostí návštěvy ve svém domě.",
+"answer": false
+},
+{
+"id": "lakomec-014", "type": "multiple", "topic": "postavy",
+"explanation": "Marianna a Kleant se milují, což je v přímém rozporu s Harpagonovými plány.",
+"question": "Které postavy tvoří milenecký pár, jemuž Harpagon brání? (vyberte 2)",
+"options": [
+{ "text": "Kleant", "correct": true },
+{ "text": "Marianna", "correct": true },
+{ "text": "Valér", "correct": false },
+{ "text": "Harpagon", "correct": false }
+]
+},
+{
+"id": "lakomec-015", "type": "numeric", "topic": "dej-a-zapletka",
+"explanation": "Skříňka s penězi je pro Harpagona středobodem vesmíru; obsahuje 10 000 zlatých.",
+"question": "Kolik tisíc zlatých (dukátů) je ukryto ve skříňce, kterou Harpagon tak úzkostlivě střeží?",
+"answer": 10,
+"tolerance": 0
+},
+{
+"id": "lakomec-016", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Harpagon chce pro Elišku bohatého muže, bez ohledu na její city.",
+"question": "Koho chce Harpagon vybrat pro Elišku za manžela?",
+"options": [
+{ "text": "Valéra", "correct": false },
+{ "text": "Anselma", "correct": true },
+{ "text": "Kleanta", "correct": false },
+{ "text": "La Fleche", "correct": false }
+]
+},
+{
+"id": "lakomec-017", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Hra končí tím, že se vše vyřeší, Marianna a Kleant se dají dohromady a Anselm se ukáže jako otec Valéra a Marianny.",
+"statement": "Hra končí tragicky, kdy Harpagon přijde o všechny peníze a spáchá sebevraždu.",
+"answer": false
+},
+{
+"id": "lakomec-018", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Když Harpagon zjistí, že přišel o peníze, šílí a podezřívá všechny kolem.",
+"question": "Jaká je Harpagonova první reakce na krádež peněz?",
+"options": [
+{ "text": "Smíří se s tím", "correct": false },
+{ "text": "Šílí a podezřívá všechny kolem", "correct": true },
+{ "text": "Okamžitě je najde", "correct": false },
+{ "text": "Odpustí zloději", "correct": false }
+]
+},
+{
+"id": "lakomec-019", "type": "multiple", "topic": "dej-a-zapletka",
+"explanation": "Konflikt mezi otcem a dětmi je založen na rozdílných prioritách: peníze vs. láska.",
+"question": "Jaké konflikty dominují ději? (vyberte 2)",
+"options": [
+{ "text": "Konflikt mezi lakotou a rodinnými city", "correct": true },
+{ "text": "Konflikt mezi otcem a dětmi ohledně sňatků", "correct": true },
+{ "text": "Politický spor o trůn", "correct": false },
+{ "text": "Válka mezi Francií a Anglií", "correct": false }
+]
+},
+{
+"id": "lakomec-020", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Anselm je bohatý šlechtic, který se nakonec ukáže být otcem Valéra a Marianny.",
+"statement": "Anselm je chudý sluha, který se chce oženit s Eliškou.",
+"answer": false
+},
+{
+"id": "lakomec-021", "type": "single", "topic": "dej-a-zapletka",
+"explanation": "Zápletka se točí kolem ztracené skříňky a sňatkových intrik.",
+"question": "Co je hlavním hybatelem děje v této komedii?",
+"options": [
+{ "text": "Láska k vlasti", "correct": false },
+{ "text": "Peníze a sňatkové intriky", "correct": true },
+{ "text": "Touha po cestování", "correct": false },
+{ "text": "Církevní spory", "correct": false }
+]
+},
+{
+"id": "lakomec-022", "type": "numeric", "topic": "dej-a-zapletka",
+"explanation": "Vše se vyřeší, když se objeví Anselm a ukáže se, že Valér a Marianna jsou jeho děti, čímž zmizí překážky pro sňatky.",
+"question": "Kolik párů se v závěru hry šťastně zasnoubí?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "lakomec-023", "type": "truefalse", "topic": "dej-a-zapletka",
+"explanation": "Kleant nakonec získá své štěstí a peníze, Harpagon zůstává se svými penězi, které jsou pro něj nejdůležitější.",
+"statement": "Harpagon se na konci polepší a stane se štědrým otcem.",
+"answer": false
+},
+{
+"id": "lakomec-024", "type": "single", "topic": "literarni-forma",
+"explanation": "Lakomec je klasickou komedií postav, zaměřenou na jednu dominantní vlastnost protagonisty.",
+"question": "Jaký literární žánr reprezentuje Lakomec?",
+"options": [
+{ "text": "Tragédie", "correct": false },
+{ "text": "Komedie (komedie postav)", "correct": true },
+{ "text": "Román", "correct": false },
+{ "text": "Básnická skladba", "correct": false }
+]
+},
+{
+"id": "lakomec-025", "type": "multiple", "topic": "literarni-forma",
+"explanation": "Komedie využívá výsměchu a nadsázky k odhalení lidských charakterů.",
+"question": "Jaké prostředky Molière využívá? (vyberte 2)",
+"options": [
+{ "text": "Výsměch a nadsázku", "correct": true },
+{ "text": "Tragické monology", "correct": false },
+{ "text": "Satirické zobrazení charakterů", "correct": true },
+{ "text": "Abstraktní symbolismus", "correct": false }
+]
+},
+{
+"id": "lakomec-026", "type": "single", "topic": "literarni-forma",
+"explanation": "Hra je psána prózou, což bylo pro komedii té doby běžné.",
+"question": "Je hra napsána ve verších, nebo prózou?",
+"options": [
+{ "text": "Veršovaná", "correct": false },
+{ "text": "Prózou", "correct": true }
+]
+},
+{
+"id": "lakomec-027", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Lakomec obsahuje prvky frašky, např. přehnané reakce Harpagona.",
+"statement": "Hra neobsahuje žádné prvky frašky nebo situační komiky.",
+"answer": false
+},
+{
+"id": "lakomec-028", "type": "single", "topic": "literarni-forma",
+"explanation": "Molière v Lakomci nastavuje zrcadlo soudobé společnosti, která je ovládána penězi.",
+"question": "Co je hlavním cílem Molièrovy komedie?",
+"options": [
+{ "text": "Pobavit diváka bez hlubšího smyslu", "correct": false },
+{ "text": "Odhalit a zesměšnit lidské nešvary (lakomství)", "correct": true },
+{ "text": "Oslavit tehdejší šlechtu", "correct": false },
+{ "text": "Změnit politický systém", "correct": false }
+]
+},
+{
+"id": "lakomec-029", "type": "truefalse", "topic": "literarni-forma",
+"explanation": "Komedie postav se zaměřuje na zobrazení konkrétní vlastnosti postavy, která ji určuje.",
+"statement": "Komedie postav se zaměřuje pouze na rychlý děj, nikoliv na charaktery.",
+"answer": false
+},
+{
+"id": "lakomec-030", "type": "numeric", "topic": "literarni-forma",
+"explanation": "Lakomec je členěn do 5 dějství, což je klasické členění pro tehdejší divadelní hry.",
+"question": "Kolik dějství má tato komedie?",
+"answer": 5,
+"tolerance": 0
+}
+]
+}

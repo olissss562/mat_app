@@ -1,0 +1,305 @@
+{
+"subject": "db-vypis",
+"name": "Výpis dat z databáze",
+"topics": [
+{ "id": "pripojeni", "name": "Připojení k databázi" },
+{ "id": "dotazovani", "name": "Získávání dat z tabulek" },
+{ "id": "zabezpeceni", "name": "Bezpečnost a SQL Injection" },
+{ "id": "formulare", "name": "Práce s formuláři" },
+{ "id": "osetreni", "name": "Ošetření chyb a prázdných výsledků" }
+],
+"questions": [
+{
+"id": "db-vypis-001", "type": "single", "topic": "pripojeni", "difficulty": 1,
+"explanation": "Pro připojení k MySQL databázi v PHP se nejčastěji používá rozšíření PDO nebo mysqli.",
+"question": "Které z následujících rozšíření je doporučeno pro bezpečné připojení k databázi v PHP?",
+"options": [
+{ "text": "mysql_connect", "correct": false },
+{ "text": "PDO", "correct": true },
+{ "text": "sqlite_connect", "correct": false },
+{ "text": "open_db", "correct": false }
+]
+},
+{
+"id": "db-vypis-002", "type": "single", "topic": "pripojeni", "difficulty": 2,
+"explanation": "Přihlašovací údaje by nikdy neměly být přímo v kódu na veřejně přístupném místě, doporučuje se soubor s konfigurací mimo veřejnou složku.",
+"question": "Kam je z bezpečnostních důvodů nejvhodnější ukládat přihlašovací údaje k databázi?",
+"options": [
+{ "text": "Do HTML komentářů", "correct": false },
+{ "text": "Do souboru s konfigurací mimo veřejnou složku", "correct": true },
+{ "text": "Přímo do JavaScriptu", "correct": false },
+{ "text": "Do názvu tabulky", "correct": false }
+]
+},
+{
+"id": "db-vypis-003", "type": "truefalse", "topic": "pripojeni", "difficulty": 1,
+"explanation": "Pokud databáze neexistuje nebo jsou špatné údaje, skript musí být schopen chybu zachytit (např. try-catch v PDO).",
+"statement": "Připojení k databázi vždy proběhne úspěšně, pokud je server spuštěný.",
+"answer": false
+},
+{
+"id": "db-vypis-004", "type": "single", "topic": "dotazovani", "difficulty": 1,
+"explanation": "Příkaz SELECT se používá k získávání dat, FROM specifikuje tabulku.",
+"question": "Který SQL příkaz slouží k výběru dat z tabulky?",
+"options": [
+{ "text": "GET", "correct": false },
+{ "text": "SELECT", "correct": true },
+{ "text": "FETCH", "correct": false },
+{ "text": "READ", "correct": false }
+]
+},
+{
+"id": "db-vypis-005", "type": "multiple", "topic": "dotazovani", "difficulty": 2,
+"explanation": "Při výpisu dat studentů a jejich zkoušek je nutné propojit tabulky pomocí JOIN na základě společného klíče (např. student_id).",
+"question": "Jaké SQL konstrukce využijeme pro získání dat z více propojených tabulek? (Vyberte všechny správné)",
+"options": [
+{ "text": "JOIN", "correct": true },
+{ "text": "WHERE", "correct": true },
+{ "text": "DROP", "correct": false },
+{ "text": "UNION", "correct": true }
+]
+},
+{
+"id": "db-vypis-006", "type": "single", "topic": "dotazovani", "difficulty": 2,
+"explanation": "Příkaz 'ORDER BY' se používá k řazení výsledků, např. podle data nebo jména.",
+"question": "Která klauzule se používá k seřazení výstupu databáze?",
+"options": [
+{ "text": "SORT", "correct": false },
+{ "text": "ORDER BY", "correct": true },
+{ "text": "GROUP BY", "correct": false },
+{ "text": "FILTER", "correct": false }
+]
+},
+{
+"id": "db-vypis-007", "type": "single", "topic": "zabezpeceni", "difficulty": 3,
+"explanation": "SQL Injection je technika, kdy útočník podstrčí škodlivý kód do SQL dotazu přes vstupní formulář.",
+"question": "Co je to SQL Injection?",
+"options": [
+{ "text": "Metoda pro zrychlení dotazů", "correct": false },
+{ "text": "Bezpečnostní hrozba vkládání škodlivého kódu do dotazu", "correct": true },
+{ "text": "Technika zálohování dat", "correct": false },
+{ "text": "Způsob připojení k databázi", "correct": false }
+]
+},
+{
+"id": "db-vypis-008", "type": "single", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "Prepared statements (připravené dotazy) oddělují SQL kód od dat, což je nejlepší obrana proti SQL Injection.",
+"question": "Co je nejlepší obranou proti SQL Injection?",
+"options": [
+{ "text": "Používání PHP verzí nad 8.0", "correct": false },
+{ "text": "Používání připravených dotazů (prepared statements)", "correct": true },
+{ "text": "Mazání všech vstupů od uživatele", "correct": false },
+{ "text": "Používání pouze GET požadavků", "correct": false }
+]
+},
+{
+"id": "db-vypis-009", "type": "truefalse", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "I když vypadá vstup bezpečně, nikdy nesmíme věřit uživatelskému vstupu a vždy ho musíme ošetřit.",
+"statement": "Pokud vím, že uživatel zadává jen písmena, nemusím vstup nijak ošetřovat.",
+"answer": false
+},
+{
+"id": "db-vypis-010", "type": "numeric", "topic": "formulare", "difficulty": 1,
+"explanation": "Formuláře v HTML se standardně odesílají metodami GET (pro vyhledávání) nebo POST (pro bezpečnější data).",
+"question": "Kolik hlavních metod pro odesílání formulářů (GET, POST) běžně rozlišujeme?",
+"answer": 2,
+"tolerance": 0
+},
+{
+"id": "db-vypis-011", "type": "single", "topic": "formulare", "difficulty": 1,
+"explanation": "Atribut 'name' u inputu určuje klíč, pod kterým bude hodnota odeslána na server.",
+"question": "Který atribut v HTML formuláři definuje název odesílané proměnné?",
+"options": [
+{ "text": "id", "correct": false },
+{ "text": "value", "correct": false },
+{ "text": "name", "correct": true },
+{ "text": "type", "correct": false }
+]
+},
+{
+"id": "db-vypis-012", "type": "single", "topic": "osetreni", "difficulty": 2,
+"explanation": "Pokud dotaz nevrátí žádné řádky, měli bychom uživateli vypsat srozumitelnou zprávu, nikoliv chybu skriptu.",
+"question": "Co by se mělo stát, pokud dotaz na studenta nenajde žádný výsledek?",
+"options": [
+{ "text": "Skript by měl skončit chybou", "correct": false },
+{ "text": "Měla by se vypsat informace, že student nebyl nalezen", "correct": true },
+{ "text": "Databáze by se měla smazat", "correct": false },
+{ "text": "Měl by se zobrazit náhodný student", "correct": false }
+]
+},
+{
+"id": "db-vypis-013", "type": "truefalse", "topic": "osetreni", "difficulty": 2,
+"explanation": "Po provedení dotazu v PHP (např. přes PDO) je dobré zkontrolovat počet řádků (rowCount), zda jsou vůbec nějaká data.",
+"statement": "Při výpisu dat je dobré vždy zkontrolovat, zda dotaz skutečně vrátil nějaký výsledek.",
+"answer": true
+},
+{
+"id": "db-vypis-014", "type": "multiple", "topic": "pripojeni", "difficulty": 2,
+"explanation": "Chybové hlášky připojení mohou prozradit strukturu databáze, proto by se neměly vypisovat uživateli, ale logovat.",
+"question": "Jak nakládat s chybami při připojení k databázi? (Vyberte všechny správné)",
+"options": [
+{ "text": "Zobrazit všechny technické detaily uživateli", "correct": false },
+{ "text": "Logovat chyby do souboru pro správce", "correct": true },
+{ "text": "Uživatel by měl vidět pouze obecnou chybovou hlášku", "correct": true },
+{ "text": "Ignorovat chyby", "correct": false }
+]
+},
+{
+"id": "db-vypis-015", "type": "single", "topic": "dotazovani", "difficulty": 3,
+"explanation": "Pro zjištění počtu záznamů se v SQL používá funkce COUNT().",
+"question": "Jakou funkci použijete v SQL pro zjištění počtu zkoušek studenta?",
+"options": [
+{ "text": "SUM()", "correct": false },
+{ "text": "TOTAL()", "correct": false },
+{ "text": "COUNT()", "correct": true },
+{ "text": "AVG()", "correct": false }
+]
+},
+{
+"id": "db-vypis-016", "type": "single", "topic": "zabezpeceni", "difficulty": 3,
+"explanation": "Metoda POST je pro odesílání dat (zejména citlivějších nebo delších) bezpečnější než GET, protože data nejsou přímo v URL.",
+"question": "Proč je metoda POST vhodnější pro odesílání jména studenta k vyhledání?",
+"options": [
+{ "text": "Je rychlejší", "correct": false },
+{ "text": "Data nejsou viditelná v historii prohlížeče v URL", "correct": true },
+{ "text": "Automaticky ošetřuje SQL injection", "correct": false },
+{ "text": "Je to jediný způsob odeslání", "correct": false }
+]
+},
+{
+"id": "db-vypis-017", "type": "multiple", "topic": "formulare", "difficulty": 2,
+"explanation": "HTML formulář potřebuje metodu (method) a akční URL (action), kam se mají data odeslat.",
+"question": "Co musí obsahovat HTML formulář pro odeslání dat na server? (Vyberte všechny správné)",
+"options": [
+{ "text": "Atribut 'action'", "correct": true },
+{ "text": "Atribut 'method'", "correct": true },
+{ "text": "Tlačítko typu 'submit'", "correct": true },
+{ "text": "Připojení k DB", "correct": false }
+]
+},
+{
+"id": "db-vypis-018", "type": "single", "topic": "osetreni", "difficulty": 2,
+"explanation": "Prázdný dotaz může způsobit chybu při výpisu, proto je kontrola existujících dat důležitá.",
+"question": "Který stav může nastat po dotazu do DB?",
+"options": [
+{ "text": "Vždy jsou vrácena data", "correct": false },
+{ "text": "Dotaz může být prázdný", "correct": true },
+{ "text": "Databáze se sama opraví", "correct": false },
+{ "text": "Dotaz nikdy nevrátí chybu", "correct": false }
+]
+},
+{
+"id": "db-vypis-019", "type": "single", "topic": "dotazovani", "difficulty": 2,
+"explanation": "Propojení tabulek je klíčové pro získání detailních informací (např. jméno studenta z tabulky studentů a zkoušky z tabulky zkoušek).",
+"question": "Jak se jmenuje operace propojení tabulek v SQL?",
+"options": [
+{ "text": "MERGE", "correct": false },
+{ "text": "JOIN", "correct": true },
+{ "text": "LINK", "correct": false },
+{ "text": "COMBINE", "correct": false }
+]
+},
+{
+"id": "db-vypis-020", "type": "truefalse", "topic": "pripojeni", "difficulty": 3,
+"explanation": "Při použití PDO se spojení automaticky uzavře na konci skriptu, ale explicitní uzavření je možné.",
+"statement": "V PHP je nutné vždy explicitně uzavřít spojení s databází, jinak hrozí pád serveru.",
+"answer": false
+},
+{
+"id": "db-vypis-021", "type": "single", "topic": "zabezpeceni", "difficulty": 3,
+"explanation": "Většina moderních databázových ovladačů (jako PDO) podporuje dotazy, kde data posíláme jako parametry, což automaticky ošetří SQL Injection.",
+"question": "Jakým způsobem předáváme proměnnou (např. jméno studenta) do SQL dotazu bezpečně?",
+"options": [
+{ "text": "Přímým zápisem do řetězce", "correct": false },
+{ "text": "Pomocí parametrů (zástupných symbolů)", "correct": true },
+{ "text": "Pomocí funkce eval()", "correct": false },
+{ "text": "Smazáním mezery v řetězci", "correct": false }
+]
+},
+{
+"id": "db-vypis-022", "type": "numeric", "topic": "dotazovani", "difficulty": 2,
+"explanation": "Pokud hledáme studenta podle jména a tabulka obsahuje jednoho studenta s tímto jménem, dotaz vrátí 1 řádek.",
+"question": "Kolik řádků (typicky) očekáváme, pokud hledáme jednoho konkrétního studenta podle unikátního ID?",
+"answer": 1,
+"tolerance": 0
+},
+{
+"id": "db-vypis-023", "type": "single", "topic": "dotazovani", "difficulty": 2,
+"explanation": "LIKE operátor v SQL se používá pro vyhledávání textu, často s hvězdičkou jako zástupným znakem.",
+"question": "Který operátor použijeme v SQL pro vyhledávání částečné shody v textu?",
+"options": [
+{ "text": "MATCH", "correct": false },
+{ "text": "LIKE", "correct": true },
+{ "text": "CONTAINS", "correct": false },
+{ "text": "SEARCH", "correct": false }
+]
+},
+{
+"id": "db-vypis-024", "type": "truefalse", "topic": "formulare", "difficulty": 1,
+"explanation": "Ve formuláři musí být element pro odeslání (button type submit nebo input type submit), jinak se formulář neodešle.",
+"statement": "HTML formulář bez odesílacího tlačítka je prakticky nepoužitelný.",
+"answer": true
+},
+{
+"id": "db-vypis-025", "type": "single", "topic": "osetreni", "difficulty": 3,
+"explanation": "XSS (Cross-Site Scripting) je útok, kdy uživatel vloží do formuláře skript (např. `<script>`), který se pak vypíše na stránku.",
+"question": "Co musíme udělat před vypsáním jména studenta do HTML stránky?",
+"options": [
+{ "text": "Nic, text je bezpečný", "correct": false },
+{ "text": "Ošetřit jej proti XSS (např. htmlspecialchars)", "correct": true },
+{ "text": "Převést jej na velká písmena", "correct": false },
+{ "text": "Zašifrovat jej base64", "correct": false }
+]
+},
+{
+"id": "db-vypis-026", "type": "single", "topic": "pripojeni", "difficulty": 2,
+"explanation": "Díky PDO můžeme snadno přepínat mezi různými typy databází (MySQL, PostgreSQL, atd.) bez nutnosti psát vše znovu.",
+"question": "Jaká je hlavní výhoda PDO (PHP Data Objects)?",
+"options": [
+{ "text": "Je automaticky šifrované", "correct": false },
+{ "text": "Podpora různých typů databází", "correct": true },
+{ "text": "Rychlejší než mysqli", "correct": false },
+{ "text": "Obsahuje grafické rozhraní", "correct": false }
+]
+},
+{
+"id": "db-vypis-027", "type": "multiple", "topic": "dotazovani", "difficulty": 3,
+"explanation": "Základní SQL příkazy pro manipulaci s daty jsou SELECT, INSERT, UPDATE, DELETE.",
+"question": "Které z následujících příkazů patří mezi základní SQL příkazy? (Vyberte všechny správné)",
+"options": [
+{ "text": "SELECT", "correct": true },
+{ "text": "UPDATE", "correct": true },
+{ "text": "CREATE-USER", "correct": false },
+{ "text": "INSERT", "correct": true }
+]
+},
+{
+"id": "db-vypis-028", "type": "single", "topic": "zabezpeceni", "difficulty": 2,
+"explanation": "SQL Injection útočník často zneužívá znaky jako ' nebo ; k přerušení SQL dotazu a přidání vlastního kódu.",
+"question": "Který znak je v SQL nebezpečný, pokud není ošetřen?",
+"options": [
+{ "text": "Apostrof (')", "correct": true },
+{ "text": "Zavináč (@)", "correct": false },
+{ "text": "Tečka (.)", "correct": false },
+{ "text": "Pomlčka (-)", "correct": false }
+]
+},
+{
+"id": "db-vypis-029", "type": "single", "topic": "formulare", "difficulty": 2,
+"explanation": "U vstupního pole pro text je vhodné nastavit `required` v HTML, aby uživatel nemohl odeslat prázdné jméno.",
+"question": "Jak vynutíme, aby uživatel musel vyplnit pole ve formuláři?",
+"options": [
+{ "text": "Přidáním atributu 'required'", "correct": true },
+{ "text": "Změnou barvy pozadí", "correct": false },
+{ "text": "Vypnutím JavaScriptu", "correct": false },
+{ "text": "Použitím hidden pole", "correct": false }
+]
+},
+{
+"id": "db-vypis-030", "type": "truefalse", "topic": "osetreni", "difficulty": 2,
+"explanation": "Je dobrou praxí uživateli napsat, proč jeho vyhledávání selhalo (např. 'Student nebyl nalezen'), aby věděl, co se stalo.",
+"statement": "Výpis 'Student nebyl nalezen' je uživatelsky přívětivější než zobrazení prázdné stránky.",
+"answer": true
+}
+]
+}
