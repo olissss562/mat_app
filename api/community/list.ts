@@ -1,6 +1,5 @@
-import { loadCommunity } from '../_lib/db';
-import { isConfigured, requireUser } from '../_lib/http';
-import { send, type Req, type Res, withErrorHandling } from '../_lib/http';
+import { isConfigured, loadCommunity } from '../_lib/db';
+import { requireUser, send, type Req, type Res, withErrorHandling } from '../_lib/http';
 
 // Returns the public community pool. If the caller is logged in, also include their
 // own (possibly still-pending) submissions so "Moje otázky" can show accurate status.
