@@ -1,5 +1,5 @@
-import { loadCommunity, removeCommunityEntry, setCommunityPublic } from '../_lib/db';
-import { readBody, requireAdmin, requireConfigured, send, type Req, type Res, withErrorHandling } from '../_lib/http';
+import { loadCommunity, removeCommunityEntry, setCommunityPublic } from '../_lib/db.js';
+import { readBody, requireAdmin, requireConfigured, send, type Req, type Res, withErrorHandling } from '../_lib/http.js';
 
 // Admin-only: list every submission (pending + public) and act on it (publish/unpublish/remove).
 async function handler(req: Req, res: Res) {

@@ -3,7 +3,7 @@
 // passes plain Node IncomingMessage/ServerResponse-like objects that behave the
 // same way for our purposes.
 
-import { isConfigured, resolveSession, seedAdmin, type ServerUser } from './db';
+import { isConfigured, resolveSession, seedAdmin, type ServerUser } from './db.js';
 
 export type Req = {
   method?: string;

@@ -1,5 +1,5 @@
-import { loadMyConfigs, loadUsers } from '../_lib/db';
-import { requireAdmin, requireConfigured, send, type Req, type Res, withErrorHandling } from '../_lib/http';
+import { loadMyConfigs, loadUsers } from '../_lib/db.js';
+import { requireAdmin, requireConfigured, send, type Req, type Res, withErrorHandling } from '../_lib/http.js';
 
 // Admin-only: full roster of server accounts plus a summary of each one's personally
 // authored subjects (name + question count) — enough to review without dumping every

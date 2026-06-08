@@ -1,7 +1,7 @@
 // Diagnostic: imports our actual _lib/db module (same one auth/login uses) and
 // exercises redis()/isConfigured()/a real GET, with each step reported separately
 // so we can see exactly which step crashes.
-import { isConfigured, redis } from './_lib/db';
+import { isConfigured, redis } from './_lib/db.js';
 
 export default async function handler(_req: any, res: any) {
   const steps: Record<string, unknown> = {};

@@ -12,7 +12,7 @@ import type {
   Question,
   SingleQuestion,
   TrueFalseQuestion,
-} from './configTypes';
+} from './configTypes.js';
 
 export interface ValidationResult {
   valid: boolean;

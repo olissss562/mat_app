@@ -1,5 +1,5 @@
-import { loadMyConfigs, saveMyConfigs } from '../_lib/db';
-import { readBody, requireConfigured, requireUser, send, type Req, type Res, withErrorHandling } from '../_lib/http';
+import { loadMyConfigs, saveMyConfigs } from '../_lib/db.js';
+import { readBody, requireConfigured, requireUser, send, type Req, type Res, withErrorHandling } from '../_lib/http.js';
 
 // Lets a logged-in user pull/push their personally authored subjects to the server so:
 //  (a) the same set is available no matter which device they're on, and

@@ -16,7 +16,7 @@
 // the app (which still works fully offline via localStorage) keeps functioning.
 
 import { Redis } from '@upstash/redis';
-import type { SubjectConfig } from './configTypes';
+import type { SubjectConfig } from './configTypes.js';
 
 let redisClient: Redis | null | undefined;
 
