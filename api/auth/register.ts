@@ -1,7 +1,7 @@
 import { createSession, createUser, findUser } from '../_lib/db';
-import { readBody, requireConfigured, send, type Req, type Res } from '../_lib/http';
+import { readBody, requireConfigured, send, type Req, type Res, withErrorHandling } from '../_lib/http';
 
-export default async function handler(req: Req, res: Res) {
+async function handler(req: Req, res: Res) {
   if (req.method !== 'POST') return send(res, 405, { error: 'Method not allowed' });
   if (!(await requireConfigured(res))) return;
 
@@ -19,3 +19,5 @@ export default async function handler(req: Req, res: Res) {
   const token = await createSession(user.username);
   send(res, 200, { token, username: user.username, isAdmin: !!user.isAdmin });
 }
+
+export default withErrorHandling(handler);

@@ -28,7 +28,14 @@ export function redis(): Redis | null {
     redisClient = null;
     return null;
   }
-  redisClient = new Redis({ url, token });
+  try {
+    redisClient = new Redis({ url, token });
+  } catch (err) {
+    // Malformed URL/token etc. — treat as "not configured" rather than crashing every request.
+    // eslint-disable-next-line no-console
+    console.error('[api] failed to construct Redis client:', err);
+    redisClient = null;
+  }
   return redisClient;
 }
 

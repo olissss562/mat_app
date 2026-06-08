@@ -1,10 +1,10 @@
 import { loadCommunity } from '../_lib/db';
 import { isConfigured, requireUser } from '../_lib/http';
-import { send, type Req, type Res } from '../_lib/http';
+import { send, type Req, type Res, withErrorHandling } from '../_lib/http';
 
 // Returns the public community pool. If the caller is logged in, also include their
 // own (possibly still-pending) submissions so "Moje otázky" can show accurate status.
-export default async function handler(req: Req, res: Res) {
+async function handler(req: Req, res: Res) {
   if (req.method !== 'GET') return send(res, 405, { error: 'Method not allowed' });
   if (!isConfigured()) return send(res, 200, { items: [] });
 
@@ -28,3 +28,5 @@ async function requireUserOptional(req: Req) {
   };
   return requireUser(req, fakeRes as any);
 }
+
+export default withErrorHandling(handler);

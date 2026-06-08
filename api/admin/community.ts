@@ -1,8 +1,8 @@
 import { loadCommunity, removeCommunityEntry, setCommunityPublic } from '../_lib/db';
-import { readBody, requireAdmin, requireConfigured, send, type Req, type Res } from '../_lib/http';
+import { readBody, requireAdmin, requireConfigured, send, type Req, type Res, withErrorHandling } from '../_lib/http';
 
 // Admin-only: list every submission (pending + public) and act on it (publish/unpublish/remove).
-export default async function handler(req: Req, res: Res) {
+async function handler(req: Req, res: Res) {
   if (!(await requireConfigured(res))) return;
   const admin = await requireAdmin(req, res);
   if (!admin) return;
@@ -30,3 +30,5 @@ export default async function handler(req: Req, res: Res) {
 
   send(res, 405, { error: 'Method not allowed' });
 }
+
+export default withErrorHandling(handler);

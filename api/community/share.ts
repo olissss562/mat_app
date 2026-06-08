@@ -1,8 +1,8 @@
 import { shareSubject } from '../_lib/db';
-import { readBody, requireConfigured, requireUser, send, type Req, type Res } from '../_lib/http';
+import { readBody, requireConfigured, requireUser, send, type Req, type Res, withErrorHandling } from '../_lib/http';
 import { validateSubjectConfig } from '../../src/lib/validator';
 
-export default async function handler(req: Req, res: Res) {
+async function handler(req: Req, res: Res) {
   if (req.method !== 'POST') return send(res, 405, { error: 'Method not allowed' });
   if (!(await requireConfigured(res))) return;
   const user = await requireUser(req, res);
@@ -17,3 +17,5 @@ export default async function handler(req: Req, res: Res) {
   const entry = await shareSubject(user.username, config);
   send(res, 200, { entry });
 }
+
+export default withErrorHandling(handler);
