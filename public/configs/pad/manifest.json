@@ -5,7 +5,7 @@
     { "id": "autorizace-php", "name": "Autorizace v PHP", "file": "autorizace php.json", "icon": "🔑" },
     { "id": "c-jazyk", "name": "Programovací jazyk C", "file": "c.json", "icon": "💻" },
     { "id": "chyby-a-osetreni", "name": "Chyby a jejich ošetření", "file": "chyby a jejich osetreni.json", "icon": "⚠️" },
-    { "id": "databaze-php", "name": "Databáze v PHP", "file": "databaze php.json", "icon": "🐘" },
+    { "id": "db-vypis", "name": "Databáze v PHP", "file": "databaze php.json", "icon": "🐘" },
     { "id": "databaze", "name": "Základy databází", "file": "databaze.json", "icon": "🗄️" },
     { "id": "datove-struktury", "name": "Datové struktury", "file": "datove struktury.json", "icon": "🏗️" },
     { "id": "funkce-a-metody", "name": "Funkce a metody", "file": "funkce a metody.json", "icon": "⚙️" },
