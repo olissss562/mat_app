@@ -19,6 +19,7 @@
     { "id": "spalovac-mrtvol", "name": "Spalovač mrtvol", "file": "spalovac mrtvol.json", "icon": "⚱️" },
     { "id": "starec-a-more", "name": "Stařec a moře", "file": "starec a more.json", "icon": "🐟" },
     { "id": "stoparuv-pruvodce", "name": "Stopařův průvodce po Galaxii", "file": "stoparuv pruvodce po galaxii.json", "icon": "🚀" },
-    { "id": "tyrolske-elegie", "name": "Tyrolské elegie", "file": "tyrolske elegie.json", "icon": "🏔️" }
+    { "id": "tyrolske-elegie", "name": "Tyrolské elegie", "file": "tyrolske elegie.json", "icon": "🏔️" },
+    { "id": "neumelecky-text", "name": "Neumělecký text", "file": "neumelecky text.json", "icon": "🏔️" }
   ]
 }

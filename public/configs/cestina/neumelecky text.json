@@ -1,0 +1,405 @@
+{
+"subject": "neumelecky-text",
+"name": "Rozbor neuměleckého textu",
+"topics": [
+{ "id": "funkcni-styly", "name": "Funkční styly a útvary" },
+{ "id": "slohove-postupy", "name": "Slohové postupy a kompozice" },
+{ "id": "slohotvorni-cinitele", "name": "Slohotvorní činitelé a kontext" },
+{ "id": "jazykove-prostredky", "name": "Jazykové prostředky a lexikologie" },
+{ "id": "textova-navaznost", "name": "Členění, výstavba a porozumění textu" }
+],
+"questions": [
+{
+"id": "neumelecky-text-001",
+"type": "single",
+"topic": "funkcni-styly",
+"difficulty": 1,
+"explanation": "Základní funkcí administrativního stylu je funkce řídicí, normativní a věcně sdělovací. Slouží k oficiální komunikaci mezi úřady nebo úřadem a občanem, přičemž vyžaduje maximální přesnost a objektivitu.",
+"question": "Jaká je hlavní funkce administrativního stylu?",
+"options": [
+{ "text": "Estetická a formativní", "correct": false },
+{ "text": "Řídicí a věcně sdělovací", "correct": true },
+{ "text": "Přesvědčovací a agitační", "correct": false },
+{ "text": "Vysvětlovací a popularizační", "correct": false }
+],
+"tags": ["administrativní styl", "funkce"]
+},
+{
+"id": "neumelecky-text-002",
+"type": "multiple",
+"topic": "funkcni-styly",
+"difficulty": 2,
+"explanation": "Zpráva a oznámení jsou typickými útvary jak publicistického (zpráva v médiích), tak administrativního či prostěsdělovacího stylu (oznámení na úřední desce). Esej patří do stylu uměleckého či publicistického a román je čistě umělecký útvar.",
+"question": "Vyberte všechny možnosti, které představují slohové útvary běžně využívané v neuměleckých stylech (např. v administrativním nebo publicistickém):",
+"options": [
+{ "text": "Zpráva", "correct": true },
+{ "text": "Oznámení", "correct": true },
+{ "text": "Esej", "correct": false },
+{ "text": "Román", "correct": false }
+],
+"tags": ["útvary", "publicistika", "administrativa"]
+},
+{
+"id": "neumelecky-text-003",
+"type": "truefalse",
+"topic": "funkcni-styly",
+"difficulty": 1,
+"statement": "Fejeton je typickým útvarem odborného funkčního stylu.",
+"answer": false,
+"explanation": "Fejeton je publicistický útvar, který vtipným a lehkým tónem zpracovává aktuální nebo všední téma, často s využitím uměleckých prvků. V odborném stylu se s ním nesetkáme."
+},
+{
+"id": "neumelecky-text-004",
+"type": "single",
+"topic": "slohove-postupy",
+"difficulty": 2,
+"explanation": "Pokud text krok za krokem vysvětluje, jak postupovat při výměně dokladu, jak uvařit jídlo nebo jak složit nábytek, jedná se o popis pracovní postupu, který spadá pod popisný slohový postup.",
+"question": "Který slohový postup dominuje v textu, jenž čtenáři dává návod k obsluze kávovaru?",
+"options": [
+{ "text": "Informační", "correct": false },
+{ "text": "Vyprávěcí", "correct": false },
+{ "text": "Popisný", "correct": true },
+{ "text": "Úvahový", "correct": false }
+],
+"tags": ["slohový postup", "popis"]
+},
+{
+"id": "neumelecky-text-005",
+"type": "multiple",
+"topic": "slohove-postupy",
+"difficulty": 3,
+"explanation": "Výkladový slohový postup vysvětluje vnitřní příčinné souvislosti, podstatu jevů a logické vztahy mezi nimi. Konstatování pouhých faktů bez souvislostí je znakem postupu informačního, zachycení vnějších znaků zase popisného.",
+"question": "Vyberte všechny pravdivé možnosti definující výkladový slohový postup:",
+"options": [
+{ "text": "Objasňuje vnitřní souvislosti a příčinné vztahy mezi jevy.", "correct": true },
+{ "text": "Je základem pro slohové útvary jako přednáška nebo pojednání.", "correct": true },
+{ "text": "Soustředí se primárně na zachycení děje v časové posloupnosti.", "correct": false },
+{ "text": "Používá se výhradně v soukromé neformální korespondenci.", "correct": false }
+],
+"tags": ["výklad", "slohový postup"]
+},
+{
+"id": "neumelecky-text-006",
+"type": "truefalse",
+"topic": "slohove-postupy",
+"difficulty": 1,
+"statement": "Informační slohový postup je nejjednodušší slohový postup, který pouze konstatuje fakta v čase a prostoru bez vysvětlování souvislostí.",
+"answer": true,
+"explanation": "Informační postup pouze odpovídá na otázky co, kde, kdy a jak se stalo, aniž by šel do hlubších příčinných souvislostí (typické pro zprávy, oznámení, SMS)."
+},
+{
+"id": "neumelecky-text-007",
+"type": "single",
+"topic": "slohotvorni-cinitele",
+"difficulty": 2,
+"explanation": "Slohotvorní činitelé se dělí na objektivní (nezávislé na autorovi, např. prostředí, forma, adresát) a subjektivní (vycházející z osobnosti autora, např. jeho věk, nálada, vzdělání).",
+"question": "Mezi které slohotvorné činitele řadíme věk, vzdělání a momentální psychický stav autora?",
+"options": [
+{ "text": "Objektivní činitelé", "correct": false },
+{ "text": "Subjektivní činitelé", "correct": true },
+{ "text": "Formální činitelé", "correct": false },
+{ "text": "Kompoziční činitelé", "correct": false }
+],
+"tags": ["slohotvorní činitelé", "subjektivní"]
+},
+{
+"id": "neumelecky-text-008",
+"type": "multiple",
+"topic": "slohotvorni-cinitele",
+"difficulty": 2,
+"explanation": "Tištěné noviny představují nepřímou komunikaci (autor a čtenář nejsou v kontaktu tváří v tvář), psanou formu, veřejné prostředí a monologický projev novináře.",
+"question": "Vyberte všechny vlastnosti, které z hlediska slohotvorných činitelů odpovídají tištěnému novinovému článku:",
+"options": [
+{ "text": "Nepřímá komunikace", "correct": true },
+{ "text": "Veřejné prostředí", "correct": true },
+{ "text": "Přímá komunikace", "correct": false },
+{ "text": "Soukromé prostředí", "correct": false }
+],
+"tags": ["slohotvorní činitelé", "publicistika"]
+},
+{
+"id": "neumelecky-text-009",
+"type": "truefalse",
+"topic": "slohotvorni-cinitele",
+"difficulty": 1,
+"statement": "Osobní dopis psaný blízkému příteli řadíme z hlediska slohotvorných činitelů do sféry formální a veřejné.",
+"answer": false,
+"explanation": "Dopis příteli spadá jednoznačně do sféry neformální (přátelské) a soukromé, nikoliv formální a veřejné."
+},
+{
+"id": "neumelecky-text-010",
+"type": "single",
+"topic": "jazykove-prostredky",
+"difficulty": 1,
+"explanation": "Termíny jsou odborné názvy s přesným a jednoznačným významem v daném vědním či technickém oboru. Jsou základním stavebním kamenem odborného stylu.",
+"question": "Jak se odborně nazývají slova s přesným, jednoznačným významem typická pro odborný styl?",
+"options": [
+{ "text": "Archaismy", "correct": false },
+{ "text": "Termíny", "correct": true },
+{ "text": "Neologismy", "correct": false },
+{ "text": "Poetismy", "correct": false }
+],
+"tags": ["lexikologie", "odborný styl"]
+},
+{
+"id": "neumelecky-text-011",
+"type": "multiple",
+"topic": "jazykove-prostredky",
+"difficulty": 2,
+"explanation": "Pro administrativní styl jsou typická klišé, pasivní slovesné tvary (bylo rozhodnuto) a ustálené formulace. Citově zabarvená slova a básnické obraty tam nemají své místo z důvodu požadavku na neutralitu.",
+"question": "Vyberte všechny jazykové prostředky charakteristické pro administrativní texty (např. úřední dopisy):",
+"options": [
+{ "text": "Ustálené zkratky a zkratková slova", "correct": true },
+{ "text": "Trpný rod (pasivní konstrukce)", "correct": true },
+{ "text": "Expresivní a hanlivá slova", "correct": false },
+{ "text": "Metafory a personifikace", "correct": false }
+],
+"tags": ["jazykové prostředky", "administrativa"]
+},
+{
+"id": "neumelecky-text-012",
+"type": "truefalse",
+"topic": "jazykove-prostredky",
+"difficulty": 2,
+"statement": "Slova jako 'pecka', 'kámoš' nebo 'hustej' užitá v textu signalizují přítomnost nespisovné, konkrétně slangové či obecněčeské vrstvy jazyka.",
+"answer": true,
+"explanation": "Tato slova patří do nespisovné češtiny (obecná čeština, slang) a jsou typická pro prostěsdělovací styl nebo neformální publicistické texty."
+},
+{
+"id": "neumelecky-text-013",
+"type": "single",
+"topic": "textova-navaznost",
+"difficulty": 2,
+"explanation": "Nadpis plní funkci textotvornou, orientační a v publicistice také funkci atraktivizační (má upoutat pozornost). Neobsahuje však detailní shrnutí celého textu a není povinný u soukromých SMS.",
+"question": "Jaká je primární funkce titulku/nadpisu v publicistickém neuměleckém textu?",
+"options": [
+{ "text": "Nahradit první odstavec textu", "correct": false },
+{ "text": "Upoutat pozornost čtenáře a stručně naznačit téma", "correct": true },
+{ "text": "Uvést seznam použité odborné literatury", "correct": false },
+{ "text": "Obsahovat podpis autora a datum vydání", "correct": false }
+],
+"tags": ["titulek", "kompozice"]
+},
+{
+"id": "neumelecky-text-014",
+"type": "multiple",
+"topic": "textova-navaznost",
+"difficulty": 2,
+"explanation": "Vnější členění textu zahrnuje vizuálně oddělené prvky, jako jsou nadpisy, podnadpisy, odstavce či grafické odrážky. Gradace a chronologie jsou principy vnitřní kompozice.",
+"question": "Vyberte všechny prvky, které řadíme do vnějšího členění neuměleckého textu:",
+"options": [
+{ "text": "Odstavce", "correct": true },
+{ "text": "Grafické odrážky a číslování", "correct": true },
+{ "text": "Chronologický postup vyprávění", "correct": false },
+{ "text": "Vnitřní napětí a gradace děje", "correct": false }
+],
+"tags": ["členění textu", "kompozice"]
+},
+{
+"id": "neumelecky-text-015",
+"type": "truefalse",
+"topic": "textova-navaznost",
+"difficulty": 1,
+"statement": "Odstavec je základní stavební jednotka textu, která obvykle graficky odděluje novou myšlenkovou nebo tematickou část.",
+"answer": true,
+"explanation": "Členění na odstavce usnadňuje čtenáři orientaci v textu a vizuálně signalizuje přechod k novému podtématu nebo dalšímu kroku argumentace."
+},
+{
+"id": "neumelecky-text-016",
+"type": "single",
+"topic": "funkcni-styly",
+"difficulty": 2,
+"explanation": "Řečnický styl je specifický tím, že je primárně určen pro ústní přednes před publikem (projevy, přednášky, uvítání). Využívá prvky kontaktu s posluchači.",
+"question": "Do kterého funkčního stylu řadíme slavnostní projev při předávání maturitních vysvědčení?",
+"options": [
+{ "text": "Administrativní", "correct": false },
+{ "text": "Řečnický", "correct": true },
+{ "text": "Publicistický", "correct": false },
+{ "text": "Prostěsdělovací", "correct": false }
+],
+"tags": ["řečnický styl", "projev"]
+},
+{
+"id": "neumelecky-text-017",
+"type": "multiple",
+"topic": "slohove-postupy",
+"difficulty": 2,
+"explanation": "Úvahový postup rozebírá problém z různých úhlů, autor vyjadřuje své subjektivní názory, klade si řečnické otázky a nehledá nutně jednoznačné, dogmatické řešení.",
+"question": "Vyberte všechny rysy typické pro úvahový slohový postup:",
+"options": [
+{ "text": "Využívání řečnických otázek", "correct": true },
+{ "text": "Vyjádření vlastního kritického názoru autora", "correct": true },
+{ "text": "Strohé a suché konstatování statistických dat", "correct": false },
+{ "text": "Přesný popis technických parametrů přístroje", "correct": false }
+],
+"tags": ["úvaha", "slohový postup"]
+},
+{
+"id": "neumelecky-text-018",
+"type": "truefalse",
+"topic": "slohotvorni-cinitele",
+"difficulty": 2,
+"statement": "Monologičnost znamená, že text zachycuje střídání replik dvou nebo více účastníků komunikace.",
+"answer": false,
+"explanation": "Střídání replik je definicí dialogu. Monolog je souvislý projev jednoho mluvčího nebo pisatele bez bezprostředních vstupů partnera."
+},
+{
+"id": "neumelecky-text-019",
+"type": "single",
+"topic": "jazykove-prostredky",
+"difficulty": 3,
+"explanation": "Pasivní konstrukce (tzv. trpný rod, např. 'bylo zjištěno', 'žádost se podává') odosobňují text, což je v úřední a právní sféře žádoucí, protože podstatné je opatření či pravidlo, nikoli konkrétní úředník.",
+"question": "Proč administrativní texty velmi často využívají pasivní slovesné tvary (trpný rod)?",
+"options": [
+{ "text": "Aby text působil umělecky a emotivně", "correct": false },
+{ "text": "Aby se oslabila role konkrétního původce děje a text získal objektivní charakter", "correct": true },
+{ "text": "Protože aktivní rod je v české gramatice zakázán", "correct": false },
+{ "text": "Aby se zkrátila délka celého dokumentu", "correct": false }
+],
+"tags": ["jazykové prostředky", "pasivum", "administrativa"]
+},
+{
+"id": "neumelecky-text-020",
+"type": "multiple",
+"topic": "textova-navaznost",
+"difficulty": 3,
+"explanation": "Citace (přímá řeč) v publicistice slouží k autenticitě a doložení faktů (tzv. přímé svědectví). Titulek a perex (úvodní zvýrazněný odstavec) strukturují zprávu, grafy a tabulky doplňují data. Epilog je závěr uměleckého díla.",
+"question": "Vyberte všechny prvky, které běžně pomáhají strukturovat publicistickou zprávu v tisku:",
+"options": [
+{ "text": "Perex (úvodní tučný odstavec shrnující hlavní fakta)", "correct": true },
+{ "text": "Citace mluvčích či svědků", "correct": true },
+{ "text": "Epilog a prolog", "correct": false },
+{ "text": "Básnický přívlastek (epiteton)", "correct": false }
+],
+"tags": ["publicistika", "kompozice", "perex"]
+},
+{
+"id": "neumelecky-text-021",
+"type": "truefalse",
+"topic": "funkcni-styly",
+"difficulty": 1,
+"statement": "Učebnice českého jazyka pro střední školy je psána primárně v odborném (případně didaktickém/populárně-naučném) stylu.",
+"answer": true,
+"explanation": "Učebnice předávají systematické poznatky a vysvětlují gramatické jevy, což vyžaduje přesnost, odbornou terminologii a srozumitelný výklad."
+},
+{
+"id": "neumelecky-text-022",
+"type": "single",
+"topic": "slohove-postupy",
+"difficulty": 2,
+"explanation": "Popisný slohový postup zachycuje znaky, vlastnosti a uspořádání částí objektu (člověka, krajiny, věci). Pokud popisuje vnitřní vlastnosti a povahu člověka, nazývá se charakteristika.",
+"question": "Jak se nazývá specifický útvar popisného slohového postupu, který vystihuje povahové rysy a duševní vlastnosti osoby?",
+"options": [
+{ "text": "Subjektivní popis", "correct": false },
+{ "text": "Charakteristika", "correct": true },
+{ "text": "Životopis", "correct": false },
+{ "text": "Fejeton", "correct": false }
+],
+"tags": ["popis", "charakteristika"]
+},
+{
+"id": "neumelecky-text-023",
+"type": "multiple",
+"topic": "jazykove-prostredky",
+"difficulty": 3,
+"explanation": "Profesionalismy jsou nespisovné výrazy užívané lidmi ze stejného oboru (např. 'přestupák', 'lekařák' u úředníků/lékařů). Knižní slova jsou spisovná, ale zastaralá. Termíny jsou spisovné a oficiální.",
+"question": "Vyberte všechny pravdivé možnosti o 'profesionalismech':",
+"options": [
+{ "text": "Jedná se o nespisovné slangové výrazy z určitého pracovního prostředí.", "correct": true },
+{ "text": "Urychlují a zjednodušují komunikaci mezi kolegy z oboru.", "correct": true },
+{ "text": "Jsou to oficiální termíny schválené Ústavem pro jazyk český.", "correct": false },
+{ "text": "Používají se výhradně v umělecké poezii.", "correct": false }
+],
+"tags": ["lexikologie", "slang", "profesionalismy"]
+},
+{
+"id": "neumelecky-text-024",
+"type": "truefalse",
+"topic": "textova-navaznost",
+"difficulty": 2,
+"statement": "Soudržnost textu (koheze) je zajišťována mimo jiné gramatickými prostředky, jako jsou zájmena (ten, jeho, tamto) nebo spojky.",
+"answer": true,
+"explanation": "Zájmena a textové konektory odkazují na dříve zmíněná slova nebo věty, čímž propojují text do jednoho logického a gramatického celku."
+},
+{
+"id": "neumelecky-text-025",
+"type": "single",
+"topic": "slohotvorni-cinitele",
+"difficulty": 2,
+"explanation": "Míra připravenosti ovlivňuje plynulost a stavbu projevu. Nepřipravené mluvené texty obsahují přeřeknutí, parazitní slova (že jo, prostě) a nedokončené věty (anakoluty). U psaného připraveného textu tyto jevy autor eliminuje.",
+"question": "Který z projevů bude nejvíce vykazovat znaky nepřipravenosti a spontánnosti?",
+"options": [
+{ "text": "Zákon o silničním provozu", "correct": false },
+{ "text": "Běžný telefonát mezi dvěma přáteli", "correct": true },
+{ "text": "Televizní zprávy čtené z čtecího zařízení", "correct": false },
+{ "text": "Předem napsaný referát žáka", "correct": false }
+],
+"tags": ["slohotvorní činitelé", "připravenost"]
+},
+{
+"id": "neumelecky-text-026",
+"type": "numeric",
+"topic": "funkcni-styly",
+"difficulty": 2,
+"explanation": "Tradiční česká stylistika rozlišuje celkem 6 základních funkčních stylů: prostěsdělovací, administrativní, publicistický, odborný, umělecký a řečnický.",
+"question": "Kolik základních funkčních stylů rozlišuje moderní česká stylistika (podle běžných středoškolských učebnic včetně stylu řečnického a uměleckého)?",
+"answer": 6,
+"tolerance": 0
+},
+{
+"id": "neumelecky-text-027",
+"type": "numeric",
+"topic": "slohove-postupy",
+"difficulty": 2,
+"explanation": "Česká stylistika rozlišuje 5 základních slohových postupů: informační, popisný (včetně charakteristiky a pracovního postupu), vyprávěcí, výkladový a úhavový.",
+"question": "Kolik hlavních slohových postupů rozlišujeme v české stylistické teorii?",
+"answer": 5,
+"tolerance": 0
+},
+{
+"id": "neumelecky-text-028",
+"type": "single",
+"topic": "jazykove-prostredky",
+"difficulty": 3,
+"explanation": "Historismy jsou slova, která označují zaniklé skutečnosti (např. platplatidlo groš, zbraň halapartna). Archaismy označují věci stále existující, ale zastaralým slovem (např. anžto - protože).",
+"question": "Jak se nazývají slova, která zanikla, protože zanikla samotná skutečnost, kterou označovala (např. řemdih, groš)?",
+"options": [
+{ "text": "Archaismy", "correct": false },
+{ "text": "Historismy", "correct": true },
+{ "text": "Neologismy", "correct": false },
+{ "text": "Dialektismy", "correct": false }
+],
+"tags": ["lexikologie", "historismy"]
+},
+{
+"id": "neumelecky-text-029",
+"type": "multiple",
+"topic": "funkcni-styly",
+"difficulty": 1,
+"explanation": "Mezi základní žánry/útvary publicistického stylu patří zpráva, komentář, reportáž, fejeton, rozhovor nebo úvodník. Životopis a smlouva jsou útvary administrativní.",
+"question": "Vyberte všechny slohové útvary, které patří primárně do publicistického stylu:",
+"options": [
+{ "text": "Reportáž", "correct": true },
+{ "text": "Komentář", "correct": true },
+{ "text": "Strukturovaný životopis", "correct": false },
+{ "text": "Kupní smlouva", "correct": false }
+],
+"tags": ["publicistika", "útvary"]
+},
+{
+"id": "neumelecky-text-030",
+"type": "single",
+"topic": "textova-navaznost",
+"difficulty": 2,
+"explanation": "Asyndeton je bezspojkové spojování vět. Hyperbola je nadsázka. Polysyndeton je nadbytek spojek. Správný termín pro slova, která propojují text a vyjadřují vztahy mezi odstavci či větami (např. avšak, nicméně, závěrem), jsou textové konektory.",
+"question": "Jak se nazývají jazykové prostředky (spojky, částice, ustálené obraty), které vyjadřují logické navazování textu a vztahy mezi odstavci?",
+"options": [
+{ "text": "Textové konektory", "correct": true },
+{ "text": "Asyndeta", "correct": false },
+{ "text": "Hyperboly", "correct": false },
+{ "text": "Architektonické složky", "correct": false }
+],
+"tags": ["konektory", "textová návaznost"]
+}
+]
+}
