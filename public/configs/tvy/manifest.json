@@ -1,0 +1,82 @@
+{
+  "subjects": [
+    {
+      "id": "pameti",
+      "name": "2. Polovodičové paměti",
+      "file": "2_pameti.json",
+      "icon": "💾"
+    },
+    {
+      "id": "soustavy",
+      "name": "4. Číselné soustavy",
+      "file": "4_soustavy.json",
+      "icon": "🧮"
+    },
+    {
+      "id": "eeprom",
+      "name": "6. EEPROM, Flash a SSD",
+      "file": "6_eeprom_flash_ssd.json",
+      "icon": "💾"
+    },
+    {
+      "id": "mody",
+      "name": "8. Adresné módy CPU",
+      "file": "8_adresne_mody.json",
+      "icon": "🧠"
+    },
+    {
+      "id": "motherboard",
+      "name": "10. Základní deska",
+      "file": "10_motherboard.json",
+      "icon": "🖥️"
+    },
+    {
+      "id": "optika",
+      "name": "11. Optická zařízení",
+      "file": "11_opticka_zarizeni.json",
+      "icon": "💿"
+    },
+    {
+      "id": "projektory-tabule",
+      "name": "13. Projektory a tabule",
+      "file": "13_projektory_tabule.json",
+      "icon": "📽️"
+    },
+    {
+      "id": "zdroje-pc",
+      "name": "15. Zdroje pro PC a UPS",
+      "file": "15_zdroje_pc.json",
+      "icon": "⚡"
+    },
+    {
+      "id": "cpu-preruseni-dma",
+      "name": "17. Přerušení a DMA",
+      "file": "17_cpu_preruseni_dma.json",
+      "icon": "⏱️"
+    },
+    {
+      "id": "laserove-led-tiskarny",
+      "name": "19. Laserové a LED tiskárny",
+      "file": "19_laserove_led_tiskarny.json",
+      "icon": "🖨️"
+    },
+    {
+      "id": "vystupni-zobrazovaci-zarizeni",
+      "name": "21. Zobrazovací zařízení",
+      "file": "21_vystupni_zobrazovaci_zarizeni.json",
+      "icon": "🖥️"
+    },
+    {
+      "id": "aritmeticke-operace",
+      "name": "23. Aritmetické operace",
+      "file": "23_aritmeticke_operace.json",
+      "icon": "🧮"
+    },
+    {
+      "id": "vstupni-zarizeni",
+      "name": "25. Vstupní zařízení",
+      "file": "25_vstupni_zarizeni.json",
+      "icon": "⌨️"
+    }
+  ]
+}

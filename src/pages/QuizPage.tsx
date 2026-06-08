@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSessionStore } from '../store/useSessionStore';
+import { useSettingsStore } from '../store/useSettingsStore';
 import QuestionRenderer from '../components/questions/QuestionRenderer';
 import Feedback from '../components/Feedback';
 import ProgressBar from '../components/ProgressBar';
 import { correctAnswerText } from '../components/questions/correctAnswerText';
 import { loadBookmarks, saveBookmarks } from '../lib/storage';
+import { isOverridable } from '../lib/questionOverrides';
+import QuestionEditModal from '../components/QuestionEditModal';
 
 function formatTime(ms: number): string {
   const totalSec = Math.max(0, Math.ceil(ms / 1000));
@@ -32,8 +35,10 @@ export default function QuizPage() {
     finish,
   } = useSessionStore();
 
+  const autoAdvance = useSettingsStore((s) => s.autoAdvance);
   const [, forceTick] = useState(0);
   const [bookmarks, setBookmarks] = useState<string[]>(() => loadBookmarks());
+  const [editorOpen, setEditorOpen] = useState(false);
 
   useEffect(() => {
     if (!active && items.length === 0 && !emptyReason) {
@@ -104,6 +109,19 @@ export default function QuizPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item, mode]);
 
+  // Auto-advance: when the user answers correctly (and the setting is enabled), jump to the
+  // next question automatically after a short pause so they can still glimpse the feedback.
+  // Skipped in exam mode (no immediate feedback there) and when the answer was wrong, so the
+  // learner has time to read the explanation.
+  useEffect(() => {
+    if (!item || !item.revealed || item.isCorrect !== true || mode === 'exam' || !autoAdvance) return;
+    const timer = setTimeout(() => {
+      handleNext();
+    }, 1100);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [item?.revealed, item?.isCorrect, currentIndex, autoAdvance, mode]);
+
   if (emptyReason) {
     return (
       <div className="mx-auto max-w-md text-center">
@@ -161,6 +179,16 @@ export default function QuizPage() {
           {mode === 'speed' && <span>🔥 Série: {streak}</span>}
           {examTimeLeft !== null && <span className="font-mono">⏱ {formatTime(examTimeLeft)}</span>}
           {speedTimeLeft !== null && !item.revealed && <span className="font-mono">⏱ {formatTime(speedTimeLeft)}</span>}
+          {isOverridable(item.question) && (
+            <button
+              type="button"
+              onClick={() => setEditorOpen(true)}
+              title="Otázka se zdá špatně? Upravit správnou odpověď"
+              className="text-gray-400 hover:text-violet-500 dark:hover:text-violet-400"
+            >
+              ⚙️
+            </button>
+          )}
           <button
             type="button"
             aria-pressed={isBookmarked}
@@ -231,6 +259,14 @@ export default function QuizPage() {
       <p className="hidden mt-2 text-xs text-gray-400 sm:block">
         Klávesy: 1–9 výběr, Enter zkontrolovat/další, →/mezerník další, B záložka, Esc konec
       </p>
+
+      {editorOpen && (
+        <QuestionEditModal
+          question={item.question}
+          onClose={() => setEditorOpen(false)}
+          onSaved={() => forceTick((t) => t + 1)}
+        />
+      )}
     </div>
   );
 }

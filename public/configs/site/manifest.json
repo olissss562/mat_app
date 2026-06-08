@@ -1,0 +1,76 @@
+{
+  "subjects": [
+    {
+      "id": "iso-osi",
+      "name": "1. ISO/OSI a TCP/IP",
+      "file": "1_iso_osi.json",
+      "icon": "📚"
+    },
+    {
+      "id": "vlan",
+      "name": "3. Sítě VLAN",
+      "file": "3_vlan.json",
+      "icon": "🔀"
+    },
+    {
+      "id": "fyzicka",
+      "name": "5. Fyzická vrstva",
+      "file": "5_fyzicka.json",
+      "icon": "🔌"
+    },
+    {
+      "id": "linkova",
+      "name": "7. Linková vrstva",
+      "file": "7_linkova.json",
+      "icon": "🔗"
+    },
+    {
+      "id": "sitova",
+      "name": "9. Síťová vrstva",
+      "file": "9_sitova.json",
+      "icon": "🗺️"
+    },
+    {
+      "id": "ipv4-subnetting",
+      "name": "12. IPv4 adresace a podsítě",
+      "file": "12_ipv4_subnetting.json",
+      "icon": "🔢"
+    },
+    {
+      "id": "subnetting",
+      "name": "14. Vytváření podsítí",
+      "file": "14_subnetting.json",
+      "icon": "✂️"
+    },
+    {
+      "id": "ipv6",
+      "name": "16. IPv6 adresace",
+      "file": "16_ipv6.json",
+      "icon": "🌐"
+    },
+    {
+      "id": "smerovani",
+      "name": "18. Dynamické směrovací protokoly",
+      "file": "18_smerovani.json",
+      "icon": "🔄"
+    },
+    {
+      "id": "rozsah",
+      "name": "20. Rozdělení sítí",
+      "file": "20_rozsah.json",
+      "icon": "📏"
+    },
+    {
+      "id": "hrozby",
+      "name": "22. Hrozby na síti",
+      "file": "22_hrozby.json",
+      "icon": "🛡️"
+    },
+    {
+      "id": "firewall",
+      "name": "24. Firewall a ochrany",
+      "file": "24_firewall_ochrany.json",
+      "icon": "🔐"
+    }
+  ]
+}

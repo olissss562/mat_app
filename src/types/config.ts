@@ -1,13 +1,24 @@
 // ---------- Manifest ----------
+// Top-level manifest groups subjects into folders (e.g. "site", "tvy"). Each folder
+// has its own manifest.json (GroupManifest) listing the subjects that live inside it.
 export interface Manifest {
   title: string;
   version: number;
+  groups: GroupRef[];
+}
+export interface GroupRef {
+  id: string;
+  name: string;
+  dir: string; // folder name relative to /configs/, also holds dir's manifest.json
+  icon?: string; // emoji
+}
+export interface GroupManifest {
   subjects: SubjectRef[];
 }
 export interface SubjectRef {
   id: string;
   name: string;
-  file: string; // path relative to /configs/
+  file: string; // path relative to /configs/<group.dir>/
   icon?: string; // emoji
 }
 

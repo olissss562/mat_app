@@ -119,8 +119,11 @@ export default function SubjectPage() {
 
   return (
     <div>
-      <button onClick={() => navigate('/')} className="mb-2 text-sm text-violet-600 hover:underline dark:text-violet-400">
-        ← Zpět
+      <button
+        onClick={() => navigate(`/group/${subject.group.id}`)}
+        className="mb-2 text-sm text-violet-600 hover:underline dark:text-violet-400"
+      >
+        ← Zpět do {subject.group.name}
       </button>
       <h1 className="mb-1 text-2xl font-semibold">
         {subject.ref.icon} {subject.config.name}

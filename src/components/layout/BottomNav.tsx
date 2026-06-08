@@ -4,6 +4,9 @@ const NAV = [
   { to: '/', label: 'Domů', icon: '🏠' },
   { to: '/stats', label: 'Statistiky', icon: '📊' },
   { to: '/import', label: 'Import', icon: '📥' },
+  { to: '/my-questions', label: 'Moje', icon: '✍️' },
+  { to: '/prompts', label: 'Prompty', icon: '🤖' },
+  { to: '/settings', label: 'Nastavení', icon: '⚙️' },
 ];
 
 export default function BottomNav() {

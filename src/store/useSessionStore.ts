@@ -9,7 +9,8 @@ import {
   updateProgress,
   type Progress,
 } from '../lib/srs';
-import { appendSession, loadProgress, saveProgress, type SessionSummary } from '../lib/storage';
+import { appendSession, loadProgress, loadQuestionOverrides, saveProgress, type SessionSummary } from '../lib/storage';
+import { applyQuestionOverride } from '../lib/questionOverrides';
 import { shuffle } from '../lib/shuffle';
 
 export type SessionMode = 'practice' | 'exam' | 'mistakes' | 'srs' | 'mix' | 'topic' | 'speed';
@@ -149,8 +150,12 @@ function buildPool(
 }
 
 function makeAnsweredQuestion(question: Question, subjectId: string): AnsweredQuestion {
+  // Apply any user-saved correction (see SettingsGearMenu / QuizPage editor) so the
+  // learner's fix is reflected both in grading and in the "correct answer" explanation.
+  const overrides = loadQuestionOverrides();
+  const effectiveQuestion = applyQuestionOverride(question, overrides[question.id]);
   return {
-    question,
+    question: effectiveQuestion,
     subjectId,
     answer: question.type === 'multiple' || question.type === 'ordering' ? [] : question.type === 'gap' || question.type === 'passage' ? [] : question.type === 'matching' || question.type === 'categorize' ? {} : question.type === 'truefalse' || question.type === 'single' ? null : '',
     revealed: false,

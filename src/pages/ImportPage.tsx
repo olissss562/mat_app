@@ -1,6 +1,13 @@
-import { useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { serverListCommunity } from '../lib/serverApi';
 import { validateSubjectConfig } from '../lib/validator';
-import { loadImportedConfigs, saveImportedConfigs } from '../lib/storage';
+import {
+  loadCommunitySubjects,
+  loadImportedConfigs,
+  saveImportedConfigs,
+  type CommunitySubject,
+} from '../lib/storage';
+import { useAuthStore } from '../store/useAuthStore';
 import { useConfigStore } from '../store/useConfigStore';
 import type { SubjectConfig } from '../types/config';
 
@@ -16,6 +23,44 @@ export default function ImportPage() {
   const [dragOver, setDragOver] = useState(false);
   const [results, setResults] = useState<ImportResult[]>([]);
   const reload = useConfigStore((s) => s.reload);
+  const { username, token } = useAuthStore();
+  const [community, setCommunity] = useState<CommunitySubject[]>(() => loadCommunitySubjects());
+  const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
+  const [communityMessage, setCommunityMessage] = useState<string | null>(null);
+  const [serverConnected, setServerConnected] = useState(false);
+
+  async function refreshCommunity() {
+    const result = await serverListCommunity(token);
+    if (result.ok) {
+      setCommunity(result.data.items);
+      setServerConnected(true);
+      return;
+    }
+    setServerConnected(false);
+    setCommunity(loadCommunitySubjects());
+  }
+
+  useEffect(() => {
+    void refreshCommunity();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [token]);
+
+  const publicShared = useMemo(
+    () => community.filter((c) => c.public && c.author !== username),
+    [community, username],
+  );
+
+  function addSharedSubject(entry: CommunitySubject) {
+    const imported = loadImportedConfigs();
+    const idx = imported.findIndex((c) => c.subject === entry.config.subject);
+    if (idx >= 0) imported[idx] = entry.config;
+    else imported.push(entry.config);
+    saveImportedConfigs(imported);
+    setAddedIds((prev) => new Set(prev).add(entry.id));
+    setCommunityMessage(`Předmět „${entry.name}“ od uživatele ${entry.author} byl přidán mezi vaše importované předměty.`);
+    void refreshCommunity(); // refresh in case other admins/users changed sharing meanwhile
+    void reload();
+  }
 
   async function handleFiles(files: FileList | null) {
     if (!files || files.length === 0) return;
@@ -121,6 +166,55 @@ export default function ImportPage() {
           ))}
         </div>
       )}
+
+      <section className="mt-10">
+        <h2 className="mb-1 text-xl font-semibold">Sdílené otázky od ostatních</h2>
+        <p className="mb-4 text-gray-500 dark:text-gray-400">
+          Předměty, které ostatní uživatelé vytvořili v sekci „Moje otázky“ a administrátor je zveřejnil pro
+          všechny. Přidáním si je zkopírujete mezi vlastní importované předměty.
+        </p>
+        <p className="mb-4 text-xs text-gray-400 dark:text-gray-500">
+          {serverConnected
+            ? '🌐 Nabídka se načítá ze serveru — funguje napříč zařízeními a se všemi přáteli.'
+            : 'ℹ️ Server pro sdílení mezi zařízeními zatím není nakonfigurovaný — zobrazuje se pouze nabídka uložená v tomto prohlížeči.'}
+        </p>
+
+        {communityMessage && (
+          <div className="mb-4 rounded-lg border border-green-300 bg-green-50 p-3 text-sm text-green-700 dark:border-green-700 dark:bg-green-900/20 dark:text-green-300">
+            {communityMessage}
+          </div>
+        )}
+
+        {publicShared.length === 0 ? (
+          <p className="text-sm text-gray-400 dark:text-gray-500">Zatím tu nejsou žádné veřejně sdílené předměty.</p>
+        ) : (
+          <ul className="flex flex-col gap-2">
+            {publicShared.map((entry) => (
+              <li
+                key={entry.id}
+                className="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div>
+                  <p className="font-medium text-gray-900 dark:text-gray-100">
+                    🌍 {entry.name}{' '}
+                    <span className="font-normal text-gray-400">
+                      · od {entry.author} · {entry.config.questions.length} otázek
+                    </span>
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => addSharedSubject(entry)}
+                  disabled={addedIds.has(entry.id)}
+                  className="min-h-[36px] rounded-lg border border-violet-400 px-3 text-sm font-medium text-violet-600 transition-colors hover:bg-violet-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-violet-600 dark:text-violet-300 dark:hover:bg-violet-900/30"
+                >
+                  {addedIds.has(entry.id) ? '✅ Přidáno' : '➕ Přidat'}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
     </div>
   );
 }
